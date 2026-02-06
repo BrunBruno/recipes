@@ -1,4 +1,4 @@
-import { useEffect, useState, type JSX } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 import { recipes } from "./recipes";
 import type { mealType, Recipe } from "./types";
 import DinnerSvg from "./assets/dinnerSvg";
@@ -26,6 +26,8 @@ function App() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
+  const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const toggleType = (type: mealType) => {
     setActiveTypes((prev) =>
@@ -40,6 +42,25 @@ function App() {
 
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
+  }, [selectedRecipe]);
+
+  useEffect(() => {
+    if (!selectedRecipe) return;
+
+    const contentEl = contentRef.current;
+    if (!contentEl) return;
+
+    const handleScroll = () => {
+      const scrollTop = contentEl.scrollTop;
+      setHeaderCollapsed(scrollTop > 10);
+    };
+
+    contentEl.addEventListener("scroll", handleScroll);
+
+    return () => {
+      contentEl.removeEventListener("scroll", handleScroll);
+      setHeaderCollapsed(false);
+    };
   }, [selectedRecipe]);
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
@@ -89,7 +110,7 @@ function App() {
       )}
 
       {selectedRecipe && (
-        <div className="recipe-details">
+        <div className={`recipe-details ${headerCollapsed ? "collapsed" : ""}`}>
           <button
             className="close-button"
             onClick={() => setSelectedRecipe(null)}
@@ -111,7 +132,7 @@ function App() {
             <h2 className="recipe-details-title">{selectedRecipe.name}</h2>
           </div>
 
-          <div className="recipe-details-content">
+          <div ref={contentRef} className="recipe-details-content">
             <section>
               <h3>Składniki</h3>
               <ul className="ingredients-list">

@@ -221,7 +221,9 @@ body::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 260px;
   width: 100%;
+
   object-fit: cover;
   opacity: 0.85;
   filter: saturate(1.2);
@@ -318,8 +320,10 @@ body::-webkit-scrollbar {
   justify-content: center;
 
   transition:
-    background 0.2s ease,
-    transform 0.1s ease;
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    right 0.3s ease,
+    top 0.3s ease;
 }
 
 .close-button:hover {
@@ -342,6 +346,55 @@ body::-webkit-scrollbar {
   .recipe-details {
     margin: 0;
     inset: 0;
+    transition: grid-template-rows 0.3s;
+  }
+
+  .recipe-details.collapsed {
+    grid-template-rows: 60px auto;
+  }
+
+  .recipe-details-header {
+    transition:
+      height 0.3s ease,
+      padding 0.3s ease;
+    position: relative;
+  }
+
+  .recipe-details.collapsed .recipe-details-header {
+    height: 60px;
+  }
+
+  .recipe-details.collapsed .recipe-details-image {
+    opacity: 0.4;
+  }
+
+  .recipe-details-image {
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .recipe-details-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    transition:
+      bottom 0.3s ease,
+      font-size 0.3s ease;
+  }
+
+  .recipe-details.collapsed .recipe-details-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    bottom: 0;
+    font-size: 1.5rem;
+    max-width: 70%;
+  }
+
+  .recipe-details.collapsed .close-button {
+    top: 0.5rem;
+    right: 0.5rem;
   }
 
   .recipes-grid {
@@ -352,6 +405,7 @@ body::-webkit-scrollbar {
   .recipe-details-content {
     grid-template-columns: 100%;
     border: none;
+    padding-top: 5rem;
   }
 
   .toggle-filters-btn {
@@ -371,7 +425,7 @@ body::-webkit-scrollbar {
     );
     background-color: #333;
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .filter-buttons.show {
@@ -385,18 +439,16 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 0.5rem;
-    width: 100px;
-    height: 32px;
+    gap: 1rem;
+    padding: 0 1rem;
+    width: 160px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: #fff;
   }
 
   .filter-btn.active {
     filter: grayscale(1);
-  }
-
-  .filter-svg {
-    width: 16px;
-    height: 16px;
   }
 
   .filter-text {
