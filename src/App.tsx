@@ -13,6 +13,8 @@ const borderColorMap: Record<mealType, string> = {
   dessert: "#1c7ed6",
 };
 
+const mealTypes: mealType[] = ["dinner", "snack", "soup", "dessert"];
+
 function App() {
   const svgMap: Record<mealType, JSX.Element> = {
     dinner: <DinnerSvg />,
@@ -22,6 +24,19 @@ function App() {
   };
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
+  const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
+  const [showFilters, setShowFilters] = useState<boolean>(false);
+
+  const toggleType = (type: mealType) => {
+    setActiveTypes((prev) =>
+      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
+    );
+  };
+
+  const filteredRecipes =
+    activeTypes.length === 0
+      ? recipes
+      : recipes.filter((r) => activeTypes.includes(r.type));
 
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
@@ -31,7 +46,43 @@ function App() {
 
   return (
     <div className="recipes-page">
-      <h1 className="page-title">Przepisy</h1>
+      <div className="page-title">
+        <h1>Przepisy</h1>
+
+        <button
+          className="toggle-filters-btn"
+          onClick={() => setShowFilters((prev) => !prev)}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 12L4 4H15M20 4L15 12V21L9 18V16"
+              stroke="#666"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
+          {mealTypes.map((type) => (
+            <button
+              key={type}
+              className={`filter-btn ${activeTypes.includes(type) ? "" : "active"}`}
+              onClick={() => toggleType(type)}
+            >
+              <div className="filter-svg">{svgMap[type]}</div>
+              <span className="filter-text">
+                {type.charAt(0).toUpperCase() + type.slice(1)}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
 
       {selectedRecipe && (
         <div className="details-bg" onClick={() => setSelectedRecipe(null)} />
@@ -89,7 +140,7 @@ function App() {
       )}
 
       <div className="recipes-grid">
-        {recipes.map((recipe, index) => (
+        {filteredRecipes.map((recipe, index) => (
           <div
             key={index}
             className="recipe-card"

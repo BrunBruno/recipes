@@ -36,21 +36,78 @@ body::-webkit-scrollbar {
 
 .page-title {
   position: fixed;
-  top: -2rem;
+  top: 0;
   left: 0;
   z-index: 9;
-  width: 100%;
+  width: calc(100% - 2rem);
   padding: 1rem;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  font-size: 2rem;
-  font-weight: 600;
   background: linear-gradient(
     60deg,
     rgba(0, 0, 0, 0.2) 30%,
     rgba(0, 0, 0, 1) 100%
   );
   background-color: #099268;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.toggle-filters-btn {
+  display: none;
+  padding: 0.5rem;
+  /* background-color: #222; */
+  background-color: #0000;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-filters-btn svg {
+  width: 1.8rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.filter-btn.active {
+  filter: grayscale(1);
+}
+
+.filter-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.filter-text {
+  display: none;
+}
+
+.filter-btn:hover {
+  opacity: 0.8;
 }
 
 .recipes-grid {
@@ -295,7 +352,54 @@ body::-webkit-scrollbar {
   .recipe-details-content {
     grid-template-columns: 100%;
     border: none;
-    /* padding: 1rem;
-    gap: 1rem; */
+  }
+
+  .toggle-filters-btn {
+    display: inline-block;
+  }
+
+  .filter-buttons {
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: calc(100% + 0.5rem);
+    flex-direction: column;
+    background: linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-color: #333;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  .filter-buttons.show {
+    display: flex;
+  }
+
+  .filter-btn {
+    background-color: #222;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    width: 100px;
+    height: 32px;
+  }
+
+  .filter-btn.active {
+    filter: grayscale(1);
+  }
+
+  .filter-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .filter-text {
+    display: inline;
   }
 }
