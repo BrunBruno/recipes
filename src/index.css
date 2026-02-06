@@ -405,7 +405,6 @@ body::-webkit-scrollbar {
   .recipe-details-content {
     grid-template-columns: 100%;
     border: none;
-    padding-top: 8rem;
   }
 
   .toggle-filters-btn {
