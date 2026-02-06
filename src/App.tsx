@@ -51,8 +51,10 @@ function App() {
     if (!contentEl) return;
 
     const handleScroll = () => {
-      const scrollTop = contentEl.scrollTop;
-      setHeaderCollapsed(scrollTop > 10);
+      // const scrollTop = contentEl.scrollTop;
+      // setHeaderCollapsed(scrollTop > 10);
+      setHeaderCollapsed(true);
+      contentEl.removeEventListener("scroll", handleScroll);
     };
 
     contentEl.addEventListener("scroll", handleScroll);
