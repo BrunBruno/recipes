@@ -1,17 +1,17 @@
 import type { Recipe } from "../types";
 
 const karkowkaDuszona: Recipe = {
-  name: "Karkówka duszona",
+  name: "Karkówka Duszona",
   type: "dinner",
   image: "",
   ingredients: [
-    { name: "karkówka", amount: 1, unit: "paczka" },
-    { name: "cebula", amount: 1, unit: "szt" },
-    { name: "musztarda sarepska" },
-    { name: "sól" },
-    { name: "pieprz" },
-    { name: "olej" },
-    { name: "masło" },
+    { name: "karkówka", amount: 1, unit: "opak", type: "met" },
+    { name: "cebula", amount: 1, unit: "szt", type: "veg" },
+    { name: "musztarda sarepska", amount: null, unit: null, type: "sau" },
+    { name: "sól", amount: null, unit: null, type: "spc" },
+    { name: "pieprz", amount: null, unit: null, type: "spc" },
+    { name: "olej", amount: null, unit: null, type: "fat" },
+    { name: "masło", amount: null, unit: null, type: "fat" },
   ],
   steps: [
     "Karkówkę posól, popieprz i dokładnie natrzyj musztardą.",

@@ -5,12 +5,12 @@ const tiramisu: Recipe = {
   type: "dessert",
   image: "",
   ingredients: [
-    { name: "biszkopty", amount: 2, unit: "paczki" },
-    { name: "serek mascarpone", amount: 500, unit: "g" },
-    { name: "jaja", amount: 3, unit: "szt" },
-    { name: "cukier", amount: 150, unit: "g" },
-    { name: "kawa", amount: 1, unit: "łyżka" },
-    { name: "kakao" },
+    { name: "biszkopty", amount: 2, unit: "opak", type: "grn" },
+    { name: "serek mascarpone", amount: 500, unit: "g", type: "dir" },
+    { name: "jaja", amount: 3, unit: "szt", type: "egg" },
+    { name: "cukier", amount: 150, unit: "g", type: "oth" },
+    { name: "kawa", amount: 1, unit: "łyżka", type: "oth" },
+    { name: "kakao", amount: null, unit: null, type: "oth" },
   ],
   steps: [
     "Żółtka ubij z cukrem na puszystą masę.",

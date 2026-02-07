@@ -54,15 +54,27 @@ body::-webkit-scrollbar {
 }
 
 .page-title h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   font-size: 2rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.page-title h1 svg {
+  height: 2.4rem;
+}
+
+.page-title-options {
+  display: flex;
+  gap: 2rem;
 }
 
 .toggle-filters-btn {
   display: none;
   padding: 0.5rem;
-  /* background-color: #222; */
   background-color: #0000;
   border: none;
   color: #fff;
@@ -74,9 +86,47 @@ body::-webkit-scrollbar {
   width: 1.8rem;
 }
 
+.toggle-search-btn {
+  display: none;
+  padding: 0.5rem;
+  background-color: #0000;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.toggle-search-btn svg {
+  width: 1.8rem;
+}
+
+.filter-buttons-bg {
+  display: none;
+}
+
+.recipe-search-input {
+  padding: 0.5rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.recipe-search-input:focus {
+  outline: solid 1px #ccc;
+}
+
 .filter-buttons {
   display: flex;
   gap: 0.5rem;
+}
+
+.recipe-search {
+  display: flex;
 }
 
 .filter-btn {
@@ -199,7 +249,7 @@ body::-webkit-scrollbar {
   position: fixed;
   inset: 0;
   z-index: 20;
-  margin: 2rem 24rem;
+  margin: 2rem 20rem;
 
   background-color: rgba(15, 17, 21, 0.97);
   backdrop-filter: blur(8px);
@@ -267,9 +317,10 @@ body::-webkit-scrollbar {
 }
 
 .ingredients-list li {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.35rem 0;
+  display: grid;
+  grid-template-columns: 1rem auto 5rem;
+  gap: 1rem;
+  padding: 0.5rem 0;
   font-size: 0.95rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -286,6 +337,13 @@ body::-webkit-scrollbar {
 
 .ingredient-name {
   color: #eaeaea;
+}
+
+.ingredient-indicator {
+  width: 1.2rem;
+  height: 1.2rem;
+  aspect-ratio: 1/1;
+  margin: auto;
 }
 
 .steps-list {
@@ -398,17 +456,46 @@ body::-webkit-scrollbar {
   }
 
   .recipes-grid {
-    padding: 1rem;
-    padding-top: 6rem;
+    padding: 0;
+    gap: 0;
+    padding-top: 5rem;
   }
 
   .recipe-details-content {
     grid-template-columns: 100%;
     border: none;
+    padding-top: 4rem;
+  }
+
+  .page-title-options {
+    gap: 0.5rem;
   }
 
   .toggle-filters-btn {
     display: inline-block;
+  }
+  .toggle-search-btn {
+    display: inline-block;
+  }
+
+  .recipe-search {
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: calc(100% + 0.5rem);
+    flex-direction: column;
+    background: linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .recipe-search.show {
+    display: flex;
   }
 
   .filter-buttons {
@@ -429,6 +516,20 @@ body::-webkit-scrollbar {
 
   .filter-buttons.show {
     display: flex;
+  }
+
+  .filter-buttons-bg.show {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .recipe-search-input {
+    font-size: 1.5rem;
   }
 
   .filter-btn {

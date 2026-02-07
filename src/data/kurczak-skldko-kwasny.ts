@@ -1,15 +1,20 @@
 import type { Recipe } from "../types";
 
 const kurczakSlodkoKwasny: Recipe = {
-  name: "Kurczak w Sosie Słodki-Kwaśnym",
+  name: "Kurczak w Sosie Słodko-Kwaśnym",
   type: "dinner",
   image: "",
   ingredients: [
-    { name: "pierś z kurczaka", amount: 400, unit: "g" },
-    { name: "sos słodko-kwaśny Winiary", amount: 1, unit: "opakowanie" },
-    { name: "ryż", amount: 300, unit: "g" },
-    { name: "olej roślinny", amount: 2, unit: "łyżki" },
-    { name: "sól" },
+    { name: "pierś z kurczaka", amount: 400, unit: "g", type: "met" },
+    {
+      name: "sos słodko-kwaśny Winiary",
+      amount: 1,
+      unit: "opak",
+      type: "sau",
+    },
+    { name: "ryż", amount: 300, unit: "g", type: "grn" },
+    { name: "olej roślinny", amount: 2, unit: "łyżka", type: "fat" },
+    { name: "sól", amount: null, unit: null, type: "spc" },
   ],
   steps: [
     "Ugotuj ryż według instrukcji na opakowaniu.",

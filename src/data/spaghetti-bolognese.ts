@@ -5,11 +5,11 @@ const spaghettiBolognese: Recipe = {
   type: "dinner",
   image: "",
   ingredients: [
-    { name: "mięso mielone", amount: 400, unit: "g" },
-    { name: "makaron spaghetti", amount: "3 x 100", unit: "g" },
-    { name: "ser żółty", amount: "3 x 50", unit: "g" },
-    { name: "przyprawa bolognese" },
-    { name: "olej" },
+    { name: "mięso mielone", amount: 400, unit: "g", type: "met" },
+    { name: "makaron spaghetti", amount: "3 x 100", unit: "g", type: "grn" },
+    { name: "ser żółty", amount: "3 x 50", unit: "g", type: "che" },
+    { name: "przyprawa bolognese", amount: null, unit: null, type: "spc" },
+    { name: "olej", amount: null, unit: null, type: "fat" },
   ],
   steps: [
     "Usmaż mięso mielone na patelni z olejem.",

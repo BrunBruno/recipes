@@ -5,12 +5,12 @@ const palkiBarbecue: Recipe = {
   type: "dinner",
   image: "palki-barbecue.jpg",
   ingredients: [
-    { name: "pałki z kurczaka", amount: 2, unit: "paczki" },
-    { name: "słodka papryka" },
-    { name: "ostra papryka" },
-    { name: "wędzona papryka" },
-    { name: "czosnek granulowany" },
-    { name: "sos barbecue" },
+    { name: "pałki z kurczaka", amount: 2, unit: "opak", type: "met" },
+    { name: "słodka papryka", amount: null, unit: null, type: "spc" },
+    { name: "ostra papryka", amount: null, unit: null, type: "spc" },
+    { name: "wędzona papryka", amount: null, unit: null, type: "spc" },
+    { name: "czosnek granulowany", amount: null, unit: null, type: "spc" },
+    { name: "sos barbecue", amount: null, unit: null, type: "sau" },
   ],
   steps: [
     "Ułóż pałki w naczyniu żaroodpornym.",

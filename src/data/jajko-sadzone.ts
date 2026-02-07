@@ -5,10 +5,10 @@ const jajkoSadzone: Recipe = {
   type: "dinner",
   image: "jajko-sadzone.jpg",
   ingredients: [
-    { name: "jajka", amount: "2-3", unit: "szt" },
-    { name: "masło" },
-    { name: "sól" },
-    { name: "pieprz" },
+    { name: "jajka", amount: "2-3", unit: "szt", type: "egg" },
+    { name: "masło", amount: null, unit: null, type: "fat" },
+    { name: "sól", amount: null, unit: null, type: "spc" },
+    { name: "pieprz", amount: null, unit: null, type: "spc" },
   ],
   steps: [
     "Rozgrzej patelnię na średnim ogniu i dodaj kawałek masła.",

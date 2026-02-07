@@ -5,12 +5,12 @@ const stek: Recipe = {
   type: "snack",
   image: "stek.jpg",
   ingredients: [
-    { name: "stek wołowy", amount: 1, unit: "szt" },
-    { name: "czosnek", amount: 1, unit: "ząbek" },
-    { name: "olej", amount: 1, unit: "łyżeczka" },
-    { name: "masło", amount: 1, unit: "łyżka" },
-    { name: "tymianek" },
-    { name: "sól" },
+    { name: "stek wołowy", amount: 1, unit: "szt", type: "met" },
+    { name: "czosnek", amount: 1, unit: "ząbek", type: "veg" },
+    { name: "olej", amount: 1, unit: "łyżeczka", type: "fat" },
+    { name: "masło", amount: 1, unit: "łyżka", type: "fat" },
+    { name: "tymianek", amount: null, unit: null, type: "spc" },
+    { name: "sól", amount: null, unit: null, type: "spc" },
   ],
   steps: [
     "Stek posyp solą.",
