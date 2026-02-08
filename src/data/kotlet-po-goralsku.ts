@@ -4,6 +4,9 @@ const kotletPoGoralsku: Recipe = {
   name: "Kotlet po Góralsku",
   type: "snack",
   image: "kotlet-po-goralsku.jpg",
+  kcal: 850,
+  time: 40,
+  portions: 4,
   ingredients: [
     {
       name: "schab",

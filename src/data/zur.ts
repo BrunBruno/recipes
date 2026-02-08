@@ -4,6 +4,9 @@ const zur: Recipe = {
   name: "Żur",
   type: "soup",
   image: "",
+  kcal: 0,
+  time: 0,
+  portions: 0,
   ingredients: [],
   steps: [],
 };

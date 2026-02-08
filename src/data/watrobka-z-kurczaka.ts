@@ -4,6 +4,9 @@ const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
   image: "watrobka-z-kurczaka.ts.jpg",
+  kcal: 320,
+  time: 20,
+  portions: 2,
   ingredients: [
     { name: "wątroba drobiowa", amount: 400, unit: "g", type: "met" },
     { name: "cebula", amount: "2-3", unit: "szt", type: "veg" },

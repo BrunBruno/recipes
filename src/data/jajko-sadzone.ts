@@ -4,6 +4,9 @@ const jajkoSadzone: Recipe = {
   name: "Jajko Sadzone",
   type: "dinner",
   image: "jajko-sadzone.jpg",
+  kcal: 220,
+  time: 10,
+  portions: 1,
   ingredients: [
     { name: "jajka", amount: "2-3", unit: "szt", type: "egg" },
     { name: "masło", amount: null, unit: null, type: "fat" },

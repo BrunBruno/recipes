@@ -4,6 +4,9 @@ const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
   image: "",
+  kcal: 450,
+  time: 30,
+  portions: 4,
   ingredients: [
     { name: "mięso mielone", amount: 400, unit: "g", type: "met" },
     { name: "makaron spaghetti", amount: "3 x 100", unit: "g", type: "grn" },

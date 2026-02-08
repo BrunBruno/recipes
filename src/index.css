@@ -260,6 +260,80 @@ body::-webkit-scrollbar {
   animation: modalIn 0.25s ease;
 }
 
+.recipe-details-params {
+  position: absolute;
+  display: flex;
+  z-index: 30;
+  padding: 1rem;
+  gap: 1rem;
+  transition: opacity 0.3s;
+}
+
+.recipe-param {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: #111;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: solid 3px;
+  font-weight: 600;
+}
+
+.recipe-param::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  height: 100%;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.recipe-param:nth-child(1)::after {
+  content: "kcal";
+}
+.recipe-param:nth-child(2)::after {
+  content: "min";
+}
+.recipe-param:nth-child(3)::after {
+  content: "por.";
+}
+
+.font-xl {
+  font-size: 1.6rem;
+}
+.font-lg {
+  font-size: 1.4rem;
+}
+.font-md {
+  font-size: 1.2rem;
+}
+.font-sm {
+  font-size: 1rem;
+}
+
+.status-green {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.status-yellow {
+  border-color: #f1c40f;
+  color: #f1c40f;
+}
+
+.status-red {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
 .recipe-details-header {
   position: relative;
   height: 260px;
@@ -409,6 +483,11 @@ body::-webkit-scrollbar {
 
   .recipe-details.collapsed {
     grid-template-rows: 60px auto;
+  }
+
+  .recipe-details.collapsed .recipe-details-params {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .recipe-details-header {

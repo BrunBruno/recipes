@@ -4,6 +4,9 @@ const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
   image: "",
+  kcal: 580,
+  time: 65,
+  portions: 4,
   ingredients: [
     { name: "pierś z kurczaka", amount: null, unit: null, type: "met" },
     { name: "ser żółty", amount: 0.5, unit: "kostka", type: "che" },

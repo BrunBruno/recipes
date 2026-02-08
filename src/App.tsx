@@ -79,7 +79,7 @@ function App() {
 
     const handleScroll = () => {
       setHeaderCollapsed(true);
-      contentEl.removeEventListener("scroll", handleScroll);
+      // contentEl.removeEventListener("scroll", handleScroll);
     };
 
     contentEl.addEventListener("scroll", handleScroll);
@@ -96,6 +96,50 @@ function App() {
       searchInputRef.current?.focus();
     }
   }, [showSearch]);
+
+  const getFontSizeClass = (value: number): string => {
+    const length = String(value).length;
+
+    if (length <= 2) return "font-xl";
+    if (length === 3) return "font-lg";
+    if (length === 4) return "font-md";
+    return "font-sm";
+  };
+  const getStatusClass = (type: string, value: number) => {
+    if (type === "kcal") {
+      if (value <= 300) return "status-green";
+      if (value <= 700) return "status-yellow";
+      return "status-red";
+    }
+
+    if (type === "time") {
+      if (value <= 20) return "status-green";
+      if (value <= 45) return "status-yellow";
+      return "status-red";
+    }
+
+    return "";
+  };
+
+  const handleHeaderScroll = () => {
+    const contentEl = contentRef.current;
+    if (!contentEl) return;
+
+    if (contentEl.scrollTop === 0) {
+      setHeaderCollapsed(false);
+      return;
+    }
+
+    const handleScrollEnd = () => {
+      if (contentEl.scrollTop === 0) {
+        setHeaderCollapsed(false);
+        contentEl.removeEventListener("scroll", handleScrollEnd);
+      }
+    };
+
+    contentEl.addEventListener("scroll", handleScrollEnd);
+    contentEl.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
 
@@ -207,6 +251,32 @@ function App() {
             ×
           </button>
 
+          <div className="recipe-details-params">
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.kcal)} 
+                ${getStatusClass("kcal", selectedRecipe.kcal)}
+              `}
+            >
+              {selectedRecipe.kcal}
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.time)} 
+                ${getStatusClass("time", selectedRecipe.time)}
+              `}
+            >
+              {selectedRecipe.time}
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.portions)}
+              `}
+            >
+              {selectedRecipe.portions}
+            </div>
+          </div>
+
           <div className="recipe-details-header">
             <img
               src={
@@ -217,7 +287,14 @@ function App() {
               alt={selectedRecipe.name}
               className="recipe-details-image"
             />
-            <h2 className="recipe-details-title">{selectedRecipe.name}</h2>
+            <h2
+              className="recipe-details-title"
+              onClick={() => {
+                handleHeaderScroll();
+              }}
+            >
+              {selectedRecipe.name}
+            </h2>
           </div>
 
           <div ref={contentRef} className="recipe-details-content">
@@ -276,6 +353,7 @@ function App() {
             >
               {svgMap[recipe.type]}
             </div>
+
             <div className="recipe-card-content">
               <h2>{recipe.name}</h2>
             </div>

@@ -4,6 +4,9 @@ const salatkaJarzynowa: Recipe = {
   name: "Sałatka Jarzynowa",
   type: "salad",
   image: "",
+  kcal: 250,
+  time: 30,
+  portions: 4,
   ingredients: [
     {
       name: "majonez",

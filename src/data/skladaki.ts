@@ -4,6 +4,9 @@ const skladaki: Recipe = {
   name: "Składaki",
   type: "snack",
   image: "skladaki.jpg",
+  kcal: 450,
+  time: 15,
+  portions: 2,
   ingredients: [
     { name: "tortilla", amount: 4, unit: "szt", type: "grn" },
     { name: "salami", amount: 160, unit: "g", type: "met" },

@@ -4,6 +4,9 @@ const jajecznica: Recipe = {
   name: "Jajecznica",
   type: "snack",
   image: "jajecznica.jpg",
+  kcal: 400,
+  time: 15,
+  portions: 2,
   ingredients: [
     { name: "jajka", amount: "3-5", unit: "szt", type: "egg" },
     { name: "kiełbasa", amount: null, unit: null, type: "met" },

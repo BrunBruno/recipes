@@ -4,6 +4,9 @@ const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
   image: "",
+  kcal: 600,
+  time: 55,
+  portions: 4,
   ingredients: [
     { name: "ćwiartki kurczaka", amount: 4, unit: "szt", type: "met" },
     { name: "słodka papryka", amount: null, unit: null, type: "spc" },

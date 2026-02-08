@@ -4,6 +4,9 @@ const roladaWieprzowa: Recipe = {
   name: "Rolada Wieprzowa",
   type: "dinner",
   image: "",
+  kcal: 680,
+  time: 90,
+  portions: 4,
   ingredients: [
     { name: "szynka ze schabu", amount: 1, unit: "opak", type: "met" },
     { name: "boczek w kostce", amount: 0.5, unit: "opak", type: "met" },

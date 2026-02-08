@@ -4,6 +4,9 @@ const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
   type: "sauce",
   image: "golabki.jpg",
+  kcal: 120,
+  time: 10,
+  portions: 4,
   ingredients: [
     {
       name: "masło",

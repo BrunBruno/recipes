@@ -4,8 +4,11 @@ const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
   image: "",
+  kcal: 650,
+  time: 50,
+  portions: 5,
   ingredients: [
-    { name: "karkówka", amount: 1, unit: "opak", type: "met" },
+    { name: "karkówka", amount: 2, unit: "opak", type: "met" },
     { name: "cebula", amount: 1, unit: "szt", type: "veg" },
     { name: "musztarda sarepska", amount: null, unit: null, type: "sau" },
     { name: "sól", amount: null, unit: null, type: "spc" },

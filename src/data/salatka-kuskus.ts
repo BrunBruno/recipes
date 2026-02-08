@@ -4,6 +4,9 @@ const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
   type: "salad",
   image: "",
+  kcal: 350,
+  time: 25,
+  portions: 4,
   ingredients: [
     {
       name: "kuskus",

@@ -4,6 +4,9 @@ const gotowyBurger: Recipe = {
   name: "Gotowy Burger",
   type: "snack",
   image: "gotowy-burger.jpg",
+  kcal: 780,
+  time: 30,
+  portions: 4,
   ingredients: [
     {
       name: "gotowe kotleciki hamburgerowe",

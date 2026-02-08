@@ -4,6 +4,9 @@ const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
   image: "burger-drwala.ts.jpeg",
+  kcal: 1080,
+  time: 50,
+  portions: 4,
   ingredients: [
     { name: "mięso mielone wołowe", amount: 400, unit: "g", type: "met" },
     { name: "ser Liliput", amount: 350, unit: "g", type: "che" },

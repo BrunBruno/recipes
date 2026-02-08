@@ -4,6 +4,9 @@ const chicker: Recipe = {
   name: "Chickery",
   type: "snack",
   image: "",
+  kcal: 520,
+  time: 25,
+  portions: 4,
   ingredients: [
     { name: "pikantne polędwiczki", amount: 400, unit: "g", type: "met" },
     { name: "bułki do chickerów", amount: 4, unit: "szt", type: "grn" },

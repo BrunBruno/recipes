@@ -4,6 +4,9 @@ const sosPieczarkowy: Recipe = {
   name: "Sos Pieczarkowy",
   type: "sauce",
   image: "",
+  kcal: 150,
+  time: 15,
+  portions: 4,
   ingredients: [
     {
       name: "pieczarki",

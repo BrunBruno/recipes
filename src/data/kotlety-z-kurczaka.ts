@@ -4,6 +4,9 @@ const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
   image: "kotlety-z-kurczaka.jpg",
+  kcal: 480,
+  time: 25,
+  portions: 4,
   ingredients: [
     { name: "kurczak (filety)", amount: "1", unit: "opak", type: "met" },
     { name: "jajko", amount: 1, unit: "szt", type: "egg" },

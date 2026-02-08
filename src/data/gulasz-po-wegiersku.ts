@@ -4,6 +4,9 @@ const gulaszPoWegiersku: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
   image: "",
+  kcal: 520,
+  time: 75,
+  portions: 3,
   ingredients: [
     {
       name: "mięso wołowe",

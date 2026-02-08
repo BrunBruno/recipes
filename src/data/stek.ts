@@ -4,6 +4,9 @@ const stek: Recipe = {
   name: "Smażony Stek",
   type: "snack",
   image: "stek.jpg",
+  kcal: 500,
+  time: 15,
+  portions: 1,
   ingredients: [
     { name: "stek wołowy", amount: 1, unit: "szt", type: "met" },
     { name: "czosnek", amount: 1, unit: "ząbek", type: "veg" },

@@ -4,6 +4,9 @@ const pancakes: Recipe = {
   name: "Pancakes",
   type: "snack",
   image: "pancakes.jpg",
+  kcal: 350,
+  time: 20,
+  portions: 3,
   ingredients: [
     { name: "mąka", amount: 1.25, unit: "szklanka", type: "grn" },
     { name: "jajko", amount: 1, unit: "szt", type: "egg" },

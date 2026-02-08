@@ -4,6 +4,9 @@ const hotHog: Recipe = {
   name: "Hot Dog",
   type: "snack",
   image: "hot-dog.jpg",
+  kcal: 430,
+  time: 10,
+  portions: 4,
   ingredients: [
     { name: "parówki", amount: 4, unit: "szt", type: "met" },
     { name: "bułki hotdogowe", amount: 4, unit: "szt", type: "grn" },

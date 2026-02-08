@@ -4,6 +4,9 @@ const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
   type: "dinner",
   image: "./kurczak-po-chinsku.jpg",
+  kcal: 520,
+  time: 30,
+  portions: 3,
   ingredients: [
     { name: "pierś z kurczaka", amount: 400, unit: "g", type: "met" },
     { name: "marchew", amount: 120, unit: "g", type: "veg" },

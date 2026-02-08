@@ -4,6 +4,9 @@ const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
   image: "",
+  kcal: 400,
+  time: 25,
+  portions: 2,
   ingredients: [
     { name: "makaron spaghetti", amount: "2 x 100", unit: "g", type: "grn" },
     {

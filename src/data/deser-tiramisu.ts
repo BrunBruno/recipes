@@ -4,6 +4,9 @@ const tiramisu: Recipe = {
   name: "Tiramisu",
   type: "dessert",
   image: "",
+  kcal: 480,
+  time: 30,
+  portions: 8,
   ingredients: [
     { name: "biszkopty", amount: 2, unit: "opak", type: "grn" },
     { name: "serek mascarpone", amount: 500, unit: "g", type: "dir" },

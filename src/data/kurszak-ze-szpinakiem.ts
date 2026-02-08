@@ -4,6 +4,9 @@ const kurczakZeSzpinakiem: Recipe = {
   name: "Kurczak ze Szpinakiem",
   type: "dinner",
   image: "",
+  kcal: 620,
+  time: 40,
+  portions: 6,
   ingredients: [
     { name: "pierś z kurczaka", amount: 500, unit: "g", type: "met" },
     { name: "kostka rosołowa Knorr", amount: 2, unit: "szt", type: "spc" },

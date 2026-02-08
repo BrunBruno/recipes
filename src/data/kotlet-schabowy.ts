@@ -4,6 +4,9 @@ const kotletSchabowy: Recipe = {
   name: "Kotlety Schabowe",
   type: "dinner",
   image: "kotlet-schabowy.jpg",
+  kcal: 720,
+  time: 35,
+  portions: 4,
   ingredients: [
     { name: "schab", amount: 10, unit: "plaster", type: "met" },
     { name: "jajka", amount: 2, unit: "szt", type: "egg" },

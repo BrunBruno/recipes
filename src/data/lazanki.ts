@@ -4,6 +4,9 @@ const lazanki: Recipe = {
   name: "Łazanki",
   type: "dinner",
   image: "lazanki.jpg",
+  kcal: 650,
+  time: 50,
+  portions: 5,
   ingredients: [
     { name: "makaron łazanki", amount: 240, unit: "g", type: "grn" },
     { name: "kiełbasa", amount: 200, unit: "g", type: "met" },

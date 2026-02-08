@@ -4,6 +4,9 @@ const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
   image: "zapiekanka-bolognese.jpg",
+  kcal: 550,
+  time: 50,
+  portions: 4,
   ingredients: [
     { name: "makaron świderki", amount: 400, unit: "g", type: "grn" },
     { name: "mięso mielone", amount: 400, unit: "g", type: "met" },

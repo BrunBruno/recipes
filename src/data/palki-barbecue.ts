@@ -4,6 +4,9 @@ const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
   type: "dinner",
   image: "palki-barbecue.jpg",
+  kcal: 550,
+  time: 60,
+  portions: 3,
   ingredients: [
     { name: "pałki z kurczaka", amount: 2, unit: "opak", type: "met" },
     { name: "słodka papryka", amount: null, unit: null, type: "spc" },

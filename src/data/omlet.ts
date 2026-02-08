@@ -4,6 +4,9 @@ const omlet: Recipe = {
   name: "Omlet",
   type: "snack",
   image: "",
+  kcal: 280,
+  time: 15,
+  portions: 1,
   ingredients: [
     {
       name: "jajka",

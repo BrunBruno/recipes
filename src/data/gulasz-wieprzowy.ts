@@ -4,6 +4,9 @@ const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
   type: "dinner",
   image: "",
+  kcal: 560,
+  time: 80,
+  portions: 3,
   ingredients: [
     { name: "mięso na gulasz", amount: 500, unit: "g", type: "met" },
     { name: "cebula", amount: 1, unit: "szt", type: "veg" },

@@ -47,8 +47,9 @@ export type Recipe = {
   name: string;
   type: mealType;
   image: string;
-  // kcal: number;
-  // portions: number;
+  kcal: number;
+  portions: number;
+  time: number;
   ingredients: Ingredient[];
   steps: string[];
 };

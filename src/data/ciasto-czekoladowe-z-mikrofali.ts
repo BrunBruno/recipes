@@ -4,6 +4,9 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
   name: "Ciasto Czekoladowe z Mikrofali",
   type: "dessert",
   image: "",
+  kcal: 450,
+  time: 15,
+  portions: 6,
   ingredients: [
     { name: "mąka", amount: 150, unit: "g", type: "grn" },
     { name: "cukier", amount: 100, unit: "g", type: "oth" },

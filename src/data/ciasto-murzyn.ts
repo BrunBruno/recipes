@@ -4,6 +4,9 @@ const ciastoMurzyn: Recipe = {
   name: "Ciasto Murzyn",
   type: "dessert",
   image: "ciasto-murzyn.jpg",
+  kcal: 420,
+  time: 45,
+  portions: 8,
   ingredients: [
     { name: "masło", amount: 1, unit: "kostka", type: "fat" },
     { name: "kakao", amount: 3, unit: "łyżka", type: "oth" },

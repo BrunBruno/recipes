@@ -4,6 +4,9 @@ const plackiZiemniaczane: Recipe = {
   name: "Placki Ziemniaczane",
   type: "dinner",
   image: "",
+  kcal: 400,
+  time: 25,
+  portions: 2,
   ingredients: [
     { name: "ziemniaki", amount: 4, unit: "szt", type: "veg" },
     { name: "cebula", amount: 1, unit: "szt", type: "veg" },
