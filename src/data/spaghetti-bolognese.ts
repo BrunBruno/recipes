@@ -1,3 +1,8 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const spaghettiBolognese: Recipe = {
@@ -6,13 +11,13 @@ const spaghettiBolognese: Recipe = {
   image: "",
   kcal: 450,
   time: 30,
-  portions: 4,
+  portions: 3,
   ingredients: [
-    { name: "mięso mielone", amount: 400, unit: "g", type: "met" },
-    { name: "makaron spaghetti", amount: "3 x 100", unit: "g", type: "grn" },
-    { name: "ser żółty", amount: "3 x 50", unit: "g", type: "che" },
-    { name: "przyprawa bolognese", amount: null, unit: null, type: "spc" },
-    { name: "olej", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.ground_pork, amount: 400 },
+    { ingredient: iGRN.spaghetti_pasta, amount: 300 },
+    { ingredient: iDIR.yellow_cheese, amount: 150 },
+    { ingredient: iFAT.oil },
+    { ingredient: iSPC.knorr_bolognese_fix },
   ],
   steps: [
     "Usmaż mięso mielone na patelni z olejem.",

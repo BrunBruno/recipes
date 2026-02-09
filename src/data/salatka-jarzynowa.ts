@@ -1,3 +1,7 @@
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const salatkaJarzynowa: Recipe = {
@@ -6,56 +10,16 @@ const salatkaJarzynowa: Recipe = {
   image: "",
   kcal: 250,
   time: 30,
-  portions: 4,
+  portions: 6,
   ingredients: [
-    {
-      name: "majonez",
-      amount: 1,
-      unit: "opak",
-      type: "sau",
-    },
-    {
-      name: "marchew",
-      amount: 3,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "pietruszka",
-      amount: 1,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "seler",
-      amount: 1,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "jajka",
-      amount: 3,
-      unit: "szt",
-      type: "egg",
-    },
-    {
-      name: "groszek konserwowy",
-      amount: 1,
-      unit: "opak",
-      type: "veg",
-    },
-    {
-      name: "sól",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    {
-      name: "pieprz",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
+    { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
+    { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
+    { ingredient: iVEG.celery_root, amount: 1, unit: "szt" },
+    { ingredient: iVEG.canned_peas, amount: 1, unit: "opak" },
+    { ingredient: iMET.egg, amount: 3, unit: "szt" },
+    { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
+    { ingredient: iSPC.salt },
+    { ingredient: iSPC.black_pepper },
   ],
   steps: [
     "Ugotuj warzywa oraz jajka do miękkości i ostudź.",

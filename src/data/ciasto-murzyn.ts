@@ -1,3 +1,8 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
 import type { Recipe } from "../types";
 
 const ciastoMurzyn: Recipe = {
@@ -8,13 +13,13 @@ const ciastoMurzyn: Recipe = {
   time: 45,
   portions: 8,
   ingredients: [
-    { name: "masło", amount: 1, unit: "kostka", type: "fat" },
-    { name: "kakao", amount: 3, unit: "łyżka", type: "oth" },
-    { name: "mleko", amount: 0.5, unit: "szklanka", type: "dir" },
-    { name: "cukier", amount: 1, unit: "szklanka", type: "oth" },
-    { name: "jajka", amount: 3, unit: "szt", type: "egg" },
-    { name: "mąka", amount: 2, unit: "szklanka", type: "grn" },
-    { name: "proszek do pieczenia", amount: 1, unit: "łyżeczka", type: "oth" },
+    { ingredient: iMET.egg, amount: 3 },
+    { ingredient: iFAT.butter, amount: 1, unit: "kostka" },
+    { ingredient: iGRN.flour, amount: 2, unit: "szklanka" },
+    { ingredient: iOTH.sugar, amount: 1, unit: "szklanka" },
+    { ingredient: iOTH.cocoa, amount: 3, unit: "łyżka" },
+    { ingredient: iOTH.baking_powder, amount: 1, unit: "łyżeczka" },
+    { ingredient: iDIR.milk, amount: 0.5, unit: "szklanka" },
   ],
   steps: [
     "Masło, kakao, cukier i mleko podgrzewaj w garnku do zagotowania.",

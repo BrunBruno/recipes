@@ -1,3 +1,6 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
 import type { Recipe } from "../types";
 
 const tiramisu: Recipe = {
@@ -8,13 +11,14 @@ const tiramisu: Recipe = {
   time: 30,
   portions: 8,
   ingredients: [
-    { name: "biszkopty", amount: 2, unit: "opak", type: "grn" },
-    { name: "serek mascarpone", amount: 500, unit: "g", type: "dir" },
-    { name: "jaja", amount: 3, unit: "szt", type: "egg" },
-    { name: "cukier", amount: 150, unit: "g", type: "oth" },
-    { name: "kawa", amount: 1, unit: "łyżka", type: "oth" },
-    { name: "kakao", amount: null, unit: null, type: "oth" },
+    { ingredient: iMET.egg, amount: 3 },
+    { ingredient: iDIR.mascarpone, amount: 500 },
+    { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
+    { ingredient: iOTH.sugar, amount: 150 },
+    { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
+    { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
   ],
+
   steps: [
     "Żółtka ubij z cukrem na puszystą masę.",
     "Dodaj serek mascarpone i dokładnie wymieszaj.",

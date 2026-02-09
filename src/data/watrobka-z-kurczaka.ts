@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const watrobkaZKurczaka: Recipe = {
@@ -8,11 +13,12 @@ const watrobkaZKurczaka: Recipe = {
   time: 20,
   portions: 2,
   ingredients: [
-    { name: "wątroba drobiowa", amount: 400, unit: "g", type: "met" },
-    { name: "cebula", amount: "2-3", unit: "szt", type: "veg" },
-    { name: "mąka", amount: null, unit: null, type: "grn" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
-    { name: "olej, masło", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.poultry_liver, amount: 400 },
+    { ingredient: iVEG.onion, amount: "2-3", unit: "szt" },
+    { ingredient: iGRN.flour },
+    { ingredient: iFAT.oil },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Cebulę pokrój i podsmaż na maśle aż stanie się miękka.",

@@ -1,3 +1,7 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const kotletyZKurczaka: Recipe = {
@@ -8,29 +12,20 @@ const kotletyZKurczaka: Recipe = {
   time: 25,
   portions: 4,
   ingredients: [
-    { name: "kurczak (filety)", amount: "1", unit: "opak", type: "met" },
-    { name: "jajko", amount: 1, unit: "szt", type: "egg" },
-    { name: "mąka", amount: "1", unit: "łyżka", type: "grn" },
-    { name: "olej do smażenia", amount: null, unit: null, type: "fat" },
-    { name: "pieprz", amount: null, unit: null, type: "spc" },
-    { name: "czosnek granulowany", amount: null, unit: null, type: "spc" },
-    { name: "niedźwiedzi czosnek", amount: null, unit: null, type: "spc" },
-    { name: "papryka słodka", amount: null, unit: null, type: "spc" },
-    {
-      name: "jarzynka (przyprawa warzywna)",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    { name: "majeranek", amount: null, unit: null, type: "spc" },
-    {
-      name: "zioła prowansalskie",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    { name: "curry", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.chicken_breast, amount: 1, unit: "opak" },
+    { ingredient: iMET.egg, amount: 1 },
+    { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+    { ingredient: iFAT.oil },
+    { ingredient: iSPC.black_pepper },
+    { ingredient: iSPC.granulated_garlic },
+    { ingredient: iSPC.wild_garlic },
+    { ingredient: iSPC.sweet_paprika },
+    { ingredient: iSPC.vegetable_seasoning },
+    { ingredient: iSPC.marjoram },
+    { ingredient: iSPC.herbes_de_provence },
+    { ingredient: iSPC.curry },
   ],
+
   steps: [
     "Kurczaka pokrój na małe kotleciki.",
     "Wbij jajko do garnka i rozbełtaj.",

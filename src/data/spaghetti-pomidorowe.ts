@@ -1,3 +1,8 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const spaghettiPomidorowe: Recipe = {
@@ -8,20 +13,15 @@ const spaghettiPomidorowe: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { name: "makaron spaghetti", amount: "2 x 100", unit: "g", type: "grn" },
-    {
-      name: "pomidory całe z puszki lub słoika",
-      amount: 250,
-      unit: "ml",
-      type: "veg",
-    },
-    { name: "ser żółty", amount: "2 x 50", unit: "g", type: "che" },
-    { name: "czosnek", amount: 2, unit: "ząbek", type: "veg" },
-    { name: "pieprz", amount: null, unit: null, type: "spc" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
-    { name: "bazylia", amount: null, unit: null, type: "spc" },
-    { name: "oregano", amount: null, unit: null, type: "spc" },
-    { name: "masło", amount: null, unit: null, type: "fat" },
+    { ingredient: iGRN.spaghetti_pasta, amount: 200 },
+    { ingredient: iVEG.canned_tomatoes, amount: 250, unit: "ml" },
+    { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+    { ingredient: iDIR.yellow_cheese, amount: 100 },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.salt },
+    { ingredient: iSPC.black_pepper },
+    { ingredient: iSPC.basil },
+    { ingredient: iSPC.oregano },
   ],
   steps: [
     "Podsmaż czosnek krótko na maśle, uważając aby się nie przypalił.",

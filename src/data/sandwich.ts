@@ -1,3 +1,8 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const sandwichRecipe: Recipe = {
@@ -8,43 +13,14 @@ const sandwichRecipe: Recipe = {
   time: 10,
   portions: 2,
   ingredients: [
-    {
-      name: "tosty",
-      amount: 4,
-      unit: "szt",
-      type: "grn",
-    },
-    {
-      name: "ser żółty",
-      amount: 2,
-      unit: "plaster",
-      type: "che",
-    },
-    {
-      name: "szynka",
-      amount: 2,
-      unit: "plaster",
-      type: "met",
-    },
-    {
-      name: "ogórek kiszony",
-      amount: null,
-      unit: null,
-      type: "veg",
-    },
-    {
-      name: "ketchup",
-      amount: null,
-      unit: null,
-      type: "sau",
-    },
-    {
-      name: "sos czosnkowy",
-      amount: null,
-      unit: null,
-      type: "sau",
-    },
+    { ingredient: iGRN.toast_bread, amount: 4, unit: "szt" },
+    { ingredient: iMET.ham_slices, amount: 2, unit: "plaster" },
+    { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plaster" },
+    { ingredient: iVEG.pickled_cucumber },
+    { ingredient: iSAU.ketchup },
+    { ingredient: iSAU.garlic_sauce },
   ],
+
   steps: [
     "Ogórka kiszonego pokroić w cienkie plasterki.",
     "Na dwóch tostach ułożyć ser, szynkę oraz ogórka.",

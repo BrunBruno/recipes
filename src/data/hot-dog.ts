@@ -1,3 +1,7 @@
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const hotHog: Recipe = {
@@ -6,16 +10,16 @@ const hotHog: Recipe = {
   image: "hot-dog.jpg",
   kcal: 430,
   time: 10,
-  portions: 4,
+  portions: 2,
   ingredients: [
-    { name: "parówki", amount: 4, unit: "szt", type: "met" },
-    { name: "bułki hotdogowe", amount: 4, unit: "szt", type: "grn" },
-    { name: "ogórek kiszony", amount: 2, unit: "szt", type: "veg" },
-    { name: "kapusta kiszona", amount: null, unit: null, type: "veg" },
-    { name: "cebulka prażona", amount: null, unit: null, type: "veg" },
-    { name: "ketchup", amount: null, unit: null, type: "sau" },
-    { name: "musztarda", amount: null, unit: null, type: "sau" },
-    { name: "sos czosnkowy", amount: null, unit: null, type: "sau" },
+    { ingredient: iMET.sausages, amount: 4, unit: "szt" },
+    { ingredient: iGRN.hotdog_buns, amount: 4, unit: "szt" },
+    { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+    { ingredient: iVEG.sauerkraut, amount: 160 },
+    { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },
+    { ingredient: iSAU.ketchup },
+    { ingredient: iSAU.mustard },
+    { ingredient: iSAU.garlic_sauce },
   ],
   steps: [
     "Podgrzej bułki oraz parówki w mikrofalówce.",

@@ -1,3 +1,10 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const zapiekankaBolognese: Recipe = {
@@ -8,18 +15,18 @@ const zapiekankaBolognese: Recipe = {
   time: 50,
   portions: 4,
   ingredients: [
-    { name: "makaron świderki", amount: 400, unit: "g", type: "grn" },
-    { name: "mięso mielone", amount: 400, unit: "g", type: "met" },
-    { name: "pieczarki", amount: 250, unit: "g", type: "veg" },
-    { name: "pomidor", amount: "1-2", unit: "szt", type: "veg" },
-    { name: "cebula", amount: 1, unit: "szt", type: "veg" },
-    { name: "papryka", amount: 1, unit: "szt", type: "veg" },
-    { name: "ser żółty", amount: 200, unit: "g", type: "che" },
-    { name: "koncentrat pomidorowy", amount: 2, unit: "łyżeczka", type: "sau" },
-    { name: "przyprawa bolognese", amount: null, unit: null, type: "spc" },
-    { name: "ziele angielskie", amount: null, unit: null, type: "spc" },
-    { name: "liść laurowy", amount: null, unit: null, type: "spc" },
-    { name: "olej", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.ground_pork, amount: 400 },
+    { ingredient: iGRN.fusilli_pasta, amount: 400 },
+    { ingredient: iVEG.mushrooms, amount: 250 },
+    { ingredient: iVEG.tomato, amount: "1-2", unit: "szt" },
+    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+    { ingredient: iVEG.bell_pepper, amount: 1, unit: "szt" },
+    { ingredient: iDIR.yellow_cheese, amount: 200 },
+    { ingredient: iSAU.tomato_paste, amount: 2, unit: "łyżeczka" },
+    { ingredient: iFAT.oil },
+    { ingredient: iSPC.knorr_bolognese_fix },
+    { ingredient: iSPC.allspice },
+    { ingredient: iSPC.bay_leaf },
   ],
   steps: [
     "Podsmaż mięso mielone na oleju.",

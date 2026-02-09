@@ -1,3 +1,7 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const stek: Recipe = {
@@ -8,12 +12,12 @@ const stek: Recipe = {
   time: 15,
   portions: 1,
   ingredients: [
-    { name: "stek wołowy", amount: 1, unit: "szt", type: "met" },
-    { name: "czosnek", amount: 1, unit: "ząbek", type: "veg" },
-    { name: "olej", amount: 1, unit: "łyżeczka", type: "fat" },
-    { name: "masło", amount: 1, unit: "łyżka", type: "fat" },
-    { name: "tymianek", amount: null, unit: null, type: "spc" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
+    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+    { ingredient: iFAT.oil, amount: 1, unit: "łyżeczka" },
+    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+    { ingredient: iSPC.thyme },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Stek posyp solą.",

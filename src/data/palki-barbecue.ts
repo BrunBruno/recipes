@@ -1,3 +1,6 @@
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const palkiBarbecue: Recipe = {
@@ -8,13 +11,14 @@ const palkiBarbecue: Recipe = {
   time: 60,
   portions: 3,
   ingredients: [
-    { name: "pałki z kurczaka", amount: 2, unit: "opak", type: "met" },
-    { name: "słodka papryka", amount: null, unit: null, type: "spc" },
-    { name: "ostra papryka", amount: null, unit: null, type: "spc" },
-    { name: "wędzona papryka", amount: null, unit: null, type: "spc" },
-    { name: "czosnek granulowany", amount: null, unit: null, type: "spc" },
-    { name: "sos barbecue", amount: null, unit: null, type: "sau" },
+    { ingredient: iMET.chicken_drums, amount: 2, unit: "opak" },
+    { ingredient: iSAU.barbecue_sauce },
+    { ingredient: iSPC.sweet_paprika },
+    { ingredient: iSPC.hot_paprika },
+    { ingredient: iSPC.smoked_paprika },
+    { ingredient: iSPC.granulated_garlic },
   ],
+
   steps: [
     "Ułóż pałki w naczyniu żaroodpornym.",
     "Posyp kurczaka mieszanką przypraw: słodką, ostrą i wędzoną papryką oraz czosnkiem granulowanym.",

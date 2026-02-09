@@ -1,3 +1,9 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iFRT } from "../ingredients/ingFruit";
+import { iGRN } from "../ingredients/ingGrain";
+import { iOTH } from "../ingredients/ingOther";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const ryzZJablkami: Recipe = {
@@ -8,13 +14,13 @@ const ryzZJablkami: Recipe = {
   time: 25,
   portions: 1,
   ingredients: [
-    { name: "ryż", amount: "100", unit: "g", type: "grn" },
-    { name: "jabłka", amount: "2", unit: "szt", type: "frt" },
-    { name: "mleko", amount: "250", unit: "ml", type: "dir" },
-    { name: "cukier", amount: "2", unit: "łyżka", type: "oth" },
-    { name: "cynamon", amount: null, unit: null, type: "spc" },
-    { name: "masło", amount: null, unit: null, type: "fat" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
+    { ingredient: iGRN.rice, amount: 100 },
+    { ingredient: iFRT.apple, amount: 2, unit: "szt" },
+    { ingredient: iDIR.milk, amount: 250, unit: "ml" },
+    { ingredient: iOTH.sugar, amount: 2, unit: "łyżka" },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.cinnamon },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Ryż przepłucz pod bieżącą wodą, aż woda stanie się przezroczysta.",

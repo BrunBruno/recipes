@@ -1,3 +1,7 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const omlet: Recipe = {
@@ -8,36 +12,11 @@ const omlet: Recipe = {
   time: 15,
   portions: 1,
   ingredients: [
-    {
-      name: "jajka",
-      amount: 3,
-      unit: "szt",
-      type: "egg",
-    },
-    {
-      name: "papryka",
-      amount: 0.5,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "olej lub masło",
-      amount: null,
-      unit: null,
-      type: "fat",
-    },
-    {
-      name: "sól",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    {
-      name: "pieprz",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
+    { ingredient: iMET.egg, amount: 3, unit: "szt" },
+    { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.salt },
+    { ingredient: iSPC.black_pepper },
   ],
   steps: [
     "Paprykę umyj, usuń gniazdo nasienne i pokrój w drobną kostkę lub paski.",

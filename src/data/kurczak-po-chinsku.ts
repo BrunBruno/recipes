@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kurczakPoChinsku: Recipe = {
@@ -8,18 +13,13 @@ const kurczakPoChinsku: Recipe = {
   time: 30,
   portions: 3,
   ingredients: [
-    { name: "pierś z kurczaka", amount: 400, unit: "g", type: "met" },
-    { name: "marchew", amount: 120, unit: "g", type: "veg" },
-    { name: "papryka", amount: 100, unit: "g", type: "veg" },
-    { name: "por", amount: 120, unit: "g", type: "veg" },
-    { name: "ryż", amount: "3 x 100", unit: "g", type: "grn" },
-    {
-      name: "przyprawa do dań po chińsku",
-      amount: 1,
-      unit: "szt",
-      type: "spc",
-    },
-    { name: "olej roślinny", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.chicken_breast, amount: 400 },
+    { ingredient: iVEG.carrot, amount: 120 },
+    { ingredient: iVEG.bell_pepper, amount: 100 },
+    { ingredient: iVEG.leek, amount: 120 },
+    { ingredient: iGRN.rice, amount: 300 },
+    { ingredient: iFAT.oil },
+    { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "szt" },
   ],
   steps: [
     "Mięso usmaż na oleju.",

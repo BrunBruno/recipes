@@ -1,3 +1,6 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const kurczakZPiekarnika: Recipe = {
@@ -8,13 +11,13 @@ const kurczakZPiekarnika: Recipe = {
   time: 55,
   portions: 4,
   ingredients: [
-    { name: "ćwiartki kurczaka", amount: 4, unit: "szt", type: "met" },
-    { name: "słodka papryka", amount: null, unit: null, type: "spc" },
-    { name: "ostra papryka", amount: null, unit: null, type: "spc" },
-    { name: "wędzona papryka", amount: null, unit: null, type: "spc" },
-    { name: "czosnek granulowany", amount: null, unit: null, type: "spc" },
-    { name: "pieprz", amount: null, unit: null, type: "spc" },
-    { name: "masło", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.chicken_quarters, amount: 4, unit: "szt" },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.sweet_paprika },
+    { ingredient: iSPC.hot_paprika },
+    { ingredient: iSPC.smoked_paprika },
+    { ingredient: iSPC.granulated_garlic },
+    { ingredient: iSPC.black_pepper },
   ],
   steps: [
     "Rozgrzej piekarnik do 190°C.",

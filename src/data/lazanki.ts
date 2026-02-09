@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const lazanki: Recipe = {
@@ -8,19 +13,20 @@ const lazanki: Recipe = {
   time: 50,
   portions: 5,
   ingredients: [
-    { name: "makaron łazanki", amount: 240, unit: "g", type: "grn" },
-    { name: "kiełbasa", amount: 200, unit: "g", type: "met" },
-    { name: "boczek", amount: 100, unit: "g", type: "met" },
-    { name: "kapusta kiszona", amount: 400, unit: "g", type: "veg" },
-    { name: "cebula", amount: 280, unit: "g", type: "veg" },
-    { name: "pieczarki", amount: 150, unit: "g", type: "veg" },
-    { name: "olej", amount: 10, unit: "łyżka", type: "fat" },
-    { name: "liść laurowy", amount: 2, unit: "listek", type: "spc" },
-    { name: "ziele angielskie", amount: 3, unit: "ziarno", type: "spc" },
-    { name: "pieprz", amount: null, unit: null, type: "spc" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
-    { name: "kminek", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.sausage, amount: 200 },
+    { ingredient: iMET.bacon_block, amount: 100 },
+    { ingredient: iVEG.sauerkraut, amount: 400 },
+    { ingredient: iVEG.onion, amount: 280 },
+    { ingredient: iVEG.mushrooms, amount: 150 },
+    { ingredient: iGRN.lazanki_pasta, amount: 240 },
+    { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
+    { ingredient: iSPC.bay_leaf, amount: 2, unit: "listek" },
+    { ingredient: iSPC.allspice, amount: 3, unit: "ziarno" },
+    { ingredient: iSPC.black_pepper },
+    { ingredient: iSPC.salt },
+    { ingredient: iSPC.caraway },
   ],
+
   steps: [
     "Kapustę drobno poszatkuj i ugotuj do miękkości (ok. 25 min) dodając 2 szklanki wody, liść laurowy oraz ziele angielskie. Po ugotowaniu odstaw do ostygnięcia.",
     "Makaron ugotuj al dente w osolonej wodzie i odcedź.",

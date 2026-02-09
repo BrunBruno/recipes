@@ -384,6 +384,11 @@ body::-webkit-scrollbar {
   color: #20c997;
 }
 
+.recipe-details-content h4 {
+  font-size: 1rem;
+  color: #63e6be;
+}
+
 .ingredients-list {
   list-style: none;
   padding: 0;
@@ -632,5 +637,9 @@ body::-webkit-scrollbar {
 
   .filter-text {
     display: inline;
+  }
+
+  .recipe-card:hover {
+    transform: translateY(0);
   }
 }

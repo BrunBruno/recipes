@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iOTH } from "../ingredients/ingOther";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const sosDoGolabkow: Recipe = {
@@ -8,48 +13,13 @@ const sosDoGolabkow: Recipe = {
   time: 10,
   portions: 4,
   ingredients: [
-    {
-      name: "masło",
-      amount: 1,
-      unit: "łyżka",
-      type: "fat",
-    },
-    {
-      name: "mąka",
-      amount: 2,
-      unit: "łyżka",
-      type: "grn",
-    },
-    {
-      name: "woda",
-      amount: 0.5,
-      unit: "szklanka",
-      type: "wat",
-    },
-    {
-      name: "przecier pomidorowy",
-      amount: 250,
-      unit: "ml",
-      type: "veg",
-    },
-    {
-      name: "sól",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    {
-      name: "Maggi",
-      amount: null,
-      unit: null,
-      type: "sau",
-    },
-    {
-      name: "jarzynka",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
+    { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
+    { ingredient: iSAU.tomato_passata, amount: 250, unit: "ml" },
+    { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
+    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+    { ingredient: iSPC.maggi },
+    { ingredient: iSPC.vegetable_seasoning },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Na patelni lub w garnku rozpuść masło i dodaj mąkę.",

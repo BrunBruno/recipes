@@ -1,3 +1,8 @@
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const salatkaKuskus: Recipe = {
@@ -6,57 +11,18 @@ const salatkaKuskus: Recipe = {
   image: "",
   kcal: 350,
   time: 25,
-  portions: 4,
+  portions: 6,
   ingredients: [
-    {
-      name: "kuskus",
-      amount: 1,
-      unit: "opak",
-      type: "grn",
-    },
-    {
-      name: "jajka",
-      amount: 4,
-      unit: "szt",
-      type: "egg",
-    },
-    {
-      name: "tuńczyk w sosie własnym",
-      amount: 2,
-      unit: "opak",
-      type: "fsh",
-    },
-    {
-      name: "kukurydza",
-      amount: 1,
-      unit: "opak",
-      type: "veg",
-    },
-    {
-      name: "cebula",
-      amount: 1,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "majonez",
-      amount: 1,
-      unit: "opak",
-      type: "sau",
-    },
-    {
-      name: "sól",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
-    {
-      name: "pieprz",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
+    { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
+    { ingredient: iMET.egg, amount: 4, unit: "szt" },
+    { ingredient: iMET.canned_tuna, amount: 2, unit: "opak" },
+    { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
+    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+    { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
+    { ingredient: iSPC.salt },
+    { ingredient: iSPC.black_pepper },
   ],
+
   steps: [
     "Ugotuj jajka na twardo.",
     "Przygotuj kuskus zgodnie z instrukcją na opakowaniu i ostudź.",

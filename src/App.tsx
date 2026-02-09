@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 import { recipes } from "./recipes";
-import { type mealType, type Recipe } from "./types";
+import { calculateRecipeKcal, type mealType, type Recipe } from "./types";
 import DinnerSvg from "./assets/dinnerSvg";
 import SnackSvg from "./assets/snackSvg";
 import SoupSvg from "./assets/soupSvg";
@@ -254,11 +254,11 @@ function App() {
           <div className="recipe-details-params">
             <div
               className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.kcal)} 
-                ${getStatusClass("kcal", selectedRecipe.kcal)}
+                ${getFontSizeClass(calculateRecipeKcal(selectedRecipe))} 
+                ${getStatusClass("kcal", calculateRecipeKcal(selectedRecipe))}
               `}
             >
-              {selectedRecipe.kcal}
+              {calculateRecipeKcal(selectedRecipe)}
             </div>
             <div
               className={`recipe-param 
@@ -274,6 +274,15 @@ function App() {
               `}
             >
               {selectedRecipe.portions}
+            </div>
+
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.kcal)} 
+                ${getStatusClass("kcal", selectedRecipe.kcal)}
+              `}
+            >
+              {selectedRecipe.kcal}
             </div>
           </div>
 
@@ -301,27 +310,49 @@ function App() {
             <section>
               <h3>Składniki</h3>
               <ul className="ingredients-list">
-                {selectedRecipe.ingredients.map((ingredient, index) => (
-                  <li key={index}>
-                    <div className="ingredient-indicator">
-                      <IngredientSvg ingType={ingredient.type} />
-                    </div>
-                    <span className="ingredient-name">{ingredient.name}</span>
-                    <span className="ingredient-amount">
-                      {ingredient.amount}
-                      {ingredient.unit ? ` ${ingredient.unit}` : ""}
-                    </span>
-                  </li>
-                ))}
+                {selectedRecipe.ingredients.map((ingredient, index) => {
+                  return (
+                    <li key={index}>
+                      <div className="ingredient-indicator">
+                        <IngredientSvg ingType={ingredient.ingredient.type} />
+                      </div>
+                      <span className="ingredient-name">
+                        {ingredient.ingredient.name}
+                      </span>
+                      <span className="ingredient-amount">
+                        {ingredient.amount}
+                        {ingredient.unit
+                          ? ` ${ingredient.unit}`
+                          : ingredient.ingredient.defaultUnit
+                            ? ` ${ingredient.ingredient.defaultUnit}`
+                            : ingredient.amount
+                              ? " g"
+                              : ""}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </section>
 
             <section>
               <h3>Sposób przygotowania</h3>
               <ol className="steps-list">
-                {selectedRecipe.steps.map((step, index) => (
-                  <li key={index}>{step}</li>
-                ))}
+                {Array.isArray(selectedRecipe.steps) &&
+                  selectedRecipe.steps.map((step, index) => {
+                    if (typeof step === "string") {
+                      return <li key={index}>{step}</li>;
+                    } else {
+                      return (
+                        <div key={index}>
+                          <h4>{step.title}</h4>
+                          {step.steps.map((s, i) => (
+                            <li key={i}>{s}</li>
+                          ))}
+                        </div>
+                      );
+                    }
+                  })}
               </ol>
             </section>
           </div>
@@ -341,7 +372,7 @@ function App() {
               }`}
               style={{
                 backgroundImage: `linear-gradient(
-                  rgba(0,0,0,0.4),
+                  rgba(0,0,0,0.3),
                   rgba(0,0,0,0.8)
                 ),url(${recipe.image === "" ? "./default.jpg" : recipe.image})`,
               }}

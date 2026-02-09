@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const kurczakSlodkoKwasny: Recipe = {
@@ -8,16 +13,11 @@ const kurczakSlodkoKwasny: Recipe = {
   time: 30,
   portions: 3,
   ingredients: [
-    { name: "pierś z kurczaka", amount: 400, unit: "g", type: "met" },
-    {
-      name: "sos słodko-kwaśny Winiary",
-      amount: 1,
-      unit: "opak",
-      type: "sau",
-    },
-    { name: "ryż", amount: 300, unit: "g", type: "grn" },
-    { name: "olej roślinny", amount: 2, unit: "łyżka", type: "fat" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.chicken_breast, amount: 400 },
+    { ingredient: iGRN.rice, amount: 300 },
+    { ingredient: iSAU.winiary_sweet_sour_sauce, amount: 1, unit: "opak" },
+    { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Ugotuj ryż według instrukcji na opakowaniu.",

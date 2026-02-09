@@ -1,3 +1,8 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const plackiZiemniaczane: Recipe = {
@@ -8,15 +13,15 @@ const plackiZiemniaczane: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { name: "ziemniaki", amount: 4, unit: "szt", type: "veg" },
-    { name: "cebula", amount: 1, unit: "szt", type: "veg" },
-    { name: "czosnek", amount: 1, unit: "ząbek", type: "veg" },
-    { name: "mąka", amount: 1, unit: "łyżka", type: "grn" },
-    { name: "jajo", amount: 1, unit: "szt", type: "egg" },
-    { name: "cząber", amount: null, unit: null, type: "spc" },
-    { name: "pieprz czarny", amount: null, unit: null, type: "spc" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
-    { name: "olej", amount: null, unit: null, type: "fat" },
+    { ingredient: iMET.egg, amount: 1, unit: "szt" },
+    { ingredient: iVEG.potato, amount: 4, unit: "szt" },
+    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+    { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+    { ingredient: iFAT.oil },
+    { ingredient: iSPC.savory },
+    { ingredient: iSPC.black_pepper },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Zetrzyj na tarce ziemniaki oraz cebulę.",

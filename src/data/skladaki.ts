@@ -1,3 +1,9 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const skladaki: Recipe = {
@@ -8,21 +14,16 @@ const skladaki: Recipe = {
   time: 15,
   portions: 2,
   ingredients: [
-    { name: "tortilla", amount: 4, unit: "szt", type: "grn" },
-    { name: "salami", amount: 160, unit: "g", type: "met" },
-    { name: "ser żółty", amount: 1, unit: "kostka", type: "che" },
-    { name: "cebula", amount: 0.5, unit: "szt", type: "veg" },
-    { name: "papryka", amount: 0.5, unit: "szt", type: "veg" },
-    {
-      name: "koncentrat pomidorowy",
-      amount: "3-4",
-      unit: "łyżeczka",
-      type: "sau",
-    },
-    { name: "ketchup", amount: "0-1", unit: "łyżeczka", type: "sau" },
-    { name: "czosnek", amount: "1-2", unit: "ząbek", type: "veg" },
-    { name: "oregano", amount: null, unit: null, type: "spc" },
-    { name: "bazylia", amount: null, unit: null, type: "spc" },
+    { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
+    { ingredient: iMET.salami, amount: 160 },
+    { ingredient: iDIR.yellow_cheese, amount: 1, unit: "kostka" },
+    { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
+    { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+    { ingredient: iVEG.garlic, amount: "1-2", unit: "ząbek" },
+    { ingredient: iSAU.tomato_paste, amount: "3-4", unit: "łyżeczka" },
+    { ingredient: iSAU.ketchup, amount: "0-1", unit: "łyżeczka" },
+    { ingredient: iSPC.oregano },
+    { ingredient: iSPC.basil },
   ],
   steps: [
     "W miseczce wymieszaj koncentrat pomidorowy z ketchupem, wyciśniętym czosnkiem oraz bazylią, aby powstał sos.",

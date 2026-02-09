@@ -1,3 +1,9 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iOTH } from "../ingredients/ingOther";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const sosPieczarkowy: Recipe = {
@@ -8,54 +14,14 @@ const sosPieczarkowy: Recipe = {
   time: 15,
   portions: 4,
   ingredients: [
-    {
-      name: "pieczarki",
-      amount: 0.5,
-      unit: "opak",
-      type: "veg",
-    },
-    {
-      name: "cebula",
-      amount: 0.5,
-      unit: "szt",
-      type: "veg",
-    },
-    {
-      name: "mąka",
-      amount: 1,
-      unit: "łyżka",
-      type: "grn",
-    },
-    {
-      name: "śmietana 18%",
-      amount: null,
-      unit: null,
-      type: "dir",
-    },
-    {
-      name: "masło",
-      amount: null,
-      unit: null,
-      type: "fat",
-    },
-    {
-      name: "woda",
-      amount: null,
-      unit: null,
-      type: "wat",
-    },
-    {
-      name: "Maggi",
-      amount: null,
-      unit: null,
-      type: "sau",
-    },
-    {
-      name: "jarzynka",
-      amount: null,
-      unit: null,
-      type: "spc",
-    },
+    { ingredient: iVEG.mushrooms, amount: 0.5, unit: "opak" },
+    { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
+    { ingredient: iDIR.cream_18 },
+    { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+    { ingredient: iSPC.maggi },
+    { ingredient: iFAT.butter },
+    { ingredient: iSPC.vegetable_seasoning },
+    { ingredient: iOTH.water },
   ],
   steps: [
     "Cebulę pokrój i podsmaż na maśle.",

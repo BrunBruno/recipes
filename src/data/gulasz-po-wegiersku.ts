@@ -1,3 +1,9 @@
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const gulaszPoWegiersku: Recipe = {
@@ -8,38 +14,32 @@ const gulaszPoWegiersku: Recipe = {
   time: 75,
   portions: 3,
   ingredients: [
-    {
-      name: "mięso wołowe",
-      amount: 500,
-      unit: "g",
-      type: "met",
-    },
-    {
-      name: "olej",
-      amount: 5,
-      unit: "łyżka",
-      type: "fat",
-    },
-    {
-      name: "woda",
-      amount: 500,
-      unit: "ml",
-      type: "wat",
-    },
-    {
-      name: "Fix Knorr gulasz węgierski",
-      amount: 1,
-      unit: "opak",
-      type: "spc",
-    },
+    { ingredient: iMET.stew_beef, amount: 500 },
+    { ingredient: iGRN.gnocchi, amount: 750, unit: "g" },
+    { ingredient: iVEG.fried_beets, amount: 1, unit: "opak" },
+    { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
+    { ingredient: iOTH.water, amount: 500 },
+    { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
   ],
   steps: [
-    "Mięso wołowe pokrój w kostkę.",
-    "Na patelni lub w garnku rozgrzej niewielką ilość oleju i podsmaż mięso, aż się zarumieni.",
-    "W osobnym garnku wymieszaj Fix Knorr z 500 ml wody.",
-    "Dodaj podsmażone mięso do garnka z sosem i całość zagotuj.",
-    "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
-    "Podawaj z ziemniakami, kopytkami lub kluskami.",
+    {
+      title: "Gulasz",
+      steps: [
+        "Mięso wołowe pokrój w kostkę.",
+        "Na patelni lub w garnku rozgrzej niewielką ilość oleju i podsmaż mięso, aż się zarumieni.",
+        "W osobnym garnku wymieszaj Fix Knorr z 500 ml wody.",
+        "Dodaj podsmażone mięso do garnka z sosem i całość zagotuj.",
+        "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
+      ],
+    },
+    {
+      title: "Kopytka i Podanie",
+      steps: [
+        "Ugotuj gotowe kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
+        "Podawaj gulasz z ugotowanymi kopytkami.",
+        "Dodaj porcję buraczków zasmażanych.",
+      ],
+    },
   ],
 };
 

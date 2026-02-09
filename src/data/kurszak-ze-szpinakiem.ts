@@ -1,3 +1,8 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iMET } from "../ingredients/ingMeat";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kurczakZeSzpinakiem: Recipe = {
@@ -8,15 +13,15 @@ const kurczakZeSzpinakiem: Recipe = {
   time: 40,
   portions: 6,
   ingredients: [
-    { name: "pierś z kurczaka", amount: 500, unit: "g", type: "met" },
-    { name: "kostka rosołowa Knorr", amount: 2, unit: "szt", type: "spc" },
-    { name: "mrożony szpinak", amount: 1, unit: "opak", type: "veg" },
-    { name: "cebula", amount: 1, unit: "szt", type: "veg" },
-    { name: "śmietana 22%", amount: 200, unit: "ml", type: "dir" },
-    { name: "żółty ser", amount: 100, unit: "g", type: "che" },
-    { name: "olej roślinny", amount: 3, unit: "łyżka", type: "fat" },
-    { name: "czosnek", amount: 1, unit: "ząbek", type: "veg" },
-    { name: "pieprz cayenne", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.chicken_breast, amount: 400 },
+    { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
+    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+    { ingredient: iDIR.cream_22, amount: 200, unit: "ml" },
+    { ingredient: iDIR.yellow_cheese, amount: 100 },
+    { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
+    { ingredient: iSPC.knorr_bouillon_cube, amount: 2, unit: "szt" },
+    { ingredient: iSPC.cayenne_pepper },
   ],
   steps: [
     "Pierś z kurczaka rozetnij wzdłuż na cienkie płaty, aby uzyskać 6 porcji.",

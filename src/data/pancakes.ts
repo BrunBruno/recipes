@@ -1,3 +1,9 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
+import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const pancakes: Recipe = {
@@ -8,15 +14,16 @@ const pancakes: Recipe = {
   time: 20,
   portions: 3,
   ingredients: [
-    { name: "mąka", amount: 1.25, unit: "szklanka", type: "grn" },
-    { name: "jajko", amount: 1, unit: "szt", type: "egg" },
-    { name: "maślanka", amount: 1.25, unit: "szklanka", type: "dir" },
-    { name: "cukier puder", amount: 0.25, unit: "szklanka", type: "oth" },
-    { name: "proszek do pieczenia", amount: 1, unit: "łyżeczka", type: "oth" },
-    { name: "soda", amount: 1, unit: "łyżeczka", type: "spc" },
-    { name: "olej roślinny", amount: 0.25, unit: "szklanka", type: "fat" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.egg, amount: 1, unit: "szt" },
+    { ingredient: iGRN.flour, amount: 1.25, unit: "szklanka" },
+    { ingredient: iDIR.buttermilk, amount: 1.25, unit: "szklanka" },
+    { ingredient: iOTH.powdered_sugar, amount: 0.25, unit: "szklanka" },
+    { ingredient: iOTH.baking_powder, amount: 1, unit: "łyżeczka" },
+    { ingredient: iOTH.baking_soda, amount: 1, unit: "łyżeczka" },
+    { ingredient: iFAT.oil, amount: 0.25, unit: "szklanka" },
+    { ingredient: iSPC.salt },
   ],
+
   steps: [
     "W blenderze zmiksuj wszystkie składniki na gładką masę o konsystencji gęstej śmietany.",
     "Rozgrzej patelnię na średnim ogniu.",

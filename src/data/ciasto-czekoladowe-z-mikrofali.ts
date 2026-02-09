@@ -1,3 +1,7 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iOTH } from "../ingredients/ingOther";
 import type { Recipe } from "../types";
 
 const ciastoCzekoladoweZMikrofali: Recipe = {
@@ -8,14 +12,14 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
   time: 15,
   portions: 6,
   ingredients: [
-    { name: "mąka", amount: 150, unit: "g", type: "grn" },
-    { name: "cukier", amount: 100, unit: "g", type: "oth" },
-    { name: "kakao", amount: 60, unit: "g", type: "oth" },
-    { name: "proszek do pieczenia", amount: 2, unit: "łyżeczka", type: "oth" },
-    { name: "masło lub margaryna", amount: 90, unit: "g", type: "fat" },
-    { name: "ciepła woda", amount: 380, unit: "ml", type: "wat" },
-    { name: "czekolada gorzka", amount: 100, unit: "g", type: "oth" },
-    { name: "śmietanka kremówka", amount: 100, unit: "ml", type: "dir" },
+    { ingredient: iFAT.butter, amount: 90 },
+    { ingredient: iGRN.flour, amount: 150 },
+    { ingredient: iOTH.sugar, amount: 100 },
+    { ingredient: iOTH.cocoa, amount: 60 },
+    { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
+    { ingredient: iOTH.dark_chocolate, amount: 100 },
+    { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
+    { ingredient: iOTH.water, amount: 380 },
   ],
   steps: [
     "Wymieszaj mąkę, cukier, kakao, proszek do pieczenia, masło oraz wodę na jednolitą masę.",

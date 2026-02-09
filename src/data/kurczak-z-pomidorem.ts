@@ -1,3 +1,9 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iMET } from "../ingredients/ingMeat";
+import { iSAU } from "../ingredients/ingSauce";
+import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kurczakZPomidorem: Recipe = {
@@ -8,19 +14,19 @@ const kurczakZPomidorem: Recipe = {
   time: 65,
   portions: 4,
   ingredients: [
-    { name: "pierś z kurczaka", amount: null, unit: null, type: "met" },
-    { name: "ser żółty", amount: 0.5, unit: "kostka", type: "che" },
-    { name: "pomidor", amount: 3, unit: "szt", type: "veg" },
-    { name: "majonez", amount: 1, unit: "łyżka", type: "sau" },
-    { name: "śmietana", amount: 1, unit: "łyżka", type: "dir" },
-    { name: "cebula", amount: 0.5, unit: "szt", type: "veg" },
-    { name: "oliwa lub olej", amount: null, unit: null, type: "fat" },
-    { name: "papryka", amount: null, unit: null, type: "spc" },
-    { name: "czosnek", amount: null, unit: null, type: "veg" },
-    { name: "zioła prowansalskie", amount: null, unit: null, type: "spc" },
-    { name: "czosnek niedźwiedzi", amount: null, unit: null, type: "spc" },
-    { name: "pieprz", amount: null, unit: null, type: "spc" },
-    { name: "sól", amount: null, unit: null, type: "spc" },
+    { ingredient: iMET.chicken_breast, amount: 400 },
+    { ingredient: iVEG.tomato, amount: 3, unit: "szt" },
+    { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
+    { ingredient: iVEG.garlic },
+    { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kostka" },
+    { ingredient: iDIR.cream, amount: 1, unit: "łyżka" },
+    { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
+    { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
+    { ingredient: iSPC.sweet_paprika },
+    { ingredient: iSPC.herbes_de_provence },
+    { ingredient: iSPC.wild_garlic },
+    { ingredient: iSPC.black_pepper },
+    { ingredient: iSPC.salt },
   ],
   steps: [
     "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
