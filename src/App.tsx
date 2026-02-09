@@ -154,10 +154,6 @@ function App() {
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
 
-  for (let i = 0; i < recipes.length; i++) {
-    console.log(recipes[i].name);
-  }
-
   return (
     <div className="recipes-page">
       <div className="page-title">
