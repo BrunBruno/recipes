@@ -33,6 +33,7 @@ const spaghettiPomidorowe: Recipe = {
     "Zetrzyj ser żółty.",
     "Podawaj makaron z sosem pomidorowym posypany startym serem.",
   ],
+  keyWords: ["makaron", "pomidory", "sos"],
 };
 
 export default spaghettiPomidorowe;

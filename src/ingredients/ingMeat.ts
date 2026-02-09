@@ -22,6 +22,7 @@ type IngId =
   | "sausage"
   | "sausages"
   | "canned_tuna"
+  | "smoked_salmon"
   | "pikantne_poledwiczki"
   | "burger_patties";
 
@@ -229,6 +230,16 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 120,
     unitWeights: {
       opak: 160,
+    },
+  },
+
+  smoked_salmon: {
+    name: "Łosoś wędzony",
+    type: "fsh",
+    kcalPer100g: 117,
+    unitWeights: {
+      opak: 100,
+      plaster: 30,
     },
   },
 

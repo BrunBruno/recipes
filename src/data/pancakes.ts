@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 
 const pancakes: Recipe = {
   name: "Pancakes",
-  type: "snack",
+  type: "dessert",
   image: "pancakes.jpg",
   kcal: 350,
   time: 20,
@@ -23,13 +23,13 @@ const pancakes: Recipe = {
     { ingredient: iFAT.oil, amount: 0.25, unit: "szklanka" },
     { ingredient: iSPC.salt },
   ],
-
   steps: [
     "W blenderze zmiksuj wszystkie składniki na gładką masę o konsystencji gęstej śmietany.",
     "Rozgrzej patelnię na średnim ogniu.",
     "Smaż pancakes z obu stron aż będą złociste.",
     "Podawaj z syropem klonowym, masłem lub cukrem pudrem według uznania.",
   ],
+  keyWords: ["słodkie", "ciasto", "naleśnik"],
 };
 
 export default pancakes;

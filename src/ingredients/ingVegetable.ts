@@ -21,6 +21,7 @@ type IngId =
   | "pickled_cucumber"
   | "sauerkraut"
   | "fried_onion"
+  | "olives"
   | "oven_fries"
   | "coleslaw"
   | "fried_beets"
@@ -219,6 +220,15 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [44, 40, 6],
   }, //
+
+  olives: {
+    name: "Oliwki",
+    type: "veg",
+    kcalPer100g: 115,
+    unitWeights: {
+      szt: 5,
+    },
+  },
 
   oven_fries: {
     name: "Frytki z piekarnika",

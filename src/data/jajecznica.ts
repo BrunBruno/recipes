@@ -26,6 +26,7 @@ const jajecznica: Recipe = {
     "Wbij jajka na patelnię i dokładnie wymieszaj.",
     "Dopraw solą i posyp szczypiorkiem przed podaniem.",
   ],
+  keyWords: ["jajka", "śniadanie", "smażone"],
 };
 
 export default jajecznica;

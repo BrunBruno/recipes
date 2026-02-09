@@ -9,6 +9,7 @@ const kotletDevolay: Recipe = {
   portions: 0,
   ingredients: [],
   steps: [],
+  keyWords: ["mięso", "kurczak", "panierowany", "smażony"],
 };
 
 export default kotletDevolay;

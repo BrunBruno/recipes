@@ -11,7 +11,7 @@ const sosDoGolabkow: Recipe = {
   image: "golabki.jpg",
   kcal: 120,
   time: 10,
-  portions: 4,
+  portions: 2,
   ingredients: [
     { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
     { ingredient: iSAU.tomato_passata, amount: 250, unit: "ml" },
@@ -28,6 +28,7 @@ const sosDoGolabkow: Recipe = {
     "Zagotuj całość, rozbijając ewentualne grudki mąki.",
     "Dopraw solą, Maggi oraz jarzynką do smaku.",
   ],
+  keyWords: ["sos", "pomidorowy"],
 };
 
 export default sosDoGolabkow;

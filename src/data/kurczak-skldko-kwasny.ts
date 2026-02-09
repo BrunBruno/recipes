@@ -26,6 +26,7 @@ const kurczakSlodkoKwasny: Recipe = {
     "Dodaj sos słodko-kwaśny Winiary i dokładnie wymieszaj. Gotuj przez kilka minut, aż sos lekko zgęstnieje i wszystko będzie pokryte sosem.",
     "Podawaj kurczaka z warzywami na ugotowanym ryżu.",
   ],
+  keyWords: ["mięso", "kurczak", "ryż", "sos", "azjatyckie"],
 };
 
 export default kurczakSlodkoKwasny;

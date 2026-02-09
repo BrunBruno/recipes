@@ -91,61 +91,11 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
   },
 
-  //
-
-  dill: {
-    name: "Koperek",
+  nutmeg: {
+    name: "Gałka muszkatołowa",
     type: "spc",
-    kcalPer100g: 43,
-    unitWeights: {
-      łyżka: 3,
-    },
-  },
-
-  thyme: {
-    name: "Tymianek",
-    type: "spc",
-    kcalPer100g: 276,
-    unitWeights: {
-      łyżeczka: 1,
-    },
-  },
-
-  marjoram: {
-    name: "Majeranek",
-    type: "spc",
-    kcalPer100g: 271,
-    unitWeights: {
-      łyżeczka: 1,
-    },
-  },
-
-  herbes_de_provence: {
-    name: "Zioła prowansalskie",
-    type: "spc",
-    kcalPer100g: 241,
-    unitWeights: {
-      łyżeczka: 1,
-    },
-  },
-
-  wild_garlic: {
-    name: "Niedźwiedzi czosnek",
-    type: "spc",
-    kcalPer100g: 42,
-    unitWeights: {
-      łyżeczka: 2,
-    },
-  },
-
-  bay_leaf: {
-    name: "Liść laurowy",
-    type: "spc",
-    kcalPer100g: 313,
-    unitWeights: {
-      listek: 1,
-    },
-    defaultUnit: "listek",
+    kcalPer100g: 525,
+    unitWeights: {},
   },
 
   allspice: {
@@ -158,9 +108,75 @@ export const iSPC: Record<IngId, IngredientItem> = {
     defaultUnit: "ziarno",
   },
 
+  black_sesame: {
+    name: "Czarny sezam",
+    type: "spc",
+    kcalPer100g: 573,
+    unitWeights: {
+      łyżeczka: 3,
+    },
+  },
+
+  //
+
+  dill: {
+    name: "Koperek",
+    type: "hrb",
+    kcalPer100g: 43,
+    unitWeights: {
+      łyżka: 3,
+    },
+  },
+
+  thyme: {
+    name: "Tymianek",
+    type: "hrb",
+    kcalPer100g: 276,
+    unitWeights: {
+      łyżeczka: 1,
+    },
+  },
+
+  marjoram: {
+    name: "Majeranek",
+    type: "hrb",
+    kcalPer100g: 271,
+    unitWeights: {
+      łyżeczka: 1,
+    },
+  },
+
+  herbes_de_provence: {
+    name: "Zioła prowansalskie",
+    type: "hrb",
+    kcalPer100g: 241,
+    unitWeights: {
+      łyżeczka: 1,
+    },
+  },
+
+  wild_garlic: {
+    name: "Niedźwiedzi czosnek",
+    type: "hrb",
+    kcalPer100g: 42,
+    unitWeights: {
+      łyżeczka: 2,
+    },
+  },
+
+  bay_leaf: {
+    name: "Liść laurowy",
+    type: "hrb",
+    kcalPer100g: 313,
+    unitWeights: {
+      listek: 1,
+    },
+    defaultUnit: "listek",
+  },
+
   caraway: {
     name: "Kminek",
-    type: "spc",
+    type: "hrb",
     kcalPer100g: 333,
     unitWeights: {
       łyżeczka: 2,
@@ -169,7 +185,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
 
   savory: {
     name: "Cząber",
-    type: "spc",
+    type: "hrb",
     kcalPer100g: 287,
     unitWeights: {
       łyżeczka: 1,
@@ -178,7 +194,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
 
   oregano: {
     name: "Oregano",
-    type: "spc",
+    type: "hrb",
     kcalPer100g: 306,
     unitWeights: {
       łyżeczka: 1,
@@ -187,7 +203,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
 
   basil: {
     name: "Bazylia",
-    type: "spc",
+    type: "hrb",
     kcalPer100g: 233,
     unitWeights: {
       łyżeczka: 1,
@@ -263,6 +279,8 @@ type IngId =
   | "chilli"
   | "curry"
   | "cinnamon"
+  | "nutmeg"
+  | "black_sesame"
   | "dill"
   | "thyme"
   | "marjoram"

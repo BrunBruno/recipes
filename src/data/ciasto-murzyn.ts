@@ -31,6 +31,7 @@ const ciastoMurzyn: Recipe = {
     "Sprawdź patyczkiem, czy ciasto jest upieczone.",
     "Po upieczeniu polej ciasto przygotowaną wcześniej polewą.",
   ],
+  keyWords: ["ciasto", "słodkie", "czekolada"],
 };
 
 export default ciastoMurzyn;

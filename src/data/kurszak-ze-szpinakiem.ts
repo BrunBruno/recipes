@@ -31,6 +31,7 @@ const kurczakZeSzpinakiem: Recipe = {
     "Farsz nałóż na piersi kurczaka i posyp żółtym serem.",
     "Piecz w piekarniku nagrzanym do 190°C przez 15 minut.",
   ],
+  keyWords: ["mięso", "kurczak", "szpinak", "pieczony"],
 };
 
 export default kurczakZeSzpinakiem;

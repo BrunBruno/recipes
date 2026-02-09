@@ -12,11 +12,11 @@ const sosPieczarkowy: Recipe = {
   image: "",
   kcal: 150,
   time: 15,
-  portions: 4,
+  portions: 2,
   ingredients: [
     { ingredient: iVEG.mushrooms, amount: 0.5, unit: "opak" },
     { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-    { ingredient: iDIR.cream_18 },
+    { ingredient: iDIR.cream_18, amount: 1, unit: "łyżka" },
     { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
     { ingredient: iSPC.maggi },
     { ingredient: iFAT.butter },
@@ -33,6 +33,7 @@ const sosPieczarkowy: Recipe = {
     "Dodaj śmietanę oraz odrobinę masła i dokładnie wymieszaj.",
     "Wlej mieszankę do sosu i gotuj jeszcze chwilę, cały czas mieszając.",
   ],
+  keyWords: ["sos", "pieczarki"],
 };
 
 export default sosPieczarkowy;

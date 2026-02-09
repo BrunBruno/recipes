@@ -26,7 +26,6 @@ const lazanki: Recipe = {
     { ingredient: iSPC.salt },
     { ingredient: iSPC.caraway },
   ],
-
   steps: [
     "Kapustę drobno poszatkuj i ugotuj do miękkości (ok. 25 min) dodając 2 szklanki wody, liść laurowy oraz ziele angielskie. Po ugotowaniu odstaw do ostygnięcia.",
     "Makaron ugotuj al dente w osolonej wodzie i odcedź.",
@@ -38,6 +37,7 @@ const lazanki: Recipe = {
     "Dodaj makaron i dokładnie wszystko wymieszaj.",
     "Dopraw solą i pieprzem do smaku.",
   ],
+  keyWords: ["makaron", "kapusta", "mięso"],
 };
 
 export default lazanki;

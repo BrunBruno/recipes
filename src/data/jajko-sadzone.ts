@@ -38,6 +38,7 @@ const jajkoSadzone: Recipe = {
       ],
     },
   ],
+  keyWords: ["jajka", "smażone"],
 };
 
 export default jajkoSadzone;

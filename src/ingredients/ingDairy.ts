@@ -1,5 +1,20 @@
 import type { IngredientItem } from "../types";
 
+type IngId =
+  | "milk"
+  | "buttermilk"
+  | "condensed_milk"
+  | "cream"
+  | "cream_18"
+  | "cream_22"
+  | "cream_30"
+  | "cream_36"
+  | "cream_cheese"
+  | "cream_cheese_horseradish"
+  | "mascarpone"
+  | "yellow_cheese"
+  | "lilliputian_cheese";
+
 export const iDIR: Record<IngId, IngredientItem> = {
   milk: {
     name: "Mleko",
@@ -18,6 +33,15 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 40,
     unitWeights: {
       szklanka: 250,
+    },
+  },
+
+  condensed_milk: {
+    name: "Mleko skondensowane",
+    type: "dir",
+    kcalPer100g: 321,
+    unitWeights: {
+      opak: 400,
     },
   },
 
@@ -49,11 +73,38 @@ export const iDIR: Record<IngId, IngredientItem> = {
   },
 
   cream_30: {
-    name: "Śmietanka 30",
+    name: "Śmietanka 30%",
     type: "dir",
     kcalPer100g: 340,
     unitWeights: {
       ml: 1,
+    },
+  },
+
+  cream_36: {
+    name: "Śmietanka 36%",
+    type: "dir",
+    kcalPer100g: 345,
+    unitWeights: {
+      ml: 1,
+    },
+  },
+
+  cream_cheese: {
+    name: "Serek kremowy",
+    type: "dir",
+    kcalPer100g: 225,
+    unitWeights: {
+      opak: 150,
+    },
+  },
+
+  cream_cheese_horseradish: {
+    name: "Serek śmietankowy z chrzanem",
+    type: "dir",
+    kcalPer100g: 240,
+    unitWeights: {
+      opak: 200,
     },
   },
 
@@ -88,14 +139,3 @@ export const iDIR: Record<IngId, IngredientItem> = {
     },
   },
 };
-
-type IngId =
-  | "milk"
-  | "buttermilk"
-  | "cream"
-  | "cream_18"
-  | "cream_22"
-  | "cream_30"
-  | "mascarpone"
-  | "yellow_cheese"
-  | "lilliputian_cheese";

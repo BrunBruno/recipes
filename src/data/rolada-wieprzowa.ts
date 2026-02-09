@@ -28,7 +28,6 @@ const roladaWieprzowa: Recipe = {
     { ingredient: iSPC.salt },
     { ingredient: iSPC.black_pepper },
   ],
-
   steps: [
     "Pokrój mięso na kotlety i dokładnie je rozbij.",
     "Posmaruj mięso musztardą, posól i popieprz.",
@@ -39,6 +38,7 @@ const roladaWieprzowa: Recipe = {
     "Przełóż roladę do dużego garnka, dodaj niewielką ilość wody i duś przez około 1 godzinę.",
     "Zagęść sos, dodając mąkę i śmietanę.",
   ],
+  keyWords: ["wieprzowina", "mięso", "pieczone"],
 };
 
 export default roladaWieprzowa;

@@ -28,6 +28,7 @@ const kurczakPoChinsku: Recipe = {
     "Gotuj pod przykryciem przez około 10 minut, aż warzywa będą miękkie.",
     "Podawaj z ugotowanym ryżem.",
   ],
+  keyWords: ["mięso", "kurczak", "ryż", "azjatyckie", "sos"],
 };
 
 export default kurczakPoChinsku;

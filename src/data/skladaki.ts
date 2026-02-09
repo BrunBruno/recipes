@@ -35,6 +35,7 @@ const skladaki: Recipe = {
     "Złóż wszystkie części, aby powstał trójkąt.",
     "Podgrzej w tosterze do sandwichów, aż ser się roztopi, a tortilla będzie chrupiąca.",
   ],
+  keyWords: ["mięso", "fast food", "warzywa"],
 };
 
 export default skladaki;

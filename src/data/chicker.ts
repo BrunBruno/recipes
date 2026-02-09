@@ -40,6 +40,7 @@ const chicker: Recipe = {
       ],
     },
   ],
+  keyWords: ["kurczak", "fast food", "smażone"],
 };
 
 export default chicker;

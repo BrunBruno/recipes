@@ -26,6 +26,7 @@ const omlet: Recipe = {
     "Gdy spód omletu się zetnie, przykryj patelnię i smaż do momentu, aż całość będzie ścięta.",
     "Złóż omlet na pół lub podawaj w całości.",
   ],
+  keyWords: ["jajka", "śniadanie", "smażone"],
 };
 
 export default omlet;

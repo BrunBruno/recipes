@@ -55,6 +55,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "wieprzowina", "schab", "smażone", "panierowane"],
 };
 
 export default kotletPoGoralsku;

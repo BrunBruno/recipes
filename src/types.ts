@@ -23,6 +23,8 @@ export type IngredientType =
   | "wat" // water
   | "msh" // mushroom
   | "pot" // potatoes
+  | "nut" // orzechy
+  | "hrb" // herbs
   | "oth";
 
 export type UnitType =
@@ -70,6 +72,7 @@ export type Recipe = {
   time: number;
   ingredients: Ingredient[];
   steps: string[] | RecipeStepGroup[];
+  keyWords?: string[];
 };
 
 export const calculateRecipeKcal = (recipe: Recipe): number => {

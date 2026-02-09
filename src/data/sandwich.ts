@@ -20,7 +20,6 @@ const sandwichRecipe: Recipe = {
     { ingredient: iSAU.ketchup },
     { ingredient: iSAU.garlic_sauce },
   ],
-
   steps: [
     "Ogórka kiszonego pokroić w cienkie plasterki.",
     "Na dwóch tostach ułożyć ser, szynkę oraz ogórka.",
@@ -28,6 +27,7 @@ const sandwichRecipe: Recipe = {
     "Włożyć sandwiche do rozgrzanego sandwichera i opiekać, aż będą złociste i chrupiące.",
     "Po wyjęciu polać ketchupem oraz sosem czosnkowym.",
   ],
+  keyWords: ["tost", "mięso", "ser"],
 };
 
 export default sandwichRecipe;

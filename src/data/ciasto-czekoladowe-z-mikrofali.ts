@@ -29,6 +29,7 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
     "Polej ciasto przygotowaną polewą.",
     "Wstaw całość do mikrofali na około 1 minutę na mocy 600W.",
   ],
+  keyWords: ["ciasto", "słodkie", "mikrofala"],
 };
 
 export default ciastoCzekoladoweZMikrofali;

@@ -27,6 +27,7 @@ const kurczakZPiekarnika: Recipe = {
     "Na ostatnie 5-10 minut pieczenia, na każdej części kurczaka połóż mały kawałek masła, aby uzyskać chrupką skórkę.",
     "Wyjmij z piekarnika i odstaw na kilka minut przed podaniem.",
   ],
+  keyWords: ["kurczak", "pieczone", "mięso"],
 };
 
 export default kurczakZPiekarnika;

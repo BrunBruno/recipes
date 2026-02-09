@@ -38,6 +38,7 @@ const kurczakZPomidorem: Recipe = {
     "Posyp całość startym serem.",
     "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
   ],
+  keyWords: ["mięso", "kurczak", "pomidory", "pieczone"],
 };
 
 export default kurczakZPomidorem;

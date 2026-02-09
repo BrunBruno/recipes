@@ -50,6 +50,7 @@ const gotowyBurger: Recipe = {
       ],
     },
   ],
+  keyWords: ["kurczak", "fast food"],
 };
 
 export default gotowyBurger;

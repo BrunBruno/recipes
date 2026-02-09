@@ -35,6 +35,7 @@ const kotletyZKurczaka: Recipe = {
     "Na niewielkiej ilości oleju rozgrzanego na patelni smaż kotlety z obu stron, aż będą złociste i usmażone w środku.",
     "Podawaj na ciepło, np. z ziemniakami lub surówką.",
   ],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default kotletyZKurczaka;

@@ -26,6 +26,7 @@ const stek: Recipe = {
     "Zmniejsz ogień i polewaj steka stopionym masłem z czosnkiem i tymiankiem przez kilka minut.",
     "Podawaj od razu po przygotowaniu.",
   ],
+  keyWords: ["mięso", "wołowina", "smażone"],
 };
 
 export default stek;

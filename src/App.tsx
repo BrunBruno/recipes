@@ -61,10 +61,21 @@ function App() {
     );
   };
 
+  // const filteredRecipes = recipes.filter((r) => {
+  //   const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
+  //   const nameMatch = r.name.toLowerCase().includes(searchQuery.toLowerCase());
+  //   return typeMatch && nameMatch;
+  // });
   const filteredRecipes = recipes.filter((r) => {
     const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
-    const nameMatch = r.name.toLowerCase().includes(searchQuery.toLowerCase());
-    return typeMatch && nameMatch;
+
+    const query = searchQuery.toLowerCase();
+    const nameMatch = r.name.toLowerCase().includes(query);
+    const keyWordsMatch = r.keyWords?.some((kw) =>
+      kw.toLowerCase().includes(query),
+    );
+
+    return typeMatch && (nameMatch || keyWordsMatch);
   });
 
   useEffect(() => {
@@ -142,6 +153,10 @@ function App() {
   };
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
+
+  for (let i = 0; i < recipes.length; i++) {
+    console.log(recipes[i].name);
+  }
 
   return (
     <div className="recipes-page">
@@ -321,13 +336,13 @@ function App() {
                       </span>
                       <span className="ingredient-amount">
                         {ingredient.amount}
-                        {ingredient.unit
-                          ? ` ${ingredient.unit}`
-                          : ingredient.ingredient.defaultUnit
-                            ? ` ${ingredient.ingredient.defaultUnit}`
-                            : ingredient.amount
-                              ? " g"
-                              : ""}
+                        {ingredient.amount
+                          ? ingredient.unit
+                            ? ` ${ingredient.unit}`
+                            : ingredient.ingredient.defaultUnit
+                              ? ` ${ingredient.ingredient.defaultUnit}`
+                              : " g"
+                          : ""}
                       </span>
                     </li>
                   );

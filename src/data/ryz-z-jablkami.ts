@@ -31,6 +31,7 @@ const ryzZJablkami: Recipe = {
     "Połącz ugotowany ryż z jabłkami i delikatnie wymieszaj.",
     "Podawaj na ciepło, opcjonalnie posypane dodatkowym cynamonem lub odrobiną cukru.",
   ],
+  keyWords: ["ryż", "słodkie", "owoce"],
 };
 
 export default ryzZJablkami;

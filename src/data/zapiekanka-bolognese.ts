@@ -42,6 +42,7 @@ const zapiekankaBolognese: Recipe = {
     "Dodaj pozostały makaron i posyp startym serem.",
     "Zapiekaj w piekarniku przez 15 minut.",
   ],
+  keyWords: ["makaron", "mięso", "sos", "pieczone"],
 };
 
 export default zapiekankaBolognese;

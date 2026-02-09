@@ -11,7 +11,7 @@ const salatkaKuskus: Recipe = {
   image: "",
   kcal: 350,
   time: 25,
-  portions: 6,
+  portions: 8,
   ingredients: [
     { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
     { ingredient: iMET.egg, amount: 4, unit: "szt" },
@@ -22,7 +22,6 @@ const salatkaKuskus: Recipe = {
     { ingredient: iSPC.salt },
     { ingredient: iSPC.black_pepper },
   ],
-
   steps: [
     "Ugotuj jajka na twardo.",
     "Przygotuj kuskus zgodnie z instrukcją na opakowaniu i ostudź.",
@@ -31,6 +30,7 @@ const salatkaKuskus: Recipe = {
     "Wszystkie składniki przełóż do miski, dodaj majonez i wymieszaj.",
     "Dopraw solą i pieprzem do smaku.",
   ],
+  keyWords: ["kuskus", "warzywa"],
 };
 
 export default salatkaKuskus;

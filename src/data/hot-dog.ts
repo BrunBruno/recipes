@@ -29,6 +29,7 @@ const hotHog: Recipe = {
     "Polej całość ketchupem, musztardą i sosem czosnkowym.",
     "Dodaj kapustę kiszoną i posyp cebulką prażoną.",
   ],
+  keyWords: ["mięso", "parówka", "fast food"],
 };
 
 export default hotHog;

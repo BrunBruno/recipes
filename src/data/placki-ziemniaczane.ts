@@ -31,6 +31,7 @@ const plackiZiemniaczane: Recipe = {
     "Rozgrzej olej na patelni.",
     "Smaż placki, aż będą złociste i chrupiące z obu stron.",
   ],
+  keyWords: ["ziemniaki", "smażone"],
 };
 
 export default plackiZiemniaczane;

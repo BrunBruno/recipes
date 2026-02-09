@@ -18,7 +18,6 @@ const tiramisu: Recipe = {
     { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
     { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
   ],
-
   steps: [
     "Żółtka ubij z cukrem na puszystą masę.",
     "Dodaj serek mascarpone i dokładnie wymieszaj.",
@@ -28,6 +27,7 @@ const tiramisu: Recipe = {
     "Schłódź w lodówce przez kilka godzin.",
     "Przed podaniem posyp kakao.",
   ],
+  keyWords: ["deser", "słodkie", "kawa", "mascarpone"],
 };
 
 export default tiramisu;

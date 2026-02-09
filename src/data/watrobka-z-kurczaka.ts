@@ -27,6 +27,7 @@ const watrobkaZKurczaka: Recipe = {
     "Obtocz w mące.",
     "Ułóż wątrobę na patelni i smaż pod przykryciem przez około 10 minut (po 5 min z każdej strony).",
   ],
+  keyWords: ["kurczak", "wątróbka", "smażone"],
 };
 
 export default watrobkaZKurczaka;

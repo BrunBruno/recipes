@@ -27,6 +27,7 @@ const palkiBarbecue: Recipe = {
     "Polej pałki sosem barbecue.",
     "Wstaw naczynie ponownie do piekarnika, tym razem otwarte, i piecz w 160°C aż sos się skarmelizuje.",
   ],
+  keyWords: ["mięso", "kurczak", "pieczone", "sos"],
 };
 
 export default palkiBarbecue;

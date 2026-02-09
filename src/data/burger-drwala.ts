@@ -35,7 +35,6 @@ const burgerDrwala: Recipe = {
     { ingredient: iSPC.salt },
     { ingredient: iSPC.black_pepper },
   ],
-
   steps: [
     {
       title: "Sos",
@@ -62,6 +61,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
+  keyWords: ["wołowina", "fast food", "smażone"],
 };
 
 export default burgerDrwala;

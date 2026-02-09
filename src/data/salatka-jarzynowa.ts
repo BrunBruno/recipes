@@ -10,7 +10,7 @@ const salatkaJarzynowa: Recipe = {
   image: "",
   kcal: 250,
   time: 30,
-  portions: 6,
+  portions: 8,
   ingredients: [
     { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
     { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
@@ -28,6 +28,7 @@ const salatkaJarzynowa: Recipe = {
     "Wymieszaj wszystkie składniki z majonezem.",
     "Dopraw solą i pieprzem do smaku.",
   ],
+  keyWords: ["warzywa", "sałatka"],
 };
 
 export default salatkaJarzynowa;

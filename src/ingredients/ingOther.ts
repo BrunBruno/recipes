@@ -6,10 +6,19 @@ type IngId =
   | "powdered_sugar"
   | "cocoa"
   | "honey"
+  | "vanilla_extract"
   | "coffee"
   | "grain_coffee"
   | "baking_powder"
   | "baking_soda"
+  | "spirit"
+  | "yeast"
+  | "instant_yeast"
+  | "gelatin"
+  | "food_coloring"
+  | "walnuts"
+  | "coconut_flakes"
+  | "white_chocolate"
   | "dark_chocolate"
   | "cheese_snacks"
   | "ladyfingers";
@@ -67,6 +76,17 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
   },
 
+  vanilla_extract: {
+    name: "Ekstrakt waniliowy",
+    type: "oth",
+    kcalPer100g: 288,
+    unitWeights: {
+      ml: 1,
+      łyżeczka: 5,
+    },
+    defaultUnit: "ml",
+  },
+
   coffee: {
     name: "Kawa",
     type: "oth",
@@ -104,7 +124,90 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
   },
 
+  spirit: {
+    name: "Spirytus",
+    type: "oth",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+      łyżeczka: 5,
+      łyżka: 15,
+    },
+    defaultUnit: "ml",
+  },
+
+  yeast: {
+    name: "Drożdże",
+    type: "oth",
+    kcalPer100g: 105,
+    unitWeights: {
+      opak: 7,
+      kostka: 100,
+    },
+  },
+
+  instant_yeast: {
+    name: "Drożdże błyskawiczne",
+    type: "oth",
+    kcalPer100g: 325,
+    unitWeights: {
+      łyżeczka: 3,
+      opak: 7,
+    },
+  },
+
+  gelatin: {
+    name: "Żelatyna 180 bloom",
+    type: "oth",
+    kcalPer100g: 350,
+    unitWeights: {
+      g: 1,
+      łyżeczka: 2,
+    },
+    defaultUnit: "g",
+  },
+
+  food_coloring: {
+    name: "Barwnik spożywczy",
+    type: "oth",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+    },
+  },
+
   //
+
+  walnuts: {
+    name: "Orzechy włoskie",
+    type: "nut",
+    kcalPer100g: 654,
+    unitWeights: {
+      łyżka: 10,
+    },
+  },
+
+  coconut_flakes: {
+    name: "Wiórki kokosowe",
+    type: "nut",
+    kcalPer100g: 660,
+    unitWeights: {
+      łyżka: 7,
+    },
+  },
+
+  //
+
+  white_chocolate: {
+    name: "Biała czekolada",
+    type: "oth",
+    kcalPer100g: 540,
+    unitWeights: {
+      g: 1,
+      opak: 100,
+    },
+    defaultUnit: "g",
+  },
 
   dark_chocolate: {
     name: "Czekolada gorzka",
