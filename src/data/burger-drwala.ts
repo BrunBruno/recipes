@@ -12,7 +12,6 @@ const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
   image: "burger-drwala.ts.jpeg",
-  kcal: 1080,
   time: 50,
   portions: 4,
   ingredients: [
@@ -61,7 +60,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "fast food", "smażone"],
+  keyWords: ["mięso", "wołowina", "fast food", "smażone", "panierowane"],
 };
 
 export default burgerDrwala;

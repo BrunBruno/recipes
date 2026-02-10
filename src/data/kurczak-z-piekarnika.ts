@@ -7,7 +7,6 @@ const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
   image: "",
-  kcal: 600,
   time: 55,
   portions: 4,
   ingredients: [

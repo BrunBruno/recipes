@@ -11,7 +11,6 @@ const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -54,7 +53,7 @@ const cynamonki: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "cynamon"],
+  keyWords: ["ciasto", "słodkie"],
 };
 
 export default cynamonki;

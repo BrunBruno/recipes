@@ -9,7 +9,6 @@ const chicker: Recipe = {
   name: "Chickery",
   type: "snack",
   image: "",
-  kcal: 520,
   time: 25,
   portions: 4,
   ingredients: [
@@ -40,7 +39,7 @@ const chicker: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "fast food", "smażone"],
+  keyWords: ["mięso", "kurczak", "fast food", "smażone"],
 };
 
 export default chicker;

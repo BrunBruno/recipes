@@ -8,9 +8,8 @@ import type { Recipe } from "../types";
 
 const sosPieczarkowy: Recipe = {
   name: "Sos Pieczarkowy",
-  type: "sauce",
+  type: "other",
   image: "",
-  kcal: 150,
   time: 15,
   portions: 2,
   ingredients: [
@@ -33,7 +32,7 @@ const sosPieczarkowy: Recipe = {
     "Dodaj śmietanę oraz odrobinę masła i dokładnie wymieszaj.",
     "Wlej mieszankę do sosu i gotuj jeszcze chwilę, cały czas mieszając.",
   ],
-  keyWords: ["sos", "pieczarki"],
+  keyWords: ["sos"],
 };
 
 export default sosPieczarkowy;

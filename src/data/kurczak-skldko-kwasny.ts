@@ -9,7 +9,6 @@ const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak w Sosie Słodko-Kwaśnym",
   type: "dinner",
   image: "",
-  kcal: 560,
   time: 30,
   portions: 3,
   ingredients: [

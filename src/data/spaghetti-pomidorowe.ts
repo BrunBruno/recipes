@@ -9,7 +9,6 @@ const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
   image: "",
-  kcal: 400,
   time: 25,
   portions: 2,
   ingredients: [
@@ -33,7 +32,7 @@ const spaghettiPomidorowe: Recipe = {
     "Zetrzyj ser żółty.",
     "Podawaj makaron z sosem pomidorowym posypany startym serem.",
   ],
-  keyWords: ["makaron", "pomidory", "sos"],
+  keyWords: ["makaron", "sos"],
 };
 
 export default spaghettiPomidorowe;

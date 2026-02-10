@@ -11,7 +11,6 @@ const roladaWieprzowa: Recipe = {
   name: "Rolada Wieprzowa",
   type: "dinner",
   image: "",
-  kcal: 680,
   time: 90,
   portions: 4,
   ingredients: [

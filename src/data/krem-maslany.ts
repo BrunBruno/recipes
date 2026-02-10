@@ -5,9 +5,8 @@ import type { Recipe } from "../types";
 
 const kremMaslany: Recipe = {
   name: "Krem Maślany z Mlekiem Skondensowanym",
-  type: "sauce",
+  type: "other",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -19,7 +18,7 @@ const kremMaslany: Recipe = {
   steps: [
     "Miękkie masło umieść w misie miksera i ucieraj na najwyższych obrotach przez około 15 minut, aż stanie się jasne i puszyste.",
     "Nie przerywając miksowania, wlewaj cienką strużką mleko skondensowane i ubijaj jeszcze kilka minut do uzyskania gładkiego kremu.",
-    "Jeśli krem ma służyć do tynkowania tortu, zmniejsz obroty miksera na najniższe i ucieraj krem przez 10–15 minut, aby go odpowietrzyć.",
+    "Jeśli krem ma służyć do tynkowania tortu, zmniejsz obroty miksera na najniższe i ucieraj krem przez 10 - 15 minut, aby go odpowietrzyć.",
     "Na końcu dodaj ekstrakt waniliowy lub inny ulubiony aromat oraz ewentualnie kilka kropel barwnika spożywczego i krótko wymieszaj.",
   ],
   keyWords: ["słodkie", "krem"],

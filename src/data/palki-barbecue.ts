@@ -7,7 +7,6 @@ const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
   type: "dinner",
   image: "palki-barbecue.jpg",
-  kcal: 550,
   time: 60,
   portions: 3,
   ingredients: [
@@ -27,7 +26,7 @@ const palkiBarbecue: Recipe = {
     "Polej pałki sosem barbecue.",
     "Wstaw naczynie ponownie do piekarnika, tym razem otwarte, i piecz w 160°C aż sos się skarmelizuje.",
   ],
-  keyWords: ["mięso", "kurczak", "pieczone", "sos"],
+  keyWords: ["mięso", "kurczak", "pieczone"],
 };
 
 export default palkiBarbecue;

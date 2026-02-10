@@ -10,7 +10,6 @@ const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
   image: "pancakes.jpg",
-  kcal: 350,
   time: 20,
   portions: 3,
   ingredients: [

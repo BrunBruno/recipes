@@ -8,7 +8,6 @@ const hotHog: Recipe = {
   name: "Hot Dog",
   type: "snack",
   image: "hot-dog.jpg",
-  kcal: 430,
   time: 10,
   portions: 2,
   ingredients: [
@@ -29,7 +28,7 @@ const hotHog: Recipe = {
     "Polej całość ketchupem, musztardą i sosem czosnkowym.",
     "Dodaj kapustę kiszoną i posyp cebulką prażoną.",
   ],
-  keyWords: ["mięso", "parówka", "fast food"],
+  keyWords: ["mięso", "fast food"],
 };
 
 export default hotHog;

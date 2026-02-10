@@ -7,9 +7,8 @@ import type { Recipe } from "../types";
 
 const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
-  type: "sauce",
+  type: "other",
   image: "golabki.jpg",
-  kcal: 120,
   time: 10,
   portions: 2,
   ingredients: [
@@ -28,7 +27,7 @@ const sosDoGolabkow: Recipe = {
     "Zagotuj całość, rozbijając ewentualne grudki mąki.",
     "Dopraw solą, Maggi oraz jarzynką do smaku.",
   ],
-  keyWords: ["sos", "pomidorowy"],
+  keyWords: ["sos"],
 };
 
 export default sosDoGolabkow;

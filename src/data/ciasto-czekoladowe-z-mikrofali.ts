@@ -8,7 +8,6 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
   name: "Ciasto Czekoladowe z Mikrofali",
   type: "dessert",
   image: "",
-  kcal: 450,
   time: 15,
   portions: 6,
   ingredients: [

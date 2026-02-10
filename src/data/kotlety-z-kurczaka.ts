@@ -8,7 +8,6 @@ const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
   image: "kotlety-z-kurczaka.jpg",
-  kcal: 480,
   time: 25,
   portions: 4,
   ingredients: [

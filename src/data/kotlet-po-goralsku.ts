@@ -10,7 +10,6 @@ const kotletPoGoralsku: Recipe = {
   name: "Kotlet po Góralsku",
   type: "dinner",
   image: "kotlet-po-goralsku.jpg",
-  kcal: 850,
   time: 70,
   portions: 5,
   ingredients: [

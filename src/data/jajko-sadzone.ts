@@ -8,7 +8,6 @@ const jajkoSadzone: Recipe = {
   name: "Jajko Sadzone",
   type: "dinner",
   image: "jajko-sadzone.jpg",
-  kcal: 220,
   time: 10,
   portions: 1,
   ingredients: [
@@ -38,7 +37,7 @@ const jajkoSadzone: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajka", "smażone"],
+  keyWords: ["jajko", "smażone"],
 };
 
 export default jajkoSadzone;

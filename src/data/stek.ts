@@ -8,7 +8,6 @@ const stek: Recipe = {
   name: "Smażony Stek",
   type: "snack",
   image: "stek.jpg",
-  kcal: 500,
   time: 15,
   portions: 1,
   ingredients: [

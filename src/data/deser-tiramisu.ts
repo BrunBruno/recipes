@@ -7,7 +7,6 @@ const tiramisu: Recipe = {
   name: "Tiramisu",
   type: "dessert",
   image: "",
-  kcal: 480,
   time: 30,
   portions: 8,
   ingredients: [
@@ -27,7 +26,7 @@ const tiramisu: Recipe = {
     "Schłódź w lodówce przez kilka godzin.",
     "Przed podaniem posyp kakao.",
   ],
-  keyWords: ["deser", "słodkie", "kawa", "mascarpone"],
+  keyWords: ["deser", "słodkie", "biszkopt"],
 };
 
 export default tiramisu;

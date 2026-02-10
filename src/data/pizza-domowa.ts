@@ -11,7 +11,6 @@ const pizzaDomowa: Recipe = {
   name: "Pizza Domowa",
   type: "snack",
   image: "",
-  kcal: 800,
   time: 0,
   portions: 0,
   ingredients: [
@@ -37,7 +36,7 @@ const pizzaDomowa: Recipe = {
     "Wstaw pizzę do piekarnika nagrzanego do 220°C.",
     "Piec 15-25 minut, w zależności od piekarnika. Sprawdź spód pizzy - jeśli jest przyrumieniony, pizza jest gotowa do podania.",
   ],
-  keyWords: ["ciasto", "ser", "sos pomidorowy", "włoskie"],
+  keyWords: ["ciasto", "ser", "sos", "włoskie", "fast food"],
 };
 
 export default pizzaDomowa;

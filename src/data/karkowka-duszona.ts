@@ -9,7 +9,6 @@ const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
   image: "",
-  kcal: 650,
   time: 50,
   portions: 5,
   ingredients: [

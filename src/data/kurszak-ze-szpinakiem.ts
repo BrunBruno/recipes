@@ -9,7 +9,6 @@ const kurczakZeSzpinakiem: Recipe = {
   name: "Kurczak ze Szpinakiem",
   type: "dinner",
   image: "",
-  kcal: 620,
   time: 40,
   portions: 6,
   ingredients: [
@@ -31,7 +30,7 @@ const kurczakZeSzpinakiem: Recipe = {
     "Farsz nałóż na piersi kurczaka i posyp żółtym serem.",
     "Piecz w piekarniku nagrzanym do 190°C przez 15 minut.",
   ],
-  keyWords: ["mięso", "kurczak", "szpinak", "pieczony"],
+  keyWords: ["mięso", "kurczak", "pieczone"],
 };
 
 export default kurczakZeSzpinakiem;

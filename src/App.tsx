@@ -1,13 +1,9 @@
-import { useEffect, useRef, useState, type JSX } from "react";
+import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
-import { calculateRecipeKcal, type mealType, type Recipe } from "./types";
-import DinnerSvg from "./assets/dinnerSvg";
-import SnackSvg from "./assets/snackSvg";
-import SoupSvg from "./assets/soupSvg";
-import DessertSvg from "./assets/dessertSvg";
-import SaladSvg from "./assets/saladSvg";
+import { type mealType, type Recipe } from "./types";
 import IngredientSvg from "./assets/ingredientsSvgs";
-import SauceSvg from "./assets/sauceSvg";
+import { calculateRecipeKcal } from "./utils";
+import RecipeTypeIcons from "./assets/recipeTypeIcons";
 
 const borderColorMap: Record<mealType, string> = {
   dinner: "#f59f00",
@@ -15,7 +11,7 @@ const borderColorMap: Record<mealType, string> = {
   soup: "#37b24d",
   dessert: "#1c7ed6",
   salad: "#ae3ec9",
-  sauce: "#f76707",
+  other: "#f76707",
 };
 
 const mealTypes: mealType[] = [
@@ -24,7 +20,7 @@ const mealTypes: mealType[] = [
   "soup",
   "dessert",
   "salad",
-  "sauce",
+  "other",
 ];
 const mealTypePL: Record<mealType, string> = {
   dinner: "Obiad",
@@ -32,19 +28,10 @@ const mealTypePL: Record<mealType, string> = {
   soup: "Zupa",
   dessert: "Deser",
   salad: "Sałatka",
-  sauce: "Sos",
+  other: "Inne",
 };
 
 function App() {
-  const svgMap: Record<mealType, JSX.Element> = {
-    dinner: <DinnerSvg />,
-    snack: <SnackSvg />,
-    soup: <SoupSvg />,
-    dessert: <DessertSvg />,
-    salad: <SaladSvg />,
-    sauce: <SauceSvg />,
-  };
-
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
@@ -61,11 +48,6 @@ function App() {
     );
   };
 
-  // const filteredRecipes = recipes.filter((r) => {
-  //   const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
-  //   const nameMatch = r.name.toLowerCase().includes(searchQuery.toLowerCase());
-  //   return typeMatch && nameMatch;
-  // });
   const filteredRecipes = recipes.filter((r) => {
     const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
 
@@ -159,7 +141,7 @@ function App() {
       <div className="page-title">
         <h1 onClick={() => location.reload()}>
           <svg
-            fill="#ffffff"
+            fill="#099268"
             viewBox="0 0 50 50"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -218,14 +200,29 @@ function App() {
           ></div>
 
           <div className={`recipe-search ${showSearch ? "show" : ""}`}>
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder="Szukaj przepisu..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="recipe-search-input"
-            />
+            <label className="recipe-search-label">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                  stroke="#999"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Szukaj przepisu..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="recipe-search-input"
+              />
+            </label>
           </div>
 
           <div
@@ -237,10 +234,20 @@ function App() {
             {mealTypes.map((type) => (
               <button
                 key={type}
-                className={`filter-btn ${activeTypes.includes(type) ? "" : "active"}`}
+                className={`filter-btn`}
+                style={{
+                  borderColor: activeTypes.includes(type)
+                    ? borderColorMap[type]
+                    : "#666",
+                }}
                 onClick={() => toggleType(type)}
               >
-                <div className="filter-svg">{svgMap[type]}</div>
+                <div className="filter-svg">
+                  <RecipeTypeIcons
+                    type={type}
+                    color={activeTypes.includes(type) ? "" : "#666"}
+                  />
+                </div>
                 <span className="filter-text">{mealTypePL[type]}</span>
               </button>
             ))}
@@ -287,14 +294,14 @@ function App() {
               {selectedRecipe.portions}
             </div>
 
-            <div
+            {/* <div
               className={`recipe-param 
                 ${getFontSizeClass(selectedRecipe.kcal)} 
                 ${getStatusClass("kcal", selectedRecipe.kcal)}
               `}
             >
               {selectedRecipe.kcal}
-            </div>
+            </div> */}
           </div>
 
           <div className="recipe-details-header">
@@ -317,56 +324,73 @@ function App() {
             </h2>
           </div>
 
-          <div ref={contentRef} className="recipe-details-content">
-            <section>
-              <h3>Składniki</h3>
-              <ul className="ingredients-list">
-                {selectedRecipe.ingredients.map((ingredient, index) => {
-                  return (
-                    <li key={index}>
-                      <div className="ingredient-indicator">
-                        <IngredientSvg ingType={ingredient.ingredient.type} />
-                      </div>
-                      <span className="ingredient-name">
-                        {ingredient.ingredient.name}
-                      </span>
-                      <span className="ingredient-amount">
-                        {ingredient.amount}
-                        {ingredient.amount
-                          ? ingredient.unit
-                            ? ` ${ingredient.unit}`
-                            : ingredient.ingredient.defaultUnit
-                              ? ` ${ingredient.ingredient.defaultUnit}`
-                              : " g"
-                          : ""}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-
-            <section>
-              <h3>Sposób przygotowania</h3>
-              <ol className="steps-list">
-                {Array.isArray(selectedRecipe.steps) &&
-                  selectedRecipe.steps.map((step, index) => {
-                    if (typeof step === "string") {
-                      return <li key={index}>{step}</li>;
-                    } else {
-                      return (
-                        <div key={index}>
-                          <h4>{step.title}</h4>
-                          {step.steps.map((s, i) => (
-                            <li key={i}>{s}</li>
-                          ))}
+          {selectedRecipe.ingredients.length === 0 &&
+          selectedRecipe.steps.length === 0 ? (
+            <div style={{ margin: "auto" }}>
+              <svg
+                width="120px"
+                height="120px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#aaa"
+                  d="m557.248 608 135.744-135.744-45.248-45.248-135.68 135.744-135.808-135.68-45.248 45.184L466.752 608l-135.68 135.68 45.184 45.312L512 653.248l135.744 135.744 45.248-45.248L557.312 608zM704 192h160v736H160V192h160v64h384v-64zm-320 0V96h256v96H384z"
+                />
+              </svg>
+            </div>
+          ) : (
+            <div ref={contentRef} className="recipe-details-content">
+              <section>
+                <h3>Składniki</h3>
+                <ul className="ingredients-list">
+                  {selectedRecipe.ingredients.map((ingredient, index) => {
+                    return (
+                      <li key={index}>
+                        <div className="ingredient-indicator">
+                          <IngredientSvg ingType={ingredient.ingredient.type} />
                         </div>
-                      );
-                    }
+                        <span className="ingredient-name">
+                          {ingredient.ingredient.name}
+                        </span>
+                        <span className="ingredient-amount">
+                          {ingredient.amount}
+                          {ingredient.amount
+                            ? ingredient.unit
+                              ? ` ${ingredient.unit}`
+                              : ingredient.ingredient.defaultUnit
+                                ? ` ${ingredient.ingredient.defaultUnit}`
+                                : " g"
+                            : ""}
+                        </span>
+                      </li>
+                    );
                   })}
-              </ol>
-            </section>
-          </div>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Sposób przygotowania</h3>
+                <ol className="steps-list">
+                  {Array.isArray(selectedRecipe.steps) &&
+                    selectedRecipe.steps.map((step, index) => {
+                      if (typeof step === "string") {
+                        return <li key={index}>{step}</li>;
+                      } else {
+                        return (
+                          <div key={index}>
+                            <h4>{step.title}</h4>
+                            {step.steps.map((s, i) => (
+                              <li key={i}>{s}</li>
+                            ))}
+                          </div>
+                        );
+                      }
+                    })}
+                </ol>
+              </section>
+            </div>
+          )}
         </div>
       )}
 
@@ -393,7 +417,7 @@ function App() {
               className="card-svg"
               style={{ borderColor: borderColorMap[recipe.type] }}
             >
-              {svgMap[recipe.type]}
+              <RecipeTypeIcons type={recipe.type} />
             </div>
 
             <div className="recipe-card-content">

@@ -9,7 +9,6 @@ const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
   type: "salad",
   image: "",
-  kcal: 350,
   time: 25,
   portions: 8,
   ingredients: [
@@ -30,7 +29,7 @@ const salatkaKuskus: Recipe = {
     "Wszystkie składniki przełóż do miski, dodaj majonez i wymieszaj.",
     "Dopraw solą i pieprzem do smaku.",
   ],
-  keyWords: ["kuskus", "warzywa"],
+  keyWords: ["sałatka", "warzywa"],
 };
 
 export default salatkaKuskus;

@@ -9,7 +9,6 @@ const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
   image: "",
-  kcal: 450,
   time: 30,
   portions: 3,
   ingredients: [

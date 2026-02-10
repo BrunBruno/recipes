@@ -10,7 +10,6 @@ const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
   type: "dinner",
   image: "",
-  kcal: 560,
   time: 80,
   portions: 3,
   ingredients: [
@@ -51,7 +50,7 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "duszone"],
 };
 
 export default gulaszWieprzowy;

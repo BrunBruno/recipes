@@ -9,7 +9,6 @@ const sandwichRecipe: Recipe = {
   name: "Sandwiche",
   type: "snack",
   image: "sandwiche.jpg",
-  kcal: 320,
   time: 10,
   portions: 2,
   ingredients: [

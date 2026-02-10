@@ -9,7 +9,6 @@ const lazanki: Recipe = {
   name: "Łazanki",
   type: "dinner",
   image: "lazanki.jpg",
-  kcal: 650,
   time: 50,
   portions: 5,
   ingredients: [
@@ -21,10 +20,10 @@ const lazanki: Recipe = {
     { ingredient: iGRN.lazanki_pasta, amount: 240 },
     { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
     { ingredient: iSPC.bay_leaf, amount: 2, unit: "listek" },
+    { ingredient: iSPC.caraway },
     { ingredient: iSPC.allspice, amount: 3, unit: "ziarno" },
     { ingredient: iSPC.black_pepper },
     { ingredient: iSPC.salt },
-    { ingredient: iSPC.caraway },
   ],
   steps: [
     "Kapustę drobno poszatkuj i ugotuj do miękkości (ok. 25 min) dodając 2 szklanki wody, liść laurowy oraz ziele angielskie. Po ugotowaniu odstaw do ostygnięcia.",
@@ -32,12 +31,12 @@ const lazanki: Recipe = {
     "Pokrój kiełbasę, boczek, cebulę oraz pieczarki.",
     "Na patelni rozgrzej olej i masło, zeszklij cebulę. Dodaj od razu pieczarki.",
     "Dodaj kiełbasę oraz boczek i smaż kilka minut, aż się lekko zarumieni.",
-    "Usuń nadmiar wody z kapusty kiszonej.",
-    "Dodaj ugotowaną kapustę i smaż całość 5-7 minut.",
-    "Dodaj makaron i dokładnie wszystko wymieszaj.",
+    "Usuń nadmiar wody z kapusty kiszonej. Wyrzuć także liście laurowe oraz ziele.",
+    "Dodaj ugotowaną kapustę i smaż całość 5 - 7 minut.",
+    "Usmażone składniki połącz z makaronem i dokładnie wszystko wymieszaj.",
     "Dopraw solą i pieprzem do smaku.",
   ],
-  keyWords: ["makaron", "kapusta", "mięso"],
+  keyWords: ["makaron", "mięso"],
 };
 
 export default lazanki;

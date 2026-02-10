@@ -6,7 +6,7 @@ export type mealType =
   | "soup"
   | "dessert"
   | "salad"
-  | "sauce";
+  | "other";
 
 export type IngredientType =
   | "met" // meat
@@ -43,6 +43,47 @@ export type UnitType =
   | "ziarno"
   | "pęto";
 
+type KeyWord =
+  | "ciasto"
+  | "deser"
+  | "biszkopt"
+  | "czekolada"
+  | "wanilia"
+  | "mięso"
+  | "wołowina"
+  | "wieprzowina"
+  | "schab"
+  | "kurczak"
+  | "drób"
+  | "makaron"
+  | "spaghetti"
+  | "ryż"
+  | "jajko"
+  | "naleśnik"
+  | "tortilla"
+  | "ziemniak"
+  | "owoce"
+  | "warzywa"
+  | "sos"
+  | "krem"
+  | "ser"
+  | "zupa"
+  | "tost"
+  | "sałatka"
+  //
+  | "fast food"
+  | "słodkie"
+  | "gotowane"
+  | "duszone"
+  | "smażone"
+  | "pieczone"
+  | "grillowane"
+  | "panierowane"
+  | "piekarnik"
+  | "mikrofala"
+  | "azjatyckie"
+  | "włoskie";
+
 export type IngredientItem = {
   name: string;
   type: IngredientType;
@@ -67,59 +108,9 @@ export type Recipe = {
   name: string;
   type: mealType;
   image: string;
-  kcal: number;
   portions: number;
   time: number;
   ingredients: Ingredient[];
   steps: string[] | RecipeStepGroup[];
-  keyWords?: string[];
-};
-
-export const calculateRecipeKcal = (recipe: Recipe): number => {
-  const DEFAULT_FAT_GRAMS = 15;
-
-  let totalKcal = 0;
-
-  for (const item of recipe.ingredients) {
-    const { ingredient, amount, unit } = item;
-
-    let grams = 0;
-
-    if (!amount) {
-      if (ingredient.type === "fat") {
-        grams = DEFAULT_FAT_GRAMS;
-      } else {
-        continue;
-      }
-    } else if (typeof amount === "string") {
-      const parts = amount.split("-").map(Number);
-      const avg = parts.reduce((a, b) => a + b, 0) / parts.length;
-
-      if (unit && ingredient.unitWeights?.[unit]) {
-        grams = avg * ingredient.unitWeights[unit]!;
-      } else if (!unit || unit === "g") {
-        grams = avg;
-      } else {
-        console.warn(
-          `No unit ${unit} for ${ingredient.name}, using amount as grams`,
-        );
-        grams = avg;
-      }
-    } else {
-      if (!unit || unit === "g") {
-        grams = amount;
-      } else if (ingredient.unitWeights?.[unit]) {
-        grams = amount * ingredient.unitWeights[unit];
-      } else {
-        console.warn(
-          `No unit ${unit} for ${ingredient.name}, using amount as grams`,
-        );
-        grams = amount;
-      }
-    }
-
-    totalKcal += (grams / 100) * ingredient.kcalPer100g;
-  }
-
-  return Math.round(recipe.portions ? totalKcal / recipe.portions : totalKcal);
+  keyWords?: KeyWord[];
 };

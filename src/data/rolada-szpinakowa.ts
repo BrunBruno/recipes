@@ -10,7 +10,6 @@ const roladaSzpinakowa: Recipe = {
   name: "Rolada Szpinakowa",
   type: "snack",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -40,7 +39,7 @@ const roladaSzpinakowa: Recipe = {
     "Zwiń całość ciasno w roladę, owiń folią spożywczą i wstaw do lodówki na kilka godzin.",
     "Podawaj roladę pokrojoną w plastry.",
   ],
-  keyWords: ["szpinak", "ciasto"],
+  keyWords: ["ciasto", "tortilla"],
 };
 
 export default roladaSzpinakowa;

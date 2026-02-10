@@ -11,7 +11,6 @@ const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
   image: "zapiekanka-bolognese.jpg",
-  kcal: 550,
   time: 50,
   portions: 4,
   ingredients: [

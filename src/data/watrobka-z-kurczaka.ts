@@ -9,7 +9,6 @@ const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
   image: "watrobka-z-kurczaka.ts.jpg",
-  kcal: 320,
   time: 20,
   portions: 2,
   ingredients: [
@@ -27,7 +26,7 @@ const watrobkaZKurczaka: Recipe = {
     "Obtocz w mące.",
     "Ułóż wątrobę na patelni i smaż pod przykryciem przez około 10 minut (po 5 min z każdej strony).",
   ],
-  keyWords: ["kurczak", "wątróbka", "smażone"],
+  keyWords: ["kurczak", "smażone"],
 };
 
 export default watrobkaZKurczaka;

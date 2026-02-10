@@ -12,11 +12,9 @@ const ciastoMarchewkowe: Recipe = {
   name: "Ciasto Marchewkowe",
   type: "dessert",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
-    // ciasto
     { ingredient: iMET.egg, amount: 2 },
     { ingredient: iOTH.sugar, amount: 200, unit: "g" },
     { ingredient: iFAT.oil, amount: 150, unit: "ml" },
@@ -29,8 +27,6 @@ const ciastoMarchewkowe: Recipe = {
     { ingredient: iOTH.baking_soda, amount: 1, unit: "łyżeczka" },
     { ingredient: iSPC.cinnamon, amount: 1, unit: "łyżeczka" },
     { ingredient: iSPC.salt },
-
-    // polewa
     { ingredient: iDIR.cream_cheese, amount: 125, unit: "g" },
     { ingredient: iFAT.butter, amount: 50, unit: "g" },
     { ingredient: iOTH.powdered_sugar, amount: 100, unit: "g" },
@@ -62,7 +58,7 @@ const ciastoMarchewkowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "marchew"],
+  keyWords: ["ciasto", "słodkie", "biszkopt"],
 };
 
 export default ciastoMarchewkowe;

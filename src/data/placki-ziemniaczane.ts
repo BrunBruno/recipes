@@ -9,7 +9,6 @@ const plackiZiemniaczane: Recipe = {
   name: "Placki Ziemniaczane",
   type: "dinner",
   image: "",
-  kcal: 400,
   time: 25,
   portions: 2,
   ingredients: [
@@ -31,7 +30,7 @@ const plackiZiemniaczane: Recipe = {
     "Rozgrzej olej na patelni.",
     "Smaż placki, aż będą złociste i chrupiące z obu stron.",
   ],
-  keyWords: ["ziemniaki", "smażone"],
+  keyWords: ["ziemniak", "smażone"],
 };
 
 export default plackiZiemniaczane;

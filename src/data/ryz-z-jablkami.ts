@@ -10,7 +10,6 @@ const ryzZJablkami: Recipe = {
   name: "Ryż z Jabłkami",
   type: "dessert",
   image: "ryz-z-jablkami.jpg",
-  kcal: 320,
   time: 25,
   portions: 1,
   ingredients: [

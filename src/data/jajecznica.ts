@@ -8,7 +8,6 @@ const jajecznica: Recipe = {
   name: "Jajecznica",
   type: "snack",
   image: "jajecznica.jpg",
-  kcal: 400,
   time: 15,
   portions: 1,
   ingredients: [
@@ -26,7 +25,7 @@ const jajecznica: Recipe = {
     "Wbij jajka na patelnię i dokładnie wymieszaj.",
     "Dopraw solą i posyp szczypiorkiem przed podaniem.",
   ],
-  keyWords: ["jajka", "śniadanie", "smażone"],
+  keyWords: ["jajko", "smażone"],
 };
 
 export default jajecznica;

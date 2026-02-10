@@ -10,7 +10,6 @@ const gulaszPoWegiersku: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
   image: "",
-  kcal: 520,
   time: 75,
   portions: 3,
   ingredients: [
@@ -41,7 +40,7 @@ const gulaszPoWegiersku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina"],
+  keyWords: ["mięso", "wołowina", "duszone"],
 };
 
 export default gulaszPoWegiersku;

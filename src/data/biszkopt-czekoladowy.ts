@@ -9,7 +9,6 @@ const biszkoptCzekoladowy: Recipe = {
   name: "Biszkopt Czekoladowy",
   type: "dessert",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -21,7 +20,7 @@ const biszkoptCzekoladowy: Recipe = {
     { ingredient: iDIR.milk, amount: 40, unit: "g" },
   ],
   steps: [],
-  keyWords: ["ciasto", "słodkie", "czekolada"],
+  keyWords: ["ciasto", "słodkie", "biszkopt", "czekolada"],
 };
 
 export default biszkoptCzekoladowy;

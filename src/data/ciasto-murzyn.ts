@@ -9,7 +9,6 @@ const ciastoMurzyn: Recipe = {
   name: "Ciasto Murzyn",
   type: "dessert",
   image: "ciasto-murzyn.jpg",
-  kcal: 420,
   time: 45,
   portions: 8,
   ingredients: [
@@ -31,7 +30,7 @@ const ciastoMurzyn: Recipe = {
     "Sprawdź patyczkiem, czy ciasto jest upieczone.",
     "Po upieczeniu polej ciasto przygotowaną wcześniej polewą.",
   ],
-  keyWords: ["ciasto", "słodkie", "czekolada"],
+  keyWords: ["ciasto", "słodkie", "czekolada", "biszkopt"],
 };
 
 export default ciastoMurzyn;

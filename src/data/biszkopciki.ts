@@ -10,7 +10,6 @@ const biszkopciki: Recipe = {
   name: "Biszkopciki",
   type: "dessert",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -23,7 +22,7 @@ const biszkopciki: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [],
-  keyWords: ["ciasto", "słodkie", "przekąska"],
+  keyWords: ["ciasto", "słodkie", "biszkopt"],
 };
 
 export default biszkopciki;

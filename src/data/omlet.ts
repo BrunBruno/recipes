@@ -8,7 +8,6 @@ const omlet: Recipe = {
   name: "Omlet",
   type: "snack",
   image: "",
-  kcal: 280,
   time: 15,
   portions: 1,
   ingredients: [
@@ -26,7 +25,7 @@ const omlet: Recipe = {
     "Gdy spód omletu się zetnie, przykryj patelnię i smaż do momentu, aż całość będzie ścięta.",
     "Złóż omlet na pół lub podawaj w całości.",
   ],
-  keyWords: ["jajka", "śniadanie", "smażone"],
+  keyWords: ["jajko", "smażone"],
 };
 
 export default omlet;

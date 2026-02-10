@@ -10,13 +10,12 @@ const skladaki: Recipe = {
   name: "Składaki",
   type: "snack",
   image: "skladaki.jpg",
-  kcal: 450,
   time: 15,
   portions: 2,
   ingredients: [
     { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
-    { ingredient: iMET.salami, amount: 160 },
-    { ingredient: iDIR.yellow_cheese, amount: 1, unit: "kostka" },
+    { ingredient: iMET.salami, amount: 12, unit: "plaster" },
+    { ingredient: iDIR.yellow_cheese, amount: "0.5-1", unit: "kostka" },
     { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
     { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
     { ingredient: iVEG.garlic, amount: "1-2", unit: "ząbek" },
@@ -35,7 +34,7 @@ const skladaki: Recipe = {
     "Złóż wszystkie części, aby powstał trójkąt.",
     "Podgrzej w tosterze do sandwichów, aż ser się roztopi, a tortilla będzie chrupiąca.",
   ],
-  keyWords: ["mięso", "fast food", "warzywa"],
+  keyWords: ["mięso", "fast food", "warzywa", "tortilla"],
 };
 
 export default skladaki;

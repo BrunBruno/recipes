@@ -10,7 +10,6 @@ const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
   image: "",
-  kcal: 580,
   time: 65,
   portions: 4,
   ingredients: [
@@ -38,7 +37,7 @@ const kurczakZPomidorem: Recipe = {
     "Posyp całość startym serem.",
     "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
   ],
-  keyWords: ["mięso", "kurczak", "pomidory", "pieczone"],
+  keyWords: ["mięso", "kurczak", "pieczone"],
 };
 
 export default kurczakZPomidorem;

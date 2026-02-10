@@ -10,7 +10,6 @@ const biszkoptWaniliowy: Recipe = {
   name: "Biszkopt Waniliowy",
   type: "dessert",
   image: "",
-  kcal: 0,
   time: 0,
   portions: 0,
   ingredients: [
@@ -23,7 +22,7 @@ const biszkoptWaniliowy: Recipe = {
     { ingredient: iOTH.vanilla_extract, amount: 2, unit: "ml" },
   ],
   steps: [],
-  keyWords: ["ciasto", "słodkie", "wanilia"],
+  keyWords: ["ciasto", "słodkie", "biszkopt", "wanilia"],
 };
 
 export default biszkoptWaniliowy;

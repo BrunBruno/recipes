@@ -10,7 +10,6 @@ const faworki: Recipe = {
   name: "Faworki",
   type: "dessert",
   image: "",
-  kcal: 500,
   time: 90,
   portions: 4,
   ingredients: [
