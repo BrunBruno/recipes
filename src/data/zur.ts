@@ -9,7 +9,7 @@ const zur: Recipe = {
   portions: 0,
   ingredients: [],
   steps: [],
-  keyWords: ["zupa", "kwaśne"],
+  keyWords: ["zupa"],
 };
 
 export default zur;
