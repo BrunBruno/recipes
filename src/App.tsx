@@ -2,45 +2,20 @@ import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
 import { type mealType, type Recipe } from "./types";
 import IngredientSvg from "./assets/ingredientsSvgs";
-import { calculateRecipeKcal } from "./utils";
+import { calculateRecipeKcal, mealTypesData } from "./utils";
 import RecipeTypeIcons from "./assets/recipeTypeIcons";
-
-const borderColorMap: Record<mealType, string> = {
-  dinner: "#f59f00",
-  snack: "#f03e3e",
-  soup: "#37b24d",
-  dessert: "#1c7ed6",
-  salad: "#ae3ec9",
-  other: "#f76707",
-};
-
-const mealTypes: mealType[] = [
-  "dinner",
-  "snack",
-  "soup",
-  "dessert",
-  "salad",
-  "other",
-];
-const mealTypePL: Record<mealType, string> = {
-  dinner: "Obiad",
-  snack: "Przekąska",
-  soup: "Zupa",
-  dessert: "Deser",
-  salad: "Sałatka",
-  other: "Inne",
-};
+import UtilsIcons from "./assets/utilsIcon";
 
 function App() {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
-
-  const contentRef = useRef<HTMLDivElement>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const toggleType = (type: mealType) => {
     setActiveTypes((prev) =>
@@ -98,6 +73,7 @@ function App() {
     if (length === 4) return "font-md";
     return "font-sm";
   };
+
   const getStatusClass = (type: string, value: number) => {
     if (type === "kcal") {
       if (value <= 300) return "status-green";
@@ -140,13 +116,7 @@ function App() {
     <div className="recipes-page">
       <div className="page-title">
         <h1 onClick={() => location.reload()}>
-          <svg
-            fill="#099268"
-            viewBox="0 0 50 50"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12,39h32V2H12C8.691,2,6,4.691,6,8v34.417C6,45.496,8.691,48,12,48h32v-2H12c-2.168,0-4-1.641-4-3.583C8,40.501,9.757,39,12,39z M36.709,31.706C36.514,31.902,36.257,32,36,32c-0.255,0-0.511-0.097-0.705-0.292l-6.523-6.494l-1.76,1.76l-1.846-1.879l3.153-3.153l8.387,8.349C37.097,30.681,37.099,31.314,36.709,31.706z M16.286,10.007l7.733,7.781l-3.044,3.044L16.23,16C14.568,14.338,14.594,11.637,16.286,10.007z M14.329,30.293l13.024-13.024c-0.034-0.085-0.083-0.163-0.107-0.252c-0.399-1.509-0.322-3.426,1.045-4.777c2.031-2.094,5.497-2.989,6.998-1.505c1.501,1.571,0.596,4.909-1.435,6.916c-1.444,1.428-3.298,1.545-4.8,1.16c-0.104-0.027-0.196-0.081-0.294-0.122L14.743,31.707C14.548,31.902,15.292,32,15.036,32s-0.512-0.098-0.707-0.293C13.938,31.316,13.938,30.684,14.329,30.293z" />
-          </svg>
+          <UtilsIcons name="logo" color="#099268" />
           Przepisy {filteredRecipes.length}
         </h1>
 
@@ -158,19 +128,7 @@ function App() {
               setShowFilters(false);
             }}
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-                stroke="#999"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <UtilsIcons name="search" color="#999999" />
           </button>
           <button
             className="toggle-filters-btn"
@@ -179,19 +137,7 @@ function App() {
               setShowSearch(false);
             }}
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 12L4 4H15M20 4L15 12V21L9 18V16"
-                stroke="#999"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <UtilsIcons name="filter" color="#999999" />
           </button>
 
           <div
@@ -201,19 +147,7 @@ function App() {
 
           <div className={`recipe-search ${showSearch ? "show" : ""}`}>
             <label className="recipe-search-label">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-                  stroke="#999"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <UtilsIcons name="search" color="#999999" />
               <input
                 ref={searchInputRef}
                 type="text"
@@ -231,24 +165,24 @@ function App() {
           ></div>
 
           <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
-            {mealTypes.map((type) => (
+            {Object.entries(mealTypesData).map(([key, { label, color }]) => (
               <button
-                key={type}
-                className={`filter-btn`}
+                key={key}
+                className="filter-btn"
                 style={{
-                  borderColor: activeTypes.includes(type)
-                    ? borderColorMap[type]
+                  borderColor: activeTypes.includes(key as mealType)
+                    ? color
                     : "#666",
                 }}
-                onClick={() => toggleType(type)}
+                onClick={() => toggleType(key as mealType)}
               >
                 <div className="filter-svg">
                   <RecipeTypeIcons
-                    type={type}
-                    color={activeTypes.includes(type) ? "" : "#666"}
+                    type={key as mealType}
+                    color={activeTypes.includes(key as mealType) ? "" : "#666"}
                   />
                 </div>
-                <span className="filter-text">{mealTypePL[type]}</span>
+                <span className="filter-text">{label}</span>
               </button>
             ))}
           </div>
@@ -293,15 +227,6 @@ function App() {
             >
               {selectedRecipe.portions}
             </div>
-
-            {/* <div
-              className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.kcal)} 
-                ${getStatusClass("kcal", selectedRecipe.kcal)}
-              `}
-            >
-              {selectedRecipe.kcal}
-            </div> */}
           </div>
 
           <div className="recipe-details-header">
@@ -327,17 +252,7 @@ function App() {
           {selectedRecipe.ingredients.length === 0 &&
           selectedRecipe.steps.length === 0 ? (
             <div style={{ margin: "auto" }}>
-              <svg
-                width="120px"
-                height="120px"
-                viewBox="0 0 1024 1024"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#aaa"
-                  d="m557.248 608 135.744-135.744-45.248-45.248-135.68 135.744-135.808-135.68-45.248 45.184L466.752 608l-135.68 135.68 45.184 45.312L512 653.248l135.744 135.744 45.248-45.248L557.312 608zM704 192h160v736H160V192h160v64h384v-64zm-320 0V96h256v96H384z"
-                />
-              </svg>
+              <UtilsIcons name="empty" color="#aaaaaa" />
             </div>
           ) : (
             <div ref={contentRef} className="recipe-details-content">
@@ -371,23 +286,17 @@ function App() {
 
               <section>
                 <h3>Sposób przygotowania</h3>
-                <ol className="steps-list">
-                  {Array.isArray(selectedRecipe.steps) &&
-                    selectedRecipe.steps.map((step, index) => {
-                      if (typeof step === "string") {
-                        return <li key={index}>{step}</li>;
-                      } else {
-                        return (
-                          <div key={index}>
-                            <h4>{step.title}</h4>
-                            {step.steps.map((s, i) => (
-                              <li key={i}>{s}</li>
-                            ))}
-                          </div>
-                        );
-                      }
-                    })}
-                </ol>
+                {Array.isArray(selectedRecipe.steps) &&
+                  selectedRecipe.steps.map((step, index) => (
+                    <div key={index} className="steps">
+                      {step.title !== "" && <h4>{step.title}</h4>}
+                      <ol className="steps-list">
+                        {step.steps.map((s, i) => (
+                          <li key={i}>{s}</li>
+                        ))}
+                      </ol>
+                    </div>
+                  ))}
               </section>
             </div>
           )}
@@ -402,23 +311,27 @@ function App() {
             onClick={() => setSelectedRecipe(recipe)}
           >
             <div
-              className={`recipe-card-bg ${
-                recipe.image !== "" ? "saturate-bg" : ""
-              }`}
+              className={`recipe-card-bg ${recipe.image !== "" ? "saturate-bg" : ""}`}
               style={{
-                backgroundImage: `linear-gradient(
-                  rgba(0,0,0,0.3),
-                  rgba(0,0,0,0.8)
-                ),url(${recipe.image === "" ? "./default.jpg" : recipe.image})`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),
+                                  url(${recipe.image === "" ? "./default.jpg" : recipe.image})`,
               }}
             ></div>
 
             <div
               className="card-svg"
-              style={{ borderColor: borderColorMap[recipe.type] }}
+              style={{ borderColor: mealTypesData[recipe.type].color }}
             >
               <RecipeTypeIcons type={recipe.type} />
             </div>
+            {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
+              <div
+                className="card-warning"
+                style={{ borderColor: mealTypesData[recipe.type].color }}
+              >
+                <UtilsIcons name="warning" color="#f03e3e" />
+              </div>
+            )}
 
             <div className="recipe-card-content">
               <h2>{recipe.name}</h2>

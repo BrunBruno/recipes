@@ -20,10 +20,15 @@ const jajecznica: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Pokrój wybrane składniki: kiełbasę, cebulę i pomidora.",
-    "Podsmaż składniki na maśle.",
-    "Wbij jajka na patelnię i dokładnie wymieszaj.",
-    "Dopraw solą i posyp szczypiorkiem przed podaniem.",
+    {
+      title: "",
+      steps: [
+        "Pokrój wybrane składniki: kiełbasę, cebulę i pomidora.",
+        "Podsmaż składniki na maśle.",
+        "Wbij jajka na patelnię i dokładnie wymieszaj.",
+        "Dopraw solą i posyp szczypiorkiem przed podaniem.",
+      ],
+    },
   ],
   keyWords: ["jajko", "smażone"],
 };

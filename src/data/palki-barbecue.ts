@@ -17,14 +17,18 @@ const palkiBarbecue: Recipe = {
     { ingredient: iSPC.smoked_paprika },
     { ingredient: iSPC.granulated_garlic },
   ],
-
   steps: [
-    "Ułóż pałki w naczyniu żaroodpornym.",
-    "Posyp kurczaka mieszanką przypraw: słodką, ostrą i wędzoną papryką oraz czosnkiem granulowanym.",
-    "Przykryj naczynie i piecz w piekarniku przez około 40 minut w 220°C.",
-    "Wyjmij naczynie i otwórz je, odlej nadmiar tłuszczu z kurczaka.",
-    "Polej pałki sosem barbecue.",
-    "Wstaw naczynie ponownie do piekarnika, tym razem otwarte, i piecz w 160°C aż sos się skarmelizuje.",
+    {
+      title: "",
+      steps: [
+        "Ułóż pałki w naczyniu żaroodpornym.",
+        "Posyp kurczaka mieszanką przypraw: słodką, ostrą i wędzoną papryką oraz czosnkiem granulowanym.",
+        "Przykryj naczynie i piecz w piekarniku przez około 40 minut w 220°C.",
+        "Wyjmij naczynie i otwórz je, odlej nadmiar tłuszczu z kurczaka.",
+        "Polej pałki sosem barbecue.",
+        "Wstaw naczynie ponownie do piekarnika, tym razem otwarte, i piecz w 160°C aż sos się skarmelizuje.",
+      ],
+    },
   ],
   keyWords: ["mięso", "kurczak", "pieczone"],
 };

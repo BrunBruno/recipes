@@ -19,11 +19,16 @@ const stek: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Stek posyp solą.",
-    "Smaż stek na odrobinie oleju, aż osiągnie pożądany stopień wysmażenia.",
-    "Na patelni dodaj masło, dodaj wyciśnięty czosnek i tymianek.",
-    "Zmniejsz ogień i polewaj steka stopionym masłem z czosnkiem i tymiankiem przez kilka minut.",
-    "Podawaj od razu po przygotowaniu.",
+    {
+      title: "",
+      steps: [
+        "Stek posyp solą.",
+        "Smaż stek na odrobinie oleju, aż osiągnie pożądany stopień wysmażenia.",
+        "Na patelni dodaj masło, dodaj wyciśnięty czosnek i tymianek.",
+        "Zmniejsz ogień i polewaj steka stopionym masłem z czosnkiem i tymiankiem przez kilka minut.",
+        "Podawaj od razu po przygotowaniu.",
+      ],
+    },
   ],
   keyWords: ["mięso", "wołowina", "smażone"],
 };

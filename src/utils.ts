@@ -1,4 +1,14 @@
-import type { Recipe } from "./types";
+import type { mealType, Recipe } from "./types";
+
+export const mealTypesData: Record<mealType, { label: string; color: string }> =
+  {
+    dinner: { label: "Obiad", color: "#f59f00" },
+    snack: { label: "Przekąska", color: "#f03e3e" },
+    soup: { label: "Zupa", color: "#37b24d" },
+    dessert: { label: "Deser", color: "#1c7ed6" },
+    salad: { label: "Sałatka", color: "#ae3ec9" },
+    other: { label: "Inne", color: "#f76707" },
+  };
 
 export const calculateRecipeKcal = (recipe: Recipe): number => {
   const DEFAULT_FAT_GRAMS = 15;

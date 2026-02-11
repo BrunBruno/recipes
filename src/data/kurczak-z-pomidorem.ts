@@ -28,14 +28,19 @@ const kurczakZPomidorem: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
-    "Pokrój mięso z kurczaka i ułóż je w naczyniu.",
-    "Przypraw mięso solą, pieprzem, papryką oraz czosnkiem.",
-    "W miseczce wymieszaj majonez ze śmietaną i przyprawami.",
-    "Posmaruj kurczaka przygotowaną mieszanką.",
-    "Pokrój pomidory i ułóż je na mięsie.",
-    "Posyp całość startym serem.",
-    "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
+    {
+      title: "",
+      steps: [
+        "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
+        "Pokrój mięso z kurczaka i ułóż je w naczyniu.",
+        "Przypraw mięso solą, pieprzem, papryką oraz czosnkiem.",
+        "W miseczce wymieszaj majonez ze śmietaną i przyprawami.",
+        "Posmaruj kurczaka przygotowaną mieszanką.",
+        "Pokrój pomidory i ułóż je na mięsie.",
+        "Posyp całość startym serem.",
+        "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
+      ],
+    },
   ],
   keyWords: ["mięso", "kurczak", "pieczone"],
 };

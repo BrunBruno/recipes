@@ -111,6 +111,7 @@ export type Recipe = {
   portions: number;
   time: number;
   ingredients: Ingredient[];
-  steps: string[] | RecipeStepGroup[];
+  // steps: string[] | RecipeStepGroup[];
+  steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
 };

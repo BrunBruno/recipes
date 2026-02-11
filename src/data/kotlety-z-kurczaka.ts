@@ -24,15 +24,19 @@ const kotletyZKurczaka: Recipe = {
     { ingredient: iSPC.herbes_de_provence },
     { ingredient: iSPC.curry },
   ],
-
   steps: [
-    "Kurczaka pokrój na małe kotleciki.",
-    "Wbij jajko do garnka i rozbełtaj.",
-    "Dodaj czubatą łyżkę mąki i wymieszaj, aby powstało ciasto.",
-    "Dodaj przyprawy (opcjonalnie curry jeśli chcemy uzyskać kurczaka curry).",
-    "Dokładnie wymieszaj kotlety w cieście.",
-    "Na niewielkiej ilości oleju rozgrzanego na patelni smaż kotlety z obu stron, aż będą złociste i usmażone w środku.",
-    "Podawaj na ciepło, np. z ziemniakami lub surówką.",
+    {
+      title: "",
+      steps: [
+        "Kurczaka pokrój na małe kotleciki.",
+        "Wbij jajko do garnka i rozbełtaj.",
+        "Dodaj czubatą łyżkę mąki i wymieszaj, aby powstało ciasto.",
+        "Dodaj przyprawy (opcjonalnie curry jeśli chcemy uzyskać kurczaka curry).",
+        "Dokładnie wymieszaj kotlety w cieście.",
+        "Na niewielkiej ilości oleju rozgrzanego na patelni smaż kotlety z obu stron, aż będą złociste i usmażone w środku.",
+        "Podawaj na ciepło, np. z ziemniakami lub surówką.",
+      ],
+    },
   ],
   keyWords: ["mięso", "kurczak", "smażone"],
 };

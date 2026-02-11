@@ -22,12 +22,17 @@ const salatkaKuskus: Recipe = {
     { ingredient: iSPC.black_pepper },
   ],
   steps: [
-    "Ugotuj jajka na twardo.",
-    "Przygotuj kuskus zgodnie z instrukcją na opakowaniu i ostudź.",
-    "Jajka, cebulę oraz tuńczyka pokrój na mniejsze kawałki.",
-    "Kukurydzę odsącz z zalewy.",
-    "Wszystkie składniki przełóż do miski, dodaj majonez i wymieszaj.",
-    "Dopraw solą i pieprzem do smaku.",
+    {
+      title: "",
+      steps: [
+        "Ugotuj jajka na twardo.",
+        "Przygotuj kuskus zgodnie z instrukcją na opakowaniu i ostudź.",
+        "Jajka, cebulę oraz tuńczyka pokrój na mniejsze kawałki.",
+        "Kukurydzę odsącz z zalewy.",
+        "Wszystkie składniki przełóż do miski, dodaj majonez i wymieszaj.",
+        "Dopraw solą i pieprzem do smaku.",
+      ],
+    },
   ],
   keyWords: ["sałatka", "warzywa"],
 };

@@ -21,12 +21,17 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
     { ingredient: iOTH.water, amount: 380 },
   ],
   steps: [
-    "Wymieszaj mąkę, cukier, kakao, proszek do pieczenia, masło oraz wodę na jednolitą masę.",
-    "Przełóż masę do naczynia nadającego się do mikrofali.",
-    "Podgrzewaj w mikrofali przez 5-6 minut na mocy 400W.",
-    "W osobnym naczyniu wymieszaj czekoladę ze śmietanką.",
-    "Polej ciasto przygotowaną polewą.",
-    "Wstaw całość do mikrofali na około 1 minutę na mocy 600W.",
+    {
+      title: "",
+      steps: [
+        "Wymieszaj mąkę, cukier, kakao, proszek do pieczenia, masło oraz wodę na jednolitą masę.",
+        "Przełóż masę do naczynia nadającego się do mikrofali.",
+        "Podgrzewaj w mikrofali przez 5-6 minut na mocy 400W.",
+        "W osobnym naczyniu wymieszaj czekoladę ze śmietanką.",
+        "Polej ciasto przygotowaną polewą.",
+        "Wstaw całość do mikrofali na około 1 minutę na mocy 600W.",
+      ],
+    },
   ],
   keyWords: ["ciasto", "słodkie", "mikrofala"],
 };

@@ -21,11 +21,16 @@ const salatkaJarzynowa: Recipe = {
     { ingredient: iSPC.black_pepper },
   ],
   steps: [
-    "Ugotuj warzywa oraz jajka do miękkości i ostudź.",
-    "Obierz warzywa i jajka, a następnie pokrój wszystko w drobną kostkę.",
-    "Dodaj groszek odsączony z zalewy.",
-    "Wymieszaj wszystkie składniki z majonezem.",
-    "Dopraw solą i pieprzem do smaku.",
+    {
+      title: "",
+      steps: [
+        "Ugotuj warzywa oraz jajka do miękkości i ostudź.",
+        "Obierz warzywa i jajka, a następnie pokrój wszystko w drobną kostkę.",
+        "Dodaj groszek odsączony z zalewy.",
+        "Wymieszaj wszystkie składniki z majonezem.",
+        "Dopraw solą i pieprzem do smaku.",
+      ],
+    },
   ],
   keyWords: ["warzywa", "sałatka"],
 };

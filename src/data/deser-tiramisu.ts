@@ -18,13 +18,18 @@ const tiramisu: Recipe = {
     { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
   ],
   steps: [
-    "Żółtka ubij z cukrem na puszystą masę.",
-    "Dodaj serek mascarpone i dokładnie wymieszaj.",
-    "Ubij białka i delikatnie wmieszaj do masy serowej.",
-    "Zaparz dwa kubki kawy i krótko macz w niej biszkopty.",
-    "Układaj warstwami biszkopty i krem w naczyniu (2 warstwy).",
-    "Schłódź w lodówce przez kilka godzin.",
-    "Przed podaniem posyp kakao.",
+    {
+      title: "",
+      steps: [
+        "Żółtka ubij z cukrem na puszystą masę.",
+        "Dodaj serek mascarpone i dokładnie wymieszaj.",
+        "Ubij białka i delikatnie wmieszaj do masy serowej.",
+        "Zaparz dwa kubki kawy i krótko macz w niej biszkopty.",
+        "Układaj warstwami biszkopty i krem w naczyniu (2 warstwy).",
+        "Schłódź w lodówce przez kilka godzin.",
+        "Przed podaniem posyp kakao.",
+      ],
+    },
   ],
   keyWords: ["deser", "słodkie", "biszkopt"],
 };

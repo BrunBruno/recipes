@@ -20,11 +20,16 @@ const watrobkaZKurczaka: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Cebulę pokrój i podsmaż na maśle aż stanie się miękka.",
-    "Na koniec dopraw solą i smaż jeszcze chwilę.",
-    "Wątrobę dokładnie opłucz i odsącz na sitku.",
-    "Obtocz w mące.",
-    "Ułóż wątrobę na patelni i smaż pod przykryciem przez około 10 minut (po 5 min z każdej strony).",
+    {
+      title: "",
+      steps: [
+        "Cebulę pokrój i podsmaż na maśle aż stanie się miękka.",
+        "Na koniec dopraw solą i smaż jeszcze chwilę.",
+        "Wątrobę dokładnie opłucz i odsącz na sitku.",
+        "Obtocz w mące.",
+        "Ułóż wątrobę na patelni i smaż pod przykryciem przez około 10 minut (po 5 min z każdej strony).",
+      ],
+    },
   ],
   keyWords: ["kurczak", "smażone"],
 };

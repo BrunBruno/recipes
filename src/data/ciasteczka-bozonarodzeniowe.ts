@@ -21,11 +21,16 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
     { ingredient: iMET.egg, amount: 3 },
   ],
   steps: [
-    "Zagnieść razem wszystkie składniki.",
-    "Włożyć ciasto do lodówki na 45 min.",
-    "Wykrawać foremkami ciasteczka i kłaść na blachę.",
-    "Piec w 160°C na termoobiegu.",
-    "Dekorować kremem i posypkami.",
+    {
+      title: "",
+      steps: [
+        "Zagnieść razem wszystkie składniki.",
+        "Włożyć ciasto do lodówki na 45 min.",
+        "Wykrawać foremkami ciasteczka i kłaść na blachę.",
+        "Piec w 160°C na termoobiegu.",
+        "Dekorować kremem i posypkami.",
+      ],
+    },
   ],
   keyWords: ["ciasto", "słodkie"],
 };

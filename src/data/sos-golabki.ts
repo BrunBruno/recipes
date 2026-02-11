@@ -21,11 +21,16 @@ const sosDoGolabkow: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Na patelni lub w garnku rozpuść masło i dodaj mąkę.",
-    "Smaż, aż zasmażka będzie lekko brązowa.",
-    "Dodaj wodę oraz przecier pomidorowy i dokładnie wymieszaj.",
-    "Zagotuj całość, rozbijając ewentualne grudki mąki.",
-    "Dopraw solą, Maggi oraz jarzynką do smaku.",
+    {
+      title: "",
+      steps: [
+        "Na patelni lub w garnku rozpuść masło i dodaj mąkę.",
+        "Smaż, aż zasmażka będzie lekko brązowa.",
+        "Dodaj wodę oraz przecier pomidorowy i dokładnie wymieszaj.",
+        "Zagotuj całość, rozbijając ewentualne grudki mąki.",
+        "Dopraw solą, Maggi oraz jarzynką do smaku.",
+      ],
+    },
   ],
   keyWords: ["sos"],
 };

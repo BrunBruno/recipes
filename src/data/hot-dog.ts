@@ -21,12 +21,17 @@ const hotHog: Recipe = {
     { ingredient: iSAU.garlic_sauce },
   ],
   steps: [
-    "Podgrzej bułki oraz parówki w mikrofalówce.",
-    "Pokrój ogórki kiszone wzdłuż.",
-    "Otwórz bułki i ułóż po bokach ogórki kiszone.",
-    "Włóż parówkę do bułki.",
-    "Polej całość ketchupem, musztardą i sosem czosnkowym.",
-    "Dodaj kapustę kiszoną i posyp cebulką prażoną.",
+    {
+      title: "",
+      steps: [
+        "Podgrzej bułki oraz parówki w mikrofalówce.",
+        "Pokrój ogórki kiszone wzdłuż.",
+        "Otwórz bułki i ułóż po bokach ogórki kiszone.",
+        "Włóż parówkę do bułki.",
+        "Polej całość ketchupem, musztardą i sosem czosnkowym.",
+        "Dodaj kapustę kiszoną i posyp cebulką prażoną.",
+      ],
+    },
   ],
   keyWords: ["mięso", "fast food"],
 };

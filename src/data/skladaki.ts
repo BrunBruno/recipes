@@ -25,14 +25,19 @@ const skladaki: Recipe = {
     { ingredient: iSPC.basil },
   ],
   steps: [
-    "W miseczce wymieszaj koncentrat pomidorowy z ketchupem, wyciśniętym czosnkiem oraz bazylią, aby powstał sos.",
-    "Pokrój paprykę i cebulę, a ser żółty zetrzyj na tarce.",
-    "Tortillę podziel na 4 ćwiartki (nacięcie od środka).",
-    "Pierwszą ćwiartkę posmaruj przygotowanym sosem.",
-    "Na drugiej i czwartej ćwiartce posyp startym serem i oregano oraz ułóż warzywa.",
-    "Na trzeciej ćwiartce ułóż plastry salami.",
-    "Złóż wszystkie części, aby powstał trójkąt.",
-    "Podgrzej w tosterze do sandwichów, aż ser się roztopi, a tortilla będzie chrupiąca.",
+    {
+      title: "",
+      steps: [
+        "W miseczce wymieszaj koncentrat pomidorowy z ketchupem, wyciśniętym czosnkiem oraz bazylią, aby powstał sos.",
+        "Pokrój paprykę i cebulę, a ser żółty zetrzyj na tarce.",
+        "Tortillę podziel na 4 ćwiartki (nacięcie od środka).",
+        "Pierwszą ćwiartkę posmaruj przygotowanym sosem.",
+        "Na drugiej i czwartej ćwiartce posyp startym serem i oregano oraz ułóż warzywa.",
+        "Na trzeciej ćwiartce ułóż plastry salami.",
+        "Złóż wszystkie części, aby powstał trójkąt.",
+        "Podgrzej w tosterze do sandwichów, aż ser się roztopi, a tortilla będzie chrupiąca.",
+      ],
+    },
   ],
   keyWords: ["mięso", "fast food", "warzywa", "tortilla"],
 };

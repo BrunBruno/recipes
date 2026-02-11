@@ -23,10 +23,15 @@ const pancakes: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "W blenderze zmiksuj wszystkie składniki na gładką masę o konsystencji gęstej śmietany.",
-    "Rozgrzej patelnię na średnim ogniu.",
-    "Smaż pancakes z obu stron aż będą złociste.",
-    "Podawaj z syropem klonowym, masłem lub cukrem pudrem według uznania.",
+    {
+      title: "",
+      steps: [
+        "W blenderze zmiksuj wszystkie składniki na gładką masę o konsystencji gęstej śmietany.",
+        "Rozgrzej patelnię na średnim ogniu.",
+        "Smaż pancakes z obu stron aż będą złociste.",
+        "Podawaj z syropem klonowym, masłem lub cukrem pudrem według uznania.",
+      ],
+    },
   ],
   keyWords: ["słodkie", "ciasto", "naleśnik"],
 };

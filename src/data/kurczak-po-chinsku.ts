@@ -21,11 +21,16 @@ const kurczakPoChinsku: Recipe = {
     { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "szt" },
   ],
   steps: [
-    "Mięso usmaż na oleju.",
-    "Pokrój warzywa w paski i dodaj do mięsa.",
-    "Rozmieszaj przyprawę w 250 ml wody i wlej na patelnię.",
-    "Gotuj pod przykryciem przez około 10 minut, aż warzywa będą miękkie.",
-    "Podawaj z ugotowanym ryżem.",
+    {
+      title: "",
+      steps: [
+        "Mięso usmaż na oleju.",
+        "Pokrój warzywa w paski i dodaj do mięsa.",
+        "Rozmieszaj przyprawę w 250 ml wody i wlej na patelnię.",
+        "Gotuj pod przykryciem przez około 10 minut, aż warzywa będą miękkie.",
+        "Podawaj z ugotowanym ryżem.",
+      ],
+    },
   ],
   keyWords: ["mięso", "kurczak", "ryż", "azjatyckie", "sos"],
 };

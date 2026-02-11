@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
 .recipe-card {
   position: relative;
   height: 180px;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-decoration: none;
   color: inherit;
   background-size: cover;
@@ -208,7 +208,7 @@ body::-webkit-scrollbar {
 .recipe-card-content {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 2rem);
   height: 50%;
   display: flex;
   align-items: center;
@@ -235,6 +235,13 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   padding: 0.5rem;
   border: solid 2px;
+}
+.card-warning {
+  position: absolute;
+  top: -0.6rem;
+  left: -0.6rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .details-bg {
@@ -430,6 +437,11 @@ body::-webkit-scrollbar {
   height: 1.2rem;
   aspect-ratio: 1/1;
   margin: auto;
+}
+
+.steps h4 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .steps-list {

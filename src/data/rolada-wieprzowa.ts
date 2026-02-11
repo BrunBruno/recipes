@@ -28,14 +28,19 @@ const roladaWieprzowa: Recipe = {
     { ingredient: iSPC.black_pepper },
   ],
   steps: [
-    "Pokrój mięso na kotlety i dokładnie je rozbij.",
-    "Posmaruj mięso musztardą, posól i popieprz.",
-    "Pokrój kiełbasę, boczek, ogórki oraz cebulę w drobną kostkę.",
-    "Wymieszaj farsz i rozłóż go równomiernie na mięsie.",
-    "Zawiń mięso w roladę i zwiąż nicią lub zabezpiecz wykałaczkami.",
-    "Na patelni rozgrzej margarynę lub olej z masłem i podsmaż roladę po około 5 minut z każdej strony pod przykryciem.",
-    "Przełóż roladę do dużego garnka, dodaj niewielką ilość wody i duś przez około 1 godzinę.",
-    "Zagęść sos, dodając mąkę i śmietanę.",
+    {
+      title: "",
+      steps: [
+        "Pokrój mięso na kotlety i dokładnie je rozbij.",
+        "Posmaruj mięso musztardą, posól i popieprz.",
+        "Pokrój kiełbasę, boczek, ogórki oraz cebulę w drobną kostkę.",
+        "Wymieszaj farsz i rozłóż go równomiernie na mięsie.",
+        "Zawiń mięso w roladę i zwiąż nicią lub zabezpiecz wykałaczkami.",
+        "Na patelni rozgrzej margarynę lub olej z masłem i podsmaż roladę po około 5 minut z każdej strony pod przykryciem.",
+        "Przełóż roladę do dużego garnka, dodaj niewielką ilość wody i duś przez około 1 godzinę.",
+        "Zagęść sos, dodając mąkę i śmietanę.",
+      ],
+    },
   ],
   keyWords: ["wieprzowina", "mięso", "pieczone"],
 };

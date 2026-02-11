@@ -23,12 +23,17 @@ const plackiZiemniaczane: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Zetrzyj na tarce ziemniaki oraz cebulę.",
-    "Odciśnij nadmiar wody przez sitko lub gazę.",
-    "Dodaj mąkę oraz jajko i dokładnie wymieszaj.",
-    "Dodaj przeciśnięty czosnek, cząber, pieprz i sól.",
-    "Rozgrzej olej na patelni.",
-    "Smaż placki, aż będą złociste i chrupiące z obu stron.",
+    {
+      title: "",
+      steps: [
+        "Zetrzyj na tarce ziemniaki oraz cebulę.",
+        "Odciśnij nadmiar wody przez sitko lub gazę.",
+        "Dodaj mąkę oraz jajko i dokładnie wymieszaj.",
+        "Dodaj przeciśnięty czosnek, cząber, pieprz i sól.",
+        "Rozgrzej olej na patelni.",
+        "Smaż placki, aż będą złociste i chrupiące z obu stron.",
+      ],
+    },
   ],
   keyWords: ["ziemniak", "smażone"],
 };

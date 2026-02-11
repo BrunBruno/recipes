@@ -21,14 +21,19 @@ const ciastoMurzyn: Recipe = {
     { ingredient: iDIR.milk, amount: 0.5, unit: "szklanka" },
   ],
   steps: [
-    "Masło, kakao, cukier i mleko podgrzewaj w garnku do zagotowania.",
-    "Odlej niewielką ilość masy i odstaw ją na polewę.",
-    "Do pozostałej masy dodaj jajka, mąkę oraz proszek do pieczenia.",
-    "Całość dokładnie wymieszaj mikserem.",
-    "Wlej ciasto do małej formy.",
-    "Piecz przez około 30 minut.",
-    "Sprawdź patyczkiem, czy ciasto jest upieczone.",
-    "Po upieczeniu polej ciasto przygotowaną wcześniej polewą.",
+    {
+      title: "",
+      steps: [
+        "Masło, kakao, cukier i mleko podgrzewaj w garnku do zagotowania.",
+        "Odlej niewielką ilość masy i odstaw ją na polewę.",
+        "Do pozostałej masy dodaj jajka, mąkę oraz proszek do pieczenia.",
+        "Całość dokładnie wymieszaj mikserem.",
+        "Wlej ciasto do małej formy.",
+        "Piecz przez około 30 minut.",
+        "Sprawdź patyczkiem, czy ciasto jest upieczone.",
+        "Po upieczeniu polej ciasto przygotowaną wcześniej polewą.",
+      ],
+    },
   ],
   keyWords: ["ciasto", "słodkie", "czekolada", "biszkopt"],
 };

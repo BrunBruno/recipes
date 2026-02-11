@@ -19,12 +19,17 @@ const spaghettiBolognese: Recipe = {
     { ingredient: iSPC.knorr_bolognese_fix },
   ],
   steps: [
-    "Usmaż mięso mielone na patelni z olejem.",
-    "Wymieszaj przyprawę bolognese z wodą i wlej do mięsa.",
-    "Gotuj sos przez około 15 minut.",
-    "Ugotuj makaron spaghetti według instrukcji na opakowaniu.",
-    "Zetrzyj ser żółty na tarce.",
-    "Podawaj spaghetti z sosem i posyp startym serem.",
+    {
+      title: "",
+      steps: [
+        "Usmaż mięso mielone na patelni z olejem.",
+        "Wymieszaj przyprawę bolognese z wodą i wlej do mięsa.",
+        "Gotuj sos przez około 15 minut.",
+        "Ugotuj makaron spaghetti według instrukcji na opakowaniu.",
+        "Zetrzyj ser żółty na tarce.",
+        "Podawaj spaghetti z sosem i posyp startym serem.",
+      ],
+    },
   ],
   keyWords: ["makaron", "mięso", "sos"],
 };

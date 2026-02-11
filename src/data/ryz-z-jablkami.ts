@@ -22,13 +22,18 @@ const ryzZJablkami: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Ryż przepłucz pod bieżącą wodą, aż woda stanie się przezroczysta.",
-    "W garnku zagotuj mleko z odrobiną soli i cukrem.",
-    "Dodaj ryż do gotującego się mleka, zmniejsz ogień i gotuj pod przykryciem około 15 minut, aż ryż wchłonie większość mleka.",
-    "W międzyczasie obierz jabłka, usuń gniazda nasienne i pokrój w kostkę.",
-    "Na patelni rozpuść masło, dodaj jabłka i cynamon, smaż kilka minut, aż lekko zmiękną.",
-    "Połącz ugotowany ryż z jabłkami i delikatnie wymieszaj.",
-    "Podawaj na ciepło, opcjonalnie posypane dodatkowym cynamonem lub odrobiną cukru.",
+    {
+      title: "",
+      steps: [
+        "Ryż przepłucz pod bieżącą wodą, aż woda stanie się przezroczysta.",
+        "W garnku zagotuj mleko z odrobiną soli i cukrem.",
+        "Dodaj ryż do gotującego się mleka, zmniejsz ogień i gotuj pod przykryciem około 15 minut, aż ryż wchłonie większość mleka.",
+        "W międzyczasie obierz jabłka, usuń gniazda nasienne i pokrój w kostkę.",
+        "Na patelni rozpuść masło, dodaj jabłka i cynamon, smaż kilka minut, aż lekko zmiękną.",
+        "Połącz ugotowany ryż z jabłkami i delikatnie wymieszaj.",
+        "Podawaj na ciepło, opcjonalnie posypane dodatkowym cynamonem lub odrobiną cukru.",
+      ],
+    },
   ],
   keyWords: ["ryż", "słodkie", "owoce"],
 };

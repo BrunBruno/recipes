@@ -19,11 +19,16 @@ const kurczakSlodkoKwasny: Recipe = {
     { ingredient: iSPC.salt },
   ],
   steps: [
-    "Ugotuj ryż według instrukcji na opakowaniu.",
-    "Pokrój pierś z kurczaka w kostkę, przypraw lekko solą.",
-    "Na patelni rozgrzej olej i podsmaż kurczaka na złoty kolor.",
-    "Dodaj sos słodko-kwaśny Winiary i dokładnie wymieszaj. Gotuj przez kilka minut, aż sos lekko zgęstnieje i wszystko będzie pokryte sosem.",
-    "Podawaj kurczaka z warzywami na ugotowanym ryżu.",
+    {
+      title: "",
+      steps: [
+        "Ugotuj ryż według instrukcji na opakowaniu.",
+        "Pokrój pierś z kurczaka w kostkę, przypraw lekko solą.",
+        "Na patelni rozgrzej olej i podsmaż kurczaka na złoty kolor.",
+        "Dodaj sos słodko-kwaśny Winiary i dokładnie wymieszaj. Gotuj przez kilka minut, aż sos lekko zgęstnieje i wszystko będzie pokryte sosem.",
+        "Podawaj kurczaka z warzywami na ugotowanym ryżu.",
+      ],
+    },
   ],
   keyWords: ["mięso", "kurczak", "ryż", "sos", "azjatyckie"],
 };

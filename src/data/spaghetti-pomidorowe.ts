@@ -23,14 +23,19 @@ const spaghettiPomidorowe: Recipe = {
     { ingredient: iSPC.oregano },
   ],
   steps: [
-    "Podsmaż czosnek krótko na maśle, uważając aby się nie przypalił.",
-    "Dodaj pomidory z puszki lub pół słoika.",
-    "Rozgnieć pomidory na jednolitą masę.",
-    "Gotuj sos aż do zgęstnienia.",
-    "Dopraw sos bazylią, solą i pieprzem.",
-    "Ugotuj makaron spaghetti przez około 10 minut.",
-    "Zetrzyj ser żółty.",
-    "Podawaj makaron z sosem pomidorowym posypany startym serem.",
+    {
+      title: "",
+      steps: [
+        "Podsmaż czosnek krótko na maśle, uważając aby się nie przypalił.",
+        "Dodaj pomidory z puszki lub pół słoika.",
+        "Rozgnieć pomidory na jednolitą masę.",
+        "Gotuj sos aż do zgęstnienia.",
+        "Dopraw sos bazylią, solą i pieprzem.",
+        "Ugotuj makaron spaghetti przez około 10 minut.",
+        "Zetrzyj ser żółty.",
+        "Podawaj makaron z sosem pomidorowym posypany startym serem.",
+      ],
+    },
   ],
   keyWords: ["makaron", "sos"],
 };

@@ -27,14 +27,19 @@ const pizzaDomowa: Recipe = {
     { ingredient: iVEG.onion, amount: 30, unit: "g" },
   ],
   steps: [
-    "Do dużej miski wsyp mąkę i drożdże, wymieszaj dokładnie.",
-    "Dodaj olej, cukier, sól i ponownie wszystko wymieszaj.",
-    "Stopniowo dolewaj wodę, mieszając łyżką, a pod koniec wyrabiaj ręką aż powstanie jednolita kula ciasta. Jeśli ciasto się lepi, dodaj odrobinę mąki.",
-    "Uformowaną kulę ciasta pozostaw w ciepłym miejscu, przykrytą w misce, na 20-30 minut, aby lekko urosło.",
-    "Po tym czasie rozgnieć ciasto dłonią na gruby placek, następnie rozciągnij na okrągły kształt i ułóż na posmarowanej olejem blasze. Dłońmi dopasuj ciasto do kształtu formy.",
-    "Na wierzch nałóż sos pomidorowy i dodatki: salami, oliwki, cebulę pociętą w piórka (lub inne ulubione składniki).",
-    "Wstaw pizzę do piekarnika nagrzanego do 220°C.",
-    "Piec 15-25 minut, w zależności od piekarnika. Sprawdź spód pizzy - jeśli jest przyrumieniony, pizza jest gotowa do podania.",
+    {
+      title: "",
+      steps: [
+        "Do dużej miski wsyp mąkę i drożdże, wymieszaj dokładnie.",
+        "Dodaj olej, cukier, sól i ponownie wszystko wymieszaj.",
+        "Stopniowo dolewaj wodę, mieszając łyżką, a pod koniec wyrabiaj ręką aż powstanie jednolita kula ciasta. Jeśli ciasto się lepi, dodaj odrobinę mąki.",
+        "Uformowaną kulę ciasta pozostaw w ciepłym miejscu, przykrytą w misce, na 20-30 minut, aby lekko urosło.",
+        "Po tym czasie rozgnieć ciasto dłonią na gruby placek, następnie rozciągnij na okrągły kształt i ułóż na posmarowanej olejem blasze. Dłońmi dopasuj ciasto do kształtu formy.",
+        "Na wierzch nałóż sos pomidorowy i dodatki: salami, oliwki, cebulę pociętą w piórka (lub inne ulubione składniki).",
+        "Wstaw pizzę do piekarnika nagrzanego do 220°C.",
+        "Piec 15-25 minut, w zależności od piekarnika. Sprawdź spód pizzy - jeśli jest przyrumieniony, pizza jest gotowa do podania.",
+      ],
+    },
   ],
   keyWords: ["ciasto", "ser", "sos", "włoskie", "fast food"],
 };
