@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
-  image: "watrobka-z-kurczaka.ts.jpg",
+  images: ["watrobka-z-kurczaka.ts.jpg"],
   time: 20,
   portions: 2,
   ingredients: [

@@ -5,7 +5,9 @@ type IngId =
   | "chicken_breast"
   | "chicken_quarters"
   | "chicken_drums"
+  | "chicken_whole"
   | "poultry_liver"
+  | "turkey_breast"
   | "pork_loin"
   | "pork_neck"
   | "pork_ham"
@@ -71,6 +73,25 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 119,
     unitWeights: {
       opak: 450,
+    },
+  },
+
+  chicken_whole: {
+    name: "Kurczak cały",
+    type: "met",
+    kcalPer100g: 165,
+    unitWeights: {
+      szt: 1200,
+    },
+  },
+
+  turkey_breast: {
+    name: "Pierś z indyka",
+    type: "met",
+    kcalPer100g: 135,
+    unitWeights: {
+      opak: 600,
+      szt: 150,
     },
   },
 

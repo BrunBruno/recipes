@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 80,
   portions: 3,
   ingredients: [

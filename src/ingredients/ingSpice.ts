@@ -1,5 +1,37 @@
 import type { IngredientItem } from "../types";
 
+type IngId =
+  | "salt"
+  | "black_pepper"
+  | "cayenne_pepper"
+  | "granulated_garlic"
+  | "sweet_paprika"
+  | "hot_paprika"
+  | "smoked_paprika"
+  | "chilli"
+  | "curry"
+  | "cinnamon"
+  | "nutmeg"
+  | "black_sesame"
+  | "dill"
+  | "thyme"
+  | "marjoram"
+  | "herbes_de_provence"
+  | "wild_garlic"
+  | "bay_leaf"
+  | "allspice"
+  | "caraway"
+  | "savory"
+  | "oregano"
+  | "basil"
+  | "maggi"
+  | "vegetable_seasoning"
+  | "potato_seasoning"
+  | "knorr_bouillon_cube"
+  | "knorr_goulash_fix"
+  | "knorr_chinese_fix"
+  | "knorr_bolognese_fix";
+
 export const iSPC: Record<IngId, IngredientItem> = {
   salt: {
     name: "Sól",
@@ -231,6 +263,16 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
   },
 
+  potato_seasoning: {
+    name: "Przyprawa do ziemniaków",
+    type: "spc",
+    kcalPer100g: 250,
+    unitWeights: {
+      łyżka: 10,
+      łyżeczka: 5,
+    },
+  },
+
   knorr_bouillon_cube: {
     name: "Kostka rosołowa Knorr",
     type: "spc",
@@ -267,34 +309,3 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
   },
 };
-
-type IngId =
-  | "salt"
-  | "black_pepper"
-  | "cayenne_pepper"
-  | "granulated_garlic"
-  | "sweet_paprika"
-  | "hot_paprika"
-  | "smoked_paprika"
-  | "chilli"
-  | "curry"
-  | "cinnamon"
-  | "nutmeg"
-  | "black_sesame"
-  | "dill"
-  | "thyme"
-  | "marjoram"
-  | "herbes_de_provence"
-  | "wild_garlic"
-  | "bay_leaf"
-  | "allspice"
-  | "caraway"
-  | "savory"
-  | "oregano"
-  | "basil"
-  | "maggi"
-  | "vegetable_seasoning"
-  | "knorr_bouillon_cube"
-  | "knorr_goulash_fix"
-  | "knorr_chinese_fix"
-  | "knorr_bolognese_fix";

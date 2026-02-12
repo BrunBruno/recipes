@@ -11,7 +11,7 @@ import type { Recipe } from "../types";
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
-  image: "burger-drwala.ts.jpeg",
+  images: ["burger-drwala.ts.jpeg"],
   time: 50,
   portions: 4,
   ingredients: [

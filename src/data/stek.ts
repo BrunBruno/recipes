@@ -7,7 +7,7 @@ import type { Recipe } from "../types";
 const stek: Recipe = {
   name: "Smażony Stek",
   type: "snack",
-  image: "stek.jpg",
+  images: ["stek.jpg"],
   time: 15,
   portions: 1,
   ingredients: [

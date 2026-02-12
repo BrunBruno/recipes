@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const kotletPoGoralsku: Recipe = {
   name: "Kotlet po Góralsku",
   type: "dinner",
-  image: "kotlet-po-goralsku.jpg",
+  images: ["kotlet-po-goralsku.jpg"],
   time: 70,
   portions: 5,
   ingredients: [

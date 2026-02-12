@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const ciasteczkaBozonarodzeniowe: Recipe = {
   name: "Ciasteczka Bożonarodzeniowe",
   type: "dessert",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [

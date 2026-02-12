@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const lazanki: Recipe = {
   name: "Łazanki",
   type: "dinner",
-  image: "lazanki.jpg",
+  images: ["lazanki.jpg"],
   time: 50,
   portions: 5,
   ingredients: [

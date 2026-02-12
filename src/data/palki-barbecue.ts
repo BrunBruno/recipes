@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
   type: "dinner",
-  image: "palki-barbecue.jpg",
+  images: ["palki-barbecue.jpg"],
   time: 60,
   portions: 3,
   ingredients: [

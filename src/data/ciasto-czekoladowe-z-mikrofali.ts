@@ -7,7 +7,7 @@ import type { Recipe } from "../types";
 const ciastoCzekoladoweZMikrofali: Recipe = {
   name: "Ciasto Czekoladowe z Mikrofali",
   type: "dessert",
-  image: "",
+  images: [""],
   time: 15,
   portions: 6,
   ingredients: [

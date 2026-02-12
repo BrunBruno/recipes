@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const kotletSchabowy: Recipe = {
   name: "Kotlety Schabowe",
   type: "dinner",
-  image: "kotlet-schabowy.jpg",
+  images: ["kotlet-schabowy.jpg", "kotlet-schabowy-2.jpg"],
   time: 50,
   portions: 5,
   ingredients: [

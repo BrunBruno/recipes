@@ -13,7 +13,8 @@ type IngId =
   | "cream_cheese_horseradish"
   | "mascarpone"
   | "yellow_cheese"
-  | "lilliputian_cheese";
+  | "lilliputian_cheese"
+  | "parmigiano_reggiano";
 
 export const iDIR: Record<IngId, IngredientItem> = {
   milk: {
@@ -136,6 +137,15 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 350,
       plaster: 90,
+    },
+  },
+
+  parmigiano_reggiano: {
+    name: "Parmigiano Reggiano",
+    type: "che",
+    kcalPer100g: 431,
+    unitWeights: {
+      plaster: 10,
     },
   },
 };

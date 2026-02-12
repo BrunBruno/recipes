@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const gulaszPoWegiersku: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 75,
   portions: 3,
   ingredients: [

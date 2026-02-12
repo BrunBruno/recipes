@@ -3,7 +3,7 @@ import type { Recipe } from "../types";
 const rosol: Recipe = {
   name: "Rosół",
   type: "soup",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [],

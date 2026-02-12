@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 55,
   portions: 4,
   ingredients: [

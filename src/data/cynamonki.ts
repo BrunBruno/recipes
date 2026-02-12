@@ -10,7 +10,7 @@ import type { Recipe } from "../types";
 const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [

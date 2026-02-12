@@ -10,7 +10,7 @@ import type { Recipe } from "../types";
 const roladaWieprzowa: Recipe = {
   name: "Rolada Wieprzowa",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 90,
   portions: 4,
   ingredients: [

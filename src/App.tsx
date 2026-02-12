@@ -6,9 +6,13 @@ import { calculateRecipeKcal, mealTypesData } from "./utils";
 import RecipeTypeIcons from "./assets/recipeTypeIcons";
 import UtilsIcons from "./assets/utilsIcon";
 
+const SWIPE_THRESHOLD = 50;
+
 function App() {
   const contentRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
@@ -16,6 +20,7 @@ function App() {
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
   const toggleType = (type: mealType) => {
     setActiveTypes((prev) =>
@@ -37,6 +42,7 @@ function App() {
 
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
+    setActiveImageIndex(0);
   }, [selectedRecipe]);
 
   useEffect(() => {
@@ -64,6 +70,34 @@ function App() {
       searchInputRef.current?.focus();
     }
   }, [showSearch]);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const deltaX = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+
+    setActiveImageIndex((prev) => {
+      if (!selectedRecipe) return 0;
+      if (deltaX > 0) {
+        return Math.min(prev + 1, selectedRecipe.images.length - 1);
+      } else {
+        return Math.max(prev - 1, 0);
+      }
+    });
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   const getFontSizeClass = (value: number): string => {
     const length = String(value).length;
@@ -230,15 +264,63 @@ function App() {
           </div>
 
           <div className="recipe-details-header">
-            <img
-              src={
-                selectedRecipe.image === ""
-                  ? "./default.jpg"
-                  : selectedRecipe.image
-              }
-              alt={selectedRecipe.name}
-              className="recipe-details-image"
-            />
+            <div
+              className="details-images"
+              onTouchStart={(e) => handleTouchStart(e)}
+              onTouchMove={(e) => handleTouchMove(e)}
+              onTouchEnd={() => handleTouchEnd()}
+            >
+              {selectedRecipe.images.length > 1 && (
+                <div
+                  className="images-arrow"
+                  onClick={() => {
+                    setActiveImageIndex((prev) => {
+                      if (prev === 0) return 0;
+                      return prev - 1;
+                    });
+                  }}
+                >
+                  <UtilsIcons name="arrow" color="#ffffff" />
+                </div>
+              )}
+
+              {selectedRecipe.images.map((image, i) => (
+                <img
+                  key={`image-${i}-${image}`}
+                  src={image === "" ? "./default.jpg" : image}
+                  alt={selectedRecipe.name}
+                  className="recipe-details-image"
+                  style={{ left: `${i * 100 - activeImageIndex * 100}%` }}
+                />
+              ))}
+
+              {selectedRecipe.images.length > 1 && (
+                <div className="images-indicators">
+                  {selectedRecipe.images.map((_, i) => (
+                    <div
+                      key={`ind-${i}`}
+                      className={`image-indicator ${activeImageIndex === i ? "active" : ""}`}
+                    />
+                  ))}
+                </div>
+              )}
+
+              {selectedRecipe.images.length > 1 && (
+                <div
+                  className="images-arrow"
+                  onClick={() => {
+                    setActiveImageIndex((prev) => {
+                      if (prev === selectedRecipe.images.length - 1)
+                        return selectedRecipe.images.length - 1;
+                      return prev + 1;
+                    });
+                  }}
+                >
+                  <UtilsIcons name="arrow" color="#ffffff" />
+                </div>
+              )}
+            </div>
+
             <h2
               className="recipe-details-title"
               onClick={() => {
@@ -311,10 +393,10 @@ function App() {
             onClick={() => setSelectedRecipe(recipe)}
           >
             <div
-              className={`recipe-card-bg ${recipe.image !== "" ? "saturate-bg" : ""}`}
+              className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
               style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),
-                                  url(${recipe.image === "" ? "./default.jpg" : recipe.image})`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)),
+                                  url(${recipe.images[0] === "" ? "./default.jpg" : recipe.images[0]})`,
               }}
             ></div>
 

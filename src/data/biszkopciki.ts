@@ -9,9 +9,9 @@ import type { Recipe } from "../types";
 const biszkopciki: Recipe = {
   name: "Biszkopciki",
   type: "dessert",
-  image: "",
-  time: 0,
-  portions: 0,
+  images: [""],
+  time: 25,
+  portions: 2,
   ingredients: [
     { ingredient: iMET.egg, amount: 2 },
     { ingredient: iGRN.flour, amount: 60 },
@@ -21,7 +21,23 @@ const biszkopciki: Recipe = {
     { ingredient: iOTH.cocoa, amount: 5 },
     { ingredient: iSPC.salt },
   ],
-  steps: [],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Oddziel białka od żółtek.",
+        "Białka ubij ze szczyptą soli na sztywną pianę.",
+        "Stopniowo dodawaj cukier, cały czas ubijając, aż piana będzie gęsta i lśniąca.",
+        "Dodaj żółtka i krótko zmiksuj na niskich obrotach.",
+        "Dodaj olej oraz mleko i delikatnie wymieszaj.",
+        "Wsyp przesianą mąkę i ostrożnie wymieszaj szpatułką.",
+        "Jeśli robisz wersję kakaową oddziel część ciasta i dodaj do niej kakao.",
+        "Przełóż masę do rękawa cukierniczego lub nakładaj łyżką na blachę wyłożoną papierem do pieczenia.",
+        "Piecz w piekarniku nagrzanym do 170°C przez około 10 - 12 minut, aż biszkopciki lekko się zarumienią.",
+        "Po upieczeniu ostudź na kratce.",
+      ],
+    },
+  ],
   keyWords: ["ciasto", "słodkie", "biszkopt"],
 };
 

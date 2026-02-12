@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const gotowyBurger: Recipe = {
   name: "Gotowy Burger",
   type: "snack",
-  image: "gotowy-burger.jpg",
+  images: ["gotowy-burger.jpg"],
   time: 30,
   portions: 2,
   ingredients: [

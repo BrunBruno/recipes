@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 50,
   portions: 5,
   ingredients: [

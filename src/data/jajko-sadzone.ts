@@ -7,7 +7,7 @@ import type { Recipe } from "../types";
 const jajkoSadzone: Recipe = {
   name: "Jajko Sadzone",
   type: "dinner",
-  image: "jajko-sadzone.jpg",
+  images: ["jajko-sadzone.jpg"],
   time: 10,
   portions: 1,
   ingredients: [

@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 65,
   portions: 4,
   ingredients: [

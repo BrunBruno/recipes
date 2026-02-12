@@ -3,7 +3,7 @@ import type { Recipe } from "../types";
 const wywinieteTosty: Recipe = {
   name: "Wywinięte Tosty",
   type: "snack",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [],

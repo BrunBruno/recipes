@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const tiramisu: Recipe = {
   name: "Tiramisu",
   type: "dessert",
-  image: "",
+  images: [""],
   time: 30,
   portions: 8,
   ingredients: [

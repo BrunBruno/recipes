@@ -70,7 +70,7 @@ type KeyWord =
   | "zupa"
   | "tost"
   | "sałatka"
-  //
+  | "indyk"
   | "fast food"
   | "słodkie"
   | "gotowane"
@@ -80,7 +80,9 @@ type KeyWord =
   | "grillowane"
   | "panierowane"
   | "piekarnik"
+  | "air fryer"
   | "mikrofala"
+  | "rożen"
   | "azjatyckie"
   | "włoskie";
 
@@ -107,11 +109,10 @@ export type RecipeStepGroup = {
 export type Recipe = {
   name: string;
   type: mealType;
-  image: string;
+  images: string[];
   portions: number;
   time: number;
   ingredients: Ingredient[];
-  // steps: string[] | RecipeStepGroup[];
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
 };

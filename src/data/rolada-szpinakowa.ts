@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const roladaSzpinakowa: Recipe = {
   name: "Rolada Szpinakowa",
   type: "snack",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [

@@ -3,7 +3,7 @@ import type { Recipe } from "../types";
 const kotletyMielone: Recipe = {
   name: "Kotlety Mielone",
   type: "dinner",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [],

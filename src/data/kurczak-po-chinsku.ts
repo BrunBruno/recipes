@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
   type: "dinner",
-  image: "./kurczak-po-chinsku.jpg",
+  images: ["./kurczak-po-chinsku.jpg"],
   time: 30,
   portions: 3,
   ingredients: [

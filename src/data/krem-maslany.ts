@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const kremMaslany: Recipe = {
   name: "Krem Maślany z Mlekiem Skondensowanym",
   type: "other",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [

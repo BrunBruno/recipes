@@ -22,7 +22,8 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
     if (!amount) {
       if (ingredient.type === "fat") {
-        grams = DEFAULT_FAT_GRAMS;
+        // grams = DEFAULT_FAT_GRAMS;
+        grams = DEFAULT_FAT_GRAMS * recipe.portions;
       } else {
         continue;
       }

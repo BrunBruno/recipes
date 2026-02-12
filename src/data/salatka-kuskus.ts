@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
   type: "salad",
-  image: "",
+  images: [""],
   time: 25,
   portions: 8,
   ingredients: [

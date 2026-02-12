@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const musMalinowyGanache: Recipe = {
   name: "Mus Malinowy Ganache",
   type: "other",
-  image: "",
+  images: [""],
   time: 0,
   portions: 0,
   ingredients: [

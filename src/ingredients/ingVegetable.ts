@@ -14,6 +14,7 @@ type IngId =
   | "red_onion"
   | "lettuce"
   | "chives"
+  | "parsley"
   | "frozen_spinach"
   | "canned_tomatoes"
   | "canned_corn"
@@ -150,6 +151,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżka: 3,
       pęto: 50,
+    },
+  },
+
+  parsley: {
+    name: "Pietruszka",
+    type: "veg",
+    kcalPer100g: 36,
+    unitWeights: {
+      pęto: 30,
+      listek: 1,
     },
   },
 
