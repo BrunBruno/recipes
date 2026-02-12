@@ -40,6 +40,7 @@ const burgerDrwala: Recipe = {
       steps: [
         "Do kubka dodaj łyżkę majonezu, łyżkę ketchupu oraz 2 łyżki musztardy.",
         "Wymieszaj sos i odstaw do przegryzienia.",
+        "Podane proporcje są wyznaczone na cztery burgery.",
       ],
     },
     {

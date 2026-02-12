@@ -10,7 +10,7 @@ const ciastoMurzyn: Recipe = {
   type: "dessert",
   images: ["ciasto-murzyn.jpg"],
   time: 45,
-  portions: 8,
+  portions: 10,
   ingredients: [
     { ingredient: iMET.egg, amount: 3 },
     { ingredient: iFAT.butter, amount: 1, unit: "kostka" },

@@ -9,7 +9,7 @@ const ciastoNaPierogi: Recipe = {
   type: "other",
   images: [""],
   time: 60,
-  portions: 4,
+  portions: 6,
   ingredients: [
     { ingredient: iGRN.flour, amount: 500 },
     { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },

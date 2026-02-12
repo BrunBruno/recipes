@@ -7,8 +7,8 @@ const kremMaslany: Recipe = {
   name: "Krem Maślany z Mlekiem Skondensowanym",
   type: "other",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 30,
+  portions: 1,
   ingredients: [
     { ingredient: iFAT.butter, amount: 200, unit: "g" },
     { ingredient: iDIR.condensed_milk, amount: 200, unit: "g" },

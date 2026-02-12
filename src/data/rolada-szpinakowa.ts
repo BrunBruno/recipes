@@ -10,8 +10,8 @@ const roladaSzpinakowa: Recipe = {
   name: "Rolada Szpinakowa",
   type: "snack",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 60,
+  portions: 6,
   ingredients: [
     { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
     { ingredient: iMET.egg, amount: 4 },

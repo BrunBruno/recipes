@@ -11,8 +11,8 @@ const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 150,
+  portions: 12,
   ingredients: [
     { ingredient: iDIR.milk, amount: 250, unit: "ml" },
     { ingredient: iMET.egg, amount: 2 },

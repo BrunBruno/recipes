@@ -6,7 +6,7 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const gotowyBurger: Recipe = {
-  name: "Gotowy Burger",
+  name: "Burger Gotowiec",
   type: "snack",
   images: ["gotowy-burger.jpg"],
   time: 30,

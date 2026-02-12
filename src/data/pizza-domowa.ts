@@ -11,8 +11,8 @@ const pizzaDomowa: Recipe = {
   name: "Pizza Domowa",
   type: "snack",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 60,
+  portions: 2,
   ingredients: [
     { ingredient: iGRN.flour, amount: 250, unit: "g" },
     { ingredient: iOTH.water, amount: 150, unit: "ml" },

@@ -10,7 +10,7 @@ const chicker: Recipe = {
   type: "snack",
   images: [""],
   time: 25,
-  portions: 4,
+  portions: 2,
   ingredients: [
     { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
     { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },

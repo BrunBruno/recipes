@@ -28,7 +28,6 @@ const gulaszWieprzowy: Recipe = {
     { ingredient: iSPC.granulated_garlic },
     { ingredient: iSPC.chilli },
   ],
-
   steps: [
     {
       title: "Gulasz",

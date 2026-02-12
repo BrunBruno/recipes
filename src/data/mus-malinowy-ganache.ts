@@ -7,8 +7,8 @@ const musMalinowyGanache: Recipe = {
   name: "Mus Malinowy Ganache",
   type: "other",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 25,
+  portions: 1,
   ingredients: [
     { ingredient: iDIR.cream_36, amount: 170, unit: "g" },
     { ingredient: iFRT.raspberries, amount: 200, unit: "g" },

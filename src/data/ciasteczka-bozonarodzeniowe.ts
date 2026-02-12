@@ -9,8 +9,8 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
   name: "Ciasteczka Bożonarodzeniowe",
   type: "dessert",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 85,
+  portions: 24,
   ingredients: [
     { ingredient: iFAT.butter, amount: 0.5, unit: "kostka" },
     { ingredient: iFAT.margarine, amount: 0.5, unit: "kostka" },
