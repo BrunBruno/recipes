@@ -12,14 +12,19 @@ const salatkaKuskus: Recipe = {
   time: 25,
   portions: 8,
   ingredients: [
-    { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
-    { ingredient: iMET.egg, amount: 4, unit: "szt" },
-    { ingredient: iMET.canned_tuna, amount: 2, unit: "opak" },
-    { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
-    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-    { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
+        { ingredient: iMET.egg, amount: 4, unit: "szt" },
+        { ingredient: iMET.canned_tuna, amount: 2, unit: "opak" },
+        { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+    },
   ],
   steps: [
     {

@@ -13,18 +13,29 @@ const kotletPoGoralsku: Recipe = {
   time: 70,
   portions: 5,
   ingredients: [
-    { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
-    { ingredient: iMET.bacon_slices, amount: 10, unit: "plaster" },
-    { ingredient: iMET.egg, amount: 2 },
-    { ingredient: iDIR.yellow_cheese, amount: 10, unit: "plaster" },
-    { ingredient: iGRN.breadcrumbs, amount: 150 },
-    { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
-    { ingredient: iVEG.potato, amount: 750 },
-    { ingredient: iVEG.sauerkraut, amount: 500 },
-    { ingredient: iFAT.butter, amount: 20 },
-    { ingredient: iFAT.oil },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "Kotlety Schabowe",
+      items: [
+        { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
+        { ingredient: iMET.bacon_slices, amount: 10, unit: "plaster" },
+        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iDIR.yellow_cheese, amount: 10, unit: "plaster" },
+        { ingredient: iGRN.breadcrumbs, amount: 150 },
+        { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
+        { ingredient: iFAT.oil },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.potato, amount: "5 × 150", unit: "g" },
+        { ingredient: iVEG.sauerkraut, amount: 600 },
+        { ingredient: iFAT.butter, amount: 20 },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {
@@ -40,17 +51,12 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
     {
-      title: "Ziemniaki Gotowane",
-      steps: [
-        "Obierz ziemniaki i ugotuj w osolonej wodzie do miękkości.",
-        "Po ugotowaniu odcedź i podawaj gorące.",
-      ],
-    },
-    {
-      title: "Kapusta Zasmażana",
+      title: "Przykładowe podanie",
       steps: [
         "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
         "Dopraw solą i pieprzem, smaż na małym ogniu, aż kapusta będzie miękka i lekko zrumieniona.",
+        "Obierz ziemniaki i ugotuj w osolonej wodzie do miękkości.",
+        "Po ugotowaniu odcedź i podawaj gorące.",
       ],
     },
   ],

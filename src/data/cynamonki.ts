@@ -14,21 +14,31 @@ const cynamonki: Recipe = {
   time: 150,
   portions: 12,
   ingredients: [
-    { ingredient: iDIR.milk, amount: 250, unit: "ml" },
-    { ingredient: iMET.egg, amount: 2 },
-    { ingredient: iGRN.flour, amount: 600, unit: "g" },
-    { ingredient: iOTH.sugar, amount: 210, unit: "g" },
-    { ingredient: iFAT.butter, amount: 185, unit: "g" },
-    { ingredient: iOTH.yeast, amount: 40, unit: "g" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.cinnamon },
-    { ingredient: iFRT.raisins },
-    { ingredient: iOTH.powdered_sugar, amount: 1, unit: "szklanka" },
-    { ingredient: iOTH.water, amount: "2-3", unit: "łyżka" },
+    {
+      title: "Ciasto",
+      items: [
+        { ingredient: iDIR.milk, amount: 250, unit: "ml" },
+        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iGRN.flour, amount: 600, unit: "g" },
+        { ingredient: iOTH.sugar, amount: 210, unit: "g" },
+        { ingredient: iFAT.butter, amount: 185, unit: "g" },
+        { ingredient: iOTH.yeast, amount: 40, unit: "g" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.cinnamon },
+        { ingredient: iFRT.raisins },
+      ],
+    },
+    {
+      title: "Lukier",
+      items: [
+        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "szklanka" },
+        { ingredient: iOTH.water, amount: "2-3", unit: "łyżka" },
+      ],
+    },
   ],
   steps: [
     {
-      title: "Ciasto drożdżowe",
+      title: "Ciasto",
       steps: [
         "Mąkę wymieszaj z suchymi drożdżami (jeśli używasz świeżych, przygotuj wcześniej rozczyn).",
         "Dodaj mleko, jajka, cukier i sól, a następnie wyrób ciasto.",

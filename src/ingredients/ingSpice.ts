@@ -40,6 +40,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 5,
     },
+    defaultUnit: "szklanka",
   },
 
   black_pepper: {
@@ -83,7 +84,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 282,
     unitWeights: {
-      szt: 30,
+      łyżeczka: 2,
     },
   },
 
@@ -127,7 +128,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Gałka muszkatołowa",
     type: "spc",
     kcalPer100g: 525,
-    unitWeights: {},
   },
 
   allspice: {
@@ -156,6 +156,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 43,
     unitWeights: {
+      łyżeczka: 1,
       łyżka: 3,
     },
   },
@@ -166,6 +167,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 276,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -175,6 +177,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 271,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -184,6 +187,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 241,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -192,7 +196,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 42,
     unitWeights: {
-      łyżeczka: 2,
+      łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -211,7 +216,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 333,
     unitWeights: {
-      łyżeczka: 2,
+      łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -221,6 +227,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 287,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -230,6 +237,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 306,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -239,6 +247,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 233,
     unitWeights: {
       łyżeczka: 1,
+      łyżka: 3,
     },
   },
 
@@ -252,6 +261,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżka: 15,
     },
+    defaultUnit: "ml",
   },
 
   vegetable_seasoning: {
@@ -280,6 +290,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 10,
     },
+    defaultUnit: "szt",
   },
 
   knorr_goulash_fix: {
@@ -289,6 +300,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 40,
     },
+    defaultUnit: "opak",
   },
 
   knorr_chinese_fix: {
@@ -298,6 +310,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 40,
     },
+    defaultUnit: "opak",
   },
 
   knorr_bolognese_fix: {
@@ -307,5 +320,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 40,
     },
+    defaultUnit: "opak",
   },
 };

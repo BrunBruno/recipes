@@ -12,11 +12,16 @@ const kurczakSlodkoKwasny: Recipe = {
   time: 30,
   portions: 3,
   ingredients: [
-    { ingredient: iMET.chicken_breast, amount: 400 },
-    { ingredient: iGRN.rice, amount: 300 },
-    { ingredient: iSAU.winiary_sweet_sour_sauce, amount: 1, unit: "opak" },
-    { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.chicken_breast, amount: 400 },
+        { ingredient: iGRN.rice, amount: "3 × 100" },
+        { ingredient: iSAU.winiary_sweet_sour_sauce, amount: 1, unit: "opak" },
+        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

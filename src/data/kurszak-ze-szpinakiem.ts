@@ -12,15 +12,20 @@ const kurczakZeSzpinakiem: Recipe = {
   time: 40,
   portions: 6,
   ingredients: [
-    { ingredient: iMET.chicken_breast, amount: 400 },
-    { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
-    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
-    { ingredient: iDIR.cream_22, amount: 200, unit: "ml" },
-    { ingredient: iDIR.yellow_cheese, amount: 100 },
-    { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
-    { ingredient: iSPC.knorr_bouillon_cube, amount: 2, unit: "szt" },
-    { ingredient: iSPC.cayenne_pepper },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.chicken_breast, amount: 400 },
+        { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+        { ingredient: iDIR.cream_22, amount: 200, unit: "ml" },
+        { ingredient: iDIR.yellow_cheese, amount: 100 },
+        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
+        { ingredient: iSPC.knorr_bouillon_cube, amount: 2, unit: "szt" },
+        { ingredient: iSPC.cayenne_pepper },
+      ],
+    },
   ],
   steps: [
     {

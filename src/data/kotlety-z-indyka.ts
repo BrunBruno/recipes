@@ -11,14 +11,19 @@ const kotletyZIndyka: Recipe = {
   time: 40,
   portions: 4,
   ingredients: [
-    { ingredient: iMET.turkey_breast, amount: 600 },
-    { ingredient: iMET.egg, amount: 2, unit: "szt" },
-    { ingredient: iGRN.breadcrumbs, amount: 100 },
-    { ingredient: iGRN.flour, amount: 50 },
-    { ingredient: iFAT.oil, amount: 4, unit: "łyżka" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.turkey_breast, amount: 600 },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
+        { ingredient: iGRN.breadcrumbs, amount: 100 },
+        { ingredient: iGRN.flour, amount: 50 },
+        { ingredient: iFAT.oil, amount: 4, unit: "łyżka" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
+      ],
+    },
   ],
   steps: [
     {

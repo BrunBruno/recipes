@@ -25,6 +25,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       ml: 1,
       szklanka: 250,
     },
+    defaultUnit: "ml",
     nutrientsPer100g: [3.2, 4.7, 3.2],
   }, //
 
@@ -51,6 +52,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     kcalPer100g: 200,
     unitWeights: {
+      ml: 1,
       łyżka: 15,
     },
   },
@@ -61,6 +63,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 180,
     unitWeights: {
       ml: 1,
+      łyżka: 15,
     },
   },
 
@@ -70,6 +73,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 220,
     unitWeights: {
       ml: 1,
+      łyżka: 15,
     },
   },
 
@@ -79,6 +83,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 340,
     unitWeights: {
       ml: 1,
+      łyżka: 15,
     },
   },
 
@@ -88,6 +93,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 345,
     unitWeights: {
       ml: 1,
+      łyżka: 15,
     },
   },
 

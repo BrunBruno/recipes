@@ -10,14 +10,19 @@ const kurczakZRozna: Recipe = {
   time: 90,
   portions: 4,
   ingredients: [
-    { ingredient: iMET.chicken_whole, amount: 1, unit: "szt" },
-    { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
-    { ingredient: iSPC.salt, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSPC.sweet_paprika, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSPC.hot_paprika, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSPC.smoked_paprika, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iSPC.vegetable_seasoning, amount: 0.5, unit: "łyżeczka" },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.chicken_whole, amount: 1, unit: "szt" },
+        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iSPC.salt, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.sweet_paprika, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.hot_paprika, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.smoked_paprika, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.vegetable_seasoning, amount: 0.5, unit: "łyżeczka" },
+      ],
+    },
   ],
   steps: [
     {

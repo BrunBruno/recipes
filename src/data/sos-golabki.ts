@@ -12,13 +12,18 @@ const sosDoGolabkow: Recipe = {
   time: 10,
   portions: 2,
   ingredients: [
-    { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
-    { ingredient: iSAU.tomato_passata, amount: 250, unit: "ml" },
-    { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
-    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-    { ingredient: iSPC.maggi },
-    { ingredient: iSPC.vegetable_seasoning },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
+        { ingredient: iSAU.tomato_passata, amount: 250, unit: "ml" },
+        { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
+        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iSPC.maggi },
+        { ingredient: iSPC.vegetable_seasoning },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

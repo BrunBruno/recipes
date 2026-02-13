@@ -10,10 +10,15 @@ const kremMaslany: Recipe = {
   time: 30,
   portions: 1,
   ingredients: [
-    { ingredient: iFAT.butter, amount: 200, unit: "g" },
-    { ingredient: iDIR.condensed_milk, amount: 200, unit: "g" },
-    { ingredient: iOTH.vanilla_extract, amount: "1-2", unit: "łyżeczka" },
-    { ingredient: iOTH.food_coloring },
+    {
+      title: "",
+      items: [
+        { ingredient: iFAT.butter, amount: 200, unit: "g" },
+        { ingredient: iDIR.condensed_milk, amount: 200, unit: "g" },
+        { ingredient: iOTH.vanilla_extract, amount: "1-2", unit: "łyżeczka" },
+        { ingredient: iOTH.food_coloring },
+      ],
+    },
   ],
   steps: [
     {

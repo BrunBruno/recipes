@@ -13,13 +13,18 @@ const biszkopciki: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { ingredient: iMET.egg, amount: 2 },
-    { ingredient: iGRN.flour, amount: 60 },
-    { ingredient: iFAT.oil, amount: 10 },
-    { ingredient: iDIR.milk, amount: 20 },
-    { ingredient: iOTH.sugar, amount: 60 },
-    { ingredient: iOTH.cocoa, amount: 5 },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iGRN.flour, amount: 60 },
+        { ingredient: iFAT.oil, amount: 10 },
+        { ingredient: iDIR.milk, amount: 20 },
+        { ingredient: iOTH.sugar, amount: 60 },
+        { ingredient: iOTH.cocoa, amount: 5 },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

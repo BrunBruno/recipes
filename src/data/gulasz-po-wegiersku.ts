@@ -13,12 +13,23 @@ const gulaszPoWegiersku: Recipe = {
   time: 75,
   portions: 3,
   ingredients: [
-    { ingredient: iMET.stew_beef, amount: 500 },
-    { ingredient: iGRN.gnocchi, amount: 750, unit: "g" },
-    { ingredient: iVEG.fried_beets, amount: 1, unit: "opak" },
-    { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
-    { ingredient: iOTH.water, amount: 500 },
-    { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
+    {
+      title: "Gulasz",
+      items: [
+        { ingredient: iMET.stew_beef, amount: 500 },
+        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
+        { ingredient: iOTH.water, amount: 500 },
+        { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iGRN.gnocchi, amount: "3 × 250", unit: "g" },
+        { ingredient: iVEG.fried_beets, amount: "3 × 150", unit: "g" },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {
@@ -32,7 +43,7 @@ const gulaszPoWegiersku: Recipe = {
       ],
     },
     {
-      title: "Kopytka i Podanie",
+      title: "Przykładowe podanie",
       steps: [
         "Ugotuj gotowe kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
         "Podawaj gulasz z ugotowanymi kopytkami.",

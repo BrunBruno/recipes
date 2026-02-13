@@ -9,14 +9,19 @@ const spaghettiCarbonara: Recipe = {
   type: "dinner",
   images: [""],
   time: 30,
-  portions: 4,
+  portions: 5,
   ingredients: [
-    { ingredient: iGRN.spaghetti_pasta, amount: 500 },
-    { ingredient: iDIR.parmigiano_reggiano, amount: 100 },
-    { ingredient: iMET.bacon_block, amount: 300 },
-    { ingredient: iMET.egg, amount: 8 },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.spaghetti_pasta, amount: "5 × 100" },
+        { ingredient: iDIR.parmigiano_reggiano, amount: 100 },
+        { ingredient: iMET.bacon_block, amount: 300 },
+        { ingredient: iMET.egg, amount: 8 },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

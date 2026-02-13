@@ -5,23 +5,34 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const jajkoSadzone: Recipe = {
-  name: "Jajko Sadzone",
+  name: "Jajka Sadzone",
   type: "dinner",
   images: ["jajko-sadzone.jpg"],
   time: 10,
   portions: 1,
   ingredients: [
-    { ingredient: iMET.egg, amount: "2-3" },
-    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-    { ingredient: iVEG.potato, amount: 200, unit: "g" },
-    { ingredient: iVEG.canned_peas, amount: 100, unit: "g" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.dill },
+    {
+      title: "Jajka sadzone",
+      items: [
+        { ingredient: iMET.egg, amount: "2-3" },
+        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.dill },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.potato, amount: 200, unit: "g" },
+        { ingredient: iVEG.canned_peas, amount: 100, unit: "g" },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {
-      title: "Jajko sadzone",
+      title: "Jajka sadzone",
       steps: [
         "Rozgrzej patelnię na średnim ogniu i dodaj masło.",
         "Wbij jajka na patelnię, uważając, aby nie uszkodzić żółtka.",
@@ -30,7 +41,7 @@ const jajkoSadzone: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki, ugotuj w osolonej wodzie do miękkości i posyp świeżym koperkiem.",
         "Otwórz puszkę groszku, odcedź i podawaj jako dodatek do jajka i ziemniaków.",

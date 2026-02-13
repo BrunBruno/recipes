@@ -12,15 +12,20 @@ const spaghettiPomidorowe: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { ingredient: iGRN.spaghetti_pasta, amount: 200 },
-    { ingredient: iVEG.canned_tomatoes, amount: 250, unit: "ml" },
-    { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
-    { ingredient: iDIR.yellow_cheese, amount: 100 },
-    { ingredient: iFAT.butter },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.basil },
-    { ingredient: iSPC.oregano },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.spaghetti_pasta, amount: "2 × 100" },
+        { ingredient: iVEG.canned_tomatoes, amount: 250, unit: "ml" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+        { ingredient: iDIR.yellow_cheese, amount: "2 × 50" },
+        { ingredient: iFAT.butter },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.basil },
+        { ingredient: iSPC.oregano },
+      ],
+    },
   ],
   steps: [
     {

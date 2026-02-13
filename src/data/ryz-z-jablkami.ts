@@ -13,13 +13,18 @@ const ryzZJablkami: Recipe = {
   time: 25,
   portions: 1,
   ingredients: [
-    { ingredient: iGRN.rice, amount: 100 },
-    { ingredient: iFRT.apple, amount: 2, unit: "szt" },
-    { ingredient: iDIR.milk, amount: 250, unit: "ml" },
-    { ingredient: iOTH.sugar, amount: 2, unit: "łyżka" },
-    { ingredient: iFAT.butter },
-    { ingredient: iSPC.cinnamon },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.rice, amount: 100 },
+        { ingredient: iFRT.apple, amount: 2, unit: "szt" },
+        { ingredient: iDIR.milk, amount: 250, unit: "ml" },
+        { ingredient: iOTH.sugar, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.butter },
+        { ingredient: iSPC.cinnamon },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

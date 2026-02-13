@@ -11,14 +11,19 @@ const salatkaJarzynowa: Recipe = {
   time: 30,
   portions: 8,
   ingredients: [
-    { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
-    { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
-    { ingredient: iVEG.celery_root, amount: 1, unit: "szt" },
-    { ingredient: iVEG.canned_peas, amount: 1, unit: "opak" },
-    { ingredient: iMET.egg, amount: 3, unit: "szt" },
-    { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "",
+      items: [
+        { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
+        { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
+        { ingredient: iVEG.celery_root, amount: 1, unit: "szt" },
+        { ingredient: iVEG.canned_peas, amount: 1, unit: "opak" },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "opak" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+    },
   ],
   steps: [
     {

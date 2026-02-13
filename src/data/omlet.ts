@@ -11,11 +11,16 @@ const omlet: Recipe = {
   time: 15,
   portions: 1,
   ingredients: [
-    { ingredient: iMET.egg, amount: 3, unit: "szt" },
-    { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-    { ingredient: iFAT.butter },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
+        { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        { ingredient: iFAT.butter },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+    },
   ],
   steps: [
     {

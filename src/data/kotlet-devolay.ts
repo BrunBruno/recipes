@@ -12,17 +12,34 @@ const kotletDevolay: Recipe = {
   time: 60,
   portions: 4,
   ingredients: [
-    { ingredient: iMET.chicken_breast, amount: 900 },
-    { ingredient: iMET.egg, amount: 3, unit: "szt" },
-    { ingredient: iFAT.butter, amount: 100 },
-    { ingredient: iFAT.oil },
-    { ingredient: iGRN.flour },
-    { ingredient: iGRN.breadcrumbs },
-    { ingredient: iVEG.garlic, amount: 4, unit: "ząbek" },
-    { ingredient: iVEG.parsley },
-    { ingredient: iSPC.dill },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "Masło czosnkowo-ziołowe",
+      items: [
+        { ingredient: iFAT.butter, amount: 100 },
+        { ingredient: iVEG.garlic, amount: 4, unit: "ząbek" },
+        { ingredient: iVEG.parsley },
+        { ingredient: iSPC.dill },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+    },
+    {
+      title: "Kotlety devolay",
+      items: [
+        { ingredient: iMET.chicken_breast, amount: 900 },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
+        { ingredient: iGRN.flour },
+        { ingredient: iGRN.breadcrumbs },
+        { ingredient: iFAT.oil },
+      ],
+    },
+    {
+      title: "Składniki na przykładowe podanie",
+      items: [
+        { ingredient: iVEG.potato, amount: 4, unit: "szt" },
+        { ingredient: iVEG.frozen_vegetable_mix, amount: 300, unit: "g" },
+      ],
+    },
   ],
   steps: [
     {
@@ -46,6 +63,14 @@ const kotletDevolay: Recipe = {
         "Każdy kotlet obtocz w mące, jajku i bułce tartej, a następnie ponownie w jajku i bułce tartej.",
         "Rozgrzej olej na bardzo małym ogniu.",
         "Smaż kotlety powoli, aż będą złociste z każdej strony i dobrze wysmażone w środku.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Kotlet Devolay podawaj na talerzu z porcją puree ziemniaczanego.",
+        "Obok dodaj warzywa gotowane na parze jako zdrowy dodatek.",
+        "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },
   ],

@@ -11,14 +11,19 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
   time: 15,
   portions: 6,
   ingredients: [
-    { ingredient: iFAT.butter, amount: 90 },
-    { ingredient: iGRN.flour, amount: 150 },
-    { ingredient: iOTH.sugar, amount: 100 },
-    { ingredient: iOTH.cocoa, amount: 60 },
-    { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
-    { ingredient: iOTH.dark_chocolate, amount: 100 },
-    { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
-    { ingredient: iOTH.water, amount: 380 },
+    {
+      title: "",
+      items: [
+        { ingredient: iFAT.butter, amount: 90 },
+        { ingredient: iGRN.flour, amount: 150 },
+        { ingredient: iOTH.sugar, amount: 100 },
+        { ingredient: iOTH.cocoa, amount: 60 },
+        { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
+        { ingredient: iOTH.dark_chocolate, amount: 100 },
+        { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
+        { ingredient: iOTH.water, amount: 380 },
+      ],
+    },
   ],
   steps: [
     {

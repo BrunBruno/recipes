@@ -31,8 +31,11 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       ml: 1,
       szklanka: 250,
+      łyżka: 15,
+      łyżeczka: 5,
     },
     defaultUnit: "ml",
+    nutrientsPer100g: [0, 0, 0],
   },
 
   sugar: {
@@ -52,7 +55,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 400,
     unitWeights: {
-      łyżeczka: 5,
+      łyżeczka: 4,
+      łyżka: 12,
       szklanka: 160,
     },
   },
@@ -161,10 +165,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 350,
     unitWeights: {
-      g: 1,
       łyżeczka: 2,
     },
-    defaultUnit: "g",
   },
 
   food_coloring: {
@@ -203,10 +205,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 540,
     unitWeights: {
-      g: 1,
       opak: 100,
     },
-    defaultUnit: "g",
   },
 
   dark_chocolate: {
@@ -222,7 +222,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   cheese_snacks: {
     name: "Chrupki serowe",
-    type: "oth",
+    type: "grn",
     kcalPer100g: 513,
     unitWeights: {
       opak: 130,

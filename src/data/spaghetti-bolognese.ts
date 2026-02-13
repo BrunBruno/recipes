@@ -12,11 +12,16 @@ const spaghettiBolognese: Recipe = {
   time: 30,
   portions: 3,
   ingredients: [
-    { ingredient: iMET.ground_pork, amount: 400 },
-    { ingredient: iGRN.spaghetti_pasta, amount: 300 },
-    { ingredient: iDIR.yellow_cheese, amount: 150 },
-    { ingredient: iFAT.oil },
-    { ingredient: iSPC.knorr_bolognese_fix },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.ground_pork, amount: 400 },
+        { ingredient: iGRN.spaghetti_pasta, amount: "3 × 100" },
+        { ingredient: iDIR.yellow_cheese, amount: "3 × 50" },
+        { ingredient: iFAT.oil },
+        { ingredient: iSPC.knorr_bolognese_fix },
+      ],
+    },
   ],
   steps: [
     {

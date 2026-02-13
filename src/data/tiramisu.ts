@@ -10,12 +10,17 @@ const tiramisu: Recipe = {
   time: 30,
   portions: 8,
   ingredients: [
-    { ingredient: iMET.egg, amount: 3 },
-    { ingredient: iDIR.mascarpone, amount: 500 },
-    { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
-    { ingredient: iOTH.sugar, amount: 150 },
-    { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
-    { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.egg, amount: 3 },
+        { ingredient: iDIR.mascarpone, amount: 500 },
+        { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
+        { ingredient: iOTH.sugar, amount: 150 },
+        { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
+        { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
+      ],
+    },
   ],
   steps: [
     {

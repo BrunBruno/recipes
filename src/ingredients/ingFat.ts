@@ -6,6 +6,7 @@ type IngId =
   | "oil"
   | "olive"
   | "lard"
+  | "rendered_lard"
   | "margarine";
 
 export const iFAT: Record<IngId, IngredientItem> = {
@@ -58,15 +59,27 @@ export const iFAT: Record<IngId, IngredientItem> = {
     kcalPer100g: 717,
     unitWeights: {
       łyżka: 15,
+      kostka: 200,
     },
   },
 
   lard: {
+    name: "Słonina",
+    type: "fat",
+    kcalPer100g: 902,
+    unitWeights: {
+      plaster: 30,
+      opak: 250,
+    },
+  },
+
+  rendered_lard: {
     name: "Smalec",
     type: "fat",
     kcalPer100g: 717,
     unitWeights: {
       łyżka: 14,
+      kostka: 200,
     },
   },
 };

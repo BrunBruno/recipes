@@ -13,17 +13,22 @@ const roladaSzpinakowa: Recipe = {
   time: 60,
   portions: 6,
   ingredients: [
-    { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
-    { ingredient: iMET.egg, amount: 4 },
-    { ingredient: iMET.smoked_salmon, amount: 250, unit: "g" },
-    { ingredient: iDIR.cream_cheese_horseradish, amount: 200, unit: "g" },
-    { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
-    { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
-    { ingredient: iFAT.olive, amount: "2-3", unit: "łyżka" },
-    { ingredient: iSPC.nutmeg },
-    { ingredient: iSPC.black_sesame },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "",
+      items: [
+        { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
+        { ingredient: iMET.egg, amount: 4 },
+        { ingredient: iMET.smoked_salmon, amount: 250, unit: "g" },
+        { ingredient: iDIR.cream_cheese_horseradish, amount: 200, unit: "g" },
+        { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+        { ingredient: iFAT.olive, amount: "2-3", unit: "łyżka" },
+        { ingredient: iSPC.nutmeg },
+        { ingredient: iSPC.black_sesame },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+    },
   ],
   steps: [
     {

@@ -13,16 +13,21 @@ const skladaki: Recipe = {
   time: 15,
   portions: 2,
   ingredients: [
-    { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
-    { ingredient: iMET.salami, amount: 12, unit: "plaster" },
-    { ingredient: iDIR.yellow_cheese, amount: "0.5-1", unit: "kostka" },
-    { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-    { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-    { ingredient: iVEG.garlic, amount: "1-2", unit: "ząbek" },
-    { ingredient: iSAU.tomato_paste, amount: "3-4", unit: "łyżeczka" },
-    { ingredient: iSAU.ketchup, amount: "0-1", unit: "łyżeczka" },
-    { ingredient: iSPC.oregano },
-    { ingredient: iSPC.basil },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
+        { ingredient: iMET.salami, amount: 12, unit: "plaster" },
+        { ingredient: iDIR.yellow_cheese, amount: "0.5-1", unit: "kostka" },
+        { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
+        { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        { ingredient: iVEG.garlic, amount: "1-2", unit: "ząbek" },
+        { ingredient: iSAU.tomato_paste, amount: "3-4", unit: "łyżeczka" },
+        { ingredient: iSAU.ketchup, amount: "0-1", unit: "łyżeczka" },
+        { ingredient: iSPC.oregano },
+        { ingredient: iSPC.basil },
+      ],
+    },
   ],
   steps: [
     {

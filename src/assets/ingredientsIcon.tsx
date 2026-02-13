@@ -1,10 +1,10 @@
 import type { IngredientType } from "../types";
 
-type IngredientSvgProps = {
+type IngredientIconProps = {
   ingType: IngredientType;
 };
 
-const IngredientSvg = ({ ingType }: IngredientSvgProps) => {
+const IngredientIcon = ({ ingType }: IngredientIconProps) => {
   switch (ingType) {
     case "met":
       return (
@@ -371,4 +371,4 @@ const IngredientSvg = ({ ingType }: IngredientSvgProps) => {
   }
 };
 
-export default IngredientSvg;
+export default IngredientIcon;

@@ -11,12 +11,17 @@ const stek: Recipe = {
   time: 15,
   portions: 1,
   ingredients: [
-    { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
-    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
-    { ingredient: iFAT.oil, amount: 1, unit: "łyżeczka" },
-    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-    { ingredient: iSPC.thyme },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
+        { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+        { ingredient: iFAT.oil, amount: 1, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iSPC.thyme },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

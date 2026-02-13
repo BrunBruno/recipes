@@ -1,10 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
 import { type mealType, type Recipe } from "./types";
-import IngredientSvg from "./assets/ingredientsSvgs";
-import { calculateRecipeKcal, mealTypesData } from "./utils";
-import RecipeTypeIcons from "./assets/recipeTypeIcons";
-import UtilsIcons from "./assets/utilsIcon";
+import IngredientIcon from "./assets/ingredientsIcon";
+import {
+  calculateRecipeKcal,
+  ingredientTypeLabels,
+  mealTypesData,
+} from "./utils";
+import RecipeTypeIcon from "./assets/recipeTypeIcon";
+import UtilsIcon from "./assets/utilsIcon";
+import { iDIR } from "./ingredients/ingDairy";
+import { iFAT } from "./ingredients/ingFat";
+import { iFRT } from "./ingredients/ingFruit";
+import { iGRN } from "./ingredients/ingGrain";
+import { iMET } from "./ingredients/ingMeat";
+import { iOTH } from "./ingredients/ingOther";
+import { iSAU } from "./ingredients/ingSauce";
+import { iSPC } from "./ingredients/ingSpice";
+import { iVEG } from "./ingredients/ingVegetable";
 
 const SWIPE_THRESHOLD = 50;
 
@@ -21,6 +34,7 @@ function App() {
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+  const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
 
   const toggleType = (type: mealType) => {
     setActiveTypes((prev) =>
@@ -44,6 +58,10 @@ function App() {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
     setActiveImageIndex(0);
   }, [selectedRecipe]);
+
+  useEffect(() => {
+    document.body.style.overflow = showAllIngredients ? "hidden" : "auto";
+  }, [showAllIngredients]);
 
   useEffect(() => {
     if (!selectedRecipe) return;
@@ -150,7 +168,7 @@ function App() {
     <div className="recipes-page">
       <div className="page-title">
         <h1 onClick={() => location.reload()}>
-          <UtilsIcons name="logo" color="#099268" />
+          <UtilsIcon name="logo" color="#099268" />
           Przepisy {filteredRecipes.length}
         </h1>
 
@@ -162,7 +180,7 @@ function App() {
               setShowFilters(false);
             }}
           >
-            <UtilsIcons name="search" color="#999999" />
+            <UtilsIcon name="search" color="#999999" />
           </button>
           <button
             className="toggle-filters-btn"
@@ -171,7 +189,7 @@ function App() {
               setShowSearch(false);
             }}
           >
-            <UtilsIcons name="filter" color="#999999" />
+            <UtilsIcon name="filter" color="#999999" />
           </button>
 
           <div
@@ -181,7 +199,7 @@ function App() {
 
           <div className={`recipe-search ${showSearch ? "show" : ""}`}>
             <label className="recipe-search-label">
-              <UtilsIcons name="search" color="#999999" />
+              <UtilsIcon name="search" color="#999999" />
               <input
                 ref={searchInputRef}
                 type="text"
@@ -211,7 +229,7 @@ function App() {
                 onClick={() => toggleType(key as mealType)}
               >
                 <div className="filter-svg">
-                  <RecipeTypeIcons
+                  <RecipeTypeIcon
                     type={key as mealType}
                     color={activeTypes.includes(key as mealType) ? "" : "#666"}
                   />
@@ -234,7 +252,7 @@ function App() {
             onClick={() => setSelectedRecipe(null)}
             aria-label="Close recipe details"
           >
-            ×
+            <UtilsIcon name="close" color="#fff" />
           </button>
 
           <div className="recipe-details-params">
@@ -280,7 +298,7 @@ function App() {
                     });
                   }}
                 >
-                  <UtilsIcons name="arrow" color="#ffffff" />
+                  <UtilsIcon name="arrow" color="#ffffff" />
                 </div>
               )}
 
@@ -316,7 +334,7 @@ function App() {
                     });
                   }}
                 >
-                  <UtilsIcons name="arrow" color="#ffffff" />
+                  <UtilsIcon name="arrow" color="#ffffff" />
                 </div>
               )}
             </div>
@@ -334,18 +352,54 @@ function App() {
           {selectedRecipe.ingredients.length === 0 &&
           selectedRecipe.steps.length === 0 ? (
             <div style={{ margin: "auto" }}>
-              <UtilsIcons name="empty" color="#aaaaaa" />
+              <UtilsIcon name="empty" color="#aaaaaa" />
             </div>
           ) : (
             <div ref={contentRef} className="recipe-details-content">
               <section>
                 <h3>Składniki</h3>
-                <ul className="ingredients-list">
+                <div className="ingredients-container">
+                  {selectedRecipe.ingredients.map((group, groupIndex) => (
+                    <div key={groupIndex} className="recipe-ingredient-group">
+                      {group.title && (
+                        <h4 className="ingredient-group-title">
+                          {group.title}
+                        </h4>
+                      )}
+                      <ul className="ingredients-list">
+                        {group.items.map((ingredient, index) => (
+                          <li key={index} className="ingredient-item">
+                            <div className="ingredient-indicator">
+                              <IngredientIcon
+                                ingType={ingredient.ingredient.type}
+                              />
+                            </div>
+                            <span className="ingredient-name">
+                              {ingredient.ingredient.name}
+                            </span>
+                            <span className="ingredient-amount">
+                              {ingredient.amount}
+                              {ingredient.amount
+                                ? ingredient.unit
+                                  ? ` ${ingredient.unit}`
+                                  : ingredient.ingredient.defaultUnit
+                                    ? ` ${ingredient.ingredient.defaultUnit}`
+                                    : " g"
+                                : ""}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                {/* <ul className="ingredients-list">
                   {selectedRecipe.ingredients.map((ingredient, index) => {
                     return (
                       <li key={index}>
                         <div className="ingredient-indicator">
-                          <IngredientSvg ingType={ingredient.ingredient.type} />
+                          <IngredientIcon ingType={ingredient.ingredient.type} />
                         </div>
                         <span className="ingredient-name">
                           {ingredient.ingredient.name}
@@ -363,7 +417,7 @@ function App() {
                       </li>
                     );
                   })}
-                </ul>
+                </ul> */}
               </section>
 
               <section>
@@ -404,14 +458,14 @@ function App() {
               className="card-svg"
               style={{ borderColor: mealTypesData[recipe.type].color }}
             >
-              <RecipeTypeIcons type={recipe.type} />
+              <RecipeTypeIcon type={recipe.type} />
             </div>
             {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
               <div
                 className="card-warning"
                 style={{ borderColor: mealTypesData[recipe.type].color }}
               >
-                <UtilsIcons name="warning" color="#f03e3e" />
+                <UtilsIcon name="warning" color="#f03e3e" />
               </div>
             )}
 
@@ -421,6 +475,103 @@ function App() {
           </div>
         ))}
       </div>
+
+      {showAllIngredients && (
+        <div className="all-ingredients">
+          <div
+            className="close-ingredients"
+            onClick={() => {
+              setShowAllIngredients(false);
+            }}
+          >
+            <UtilsIcon name="close" color="#fff" />
+          </div>
+          {[
+            { label: "Mięso", data: iMET },
+            { label: "Zboża", data: iGRN },
+            { label: "Nabiał", data: iDIR },
+            { label: "Tłuszcze", data: iFAT },
+            { label: "Warzywa", data: iVEG },
+            { label: "Owoce", data: iFRT },
+            { label: "Inne", data: iOTH },
+            { label: "Sosy", data: iSAU },
+            { label: "Przyprawy", data: iSPC },
+          ].map((group) => (
+            <section key={group.label} className="ingredient-group">
+              <h2 className="ingredient-group-title">{group.label}</h2>
+
+              <ul className="ingredient-list">
+                {Object.entries(group.data).map(([id, item]) => (
+                  <li key={id} className="ingredient-card">
+                    <div className="ingredient-card-header">
+                      <span className="ingredient-name">{item.name}</span>
+                    </div>
+
+                    <div className="ingredient-card-content">
+                      <div className="ingredient-meta">
+                        <IngredientIcon ingType={item.type} />
+                        <span className="type">
+                          {ingredientTypeLabels[item.type]}
+                        </span>
+                      </div>
+
+                      <div className="kcal">
+                        <strong>{item.kcalPer100g} kcal / 100 g</strong>
+                      </div>
+
+                      {item.nutrientsPer100g && (
+                        <div className="macros">
+                          <span>
+                            T: <strong>{item.nutrientsPer100g[0]} g</strong>
+                          </span>
+                          <span>
+                            W: <strong>{item.nutrientsPer100g[1]} g</strong>
+                          </span>
+                          <span>
+                            B: <strong>{item.nutrientsPer100g[2]} g</strong>
+                          </span>
+                        </div>
+                      )}
+
+                      {item.unitWeights && (
+                        <div className="units">
+                          {Object.entries(item.unitWeights).map(
+                            ([unit, weight]) => (
+                              <span key={unit} className="unit">
+                                {unit}: <strong>{weight} g</strong>
+                              </span>
+                            ),
+                          )}
+                        </div>
+                      )}
+
+                      {item.defaultUnit && (
+                        <div className="default-unit">
+                          Domyślna jednostka:{" "}
+                          <strong>{item.defaultUnit}</strong>
+                        </div>
+                      )}
+                    </div>
+
+                    <span className="ingredient-id">{id}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      )}
+
+      <footer className="footer">
+        <button
+          className="show-ingredients"
+          onClick={() => {
+            setShowAllIngredients((prev) => !prev);
+          }}
+        >
+          Pokaż listę składników
+        </button>
+      </footer>
     </div>
   );
 }

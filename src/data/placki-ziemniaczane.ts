@@ -12,15 +12,20 @@ const plackiZiemniaczane: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { ingredient: iMET.egg, amount: 1, unit: "szt" },
-    { ingredient: iVEG.potato, amount: 4, unit: "szt" },
-    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-    { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
-    { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-    { ingredient: iFAT.oil },
-    { ingredient: iSPC.savory },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.egg, amount: 1, unit: "szt" },
+        { ingredient: iVEG.potato, amount: 4, unit: "szt" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+        { ingredient: iFAT.oil },
+        { ingredient: iSPC.savory },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

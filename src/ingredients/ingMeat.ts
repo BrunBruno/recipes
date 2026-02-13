@@ -13,6 +13,7 @@ type IngId =
   | "pork_ham"
   | "ground_pork"
   | "stew_pork"
+  | "pork_tenderloin"
   | "beef"
   | "stew_beef"
   | "ground_beef"
@@ -144,6 +145,16 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
   },
 
+  pork_tenderloin: {
+    name: "Polędwiczka wieprzowa",
+    type: "met",
+    kcalPer100g: 143,
+    unitWeights: {
+      plaster: 60,
+      opak: 400,
+    },
+  },
+
   //
 
   beef: {
@@ -271,7 +282,6 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 178,
     unitWeights: {
-      g: 1,
       opak: 400,
     },
   },

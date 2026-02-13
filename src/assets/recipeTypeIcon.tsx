@@ -1,11 +1,11 @@
 import type { mealType } from "../types";
 
-type RecipeTypeIconsProps = {
+type RecipeTypeIconProps = {
   type: mealType;
   color?: string;
 };
 
-const RecipeTypeIcons = ({ type, color }: RecipeTypeIconsProps) => {
+const RecipeTypeIcon = ({ type, color }: RecipeTypeIconProps) => {
   switch (type) {
     case "dessert":
       return (
@@ -251,4 +251,4 @@ const RecipeTypeIcons = ({ type, color }: RecipeTypeIconsProps) => {
   }
 };
 
-export default RecipeTypeIcons;
+export default RecipeTypeIcon;

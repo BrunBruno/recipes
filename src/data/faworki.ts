@@ -9,17 +9,30 @@ import type { Recipe } from "../types";
 const faworki: Recipe = {
   name: "Faworki",
   type: "dessert",
-  images: ["faworki.jpg"],
+  images: ["faworki.jpg", "faworki-2.jpg"],
   time: 90,
   portions: 4,
   ingredients: [
-    { ingredient: iGRN.flour, amount: 320, unit: "g" },
-    { ingredient: iMET.egg, amount: 4 },
-    { ingredient: iOTH.powdered_sugar, amount: 1, unit: "łyżka" },
-    { ingredient: iDIR.cream, amount: 5, unit: "łyżka" },
-    { ingredient: iOTH.spirit, amount: 2, unit: "łyżeczka" },
-    { ingredient: iFAT.lard, amount: 2, unit: "kostka" },
-    { ingredient: iSPC.salt },
+    {
+      title: "Faworki",
+      items: [
+        { ingredient: iGRN.flour, amount: 320, unit: "g" },
+        { ingredient: iMET.egg, amount: 4 },
+        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "łyżka" },
+        { ingredient: iDIR.cream, amount: 5, unit: "łyżka" },
+        { ingredient: iOTH.spirit, amount: 2, unit: "łyżeczka" },
+
+        { ingredient: iSPC.salt },
+      ],
+    },
+    {
+      title: "Do smażenia",
+      items: [
+        { ingredient: iFAT.rendered_lard, amount: 2, unit: "kostka" },
+        { ingredient: iFAT.oil, amount: 400, unit: "ml" },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {

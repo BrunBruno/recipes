@@ -12,12 +12,17 @@ const watrobkaZKurczaka: Recipe = {
   time: 20,
   portions: 2,
   ingredients: [
-    { ingredient: iMET.poultry_liver, amount: 400 },
-    { ingredient: iVEG.onion, amount: "2-3", unit: "szt" },
-    { ingredient: iGRN.flour },
-    { ingredient: iFAT.oil },
-    { ingredient: iFAT.butter },
-    { ingredient: iSPC.salt },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.poultry_liver, amount: 400 },
+        { ingredient: iVEG.onion, amount: "2-3", unit: "szt" },
+        { ingredient: iGRN.flour },
+        { ingredient: iFAT.oil },
+        { ingredient: iFAT.butter },
+        { ingredient: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {

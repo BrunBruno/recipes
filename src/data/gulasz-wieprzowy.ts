@@ -13,20 +13,31 @@ const gulaszWieprzowy: Recipe = {
   time: 80,
   portions: 3,
   ingredients: [
-    { ingredient: iMET.stew_pork, amount: 500 },
-    { ingredient: iGRN.gnocchi, amount: 750, unit: "g" },
-    { ingredient: iVEG.fried_beets, amount: 1, unit: "opak" },
-    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-    { ingredient: iVEG.chives },
-    { ingredient: iFAT.oil },
-    { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-    { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-    { ingredient: iDIR.cream, amount: 2, unit: "łyżka" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
-    { ingredient: iSPC.sweet_paprika },
-    { ingredient: iSPC.granulated_garlic },
-    { ingredient: iSPC.chilli },
+    {
+      title: "Gulasz",
+      items: [
+        { ingredient: iMET.stew_pork, amount: 500 },
+        { ingredient: iFAT.oil },
+        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+        { ingredient: iDIR.cream, amount: 2, unit: "łyżka" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.sweet_paprika },
+        { ingredient: iSPC.granulated_garlic },
+        { ingredient: iSPC.chilli },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iGRN.gnocchi, amount: '3 × 250', unit: "g" },
+        { ingredient: iVEG.fried_beets, amount: "3 × 150", unit: "g" },
+        { ingredient: iVEG.chives },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {
@@ -41,7 +52,7 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
     {
-      title: "Kopytka i Podanie",
+      title: "Przykładowe podanie",
       steps: [
         "Ugotuj gotowe kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
         "Podawaj gulasz z ugotowanymi kopytkami.",

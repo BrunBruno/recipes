@@ -12,25 +12,35 @@ const chicker: Recipe = {
   time: 25,
   portions: 2,
   ingredients: [
-    { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
-    { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
-    { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
-    { ingredient: iSAU.ketchup, amount: 1.5, unit: "łyżeczka" },
-    { ingredient: iSAU.mustard, amount: 2, unit: "łyżeczka" },
-    { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSAU.sriracha, amount: 2, unit: "łyżeczka" },
-    { ingredient: iOTH.honey, amount: 0.5, unit: "łyżeczka" },
+    {
+      title: "Sosy",
+      items: [
+        { ingredient: iSAU.ketchup, amount: 1.5, unit: "łyżeczka" },
+        { ingredient: iSAU.mustard, amount: 2, unit: "łyżeczka" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSAU.sriracha, amount: 2, unit: "łyżeczka" },
+        { ingredient: iOTH.honey, amount: 0.5, unit: "łyżeczka" },
+      ],
+    },
+    {
+      title: "Chickery",
+      items: [
+        { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
+        { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
+        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
+      ],
+    },
   ],
   steps: [
     {
-      title: "Sosy",
+      title: "Przygotowanie sosów",
       steps: [
         "Wymieszaj ketchup z sosem sriracha, aby uzyskać ostry sos.",
         "Wymieszaj musztardę, majonez i miód, aby uzyskać sos miodowo-musztardowy.",
       ],
     },
     {
-      title: "Chickery",
+      title: "Przygotowanie chickerów",
       steps: [
         "Podsmaż gotowe polędwiczki.",
         "Bułki przekrój i podpiecz w tosterze.",

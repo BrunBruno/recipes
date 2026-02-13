@@ -12,13 +12,18 @@ const kurczakPoChinsku: Recipe = {
   time: 30,
   portions: 3,
   ingredients: [
-    { ingredient: iMET.chicken_breast, amount: 400 },
-    { ingredient: iVEG.carrot, amount: 120 },
-    { ingredient: iVEG.bell_pepper, amount: 100 },
-    { ingredient: iVEG.leek, amount: 120 },
-    { ingredient: iGRN.rice, amount: 300 },
-    { ingredient: iFAT.oil },
-    { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "szt" },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.chicken_breast, amount: 400 },
+        { ingredient: iVEG.carrot, amount: 120 },
+        { ingredient: iVEG.bell_pepper, amount: 100 },
+        { ingredient: iVEG.leek, amount: 120 },
+        { ingredient: iGRN.rice, amount: "3 × 100" },
+        { ingredient: iFAT.oil },
+        { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "szt" },
+      ],
+    },
   ],
   steps: [
     {

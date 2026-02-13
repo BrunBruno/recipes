@@ -10,16 +10,21 @@ const ziemniakiZPiekarnika: Recipe = {
   time: 40,
   portions: 4,
   ingredients: [
-    { ingredient: iVEG.potato, amount: 1000 },
-    { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
-    { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
-    { ingredient: iSPC.caraway, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iSPC.thyme },
-    { ingredient: iSPC.sweet_paprika, amount: 2, unit: "łyżeczka" },
-    { ingredient: iSPC.hot_paprika, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iSPC.salt, amount: 1, unit: "łyżeczka" },
-    { ingredient: iSPC.black_pepper, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iSPC.potato_seasoning, amount: 1, unit: "łyżka" },
+    {
+      title: "",
+      items: [
+        { ingredient: iVEG.potato, amount: 1000 },
+        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+        { ingredient: iSPC.caraway, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.thyme },
+        { ingredient: iSPC.sweet_paprika, amount: 2, unit: "łyżeczka" },
+        { ingredient: iSPC.hot_paprika, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.salt, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.black_pepper, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.potato_seasoning, amount: 1, unit: "łyżka" },
+      ],
+    },
   ],
   steps: [
     {

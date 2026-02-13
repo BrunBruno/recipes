@@ -12,16 +12,26 @@ const karkowkaDuszona: Recipe = {
   time: 50,
   portions: 5,
   ingredients: [
-    { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
-    { ingredient: iVEG.potato, amount: 750 },
-    { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-    { ingredient: iVEG.coleslaw, amount: 2.5, unit: "opak" },
-    { ingredient: iSAU.sarepska_mustard, amount: 10, unit: "łyżeczka" },
-    { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
-    { ingredient: iSPC.salt },
-    { ingredient: iSPC.black_pepper },
+    {
+      title: "Karkówka",
+      items: [
+        { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
+        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
+        { ingredient: iSAU.sarepska_mustard, amount: 10, unit: "łyżeczka" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.potato, amount: "5 × 150", unit: "g" },
+        { ingredient: iVEG.coleslaw, amount: "5 × 200", unit: "g" },
+      ],
+      excludeFromCalc: true,
+    },
   ],
-
   steps: [
     {
       title: "Karkówka",
@@ -35,7 +45,7 @@ const karkowkaDuszona: Recipe = {
       ],
     },
     {
-      title: "Ziemniaki Gotowane i Podanie",
+      title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki i ugotuj w osolonej wodzie do miękkości.",
         "Po ugotowaniu odcedź ziemniaki, a następnie polej je sosem, w którym duszona była karkówka.",

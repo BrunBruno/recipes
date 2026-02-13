@@ -12,12 +12,17 @@ const sandwichRecipe: Recipe = {
   time: 10,
   portions: 2,
   ingredients: [
-    { ingredient: iGRN.toast_bread, amount: 4, unit: "szt" },
-    { ingredient: iMET.ham_slices, amount: 2, unit: "plaster" },
-    { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plaster" },
-    { ingredient: iVEG.pickled_cucumber },
-    { ingredient: iSAU.ketchup },
-    { ingredient: iSAU.garlic_sauce },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.toast_bread, amount: 4, unit: "szt" },
+        { ingredient: iMET.ham_slices, amount: 2, unit: "plaster" },
+        { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plaster" },
+        { ingredient: iVEG.pickled_cucumber },
+        { ingredient: iSAU.ketchup },
+        { ingredient: iSAU.garlic_sauce },
+      ],
+    },
   ],
   steps: [
     {

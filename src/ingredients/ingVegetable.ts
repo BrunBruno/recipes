@@ -26,6 +26,9 @@ type IngId =
   | "oven_fries"
   | "coleslaw"
   | "fried_beets"
+  | "beets_shredded"
+  | "beets_whole_vinegar"
+  | "frozen_vegetable_mix"
   | "mushrooms";
 
 export const iVEG: Record<IngId, IngredientItem> = {
@@ -36,6 +39,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    defaultUnit: "szt",
   },
 
   onion: {
@@ -45,6 +49,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
+    defaultUnit: "szt",
   },
 
   tomato: {
@@ -54,6 +59,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 170,
     },
+    defaultUnit: "szt",
   },
 
   cucumber: {
@@ -74,6 +80,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    defaultUnit: "szt",
   },
 
   carrot: {
@@ -83,6 +90,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    defaultUnit: "szt",
   },
 
   parsley_root: {
@@ -92,6 +100,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 100,
     },
+    defaultUnit: "szt",
   },
 
   leek: {
@@ -101,6 +110,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
+    defaultUnit: "szt",
   },
 
   garlic: {
@@ -120,6 +130,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
+    defaultUnit: "szt",
   },
 
   red_onion: {
@@ -129,6 +140,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
+    defaultUnit: "szt",
   },
 
   //
@@ -262,10 +274,35 @@ export const iVEG: Record<IngId, IngredientItem> = {
   fried_beets: {
     name: "Buraczki zasmażane",
     type: "veg",
-    kcalPer100g: 80, // przykładowa wartość kaloryczna
+    kcalPer100g: 80,
     unitWeights: {
       opak: 500,
     },
+  },
+
+  beets_shredded: {
+    name: "Buraczki wiórki",
+    type: "veg",
+    kcalPer100g: 43,
+    unitWeights: {
+      opak: 500,
+    },
+  },
+
+  beets_whole_vinegar: {
+    name: "Buraczki całe z octu",
+    type: "veg",
+    kcalPer100g: 25,
+    unitWeights: {
+      szt: 15,
+      opak: 500,
+    },
+  },
+
+  frozen_vegetable_mix: {
+    name: "Mrożona mieszanka warzyw",
+    type: "veg",
+    kcalPer100g: 40,
   },
 
   //

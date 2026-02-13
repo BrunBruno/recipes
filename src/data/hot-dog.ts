@@ -11,14 +11,19 @@ const hotHog: Recipe = {
   time: 10,
   portions: 2,
   ingredients: [
-    { ingredient: iMET.sausages, amount: 4, unit: "szt" },
-    { ingredient: iGRN.hotdog_buns, amount: 4, unit: "szt" },
-    { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-    { ingredient: iVEG.sauerkraut, amount: 160 },
-    { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },
-    { ingredient: iSAU.ketchup },
-    { ingredient: iSAU.mustard },
-    { ingredient: iSAU.garlic_sauce },
+    {
+      title: "",
+      items: [
+        { ingredient: iMET.sausages, amount: 4, unit: "szt" },
+        { ingredient: iGRN.hotdog_buns, amount: 4, unit: "szt" },
+        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iVEG.sauerkraut, amount: 160 },
+        { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },
+        { ingredient: iSAU.ketchup },
+        { ingredient: iSAU.mustard },
+        { ingredient: iSAU.garlic_sauce },
+      ],
+    },
   ],
   steps: [
     {

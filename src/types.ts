@@ -101,6 +101,12 @@ export type Ingredient = {
   unit?: UnitType;
 };
 
+export type RecipeIngredientGroup = {
+  title: string;
+  items: Ingredient[];
+  excludeFromCalc?: boolean;
+};
+
 export type RecipeStepGroup = {
   title: string;
   steps: string[];
@@ -112,7 +118,7 @@ export type Recipe = {
   images: string[];
   portions: number;
   time: number;
-  ingredients: Ingredient[];
+  ingredients: RecipeIngredientGroup[];
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
 };

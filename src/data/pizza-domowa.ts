@@ -14,17 +14,22 @@ const pizzaDomowa: Recipe = {
   time: 60,
   portions: 2,
   ingredients: [
-    { ingredient: iGRN.flour, amount: 250, unit: "g" },
-    { ingredient: iOTH.water, amount: 150, unit: "ml" },
-    { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
-    { ingredient: iOTH.instant_yeast, amount: 3.5, unit: "g" },
-    { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iOTH.sugar, amount: 0.5, unit: "łyżeczka" },
-    { ingredient: iSPC.herbes_de_provence, amount: 2, unit: "łyżka" },
-    { ingredient: iSAU.tomato_passata, amount: 100, unit: "g" },
-    { ingredient: iMET.salami, amount: 50, unit: "g" },
-    { ingredient: iVEG.olives, amount: 20, unit: "g" },
-    { ingredient: iVEG.onion, amount: 30, unit: "g" },
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.flour, amount: 250, unit: "g" },
+        { ingredient: iOTH.water, amount: 150, unit: "ml" },
+        { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
+        { ingredient: iOTH.instant_yeast, amount: 3.5, unit: "g" },
+        { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iOTH.sugar, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.herbes_de_provence, amount: 2, unit: "łyżka" },
+        { ingredient: iSAU.tomato_passata, amount: 100, unit: "g" },
+        { ingredient: iMET.salami, amount: 50, unit: "g" },
+        { ingredient: iVEG.olives, amount: 20, unit: "g" },
+        { ingredient: iVEG.onion, amount: 30, unit: "g" },
+      ],
+    },
   ],
   steps: [
     {
