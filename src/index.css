@@ -137,6 +137,7 @@ body::-webkit-scrollbar {
 }
 
 .filter-btn {
+  position: relative;
   padding: 0.5rem;
   border: 2px solid #666;
   border-radius: 8px;
@@ -156,11 +157,19 @@ body::-webkit-scrollbar {
 }
 
 .filter-text {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  padding: 0.3rem 0.6rem;
   display: none;
 }
 
-.filter-btn:hover {
-  opacity: 0.8;
+.filter-btn:hover > span {
+  display: inline;
 }
 
 .recipes-grid {
@@ -878,7 +887,7 @@ body::-webkit-scrollbar {
   }
 
   .filter-text {
-    display: inline;
+    display: block;
   }
 
   .recipe-card:hover {

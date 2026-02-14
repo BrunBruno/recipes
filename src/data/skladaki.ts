@@ -44,7 +44,7 @@ const skladaki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "fast food", "warzywa", "tortilla"],
+  keyWords: ["mięso", "fast food", "warzywa", "tortilla", "xxx"],
 };
 
 export default skladaki;

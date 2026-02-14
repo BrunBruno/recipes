@@ -44,6 +44,7 @@ export type UnitType =
   | "pęto";
 
 type KeyWord =
+  | "xxx"
   | "ciasto"
   | "deser"
   | "biszkopt"

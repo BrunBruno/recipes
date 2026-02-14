@@ -18,7 +18,7 @@ const lazanki: Recipe = {
         { ingredient: iMET.sausage, amount: 200 },
         { ingredient: iMET.bacon_block, amount: 100 },
         { ingredient: iVEG.sauerkraut, amount: 400 },
-        { ingredient: iVEG.onion, amount: 280 },
+        { ingredient: iVEG.onion, amount: 280, unit: "g" },
         { ingredient: iVEG.mushrooms, amount: 150 },
         { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
@@ -46,7 +46,7 @@ const lazanki: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "mięso"],
+  keyWords: ["makaron", "mięso", "xxx"],
 };
 
 export default lazanki;

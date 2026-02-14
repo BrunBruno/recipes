@@ -7,12 +7,12 @@ import type { Recipe } from "../types";
 const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
-  images: ["pieczony-kurczak.jpg"],
+  images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
   time: 55,
   portions: 4,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_quarters, amount: 4, unit: "szt" },
         { ingredient: iFAT.butter },
@@ -24,7 +24,7 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
     {
-      title: "Składniki na przykładowe podanie",
+      title: "Dodatki",
       items: [
         { ingredient: iVEG.potato, amount: 4, unit: "szt" },
         { ingredient: iVEG.beets_whole_vinegar },
@@ -53,7 +53,7 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "pieczone", "mięso"],
+  keyWords: ["kurczak", "pieczone", "mięso", "xxx"],
 };
 
 export default kurczakZPiekarnika;
