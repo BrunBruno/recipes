@@ -10,8 +10,8 @@ import type { Recipe } from "../types";
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
-  images: ["zapiekanka-bolognese.jpg"],
-  time: 50,
+  images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
+  time: 70,
   portions: 4,
   ingredients: [
     {
@@ -39,10 +39,10 @@ const zapiekankaBolognese: Recipe = {
         "Podsmaż mięso mielone na oleju.",
         "Dodaj pokrojoną cebulę i smaż razem z mięsem.",
         "Dodaj pokrojone pieczarki i smaż, aż będą miękkie.",
-        "Dodaj pokrojonego pomidora i smaż kilka minut.",
+        "Dodaj pokrojonego pomidora i paprykę oraz smaż jeszcze kilka minut.",
         "Dodaj koncentrat pomidorowy i dokładnie wymieszaj.",
         "Rozmieszaj przyprawę bolognese z wodą i dodaj do patelni wraz z zielem angielskim i liściem laurowym.",
-        "Gotuj całość przez około 15 minut.",
+        "Gotuj całość przez około 15 minut pod przykryciem.",
       ],
     },
     {
@@ -56,7 +56,7 @@ const zapiekankaBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "mięso", "sos", "pieczone"],
+  keyWords: ["makaron", "mięso", "sos", "pieczone", "xxx"],
 };
 
 export default zapiekankaBolognese;

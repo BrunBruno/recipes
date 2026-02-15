@@ -15,7 +15,7 @@ const spaghettiBolognese: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.ground_pork, amount: 400 },
+        { ingredient: iMET.ground_beef, amount: 400 },
         { ingredient: iGRN.spaghetti_pasta, amount: "3 × 100" },
         { ingredient: iDIR.yellow_cheese, amount: "3 × 50" },
         { ingredient: iFAT.oil },

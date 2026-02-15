@@ -1,4 +1,3 @@
-import { iDIR } from "../ingredients/ingDairy";
 import { iFAT } from "../ingredients/ingFat";
 import { iFRT } from "../ingredients/ingFruit";
 import { iGRN } from "../ingredients/ingGrain";
@@ -10,7 +9,7 @@ const ryzZJablkami: Recipe = {
   name: "Ryż z Jabłkami",
   type: "dessert",
   images: ["ryz-z-jablkami.jpg"],
-  time: 25,
+  time: 30,
   portions: 1,
   ingredients: [
     {
@@ -18,9 +17,8 @@ const ryzZJablkami: Recipe = {
       items: [
         { ingredient: iGRN.rice, amount: 100 },
         { ingredient: iFRT.apple, amount: 2, unit: "szt" },
-        { ingredient: iDIR.milk, amount: 250, unit: "ml" },
-        { ingredient: iOTH.sugar, amount: 2, unit: "łyżka" },
-        { ingredient: iFAT.butter },
+        { ingredient: iOTH.sugar, amount: 2, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 3, unit: "g" },
         { ingredient: iSPC.cinnamon },
         { ingredient: iSPC.salt },
       ],
@@ -30,17 +28,16 @@ const ryzZJablkami: Recipe = {
     {
       title: "",
       steps: [
-        "Ryż przepłucz pod bieżącą wodą, aż woda stanie się przezroczysta.",
-        "W garnku zagotuj mleko z odrobiną soli i cukrem.",
-        "Dodaj ryż do gotującego się mleka, zmniejsz ogień i gotuj pod przykryciem około 15 minut, aż ryż wchłonie większość mleka.",
+        "Ryż przepłucz pod bieżącą wodą, a następnie ugotuj go.",
         "W międzyczasie obierz jabłka, usuń gniazda nasienne i pokrój w kostkę.",
-        "Na patelni rozpuść masło, dodaj jabłka i cynamon, smaż kilka minut, aż lekko zmiękną.",
-        "Połącz ugotowany ryż z jabłkami i delikatnie wymieszaj.",
-        "Podawaj na ciepło, opcjonalnie posypane dodatkowym cynamonem lub odrobiną cukru.",
+        "Na patelni rozpuść odrobinę masło, dodaj jabłka, smaż po przykryciem kilka minut, aż staną się w miarę jednolitą papą.",
+        "Podczas, należy wlewać co jakiś czas niewielką ilość wody na patelnie, aby jabłka się nie przypaliły.",
+        "Można również usmażyć jabłka bez dodatku tłuszczu.",
+        "Podawaj na ciepło, opcjonalnie posypane cynamonem lub odrobiną cukru.",
       ],
     },
   ],
-  keyWords: ["ryż", "słodkie", "owoce"],
+  keyWords: ["ryż", "słodkie", "owoce", "xxx"],
 };
 
 export default ryzZJablkami;

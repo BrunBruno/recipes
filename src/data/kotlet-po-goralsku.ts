@@ -7,7 +7,7 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kotletPoGoralsku: Recipe = {
-  name: "Kotlet po Góralsku",
+  name: "Kotlety po Góralsku",
   type: "dinner",
   images: ["kotlet-po-goralsku.jpg"],
   time: 70,

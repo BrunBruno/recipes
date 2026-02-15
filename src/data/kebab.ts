@@ -1,8 +1,8 @@
 import type { Recipe } from "../types";
 
-const gotowanyKurczak: Recipe = {
-  name: "Gotowany Kurczak",
-  type: "dinner",
+const kebab: Recipe = {
+  name: "Kebab",
+  type: "snack",
   images: [""],
   time: 0,
   portions: 0,
@@ -10,4 +10,4 @@ const gotowanyKurczak: Recipe = {
   steps: [],
 };
 
-export default gotowanyKurczak;
+export default kebab;

@@ -4,7 +4,7 @@ type IngId = "apple" | "pineapple" | "raspberries" | "raisins" | "lemon_juice";
 
 export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
-    name: "Jabłka",
+    name: "Jabłko",
     type: "frt",
     kcalPer100g: 52,
     unitWeights: {

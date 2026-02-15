@@ -14,7 +14,8 @@ type IngId =
   | "toast_bread"
   | "hamburger_buns"
   | "chicken_buns"
-  | "hotdog_buns";
+  | "hotdog_buns"
+  | "cornflakes";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   flour: {
@@ -156,6 +157,15 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 270,
     unitWeights: {
       szt: 70,
+    },
+  },
+
+  cornflakes: {
+    name: "Płatki kukurydziane",
+    type: "grn",
+    kcalPer100g: 357,
+    unitWeights: {
+      opak: 500,
     },
   },
 };

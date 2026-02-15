@@ -20,7 +20,7 @@ const jajecznica: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "Dodatki",
       items: [
         { ingredient: iMET.sausage, amount: 0.5, unit: "pęto" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
@@ -34,9 +34,9 @@ const jajecznica: Recipe = {
     {
       title: "",
       steps: [
-        "Pokrój wybrane składniki: kiełbasę, cebulę i pomidora.",
-        "Podsmaż składniki na maśle.",
-        "Wbij jajka na patelnię i dokładnie wymieszaj.",
+        "Pokrój wybrane składniki na przykład: kiełbasę, cebulę i pomidora.",
+        "Podsmaż składniki po kolei na maśle.",
+        "Wbij jajka na patelnię i dokładnie wymieszaj, aż powstanie jajecznica.",
         "Dopraw solą i posyp szczypiorkiem przed podaniem.",
       ],
     },

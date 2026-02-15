@@ -36,9 +36,10 @@ const kotletDevolay: Recipe = {
     {
       title: "Składniki na przykładowe podanie",
       items: [
-        { ingredient: iVEG.potato, amount: 4, unit: "szt" },
+        { ingredient: iVEG.potato, amount: "4 × 200", unit: "g" },
         { ingredient: iVEG.frozen_vegetable_mix, amount: 300, unit: "g" },
       ],
+      excludeFromCalc: true,
     },
   ],
   steps: [
