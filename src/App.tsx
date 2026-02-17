@@ -71,7 +71,6 @@ function App() {
 
     const handleScroll = () => {
       setHeaderCollapsed(true);
-      // contentEl.removeEventListener("scroll", handleScroll);
     };
 
     contentEl.addEventListener("scroll", handleScroll);
@@ -393,31 +392,6 @@ function App() {
                     </div>
                   ))}
                 </div>
-
-                {/* <ul className="ingredients-list">
-                  {selectedRecipe.ingredients.map((ingredient, index) => {
-                    return (
-                      <li key={index}>
-                        <div className="ingredient-indicator">
-                          <IngredientIcon ingType={ingredient.ingredient.type} />
-                        </div>
-                        <span className="ingredient-name">
-                          {ingredient.ingredient.name}
-                        </span>
-                        <span className="ingredient-amount">
-                          {ingredient.amount}
-                          {ingredient.amount
-                            ? ingredient.unit
-                              ? ` ${ingredient.unit}`
-                              : ingredient.ingredient.defaultUnit
-                                ? ` ${ingredient.ingredient.defaultUnit}`
-                                : " g"
-                            : ""}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul> */}
               </section>
 
               <section>

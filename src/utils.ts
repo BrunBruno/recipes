@@ -36,7 +36,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
   let totalKcal = 0;
 
   for (const group of recipe.ingredients) {
-    if (group.excludeFromCalc) continue; // omit additional
+    if (group.excludeFromCalc) continue;
 
     for (const item of group.items) {
       const { ingredient, amount, unit } = item;
