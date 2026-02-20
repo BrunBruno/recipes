@@ -46,7 +46,7 @@ const palkiBarbecue: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Pałki barbecue podawaj na talerzu.",
-        "Obok ułóż porcję frytek z piekarnika.",
+        "Obok ułóż posoloną porcję frytek z piekarnika.",
         "Dodaj ogórka kiszonego jako dodatek.",
         "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],

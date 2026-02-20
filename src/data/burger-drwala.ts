@@ -16,14 +16,6 @@ const burgerDrwala: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Sos",
-      items: [
-        { ingredient: iSAU.ketchup, amount: 1, unit: "łyżka" },
-        { ingredient: iSAU.mustard, amount: 3, unit: "łyżka" },
-        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
-      ],
-    },
-    {
       title: "Burgery",
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
@@ -41,6 +33,14 @@ const burgerDrwala: Recipe = {
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
+      ],
+    },
+    {
+      title: "Sos",
+      items: [
+        { ingredient: iSAU.ketchup, amount: 1, unit: "łyżka" },
+        { ingredient: iSAU.mustard, amount: 3, unit: "łyżka" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
       ],
     },
   ],

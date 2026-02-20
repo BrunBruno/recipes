@@ -7,7 +7,7 @@ import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
 const biszkopciki: Recipe = {
-  name: "Biszkopciki",
+  name: "Biszkopty",
   type: "dessert",
   images: [""],
   time: 25,
@@ -27,21 +27,21 @@ const biszkopciki: Recipe = {
     },
   ],
   steps: [
-    {
-      title: "",
-      steps: [
-        "Oddziel białka od żółtek.",
-        "Białka ubij ze szczyptą soli na sztywną pianę.",
-        "Stopniowo dodawaj cukier, cały czas ubijając, aż piana będzie gęsta i lśniąca.",
-        "Dodaj żółtka i krótko zmiksuj na niskich obrotach.",
-        "Dodaj olej oraz mleko i delikatnie wymieszaj.",
-        "Wsyp przesianą mąkę i ostrożnie wymieszaj szpatułką.",
-        "Jeśli robisz wersję kakaową oddziel część ciasta i dodaj do niej kakao.",
-        "Przełóż masę do rękawa cukierniczego lub nakładaj łyżką na blachę wyłożoną papierem do pieczenia.",
-        "Piecz w piekarniku nagrzanym do 170°C przez około 10 - 12 minut, aż biszkopciki lekko się zarumienią.",
-        "Po upieczeniu ostudź na kratce.",
-      ],
-    },
+    // {
+    //   title: "",
+    //   steps: [
+    //     "Oddziel białka od żółtek.",
+    //     "Białka ubij ze szczyptą soli na sztywną pianę.",
+    //     "Stopniowo dodawaj cukier, cały czas ubijając, aż piana będzie gęsta i lśniąca.",
+    //     "Dodaj żółtka i krótko zmiksuj na niskich obrotach.",
+    //     "Dodaj olej oraz mleko i delikatnie wymieszaj.",
+    //     "Wsyp przesianą mąkę i ostrożnie wymieszaj szpatułką.",
+    //     "Jeśli robisz wersję kakaową oddziel część ciasta i dodaj do niej kakao.",
+    //     "Przełóż masę do rękawa cukierniczego lub nakładaj łyżką na blachę wyłożoną papierem do pieczenia.",
+    //     "Piecz w piekarniku nagrzanym do 170°C przez około 10 - 12 minut, aż biszkopciki lekko się zarumienią.",
+    //     "Po upieczeniu ostudź na kratce.",
+    //   ],
+    // },
   ],
   keyWords: ["ciasto", "słodkie", "biszkopt"],
 };

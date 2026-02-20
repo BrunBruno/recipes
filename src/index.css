@@ -887,6 +887,12 @@ body::-webkit-scrollbar {
   }
 
   .filter-text {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: translateX(0);
+    border: none;
+    padding: 0;
     display: block;
   }
 

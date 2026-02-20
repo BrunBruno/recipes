@@ -14,12 +14,11 @@ const kurczakZPomidorem: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "",
+      title: "Kurczak z pomidorami",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.garlic },
         { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kostka" },
         { ingredient: iDIR.cream, amount: 1, unit: "łyżka" },
         { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
@@ -31,10 +30,20 @@ const kurczakZPomidorem: Recipe = {
         { ingredient: iSPC.salt },
       ],
     },
+    {
+      title: "Dodatki",
+      excludeFromCalc: true,
+      items: [
+        { ingredient: iVEG.potato, amount: "3 × 150" },
+        { ingredient: iFAT.butter, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iDIR.milk, amount: 100 },
+        { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 100" },
+      ],
+    },
   ],
   steps: [
     {
-      title: "",
+      title: "Kurczak z pomidorami",
       steps: [
         "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
         "Pokrój mięso z kurczaka w duże i cienkie plastry a następnie rozłóż je równomiernie w naczyniu.",
@@ -44,6 +53,16 @@ const kurczakZPomidorem: Recipe = {
         "Pokrój pomidory i ułóż je na mięsie.",
         "Posyp całość startym serem.",
         "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Odcedź ziemniaki, dodaj masło oraz ciepłe mleko i dokładnie ubij.",
+        "Dopraw puree solą do smaku.",
+        "Buraki z octu odsącz z zalewy i podawaj w całości jako dodatek.",
+        "Kurczaka podawaj z ziemniakami ubijanymi i burakami.",
       ],
     },
   ],
