@@ -713,7 +713,7 @@ body::-webkit-scrollbar {
   padding: 0.3rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .recipe-details {
     margin: 0;
     inset: 0;

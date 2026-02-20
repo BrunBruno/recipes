@@ -9,24 +9,24 @@ import type { Recipe } from "../types";
 const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
-  images: [""],
+  images: ["kurczak-z-pomidorem.jpg"],
   time: 65,
-  portions: 4,
+  portions: 3,
   ingredients: [
     {
       title: "",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
-        { ingredient: iVEG.tomato, amount: 3, unit: "szt" },
+        { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.garlic },
         { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kostka" },
         { ingredient: iDIR.cream, amount: 1, unit: "łyżka" },
         { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
         { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
-        { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.herbes_de_provence },
         { ingredient: iSPC.wild_garlic },
+        { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
@@ -37,9 +37,9 @@ const kurczakZPomidorem: Recipe = {
       title: "",
       steps: [
         "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
-        "Pokrój mięso z kurczaka i ułóż je w naczyniu.",
+        "Pokrój mięso z kurczaka w duże i cienkie plastry a następnie rozłóż je równomiernie w naczyniu.",
         "Przypraw mięso solą, pieprzem, papryką oraz czosnkiem.",
-        "W miseczce wymieszaj majonez ze śmietaną i przyprawami.",
+        "W miseczce wymieszaj majonez ze śmietaną i ziołami.",
         "Posmaruj kurczaka przygotowaną mieszanką.",
         "Pokrój pomidory i ułóż je na mięsie.",
         "Posyp całość startym serem.",
@@ -47,7 +47,7 @@ const kurczakZPomidorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "pieczone"],
+  keyWords: ["mięso", "kurczak", "pieczone", "xxx"],
 };
 
 export default kurczakZPomidorem;
