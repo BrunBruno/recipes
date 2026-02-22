@@ -36,7 +36,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
   let totalKcal = 0;
 
   for (const group of recipe.ingredients) {
-    if (group.excludeFromCalc) continue;
+    // if (group.excludeFromCalc) continue;
 
     for (const item of group.items) {
       const { ingredient, amount, unit } = item;
@@ -62,15 +62,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
           grams = DEFAULT_FAT_GRAMS * recipe.portions; // ???
         else continue;
       } else {
-        if (!unit && ingredient.defaultUnit) {
-          const weight = ingredient.unitWeights?.[ingredient.defaultUnit];
-          if (weight !== undefined) {
-            grams = value * weight;
-          } else {
-            console.warn(`No ${ingredient.defaultUnit} for ${ingredient.name}`);
-            grams = value;
-          }
-        } else if (!unit) {
+        if (!unit) {
           grams = value;
         } else if (ingredient.unitWeights?.[unit]) {
           grams = value * ingredient.unitWeights[unit];

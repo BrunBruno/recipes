@@ -51,6 +51,5 @@ export const iFRT: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżeczka: 5,
     },
-    defaultUnit: "ml",
   },
 };

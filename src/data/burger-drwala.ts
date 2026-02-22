@@ -20,7 +20,7 @@ const burgerDrwala: Recipe = {
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
         { ingredient: iMET.bacon_slices, amount: 8, unit: "plaster" },
-        { ingredient: iMET.egg, amount: "2-3" },
+        { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
         { ingredient: iDIR.lilliputian_cheese, amount: 350 },
         { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
         { ingredient: iFAT.butter },

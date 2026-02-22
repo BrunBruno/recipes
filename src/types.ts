@@ -38,7 +38,6 @@ export type UnitType =
   | "kostka"
   | "plaster"
   | "ząbek"
-  | "liść"
   | "listek"
   | "ziarno"
   | "pęto";
@@ -92,7 +91,6 @@ export type IngredientItem = {
   type: IngredientType;
   kcalPer100g: number;
   unitWeights?: Partial<Record<UnitType, number>>;
-  defaultUnit?: UnitType;
   nutrientsPer100g?: [number, number, number]; // fat-carb-prot
 };
 

@@ -18,7 +18,7 @@ const musMalinowyGanache: Recipe = {
         { ingredient: iOTH.white_chocolate, amount: 100, unit: "g" },
         { ingredient: iFRT.lemon_juice, amount: 5, unit: "ml" },
         { ingredient: iOTH.gelatin, amount: 6, unit: "g" },
-        { ingredient: iOTH.water, amount: 30, unit: "g" },
+        { ingredient: iOTH.water, amount: 30, unit: "ml" },
       ],
     },
   ],

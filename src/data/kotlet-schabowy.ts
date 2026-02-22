@@ -17,7 +17,7 @@ const kotletSchabowy: Recipe = {
       title: "Kotlety Schabowe",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2 , unit: "szt"},
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
         { ingredient: iGRN.breadcrumbs, amount: 150 },
         { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },

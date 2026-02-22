@@ -16,7 +16,7 @@ const kotletyZKurczaka: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.chicken_breast, amount: 1, unit: "opak" },
-        { ingredient: iMET.egg, amount: 1 },
+        { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
         { ingredient: iFAT.oil },
         { ingredient: iSPC.black_pepper },
@@ -32,7 +32,7 @@ const kotletyZKurczaka: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 150", unit: "g" },
+        { ingredient: iVEG.potato, amount: "3 × 150" },
         { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 150", unit: "g" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },

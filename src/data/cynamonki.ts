@@ -18,7 +18,7 @@ const cynamonki: Recipe = {
       title: "Ciasto",
       items: [
         { ingredient: iDIR.milk, amount: 250, unit: "ml" },
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iGRN.flour, amount: 600, unit: "g" },
         { ingredient: iOTH.sugar, amount: 210, unit: "g" },
         { ingredient: iFAT.butter, amount: 185, unit: "g" },

@@ -14,7 +14,7 @@ const jajecznica: Recipe = {
     {
       title: "Jajecznica",
       items: [
-        { ingredient: iMET.egg, amount: "3-5" },
+        { ingredient: iMET.egg, amount: "3-5", unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iSPC.salt },
       ],

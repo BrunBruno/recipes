@@ -381,9 +381,7 @@ function App() {
                               {ingredient.amount
                                 ? ingredient.unit
                                   ? ` ${ingredient.unit}`
-                                  : ingredient.ingredient.defaultUnit
-                                    ? ` ${ingredient.ingredient.defaultUnit}`
-                                    : " g"
+                                  : " g"
                                 : ""}
                             </span>
                           </li>
@@ -516,13 +514,6 @@ function App() {
                               </span>
                             ),
                           )}
-                        </div>
-                      )}
-
-                      {item.defaultUnit && (
-                        <div className="default-unit">
-                          Domyślna jednostka:{" "}
-                          <strong>{item.defaultUnit}</strong>
                         </div>
                       )}
                     </div>

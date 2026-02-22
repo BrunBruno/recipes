@@ -34,7 +34,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżka: 15,
       łyżeczka: 5,
     },
-    defaultUnit: "ml",
     nutrientsPer100g: [0, 0, 0],
   },
 
@@ -88,7 +87,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżeczka: 5,
     },
-    defaultUnit: "ml",
   },
 
   coffee: {
@@ -137,7 +135,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżeczka: 5,
       łyżka: 15,
     },
-    defaultUnit: "ml",
   },
 
   yeast: {

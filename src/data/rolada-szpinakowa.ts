@@ -17,7 +17,7 @@ const roladaSzpinakowa: Recipe = {
       title: "",
       items: [
         { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
-        { ingredient: iMET.egg, amount: 4 },
+        { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iMET.smoked_salmon, amount: 250, unit: "g" },
         { ingredient: iDIR.cream_cheese_horseradish, amount: 200, unit: "g" },
         { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },

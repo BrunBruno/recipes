@@ -708,11 +708,6 @@ body::-webkit-scrollbar {
   margin-right: 0.5rem;
 }
 
-.default-unit {
-  font-size: 0.8rem;
-  padding: 0.3rem 0;
-}
-
 @media (max-width: 960px) {
   .recipe-details {
     margin: 0;

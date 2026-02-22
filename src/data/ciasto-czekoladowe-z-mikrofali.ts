@@ -21,7 +21,7 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
         { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
         { ingredient: iOTH.dark_chocolate, amount: 100 },
         { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
-        { ingredient: iOTH.water, amount: 380 },
+        { ingredient: iOTH.water, amount: 380, unit: "ml" },
       ],
     },
   ],

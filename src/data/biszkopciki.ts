@@ -16,10 +16,10 @@ const biszkopciki: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iGRN.flour, amount: 60 },
         { ingredient: iFAT.oil, amount: 10 },
-        { ingredient: iDIR.milk, amount: 20 },
+        { ingredient: iDIR.milk, amount: 20, unit: "ml" },
         { ingredient: iOTH.sugar, amount: 60 },
         { ingredient: iOTH.cocoa, amount: 5 },
         { ingredient: iSPC.salt },

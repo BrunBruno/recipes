@@ -2,6 +2,7 @@ import { iDIR } from "../ingredients/ingDairy";
 import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
 import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
@@ -9,7 +10,7 @@ import type { Recipe } from "../types";
 const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
   type: "dinner",
-  images: [""],
+  images: ["gulasz-wieprzowy.jpg"],
   time: 80,
   portions: 3,
   ingredients: [
@@ -22,19 +23,20 @@ const gulaszWieprzowy: Recipe = {
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
         { ingredient: iDIR.cream, amount: 2, unit: "łyżka" },
-        { ingredient: iSPC.salt },
-        { ingredient: iSPC.black_pepper },
+        { ingredient: iOTH.water, amount: 250 , unit: "ml"},
+        { ingredient: iVEG.chives },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.granulated_garlic },
         { ingredient: iSPC.chilli },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
     {
       title: "Dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: '3 × 250', unit: "g" },
+        { ingredient: iGRN.gnocchi, amount: "3 × 250", unit: "g" },
         { ingredient: iVEG.fried_beets, amount: "3 × 150", unit: "g" },
-        { ingredient: iVEG.chives },
       ],
       excludeFromCalc: true,
     },
@@ -47,8 +49,7 @@ const gulaszWieprzowy: Recipe = {
         "Zalej mięso wodą, dodaj posiekaną cebulę i duś, aż mięso będzie miękkie.",
         "W szklance wymieszaj mąkę, śmietanę oraz niewielką ilość wody.",
         "Dodaj mieszankę do gulaszu, aby go zagęścić.",
-        "Dopraw solą, pieprzem, papryką, czosnkiem i chilli do smaku.",
-        "Przed podaniem posyp szczypiorkiem.",
+        "Dopraw solą, pieprzem, papryką, czosnkiem, chilli i szczypiorkiem do smaku.",
       ],
     },
     {
@@ -60,7 +61,7 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "duszone"],
+  keyWords: ["mięso", "wieprzowina", "duszone", "xxx"],
 };
 
 export default gulaszWieprzowy;

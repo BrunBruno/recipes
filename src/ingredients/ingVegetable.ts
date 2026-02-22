@@ -39,7 +39,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
-    defaultUnit: "szt",
   },
 
   onion: {
@@ -49,7 +48,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
-    defaultUnit: "szt",
   },
 
   tomato: {
@@ -59,7 +57,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 170,
     },
-    defaultUnit: "szt",
   },
 
   cucumber: {
@@ -70,7 +67,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 300,
       plaster: 10,
     },
-    defaultUnit: "szt",
   },
 
   bell_pepper: {
@@ -80,7 +76,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
-    defaultUnit: "szt",
   },
 
   carrot: {
@@ -90,7 +85,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
-    defaultUnit: "szt",
   },
 
   parsley_root: {
@@ -100,7 +94,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 100,
     },
-    defaultUnit: "szt",
   },
 
   leek: {
@@ -110,7 +103,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
-    defaultUnit: "szt",
   },
 
   garlic: {
@@ -120,7 +112,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       ząbek: 5,
     },
-    defaultUnit: "ząbek",
   },
 
   celery_root: {
@@ -130,7 +121,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
-    defaultUnit: "szt",
   },
 
   red_onion: {
@@ -140,7 +130,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
-    defaultUnit: "szt",
   },
 
   //
@@ -150,10 +139,9 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     kcalPer100g: 15,
     unitWeights: {
-      szt: 150,
-      liść: 5,
+      opak: 150,
+      szt: 5,
     },
-    defaultUnit: "liść",
   },
 
   chives: {
@@ -274,10 +262,11 @@ export const iVEG: Record<IngId, IngredientItem> = {
   fried_beets: {
     name: "Buraczki zasmażane",
     type: "veg",
-    kcalPer100g: 80,
+    kcalPer100g: 64,
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [0.6, 12.4, 1.3],
   },
 
   beets_shredded: {

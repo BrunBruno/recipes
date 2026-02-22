@@ -17,7 +17,7 @@ const faworki: Recipe = {
       title: "Faworki",
       items: [
         { ingredient: iGRN.flour, amount: 320, unit: "g" },
-        { ingredient: iMET.egg, amount: 4 },
+        { ingredient: iMET.egg, amount: 4 , unit: "szt"},
         { ingredient: iOTH.powdered_sugar, amount: 1, unit: "łyżka" },
         { ingredient: iDIR.cream, amount: 5, unit: "łyżka" },
         { ingredient: iOTH.spirit, amount: 2, unit: "łyżeczka" },

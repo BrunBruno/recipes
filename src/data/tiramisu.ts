@@ -13,7 +13,7 @@ const tiramisu: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 3 },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iDIR.mascarpone, amount: 500 },
         { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
         { ingredient: iOTH.sugar, amount: 150 },

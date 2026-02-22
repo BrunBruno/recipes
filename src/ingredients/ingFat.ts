@@ -13,11 +13,12 @@ export const iFAT: Record<IngId, IngredientItem> = {
   butter: {
     name: "Masło",
     type: "fat",
-    kcalPer100g: 717,
+    kcalPer100g: 744,
     unitWeights: {
       kostka: 200,
       łyżka: 14,
     },
+    nutrientsPer100g: [82, 0.7, 0.7],
   },
 
   clarified_butter: {

@@ -18,10 +18,10 @@ const ciastoMarchewkowe: Recipe = {
     {
       title: "Ciasto",
       items: [
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iOTH.sugar, amount: 200, unit: "g" },
         { ingredient: iFAT.oil, amount: 150, unit: "ml" },
-        { ingredient: iVEG.carrot, amount: 200, unit: "g" },
+        { ingredient: iVEG.carrot, amount: 200,  },
         { ingredient: iFRT.pineapple, amount: 75, unit: "g" },
         { ingredient: iOTH.walnuts, amount: 50, unit: "g" },
         { ingredient: iOTH.coconut_flakes, amount: 50, unit: "g" },

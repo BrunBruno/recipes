@@ -40,7 +40,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 5,
     },
-    defaultUnit: "szklanka",
   },
 
   black_pepper: {
@@ -137,7 +136,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       ziarno: 0.2,
     },
-    defaultUnit: "ziarno",
   },
 
   black_sesame: {
@@ -208,7 +206,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       listek: 1,
     },
-    defaultUnit: "listek",
   },
 
   caraway: {
@@ -261,7 +258,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżka: 15,
     },
-    defaultUnit: "ml",
   },
 
   vegetable_seasoning: {
@@ -290,18 +286,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 10,
     },
-    defaultUnit: "szt",
   },
 
   knorr_goulash_fix: {
     name: "Fix Knorr gulasz węgierski",
     type: "spc",
-    kcalPer100g: 280,
+    kcalPer100g: 92,
     unitWeights: {
       opak: 40,
     },
-    defaultUnit: "opak",
-  },
+    nutrientsPer100g: [4.6, 2.6, 9.8],
+  }, //
 
   knorr_chinese_fix: {
     name: "Fix Knorr do dań po chińsku",
@@ -310,16 +305,15 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 40,
     },
-    defaultUnit: "opak",
   },
 
   knorr_bolognese_fix: {
     name: "Fix Knorr Bolognese",
     type: "spc",
-    kcalPer100g: 250,
+    kcalPer100g: 141,
     unitWeights: {
       opak: 40,
     },
-    defaultUnit: "opak",
-  },
+    nutrientsPer100g: [3.8, 18, 8.1],
+  }, //
 };

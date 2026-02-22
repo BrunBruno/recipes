@@ -26,7 +26,7 @@ const kurczakZPiekarnika: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "4 × 150", unit: "g" },
+        { ingredient: iVEG.potato, amount: "4 × 150" },
         { ingredient: iVEG.beets_whole_vinegar },
       ],
     },

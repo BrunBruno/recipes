@@ -14,7 +14,7 @@ const jajkoSadzone: Recipe = {
     {
       title: "Jajka sadzone",
       items: [
-        { ingredient: iMET.egg, amount: "2-3" },
+        { ingredient: iMET.egg, amount: "2-3" , unit: "szt"},
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
@@ -24,7 +24,7 @@ const jajkoSadzone: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: 200, unit: "g" },
+        { ingredient: iVEG.potato, amount: 200,  },
         { ingredient: iVEG.canned_peas, amount: 100, unit: "g" },
       ],
       excludeFromCalc: true,

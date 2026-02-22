@@ -25,7 +25,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
       ml: 1,
       szklanka: 250,
     },
-    defaultUnit: "ml",
     nutrientsPer100g: [3.2, 4.7, 3.2],
   }, //
 
@@ -60,11 +59,12 @@ export const iDIR: Record<IngId, IngredientItem> = {
   cream_18: {
     name: "Śmietana 18%",
     type: "dir",
-    kcalPer100g: 180,
+    kcalPer100g: 191,
     unitWeights: {
       ml: 1,
       łyżka: 15,
     },
+    nutrientsPer100g: [18, 4.8, 2.5],
   },
 
   cream_22: {

@@ -10,6 +10,7 @@ type IngId =
   | "thin_pasta"
   | "lazanki_pasta"
   | "gnocchi"
+  | "kaiser_roll"
   | "tortilla"
   | "toast_bread"
   | "hamburger_buns"
@@ -106,13 +107,24 @@ export const iGRN: Record<IngId, IngredientItem> = {
   gnocchi: {
     name: "Kopytka",
     type: "grn",
-    kcalPer100g: 130,
+    kcalPer100g: 148,
     unitWeights: {
       opak: 500,
     },
-  },
+    nutrientsPer100g: [1.2, 30, 3],
+  }, //
 
   //
+
+  kaiser_roll: {
+    name: "Kajzerki",
+    type: "grn",
+    kcalPer100g: 275,
+    unitWeights: {
+      szt: 70,
+      opak: 350,
+    },
+  },
 
   tortilla: {
     name: "Tortilla",
@@ -154,11 +166,12 @@ export const iGRN: Record<IngId, IngredientItem> = {
   hotdog_buns: {
     name: "Bułki hotdogowe",
     type: "grn",
-    kcalPer100g: 270,
+    kcalPer100g: 316,
     unitWeights: {
       szt: 70,
     },
-  },
+    nutrientsPer100g: [8.3, 51, 7.7],
+  }, //
 
   cornflakes: {
     name: "Płatki kukurydziane",

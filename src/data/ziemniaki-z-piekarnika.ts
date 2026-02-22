@@ -13,7 +13,7 @@ const ziemniakiZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iVEG.potato, amount: 1000, unit: "g" },
+        { ingredient: iVEG.potato, amount: 1000,  },
         { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
         { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
         { ingredient: iSPC.caraway, amount: 0.5, unit: "łyżeczka" },

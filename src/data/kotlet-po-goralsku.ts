@@ -18,7 +18,7 @@ const kotletPoGoralsku: Recipe = {
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
         { ingredient: iMET.bacon_slices, amount: 10, unit: "plaster" },
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 10, unit: "plaster" },
         { ingredient: iGRN.breadcrumbs, amount: 150 },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
@@ -28,7 +28,7 @@ const kotletPoGoralsku: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150", unit: "g" },
+        { ingredient: iVEG.potato, amount: "5 × 150",},
         { ingredient: iVEG.sauerkraut, amount: 600 },
         { ingredient: iFAT.butter, amount: 20 },
         { ingredient: iSPC.salt },

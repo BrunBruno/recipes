@@ -17,10 +17,10 @@ const gotowyBurger: Recipe = {
       items: [
         { ingredient: iMET.bacon_slices, amount: 4, unit: "plaster" },
         { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
-        { ingredient: iMET.egg, amount: 2 },
+        { ingredient: iMET.egg, amount: 2 , unit: "szt"},
         { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plaster" },
         { ingredient: iVEG.tomato, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.lettuce, amount: 4, unit: "liść" },
+        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.pickled_cucumber, amount: 1, unit: "szt" },
         { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },

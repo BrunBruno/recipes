@@ -38,7 +38,6 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 60,
     },
-    defaultUnit: "szt",
   },
 
   chicken_breast: {
@@ -258,11 +257,12 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages: {
     name: "Parówki",
     type: "met",
-    kcalPer100g: 290,
+    kcalPer100g: 252,
     unitWeights: {
       szt: 50,
     },
-  },
+    nutrientsPer100g: [21, 2.7, 13],
+  }, //
 
   //
 
