@@ -15,15 +15,15 @@ const gulaszWieprzowy: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "Gulasz",
+      title: "",
       items: [
         { ingredient: iMET.stew_pork, amount: 500 },
         { ingredient: iFAT.oil },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iDIR.cream, amount: 2, unit: "łyżka" },
-        { ingredient: iOTH.water, amount: 250 , unit: "ml"},
+        { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
+        { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.granulated_garlic },
@@ -43,7 +43,7 @@ const gulaszWieprzowy: Recipe = {
   ],
   steps: [
     {
-      title: "Gulasz",
+      title: "",
       steps: [
         "Mięso podsmaż na oleju, następnie dodaj masło lub smalec i smaż przez około 30 minut.",
         "Zalej mięso wodą, dodaj posiekaną cebulę i duś, aż mięso będzie miękkie.",

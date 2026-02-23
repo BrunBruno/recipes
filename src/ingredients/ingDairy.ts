@@ -4,9 +4,8 @@ type IngId =
   | "milk"
   | "buttermilk"
   | "condensed_milk"
-  | "cream"
+  | "cream_12"
   | "cream_18"
-  | "cream_22"
   | "cream_30"
   | "cream_36"
   | "cream_cheese"
@@ -31,29 +30,32 @@ export const iDIR: Record<IngId, IngredientItem> = {
   buttermilk: {
     name: "Maślanka",
     type: "dir",
-    kcalPer100g: 40,
+    kcalPer100g: 48,
     unitWeights: {
       szklanka: 250,
     },
+    nutrientsPer100g: [1.5, 5, 3.5],
   },
 
   condensed_milk: {
     name: "Mleko skondensowane",
     type: "dir",
-    kcalPer100g: 321,
+    kcalPer100g: 134,
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [7.5, 11, 5.5],
   },
 
-  cream: {
+  cream_12: {
     name: "Śmietana",
     type: "dir",
-    kcalPer100g: 200,
+    kcalPer100g: 136,
     unitWeights: {
       ml: 1,
       łyżka: 15,
     },
+    nutrientsPer100g: [12, 4, 3],
   },
 
   cream_18: {
@@ -67,34 +69,26 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [18, 4.8, 2.5],
   },
 
-  cream_22: {
-    name: "Śmietana 22%",
-    type: "dir",
-    kcalPer100g: 220,
-    unitWeights: {
-      ml: 1,
-      łyżka: 15,
-    },
-  },
-
   cream_30: {
     name: "Śmietanka 30%",
     type: "dir",
-    kcalPer100g: 340,
+    kcalPer100g: 291,
     unitWeights: {
       ml: 1,
       łyżka: 15,
     },
+    nutrientsPer100g: [30, 3.1, 2.2],
   },
 
   cream_36: {
     name: "Śmietanka 36%",
     type: "dir",
-    kcalPer100g: 345,
+    kcalPer100g: 344,
     unitWeights: {
       ml: 1,
       łyżka: 15,
     },
+    nutrientsPer100g: [36, 3, 2],
   },
 
   cream_cheese: {
@@ -118,10 +112,11 @@ export const iDIR: Record<IngId, IngredientItem> = {
   mascarpone: {
     name: "Serek mascarpone",
     type: "dir",
-    kcalPer100g: 430,
+    kcalPer100g: 392,
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [40, 4.9, 3.4],
   },
 
   yellow_cheese: {
@@ -134,24 +129,26 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [28, 0, 24],
-  }, //
+  },
 
   lilliputian_cheese: {
     name: "Ser Liliput",
     type: "che",
-    kcalPer100g: 330,
+    kcalPer100g: 343,
     unitWeights: {
       opak: 350,
       plaster: 90,
     },
+    nutrientsPer100g: [27, 0, 25],
   },
 
   parmigiano_reggiano: {
-    name: "Parmigiano Reggiano",
+    name: "Ser Parmigiano Reggiano",
     type: "che",
-    kcalPer100g: 431,
+    kcalPer100g: 402,
     unitWeights: {
       plaster: 10,
     },
+    nutrientsPer100g: [30, 0, 32],
   },
 };

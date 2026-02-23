@@ -34,19 +34,21 @@ export const iMET: Record<IngId, IngredientItem> = {
   egg: {
     name: "Jajko",
     type: "egg",
-    kcalPer100g: 155,
+    kcalPer100g: 151,
     unitWeights: {
       szt: 60,
     },
+    nutrientsPer100g: [10.9, 0.9, 12.4],
   },
 
   chicken_breast: {
     name: "Pierś z kurczaka",
     type: "met",
-    kcalPer100g: 165,
+    kcalPer100g: 164,
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [1.5, 0, 23.1],
   },
 
   chicken_quarters: {
@@ -57,6 +59,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 250,
       opak: 500,
     },
+    nutrientsPer100g: [12, 0, 18],
   },
 
   chicken_drums: {
@@ -66,6 +69,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [12, 0, 18],
   },
 
   chicken_thigh: {
@@ -75,6 +79,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [15, 0, 17],
   },
 
   poultry_liver: {
@@ -84,6 +89,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 450,
     },
+    nutrientsPer100g: [4.8, 1.5, 17],
   },
 
   chicken_whole: {
@@ -93,6 +99,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 1200,
     },
+    nutrientsPer100g: [9, 0, 20],
   },
 
   turkey_breast: {
@@ -103,6 +110,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 600,
       szt: 150,
     },
+    nutrientsPer100g: [3, 0, 29],
   },
 
   //
@@ -115,6 +123,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       plaster: 72,
       opak: 360,
     },
+    nutrientsPer100g: [10, 0, 22],
   },
 
   pork_neck: {
@@ -125,6 +134,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       plaster: 100,
       opak: 500,
     },
+    nutrientsPer100g: [22, 0, 18],
   },
 
   pork_ham: {
@@ -134,6 +144,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [6, 1, 21],
   },
 
   ground_pork: {
@@ -143,6 +154,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [23, 0, 17],
   },
 
   stew_pork: {
@@ -152,6 +164,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [20, 0, 18],
   },
 
   pork_tenderloin: {
@@ -162,6 +175,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       plaster: 60,
       opak: 400,
     },
+    nutrientsPer100g: [4, 0, 26],
   },
 
   //
@@ -173,6 +187,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [15, 0, 21],
   },
 
   stew_beef: {
@@ -182,6 +197,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [15, 0, 21],
   },
 
   ground_beef: {
@@ -191,6 +207,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [20, 0, 17],
   },
 
   beef_steak: {
@@ -200,6 +217,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
+    nutrientsPer100g: [20, 0, 18],
   },
 
   //
@@ -209,7 +227,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 102,
     unitWeights: {
-      plaster: 30,
+      plaster: 15,
       opak: 140,
     },
     nutrientsPer100g: [2, 3, 18],
@@ -234,6 +252,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       plaster: 15,
       opak: 120,
     },
+    nutrientsPer100g: [53, 1, 37],
   },
 
   bacon_block: {
@@ -243,6 +262,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [53, 1, 37],
   },
 
   sausage: {
@@ -252,6 +272,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       pęto: 100,
     },
+    nutrientsPer100g: [25, 2, 14],
   },
 
   sausages: {
@@ -273,6 +294,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 160,
     },
+    nutrientsPer100g: [1, 0, 26],
   },
 
   smoked_salmon: {
@@ -283,6 +305,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 100,
       plaster: 30,
     },
+    nutrientsPer100g: [4, 0, 18],
   },
 
   //
@@ -294,6 +317,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [8, 3, 24],
   },
 
   burger_patties: {
@@ -304,5 +328,6 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 50,
       opak: 250,
     },
+    nutrientsPer100g: [20, 3, 17],
   },
 };

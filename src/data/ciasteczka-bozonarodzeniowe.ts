@@ -20,7 +20,7 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
         { ingredient: iGRN.flour, amount: 1.5, unit: "szklanka" },
         { ingredient: iOTH.sugar, amount: 1.5, unit: "szklanka" },
         { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
-        { ingredient: iDIR.cream, amount: 2, unit: "łyżka" },
+        { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
       ],
     },

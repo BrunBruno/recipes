@@ -12,10 +12,10 @@ const kurczakZPiekarnika: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ingredient: iMET.chicken_quarters, amount: 4, unit: "szt" },
-        { ingredient: iFAT.butter },
+        { ingredient: iFAT.butter, amount: 2, unit: "łyżeczka" },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.hot_paprika },
         { ingredient: iSPC.smoked_paprika },
@@ -27,13 +27,13 @@ const kurczakZPiekarnika: Recipe = {
       title: "Dodatki",
       items: [
         { ingredient: iVEG.potato, amount: "4 × 150" },
-        { ingredient: iVEG.beets_whole_vinegar },
+        { ingredient: iVEG.beets_whole_vinegar, amount: "4 × 100" },
       ],
     },
   ],
   steps: [
     {
-      title: "Przygotowanie kurczaka",
+      title: "",
       steps: [
         "Rozgrzej piekarnik do 190°C.",
         "Kurczaka umyj i osusz papierowym ręcznikiem.",

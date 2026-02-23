@@ -14,13 +14,13 @@ const kurczakZPomidorem: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "Kurczak z pomidorami",
+      title: "",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kostka" },
-        { ingredient: iDIR.cream, amount: 1, unit: "łyżka" },
+        { ingredient: iDIR.cream_18, amount: 1, unit: "łyżka" },
         { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
         { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
         { ingredient: iSPC.herbes_de_provence },
@@ -43,7 +43,7 @@ const kurczakZPomidorem: Recipe = {
   ],
   steps: [
     {
-      title: "Kurczak z pomidorami",
+      title: "",
       steps: [
         "Natłuść naczynie żaroodporne oliwą lub olejem i ułóż paski cebuli.",
         "Pokrój mięso z kurczaka w duże i cienkie plastry a następnie rozłóż je równomiernie w naczyniu.",

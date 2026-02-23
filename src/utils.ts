@@ -79,3 +79,74 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
   return Math.round(recipe.portions ? totalKcal / recipe.portions : totalKcal);
 };
+
+export const calculateRecipeNutrients = (
+  recipe: Recipe,
+): [number, number, number] => {
+  const DEFAULT_FAT_GRAMS = 15;
+
+  let totalFat = 0;
+  let totalCarb = 0;
+  let totalProt = 0;
+
+  for (const group of recipe.ingredients) {
+    // if (group.excludeFromCalc) continue;
+
+    for (const item of group.items) {
+      const { ingredient, amount, unit } = item;
+
+      if (!ingredient.nutrientsPer100g) continue;
+
+      let grams = 0;
+      let value = amount;
+
+      if (typeof amount === "string") {
+        if (amount.includes("×")) {
+          const parts = amount.split("×").map(Number);
+          value = parts.reduce((a, b) => a * b, 1);
+        } else if (amount.includes("-")) {
+          const parts = amount.split("-").map(Number);
+          value = parts.reduce((a, b) => a + b, 0) / parts.length;
+        } else {
+          console.warn(`Incorrect amount ${amount}`);
+          continue;
+        }
+      }
+
+      if (!value || typeof value === "string") {
+        if (ingredient.type === "fat") {
+          grams = DEFAULT_FAT_GRAMS * recipe.portions;
+        } else {
+          continue;
+        }
+      } else {
+        if (!unit) {
+          grams = value;
+        } else if (ingredient.unitWeights?.[unit]) {
+          grams = value * ingredient.unitWeights[unit];
+        } else {
+          if (unit !== "g") {
+            console.warn(`No unit ${unit} for ${ingredient.name}`);
+          }
+          grams = value;
+        }
+      }
+
+      const [fat, carb, prot] = ingredient.nutrientsPer100g;
+
+      totalFat += (grams / 100) * fat;
+      totalCarb += (grams / 100) * carb;
+      totalProt += (grams / 100) * prot;
+    }
+  }
+
+  if (recipe.portions) {
+    return [
+      Math.round((10 * totalFat) / recipe.portions) / 10,
+      Math.round((10 * totalCarb) / recipe.portions) / 10,
+      Math.round((10 * totalProt) / recipe.portions) / 10,
+    ];
+  }
+
+  return [Math.round(totalFat), Math.round(totalCarb), Math.round(totalProt)];
+};

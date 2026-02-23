@@ -10,6 +10,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    nutrientsPer100g: [0.2, 2.4, 0.4],
   },
 
   pineapple: {
@@ -19,6 +20,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     unitWeights: {
       plaster: 80,
     },
+    nutrientsPer100g: [0.1, 13, 0.5],
   },
 
   raspberries: {
@@ -28,6 +30,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     unitWeights: {
       szklanka: 125,
     },
+    nutrientsPer100g: [0.3, 12, 1.1],
   },
 
   //
@@ -35,10 +38,11 @@ export const iFRT: Record<IngId, IngredientItem> = {
   raisins: {
     name: "Rodzynki",
     type: "frt",
-    kcalPer100g: 299,
+    kcalPer100g: 314,
     unitWeights: {
       łyżka: 10,
     },
+    nutrientsPer100g: [0.7, 72, 3],
   },
 
   //

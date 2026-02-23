@@ -57,10 +57,11 @@ export const iGRN: Record<IngId, IngredientItem> = {
   couscous: {
     name: "Kuskus",
     type: "grn",
-    kcalPer100g: 376,
+    kcalPer100g: 347,
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [2.3, 67, 13],
   },
 
   fusilli_pasta: {
@@ -124,6 +125,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szt: 70,
       opak: 350,
     },
+    nutrientsPer100g: [3, 54, 8.5],
   },
 
   tortilla: {
@@ -133,34 +135,38 @@ export const iGRN: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 60,
     },
+    nutrientsPer100g: [6.7, 49, 8.8],
   },
 
   toast_bread: {
     name: "Tosty",
     type: "grn",
-    kcalPer100g: 265,
+    kcalPer100g: 254,
     unitWeights: {
       szt: 30,
     },
+    nutrientsPer100g: [1.5, 50.5, 8.6],
   },
 
   hamburger_buns: {
     name: "Bułki hamburgerowe",
     type: "grn",
-    kcalPer100g: 270,
+    kcalPer100g: 277,
     unitWeights: {
       szt: 80,
       opak: 320,
     },
+    nutrientsPer100g: [4.3, 48, 10],
   },
 
   chicken_buns: {
     name: "Bułki do chickerów",
     type: "grn",
-    kcalPer100g: 270,
+    kcalPer100g: 282,
     unitWeights: {
       szt: 80,
     },
+    nutrientsPer100g: [9.2, 49, 4.8],
   },
 
   hotdog_buns: {
@@ -176,9 +182,10 @@ export const iGRN: Record<IngId, IngredientItem> = {
   cornflakes: {
     name: "Płatki kukurydziane",
     type: "grn",
-    kcalPer100g: 357,
+    kcalPer100g: 383,
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [1.4, 83, 7.5],
   },
 };

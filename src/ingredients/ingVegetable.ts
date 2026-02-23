@@ -39,6 +39,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    nutrientsPer100g: [0.1, 17, 2],
   },
 
   onion: {
@@ -48,6 +49,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
+    nutrientsPer100g: [0.1, 9, 1.1],
   },
 
   tomato: {
@@ -57,6 +59,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 170,
     },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
   },
 
   cucumber: {
@@ -67,6 +70,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 300,
       plaster: 10,
     },
+    nutrientsPer100g: [0.1, 3.6, 0.7],
   },
 
   bell_pepper: {
@@ -76,6 +80,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    nutrientsPer100g: [0.3, 6, 1],
   },
 
   carrot: {
@@ -85,6 +90,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
+    nutrientsPer100g: [0.2, 10, 0.9],
   },
 
   parsley_root: {
@@ -94,6 +100,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 100,
     },
+    nutrientsPer100g: [0.6, 6.3, 3.3],
   },
 
   leek: {
@@ -103,6 +110,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
+    nutrientsPer100g: [0.3, 14.2, 1.5],
   },
 
   garlic: {
@@ -112,6 +120,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       ząbek: 5,
     },
+    nutrientsPer100g: [0.5, 33, 6.4],
   },
 
   celery_root: {
@@ -121,6 +130,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 200,
     },
+    nutrientsPer100g: [0.3, 9.2, 1.5],
   },
 
   red_onion: {
@@ -130,6 +140,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 120,
     },
+    nutrientsPer100g: [0.1, 9, 1.1],
   },
 
   //
@@ -142,6 +153,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 150,
       szt: 5,
     },
+    nutrientsPer100g: [0.2, 2.9, 1.4],
   },
 
   chives: {
@@ -152,16 +164,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
       łyżka: 3,
       pęto: 50,
     },
+    nutrientsPer100g: [0.7, 4.4, 3.3],
   },
 
   parsley: {
-    name: "Pietruszka",
+    name: "Pietruszka Zielona",
     type: "veg",
     kcalPer100g: 36,
     unitWeights: {
       pęto: 30,
       listek: 1,
     },
+    nutrientsPer100g: [0.8, 6.3, 3],
   },
 
   frozen_spinach: {
@@ -171,6 +185,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 450,
     },
+    nutrientsPer100g: [0.4, 3.6, 2.9],
   },
 
   //
@@ -183,6 +198,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       ml: 1,
       opak: 400,
     },
+    nutrientsPer100g: [0.2, 4.8, 1.1],
   },
 
   canned_corn: {
@@ -192,6 +208,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 200,
     },
+    nutrientsPer100g: [1.4, 19, 3.2],
   },
 
   canned_peas: {
@@ -201,6 +218,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [0.4, 14, 5],
   },
 
   pickled_cucumber: {
@@ -220,6 +238,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
+    nutrientsPer100g: [0.1, 4.3, 0.9],
   },
 
   fried_onion: {
@@ -239,6 +258,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 5,
     },
+    nutrientsPer100g: [11, 6, 0.8],
   },
 
   oven_fries: {
@@ -248,6 +268,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 1000,
     },
+    nutrientsPer100g: [5, 25, 3],
   },
 
   coleslaw: {
@@ -257,6 +278,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [12, 10, 1.5],
   },
 
   fried_beets: {
@@ -267,7 +289,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.6, 12.4, 1.3],
-  },
+  }, //
 
   beets_shredded: {
     name: "Buraczki wiórki",
@@ -276,6 +298,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
+    nutrientsPer100g: [0.2, 9.6, 1.6],
   },
 
   beets_whole_vinegar: {
@@ -286,12 +309,14 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 15,
       opak: 500,
     },
+    nutrientsPer100g: [0.1, 5.5, 1.2],
   },
 
   frozen_vegetable_mix: {
     name: "Mrożona mieszanka warzyw",
     type: "veg",
     kcalPer100g: 40,
+    nutrientsPer100g: [0.5, 7, 2.5],
   },
 
   //
@@ -303,5 +328,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [0.3, 3.3, 3.1],
   },
 };

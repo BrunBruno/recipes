@@ -10,7 +10,7 @@ const sandwichRecipe: Recipe = {
   type: "snack",
   images: ["sandwiche.jpg"],
   time: 10,
-  portions: 2,
+  portions: 1,
   ingredients: [
     {
       title: "",
@@ -18,7 +18,7 @@ const sandwichRecipe: Recipe = {
         { ingredient: iGRN.toast_bread, amount: 4, unit: "szt" },
         { ingredient: iMET.ham_slices, amount: 2, unit: "plaster" },
         { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plaster" },
-        { ingredient: iVEG.pickled_cucumber },
+        { ingredient: iVEG.pickled_cucumber, amount: 0.5, unit: "szt" },
         { ingredient: iSAU.ketchup },
         { ingredient: iSAU.garlic_sauce },
       ],

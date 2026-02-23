@@ -42,6 +42,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
       ml: 0.9,
       szklanka: 220,
     },
+    nutrientsPer100g: [100, 0, 0],
   },
 
   olive: {
@@ -52,35 +53,39 @@ export const iFAT: Record<IngId, IngredientItem> = {
       łyżka: 10,
       ml: 0.9,
     },
+    nutrientsPer100g: [99, 0, 0],
   },
 
   margarine: {
     name: "Margaryna",
     type: "fat",
-    kcalPer100g: 717,
+    kcalPer100g: 657,
     unitWeights: {
       łyżka: 15,
       kostka: 200,
     },
+    nutrientsPer100g: [73, 0, 0],
   },
 
   lard: {
     name: "Słonina",
     type: "fat",
-    kcalPer100g: 902,
+    kcalPer100g: 818,
     unitWeights: {
       plaster: 30,
       opak: 250,
     },
+    nutrientsPer100g: [90, 1, 1],
   },
 
   rendered_lard: {
     name: "Smalec",
     type: "fat",
-    kcalPer100g: 717,
+    kcalPer100g: 900,
     unitWeights: {
       łyżka: 14,
       kostka: 200,
     },
+    nutrientsPer100g: [100, 0, 0],
   },
 };

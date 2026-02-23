@@ -12,9 +12,9 @@ const jajkoSadzone: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Jajka sadzone",
+      title: "",
       items: [
-        { ingredient: iMET.egg, amount: "2-3" , unit: "szt"},
+        { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
@@ -24,7 +24,7 @@ const jajkoSadzone: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: 200,  },
+        { ingredient: iVEG.potato, amount: 150 },
         { ingredient: iVEG.canned_peas, amount: 100, unit: "g" },
       ],
       excludeFromCalc: true,
@@ -32,7 +32,7 @@ const jajkoSadzone: Recipe = {
   ],
   steps: [
     {
-      title: "Jajka sadzone",
+      title: "",
       steps: [
         "Rozgrzej patelnię na średnim ogniu i dodaj masło.",
         "Wbij jajka na patelnię, uważając, aby nie uszkodzić żółtka.",

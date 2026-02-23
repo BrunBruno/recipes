@@ -10,7 +10,7 @@ const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
   type: "snack",
   images: ["kajzerki-z-jajkiem.jpg"],
-  time: 15,
+  time: 20,
   portions: 1,
   ingredients: [
     {
@@ -22,7 +22,7 @@ const kajzerkiZJajkiem: Recipe = {
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iSAU.mayonnaise, amount: 4, unit: "łyżeczka" },
-        { ingredient: iFAT.butter },
+        { ingredient: iFAT.butter, amount: 10 },
       ],
     },
   ],

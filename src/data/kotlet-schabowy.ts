@@ -14,10 +14,10 @@ const kotletSchabowy: Recipe = {
   portions: 5,
   ingredients: [
     {
-      title: "Kotlety Schabowe",
+      title: "",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
-        { ingredient: iMET.egg, amount: 2 , unit: "szt"},
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
         { ingredient: iGRN.breadcrumbs, amount: 150 },
         { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
@@ -37,14 +37,14 @@ const kotletSchabowy: Recipe = {
         { ingredient: iVEG.potato, amount: "5 × 150" },
         { ingredient: iVEG.cucumber, amount: 2.5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1.25, unit: "szt" },
-        { ingredient: iDIR.cream, amount: 10, unit: "łyżka" },
+        { ingredient: iDIR.cream_18, amount: 10, unit: "łyżka" },
       ],
       excludeFromCalc: true,
     },
   ],
   steps: [
     {
-      title: "Kotlety Schabowe",
+      title: "",
       steps: [
         "Rozbij plastry schabu na cienkie kotlety.",
         "Przypraw każdy kotlet wybranymi przyprawami.",

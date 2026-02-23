@@ -34,8 +34,9 @@ const zapiekankaBolognese: Recipe = {
   ],
   steps: [
     {
-      title: "Farsz zapiekanki",
+      title: "",
       steps: [
+        "Ugotuj makaron według instrukcji na opakowaniu.",
         "Podsmaż mięso mielone na oleju.",
         "Dodaj pokrojoną cebulę i smaż razem z mięsem.",
         "Dodaj pokrojone pieczarki i smaż, aż będą miękkie.",
@@ -43,12 +44,6 @@ const zapiekankaBolognese: Recipe = {
         "Dodaj koncentrat pomidorowy i dokładnie wymieszaj.",
         "Rozmieszaj przyprawę bolognese z wodą i dodaj do patelni wraz z zielem angielskim i liściem laurowym.",
         "Gotuj całość przez około 15 minut pod przykryciem.",
-      ],
-    },
-    {
-      title: "Zapiekanka z makaronem",
-      steps: [
-        "Ugotuj makaron według instrukcji na opakowaniu.",
         "Wsyp połowę ugotowanego makaronu do naczynia żaroodpornego.",
         "Wlej zawartość patelni na makaron.",
         "Dodaj pozostały makaron i posyp startym serem.",

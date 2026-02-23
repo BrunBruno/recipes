@@ -4,6 +4,7 @@ import { type mealType, type Recipe } from "./types";
 import IngredientIcon from "./assets/ingredientsIcon";
 import {
   calculateRecipeKcal,
+  calculateRecipeNutrients,
   ingredientTypeLabels,
   mealTypesData,
 } from "./utils";
@@ -261,7 +262,7 @@ function App() {
                 ${getStatusClass("kcal", calculateRecipeKcal(selectedRecipe))}
               `}
             >
-              {calculateRecipeKcal(selectedRecipe)}
+              <span>{calculateRecipeKcal(selectedRecipe)}</span>
             </div>
             <div
               className={`recipe-param 
@@ -269,14 +270,36 @@ function App() {
                 ${getStatusClass("time", selectedRecipe.time)}
               `}
             >
-              {selectedRecipe.time}
+              <span>{selectedRecipe.time}</span>
             </div>
             <div
               className={`recipe-param 
                 ${getFontSizeClass(selectedRecipe.portions)}
               `}
             >
-              {selectedRecipe.portions}
+              <span>{selectedRecipe.portions}</span>
+            </div>
+
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[0])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[0]}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[1])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[1]}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[2])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
             </div>
           </div>
 
