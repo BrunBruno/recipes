@@ -23,7 +23,7 @@ const roladaWieprzowa: Recipe = {
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour },
-        { ingredient: iDIR.cream },
+        { ingredient: iDIR.cream_18 },
         { ingredient: iSAU.sarepska_mustard },
         { ingredient: iFAT.margarine },
         { ingredient: iFAT.butter },
