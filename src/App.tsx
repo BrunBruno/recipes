@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
-import { type mealType, type Recipe } from "./types";
+import { type KeyWord, type mealType, type Recipe } from "./types";
 import IngredientIcon from "./assets/ingredientsIcon";
 import {
   calculateRecipeKcal,
   calculateRecipeNutrients,
+  countIngredientUsage,
   ingredientTypeLabels,
+  keywordAliases,
   mealTypesData,
 } from "./utils";
 import RecipeTypeIcon from "./assets/recipeTypeIcon";
@@ -21,6 +23,7 @@ import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 
 const SWIPE_THRESHOLD = 50;
+const ingredientUsage = countIngredientUsage(recipes);
 
 function App() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -43,16 +46,27 @@ function App() {
     );
   };
 
+  const normalize = (text: string) => text.toLowerCase().trim();
+
+  const matchesKeyword = (query: string, recipeKeywords: KeyWord[]) => {
+    const q = normalize(query);
+
+    return recipeKeywords.some((kw) =>
+      keywordAliases[kw].some((alias) => alias.includes(q)),
+    );
+  };
+
   const filteredRecipes = recipes.filter((r) => {
     const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
 
-    const query = searchQuery.toLowerCase();
-    const nameMatch = r.name.toLowerCase().includes(query);
-    const keyWordsMatch = r.keyWords?.some((kw) =>
-      kw.toLowerCase().includes(query),
-    );
+    const query = normalize(searchQuery);
 
-    return typeMatch && (nameMatch || keyWordsMatch);
+    const nameMatch = r.name.toLowerCase().includes(query);
+    const keywordsMatch = r.keyWords
+      ? matchesKeyword(query, r.keyWords)
+      : false;
+
+    return typeMatch && (nameMatch || keywordsMatch);
   });
 
   useEffect(() => {
@@ -539,6 +553,11 @@ function App() {
                           )}
                         </div>
                       )}
+
+                      <div className="ingredient-usage">
+                        Użyto w przepisach:{" "}
+                        <strong>{ingredientUsage[item.name] ?? 0}</strong>
+                      </div>
                     </div>
 
                     <span className="ingredient-id">{id}</span>

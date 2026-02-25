@@ -51,7 +51,7 @@ const zapiekankaBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "mięso", "sos", "pieczone", "xxx"],
+  keyWords: ["makaron", "sos", "xxx"],
 };
 
 export default zapiekankaBolognese;

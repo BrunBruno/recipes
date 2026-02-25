@@ -38,7 +38,7 @@ const kajzerkiZJajkiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "xxx"],
+  keyWords: ["pieczywo", "jajko", "xxx"],
 };
 
 export default kajzerkiZJajkiem;

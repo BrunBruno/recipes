@@ -15,7 +15,7 @@ const bitki: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Bitki i sos",
+      title: "",
       items: [
         { ingredient: iMET.pork_tenderloin, amount: 600, unit: "g" },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
@@ -45,7 +45,7 @@ const bitki: Recipe = {
   ],
   steps: [
     {
-      title: "Przygotowanie bitek i sosu",
+      title: "",
       steps: [
         "Polędwiczkę wieprzową opłucz, usuń błonki i dokładnie osusz ręcznikiem papierowym.",
         "Pokrój mięso na plastry o grubości około 1 cm i delikatnie rozbij tłuczkiem.",
@@ -68,7 +68,7 @@ const bitki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "gotowane"],
+  keyWords: ["wieprzowina", "sos"],
 };
 
 export default bitki;

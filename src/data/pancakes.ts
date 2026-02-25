@@ -38,7 +38,7 @@ const pancakes: Recipe = {
       ],
     },
   ],
-  keyWords: ["słodkie", "ciasto", "naleśnik"],
+  keyWords: ["ciasto", "naleśnik"],
 };
 
 export default pancakes;

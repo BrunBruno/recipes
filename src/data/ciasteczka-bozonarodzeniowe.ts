@@ -37,7 +37,7 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie"],
+  keyWords: ["ciasto"],
 };
 
 export default ciasteczkaBozonarodzeniowe;

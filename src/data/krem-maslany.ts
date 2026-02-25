@@ -31,7 +31,7 @@ const kremMaslany: Recipe = {
       ],
     },
   ],
-  keyWords: ["słodkie", "krem"],
+  keyWords: ["krem"],
 };
 
 export default kremMaslany;

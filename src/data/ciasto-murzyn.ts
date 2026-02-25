@@ -15,7 +15,7 @@ const ciastoMurzyn: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 3 , unit: "szt"},
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "kostka" },
         { ingredient: iGRN.flour, amount: 2, unit: "szklanka" },
         { ingredient: iOTH.sugar, amount: 1, unit: "szklanka" },
@@ -40,7 +40,7 @@ const ciastoMurzyn: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "czekolada", "biszkopt"],
+  keyWords: ["ciasto", "biszkopt",'xxx'],
 };
 
 export default ciastoMurzyn;

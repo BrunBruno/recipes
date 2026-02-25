@@ -14,7 +14,7 @@ const gulaszPoWegiersku: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "Gulasz",
+      title: "",
       items: [
         { ingredient: iMET.stew_beef, amount: 500 },
         { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
@@ -33,7 +33,7 @@ const gulaszPoWegiersku: Recipe = {
   ],
   steps: [
     {
-      title: "Gulasz",
+      title: "",
       steps: [
         "Mięso wołowe pokrój w kostkę.",
         "Na patelni lub w garnku rozgrzej niewielką ilość oleju i podsmaż mięso, aż się zarumieni.",
@@ -51,7 +51,7 @@ const gulaszPoWegiersku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "duszone"],
+  keyWords: ["wołowina", "sos"],
 };
 
 export default gulaszPoWegiersku;

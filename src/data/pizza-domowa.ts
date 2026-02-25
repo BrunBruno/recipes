@@ -24,10 +24,10 @@ const pizzaDomowa: Recipe = {
         { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
         { ingredient: iOTH.sugar, amount: 0.5, unit: "łyżeczka" },
         { ingredient: iSPC.herbes_de_provence, amount: 2, unit: "łyżka" },
-        { ingredient: iSAU.tomato_passata, amount: 100, },
+        { ingredient: iSAU.tomato_passata, amount: 100 },
         { ingredient: iMET.salami, amount: 50, unit: "g" },
         { ingredient: iVEG.olives, amount: 20, unit: "g" },
-        { ingredient: iVEG.onion, amount: 30,  },
+        { ingredient: iVEG.onion, amount: 30 },
       ],
     },
   ],
@@ -46,7 +46,7 @@ const pizzaDomowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "ser", "sos", "włoskie", "fast food"],
+  keyWords: ["ciasto", "ser", "sos"],
 };
 
 export default pizzaDomowa;

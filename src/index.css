@@ -89,6 +89,7 @@ body::-webkit-scrollbar {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .toggle-search-btn svg {
   width: 1.8rem;
 }
@@ -106,6 +107,7 @@ body::-webkit-scrollbar {
   padding: 0 0.5rem;
   cursor: pointer;
 }
+
 .recipe-search-label svg {
   height: 1.6rem;
 }
@@ -242,6 +244,7 @@ body::-webkit-scrollbar {
   padding: 0.5rem;
   border: solid 2px;
 }
+
 .card-warning {
   position: absolute;
   top: -0.6rem;
@@ -279,7 +282,6 @@ body::-webkit-scrollbar {
 .recipe-details-params {
   position: absolute;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(6, 1fr);
   z-index: 30;
   padding: 0.2rem;
@@ -324,13 +326,13 @@ body::-webkit-scrollbar {
   content: "por.";
 }
 .recipe-param:nth-child(4)::after {
-  content: "fat";
+  content: "tłus";
 }
 .recipe-param:nth-child(5)::after {
-  content: "carb";
+  content: "węgl";
 }
 .recipe-param:nth-child(6)::after {
-  content: "prot";
+  content: "biał";
 }
 
 .recipe-param > span {
@@ -382,7 +384,6 @@ body::-webkit-scrollbar {
   top: 0;
   height: 260px;
   width: 100%;
-
   object-fit: cover;
   opacity: 0.85;
   filter: saturate(1.2);
@@ -422,6 +423,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 0.5rem;
 }
+
 .image-indicator {
   width: 0.8rem;
   height: 0.8rem;
@@ -429,6 +431,7 @@ body::-webkit-scrollbar {
   background-color: #111111;
   box-shadow: 0 0 1rem #000;
 }
+
 .image-indicator.active {
   background-color: #20c997;
 }

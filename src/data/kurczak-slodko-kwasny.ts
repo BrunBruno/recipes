@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak w Sosie Słodko-Kwaśnym",
   type: "dinner",
-  images: [""],
+  images: ["kurczak-slodko-kwasny.jpg"],
   time: 30,
   portions: 3,
   ingredients: [
@@ -35,7 +35,7 @@ const kurczakSlodkoKwasny: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "sos", "azjatyckie"],
+  keyWords: ["kurczak", "ryż", "xxx"],
 };
 
 export default kurczakSlodkoKwasny;

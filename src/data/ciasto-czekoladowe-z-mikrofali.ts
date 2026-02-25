@@ -38,7 +38,7 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "mikrofala"],
+  keyWords: ["ciasto"],
 };
 
 export default ciastoCzekoladoweZMikrofali;

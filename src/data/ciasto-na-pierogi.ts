@@ -39,7 +39,7 @@ const ciastoNaPierogi: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "gotowane"],
+  keyWords: ["ciasto"],
 };
 
 export default ciastoNaPierogi;

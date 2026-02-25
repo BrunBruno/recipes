@@ -43,7 +43,7 @@ const biszkopciki: Recipe = {
     //   ],
     // },
   ],
-  keyWords: ["ciasto", "słodkie", "biszkopt"],
+  keyWords: ["ciasto", "biszkopt"],
 };
 
 export default biszkopciki;

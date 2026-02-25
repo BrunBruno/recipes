@@ -36,7 +36,7 @@ const sandwichRecipe: Recipe = {
       ],
     },
   ],
-  keyWords: ["tost", "mięso", "ser", "xxx"],
+  keyWords: ["pieczywo", "ser", "xxx"],
 };
 
 export default sandwichRecipe;

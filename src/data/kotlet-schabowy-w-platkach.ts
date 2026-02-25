@@ -39,7 +39,7 @@ const kotletySchaboweWPlatkach: Recipe = {
     },
   ],
 
-  keyWords: ["schab", "mięso", "panierowane", "wieprzowina"],
+  keyWords: ["wieprzowina"],
 };
 
 export default kotletySchaboweWPlatkach;

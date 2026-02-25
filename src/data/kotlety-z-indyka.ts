@@ -39,7 +39,7 @@ const kotletyZIndyka: Recipe = {
       ],
     },
   ],
-  keyWords: ["indyk", "panierowane", "smażone", "mięso"],
+  keyWords: ["indyk"],
 };
 
 export default kotletyZIndyka;

@@ -1,4 +1,4 @@
-import type { IngredientType, mealType, Recipe } from "./types";
+import type { IngredientType, KeyWord, mealType, Recipe } from "./types";
 
 export const mealTypesData: Record<mealType, { label: string; color: string }> =
   {
@@ -149,4 +149,68 @@ export const calculateRecipeNutrients = (
   }
 
   return [Math.round(totalFat), Math.round(totalCarb), Math.round(totalProt)];
+};
+
+export const keywordAliases: Record<KeyWord, string[]> = {
+  xxx: ["xxx"],
+
+  ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
+  deser: ["deser", "desery", "słodkie", "na słodko"],
+  biszkopt: ["biszkopt", "biszkopty", "biszkoptowy", "biszkoptowa"],
+  wołowina: ["wołowina", "wołowe", "wołowiny", "befsztyk", "stek"],
+  wieprzowina: [
+    "wieprzowina",
+    "wieprzowe",
+    "wieprzowiny",
+    "schab",
+    "karkówka",
+    "boczek",
+  ],
+  kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczaczek", "drób"],
+  indyk: ["indyk", "indyka", "indycze"],
+  makaron: ["makaron", "makarony", "pasta", "spaghetti"],
+  ryż: ["ryż", "ryżu", "ryżowy", "ryżowa"],
+  ziemniak: [
+    "ziemniak",
+    "ziemniaki",
+    "ziemniaczana",
+    "ziemniaczany",
+    "kartofel",
+    "kartofle",
+    "pyra",
+    "pyry",
+  ],
+  jajko: ["jajko", "jajka", "jaja", "jajeczne"],
+  naleśnik: ["naleśnik", "naleśniki", "naleśnikowy", "naleśnikowa"],
+  owoce: ["owoce", "owoc", "owocowy", "owocowa"],
+  warzywa: [
+    "warzywa",
+    "warzywo",
+    "warzywny",
+    "warzywna",
+    "jarzyny",
+    "jarzynowy",
+  ],
+  sos: ["sos", "sosy", "sosik", "polewa", "dressing"],
+  krem: ["krem", "kremowy", "kremowa", "kremówka", "masa"],
+  ser: ["ser", "sery", "serowy", "serowa", "sernik", "twaróg"],
+  sałatka: ["sałatka", "sałatki", "salatka", "salatki", "mix sałat"],
+  pieczywo: ["pieczywo", "pieczywa", "chleb", "chleby", "bułka", "bułki"],
+  ryba: ["ryba", "ryby", "owoce morza"],
+  zupa: ["zupa", "zupy", "zupka", "zupki", "krem", "zupa krem"],
+};
+
+export const countIngredientUsage = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    recipe.ingredients.forEach((group) => {
+      group.items.forEach((item) => {
+        const key = item.ingredient.name;
+        usage[key] = (usage[key] ?? 0) + 1;
+      });
+    });
+  });
+
+  return usage;
 };

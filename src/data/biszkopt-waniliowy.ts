@@ -16,7 +16,7 @@ const biszkoptWaniliowy: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 3 , unit: "szt"},
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iSPC.salt, amount: 1, unit: "g" },
         { ingredient: iOTH.sugar, amount: 90, unit: "g" },
         { ingredient: iGRN.flour, amount: 90, unit: "g" },
@@ -27,7 +27,7 @@ const biszkoptWaniliowy: Recipe = {
     },
   ],
   steps: [],
-  keyWords: ["ciasto", "słodkie", "biszkopt", "wanilia"],
+  keyWords: ["ciasto", "biszkopt"],
 };
 
 export default biszkoptWaniliowy;

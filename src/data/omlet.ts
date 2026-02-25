@@ -35,7 +35,7 @@ const omlet: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "smażone"],
+  keyWords: ["jajko"],
 };
 
 export default omlet;

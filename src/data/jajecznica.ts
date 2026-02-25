@@ -41,7 +41,7 @@ const jajecznica: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "smażone", "xxx"],
+  keyWords: ["jajko", "xxx"],
 };
 
 export default jajecznica;

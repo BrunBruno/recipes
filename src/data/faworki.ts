@@ -14,24 +14,16 @@ const faworki: Recipe = {
   portions: 8,
   ingredients: [
     {
-      title: "Faworki",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 320, unit: "g" },
-        { ingredient: iMET.egg, amount: 4 , unit: "szt"},
+        { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iOTH.powdered_sugar, amount: 1, unit: "łyżka" },
         { ingredient: iDIR.cream_18, amount: 5, unit: "łyżka" },
         { ingredient: iOTH.spirit, amount: 2, unit: "łyżeczka" },
-
+        { ingredient: iFAT.rendered_lard, amount: 2, unit: "kostka" },
         { ingredient: iSPC.salt },
       ],
-    },
-    {
-      title: "Do smażenia",
-      items: [
-        { ingredient: iFAT.rendered_lard, amount: 2, unit: "kostka" },
-        { ingredient: iFAT.oil, amount: 400, unit: "ml" },
-      ],
-      excludeFromCalc: true,
     },
   ],
   steps: [
@@ -55,7 +47,7 @@ const faworki: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "smażone"],
+  keyWords: ["ciasto"],
 };
 
 export default faworki;

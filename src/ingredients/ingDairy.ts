@@ -48,7 +48,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   },
 
   cream_12: {
-    name: "Śmietana",
+    name: "Śmietana 12%",
     type: "dir",
     kcalPer100g: 136,
     unitWeights: {

@@ -42,7 +42,7 @@ const kotletyZKurczaka: Recipe = {
   ],
   steps: [
     {
-      title: "Przygotowanie kotletów",
+      title: "",
       steps: [
         "Kurczaka pokrój na małe kotleciki.",
         "Wbij jajko do garnka i rozbełtaj.",
@@ -62,7 +62,7 @@ const kotletyZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "smażone"],
+  keyWords: ["kurczak"],
 };
 
 export default kotletyZKurczaka;

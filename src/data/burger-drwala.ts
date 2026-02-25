@@ -16,7 +16,7 @@ const burgerDrwala: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Burgery",
+      title: "",
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
         { ingredient: iMET.bacon_slices, amount: 8, unit: "plaster" },
@@ -36,7 +36,7 @@ const burgerDrwala: Recipe = {
       ],
     },
     {
-      title: "Sos",
+      title: "Sosy",
       items: [
         { ingredient: iSAU.ketchup, amount: 1, unit: "łyżka" },
         { ingredient: iSAU.mustard, amount: 3, unit: "łyżka" },
@@ -71,7 +71,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "fast food", "smażone", "panierowane"],
+  keyWords: ["wołowina", "ser", "pieczywo"],
 };
 
 export default burgerDrwala;

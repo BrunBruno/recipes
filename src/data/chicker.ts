@@ -13,6 +13,14 @@ const chicker: Recipe = {
   portions: 2,
   ingredients: [
     {
+      title: "",
+      items: [
+        { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
+        { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
+        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
+      ],
+    },
+     {
       title: "Sosy",
       items: [
         { ingredient: iSAU.ketchup, amount: 1.5, unit: "łyżeczka" },
@@ -20,14 +28,6 @@ const chicker: Recipe = {
         { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżeczka" },
         { ingredient: iSAU.sriracha, amount: 2, unit: "łyżeczka" },
         { ingredient: iOTH.honey, amount: 0.5, unit: "łyżeczka" },
-      ],
-    },
-    {
-      title: "Chickery",
-      items: [
-        { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
-        { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
-        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
       ],
     },
   ],
@@ -49,7 +49,7 @@ const chicker: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "fast food", "smażone"],
+  keyWords: ["pieczywo", "kurczak"],
 };
 
 export default chicker;

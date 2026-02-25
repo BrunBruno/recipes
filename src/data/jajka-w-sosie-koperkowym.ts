@@ -15,7 +15,7 @@ const jajkaWSosieKoperkowym: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Jajka i sos",
+      title: "",
       items: [
         { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
@@ -37,7 +37,7 @@ const jajkaWSosieKoperkowym: Recipe = {
   ],
   steps: [
     {
-      title: "Przygotowanie jajek i sosu",
+      title: "",
       steps: [
         "Jajka ugotuj na twardo, ostudź, obierz i odstaw.",
         "W rondelku rozpuść masło, dodaj mąkę i zrób jasną zasmażkę.",

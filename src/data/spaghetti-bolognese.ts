@@ -36,7 +36,7 @@ const spaghettiBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "mięso", "sos"],
+  keyWords: ["makaron", "wołowina"],
 };
 
 export default spaghettiBolognese;

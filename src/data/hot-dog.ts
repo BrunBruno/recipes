@@ -38,7 +38,7 @@ const hotHog: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "fast food", "xxx"],
+  keyWords: ["pieczywo", "xxx"],
 };
 
 export default hotHog;

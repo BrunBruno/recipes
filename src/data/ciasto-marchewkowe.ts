@@ -21,7 +21,7 @@ const ciastoMarchewkowe: Recipe = {
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iOTH.sugar, amount: 200, unit: "g" },
         { ingredient: iFAT.oil, amount: 150, unit: "ml" },
-        { ingredient: iVEG.carrot, amount: 200,  },
+        { ingredient: iVEG.carrot, amount: 200 },
         { ingredient: iFRT.pineapple, amount: 75, unit: "g" },
         { ingredient: iOTH.walnuts, amount: 50, unit: "g" },
         { ingredient: iOTH.coconut_flakes, amount: 50, unit: "g" },
@@ -68,7 +68,7 @@ const ciastoMarchewkowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "słodkie", "biszkopt"],
+  keyWords: ["ciasto", "biszkopt"],
 };
 
 export default ciastoMarchewkowe;

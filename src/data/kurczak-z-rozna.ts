@@ -39,7 +39,7 @@ const kurczakZRozna: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "rożen", "pieczone", "mięso"],
+  keyWords: ["kurczak"],
 };
 
 export default kurczakZRozna;

@@ -49,7 +49,7 @@ const roladaSzpinakowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "tortilla"],
+  keyWords: ["ciasto", "naleśnik"],
 };
 
 export default roladaSzpinakowa;

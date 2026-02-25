@@ -12,7 +12,7 @@ const palkiBarbecue: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "Pałki",
+      title: "",
       items: [
         { ingredient: iMET.chicken_drums, amount: 2, unit: "opak" },
         { ingredient: iSAU.barbecue_sauce },
@@ -32,7 +32,7 @@ const palkiBarbecue: Recipe = {
   ],
   steps: [
     {
-      title: "Przygotowanie pałek",
+      title: "",
       steps: [
         "Ułóż pałki w naczyniu żaroodpornym.",
         "Posyp kurczaka mieszanką przypraw: słodką, ostrą i wędzoną papryką oraz czosnkiem granulowanym.",
@@ -52,7 +52,7 @@ const palkiBarbecue: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "pieczone"],
+  keyWords: ["kurczak"],
 };
 
 export default palkiBarbecue;

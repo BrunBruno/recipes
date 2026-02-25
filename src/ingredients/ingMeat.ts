@@ -15,7 +15,6 @@ type IngId =
   | "ground_pork"
   | "stew_pork"
   | "pork_tenderloin"
-  | "beef"
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
@@ -179,16 +178,6 @@ export const iMET: Record<IngId, IngredientItem> = {
   },
 
   //
-
-  beef: {
-    name: "Mięso wołowe",
-    type: "met",
-    kcalPer100g: 215,
-    unitWeights: {
-      opak: 500,
-    },
-    nutrientsPer100g: [15, 0, 21],
-  },
 
   stew_beef: {
     name: "Mięso na gulasz (wołowe)",

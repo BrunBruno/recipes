@@ -14,7 +14,7 @@ const kotletPoGoralsku: Recipe = {
   portions: 5,
   ingredients: [
     {
-      title: "Kotlety Schabowe",
+      title: "",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
         { ingredient: iMET.bacon_slices, amount: 10, unit: "plaster" },
@@ -28,7 +28,7 @@ const kotletPoGoralsku: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150",},
+        { ingredient: iVEG.potato, amount: "5 × 150" },
         { ingredient: iVEG.sauerkraut, amount: 600 },
         { ingredient: iFAT.butter, amount: 20 },
         { ingredient: iSPC.salt },
@@ -39,7 +39,7 @@ const kotletPoGoralsku: Recipe = {
   ],
   steps: [
     {
-      title: "Kotlety Schabowe",
+      title: "",
       steps: [
         "Plastry schabu rozbij tłuczkiem na cienkie kotlety.",
         "Oprósz solą i pieprzem z obu stron.",
@@ -60,7 +60,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "schab", "smażone", "panierowane"],
+  keyWords: ["wieprzowina"],
 };
 
 export default kotletPoGoralsku;

@@ -13,7 +13,7 @@ const karkowkaDuszona: Recipe = {
   portions: 5,
   ingredients: [
     {
-      title: "Karkówka",
+      title: "",
       items: [
         { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
         { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
@@ -26,7 +26,7 @@ const karkowkaDuszona: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150",  },
+        { ingredient: iVEG.potato, amount: "5 × 150" },
         { ingredient: iVEG.coleslaw, amount: "5 × 200", unit: "g" },
       ],
       excludeFromCalc: true,
@@ -34,7 +34,7 @@ const karkowkaDuszona: Recipe = {
   ],
   steps: [
     {
-      title: "Karkówka",
+      title: "",
       steps: [
         "Karkówkę posól, popieprz i dokładnie natrzyj musztardą.",
         "Krótko podsmaż mięso na patelni z olejem.",
@@ -53,7 +53,7 @@ const karkowkaDuszona: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "duszone"],
+  keyWords: ["wieprzowina"],
 };
 
 export default karkowkaDuszona;

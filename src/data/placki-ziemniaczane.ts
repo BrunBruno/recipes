@@ -40,7 +40,7 @@ const plackiZiemniaczane: Recipe = {
       ],
     },
   ],
-  keyWords: ["ziemniak", "smażone"],
+  keyWords: ["ziemniak"],
 };
 
 export default plackiZiemniaczane;

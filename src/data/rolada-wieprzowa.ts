@@ -47,7 +47,7 @@ const roladaWieprzowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "mięso", "pieczone"],
+  keyWords: ["wieprzowina"],
 };
 
 export default roladaWieprzowa;

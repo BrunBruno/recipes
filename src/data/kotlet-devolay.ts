@@ -13,6 +13,16 @@ const kotletDevolay: Recipe = {
   portions: 4,
   ingredients: [
     {
+      title: "",
+      items: [
+        { ingredient: iMET.chicken_breast, amount: 900 },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
+        { ingredient: iGRN.flour },
+        { ingredient: iGRN.breadcrumbs },
+        { ingredient: iFAT.oil },
+      ],
+    },
+    {
       title: "Masło czosnkowo-ziołowe",
       items: [
         { ingredient: iFAT.butter, amount: 100 },
@@ -24,19 +34,9 @@ const kotletDevolay: Recipe = {
       ],
     },
     {
-      title: "Kotlety devolay",
+      title: "Dodatki",
       items: [
-        { ingredient: iMET.chicken_breast, amount: 900 },
-        { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iGRN.flour },
-        { ingredient: iGRN.breadcrumbs },
-        { ingredient: iFAT.oil },
-      ],
-    },
-    {
-      title: "Składniki na przykładowe podanie",
-      items: [
-        { ingredient: iVEG.potato, amount: "4 × 200",  },
+        { ingredient: iVEG.potato, amount: "4 × 200" },
         { ingredient: iVEG.frozen_vegetable_mix, amount: 300, unit: "g" },
       ],
       excludeFromCalc: true,
@@ -75,7 +75,7 @@ const kotletDevolay: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "panierowane", "smażone"],
+  keyWords: ["kurczak"],
 };
 
 export default kotletDevolay;

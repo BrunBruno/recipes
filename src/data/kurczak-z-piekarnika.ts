@@ -53,7 +53,7 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "pieczone", "mięso", "xxx"],
+  keyWords: ["kurczak",  "xxx"],
 };
 
 export default kurczakZPiekarnika;

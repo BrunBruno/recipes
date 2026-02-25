@@ -13,7 +13,7 @@ const ziemniakiZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iVEG.potato, amount: 1000,  },
+        { ingredient: iVEG.potato, amount: 1000 },
         { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
         { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
         { ingredient: iSPC.caraway, amount: 0.5, unit: "łyżeczka" },
@@ -34,7 +34,7 @@ const ziemniakiZPiekarnika: Recipe = {
         "W misce połącz olej z przyprawami, kminkiem oraz drobno posiekanym czosnkiem.",
         "Dokładnie obtocz ziemniaki w marynacie.",
         "Ułóż ziemniaki na blasze wyłożonej papierem do pieczenia i dodaj gałązki świeżego tymianku.",
-        "Piecz w piekarniku nagrzanym do 180–200°C przez około 30 minut, 1–2 razy przewracając ziemniaki w trakcie pieczenia.",
+        "Piecz w piekarniku nagrzanym do 180 - 200°C przez około 30 minut, 1 - 2 razy przewracając ziemniaki w trakcie pieczenia.",
         "Podawaj gorące, bezpośrednio po upieczeniu.",
       ],
     },
@@ -50,7 +50,7 @@ const ziemniakiZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["ziemniak", "pieczone", "piekarnik", "air fryer"],
+  keyWords: ["ziemniak"],
 };
 
 export default ziemniakiZPiekarnika;
