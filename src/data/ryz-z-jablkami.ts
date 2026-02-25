@@ -18,7 +18,7 @@ const ryzZJablkami: Recipe = {
         { ingredient: iGRN.rice, amount: 100 },
         { ingredient: iFRT.apple, amount: 2, unit: "szt" },
         { ingredient: iOTH.sugar, amount: 2, unit: "łyżeczka" },
-        { ingredient: iFAT.butter, amount: 3, unit: "g" },
+        { ingredient: iFAT.butter, amount: 3 },
         { ingredient: iSPC.cinnamon },
         { ingredient: iSPC.salt },
       ],
@@ -37,7 +37,7 @@ const ryzZJablkami: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryż",  "owoce", "xxx"],
+  keyWords: ["ryż", "owoce", "xxx"],
 };
 
 export default ryzZJablkami;

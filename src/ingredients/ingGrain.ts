@@ -118,7 +118,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
   //
 
   kaiser_roll: {
-    name: "Kajzerki",
+    name: "Kajzerka",
     type: "grn",
     kcalPer100g: 275,
     unitWeights: {

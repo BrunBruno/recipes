@@ -13,17 +13,34 @@ const musMalinowyGanache: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iDIR.cream_36, amount: 170, unit: "g" },
-        { ingredient: iFRT.raspberries, amount: 200, unit: "g" },
-        { ingredient: iOTH.white_chocolate, amount: 100, unit: "g" },
+        { ingredient: iDIR.cream_36, amount: 170 },
+        { ingredient: iFRT.raspberries, amount: 200 },
+        { ingredient: iOTH.white_chocolate, amount: 100 },
         { ingredient: iFRT.lemon_juice, amount: 5, unit: "ml" },
-        { ingredient: iOTH.gelatin, amount: 6, unit: "g" },
+        { ingredient: iOTH.gelatin, amount: 6 },
         { ingredient: iOTH.water, amount: 30, unit: "ml" },
       ],
     },
   ],
-  steps: [],
-  keyWords: ["owoce"],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Żelatynę zalej zimną wodą i odstaw na około 10 minut do napęcznienia.",
+        "Maliny umieść w garnku i zagotuj, cały czas mieszając, aż zaczną się rozpadać.",
+        "Zdejmij maliny z ognia.",
+        "Do gorących malin dodaj napęczniałą żelatynę i mieszaj do całkowitego rozpuszczenia.",
+        "Gdy żelatyna się rozpuści, dodaj białą czekoladę.",
+        "Odczekaj około 2 minuty, następnie dokładnie wymieszaj do jej rozpuszczenia.",
+        "Masę malinowo-czekoladową wystudź do około 30°C.",
+        "Schłodzoną śmietankę ubij na 3/4 - nie do całkowitej sztywności.",
+        "Delikatnie połącz masę malinową z ubitą śmietanką, mieszając do uzyskania jednolitego musu.",
+        "Mus wylej na blat biszkoptu i przykryj drugim blatem.",
+        "Złożony tort schładzaj w lodówce przez minimum 6 godzin.",
+      ],
+    },
+  ],
+  keyWords: ["ciasto", "owoce"],
 };
 
 export default musMalinowyGanache;

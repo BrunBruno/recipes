@@ -12,15 +12,15 @@ const gotowanyKurczak: Recipe = {
   type: "dinner",
   images: [""],
   time: 45,
-  portions: 2,
+  portions: 3,
   ingredients: [
     {
       title: "",
       items: [
         { ingredient: iMET.chicken_thigh, amount: 600 },
         { ingredient: iFAT.oil },
-        { ingredient: iDIR.cream_18, amount: 60, unit: "g" },
-        { ingredient: iGRN.flour, amount: 5, unit: "g" },
+        { ingredient: iDIR.cream_18, amount: 60 },
+        { ingredient: iGRN.flour, amount: 5 },
         { ingredient: iSPC.wild_garlic },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
@@ -29,6 +29,16 @@ const gotowanyKurczak: Recipe = {
         { ingredient: iSPC.maggi },
         { ingredient: iOTH.water },
       ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.potato, amount: "3 × 150" },
+        { ingredient: iVEG.pickled_cucumber, amount: 6, unit: "szt" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+      excludeFromCalc: true,
     },
   ],
   steps: [
@@ -46,6 +56,15 @@ const gotowanyKurczak: Recipe = {
         "Wlej do rondla, ciągle mieszając, aby zagęścić sos.",
         "Dodaj śmietanę według smaku i posiekany szczypiorek.",
         "Gotuj jeszcze chwilę, dopraw ewentualnie Maggi i podawaj.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Ugotowanego lub duszonego kurczaka ułóż na talerzu.",
+        "Podaj z porcją ugotowanych ziemniaków.",
+        "Mięso i ziemniaki polej przygotowanym sosem z rondla.",
+        "Obok dodaj ogórki kiszone jako dodatek.",
       ],
     },
   ],

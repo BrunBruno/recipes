@@ -12,10 +12,13 @@ type IngId =
   | "garlic"
   | "celery_root"
   | "red_onion"
+  | "radish"
   | "lettuce"
   | "chives"
   | "parsley"
   | "frozen_spinach"
+  | "frozen_fries"
+  | "frozen_vegetable_mix"
   | "canned_tomatoes"
   | "canned_corn"
   | "canned_peas"
@@ -23,12 +26,10 @@ type IngId =
   | "sauerkraut"
   | "fried_onion"
   | "olives"
-  | "oven_fries"
   | "coleslaw"
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
-  | "frozen_vegetable_mix"
   | "mushrooms";
 
 export const iVEG: Record<IngId, IngredientItem> = {
@@ -143,6 +144,17 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 9, 1.1],
   },
 
+  radish: {
+    name: "Rzodkiewka",
+    type: "veg",
+    kcalPer100g: 16,
+    unitWeights: {
+      szt: 20,
+      opak: 150,
+    },
+    nutrientsPer100g: [0.1, 3.4, 0.7],
+  },
+
   //
 
   lettuce: {
@@ -178,6 +190,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.8, 6.3, 3],
   },
 
+  //
+
   frozen_spinach: {
     name: "Mrożony szpinak",
     type: "veg",
@@ -186,6 +200,23 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 450,
     },
     nutrientsPer100g: [0.4, 3.6, 2.9],
+  },
+
+  frozen_fries: {
+    name: "Frytki z piekarnika",
+    type: "pot",
+    kcalPer100g: 150,
+    unitWeights: {
+      opak: 1000,
+    },
+    nutrientsPer100g: [5, 25, 3],
+  },
+
+  frozen_vegetable_mix: {
+    name: "Mrożona mieszanka warzyw",
+    type: "veg",
+    kcalPer100g: 40,
+    nutrientsPer100g: [0.5, 7, 2.5],
   },
 
   //
@@ -261,16 +292,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 6, 0.8],
   },
 
-  oven_fries: {
-    name: "Frytki z piekarnika",
-    type: "pot",
-    kcalPer100g: 150,
-    unitWeights: {
-      opak: 1000,
-    },
-    nutrientsPer100g: [5, 25, 3],
-  },
-
   coleslaw: {
     name: "Colesław",
     type: "veg",
@@ -310,13 +331,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.1, 5.5, 1.2],
-  },
-
-  frozen_vegetable_mix: {
-    name: "Mrożona mieszanka warzyw",
-    type: "veg",
-    kcalPer100g: 40,
-    nutrientsPer100g: [0.5, 7, 2.5],
   },
 
   //

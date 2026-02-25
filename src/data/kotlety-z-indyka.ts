@@ -2,6 +2,7 @@ import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
 import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kotletyZIndyka: Recipe = {
@@ -24,6 +25,16 @@ const kotletyZIndyka: Recipe = {
         { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
       ],
     },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.potato, amount: "4 × 150" },
+        { ingredient: iVEG.fried_beets, amount: "4 × 150" },
+        { ingredient: iSPC.salt },
+        { ingredient: iSPC.black_pepper },
+      ],
+      excludeFromCalc: true,
+    },
   ],
   steps: [
     {
@@ -36,6 +47,15 @@ const kotletyZIndyka: Recipe = {
         "Rozgrzej olej na patelni na średnim ogniu.",
         "Smaż kotlety po 4 - 5 minut z każdej strony, aż będą złociste i dobrze wysmażone w środku.",
         "Podawaj gorące z ulubionymi dodatkami, np. ziemniakami, surówką lub warzywami.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Usmażone kotlety z indyka ułóż na talerzu.",
+        "Podaj z porcją ugotowanych ziemniaków.",
+        "Obok wyłóż buraczki jako dodatek warzywny.",
+        "Całość możesz posypać świeżo mielonym pieprzem lub udekorować natką pietruszki.",
       ],
     },
   ],

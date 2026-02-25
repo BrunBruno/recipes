@@ -35,8 +35,8 @@ const gulaszWieprzowy: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: "3 × 250", unit: "g" },
-        { ingredient: iVEG.fried_beets, amount: "3 × 150", unit: "g" },
+        { ingredient: iGRN.gnocchi, amount: "3 × 250" },
+        { ingredient: iVEG.fried_beets, amount: "3 × 150" },
       ],
       excludeFromCalc: true,
     },

@@ -27,6 +27,7 @@ type IngId =
   | "maggi"
   | "vegetable_seasoning"
   | "potato_seasoning"
+  | "gyros_spice"
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
   | "knorr_chinese_fix"
@@ -277,6 +278,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżka: 10,
       łyżeczka: 5,
     },
+  },
+
+  gyros_spice: {
+    name: "Przyprawa gyros",
+    type: "spc",
+    kcalPer100g: 280,
+    unitWeights: {
+      łyżka: 10,
+      łyżeczka: 3,
+    },
+    nutrientsPer100g: [8, 45, 8],
   },
 
   knorr_bouillon_cube: {

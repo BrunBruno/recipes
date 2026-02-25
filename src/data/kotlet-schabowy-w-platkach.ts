@@ -2,6 +2,7 @@ import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
 import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kotletySchaboweWPlatkach: Recipe = {
@@ -16,14 +17,24 @@ const kotletySchaboweWPlatkach: Recipe = {
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
-        { ingredient: iGRN.cornflakes, amount: 160, unit: "g" },
+        { ingredient: iGRN.cornflakes, amount: 160 },
         { ingredient: iFAT.oil },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iVEG.frozen_fries, amount: "5 × 150" },
+        {
+          ingredient: iVEG.beets_whole_vinegar,
+          amount: "5 × 100",
+          unit: "szt",
+        },
+      ],
+    },
   ],
-
   steps: [
     {
       title: "",
@@ -37,8 +48,15 @@ const kotletySchaboweWPlatkach: Recipe = {
         "Po usmażeniu odsącz na ręczniku papierowym i podawaj na ciepło.",
       ],
     },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Usmażone kotlety ułóż na talerzu.",
+        "Obok wyłóż porcję frytek z piekarnika.",
+        "Dodaj buraczki w occie jako dodatek warzywny.",
+      ],
+    },
   ],
-
   keyWords: ["wieprzowina"],
 };
 

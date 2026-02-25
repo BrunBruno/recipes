@@ -13,8 +13,8 @@ const kremMaslany: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iFAT.butter, amount: 200, unit: "g" },
-        { ingredient: iDIR.condensed_milk, amount: 200, unit: "g" },
+        { ingredient: iFAT.butter, amount: 200 },
+        { ingredient: iDIR.condensed_milk, amount: 200 },
         { ingredient: iOTH.vanilla_extract, amount: "1-2", unit: "łyżeczka" },
         { ingredient: iOTH.food_coloring },
       ],

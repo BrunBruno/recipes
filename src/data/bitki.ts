@@ -17,7 +17,7 @@ const bitki: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.pork_tenderloin, amount: 600, unit: "g" },
+        { ingredient: iMET.pork_tenderloin, amount: 600 },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
         { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
@@ -37,7 +37,7 @@ const bitki: Recipe = {
       title: "Dodatki",
       items: [
         { ingredient: iVEG.potato, amount: "4 × 200" },
-        { ingredient: iVEG.beets_shredded, amount: "4 × 150", unit: "g" },
+        { ingredient: iVEG.beets_shredded, amount: "4 × 150" },
         { ingredient: iSPC.salt },
       ],
       excludeFromCalc: true,
