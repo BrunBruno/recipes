@@ -40,7 +40,6 @@ const bitki: Recipe = {
         { ingredient: iVEG.beets_shredded, amount: "4 × 150" },
         { ingredient: iSPC.salt },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

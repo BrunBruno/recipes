@@ -27,7 +27,6 @@ const jajkoSadzone: Recipe = {
         { ingredient: iVEG.potato, amount: 150 },
         { ingredient: iVEG.canned_peas, amount: 100 },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

@@ -27,7 +27,6 @@ const jajecznica: Recipe = {
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.chives },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

@@ -43,6 +43,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 17, 2],
   },
 
+  frozen_fries: {
+    name: "Frytki z piekarnika",
+    type: "pot",
+    kcalPer100g: 150,
+    unitWeights: {
+      opak: 1000,
+    },
+    nutrientsPer100g: [5, 25, 3],
+  },
+
   onion: {
     name: "Cebula",
     type: "veg",
@@ -157,6 +167,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   //
 
+  olives: {
+    name: "Oliwki",
+    type: "veg",
+    kcalPer100g: 115,
+    unitWeights: {
+      szt: 5,
+    },
+    nutrientsPer100g: [11, 6, 0.8],
+  },
+
   lettuce: {
     name: "Sałata",
     type: "veg",
@@ -202,16 +222,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.4, 3.6, 2.9],
   },
 
-  frozen_fries: {
-    name: "Frytki z piekarnika",
-    type: "pot",
-    kcalPer100g: 150,
-    unitWeights: {
-      opak: 1000,
-    },
-    nutrientsPer100g: [5, 25, 3],
-  },
-
   frozen_vegetable_mix: {
     name: "Mrożona mieszanka warzyw",
     type: "veg",
@@ -223,7 +233,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   canned_tomatoes: {
     name: "Pomidory z puszki",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 21,
     unitWeights: {
       ml: 1,
@@ -234,7 +244,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   canned_corn: {
     name: "Kukurydza",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 86,
     unitWeights: {
       opak: 200,
@@ -244,7 +254,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   canned_peas: {
     name: "Groszek konserwowy",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 81,
     unitWeights: {
       opak: 250,
@@ -254,7 +264,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   pickled_cucumber: {
     name: "Ogórek kiszony",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 8,
     unitWeights: {
       szt: 60,
@@ -264,7 +274,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   sauerkraut: {
     name: "Kapusta kiszona",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 19,
     unitWeights: {
       opak: 400,
@@ -274,7 +284,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   fried_onion: {
     name: "Cebulka prażona",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 590,
     unitWeights: {
       łyżka: 10,
@@ -282,19 +292,9 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [44, 40, 6],
   }, //
 
-  olives: {
-    name: "Oliwki",
-    type: "veg",
-    kcalPer100g: 115,
-    unitWeights: {
-      szt: 5,
-    },
-    nutrientsPer100g: [11, 6, 0.8],
-  },
-
   coleslaw: {
     name: "Colesław",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 150,
     unitWeights: {
       opak: 250,
@@ -304,7 +304,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   fried_beets: {
     name: "Buraczki zasmażane",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 64,
     unitWeights: {
       opak: 500,
@@ -314,7 +314,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   beets_shredded: {
     name: "Buraczki wiórki",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 43,
     unitWeights: {
       opak: 500,
@@ -324,7 +324,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   beets_whole_vinegar: {
     name: "Buraczki całe z octu",
-    type: "veg",
+    type: "jar",
     kcalPer100g: 25,
     unitWeights: {
       szt: 15,

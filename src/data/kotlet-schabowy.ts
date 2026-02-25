@@ -39,7 +39,6 @@ const kotletSchabowy: Recipe = {
         { ingredient: iVEG.onion, amount: 1.25, unit: "szt" },
         { ingredient: iDIR.cream_18, amount: 10, unit: "łyżka" },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

@@ -29,10 +29,9 @@ const jajkaWSosieKoperkowym: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "2 × 150", },
+        { ingredient: iVEG.potato, amount: "2 × 150" },
         { ingredient: iVEG.pickled_cucumber, amount: "2 × 2", unit: "szt" },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

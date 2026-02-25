@@ -2,6 +2,8 @@ import type { IngredientItem } from "../types";
 
 type IngId =
   | "egg"
+  | "egg_yolk"
+  | "egg_white"
   | "chicken_breast"
   | "chicken_quarters"
   | "chicken_drums"
@@ -40,6 +42,26 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [10.9, 0.9, 12.4],
   },
 
+  egg_yolk: {
+    name: "Żółtko",
+    type: "egg",
+    kcalPer100g: 322,
+    unitWeights: {
+      szt: 17,
+    },
+    nutrientsPer100g: [16, 0.6, 16],
+  },
+
+  egg_white: {
+    name: "Białko",
+    type: "egg",
+    kcalPer100g: 52,
+    unitWeights: {
+      szt: 43,
+    },
+    nutrientsPer100g: [0.2, 0.7, 10.9],
+  },
+
   chicken_breast: {
     name: "Pierś z kurczaka",
     type: "met",
@@ -51,7 +73,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   },
 
   chicken_quarters: {
-    name: "Ćwiartki kurczaka",
+    name: "Ćwiartka kurczaka",
     type: "met",
     kcalPer100g: 190,
     unitWeights: {
@@ -234,7 +256,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   }, //
 
   bacon_slices: {
-    name: "Boczek",
+    name: "Boczek w plastrach",
     type: "met",
     kcalPer100g: 518,
     unitWeights: {

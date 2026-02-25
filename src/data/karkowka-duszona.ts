@@ -29,7 +29,6 @@ const karkowkaDuszona: Recipe = {
         { ingredient: iVEG.potato, amount: "5 × 150" },
         { ingredient: iVEG.coleslaw, amount: "5 × 200" },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

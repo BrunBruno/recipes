@@ -39,7 +39,6 @@ const kotletDevolay: Recipe = {
         { ingredient: iVEG.potato, amount: "4 × 200" },
         { ingredient: iVEG.frozen_vegetable_mix, amount: 300 },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

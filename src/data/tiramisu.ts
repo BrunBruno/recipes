@@ -36,7 +36,7 @@ const tiramisu: Recipe = {
       ],
     },
   ],
-  keyWords: ["deser",  "biszkopt"],
+  keyWords: ["deser", "biszkopt"],
 };
 
 export default tiramisu;

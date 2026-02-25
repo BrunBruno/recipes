@@ -27,6 +27,7 @@ export const ingredientTypeLabels: Record<IngredientType, string> = {
   pot: "Ziemniaki",
   nut: "Orzechy",
   hrb: "Zioła",
+  jar: "Przetwory",
   oth: "Inne",
 };
 
@@ -36,7 +37,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
   let totalKcal = 0;
 
   for (const group of recipe.ingredients) {
-    // if (group.excludeFromCalc) continue;
+    if (group.excludeFromCalc) continue;
 
     for (const item of group.items) {
       const { ingredient, amount, unit } = item;
@@ -59,7 +60,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
       if (!value || typeof value === "string") {
         if (ingredient.type === "fat")
-          grams = DEFAULT_FAT_GRAMS * recipe.portions; // ???
+          grams = DEFAULT_FAT_GRAMS * recipe.portions;
         else continue;
       } else {
         if (!unit) {
@@ -90,7 +91,7 @@ export const calculateRecipeNutrients = (
   let totalProt = 0;
 
   for (const group of recipe.ingredients) {
-    // if (group.excludeFromCalc) continue;
+    if (group.excludeFromCalc) continue;
 
     for (const item of group.items) {
       const { ingredient, amount, unit } = item;

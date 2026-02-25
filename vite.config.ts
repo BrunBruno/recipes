@@ -5,12 +5,3 @@ export default defineConfig({
   plugins: [react()],
   base: "/recipes/",
 });
-
-// export default defineConfig({
-//   plugins: [react()],
-//   server: {
-//     host: "192.168.1.16",
-//     port: 5173,
-//   },
-//   base: "/recipes/",
-// });

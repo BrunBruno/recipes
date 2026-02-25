@@ -32,7 +32,7 @@ const kurczakZPomidorem: Recipe = {
     },
     {
       title: "Dodatki",
-      excludeFromCalc: true,
+
       items: [
         { ingredient: iVEG.potato, amount: "3 × 150" },
         { ingredient: iFAT.butter, amount: 0.5, unit: "łyżeczka" },

@@ -16,6 +16,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
     kcalPer100g: 744,
     unitWeights: {
       kostka: 200,
+      łyżeczka: 4,
       łyżka: 14,
     },
     nutrientsPer100g: [82, 0.7, 0.7],

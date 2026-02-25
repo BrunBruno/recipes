@@ -34,7 +34,6 @@ const kotletPoGoralsku: Recipe = {
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
       ],
-      excludeFromCalc: true,
     },
   ],
   steps: [

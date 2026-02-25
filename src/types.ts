@@ -25,6 +25,7 @@ export type IngredientType =
   | "pot" // potatoes
   | "nut" // orzechy
   | "hrb" // herbs
+  | "jar" // preserves
   | "oth";
 
 export type UnitType =
