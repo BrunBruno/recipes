@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const maczanka: Recipe = {
   name: "Maczanka",
   type: "snack",
-  images: [""],
+  images: ["maczanka.jpg"],
   time: 15,
   portions: 1,
   ingredients: [
@@ -14,7 +14,8 @@ const maczanka: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.sausage, amount: 1, unit: "pęto" },
-        { ingredient: iFAT.butter, amount: 2, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 1, unit: "łyżeczka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
         { ingredient: iGRN.kaiser_roll, amount: 1, unit: "szt" },
       ],
     },

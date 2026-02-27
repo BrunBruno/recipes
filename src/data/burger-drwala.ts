@@ -11,7 +11,7 @@ import type { Recipe } from "../types";
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
-  images: ["burger-drwala.ts.jpeg"],
+  images: [""],
   time: 50,
   portions: 4,
   ingredients: [
@@ -23,7 +23,7 @@ const burgerDrwala: Recipe = {
         { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
         { ingredient: iDIR.lilliputian_cheese, amount: 350 },
         { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
-        { ingredient: iFAT.butter },
+        { ingredient: iFAT.clarified_butter },
         { ingredient: iFAT.oil },
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
         { ingredient: iGRN.breadcrumbs },
@@ -71,7 +71,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "ser", "pieczywo"],
+  keyWords: ["wołowina", "ser", "pieczywo", "xxx"],
 };
 
 export default burgerDrwala;

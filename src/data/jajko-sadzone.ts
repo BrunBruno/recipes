@@ -15,7 +15,7 @@ const jajkoSadzone: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
-        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżka" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.dill },

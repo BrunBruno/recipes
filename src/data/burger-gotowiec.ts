@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const gotowyBurger: Recipe = {
   name: "Burger Gotowiec",
   type: "snack",
-  images: ["gotowy-burger.jpg"],
+  images: [""],
   time: 30,
   portions: 2,
   ingredients: [
@@ -26,7 +26,7 @@ const gotowyBurger: Recipe = {
         { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },
         { ingredient: iSAU.mayonnaise, amount: 4, unit: "łyżeczka" },
         { ingredient: iSAU.ketchup, amount: 4, unit: "łyżeczka" },
-        { ingredient: iFAT.butter },
+        { ingredient: iFAT.clarified_butter },
       ],
     },
   ],

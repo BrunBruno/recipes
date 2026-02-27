@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
-  images: ["kotlety-z-kurczaka.jpg"],
+  images: [""],
   time: 25,
   portions: 3,
   ingredients: [

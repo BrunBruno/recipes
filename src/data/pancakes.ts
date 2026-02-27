@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
-  images: ["pancakes.jpg"],
+  images: [""],
   time: 20,
   portions: 3,
   ingredients: [
