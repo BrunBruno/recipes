@@ -9,7 +9,7 @@ const plackiZiemniaczane: Recipe = {
   name: "Placki Ziemniaczane",
   type: "snack",
   images: [""],
-  time: 25,
+  time: 30,
   portions: 2,
   ingredients: [
     {

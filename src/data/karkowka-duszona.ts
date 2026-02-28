@@ -9,7 +9,7 @@ const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
   images: [""],
-  time: 50,
+  time: 60,
   portions: 5,
   ingredients: [
     {

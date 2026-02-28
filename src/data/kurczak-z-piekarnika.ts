@@ -8,7 +8,7 @@ const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
   images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
-  time: 55,
+  time: 60,
   portions: 4,
   ingredients: [
     {

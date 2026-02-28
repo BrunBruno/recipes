@@ -71,7 +71,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "ser", "pieczywo", "xxx"],
+  keyWords: ["wołowina", "ser", "pieczywo"],
 };
 
 export default burgerDrwala;

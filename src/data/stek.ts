@@ -8,7 +8,7 @@ const stek: Recipe = {
   name: "Smażony Stek",
   type: "snack",
   images: [""],
-  time: 15,
+  time: 20,
   portions: 1,
   ingredients: [
     {

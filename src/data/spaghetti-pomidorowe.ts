@@ -9,7 +9,7 @@ const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
   images: [""],
-  time: 25,
+  time: 40,
   portions: 2,
   ingredients: [
     {

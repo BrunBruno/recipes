@@ -9,7 +9,7 @@ const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
   type: "salad",
   images: [""],
-  time: 25,
+  time: 40,
   portions: 8,
   ingredients: [
     {

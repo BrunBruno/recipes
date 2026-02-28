@@ -9,7 +9,7 @@ const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
   images: [""],
-  time: 25,
+  time: 30,
   portions: 3,
   ingredients: [
     {

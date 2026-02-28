@@ -8,7 +8,7 @@ const salatkaJarzynowa: Recipe = {
   name: "Sałatka Jarzynowa",
   type: "salad",
   images: [""],
-  time: 30,
+  time: 40,
   portions: 8,
   ingredients: [
     {

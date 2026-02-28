@@ -10,7 +10,7 @@ const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
   images: ["kurczak-z-pomidorem.jpg"],
-  time: 65,
+  time: 70,
   portions: 3,
   ingredients: [
     {

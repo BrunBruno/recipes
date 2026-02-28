@@ -9,7 +9,7 @@ const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
   type: "other",
   images: [""],
-  time: 10,
+  time: 15,
   portions: 2,
   ingredients: [
     {

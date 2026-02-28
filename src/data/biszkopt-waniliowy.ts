@@ -10,8 +10,8 @@ const biszkoptWaniliowy: Recipe = {
   name: "Biszkopt Waniliowy",
   type: "other",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 50,
+  portions: 1,
   ingredients: [
     {
       title: "",

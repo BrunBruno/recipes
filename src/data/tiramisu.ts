@@ -7,7 +7,7 @@ const tiramisu: Recipe = {
   name: "Tiramisu",
   type: "dessert",
   images: [""],
-  time: 30,
+  time: 20,
   portions: 8,
   ingredients: [
     {

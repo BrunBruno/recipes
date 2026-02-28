@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const kotletPoGoralsku: Recipe = {
   name: "Kotlety po Góralsku",
   type: "dinner",
-  images: ["kotlet-po-goralsku.jpg"],
+  images: ["kotlet-po-goralsku.jpg", "kotlet-po-goralsku-2.jpg"],
   time: 70,
   portions: 5,
   ingredients: [
@@ -63,7 +63,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["wieprzowina",'xxx'],
 };
 
 export default kotletPoGoralsku;

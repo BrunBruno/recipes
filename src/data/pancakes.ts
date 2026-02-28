@@ -10,7 +10,7 @@ const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
   images: [""],
-  time: 20,
+  time: 30,
   portions: 3,
   ingredients: [
     {

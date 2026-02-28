@@ -9,7 +9,7 @@ const kotletySchaboweWPlatkach: Recipe = {
   name: "Kotlety w Płatkach",
   type: "dinner",
   images: [""],
-  time: 35,
+  time: 50,
   portions: 5,
   ingredients: [
     {

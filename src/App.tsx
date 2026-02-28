@@ -142,14 +142,14 @@ function App() {
 
   const getStatusClass = (type: string, value: number) => {
     if (type === "kcal") {
-      if (value <= 300) return "status-green";
-      if (value <= 700) return "status-yellow";
+      if (value <= 500) return "status-green";
+      if (value <= 1000) return "status-yellow";
       return "status-red";
     }
 
     if (type === "time") {
-      if (value <= 20) return "status-green";
-      if (value <= 45) return "status-yellow";
+      if (value <= 30) return "status-green";
+      if (value <= 60) return "status-yellow";
       return "status-red";
     }
 
