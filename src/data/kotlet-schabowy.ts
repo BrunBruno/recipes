@@ -34,7 +34,7 @@ const kotletSchabowy: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150" },
+        { ingredient: iVEG.potato, amount: "5 × 200" },
         { ingredient: iVEG.cucumber, amount: 2.5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1.25, unit: "szt" },
         { ingredient: iDIR.cream_18, amount: 10, unit: "łyżka" },

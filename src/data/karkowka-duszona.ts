@@ -26,7 +26,7 @@ const karkowkaDuszona: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150" },
+        { ingredient: iVEG.potato, amount: "5 × 200" },
         { ingredient: iVEG.coleslaw, amount: "5 × 200" },
       ],
     },

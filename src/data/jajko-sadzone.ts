@@ -24,7 +24,7 @@ const jajkoSadzone: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: 150 },
+        { ingredient: iVEG.potato, amount: 200 },
         { ingredient: iVEG.canned_peas, amount: 100 },
       ],
     },

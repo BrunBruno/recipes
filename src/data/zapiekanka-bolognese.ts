@@ -10,7 +10,7 @@ import type { Recipe } from "../types";
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
-  images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
+  images: ["zapiekanka-bolognese.jpg"],
   time: 70,
   portions: 4,
   ingredients: [

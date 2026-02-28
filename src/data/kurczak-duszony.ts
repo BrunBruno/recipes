@@ -33,7 +33,7 @@ const gotowanyKurczak: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 150" },
+        { ingredient: iVEG.potato, amount: "3 × 200" },
         { ingredient: iVEG.pickled_cucumber, amount: 6, unit: "szt" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },

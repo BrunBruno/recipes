@@ -178,7 +178,7 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
-  padding: 6rem 4rem;
+  padding: 8rem 4rem 6rem 4rem;
 }
 
 .recipe-card {
@@ -268,7 +268,8 @@ body::-webkit-scrollbar {
   position: fixed;
   inset: 0;
   z-index: 20;
-  margin: 2rem 20rem;
+  width: 62%;
+  margin: 2rem auto;
 
   background-color: rgba(15, 17, 21, 0.97);
   backdrop-filter: blur(8px);
@@ -452,9 +453,8 @@ body::-webkit-scrollbar {
   border: solid 0.3rem #333;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  padding: 2rem;
-  padding-top: 0;
+  gap: 4rem;
+  padding: 1rem 3rem;
   overflow-y: auto;
 }
 
@@ -473,7 +473,7 @@ body::-webkit-scrollbar {
 }
 
 .recipe-details-content h3 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   color: #20c997;
 }
@@ -623,9 +623,13 @@ body::-webkit-scrollbar {
   cursor: pointer;
   padding: 0.5rem 2rem;
   font-size: 1rem;
-  background-color: transparent;
   border: none;
   outline: none;
+  background-color: #0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
 }
 
 .all-ingredients {
@@ -751,6 +755,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 960px) {
   .recipe-details {
+    width: 100%;
     margin: 0;
     inset: 0;
     transition: grid-template-rows 0.3s;
@@ -854,7 +859,6 @@ body::-webkit-scrollbar {
     padding: 0;
     gap: 0;
     padding-top: 5rem;
-    padding-bottom: 4rem;
   }
 
   .recipe-details-content {
@@ -956,6 +960,10 @@ body::-webkit-scrollbar {
     border: none;
     padding: 0;
     display: block;
+  }
+
+  .recipe-card {
+    height: 200px;
   }
 
   .recipe-card:hover {

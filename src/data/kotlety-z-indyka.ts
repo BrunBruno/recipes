@@ -28,7 +28,7 @@ const kotletyZIndyka: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "4 × 150" },
+        { ingredient: iVEG.potato, amount: "4 × 200" },
         { ingredient: iVEG.fried_beets, amount: "4 × 150" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },

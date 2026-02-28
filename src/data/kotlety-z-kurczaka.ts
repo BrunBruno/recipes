@@ -32,7 +32,7 @@ const kotletyZKurczaka: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 150" },
+        { ingredient: iVEG.potato, amount: "3 × 200" },
         { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 100" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },

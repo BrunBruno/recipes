@@ -10,8 +10,8 @@ import type { Recipe } from "../types";
 const bitki: Recipe = {
   name: "Bitki",
   type: "dinner",
-  images: [""],
-  time: 60,
+  images: ["bitki.jpg"],
+  time: 65,
   portions: 4,
   ingredients: [
     {
@@ -67,7 +67,7 @@ const bitki: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "sos"],
+  keyWords: ["wieprzowina", "sos", "xxx"],
 };
 
 export default bitki;

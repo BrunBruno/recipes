@@ -181,7 +181,11 @@ function App() {
   return (
     <div className="recipes-page">
       <div className="page-title">
-        <h1 onClick={() => location.reload()}>
+        <h1
+          onClick={() => {
+            setShowAllIngredients((prev) => !prev);
+          }}
+        >
           <UtilsIcon name="logo" color="#099268" />
           Przepisy {filteredRecipes.length}
         </h1>
@@ -569,7 +573,7 @@ function App() {
         </div>
       )}
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <button
           className="show-ingredients"
           onClick={() => {
@@ -578,7 +582,7 @@ function App() {
         >
           Pokaż listę składników
         </button>
-      </footer>
+      </footer> */}
     </div>
   );
 }

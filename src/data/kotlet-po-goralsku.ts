@@ -32,7 +32,7 @@ const kotletPoGoralsku: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 150" },
+        { ingredient: iVEG.potato, amount: "5 × 200" },
         { ingredient: iVEG.sauerkraut, amount: 600 },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
         { ingredient: iSPC.black_pepper },

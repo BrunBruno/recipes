@@ -16,7 +16,7 @@ const plackiZiemniaczane: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
-        { ingredient: iVEG.potato, amount: 4, unit: "szt" },
+        { ingredient: iVEG.potato, amount: 5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
