@@ -27,6 +27,7 @@ const palkiBarbecue: Recipe = {
       items: [
         { ingredient: iVEG.frozen_fries, amount: "3 × 150" },
         { ingredient: iVEG.pickled_cucumber, amount: "3 × 2", unit: "szt" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

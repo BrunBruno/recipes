@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
-  images: [""],
+  images: ["watrobka-z-kurczaka.jpg"],
   time: 20,
   portions: 2,
   ingredients: [
@@ -17,9 +17,9 @@ const watrobkaZKurczaka: Recipe = {
       items: [
         { ingredient: iMET.poultry_liver, amount: 400 },
         { ingredient: iVEG.onion, amount: "2-3", unit: "szt" },
-        { ingredient: iGRN.flour },
-        { ingredient: iFAT.oil },
-        { ingredient: iFAT.clarified_butter },
+        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
         { ingredient: iSPC.salt },
       ],
     },
@@ -36,7 +36,7 @@ const watrobkaZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["kurczak", "xxx"],
 };
 
 export default watrobkaZKurczaka;

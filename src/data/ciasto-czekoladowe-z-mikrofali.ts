@@ -14,13 +14,13 @@ const ciastoCzekoladoweZMikrofali: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iFAT.butter, amount: 90 },
         { ingredient: iGRN.flour, amount: 150 },
+        { ingredient: iFAT.butter, amount: 90 },
+        { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
         { ingredient: iOTH.sugar, amount: 100 },
         { ingredient: iOTH.cocoa, amount: 60 },
         { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
         { ingredient: iOTH.dark_chocolate, amount: 100 },
-        { ingredient: iDIR.cream_30, amount: 100, unit: "ml" },
         { ingredient: iOTH.water, amount: 380, unit: "ml" },
       ],
     },

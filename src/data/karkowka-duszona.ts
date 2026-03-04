@@ -18,9 +18,9 @@ const karkowkaDuszona: Recipe = {
         { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
         { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
         { ingredient: iSAU.sarepska_mustard, amount: 10, unit: "łyżeczka" },
-        { ingredient: iSPC.salt },
-        { ingredient: iSPC.black_pepper },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
     {
@@ -28,6 +28,7 @@ const karkowkaDuszona: Recipe = {
       items: [
         { ingredient: iVEG.potato, amount: "5 × 200" },
         { ingredient: iVEG.coleslaw, amount: "5 × 200" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

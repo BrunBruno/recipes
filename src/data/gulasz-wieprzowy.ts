@@ -18,12 +18,12 @@ const gulaszWieprzowy: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.stew_pork, amount: 500 },
-        { ingredient: iFAT.oil },
+        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
         { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.granulated_garlic },
@@ -37,6 +37,7 @@ const gulaszWieprzowy: Recipe = {
       items: [
         { ingredient: iGRN.gnocchi, amount: "3 × 250" },
         { ingredient: iVEG.fried_beets, amount: "3 × 150" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

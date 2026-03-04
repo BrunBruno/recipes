@@ -10,7 +10,7 @@ import type { Recipe } from "../types";
 const bitki: Recipe = {
   name: "Bitki",
   type: "dinner",
-  images: ["bitki.jpg"],
+  images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
   portions: 4,
   ingredients: [
@@ -20,9 +20,9 @@ const bitki: Recipe = {
         { ingredient: iMET.pork_tenderloin, amount: 600 },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
         { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iDIR.cream_30, amount: 2, unit: "łyżka" },
+        { ingredient: iOTH.water, amount: 500, unit: "ml" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-        { ingredient: iDIR.cream_30 },
-        { ingredient: iOTH.water },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.marjoram },
         { ingredient: iSPC.bay_leaf },

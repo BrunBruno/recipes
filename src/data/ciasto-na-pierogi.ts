@@ -15,9 +15,9 @@ const ciastoNaPierogi: Recipe = {
       title: "",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
-        { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
         { ingredient: iFAT.oil, amount: 50, unit: "ml" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
+        { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
       ],
     },
   ],

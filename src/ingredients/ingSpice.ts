@@ -191,7 +191,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   wild_garlic: {
-    name: "Niedźwiedzi czosnek",
+    name: "Czosnek niedźwiedzi",
     type: "hrb",
     kcalPer100g: 42,
     unitWeights: {

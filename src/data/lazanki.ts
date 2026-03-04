@@ -15,14 +15,14 @@ const lazanki: Recipe = {
     {
       title: "",
       items: [
+        { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iMET.sausage, amount: 200 },
         { ingredient: iMET.bacon_block, amount: 100 },
         { ingredient: iVEG.sauerkraut, amount: 400 },
-        { ingredient: iVEG.onion, amount: 280, },
+        { ingredient: iVEG.onion, amount: 280 },
         { ingredient: iVEG.mushrooms, amount: 150 },
-        { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
-        { ingredient: iSPC.bay_leaf},
+        { ingredient: iSPC.bay_leaf },
         { ingredient: iSPC.caraway },
         { ingredient: iSPC.allspice },
         { ingredient: iSPC.black_pepper },
@@ -46,7 +46,7 @@ const lazanki: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron",  "xxx"],
+  keyWords: ["makaron", "xxx"],
 };
 
 export default lazanki;

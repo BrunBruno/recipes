@@ -32,7 +32,7 @@ export const ingredientTypeLabels: Record<IngredientType, string> = {
 };
 
 export const calculateRecipeKcal = (recipe: Recipe): number => {
-  const DEFAULT_FAT_GRAMS = 15;
+  const DEFAULT_FAT_GRAMS = 12;
 
   let totalKcal = 0;
 
@@ -195,7 +195,7 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   sos: ["sos", "sosy", "sosik", "polewa", "dressing"],
   krem: ["krem", "kremowy", "kremowa", "kremówka", "masa"],
   ser: ["ser", "sery", "serowy", "serowa", "sernik", "twaróg"],
-  sałatka: ["sałatka", "sałatki", "salatka", "salatki", "mix sałat"],
+  sałatka: ["sałatka", "sałatki", "salatka", "salatki"],
   pieczywo: ["pieczywo", "pieczywa", "chleb", "chleby", "bułka", "bułki"],
   ryba: ["ryba", "ryby", "owoce morza"],
   zupa: ["zupa", "zupy", "zupka", "zupki", "krem", "zupa krem"],

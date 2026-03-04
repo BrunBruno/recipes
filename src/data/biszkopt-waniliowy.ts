@@ -16,13 +16,13 @@ const biszkoptWaniliowy: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iSPC.salt, amount: 1 },
-        { ingredient: iOTH.sugar, amount: 90 },
         { ingredient: iGRN.flour, amount: 90 },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iFAT.oil, amount: 30 },
         { ingredient: iDIR.milk, amount: 30 },
+        { ingredient: iOTH.sugar, amount: 90 },
         { ingredient: iOTH.vanilla_extract, amount: 2, unit: "ml" },
+        { ingredient: iSPC.salt, amount: 1 },
       ],
     },
   ],

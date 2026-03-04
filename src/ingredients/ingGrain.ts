@@ -141,12 +141,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
   toast_bread: {
     name: "Tosty",
     type: "grn",
-    kcalPer100g: 254,
+    kcalPer100g: 267,
     unitWeights: {
-      szt: 30,
+      opak: 500,
+      szt: 22,
+      kromka: 22,
     },
-    nutrientsPer100g: [1.5, 50.5, 8.6],
-  },
+    nutrientsPer100g: [3.2, 50, 8.6],
+  }, //
 
   hamburger_buns: {
     name: "Bułki hamburgerowe",

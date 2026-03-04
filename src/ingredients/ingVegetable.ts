@@ -16,6 +16,7 @@ type IngId =
   | "lettuce"
   | "chives"
   | "parsley"
+  | "spring_onion"
   | "frozen_spinach"
   | "frozen_fries"
   | "frozen_vegetable_mix"
@@ -210,6 +211,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.8, 6.3, 3],
   },
 
+  spring_onion: {
+    name: "Cebulka Zielona",
+    type: "veg",
+    kcalPer100g: 32,
+    unitWeights: {
+      pęto: 100,
+    },
+    nutrientsPer100g: [1.8, 7.3, 2.6],
+  },
+
   //
 
   frozen_spinach: {
@@ -236,7 +247,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "jar",
     kcalPer100g: 21,
     unitWeights: {
-      ml: 1,
       opak: 400,
     },
     nutrientsPer100g: [0.2, 4.8, 1.1],

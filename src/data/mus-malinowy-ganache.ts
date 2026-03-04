@@ -15,8 +15,8 @@ const musMalinowyGanache: Recipe = {
       items: [
         { ingredient: iDIR.cream_36, amount: 170 },
         { ingredient: iFRT.raspberries, amount: 200 },
-        { ingredient: iOTH.white_chocolate, amount: 100 },
         { ingredient: iFRT.lemon_juice, amount: 5, unit: "ml" },
+        { ingredient: iOTH.white_chocolate, amount: 100 },
         { ingredient: iOTH.gelatin, amount: 6 },
         { ingredient: iOTH.water, amount: 30, unit: "ml" },
       ],

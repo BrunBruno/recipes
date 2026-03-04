@@ -16,8 +16,8 @@ const pancakes: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1.25, unit: "szklanka" },
+        { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iDIR.buttermilk, amount: 1.25, unit: "szklanka" },
         { ingredient: iOTH.powdered_sugar, amount: 0.25, unit: "szklanka" },
         { ingredient: iOTH.baking_powder, amount: 1, unit: "łyżeczka" },

@@ -35,9 +35,10 @@ const kurczakZPomidorem: Recipe = {
 
       items: [
         { ingredient: iVEG.potato, amount: "3 × 200" },
-        { ingredient: iFAT.butter, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 1.5, unit: "łyżeczka" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
         { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 100" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

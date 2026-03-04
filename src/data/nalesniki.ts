@@ -16,8 +16,8 @@ const nalesniki: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iGRN.flour, amount: 200, unit: "g" },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iDIR.milk, amount: 300, unit: "ml" },
         { ingredient: iOTH.water, amount: 100, unit: "ml" },
         { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },

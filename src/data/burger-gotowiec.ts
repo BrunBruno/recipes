@@ -26,7 +26,7 @@ const gotowyBurger: Recipe = {
         { ingredient: iVEG.fried_onion, amount: 2, unit: "łyżka" },
         { ingredient: iSAU.mayonnaise, amount: 4, unit: "łyżeczka" },
         { ingredient: iSAU.ketchup, amount: 4, unit: "łyżeczka" },
-        { ingredient: iFAT.clarified_butter },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
       ],
     },
   ],

@@ -18,14 +18,14 @@ const ciastoMarchewkowe: Recipe = {
     {
       title: "Ciasto",
       items: [
+        { ingredient: iGRN.flour, amount: 200 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
-        { ingredient: iOTH.sugar, amount: 200 },
         { ingredient: iFAT.oil, amount: 150, unit: "ml" },
         { ingredient: iVEG.carrot, amount: 200 },
         { ingredient: iFRT.pineapple, amount: 75 },
         { ingredient: iOTH.walnuts, amount: 50 },
         { ingredient: iOTH.coconut_flakes, amount: 50 },
-        { ingredient: iGRN.flour, amount: 200 },
+        { ingredient: iOTH.sugar, amount: 200 },
         { ingredient: iOTH.baking_powder, amount: 0.5, unit: "łyżeczka" },
         { ingredient: iOTH.baking_soda, amount: 1, unit: "łyżeczka" },
         { ingredient: iSPC.cinnamon, amount: 1, unit: "łyżeczka" },

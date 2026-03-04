@@ -16,7 +16,7 @@ const omlet: Recipe = {
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-        { ingredient: iFAT.butter },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
       ],

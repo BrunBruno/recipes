@@ -38,6 +38,7 @@ export type UnitType =
   | "opak"
   | "kostka"
   | "plaster"
+  | "kromka"
   | "ząbek"
   | "listek"
   | "ziarno"

@@ -27,6 +27,7 @@ const gulaszPoWegiersku: Recipe = {
       items: [
         { ingredient: iGRN.gnocchi, amount: "3 × 250" },
         { ingredient: iVEG.fried_beets, amount: "3 × 150" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

@@ -21,7 +21,7 @@ const jajkaWSosieKoperkowym: Recipe = {
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
         { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
-        { ingredient: iDIR.cream_30 },
+        { ingredient: iDIR.cream_30, amount: 2, unit: "łyżka" },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.salt },
       ],
@@ -31,6 +31,7 @@ const jajkaWSosieKoperkowym: Recipe = {
       items: [
         { ingredient: iVEG.potato, amount: "2 × 200" },
         { ingredient: iVEG.pickled_cucumber, amount: "2 × 2", unit: "szt" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

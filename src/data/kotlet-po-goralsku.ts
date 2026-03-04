@@ -22,7 +22,7 @@ const kotletPoGoralsku: Recipe = {
         { ingredient: iDIR.yellow_cheese, amount: 10, unit: "plaster" },
         { ingredient: iGRN.breadcrumbs, amount: 150 },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
-        { ingredient: iFAT.oil },
+        { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
         { ingredient: iSPC.thyme },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.black_pepper },
@@ -35,6 +35,7 @@ const kotletPoGoralsku: Recipe = {
         { ingredient: iVEG.potato, amount: "5 × 200" },
         { ingredient: iVEG.sauerkraut, amount: 600 },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
+        { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
@@ -63,7 +64,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina",'xxx'],
+  keyWords: ["wieprzowina", "xxx"],
 };
 
 export default kotletPoGoralsku;

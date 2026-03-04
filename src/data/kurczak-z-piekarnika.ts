@@ -28,6 +28,7 @@ const kurczakZPiekarnika: Recipe = {
       items: [
         { ingredient: iVEG.potato, amount: "4 × 200" },
         { ingredient: iVEG.beets_whole_vinegar, amount: "4 × 100" },
+        { ingredient: iSPC.salt },
       ],
     },
   ],
@@ -53,7 +54,7 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak",  "xxx"],
+  keyWords: ["kurczak", "xxx"],
 };
 
 export default kurczakZPiekarnika;

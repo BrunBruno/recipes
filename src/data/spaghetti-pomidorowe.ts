@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
-  images: [""],
+  images: ["spaghetti-pomidorowe.jpg"],
   time: 40,
   portions: 2,
   ingredients: [
@@ -16,14 +16,14 @@ const spaghettiPomidorowe: Recipe = {
       title: "",
       items: [
         { ingredient: iGRN.spaghetti_pasta, amount: "2 × 100" },
-        { ingredient: iVEG.canned_tomatoes, amount: 250, unit: "ml" },
+        { ingredient: iVEG.canned_tomatoes, amount: 2, unit: "opak" },
         { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
         { ingredient: iDIR.yellow_cheese, amount: "2 × 50" },
         { ingredient: iFAT.butter },
-        { ingredient: iSPC.salt },
-        { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.basil },
         { ingredient: iSPC.oregano },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
   ],
@@ -42,7 +42,7 @@ const spaghettiPomidorowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos"],
+  keyWords: ["makaron", "sos", "xxx"],
 };
 
 export default spaghettiPomidorowe;

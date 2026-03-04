@@ -10,15 +10,15 @@ import type { Recipe } from "../types";
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
-  images: ["zapiekanka-bolognese.jpg"],
+  images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
   time: 70,
   portions: 4,
   ingredients: [
     {
       title: "",
       items: [
-        { ingredient: iMET.ground_pork, amount: 400 },
         { ingredient: iGRN.fusilli_pasta, amount: 400 },
+        { ingredient: iMET.ground_pork, amount: 400 },
         { ingredient: iVEG.mushrooms, amount: 250 },
         { ingredient: iVEG.tomato, amount: "1-2", unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
