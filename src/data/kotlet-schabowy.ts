@@ -58,11 +58,10 @@ const kotletSchabowy: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Obierz ziemniaki i ugotuj w osolonej wodzie.",
-        "Po ugotowaniu przypraw pieprzem i solą.",
-        "Pokrój ogórka w cienkie plasterki.",
-        "Posiekaj cebulę i dodaj do ogórka.",
-        "Dodaj zieloną cebulkę, śmietanę 22%, sól, pieprz i koperek, wymieszaj.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Pokrój ogórka w cienkie plasterki i dodaj posiekaną cebulę.",
+        "Dodaj śmietanę, koperek, sól i pieprz, a następnie wymieszaj.",
+        "Podawaj danie z porcją ziemniaków i przygotowaną mizerią.",
       ],
     },
   ],

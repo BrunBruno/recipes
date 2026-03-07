@@ -84,13 +84,13 @@ export const iDIR: Record<IngId, IngredientItem> = {
   cream_30: {
     name: "Śmietanka 30%",
     type: "dir",
-    kcalPer100g: 291,
+    kcalPer100g: 293,
     unitWeights: {
       ml: 1,
       łyżka: 15,
     },
-    nutrientsPer100g: [30, 3.1, 2.2],
-  },
+    nutrientsPer100g: [30, 3.4, 2.3],
+  }, //
 
   cream_36: {
     name: "Śmietanka 36%",

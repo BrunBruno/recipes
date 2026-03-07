@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const kurczakZeSzpinakiem: Recipe = {
   name: "Kurczak ze Szpinakiem",
   type: "dinner",
-  images: ["kurczak-ze-szpinakiem.jpg"],
+  images: ["kurczak-ze-szpinakiem.jpg", "kurczak-ze-szpinakiem-2.jpg"],
   time: 40,
   portions: 6,
   ingredients: [

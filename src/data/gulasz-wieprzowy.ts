@@ -52,14 +52,14 @@ const gulaszWieprzowy: Recipe = {
         "Dopraw solą, pieprzem, papryką, czosnkiem, chilli i szczypiorkiem do smaku.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj gotowe kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-        "Podawaj gulasz z ugotowanymi kopytkami.",
-        "Dodaj porcję buraczków zasmażanych.",
-      ],
-    },
+{
+  title: "Przykładowe podanie",
+  steps: [
+    "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
+    "Podawaj gulasz z porcją ugotowanych kopytek.",
+    "Obok dodaj porcję buraczków zasmażanych.",
+  ],
+},
   ],
   keyWords: ["wieprzowina", "sos", "xxx"],
 };

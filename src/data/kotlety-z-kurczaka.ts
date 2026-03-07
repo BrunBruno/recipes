@@ -54,10 +54,9 @@ const kotletyZKurczaka: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Kotlety podawaj na talerzu.",
-        "Obok ułóż porcję gotowanych ziemniaków, posypanych solą i pieprzem.",
-        "Dodaj całe buraki z octu jako dodatek.",
-        "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Podawaj kotlety na talerzu z porcją ziemniaków.",
+        "Obok dodaj buraki z octu jako dodatek.",
       ],
     },
   ],

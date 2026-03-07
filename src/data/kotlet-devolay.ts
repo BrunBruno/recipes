@@ -68,8 +68,9 @@ const kotletDevolay: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Kotlet Devolay podawaj na talerzu z porcją puree ziemniaczanego.",
-        "Obok dodaj warzywa gotowane na parze jako zdrowy dodatek.",
+        "Przygotuj puree ziemniaczane.",
+        "Ugotuj warzywa na parze do miękkości.",
+        "Podawaj kotlet Devolay na talerzu z puree i warzywami.",
         "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },

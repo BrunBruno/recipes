@@ -60,10 +60,9 @@ const kurczakZPomidorem: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Odcedź ziemniaki, dodaj masło oraz ciepłe mleko i dokładnie ubij.",
+        "Ubij ziemniaki z masłem i ciepłym mlekiem na puree.",
         "Dopraw puree solą do smaku.",
-        "Buraki z octu odsącz z zalewy i podawaj w całości jako dodatek.",
-        "Kurczaka podawaj z ziemniakami ubijanymi i burakami.",
+        "Podawaj kurczaka z puree ziemniaczanym i burakami z octu.",
       ],
     },
   ],

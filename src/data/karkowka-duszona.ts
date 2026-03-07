@@ -47,9 +47,9 @@ const karkowkaDuszona: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Obierz ziemniaki i ugotuj w osolonej wodzie do miękkości.",
-        "Po ugotowaniu odcedź ziemniaki, a następnie polej je sosem, w którym duszona była karkówka.",
-        "Podaj porcję gotowej surówki colesław razem z mięsem i ziemniakami.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Po ugotowaniu odcedź ziemniaki i polej je sosem z karkówki.",
+        "Podawaj karkówkę z ziemniakami i porcją surówki colesław.",
       ],
     },
   ],

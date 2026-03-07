@@ -43,8 +43,9 @@ const jajkoSadzone: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Obierz ziemniaki, ugotuj w osolonej wodzie do miękkości i posyp świeżym koperkiem.",
-        "Otwórz puszkę groszku, odcedź i podawaj jako dodatek do jajka i ziemniaków.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Otwórz puszkę groszku i odcedź.",
+        "Podawaj jajka na talerzu z porcją ziemniaków i groszkiem jako dodatkiem.",
       ],
     },
   ],

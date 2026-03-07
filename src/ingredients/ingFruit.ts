@@ -50,10 +50,11 @@ export const iFRT: Record<IngId, IngredientItem> = {
   lemon_juice: {
     name: "Sok z cytryny",
     type: "frt",
-    kcalPer100g: 25,
+    kcalPer100g: 21,
     unitWeights: {
       ml: 1,
       łyżeczka: 5,
     },
-  },
+    nutrientsPer100g: [0, 0.4, 0.1],
+  }, //
 };

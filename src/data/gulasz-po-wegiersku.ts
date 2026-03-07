@@ -42,14 +42,14 @@ const gulaszPoWegiersku: Recipe = {
         "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj gotowe kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-        "Podawaj gulasz z ugotowanymi kopytkami.",
-        "Dodaj porcję buraczków zasmażanych.",
-      ],
-    },
+ {
+  title: "Przykładowe podanie",
+  steps: [
+    "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
+    "Podawaj gulasz z porcją ugotowanych kopytek.",
+    "Obok dodaj porcję buraczków zasmażanych.",
+  ],
+},
   ],
   keyWords: ["wołowina", "sos"],
 };

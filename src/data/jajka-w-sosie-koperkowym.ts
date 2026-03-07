@@ -10,7 +10,7 @@ import type { Recipe } from "../types";
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
   type: "dinner",
-  images: [""],
+  images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: 2,
   ingredients: [
@@ -51,13 +51,13 @@ const jajkaWSosieKoperkowym: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Jajka w sosie koperkowym podawaj na talerzu.",
-        "Obok dodaj porcję gotowanych ziemniaków (puree).",
-        "Podawaj z ogórkiem kiszonym jako dodatek.",
+        "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
+        "Jajka podawaj na talerzu z porcją ziemniaków, polane sosem koperkowym.",
+        "Obok dodaj ogórka kiszonego jako dodatek.",
       ],
     },
   ],
-  keyWords: ["jajko", "sos"],
+  keyWords: ["jajko", "sos", "xxx"],
 };
 
 export default jajkaWSosieKoperkowym;

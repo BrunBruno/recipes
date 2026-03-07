@@ -47,9 +47,10 @@ const kurczakZPiekarnika: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Kurczaka podawaj na talerzu.",
-        "Obok ułóż porcję gotowanych ziemniaków i polej je tłuszczem z kurczaka.",
-        "Dodaj całe buraki z octu jako dodatek.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Podawaj kurczaka na talerzu z porcją ziemniaków.",
+        "Ziemniaki polej tłuszczem z pieczenia kurczaka.",
+        "Obok dodaj buraki z octu jako dodatek.",
         "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },

@@ -51,9 +51,9 @@ const kotletySchaboweWPlatkach: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Usmażone kotlety ułóż na talerzu.",
-        "Obok wyłóż porcję frytek z piekarnika.",
-        "Dodaj buraczki w occie jako dodatek warzywny.",
+        "Upiecz frytki w piekarniku zgodnie z instrukcją na opakowaniu.",
+        "Podawaj usmażone kotlety na talerzu z porcją frytek.",
+        "Obok dodaj buraczki w occie jako dodatek warzywny.",
       ],
     },
   ],

@@ -294,10 +294,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
   knorr_bouillon_cube: {
     name: "Kostka rosołowa Knorr",
     type: "spc",
-    kcalPer100g: 375,
+    kcalPer100g: 6,
     unitWeights: {
+      opak: 120,
       szt: 10,
     },
+    nutrientsPer100g: [0.5, 0.5, 0.5],
   },
 
   knorr_goulash_fix: {

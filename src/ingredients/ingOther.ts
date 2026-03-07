@@ -20,6 +20,7 @@ type IngId =
   | "coconut_flakes"
   | "white_chocolate"
   | "dark_chocolate"
+  | "chocolate_cream"
   | "cheese_snacks"
   | "ladyfingers";
 
@@ -215,6 +216,16 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 100,
     },
     nutrientsPer100g: [45, 18, 11],
+  }, //
+
+  chocolate_cream: {
+    name: "Krem czekoladowy",
+    type: "oth",
+    kcalPer100g: 550,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [34, 56.8, 2.9],
   }, //
 
   cheese_snacks: {

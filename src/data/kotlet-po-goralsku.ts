@@ -58,9 +58,9 @@ const kotletPoGoralsku: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
-        "Dopraw solą i pieprzem, smaż na małym ogniu, aż kapusta będzie miękka i lekko zrumieniona.",
-        "Obierz ziemniaki i ugotuj w osolonej wodzie do miękkości.",
-        "Po ugotowaniu odcedź i podawaj gorące.",
+        "Dopraw solą i pieprzem i smaż, aż kapusta będzie miękka i lekko zrumieniona.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Podawaj danie z porcją ziemniaków i podsmażaną kapustą.",
       ],
     },
   ],

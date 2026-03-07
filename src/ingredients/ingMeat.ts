@@ -279,12 +279,12 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausage: {
     name: "Kiełbasa",
     type: "met",
-    kcalPer100g: 300,
+    kcalPer100g: 227,
     unitWeights: {
       pęto: 100,
     },
-    nutrientsPer100g: [25, 2, 14],
-  },
+    nutrientsPer100g: [18.4,2,13.1],
+  }, //
 
   sausages: {
     name: "Parówki",

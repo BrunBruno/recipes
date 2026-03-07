@@ -51,9 +51,9 @@ const kotletyZIndyka: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Usmażone kotlety z indyka ułóż na talerzu.",
-        "Podaj z porcją ugotowanych ziemniaków.",
-        "Obok wyłóż buraczki jako dodatek warzywny.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Podawaj kotlety z indyka na talerzu z porcją ziemniaków.",
+        "Obok dodaj buraczki jako dodatek warzywny.",
         "Całość możesz posypać świeżo mielonym pieprzem lub udekorować natką pietruszki.",
       ],
     },
