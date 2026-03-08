@@ -5,6 +5,7 @@ type IngId =
   | "buttermilk"
   | "condensed_milk"
   | "yogurt_natural"
+  | "greek_yogurt"
   | "cream_12"
   | "cream_18"
   | "cream_30"
@@ -57,6 +58,16 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 180,
     },
     nutrientsPer100g: [3.5, 4.7, 10],
+  },
+
+  greek_yogurt: {
+    name: "Jogurt grecki",
+    type: "dir",
+    kcalPer100g: 97,
+    unitWeights: {
+      łyżka: 20,
+    },
+    nutrientsPer100g: [5, 3.6, 9],
   },
 
   cream_12: {

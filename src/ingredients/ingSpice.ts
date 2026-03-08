@@ -13,6 +13,7 @@ type IngId =
   | "cinnamon"
   | "nutmeg"
   | "black_sesame"
+  | "cumin"
   | "dill"
   | "thyme"
   | "marjoram"
@@ -146,6 +147,16 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 3,
     },
+  },
+
+  cumin: {
+    name: "Kumin rzymski",
+    type: "spc",
+    kcalPer100g: 375,
+    unitWeights: {
+      łyżeczka: 2,
+    },
+    nutrientsPer100g: [22, 44, 18],
   },
 
   //

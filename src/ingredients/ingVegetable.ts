@@ -26,6 +26,8 @@ type IngId =
   | "pickled_cucumber"
   | "sauerkraut"
   | "fried_onion"
+  | "chinese_cabbage"
+  | "red_cabbage"
   | "olives"
   | "coleslaw"
   | "fried_beets"
@@ -167,6 +169,26 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   //
+
+  chinese_cabbage: {
+    name: "Kapusta pekińska",
+    type: "veg",
+    kcalPer100g: 16,
+    unitWeights: {
+      szt: 800,
+    },
+    nutrientsPer100g: [0.2, 3.2, 1.2],
+  },
+
+  red_cabbage: {
+    name: "Kapusta czerwona",
+    type: "veg",
+    kcalPer100g: 31,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [0.2, 7.4, 1.4],
+  },
 
   olives: {
     name: "Oliwki",

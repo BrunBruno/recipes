@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
-  images: [""],
+  images: ["karkowka-duszona.jpg"],
   time: 60,
   portions: 5,
   ingredients: [
@@ -53,7 +53,7 @@ const karkowkaDuszona: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["wieprzowina", "xxx"],
 };
 
 export default karkowkaDuszona;
