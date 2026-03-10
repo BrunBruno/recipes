@@ -71,7 +71,6 @@ const kotletDevolay: Recipe = {
         "Przygotuj puree ziemniaczane.",
         "Ugotuj warzywa na parze do miękkości.",
         "Podawaj kotlet Devolay na talerzu z puree i warzywami.",
-        "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },
   ],

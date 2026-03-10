@@ -51,7 +51,6 @@ const kurczakZPiekarnika: Recipe = {
         "Podawaj kurczaka na talerzu z porcją ziemniaków.",
         "Ziemniaki polej tłuszczem z pieczenia kurczaka.",
         "Obok dodaj buraki z octu jako dodatek.",
-        "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },
   ],

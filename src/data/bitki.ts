@@ -64,7 +64,6 @@ const bitki: Recipe = {
         "Podawaj bitki na talerzu z porcją ugotowanych ziemniaków.",
         "Ziemniaki polej sosem z rondelka.",
         "Obok dodaj buraczki w wiórkach jako dodatek.",
-        "Całość możesz posypać świeżym szczypiorkiem.",
       ],
     },
   ],

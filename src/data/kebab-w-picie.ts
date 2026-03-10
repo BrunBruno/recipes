@@ -31,10 +31,11 @@ const kebab: Recipe = {
     {
       title: "Sos",
       items: [
-        { ingredient: iDIR.greek_yogurt },
-        { ingredient: iSAU.mayonnaise },
-        { ingredient: iVEG.garlic },
+        { ingredient: iDIR.greek_yogurt, amount: 5, unit: "łyżka" },
+        { ingredient: iSAU.mayonnaise, amount: 2, unit: "łyżka" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
         { ingredient: iSPC.granulated_garlic },
+        { ingredient: iSPC.cumin },
       ],
     },
     {
@@ -42,18 +43,18 @@ const kebab: Recipe = {
       items: [
         { ingredient: iGRN.flour, amount: 500 },
         { ingredient: iOTH.water, amount: 260, unit: "ml" },
-        { ingredient: iOTH.yeast, amount: 5, unit: "g" },
+        { ingredient: iOTH.yeast, amount: 5 },
         { ingredient: iFAT.olive, amount: 30, unit: "ml" },
-        { ingredient: iSPC.salt, amount: 10, unit: "g" },
+        { ingredient: iSPC.salt, amount: 10 },
       ],
     },
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.chinese_cabbage },
-        { ingredient: iVEG.red_cabbage },
-        { ingredient: iVEG.tomato },
-        { ingredient: iVEG.pickled_cucumber },
+        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iVEG.chinese_cabbage, amount: 0.25, unit: "szt" },
+        { ingredient: iVEG.red_cabbage, amount: 0.25, unit: "szt" },
+        { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
       ],
     },
   ],

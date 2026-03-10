@@ -49,7 +49,6 @@ const palkiBarbecue: Recipe = {
         "Upiecz frytki w piekarniku zgodnie z instrukcją na opakowaniu.",
         "Podawaj pałki barbecue na talerzu z porcją frytek.",
         "Obok dodaj ogórka kiszonego jako dodatek.",
-        "Całość możesz udekorować świeżą pietruszką lub koperkiem.",
       ],
     },
   ],
