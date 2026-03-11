@@ -572,17 +572,6 @@ function App() {
           ))}
         </div>
       )}
-
-      {/* <footer className="footer">
-        <button
-          className="show-ingredients"
-          onClick={() => {
-            setShowAllIngredients((prev) => !prev);
-          }}
-        >
-          Pokaż listę składników
-        </button>
-      </footer> */}
     </div>
   );
 }
