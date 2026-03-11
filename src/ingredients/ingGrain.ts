@@ -16,6 +16,7 @@ type IngId =
   | "hamburger_buns"
   | "chicken_buns"
   | "hotdog_buns"
+  | "french_hotdog_buns"
   | "cornflakes";
 
 export const iGRN: Record<IngId, IngredientItem> = {
@@ -180,6 +181,16 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [8.3, 51, 7.7],
   }, //
+
+  french_hotdog_buns: {
+    name: "Bułki do hot dogów francuskich",
+    type: "grn",
+    kcalPer100g: 316,
+    unitWeights: {
+      szt: 85,
+    },
+    nutrientsPer100g: [8.3, 51, 7.7],
+  },
 
   cornflakes: {
     name: "Płatki kukurydziane",

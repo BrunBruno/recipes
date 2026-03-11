@@ -21,11 +21,63 @@ import { iOTH } from "./ingredients/ingOther";
 import { iSAU } from "./ingredients/ingSauce";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
+import {
+  Chart,
+  BarController,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js";
 
 const SWIPE_THRESHOLD = 50;
 const ingredientUsage = countIngredientUsage(recipes);
 
+Chart.register(BarController, BarElement, CategoryScale, LinearScale);
+
 function App() {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const chartRef = useRef<Chart | null>(null);
+
+  const createChar = () => {
+    const topIngredients = Object.entries(ingredientUsage)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 20);
+
+    const labels = topIngredients.map(([name]) => name);
+    const values = topIngredients.map(([, count]) => count);
+    const colors = labels.map((_, i) => (i % 2 === 0 ? "#099268" : "#c3fae8"));
+
+    if (!canvasRef.current) return;
+
+    if (chartRef.current) {
+      chartRef.current.destroy();
+    }
+
+    chartRef.current = new Chart(canvasRef.current, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "Ingredient usage",
+            data: values,
+            backgroundColor: colors,
+            borderRadius: 6,
+            borderSkipped: false,
+          },
+        ],
+      },
+      options: {
+        // indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+        },
+      },
+    });
+  };
+
   const contentRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const touchStartX = useRef<number | null>(null);
@@ -184,6 +236,9 @@ function App() {
         <h1
           onClick={() => {
             setShowAllIngredients((prev) => !prev);
+            setTimeout(() => {
+              createChar();
+            }, 500);
           }}
         >
           <UtilsIcon name="logo" color="#099268" />
@@ -491,6 +546,10 @@ function App() {
 
       {showAllIngredients && (
         <div className="all-ingredients">
+          <div style={{ height: "600px", padding: "30px" }}>
+            <canvas ref={canvasRef}></canvas>
+          </div>
+
           <div
             className="close-ingredients"
             onClick={() => {
