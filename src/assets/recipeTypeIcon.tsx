@@ -1,7 +1,7 @@
-import type { mealType } from "../types";
+import type { MealType } from "../types";
 
 type RecipeTypeIconProps = {
-  type: mealType;
+  type: MealType;
   color?: string;
 };
 

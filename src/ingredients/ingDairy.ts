@@ -6,6 +6,7 @@ type IngId =
   | "condensed_milk"
   | "yogurt_natural"
   | "greek_yogurt"
+  | "kefir"
   | "cream_12"
   | "cream_18"
   | "cream_30"
@@ -68,6 +69,17 @@ export const iDIR: Record<IngId, IngredientItem> = {
       łyżka: 20,
     },
     nutrientsPer100g: [5, 3.6, 9],
+  },
+
+  kefir: {
+    name: "Kefir",
+    type: "dir",
+    kcalPer100g: 52,
+    unitWeights: {
+      szklanka: 250,
+      łyżka: 15,
+    },
+    nutrientsPer100g: [2, 4.7, 3.4],
   },
 
   cream_12: {

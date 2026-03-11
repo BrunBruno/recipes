@@ -1,6 +1,6 @@
-import type { IngredientType, KeyWord, mealType, Recipe } from "./types";
+import type { IngredientType, KeyWord, MealType, Recipe } from "./types";
 
-export const mealTypesData: Record<mealType, { label: string; color: string }> =
+export const MealTypesData: Record<MealType, { label: string; color: string }> =
   {
     dinner: { label: "Obiad", color: "#f59f00" },
     snack: { label: "Przekąska", color: "#f03e3e" },
@@ -154,51 +154,27 @@ export const calculateRecipeNutrients = (
 
 export const keywordAliases: Record<KeyWord, string[]> = {
   xxx: ["xxx"],
-
   ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
   deser: ["deser", "desery", "słodkie", "na słodko"],
   biszkopt: ["biszkopt", "biszkopty", "biszkoptowy", "biszkoptowa"],
-  wołowina: ["wołowina", "wołowe", "wołowiny", "befsztyk", "stek"],
-  wieprzowina: [
-    "wieprzowina",
-    "wieprzowe",
-    "wieprzowiny",
-    "schab",
-    "karkówka",
-    "boczek",
-  ],
+  wołowina: ["wołowina", "wołowe", "wołowiny"],
+  wieprzowina: ["wieprzowina", "wieprzowe", "wieprzowa"],
   kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczaczek", "drób"],
   indyk: ["indyk", "indyka", "indycze"],
   makaron: ["makaron", "makarony", "pasta", "spaghetti"],
   ryż: ["ryż", "ryżu", "ryżowy", "ryżowa"],
-  ziemniak: [
-    "ziemniak",
-    "ziemniaki",
-    "ziemniaczana",
-    "ziemniaczany",
-    "kartofel",
-    "kartofle",
-    "pyra",
-    "pyry",
-  ],
+  ziemniak: ["ziemniak", "ziemniaki", "ziemniacz"],
   jajko: ["jajko", "jajka", "jaja", "jajeczne"],
-  naleśnik: ["naleśnik", "naleśniki", "naleśnikowy", "naleśnikowa"],
-  owoce: ["owoce", "owoc", "owocowy", "owocowa"],
-  warzywa: [
-    "warzywa",
-    "warzywo",
-    "warzywny",
-    "warzywna",
-    "jarzyny",
-    "jarzynowy",
-  ],
+  naleśnik: ["naleśnik", "nalesnik", "naleśniki", "nalesniki"],
+  owoce: ["owoce", "owoc", "owoco"],
+  warzywa: ["warzywa", "warzywo", "warzywny", "warzywna"],
   sos: ["sos", "sosy", "sosik", "polewa", "dressing"],
-  krem: ["krem", "kremowy", "kremowa", "kremówka", "masa"],
+  krem: ["krem", "kremowy", "kremowa", "masa"],
   ser: ["ser", "sery", "serowy", "serowa", "sernik", "twaróg"],
   sałatka: ["sałatka", "sałatki", "salatka", "salatki"],
   pieczywo: ["pieczywo", "pieczywa", "chleb", "chleby", "bułka", "bułki"],
   ryba: ["ryba", "ryby", "owoce morza"],
-  zupa: ["zupa", "zupy", "zupka", "zupki", "krem", "zupa krem"],
+  zupa: ["zupa", "zupy", "zupka", "zupki", "krem"],
 };
 
 export const countIngredientUsage = (recipes: Recipe[]) => {

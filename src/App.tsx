@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
-import { type KeyWord, type mealType, type Recipe } from "./types";
+import { type KeyWord, type MealType, type Recipe } from "./types";
 import IngredientIcon from "./assets/ingredientsIcon";
 import {
   calculateRecipeKcal,
@@ -8,7 +8,7 @@ import {
   countIngredientUsage,
   ingredientTypeLabels,
   keywordAliases,
-  mealTypesData,
+  MealTypesData,
 } from "./utils";
 import RecipeTypeIcon from "./assets/recipeTypeIcon";
 import UtilsIcon from "./assets/utilsIcon";
@@ -32,7 +32,7 @@ function App() {
   const touchEndX = useRef<number | null>(null);
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [activeTypes, setActiveTypes] = useState<mealType[]>([]);
+  const [activeTypes, setActiveTypes] = useState<MealType[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
@@ -40,7 +40,7 @@ function App() {
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
   const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
 
-  const toggleType = (type: mealType) => {
+  const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
@@ -235,21 +235,21 @@ function App() {
           ></div>
 
           <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
-            {Object.entries(mealTypesData).map(([key, { label, color }]) => (
+            {Object.entries(MealTypesData).map(([key, { label, color }]) => (
               <button
                 key={key}
                 className="filter-btn"
                 style={{
-                  borderColor: activeTypes.includes(key as mealType)
+                  borderColor: activeTypes.includes(key as MealType)
                     ? color
                     : "#666",
                 }}
-                onClick={() => toggleType(key as mealType)}
+                onClick={() => toggleType(key as MealType)}
               >
                 <div className="filter-svg">
                   <RecipeTypeIcon
-                    type={key as mealType}
-                    color={activeTypes.includes(key as mealType) ? "" : "#666"}
+                    type={key as MealType}
+                    color={activeTypes.includes(key as MealType) ? "" : "#666"}
                   />
                 </div>
                 <span className="filter-text">{label}</span>
@@ -345,7 +345,7 @@ function App() {
               {selectedRecipe.images.map((image, i) => (
                 <img
                   key={`image-${i}-${image}`}
-                  src={image === "" ? "./default.jpg" : image}
+                  src={image === "" ? "./full/default.jpg" : "./full/" + image}
                   alt={selectedRecipe.name}
                   className="recipe-details-image"
                   style={{ left: `${i * 100 - activeImageIndex * 100}%` }}
@@ -463,20 +463,20 @@ function App() {
               className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
               style={{
                 backgroundImage: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)),
-                                  url(${recipe.images[0] === "" ? "./default.jpg" : recipe.images[0]})`,
+                                  url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
               }}
             ></div>
 
             <div
               className="card-svg"
-              style={{ borderColor: mealTypesData[recipe.type].color }}
+              style={{ borderColor: MealTypesData[recipe.type].color }}
             >
               <RecipeTypeIcon type={recipe.type} />
             </div>
             {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
               <div
                 className="card-warning"
-                style={{ borderColor: mealTypesData[recipe.type].color }}
+                style={{ borderColor: MealTypesData[recipe.type].color }}
               >
                 <UtilsIcon name="warning" color="#f03e3e" />
               </div>

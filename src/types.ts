@@ -1,6 +1,6 @@
 // iMET, iDIR, iFAT, iGRN, iVEG, iSAU, iSPC, iOTH
 
-export type mealType =
+export type MealType =
   | "dinner"
   | "snack"
   | "soup"
@@ -95,7 +95,7 @@ export type RecipeStepGroup = {
 
 export type Recipe = {
   name: string;
-  type: mealType;
+  type: MealType;
   images: string[];
   portions: number;
   time: number;

@@ -30,7 +30,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       title: "Dodatki",
       items: [
         { ingredient: iVEG.frozen_fries, amount: "5 × 150" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "5 × 100", unit: "g" },
+        { ingredient: iVEG.beets_whole_vinegar, amount: "5 × 100", },
         { ingredient: iSPC.salt },
       ],
     },

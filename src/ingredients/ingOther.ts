@@ -4,6 +4,7 @@ type IngId =
   | "water"
   | "sugar"
   | "powdered_sugar"
+  | "vanilla_sugar"
   | "cocoa"
   | "honey"
   | "vanilla_extract"
@@ -59,6 +60,18 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżka: 12,
       szklanka: 160,
     },
+  },
+
+  vanilla_sugar: {
+    name: "Cukier wanilinowy",
+    type: "oth",
+    kcalPer100g: 394,
+    unitWeights: {
+      łyżka: 12,
+      łyżeczka: 4,
+      opak: 30,
+    },
+    nutrientsPer100g: [0, 98, 0],
   },
 
   cocoa: {
