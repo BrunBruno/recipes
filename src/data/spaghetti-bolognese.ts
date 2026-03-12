@@ -8,7 +8,7 @@ import type { Recipe } from "../types";
 const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
-  images: [""],
+  images: ["spaghetti-bolognese.jpg"],
   time: 30,
   portions: 3,
   ingredients: [
@@ -36,7 +36,7 @@ const spaghettiBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "wołowina"],
+  keyWords: ["makaron", "wołowina", "xxx"],
 };
 
 export default spaghettiBolognese;

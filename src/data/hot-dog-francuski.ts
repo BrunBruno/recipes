@@ -6,7 +6,7 @@ import type { Recipe } from "../types";
 const frenchHotDog: Recipe = {
   name: "Hot Dog Francuski",
   type: "snack",
-  images: [""],
+  images: ["hot-dog-francuski.jpg"],
   time: 10,
   portions: 1,
   ingredients: [
@@ -15,10 +15,10 @@ const frenchHotDog: Recipe = {
       items: [
         { ingredient: iMET.sausages, amount: 2, unit: "szt" },
         { ingredient: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
-        { ingredient: iSAU.ketchup,  },
-        { ingredient: iSAU.garlic_sauce, },
-        { ingredient: iSAU.mustard,  },
-        { ingredient: iSAU.sriracha,  },
+        { ingredient: iSAU.ketchup },
+        { ingredient: iSAU.garlic_sauce },
+        { ingredient: iSAU.mustard },
+        { ingredient: iSAU.sriracha },
       ],
     },
   ],
@@ -36,7 +36,7 @@ const frenchHotDog: Recipe = {
     },
   ],
 
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "xxx"],
 };
 
 export default frenchHotDog;
