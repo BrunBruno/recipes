@@ -1,12 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { recipes } from "./recipes";
-import { type KeyWord, type MealType, type Recipe } from "./types";
+import {
+  type IngredientType,
+  type KeyWord,
+  type MealType,
+  type Recipe,
+} from "./types";
 import IngredientIcon from "./assets/ingredientsIcon";
 import {
   calculateRecipeKcal,
   calculateRecipeNutrients,
+  countDoneRecipes,
+  countIngredientTypes,
   countIngredientUsage,
+  countRecipeCalories,
+  countRecipesTypes,
+  ingredientTypeColor,
   ingredientTypeLabels,
+  kcalLowColors,
+  kcalTopColors,
   keywordAliases,
   MealTypesData,
 } from "./utils";
@@ -27,56 +39,106 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  ArcElement,
+  Legend,
+  PieController,
+  Tooltip,
 } from "chart.js";
 
 const SWIPE_THRESHOLD = 50;
-const ingredientUsage = countIngredientUsage(recipes);
+const recipeTypeCount = countRecipesTypes(recipes); // pie
+const ingredientTypeCount = countIngredientTypes(); // pie
+const doneRecipeCount = countDoneRecipes(recipes); // pie
+const ingredientUsage = countIngredientUsage(recipes); // top
+const recipeCalories = countRecipeCalories(recipes); // top bottom
 
-Chart.register(BarController, BarElement, CategoryScale, LinearScale);
+Chart.register(
+  BarController,
+  BarElement,
+  PieController,
+  ArcElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+);
 
 function App() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const chartRef = useRef<Chart | null>(null);
+  const canvasRefs = {
+    recipeTypes: useRef<HTMLCanvasElement | null>(null),
+    ingredientTypes: useRef<HTMLCanvasElement | null>(null),
+    doneRecipes: useRef<HTMLCanvasElement | null>(null),
+    ingredientUsage: useRef<HTMLCanvasElement | null>(null),
+    topCalories: useRef<HTMLCanvasElement | null>(null),
+    bottomCalories: useRef<HTMLCanvasElement | null>(null),
+  };
+  const chartRefs = {
+    recipeTypes: useRef<Chart | null>(null),
+    ingredientTypes: useRef<Chart | null>(null),
+    doneRecipes: useRef<Chart | null>(null),
+    ingredientUsage: useRef<Chart | null>(null),
+    topCalories: useRef<Chart | null>(null),
+    bottomCalories: useRef<Chart | null>(null),
+  };
 
-  const createChar = () => {
-    const topIngredients = Object.entries(ingredientUsage)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 20);
-
-    const labels = topIngredients.map(([name]) => name);
-    const values = topIngredients.map(([, count]) => count);
-    const colors = labels.map((_, i) => (i % 2 === 0 ? "#099268" : "#c3fae8"));
-
-    if (!canvasRef.current) return;
+  const createChart = (
+    canvas: HTMLCanvasElement | null,
+    chartRef: React.MutableRefObject<Chart | null>,
+    type: "bar" | "pie",
+    labels: string[],
+    data: number[],
+    label: string,
+    colors?: string[],
+  ) => {
+    if (!canvas) return;
 
     if (chartRef.current) {
       chartRef.current.destroy();
     }
 
-    chartRef.current = new Chart(canvasRef.current, {
-      type: "bar",
+    const finalLabels = type === "bar" ? labels.map(truncateLabel) : labels;
+
+    chartRef.current = new Chart(canvas, {
+      type,
       data: {
-        labels,
+        labels: finalLabels,
         datasets: [
           {
-            label: "Ingredient usage",
-            data: values,
-            backgroundColor: colors,
-            borderRadius: 6,
+            label,
+            data,
+            backgroundColor:
+              colors ??
+              labels.map((_, i) => (i % 2 === 0 ? "#099268" : "#c3fae8")),
+            borderRadius: type === "bar" ? 6 : 0,
             borderSkipped: false,
           },
         ],
       },
       options: {
-        // indexAxis: "y",
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: {
+            display: false, // ✅ requirement #1
+          },
         },
       },
     });
   };
+
+  const truncateLabel = (label: string) => {
+    return label.length > 20 ? label.slice(0, 17) + "..." : label;
+  };
+
+  const topN = (obj: Record<string, number>, n: number) =>
+    Object.entries(obj)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, n);
+
+  const bottomN = (obj: Record<string, number>, n: number) =>
+    Object.entries(obj)
+      .sort((a, b) => a[1] - b[1])
+      .slice(0, n);
 
   const contentRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -228,19 +290,115 @@ function App() {
     contentEl.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const createCharts = () => {
+    // PIE 1 — recipe types
+    const recipeLabels = Object.keys(recipeTypeCount);
+    const recipeValues = Object.values(recipeTypeCount);
+    createChart(
+      canvasRefs.recipeTypes.current,
+      chartRefs.recipeTypes,
+      "pie",
+      recipeLabels.map((k) => MealTypesData[k as MealType].label),
+      recipeValues,
+      "Recipe types",
+      recipeLabels.map((k) => MealTypesData[k as MealType].color),
+    );
+
+    // PIE 2 — ingredient types
+    const ingLabels = Object.keys(ingredientTypeCount);
+    const ingValues = Object.values(ingredientTypeCount);
+    createChart(
+      canvasRefs.ingredientTypes.current,
+      chartRefs.ingredientTypes,
+      "pie",
+      ingLabels,
+      ingValues,
+      "Ingredient types",
+      ingLabels.map((k) => ingredientTypeColor[k as IngredientType]),
+    );
+
+    // PIE 3 — done recipes
+    createChart(
+      canvasRefs.doneRecipes.current,
+      chartRefs.doneRecipes,
+      "pie",
+      ["Done", "Not done"],
+      [doneRecipeCount.yes, doneRecipeCount.no],
+      "Recipe done",
+      ["#0ca678", "#f03e3e"],
+    );
+
+    const ingredientTypeMap: Record<string, IngredientType> = {};
+
+    const ingredientCollections = [
+      iDIR,
+      iFAT,
+      iFRT,
+      iGRN,
+      iMET,
+      iOTH,
+      iSAU,
+      iSPC,
+      iVEG,
+    ];
+
+    ingredientCollections.forEach((col) => {
+      Object.values(col).forEach((i) => {
+        ingredientTypeMap[i.name] = i.type;
+      });
+    });
+
+    // BAR 4 — top ingredient usage
+    const topIng = topN(ingredientUsage, 10);
+    createChart(
+      canvasRefs.ingredientUsage.current,
+      chartRefs.ingredientUsage,
+      "bar",
+      topIng.map(([k]) => k),
+      topIng.map(([, v]) => v),
+      "Ingredient usage",
+      topIng.map(([k]) => ingredientTypeColor[ingredientTypeMap[k]]),
+    );
+
+    // BAR 5 — top kcal recipes
+    const topKcal = topN(recipeCalories, 10);
+    createChart(
+      canvasRefs.topCalories.current,
+      chartRefs.topCalories,
+      "bar",
+      topKcal.map(([k]) => k),
+      topKcal.map(([, v]) => v),
+      "Top kcal",
+      kcalTopColors,
+    );
+
+    // BAR 6 — lowest kcal recipes
+    const lowKcal = bottomN(recipeCalories, 10);
+    createChart(
+      canvasRefs.bottomCalories.current,
+      chartRefs.bottomCalories,
+      "bar",
+      lowKcal.map(([k]) => k),
+      lowKcal.map(([, v]) => v),
+      "Lowest kcal",
+      kcalLowColors,
+    );
+  };
+
+  useEffect(() => {
+    if (!showAllIngredients) return;
+
+    requestAnimationFrame(() => {
+      createCharts();
+    });
+  }, [showAllIngredients]);
+
   if (recipes.length > 0 && recipes[0] === undefined) return;
 
   return (
     <div className="recipes-page">
       <div className="page-title">
-        <h1
-          onClick={() => {
-            setShowAllIngredients((prev) => !prev);
-            setTimeout(() => {
-              createChar();
-            }, 500);
-          }}
-        >
+        <h1 onClick={() => setShowAllIngredients((prev) => !prev)}>
           <UtilsIcon name="logo" color="#099268" />
           Przepisy {filteredRecipes.length}
         </h1>
@@ -546,8 +704,38 @@ function App() {
 
       {showAllIngredients && (
         <div className="all-ingredients">
-          <div style={{ height: "600px", padding: "30px" }}>
-            <canvas ref={canvasRef}></canvas>
+          <div className="all-ingredients">
+            <div className="statistics">
+              <div className="statistics-element">
+                <h2>Recipe Types</h2>
+                <canvas ref={canvasRefs.recipeTypes}></canvas>
+              </div>
+
+              <div className="statistics-element">
+                <h2>Ingredient Types</h2>
+                <canvas ref={canvasRefs.ingredientTypes}></canvas>
+              </div>
+
+              <div className="statistics-element">
+                <h2>Recipes Done</h2>
+                <canvas ref={canvasRefs.doneRecipes}></canvas>
+              </div>
+
+              <div className="statistics-element">
+                <h2>Top Ingredient Usage</h2>
+                <canvas ref={canvasRefs.ingredientUsage}></canvas>
+              </div>
+
+              <div className="statistics-element">
+                <h2>Top 10 Kcal Recipes</h2>
+                <canvas ref={canvasRefs.topCalories}></canvas>
+              </div>
+
+              <div className="statistics-element">
+                <h2>Lowest 10 Kcal Recipes</h2>
+                <canvas ref={canvasRefs.bottomCalories}></canvas>
+              </div>
+            </div>
           </div>
 
           <div

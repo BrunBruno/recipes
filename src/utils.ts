@@ -1,3 +1,12 @@
+import { iDIR } from "./ingredients/ingDairy";
+import { iFAT } from "./ingredients/ingFat";
+import { iFRT } from "./ingredients/ingFruit";
+import { iGRN } from "./ingredients/ingGrain";
+import { iMET } from "./ingredients/ingMeat";
+import { iOTH } from "./ingredients/ingOther";
+import { iSAU } from "./ingredients/ingSauce";
+import { iSPC } from "./ingredients/ingSpice";
+import { iVEG } from "./ingredients/ingVegetable";
 import type { IngredientType, KeyWord, MealType, Recipe } from "./types";
 
 export const MealTypesData: Record<MealType, { label: string; color: string }> =
@@ -30,6 +39,53 @@ export const ingredientTypeLabels: Record<IngredientType, string> = {
   jar: "Przetwory",
   oth: "Inne",
 };
+
+export const ingredientTypeColor: Record<IngredientType, string> = {
+  met: "#f03e3e",
+  fsh: "#1c7ed6",
+  dir: "#ffffff",
+  fat: "#fcc419",
+  veg: "#40c057",
+  frt: "#40c057",
+  grn: "#fcc419",
+  spc: "#adb5bd",
+  sau: "#f03e3e",
+  egg: "#ffec99",
+  che: "#fcc419",
+  wat: "#1c7ed6",
+  msh: "#ced4da",
+  pot: "#B79268",
+  nut: "#B79268",
+  hrb: "#40c057",
+  jar: "#40c057",
+  oth: "#ced4da",
+};
+
+export const kcalTopColors = [
+  "#c92a2a",
+  "#e03131",
+  "#f03e3e",
+  "#fa5252",
+  "#ff6b6b",
+  "#ff8787",
+  "#ffa8a8",
+  "#ffc9c9",
+  "#ffe3e3",
+  "#fff5f5",
+];
+
+export const kcalLowColors = [
+  "#087f5b",
+  "#099268",
+  "#0ca678",
+  "#12b886",
+  "#20c997",
+  "#38d9a9",
+  "#63e6be",
+  "#96f2d7",
+  "#c3fae8",
+  "#e6fcf5",
+];
 
 export const calculateRecipeKcal = (recipe: Recipe): number => {
   const DEFAULT_FAT_GRAMS = 12;
@@ -187,6 +243,92 @@ export const countIngredientUsage = (recipes: Recipe[]) => {
         usage[key] = (usage[key] ?? 0) + 1;
       });
     });
+  });
+
+  return usage;
+};
+
+export const countRecipesTypes = (recipes: Recipe[]) => {
+  const usage: Record<MealType, number> = {
+    dinner: 0,
+    snack: 0,
+    soup: 0,
+    dessert: 0,
+    salad: 0,
+    other: 0,
+  };
+
+  recipes.forEach((recipe) => {
+    usage[recipe.type]++;
+  });
+
+  return usage;
+};
+
+export const countIngredientTypes = () => {
+  const usage: Record<IngredientType, number> = {
+    met: 0,
+    fsh: 0,
+    dir: 0,
+    fat: 0,
+    veg: 0,
+    frt: 0,
+    grn: 0,
+    spc: 0,
+    sau: 0,
+    egg: 0,
+    che: 0,
+    wat: 0,
+    msh: 0,
+    pot: 0,
+    nut: 0,
+    hrb: 0,
+    jar: 0,
+    oth: 0,
+  };
+
+  const ingredientCollections = [
+    iDIR,
+    iFAT,
+    iFRT,
+    iGRN,
+    iMET,
+    iOTH,
+    iSAU,
+    iSPC,
+    iVEG,
+  ];
+
+  for (const collection of ingredientCollections) {
+    for (const ingredient of Object.values(collection)) {
+      usage[ingredient.type]++;
+    }
+  }
+
+  return usage;
+};
+
+export const countRecipeCalories = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    if (recipe.type !== "other")
+      usage[recipe.name] = calculateRecipeKcal(recipe);
+  });
+
+  return usage;
+};
+
+export const countDoneRecipes = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {
+    yes: 0,
+    no: 0,
+  };
+
+  recipes.forEach((recipe) => {
+    if (recipe.keyWords) {
+      usage[recipe.keyWords.includes("xxx") ? "yes" : "no"]++;
+    }
   });
 
   return usage;

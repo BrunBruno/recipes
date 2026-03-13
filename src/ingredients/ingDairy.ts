@@ -76,6 +76,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     kcalPer100g: 52,
     unitWeights: {
+      ml: 1,
       szklanka: 250,
       łyżka: 15,
     },
