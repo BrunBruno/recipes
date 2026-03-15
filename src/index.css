@@ -178,7 +178,8 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
-  padding: 8rem 4rem 6rem 4rem;
+  padding: 8rem 4rem 4rem 4rem;
+  min-height: calc(100dvh - 12rem - 5rem);
 }
 
 .recipe-card {
@@ -327,13 +328,13 @@ body::-webkit-scrollbar {
   content: "por.";
 }
 .recipe-param:nth-child(4)::after {
-  content: "tłus";
+  content: "tłus.";
 }
 .recipe-param:nth-child(5)::after {
-  content: "węgl";
+  content: "węgl.";
 }
 .recipe-param:nth-child(6)::after {
-  content: "biał";
+  content: "biał.";
 }
 
 .recipe-param > span {
@@ -609,27 +610,38 @@ body::-webkit-scrollbar {
   }
 }
 
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: #000;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
+.statistics {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  height: calc(100vh - 2rem);
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.show-ingredients {
-  cursor: pointer;
-  padding: 0.5rem 2rem;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  background-color: #0000;
+.statistics-element {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ccc;
+  flex-direction: column;
+  height: 500px;
+  padding: 1rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.statistics canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .all-ingredients {
@@ -663,27 +675,11 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 }
 
 .close-ingredients svg {
   height: 2rem;
-}
-
-.statistics {
-  height: 100vh;
-  padding: 1rem;
-  gap: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.statistics-element {
-  width: 100%;
-  height: 300px;
-}
-
-.statistics canvas {
-  width: 100%;
 }
 
 .ingredient-group {
@@ -768,6 +764,36 @@ body::-webkit-scrollbar {
   display: block;
   font-size: 0.8rem;
   margin-right: 0.5rem;
+}
+
+.footer {
+  background-color: #111;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-button {
+  height: 3rem;
+  padding: 0 1.5rem;
+  outline: none;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer-button svg {
+  height: 1.2rem;
 }
 
 @media (max-width: 960px) {
@@ -989,7 +1015,6 @@ body::-webkit-scrollbar {
 
   .statistics {
     grid-template-columns: 1fr;
-    height: auto;
   }
 
   .ingredient-group {

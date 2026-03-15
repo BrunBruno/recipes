@@ -9,14 +9,18 @@ type IngId =
   | "chicken_drums"
   | "chicken_thigh"
   | "chicken_whole"
+  | "chicken_soup_portion"
   | "poultry_liver"
   | "turkey_breast"
+  | "turkey_wing"
+  | "turkey_neck"
   | "pork_loin"
   | "pork_neck"
   | "pork_ham"
   | "ground_pork"
   | "stew_pork"
   | "pork_tenderloin"
+  | "pork_rib"
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
@@ -123,6 +127,18 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [9, 0, 20],
   },
 
+  chicken_soup_portion: {
+    name: "Porcja rosołowa z kurczaka",
+    type: "met",
+    kcalPer100g: 190,
+    unitWeights: {
+      szt: 400,
+    },
+    nutrientsPer100g: [13, 0, 19],
+  },
+
+  //
+
   turkey_breast: {
     name: "Pierś z indyka",
     type: "met",
@@ -132,6 +148,26 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [3, 0, 29],
+  },
+
+  turkey_wing: {
+    name: "Skrzydło z indyka",
+    type: "met",
+    kcalPer100g: 203,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [14, 0, 27],
+  },
+
+  turkey_neck: {
+    name: "Szyja z indyka",
+    type: "met",
+    kcalPer100g: 170,
+    unitWeights: {
+      szt: 250,
+    },
+    nutrientsPer100g: [11, 0, 18],
   },
 
   //
@@ -197,6 +233,16 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [4, 0, 26],
+  },
+
+  pork_rib: {
+    name: "Żeberko wieprzowe",
+    type: "met",
+    kcalPer100g: 291,
+    unitWeights: {
+      szt: 80,
+    },
+    nutrientsPer100g: [24, 0, 17],
   },
 
   //
@@ -283,7 +329,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       pęto: 100,
     },
-    nutrientsPer100g: [18.4,2,13.1],
+    nutrientsPer100g: [18.4, 2, 13.1],
   }, //
 
   sausages: {

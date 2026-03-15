@@ -17,7 +17,7 @@ const jajkaWSosieKoperkowym: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 4, unit: "szt" },
+        { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
         { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },

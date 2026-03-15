@@ -85,6 +85,120 @@ const UtilsIcon = ({ name, color }: UtilsIconProps) => {
           </g>
         </svg>
       );
+    case "statistics":
+      return (
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="ic-statistics-chart-0">
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="2"
+              y1="2"
+              x2="2"
+              y2="22"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="2"
+              y1="12"
+              x2="22"
+              y2="12"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="6"
+              y1="4"
+              x2="6"
+              y2="8"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="9"
+              y1="2"
+              x2="9"
+              y2="8"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="12"
+              y1="5"
+              x2="12"
+              y2="8"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="21"
+              y1="20"
+              x2="21"
+              y2="16"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="18"
+              y1="22"
+              x2="18"
+              y2="16"
+            />
+            <line
+              fill="none"
+              stroke={color}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              x1="15"
+              y1="19"
+              x2="15"
+              y2="16"
+            />
+          </g>
+        </svg>
+      );
+    case "ingredients":
+      return (
+        <svg
+          fill={color}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <g>
+            <g>
+              <path d="M384.337,0h-30.417h-42.775H201.802H27.219v512h326.701h30.417h100.445V0H384.337z M232.218,30.417h48.508v123.752 l-24.254-14.734l-24.255,14.734V30.417z M57.636,481.583V30.417h144.165v177.82l54.672-33.213l54.671,33.213V30.417h42.775 v451.166H57.636z M454.364,481.583h-70.027V30.417h19.806v229.986h30.417V30.417h19.805V481.583z" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="404.143" y="312.557" width="30.417" height="116.883" />
+            </g>
+          </g>
+        </svg>
+      );
   }
   return <></>;
 };

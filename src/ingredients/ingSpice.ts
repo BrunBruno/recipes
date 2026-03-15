@@ -50,6 +50,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 251,
     unitWeights: {
       łyżeczka: 2,
+      ziarno: 0.2,
     },
   },
 

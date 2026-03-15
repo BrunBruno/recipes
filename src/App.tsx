@@ -14,6 +14,7 @@ import {
   countIngredientTypes,
   countIngredientUsage,
   countRecipeCalories,
+  countRecipeKcalPer100g,
   countRecipesTypes,
   ingredientTypeColor,
   ingredientTypeLabels,
@@ -46,11 +47,12 @@ import {
 } from "chart.js";
 
 const SWIPE_THRESHOLD = 50;
-const recipeTypeCount = countRecipesTypes(recipes); // pie
-const ingredientTypeCount = countIngredientTypes(); // pie
-const doneRecipeCount = countDoneRecipes(recipes); // pie
-const ingredientUsage = countIngredientUsage(recipes); // top
-const recipeCalories = countRecipeCalories(recipes); // top bottom
+const recipeTypeCount = countRecipesTypes(recipes);
+const ingredientTypeCount = countIngredientTypes();
+const doneRecipeCount = countDoneRecipes(recipes);
+const ingredientUsage = countIngredientUsage(recipes);
+const recipeCalories = countRecipeCalories(recipes);
+const recipeKcalPer100g = countRecipeKcalPer100g(recipes);
 
 Chart.register(
   BarController,
@@ -71,6 +73,8 @@ function App() {
     ingredientUsage: useRef<HTMLCanvasElement | null>(null),
     topCalories: useRef<HTMLCanvasElement | null>(null),
     bottomCalories: useRef<HTMLCanvasElement | null>(null),
+    topKcalDensity: useRef<HTMLCanvasElement | null>(null),
+    bottomKcalDensity: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
     recipeTypes: useRef<Chart | null>(null),
@@ -79,6 +83,8 @@ function App() {
     ingredientUsage: useRef<Chart | null>(null),
     topCalories: useRef<Chart | null>(null),
     bottomCalories: useRef<Chart | null>(null),
+    topKcalDensity: useRef<Chart | null>(null),
+    bottomKcalDensity: useRef<Chart | null>(null),
   };
 
   const createChart = (
@@ -119,7 +125,8 @@ function App() {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false, // ✅ requirement #1
+            display: type === "pie",
+            position: "right",
           },
         },
       },
@@ -153,6 +160,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
   const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
+  const [showStatistics, setShowStatistics] = useState<boolean>(false);
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
@@ -161,7 +169,6 @@ function App() {
   };
 
   const normalize = (text: string) => text.toLowerCase().trim();
-
   const matchesKeyword = (query: string, recipeKeywords: KeyWord[]) => {
     const q = normalize(query);
 
@@ -183,14 +190,15 @@ function App() {
     return typeMatch && (nameMatch || keywordsMatch);
   });
 
+  // scroll unset on modal open
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
     setActiveImageIndex(0);
   }, [selectedRecipe]);
-
   useEffect(() => {
-    document.body.style.overflow = showAllIngredients ? "hidden" : "auto";
-  }, [showAllIngredients]);
+    document.body.style.overflow =
+      showAllIngredients || showStatistics ? "hidden" : "auto";
+  }, [showAllIngredients, showStatistics]);
 
   useEffect(() => {
     if (!selectedRecipe) return;
@@ -217,14 +225,13 @@ function App() {
     }
   }, [showSearch]);
 
+  // swipe images
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;
   };
-
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     touchEndX.current = e.touches[0].clientX;
   };
-
   const handleTouchEnd = () => {
     if (!touchStartX.current || !touchEndX.current) return;
 
@@ -245,6 +252,7 @@ function App() {
     touchEndX.current = null;
   };
 
+  // recipe stats
   const getFontSizeClass = (value: number): string => {
     const length = String(value).length;
 
@@ -253,7 +261,6 @@ function App() {
     if (length === 4) return "font-md";
     return "font-sm";
   };
-
   const getStatusClass = (type: string, value: number) => {
     if (type === "kcal") {
       if (value <= 500) return "status-green";
@@ -270,6 +277,7 @@ function App() {
     return "";
   };
 
+  // recipe open
   const handleHeaderScroll = () => {
     const contentEl = contentRef.current;
     if (!contentEl) return;
@@ -290,46 +298,47 @@ function App() {
     contentEl.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // creates all charts
   const createCharts = () => {
-    // PIE 1 — recipe types
+    // recipe types
     const recipeLabels = Object.keys(recipeTypeCount);
     const recipeValues = Object.values(recipeTypeCount);
     createChart(
       canvasRefs.recipeTypes.current,
       chartRefs.recipeTypes,
-      "pie",
+      "bar",
       recipeLabels.map((k) => MealTypesData[k as MealType].label),
       recipeValues,
       "Recipe types",
       recipeLabels.map((k) => MealTypesData[k as MealType].color),
     );
 
-    // PIE 2 — ingredient types
+    //  ingredient types
     const ingLabels = Object.keys(ingredientTypeCount);
     const ingValues = Object.values(ingredientTypeCount);
     createChart(
       canvasRefs.ingredientTypes.current,
       chartRefs.ingredientTypes,
-      "pie",
-      ingLabels,
+      "bar",
+      ingLabels.map((k) => ingredientTypeLabels[k as IngredientType]),
       ingValues,
       "Ingredient types",
       ingLabels.map((k) => ingredientTypeColor[k as IngredientType]),
     );
 
-    // PIE 3 — done recipes
+    //  done recipes
     createChart(
       canvasRefs.doneRecipes.current,
       chartRefs.doneRecipes,
-      "pie",
+      "bar",
       ["Done", "Not done"],
       [doneRecipeCount.yes, doneRecipeCount.no],
       "Recipe done",
       ["#0ca678", "#f03e3e"],
     );
 
+    // top ingredient usage
     const ingredientTypeMap: Record<string, IngredientType> = {};
-
     const ingredientCollections = [
       iDIR,
       iFAT,
@@ -348,7 +357,6 @@ function App() {
       });
     });
 
-    // BAR 4 — top ingredient usage
     const topIng = topN(ingredientUsage, 10);
     createChart(
       canvasRefs.ingredientUsage.current,
@@ -360,7 +368,7 @@ function App() {
       topIng.map(([k]) => ingredientTypeColor[ingredientTypeMap[k]]),
     );
 
-    // BAR 5 — top kcal recipes
+    // top kcal recipes
     const topKcal = topN(recipeCalories, 10);
     createChart(
       canvasRefs.topCalories.current,
@@ -372,7 +380,7 @@ function App() {
       kcalTopColors,
     );
 
-    // BAR 6 — lowest kcal recipes
+    //  lowest kcal recipes
     const lowKcal = bottomN(recipeCalories, 10);
     createChart(
       canvasRefs.bottomCalories.current,
@@ -383,22 +391,46 @@ function App() {
       "Lowest kcal",
       kcalLowColors,
     );
-  };
 
+    // TOP
+    const topKcalDensity = topN(recipeKcalPer100g, 10);
+    // const topKcalDensity = topN(recipeKcalPer100g, 1000);
+    createChart(
+      canvasRefs.topKcalDensity.current,
+      chartRefs.topKcalDensity,
+      "bar",
+      topKcalDensity.map(([k]) => k),
+      topKcalDensity.map(([, v]) => v),
+      "Top kcal / 100g",
+      kcalTopColors,
+    );
+
+    // LOW
+    const lowKcalDensity = bottomN(recipeKcalPer100g, 10);
+    createChart(
+      canvasRefs.bottomKcalDensity.current,
+      chartRefs.bottomKcalDensity,
+      "bar",
+      lowKcalDensity.map(([k]) => k),
+      lowKcalDensity.map(([, v]) => v),
+      "Lowest kcal / 100g",
+      kcalLowColors,
+    );
+  };
   useEffect(() => {
-    if (!showAllIngredients) return;
+    if (!showStatistics) return;
 
     requestAnimationFrame(() => {
       createCharts();
     });
-  }, [showAllIngredients]);
+  }, [showStatistics]);
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
 
   return (
     <div className="recipes-page">
       <div className="page-title">
-        <h1 onClick={() => setShowAllIngredients((prev) => !prev)}>
+        <h1>
           <UtilsIcon name="logo" color="#099268" />
           Przepisy {filteredRecipes.length}
         </h1>
@@ -475,7 +507,6 @@ function App() {
       {selectedRecipe && (
         <div className="details-bg" onClick={() => setSelectedRecipe(null)} />
       )}
-
       {selectedRecipe && (
         <div className={`recipe-details ${headerCollapsed ? "collapsed" : ""}`}>
           <button
@@ -702,42 +733,25 @@ function App() {
         ))}
       </div>
 
+      <footer className="footer">
+        <button
+          className="footer-button"
+          onClick={() => setShowAllIngredients((prev) => !prev)}
+        >
+          <UtilsIcon name="ingredients" color="#fff" />
+          <span>Składniki</span>
+        </button>
+        <button
+          className="footer-button"
+          onClick={() => setShowStatistics((prev) => !prev)}
+        >
+          <UtilsIcon name="statistics" color="#fff" />
+          <span>Statystyki</span>
+        </button>
+      </footer>
+
       {showAllIngredients && (
         <div className="all-ingredients">
-          <div className="all-ingredients">
-            <div className="statistics">
-              <div className="statistics-element">
-                <h2>Recipe Types</h2>
-                <canvas ref={canvasRefs.recipeTypes}></canvas>
-              </div>
-
-              <div className="statistics-element">
-                <h2>Ingredient Types</h2>
-                <canvas ref={canvasRefs.ingredientTypes}></canvas>
-              </div>
-
-              <div className="statistics-element">
-                <h2>Recipes Done</h2>
-                <canvas ref={canvasRefs.doneRecipes}></canvas>
-              </div>
-
-              <div className="statistics-element">
-                <h2>Top Ingredient Usage</h2>
-                <canvas ref={canvasRefs.ingredientUsage}></canvas>
-              </div>
-
-              <div className="statistics-element">
-                <h2>Top 10 Kcal Recipes</h2>
-                <canvas ref={canvasRefs.topCalories}></canvas>
-              </div>
-
-              <div className="statistics-element">
-                <h2>Lowest 10 Kcal Recipes</h2>
-                <canvas ref={canvasRefs.bottomCalories}></canvas>
-              </div>
-            </div>
-          </div>
-
           <div
             className="close-ingredients"
             onClick={() => {
@@ -817,6 +831,75 @@ function App() {
               </ul>
             </section>
           ))}
+        </div>
+      )}
+
+      {showStatistics && (
+        <div className="statistics">
+          <div
+            className="close-ingredients"
+            onClick={() => {
+              setShowStatistics(false);
+            }}
+          >
+            <UtilsIcon name="close" color="#fff" />
+          </div>
+
+          <div className="statistics-element">
+            <h2>Dziesięć najbardziej kalorycznych przepisów na 100g</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.topKcalDensity}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Dziesięć najmniej kalorycznych przepisów na 100g</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.bottomKcalDensity}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Dziesięć najbardziej kalorycznych przepisów na porcję</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.topCalories}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Dziesięć najmniej kalorycznych przepisów na porcję</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.bottomCalories}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Najczęściej używane składniki</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.ingredientUsage}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Rodzaje przepisów</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.recipeTypes}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Rodzaje składników</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.ingredientTypes}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Wykonane przepisy</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.doneRecipes}></canvas>
+            </div>
+          </div>
         </div>
       )}
     </div>
