@@ -10,7 +10,6 @@ type IngId =
   | "barbecue_sauce"
   | "curry_sauce"
   | "tomato_paste"
-  | "tomato_passata"
   | "winiary_sweet_sour_sauce";
 
 export const iSAU: Record<IngId, IngredientItem> = {
@@ -110,18 +109,6 @@ export const iSAU: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżka: 15,
       łyżeczka: 5,
-    },
-  },
-
-  tomato_passata: {
-    name: "Przecier pomidorowy",
-    type: "sau",
-    kcalPer100g: 29,
-    unitWeights: {
-      ml: 1,
-      łyżka: 15,
-      łyżeczka: 5,
-      opak: 500,
     },
   },
 

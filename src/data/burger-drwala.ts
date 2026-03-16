@@ -24,7 +24,7 @@ const burgerDrwala: Recipe = {
         { ingredient: iDIR.lilliputian_cheese, amount: 350 },
         { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
-        { ingredient: iGRN.breadcrumbs },
+        { ingredient: iGRN.breadcrumbs, amount: 2, unit: "łyżka" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },

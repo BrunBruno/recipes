@@ -80,12 +80,13 @@ export type Ingredient = {
   ingredient: IngredientItem;
   amount?: number | string;
   unit?: UnitType;
+  excludeFromCalc?: boolean;
+  invisible?: boolean;
 };
 
 export type RecipeIngredientGroup = {
   title: string;
   items: Ingredient[];
-  excludeFromCalc?: boolean;
 };
 
 export type RecipeStepGroup = {

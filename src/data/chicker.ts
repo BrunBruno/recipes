@@ -15,12 +15,12 @@ const chicker: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.pikantne_poledwiczki, amount: 400 },
+        { ingredient: iMET.spicy_tenderloins, amount: 400 },
         { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
       ],
     },
-     {
+    {
       title: "Sosy",
       items: [
         { ingredient: iSAU.ketchup, amount: 1.5, unit: "łyżeczka" },

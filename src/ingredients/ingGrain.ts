@@ -5,6 +5,7 @@ type IngId =
   | "breadcrumbs"
   | "rice"
   | "couscous"
+  | "semolina"
   | "fusilli_pasta"
   | "spaghetti_pasta"
   | "thin_pasta"
@@ -63,6 +64,16 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [2.3, 67, 13],
+  },
+
+  semolina: {
+    name: "Kasza manna",
+    type: "grn",
+    kcalPer100g: 360,
+    unitWeights: {
+      łyżka: 13,
+    },
+    nutrientsPer100g: [1, 73, 12],
   },
 
   fusilli_pasta: {

@@ -18,7 +18,7 @@ const spaghettiBolognese: Recipe = {
         { ingredient: iGRN.spaghetti_pasta, amount: "3 × 100" },
         { ingredient: iMET.ground_beef, amount: 400 },
         { ingredient: iDIR.yellow_cheese, amount: "3 × 50" },
-        { ingredient: iFAT.oil },
+        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
         { ingredient: iSPC.knorr_bolognese_fix },
       ],
     },

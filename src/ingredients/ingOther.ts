@@ -10,6 +10,7 @@ type IngId =
   | "vanilla_extract"
   | "coffee"
   | "grain_coffee"
+  | "citric_acid"
   | "baking_powder"
   | "baking_soda"
   | "spirit"
@@ -23,7 +24,8 @@ type IngId =
   | "dark_chocolate"
   | "chocolate_cream"
   | "cheese_snacks"
-  | "ladyfingers";
+  | "ladyfingers"
+  | "rosol";
 
 export const iOTH: Record<IngId, IngredientItem> = {
   water: {
@@ -122,6 +124,13 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
   },
 
+  citric_acid: {
+    name: "Kwasek cytrynowy",
+    type: "oth",
+    kcalPer100g: 0,
+    nutrientsPer100g: [0, 0, 0],
+  },
+
   baking_powder: {
     name: "Proszek do pieczenia",
     type: "oth",
@@ -172,7 +181,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   },
 
   gelatin: {
-    name: "Żelatyna 180 bloom",
+    name: "Żelatyna",
     type: "oth",
     kcalPer100g: 350,
     unitWeights: {
@@ -258,5 +267,12 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 200,
     },
+  },
+
+  rosol: {
+    name: "Rosół",
+    type: "oth",
+    kcalPer100g: 15,
+    nutrientsPer100g: [0.5, 0.5, 2],
   },
 };

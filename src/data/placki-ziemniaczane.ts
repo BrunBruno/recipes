@@ -1,6 +1,7 @@
 import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
 import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
@@ -20,10 +21,11 @@ const plackiZiemniaczane: Recipe = {
         { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iFAT.oil },
+        { ingredient: iFAT.oil, amount: 4, unit: "łyżka" },
         { ingredient: iSPC.savory },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
+        { ingredient: iOTH.water, amount: -350, invisible: true },
       ],
     },
   ],

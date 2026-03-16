@@ -30,9 +30,10 @@ type IngId =
   | "bacon_block"
   | "sausage"
   | "sausages"
+  | "meat_spread"
   | "canned_tuna"
   | "smoked_salmon"
-  | "pikantne_poledwiczki"
+  | "spicy_tenderloins"
   | "burger_patties";
 
 export const iMET: Record<IngId, IngredientItem> = {
@@ -342,6 +343,16 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [21, 2.7, 13],
   }, //
 
+  meat_spread: {
+    name: "pasztet",
+    type: "met",
+    kcalPer100g: 187,
+    unitWeights: {
+      opak: 131,
+    },
+    nutrientsPer100g: [14, 6.7, 1.4],
+  }, //
+
   //
 
   canned_tuna: {
@@ -367,7 +378,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   //
 
-  pikantne_poledwiczki: {
+  spicy_tenderloins: {
     name: "Pikantne polędwiczki",
     type: "met",
     kcalPer100g: 178,

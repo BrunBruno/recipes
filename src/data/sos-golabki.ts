@@ -1,8 +1,8 @@
 import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iOTH } from "../ingredients/ingOther";
-import { iSAU } from "../ingredients/ingSauce";
 import { iSPC } from "../ingredients/ingSpice";
+import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const sosDoGolabkow: Recipe = {
@@ -16,7 +16,7 @@ const sosDoGolabkow: Recipe = {
       title: "",
       items: [
         { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
-        { ingredient: iSAU.tomato_passata, amount: 250, unit: "ml" },
+        { ingredient: iVEG.tomato_puree, amount: 250, unit: "ml" },
         { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
         { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
         { ingredient: iSPC.maggi },

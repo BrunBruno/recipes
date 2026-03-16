@@ -87,15 +87,50 @@ export const kcalLowColors = [
   "#e6fcf5",
 ];
 
+const hexToRgb = (hex: string) => {
+  const m = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
+  if (!m) throw new Error("Invalid hex");
+  return [parseInt(m[1], 16), parseInt(m[2], 16), parseInt(m[3], 16)];
+};
+
+const rgbToHex = ([r, g, b]: number[]) => {
+  return "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("");
+};
+
+export const interpolateColor = (kcal: number, min: number, max: number) => {
+  const mid = (min + max) / 2;
+
+  const green = hexToRgb("#087f5b");
+  const white = hexToRgb("#FFFFFF");
+  const red = hexToRgb("#c92a2a");
+
+  let t: number;
+  let start: number[];
+  let end: number[];
+
+  if (kcal <= mid) {
+    t = (kcal - min) / (mid - min);
+    start = green;
+    end = white;
+  } else {
+    t = (kcal - mid) / (max - mid);
+    start = white;
+    end = red;
+  }
+
+  const rgb = start.map((s, i) => Math.round(s + t * (end[i] - s)));
+  return rgbToHex(rgb);
+};
+
 export const calculateRecipeKcal = (recipe: Recipe): number => {
   const DEFAULT_FAT_GRAMS = 12;
 
   let totalKcal = 0;
 
   for (const group of recipe.ingredients) {
-    if (group.excludeFromCalc) continue;
-
     for (const item of group.items) {
+      if (item.excludeFromCalc) continue;
+
       const { ingredient, amount, unit } = item;
 
       let grams = 0;
@@ -144,11 +179,11 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
   let totalGrams = 0;
 
   for (const group of recipe.ingredients) {
-    if (group.excludeFromCalc) continue;
-
     for (const item of group.items) {
+      if (item.excludeFromCalc) continue;
+
       const { ingredient, amount, unit } = item;
-      if (ingredient.type === "wat") continue;
+      // if (ingredient.type === "wat") continue;
 
       let grams = 0;
       let value = amount;
@@ -202,9 +237,9 @@ export const calculateRecipeNutrients = (
   let totalProt = 0;
 
   for (const group of recipe.ingredients) {
-    if (group.excludeFromCalc) continue;
-
     for (const item of group.items) {
+      if (item.excludeFromCalc) continue;
+
       const { ingredient, amount, unit } = item;
 
       if (!ingredient.nutrientsPer100g) continue;
@@ -367,8 +402,8 @@ export const countRecipeCalories = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
   recipes.forEach((recipe) => {
-    if (recipe.type !== "other")
-      usage[recipe.name] = calculateRecipeKcal(recipe);
+    // if (recipe.type !== "other")
+    usage[recipe.name] = calculateRecipeKcal(recipe);
   });
 
   return usage;

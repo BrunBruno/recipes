@@ -13,6 +13,7 @@ type IngId =
   | "celery_root"
   | "red_onion"
   | "radish"
+  | "beetroot"
   | "lettuce"
   | "chives"
   | "parsley"
@@ -21,6 +22,7 @@ type IngId =
   | "frozen_fries"
   | "frozen_vegetable_mix"
   | "canned_tomatoes"
+  | "tomato_puree"
   | "canned_corn"
   | "canned_peas"
   | "pickled_cucumber"
@@ -169,6 +171,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 3.4, 0.7],
   },
 
+  beetroot: {
+    name: "Burak",
+    type: "veg",
+    kcalPer100g: 43,
+    unitWeights: {
+      szt: 150,
+    },
+    nutrientsPer100g: [0.2, 10, 1.6],
+  },
+
   //
 
   chinese_cabbage: {
@@ -283,6 +295,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [0.2, 4.8, 1.1],
+  },
+
+  tomato_puree: {
+    name: "Przecier pomidorowy",
+    type: "jar",
+    kcalPer100g: 38,
+    unitWeights: {
+      ml: 1,
+    },
+    nutrientsPer100g: [0.2, 8, 1.6],
   },
 
   canned_corn: {

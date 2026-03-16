@@ -9,6 +9,7 @@ import {
 import IngredientIcon from "./assets/ingredientsIcon";
 import {
   calculateRecipeKcal,
+  calculateRecipeKcalPer100g,
   calculateRecipeNutrients,
   countDoneRecipes,
   countIngredientTypes,
@@ -18,6 +19,7 @@ import {
   countRecipesTypes,
   ingredientTypeColor,
   ingredientTypeLabels,
+  interpolateColor,
   kcalLowColors,
   kcalTopColors,
   keywordAliases,
@@ -42,7 +44,6 @@ import {
   LinearScale,
   ArcElement,
   Legend,
-  PieController,
   Tooltip,
 } from "chart.js";
 
@@ -53,11 +54,11 @@ const doneRecipeCount = countDoneRecipes(recipes);
 const ingredientUsage = countIngredientUsage(recipes);
 const recipeCalories = countRecipeCalories(recipes);
 const recipeKcalPer100g = countRecipeKcalPer100g(recipes);
+console.log(recipeKcalPer100g);
 
 Chart.register(
   BarController,
   BarElement,
-  PieController,
   ArcElement,
   CategoryScale,
   LinearScale,
@@ -67,6 +68,8 @@ Chart.register(
 
 function App() {
   const canvasRefs = {
+    calories: useRef<HTMLCanvasElement | null>(null),
+    kcalDensity: useRef<HTMLCanvasElement | null>(null),
     recipeTypes: useRef<HTMLCanvasElement | null>(null),
     ingredientTypes: useRef<HTMLCanvasElement | null>(null),
     doneRecipes: useRef<HTMLCanvasElement | null>(null),
@@ -77,6 +80,8 @@ function App() {
     bottomKcalDensity: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
+    calories: useRef<Chart | null>(null),
+    kcalDensity: useRef<Chart | null>(null),
     recipeTypes: useRef<Chart | null>(null),
     ingredientTypes: useRef<Chart | null>(null),
     doneRecipes: useRef<Chart | null>(null),
@@ -90,32 +95,31 @@ function App() {
   const createChart = (
     canvas: HTMLCanvasElement | null,
     chartRef: React.MutableRefObject<Chart | null>,
-    type: "bar" | "pie",
     labels: string[],
     data: number[],
-    label: string,
     colors?: string[],
   ) => {
+    const truncateLabel = (label: string) => {
+      return label.length > 12 ? label.slice(0, 9) + "..." : label;
+    };
+
     if (!canvas) return;
 
     if (chartRef.current) {
       chartRef.current.destroy();
     }
 
-    const finalLabels = type === "bar" ? labels.map(truncateLabel) : labels;
-
     chartRef.current = new Chart(canvas, {
-      type,
+      type: "bar",
       data: {
-        labels: finalLabels,
+        labels: labels.map(truncateLabel),
         datasets: [
           {
-            label,
             data,
             backgroundColor:
               colors ??
               labels.map((_, i) => (i % 2 === 0 ? "#099268" : "#c3fae8")),
-            borderRadius: type === "bar" ? 6 : 0,
+            borderRadius: 0,
             borderSkipped: false,
           },
         ],
@@ -125,27 +129,28 @@ function App() {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: type === "pie",
-            position: "right",
+            display: false,
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: true,
+              color: "#222",
+              lineWidth: 1,
+            },
+          },
+          y: {
+            grid: {
+              display: true,
+              color: "#222",
+              lineWidth: 1,
+            },
           },
         },
       },
     });
   };
-
-  const truncateLabel = (label: string) => {
-    return label.length > 20 ? label.slice(0, 17) + "..." : label;
-  };
-
-  const topN = (obj: Record<string, number>, n: number) =>
-    Object.entries(obj)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, n);
-
-  const bottomN = (obj: Record<string, number>, n: number) =>
-    Object.entries(obj)
-      .sort((a, b) => a[1] - b[1])
-      .slice(0, n);
 
   const contentRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -268,6 +273,12 @@ function App() {
       return "status-red";
     }
 
+    if (type === "kcal100") {
+      if (value <= 150) return "status-green";
+      if (value <= 300) return "status-yellow";
+      return "status-red";
+    }
+
     if (type === "time") {
       if (value <= 30) return "status-green";
       if (value <= 60) return "status-yellow";
@@ -300,44 +311,84 @@ function App() {
 
   // creates all charts
   const createCharts = () => {
-    // recipe types
-    const recipeLabels = Object.keys(recipeTypeCount);
-    const recipeValues = Object.values(recipeTypeCount);
+    const topN = (obj: Record<string, number>, n: number) =>
+      Object.entries(obj)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, n);
+
+    const bottomN = (obj: Record<string, number>, n: number) =>
+      Object.entries(obj)
+        .sort((a, b) => a[1] - b[1])
+        .slice(0, n);
+
+    const sorted = (obj: Record<string, number>) =>
+      Object.entries(obj).sort((a, b) => b[1] - a[1]);
+
+    const allKcal = sorted(recipeCalories);
+    const minKcal = Math.min(...allKcal.map(([, v]) => v));
+    const maxKcal = Math.max(...allKcal.map(([, v]) => v));
+
+    const allKcalColors = allKcal.map(([, v]) =>
+      interpolateColor(v, minKcal, maxKcal),
+    );
     createChart(
-      canvasRefs.recipeTypes.current,
-      chartRefs.recipeTypes,
-      "bar",
-      recipeLabels.map((k) => MealTypesData[k as MealType].label),
-      recipeValues,
-      "Recipe types",
-      recipeLabels.map((k) => MealTypesData[k as MealType].color),
+      canvasRefs.calories.current,
+      chartRefs.calories,
+      allKcal.map(([k]) => k),
+      allKcal.map(([, v]) => v),
+      allKcalColors,
     );
 
-    //  ingredient types
-    const ingLabels = Object.keys(ingredientTypeCount);
-    const ingValues = Object.values(ingredientTypeCount);
+    const allKcalDensity = sorted(recipeKcalPer100g);
+    const minKcalDen = Math.min(...allKcalDensity.map(([, v]) => v));
+    const maxKcalDen = Math.max(...allKcalDensity.map(([, v]) => v));
+    const allKcalDenColors = allKcalDensity.map(([, v]) =>
+      interpolateColor(v, minKcalDen, maxKcalDen),
+    );
     createChart(
-      canvasRefs.ingredientTypes.current,
-      chartRefs.ingredientTypes,
-      "bar",
-      ingLabels.map((k) => ingredientTypeLabels[k as IngredientType]),
-      ingValues,
-      "Ingredient types",
-      ingLabels.map((k) => ingredientTypeColor[k as IngredientType]),
+      canvasRefs.kcalDensity.current,
+      chartRefs.kcalDensity,
+      allKcalDensity.map(([k]) => k),
+      allKcalDensity.map(([, v]) => v),
+      allKcalDenColors,
     );
 
-    //  done recipes
+    const topKcal = topN(recipeCalories, 10);
     createChart(
-      canvasRefs.doneRecipes.current,
-      chartRefs.doneRecipes,
-      "bar",
-      ["Done", "Not done"],
-      [doneRecipeCount.yes, doneRecipeCount.no],
-      "Recipe done",
-      ["#0ca678", "#f03e3e"],
+      canvasRefs.topCalories.current,
+      chartRefs.topCalories,
+      topKcal.map(([k]) => k),
+      topKcal.map(([, v]) => v),
+      kcalTopColors,
     );
 
-    // top ingredient usage
+    const lowKcal = bottomN(recipeCalories, 10);
+    createChart(
+      canvasRefs.bottomCalories.current,
+      chartRefs.bottomCalories,
+      lowKcal.map(([k]) => k),
+      lowKcal.map(([, v]) => v),
+      kcalLowColors,
+    );
+
+    const topKcalDensity = topN(recipeKcalPer100g, 10);
+    createChart(
+      canvasRefs.topKcalDensity.current,
+      chartRefs.topKcalDensity,
+      topKcalDensity.map(([k]) => k),
+      topKcalDensity.map(([, v]) => v),
+      kcalTopColors,
+    );
+
+    const lowKcalDensity = bottomN(recipeKcalPer100g, 10);
+    createChart(
+      canvasRefs.bottomKcalDensity.current,
+      chartRefs.bottomKcalDensity,
+      lowKcalDensity.map(([k]) => k),
+      lowKcalDensity.map(([, v]) => v),
+      kcalLowColors,
+    );
+
     const ingredientTypeMap: Record<string, IngredientType> = {};
     const ingredientCollections = [
       iDIR,
@@ -361,60 +412,37 @@ function App() {
     createChart(
       canvasRefs.ingredientUsage.current,
       chartRefs.ingredientUsage,
-      "bar",
       topIng.map(([k]) => k),
       topIng.map(([, v]) => v),
-      "Ingredient usage",
       topIng.map(([k]) => ingredientTypeColor[ingredientTypeMap[k]]),
     );
 
-    // top kcal recipes
-    const topKcal = topN(recipeCalories, 10);
+    const recipeLabels = Object.keys(recipeTypeCount);
+    const recipeValues = Object.values(recipeTypeCount);
     createChart(
-      canvasRefs.topCalories.current,
-      chartRefs.topCalories,
-      "bar",
-      topKcal.map(([k]) => k),
-      topKcal.map(([, v]) => v),
-      "Top kcal",
-      kcalTopColors,
+      canvasRefs.recipeTypes.current,
+      chartRefs.recipeTypes,
+      recipeLabels.map((k) => MealTypesData[k as MealType].label),
+      recipeValues,
+      recipeLabels.map((k) => MealTypesData[k as MealType].color),
     );
 
-    //  lowest kcal recipes
-    const lowKcal = bottomN(recipeCalories, 10);
+    const ingLabels = Object.keys(ingredientTypeCount);
+    const ingValues = Object.values(ingredientTypeCount);
     createChart(
-      canvasRefs.bottomCalories.current,
-      chartRefs.bottomCalories,
-      "bar",
-      lowKcal.map(([k]) => k),
-      lowKcal.map(([, v]) => v),
-      "Lowest kcal",
-      kcalLowColors,
+      canvasRefs.ingredientTypes.current,
+      chartRefs.ingredientTypes,
+      ingLabels.map((k) => ingredientTypeLabels[k as IngredientType]),
+      ingValues,
+      ingLabels.map((k) => ingredientTypeColor[k as IngredientType]),
     );
 
-    // TOP
-    const topKcalDensity = topN(recipeKcalPer100g, 10);
-    // const topKcalDensity = topN(recipeKcalPer100g, 1000);
     createChart(
-      canvasRefs.topKcalDensity.current,
-      chartRefs.topKcalDensity,
-      "bar",
-      topKcalDensity.map(([k]) => k),
-      topKcalDensity.map(([, v]) => v),
-      "Top kcal / 100g",
-      kcalTopColors,
-    );
-
-    // LOW
-    const lowKcalDensity = bottomN(recipeKcalPer100g, 10);
-    createChart(
-      canvasRefs.bottomKcalDensity.current,
-      chartRefs.bottomKcalDensity,
-      "bar",
-      lowKcalDensity.map(([k]) => k),
-      lowKcalDensity.map(([, v]) => v),
-      "Lowest kcal / 100g",
-      kcalLowColors,
+      canvasRefs.doneRecipes.current,
+      chartRefs.doneRecipes,
+      ["Done", "Not done"],
+      [doneRecipeCount.yes, doneRecipeCount.no],
+      ["#0ca678", "#f03e3e"],
     );
   };
   useEffect(() => {
@@ -525,6 +553,14 @@ function App() {
               `}
             >
               <span>{calculateRecipeKcal(selectedRecipe)}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
+                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
+              `}
+            >
+              <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
             </div>
             <div
               className={`recipe-param 
@@ -651,26 +687,29 @@ function App() {
                         </h4>
                       )}
                       <ul className="ingredients-list">
-                        {group.items.map((ingredient, index) => (
-                          <li key={index} className="ingredient-item">
-                            <div className="ingredient-indicator">
-                              <IngredientIcon
-                                ingType={ingredient.ingredient.type}
-                              />
-                            </div>
-                            <span className="ingredient-name">
-                              {ingredient.ingredient.name}
-                            </span>
-                            <span className="ingredient-amount">
-                              {ingredient.amount}
-                              {ingredient.amount
-                                ? ingredient.unit
-                                  ? ` ${ingredient.unit}`
-                                  : " g"
-                                : ""}
-                            </span>
-                          </li>
-                        ))}
+                        {group.items.map((ingredient, index) => {
+                          if (ingredient.invisible) return;
+                          return (
+                            <li key={index} className="ingredient-item">
+                              <div className="ingredient-indicator">
+                                <IngredientIcon
+                                  ingType={ingredient.ingredient.type}
+                                />
+                              </div>
+                              <span className="ingredient-name">
+                                {ingredient.ingredient.name}
+                              </span>
+                              <span className="ingredient-amount">
+                                {ingredient.amount}
+                                {ingredient.amount
+                                  ? ingredient.unit
+                                    ? ` ${ingredient.unit}`
+                                    : " g"
+                                  : ""}
+                              </span>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}
@@ -898,6 +937,20 @@ function App() {
             <h2>Wykonane przepisy</h2>
             <div className="chart-wrapper">
               <canvas ref={canvasRefs.doneRecipes}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Kaloryczność w przeliczeniu na porcję</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.calories}></canvas>
+            </div>
+          </div>
+
+          <div className="statistics-element">
+            <h2>Kaloryczność w przeliczeniu na 100 g</h2>
+            <div className="chart-wrapper">
+              <canvas ref={canvasRefs.kcalDensity}></canvas>
             </div>
           </div>
         </div>

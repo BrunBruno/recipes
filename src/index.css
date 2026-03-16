@@ -284,7 +284,7 @@ body::-webkit-scrollbar {
 .recipe-details-params {
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   z-index: 30;
   padding: 0.2rem;
   gap: 0.2rem;
@@ -322,18 +322,21 @@ body::-webkit-scrollbar {
   content: "kcal";
 }
 .recipe-param:nth-child(2)::after {
-  content: "min";
+  content: "kc/100";
 }
 .recipe-param:nth-child(3)::after {
-  content: "por.";
+  content: "min";
 }
 .recipe-param:nth-child(4)::after {
-  content: "tłus.";
+  content: "por.";
 }
 .recipe-param:nth-child(5)::after {
-  content: "węgl.";
+  content: "tłus.";
 }
 .recipe-param:nth-child(6)::after {
+  content: "węgl.";
+}
+.recipe-param:nth-child(7)::after {
   content: "biał.";
 }
 

@@ -15,6 +15,7 @@ type IngId =
   | "cream_cheese_horseradish"
   | "mascarpone"
   | "yellow_cheese"
+  | "gouda_cheese"
   | "lilliputian_cheese"
   | "parmigiano_reggiano";
 
@@ -74,14 +75,15 @@ export const iDIR: Record<IngId, IngredientItem> = {
   kefir: {
     name: "Kefir",
     type: "dir",
-    kcalPer100g: 52,
+    kcalPer100g: 46,
     unitWeights: {
       ml: 1,
       szklanka: 250,
       łyżka: 15,
+      opak: 400,
     },
-    nutrientsPer100g: [2, 4.7, 3.4],
-  },
+    nutrientsPer100g: [1.5, 4.6, 3.6],
+  }, //
 
   cream_12: {
     name: "Śmietana 12%",
@@ -158,14 +160,26 @@ export const iDIR: Record<IngId, IngredientItem> = {
   yellow_cheese: {
     name: "Ser żółty",
     type: "che",
-    kcalPer100g: 348,
+    kcalPer100g: 338,
     unitWeights: {
       plaster: 20,
       kostka: 250,
-      opak: 500,
+      opak: 300,
     },
-    nutrientsPer100g: [28, 0, 24],
-  },
+    nutrientsPer100g: [26, 1.1, 25],
+  }, //
+
+  gouda_cheese: {
+    name: "Ser żółty",
+    type: "che",
+    kcalPer100g: 338,
+    unitWeights: {
+      plaster: 20,
+      kostka: 250,
+      opak: 300,
+    },
+    nutrientsPer100g: [26, 1.1, 25],
+  }, //
 
   lilliputian_cheese: {
     name: "Ser Liliput",

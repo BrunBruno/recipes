@@ -14,10 +14,14 @@ const rosol: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.turkey_wing, amount: 500 },
-        { ingredient: iMET.turkey_neck, amount: 200 },
-        { ingredient: iMET.chicken_soup_portion, amount: 400 },
-        { ingredient: iMET.pork_rib, amount: 200 },
+        { ingredient: iMET.turkey_wing, amount: 500, excludeFromCalc: true },
+        { ingredient: iMET.turkey_neck, amount: 200, excludeFromCalc: true },
+        {
+          ingredient: iMET.chicken_soup_portion,
+          amount: 400,
+          excludeFromCalc: true,
+        },
+        { ingredient: iMET.pork_rib, amount: 200, excludeFromCalc: true },
         { ingredient: iVEG.carrot, amount: 2, unit: "szt" },
         { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
         { ingredient: iVEG.celery_root, amount: 120 },
