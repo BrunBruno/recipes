@@ -19,9 +19,9 @@ const bitki: Recipe = {
       items: [
         { ingredient: iMET.pork_tenderloin, amount: 600 },
         { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
-        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
         { ingredient: iDIR.cream_30, amount: 2, unit: "łyżka" },
-        { ingredient: iOTH.water, amount: 500, unit: "ml" },
+        { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.marjoram },

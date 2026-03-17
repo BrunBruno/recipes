@@ -428,7 +428,8 @@ export const countRecipeKcalPer100g = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
   recipes.forEach((recipe) => {
-    usage[recipe.name] = calculateRecipeKcalPer100g(recipe);
+    // usage[recipe.name] = calculateRecipeKcalPer100g(recipe);
+    usage[recipe.name] = 0;
   });
 
   return usage;

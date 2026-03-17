@@ -16,12 +16,12 @@ const kajzerkiZPomidorem: Recipe = {
       title: "",
       items: [
         { ingredient: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-        { ingredient: iFAT.butter, amount: 10 },
         { ingredient: iMET.ham_slices, amount: 4, unit: "plaster" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-        { ingredient: iSPC.salt },
+        { ingredient: iFAT.butter, amount: 10 },
         { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
   ],
@@ -37,7 +37,7 @@ const kajzerkiZPomidorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo",'xxx'],
+  keyWords: ["pieczywo", "xxx"],
 };
 
 export default kajzerkiZPomidorem;

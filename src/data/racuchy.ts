@@ -24,7 +24,7 @@ const racuchy: Recipe = {
         { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "łyżka" },
         { ingredient: iOTH.sugar, amount: 1, unit: "łyżka" },
         { ingredient: iOTH.baking_soda, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iOTH.powdered_sugar },
+        { ingredient: iOTH.powdered_sugar, amount: 2, unit: "łyżeczka" },
       ],
     },
   ],

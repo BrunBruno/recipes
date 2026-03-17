@@ -31,8 +31,8 @@ const burgerDrwala: Recipe = {
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
         { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
-        { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
     {

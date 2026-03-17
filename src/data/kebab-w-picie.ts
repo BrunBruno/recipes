@@ -42,9 +42,9 @@ const kebab: Recipe = {
       title: "Pita",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
+        { ingredient: iFAT.olive, amount: 30, unit: "ml" },
         { ingredient: iOTH.water, amount: 260, unit: "ml" },
         { ingredient: iOTH.yeast, amount: 5 },
-        { ingredient: iFAT.olive, amount: 30, unit: "ml" },
         { ingredient: iSPC.salt, amount: 10 },
       ],
     },

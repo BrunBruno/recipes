@@ -12,7 +12,7 @@ const jajkaWSosieKoperkowym: Recipe = {
   type: "dinner",
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
-  portions: 2,
+  portions: 1,
   ingredients: [
     {
       title: "",
@@ -29,8 +29,8 @@ const jajkaWSosieKoperkowym: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "2 × 200" },
-        { ingredient: iVEG.pickled_cucumber, amount: "2 × 2", unit: "szt" },
+        { ingredient: iVEG.potato, amount: 200 },
+        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iSPC.salt },
       ],
     },

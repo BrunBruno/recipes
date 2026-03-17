@@ -8,15 +8,15 @@ import type { Recipe } from "../types";
 const gotowyBurger: Recipe = {
   name: "Burger Gotowiec",
   type: "snack",
-  images: [""],
+  images: ["burger-gotowiec.jpg"],
   time: 30,
   portions: 2,
   ingredients: [
     {
       title: "",
       items: [
-        { ingredient: iMET.bacon_slices, amount: 4, unit: "plaster" },
         { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
+        { ingredient: iMET.bacon_slices, amount: 4, unit: "plaster" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plaster" },
         { ingredient: iVEG.tomato, amount: 0.5, unit: "szt" },

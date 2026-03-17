@@ -27,7 +27,7 @@ const faworki: Recipe = {
         },
         {
           ingredient: iFAT.rendered_lard,
-          amount: 2 * 0.2,
+          amount: 2 * 0.3,
           unit: "kostka",
           invisible: true,
         },

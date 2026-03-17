@@ -18,7 +18,7 @@ const tiramisu: Recipe = {
         { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
         { ingredient: iOTH.sugar, amount: 150 },
         { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
-        { ingredient: iOTH.coffee, amount: 1, unit: "łyżka" },
+        { ingredient: iOTH.grain_coffee, amount: 1, unit: "łyżka" },
       ],
     },
   ],

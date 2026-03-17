@@ -157,7 +157,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
-    nutrientsPer100g: [22, 44, 18],
   },
 
   //
@@ -329,7 +328,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 250,
     unitWeights: {
-      szt: 40,
+      opak: 40,
     },
   },
 

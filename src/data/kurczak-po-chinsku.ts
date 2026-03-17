@@ -23,7 +23,7 @@ const kurczakPoChinsku: Recipe = {
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iGRN.rice, amount: "3 × 100" },
         { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
-        { ingredient: iSPC.knorr_chinese_fix },
+        { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "opak" },
       ],
     },
   ],

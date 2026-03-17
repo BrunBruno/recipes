@@ -136,6 +136,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 150,
     },
+    nutrientsPer100g: [9, 3, 7],
   },
 
   cream_cheese_horseradish: {
@@ -145,6 +146,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 200,
     },
+    nutrientsPer100g: [10, 3, 7],
   },
 
   mascarpone: {

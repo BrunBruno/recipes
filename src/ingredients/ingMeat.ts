@@ -226,12 +226,12 @@ export const iMET: Record<IngId, IngredientItem> = {
   },
 
   pork_tenderloin: {
-    name: "Polędwiczka wieprzowa",
+    name: "Polędwica wieprzowa",
     type: "met",
     kcalPer100g: 143,
     unitWeights: {
       plaster: 60,
-      opak: 400,
+      opak: 600,
     },
     nutrientsPer100g: [4, 0, 26],
   },

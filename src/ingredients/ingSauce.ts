@@ -110,6 +110,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       łyżka: 15,
       łyżeczka: 5,
     },
+    nutrientsPer100g: [0.3, 18, 4],
   },
 
   // gotowe
@@ -121,5 +122,6 @@ export const iSAU: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+    nutrientsPer100g: [2, 24, 1],
   },
 };

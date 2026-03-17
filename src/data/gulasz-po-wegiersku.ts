@@ -19,7 +19,7 @@ const gulaszPoWegiersku: Recipe = {
         { ingredient: iMET.stew_beef, amount: 500 },
         { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iSPC.knorr_goulash_fix },
+        { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
       ],
     },
     {
@@ -42,14 +42,14 @@ const gulaszPoWegiersku: Recipe = {
         "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
       ],
     },
- {
-  title: "Przykładowe podanie",
-  steps: [
-    "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-    "Podawaj gulasz z porcją ugotowanych kopytek.",
-    "Obok dodaj porcję buraczków zasmażanych.",
-  ],
-},
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
+        "Podawaj gulasz z porcją ugotowanych kopytek.",
+        "Obok dodaj porcję buraczków zasmażanych.",
+      ],
+    },
   ],
   keyWords: ["wołowina", "sos"],
 };

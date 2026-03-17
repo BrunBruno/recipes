@@ -62,6 +62,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżka: 12,
       szklanka: 160,
     },
+    nutrientsPer100g: [0, 100, 0],
   },
 
   vanilla_sugar: {
@@ -84,6 +85,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżka: 7.5,
       łyżeczka: 2.5,
     },
+    nutrientsPer100g: [13, 20, 20],
   },
 
   honey: {
@@ -93,6 +95,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 7,
     },
+    nutrientsPer100g: [0, 82, 0.3],
   },
 
   vanilla_extract: {
@@ -103,6 +106,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżeczka: 5,
     },
+    nutrientsPer100g: [0, 12, 0],
   },
 
   coffee: {
@@ -112,6 +116,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżka: 5,
     },
+    nutrientsPer100g: [0, 0.5, 0.1],
   },
 
   grain_coffee: {
@@ -122,12 +127,16 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżka: 6,
       łyżeczka: 2,
     },
+    nutrientsPer100g: [0, 86, 0],
   },
 
   citric_acid: {
     name: "Kwasek cytrynowy",
     type: "oth",
     kcalPer100g: 0,
+    unitWeights: {
+      łyżeczka: 5,
+    },
     nutrientsPer100g: [0, 0, 0],
   },
 
@@ -138,6 +147,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 5,
     },
+    nutrientsPer100g: [0, 28, 0],
   },
 
   baking_soda: {
@@ -147,6 +157,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 5,
     },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   spirit: {
@@ -158,6 +169,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżeczka: 5,
       łyżka: 15,
     },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   yeast: {
@@ -168,6 +180,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 7,
       kostka: 100,
     },
+    nutrientsPer100g: [1, 10, 8],
   },
 
   instant_yeast: {
@@ -178,6 +191,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżeczka: 3,
       opak: 7,
     },
+    nutrientsPer100g: [3, 35, 26],
   },
 
   gelatin: {
@@ -187,6 +201,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [0, 0, 85],
   },
 
   food_coloring: {
@@ -196,6 +211,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       ml: 1,
     },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   //
@@ -207,6 +223,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżka: 10,
     },
+    nutrientsPer100g: [65, 13, 15],
   },
 
   coconut_flakes: {
@@ -216,6 +233,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżka: 7,
     },
+    nutrientsPer100g: [64, 24, 6],
   },
 
   //
@@ -227,10 +245,11 @@ export const iOTH: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 100,
     },
+    nutrientsPer100g: [30, 59, 7],
   },
 
   dark_chocolate: {
-    name: "Czekolada gorzka",
+    name: "Gorzka czekolada",
     type: "oth",
     kcalPer100g: 555,
     unitWeights: {
@@ -252,7 +271,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   cheese_snacks: {
     name: "Chrupki serowe",
-    type: "grn",
+    type: "oth",
     kcalPer100g: 513,
     unitWeights: {
       opak: 130,
@@ -262,17 +281,18 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   ladyfingers: {
     name: "Biszkopty",
-    type: "grn",
+    type: "oth",
     kcalPer100g: 380,
     unitWeights: {
       opak: 200,
     },
+    nutrientsPer100g: [6, 72, 8],
   },
 
   rosol: {
     name: "Rosół",
     type: "oth",
-    kcalPer100g: 15,
-    nutrientsPer100g: [0.5, 0.5, 2],
+    kcalPer100g: 35,
+    nutrientsPer100g: [5, 1.5, 1],
   },
 };
