@@ -4,8 +4,8 @@ const bigos: Recipe = {
   name: "Bigos",
   type: "salad",
   images: [""],
-  time: 0,
-  portions: 0,
+  time: 360,
+  portions: 20,
   ingredients: [],
   steps: [],
 };

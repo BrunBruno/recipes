@@ -40,7 +40,7 @@ const musMalinowyGanache: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "owoce"],
+  keyWords: ["krem", "owoce"],
 };
 
 export default musMalinowyGanache;

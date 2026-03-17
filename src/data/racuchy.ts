@@ -42,7 +42,7 @@ const racuchy: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "naleśnik", "xxx"],
+  keyWords: ["ciasto", "owoce", "naleśnik", "xxx"],
 };
 
 export default racuchy;

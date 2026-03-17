@@ -1,0 +1,66 @@
+.statistics {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  height: calc(100vh - 2rem);
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.statistics-element {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  padding: 1rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.statistics canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.close-statistics {
+  position: fixed;
+
+  top: 1rem;
+  right: 2rem;
+  z-index: 9;
+
+  width: 2.8rem;
+  height: 2.8rem;
+
+  border: solid 0.2rem #333;
+  background-color: #111;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.close-statistics svg {
+  height: 2rem;
+}
+
+@media (max-width: 960px) {
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+}

@@ -301,26 +301,26 @@ export const calculateRecipeNutrients = (
 export const keywordAliases: Record<KeyWord, string[]> = {
   xxx: ["xxx"],
   ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
-  deser: ["deser", "desery", "słodkie", "na słodko"],
+  deser: ["deser", "desery", "słodkie", "słodko"],
   biszkopt: ["biszkopt", "biszkopty", "biszkoptowy", "biszkoptowa"],
   wołowina: ["wołowina", "wołowe", "wołowiny"],
   wieprzowina: ["wieprzowina", "wieprzowe", "wieprzowa"],
   kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczaczek", "drób"],
   indyk: ["indyk", "indyka", "indycze"],
-  makaron: ["makaron", "makarony", "pasta", "spaghetti"],
-  ryż: ["ryż", "ryżu", "ryżowy", "ryżowa"],
+  makaron: ["makaron", "makarony", "pasta"],
+  ryż: ["ryż", "ryz", "ryżu", "ryżowy", "ryżowa"],
   ziemniak: ["ziemniak", "ziemniaki", "ziemniacz"],
   jajko: ["jajko", "jajka", "jaja", "jajeczne"],
   naleśnik: ["naleśnik", "nalesnik", "naleśniki", "nalesniki"],
-  owoce: ["owoce", "owoc", "owoco"],
+  owoce: ["owoce", "owoc", "owocowe"],
   warzywa: ["warzywa", "warzywo", "warzywny", "warzywna"],
   sos: ["sos", "sosy", "sosik", "polewa", "dressing"],
-  krem: ["krem", "kremowy", "kremowa", "masa"],
-  ser: ["ser", "sery", "serowy", "serowa", "sernik", "twaróg"],
+  krem: ["krem", "kremowy", "kremowa", "masa", "mus"],
+  ser: ["ser", "sery", "serowy", "serowa"],
   sałatka: ["sałatka", "sałatki", "salatka", "salatki"],
   pieczywo: ["pieczywo", "pieczywa", "chleb", "chleby", "bułka", "bułki"],
-  ryba: ["ryba", "ryby", "owoce morza"],
-  zupa: ["zupa", "zupy", "zupka", "zupki", "krem"],
+  ryba: ["ryba", "ryby"],
+  zupa: ["zupa", "zupy", "zupka", "zupki"],
 };
 
 export const countIngredientUsage = (recipes: Recipe[]) => {
@@ -428,8 +428,7 @@ export const countRecipeKcalPer100g = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
   recipes.forEach((recipe) => {
-    // usage[recipe.name] = calculateRecipeKcalPer100g(recipe);
-    usage[recipe.name] = 0;
+    usage[recipe.name] = calculateRecipeKcalPer100g(recipe);
   });
 
   return usage;

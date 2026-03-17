@@ -1,0 +1,286 @@
+.recipes-page {
+  position: relative;
+  min-height: 100vh;
+  color: #eaeaea;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.page-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+}
+
+.page-title h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page-title h1 svg {
+  height: 2.4rem;
+}
+
+.page-title-options {
+  display: flex;
+  gap: 2rem;
+}
+
+.toggle-filters-btn {
+  display: none;
+  padding: 0.5rem;
+  background-color: #0000;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-filters-btn svg {
+  width: 1.8rem;
+}
+
+.toggle-search-btn {
+  display: none;
+  padding: 0.5rem;
+  background-color: #0000;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-search-btn svg {
+  width: 1.8rem;
+}
+
+.filter-buttons-bg {
+  display: none;
+}
+
+.recipe-search-label {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  border: 2px solid #666;
+  border-radius: 8px;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.recipe-search-label svg {
+  height: 1.6rem;
+}
+
+.recipe-search-input {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #0000;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.recipe-search-label:focus-within {
+  border: 2px solid #eee;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recipe-search {
+  display: flex;
+}
+
+.filter-btn {
+  position: relative;
+  padding: 0.5rem;
+  border: 2px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.filter-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.filter-text {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  padding: 0.3rem 0.6rem;
+  display: none;
+}
+
+.filter-btn:hover > span {
+  display: inline;
+}
+
+.details-bg {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #111;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-button {
+  height: 3rem;
+  padding: 0 1.5rem;
+  outline: none;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer-button svg {
+  height: 1.2rem;
+}
+
+@media (max-width: 960px) {
+  .page-title-options {
+    gap: 0.5rem;
+  }
+
+  .toggle-filters-btn {
+    display: inline-block;
+  }
+  .toggle-search-btn {
+    display: inline-block;
+  }
+
+  .recipe-search {
+    display: none;
+    position: absolute;
+    right: 50%;
+    top: calc(100% + 1rem);
+    transform: translateX(50%);
+    flex-direction: column;
+    background: linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .recipe-search.show {
+    display: flex;
+  }
+
+  .filter-buttons {
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    top: calc(100% + 0.5rem);
+    flex-direction: column;
+    background: linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .filter-buttons.show {
+    display: flex;
+  }
+
+  .filter-buttons-bg.show {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .recipe-search-input {
+    font-size: 1.4rem;
+  }
+
+  .filter-btn {
+    background-color: #222;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0 1rem;
+    width: 10.8rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .filter-btn.active {
+    filter: grayscale(1);
+  }
+
+  .filter-text {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: translateX(0);
+    border: none;
+    padding: 0;
+    display: block;
+  }
+}

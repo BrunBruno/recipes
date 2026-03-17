@@ -1,13 +1,44 @@
+import { iDIR } from "../ingredients/ingDairy";
+import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
+import { iMET } from "../ingredients/ingMeat";
+import { iOTH } from "../ingredients/ingOther";
 import type { Recipe } from "../types";
 
 const babeczki: Recipe = {
   name: "Babeczki",
   type: "dessert",
   images: [""],
-  time: 0,
-  portions: 0,
-  ingredients: [],
-  steps: [],
+  time: 30,
+  portions: 12,
+  ingredients: [
+    {
+      title: "",
+      items: [
+        { ingredient: iGRN.flour, amount: 2, unit: "szklanka" },
+        { ingredient: iOTH.baking_powder, amount: 1, unit: "łyżeczka" },
+        { ingredient: iOTH.sugar, amount: 1, unit: "szklanka" },
+        { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "opak" },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
+        { ingredient: iDIR.milk, amount: 1, unit: "szklanka" },
+        { ingredient: iFAT.oil, amount: 0.5, unit: "szklanka" },
+      ],
+    },
+  ],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Połącz składniki suche w jednej misce.",
+        "W drugiej misce wymieszaj składniki mokre, następnie wlej do suchych i krótko wymieszaj.",
+        "Zbyt długie mieszanie sprawi, że muffinki będą ciężkie i gumowate.",
+        "Dodaj opcjonalne dodatki (owoce, orzechy, wiórki kokosowe, kakao itp.).",
+        "Przełóż ciasto do foremek na muffinki (najlepiej silikonowych), wypełniając je do 3/4 wysokości.",
+        "Piecz w nagrzanym piekarniku w 180°C przez około 20 minut (do suchego patyczka).",
+      ],
+    },
+  ],
+  keyWords: ["ciasto"],
 };
 
 export default babeczki;
