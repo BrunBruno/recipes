@@ -37,6 +37,7 @@ export const ingredientTypeLabels: Record<IngredientType, string> = {
   nut: "Orzechy",
   hrb: "Zioła",
   jar: "Przetwory",
+  sug: "Cukry",
   oth: "Inne",
 };
 
@@ -58,6 +59,7 @@ export const ingredientTypeColor: Record<IngredientType, string> = {
   nut: "#B79268",
   hrb: "#40c057",
   jar: "#40c057",
+  sug: "#ffffff",
   oth: "#ced4da",
 };
 
@@ -374,6 +376,7 @@ export const countIngredientTypes = () => {
     nut: 0,
     hrb: 0,
     jar: 0,
+    sug: 0,
     oth: 0,
   };
 

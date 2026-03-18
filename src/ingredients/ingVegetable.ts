@@ -31,7 +31,6 @@ type IngId =
   | "chinese_cabbage"
   | "red_cabbage"
   | "savoy_cabbage"
-  | "olives"
   | "coleslaw"
   | "fried_beets"
   | "beets_shredded"
@@ -211,16 +210,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 800,
     },
     nutrientsPer100g: [0.1, 6, 2],
-  },
-
-  olives: {
-    name: "Oliwki",
-    type: "veg",
-    kcalPer100g: 115,
-    unitWeights: {
-      szt: 5,
-    },
-    nutrientsPer100g: [11, 6, 0.8],
   },
 
   lettuce: {

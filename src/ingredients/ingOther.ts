@@ -43,7 +43,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   sugar: {
     name: "Cukier",
-    type: "oth",
+    type: "sug",
     kcalPer100g: 400,
     unitWeights: {
       łyżeczka: 4,
@@ -55,7 +55,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   powdered_sugar: {
     name: "Cukier puder",
-    type: "oth",
+    type: "sug",
     kcalPer100g: 400,
     unitWeights: {
       łyżeczka: 4,
@@ -67,7 +67,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   vanilla_sugar: {
     name: "Cukier wanilinowy",
-    type: "oth",
+    type: "sug",
     kcalPer100g: 394,
     unitWeights: {
       łyżka: 12,
@@ -75,6 +75,16 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [0, 98, 0],
+  },
+
+  honey: {
+    name: "Miód",
+    type: "sug",
+    kcalPer100g: 304,
+    unitWeights: {
+      łyżeczka: 7,
+    },
+    nutrientsPer100g: [0, 82, 0.3],
   },
 
   cocoa: {
@@ -86,16 +96,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
       łyżeczka: 2.5,
     },
     nutrientsPer100g: [13, 20, 20],
-  },
-
-  honey: {
-    name: "Miód",
-    type: "oth",
-    kcalPer100g: 304,
-    unitWeights: {
-      łyżeczka: 7,
-    },
-    nutrientsPer100g: [0, 82, 0.3],
   },
 
   vanilla_extract: {

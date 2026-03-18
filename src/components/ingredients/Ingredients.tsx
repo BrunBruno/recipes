@@ -117,47 +117,53 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                       maxHeight: openTypes[type] ? `${rows * 200}px` : "0px",
                     }}
                   >
-                    {items.map(([id, item]) => (
-                      <li key={id} className="ingredient-card">
-                        <div className="ingredient-card-header">
-                          <span className="ingredient-name">{item.name}</span>
-                        </div>
-
-                        <div className="ingredient-card-content">
-                          <div className="ingredient-meta">
-                            <IngredientIcon ingType={item.type} />
-                            <span className="type">
-                              {ingredientTypeLabels[item.type]}
-                            </span>
+                    {items.map(([id, item]) => {
+                      console.log(item.name, item.type);
+                      return (
+                        <li key={id} className="ingredient-card">
+                          <div className="ingredient-card-header">
+                            <span className="ingredient-name">{item.name}</span>
                           </div>
 
-                          <div className="kcal">
-                            <strong>{item.kcalPer100g} kcal / 100 g</strong>
-                          </div>
-
-                          {item.nutrientsPer100g && (
-                            <div className="macros">
-                              <span>
-                                T: <strong>{item.nutrientsPer100g[0]} g</strong>
-                              </span>
-                              <span>
-                                W: <strong>{item.nutrientsPer100g[1]} g</strong>
-                              </span>
-                              <span>
-                                B: <strong>{item.nutrientsPer100g[2]} g</strong>
+                          <div className="ingredient-card-content">
+                            <div className="ingredient-meta">
+                              <IngredientIcon ingType={item.type} />
+                              <span className="type">
+                                {ingredientTypeLabels[item.type]}
                               </span>
                             </div>
-                          )}
 
-                          <div className="ingredient-usage">
-                            Użyto w przepisach:{" "}
-                            <strong>{ingredientUsage[item.name] ?? 0}</strong>
+                            <div className="kcal">
+                              <strong>{item.kcalPer100g} kcal / 100 g</strong>
+                            </div>
+
+                            {item.nutrientsPer100g && (
+                              <div className="macros">
+                                <span>
+                                  T:{" "}
+                                  <strong>{item.nutrientsPer100g[0]} g</strong>
+                                </span>
+                                <span>
+                                  W:{" "}
+                                  <strong>{item.nutrientsPer100g[1]} g</strong>
+                                </span>
+                                <span>
+                                  B:{" "}
+                                  <strong>{item.nutrientsPer100g[2]} g</strong>
+                                </span>
+                              </div>
+                            )}
+
+                            <div className="ingredient-usage">
+                              Użyto w przepisach:{" "}
+                              <strong>{ingredientUsage[item.name] ?? 0}</strong>
+                            </div>
                           </div>
-                        </div>
 
-                        <span className="ingredient-id">{id}</span>
-                      </li>
-                    ))}
+                          <span className="ingredient-id">{id}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               );

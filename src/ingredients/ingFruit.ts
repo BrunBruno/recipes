@@ -1,6 +1,12 @@
 import type { IngredientItem } from "../types";
 
-type IngId = "apple" | "pineapple" | "raspberries" | "raisins" | "lemon_juice";
+type IngId =
+  | "apple"
+  | "pineapple"
+  | "raspberries"
+  | "olives"
+  | "raisins"
+  | "lemon_juice";
 
 export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
@@ -31,6 +37,16 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szklanka: 125,
     },
     nutrientsPer100g: [0.3, 12, 1.1],
+  },
+
+  olives: {
+    name: "Oliwki",
+    type: "veg",
+    kcalPer100g: 115,
+    unitWeights: {
+      szt: 5,
+    },
+    nutrientsPer100g: [11, 6, 0.8],
   },
 
   //

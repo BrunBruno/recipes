@@ -172,7 +172,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   }, //
 
   gouda_cheese: {
-    name: "Ser żółty",
+    name: "Ser gouda",
     type: "che",
     kcalPer100g: 338,
     unitWeights: {
