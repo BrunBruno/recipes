@@ -5,7 +5,7 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const stek: Recipe = {
-  name: "Smażony Stek",
+  name: "Stek",
   type: "snack",
   images: ["stek.jpg"],
   time: 20,

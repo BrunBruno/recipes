@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
-  images: [""],
+  images: ["pancakes.jpg"],
   time: 30,
   portions: 3,
   ingredients: [
@@ -38,7 +38,7 @@ const pancakes: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "naleśnik"],
+  keyWords: ["ciasto", "naleśnik", "xxx"],
 };
 
 export default pancakes;

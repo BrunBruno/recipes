@@ -417,7 +417,8 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
 
   recipes.forEach((recipe) => {
     if (recipe.keyWords) {
-      usage[recipe.keyWords.includes("xxx") ? "yes" : "no"]++;
+      // usage[recipe.keyWords.includes("xxx") ? "yes" : "no"]++;
+      usage[recipe.images[0] !== "" ? "yes" : "no"]++;
     }
   });
 

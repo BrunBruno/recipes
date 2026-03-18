@@ -263,8 +263,13 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       recipeLabels.map((k) => MealTypesData[k as MealType].color),
     );
 
-    const ingLabels = Object.keys(ingredientTypeCount);
-    const ingValues = Object.values(ingredientTypeCount);
+    const itcSorted = Object.entries(ingredientTypeCount).sort(
+      (a, b) => b[1] - a[1],
+    );
+    const ingLabels = itcSorted.map(([k]) => k as IngredientType);
+    const ingValues = itcSorted.map(([, v]) => v);
+    // const ingLabels = Object.keys(ingredientTypeCount);
+    // const ingValues = Object.values(ingredientTypeCount);
     createChart(
       canvasRefs.ingredientTypes.current,
       chartRefs.ingredientTypes,

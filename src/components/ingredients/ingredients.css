@@ -58,10 +58,13 @@
 
 .ingredient-group-title svg {
   height: 2rem;
+}
+
+.ingredient-group-title svg:first-child {
   rotate: -90deg;
 }
 
-.ingredient-group-title.open svg {
+.ingredient-group-title.open svg:first-child {
   rotate: 90deg;
 }
 
@@ -79,7 +82,7 @@
 
 .ingredient-card {
   position: relative;
-  background: #161616;
+  background-color: #161616;
   border: 3px solid #666666;
   overflow: hidden;
   color: #aaaaaa;
@@ -96,6 +99,13 @@
   padding: 0 1rem;
   background-color: #666666;
   width: 100%;
+}
+
+.ingredient-card-header span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 2rem);
 }
 
 .ingredient-card-content {

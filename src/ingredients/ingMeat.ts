@@ -344,7 +344,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   }, //
 
   meat_spread: {
-    name: "pasztet",
+    name: "Pasztet",
     type: "met",
     kcalPer100g: 187,
     unitWeights: {

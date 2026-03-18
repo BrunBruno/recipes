@@ -9,7 +9,7 @@ import type { Recipe } from "../types";
 const gulaszPoWegiersku: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
-  images: [""],
+  images: ["gulasz-po-wegiersku.jpg"],
   time: 90,
   portions: 3,
   ingredients: [
@@ -51,7 +51,7 @@ const gulaszPoWegiersku: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "sos"],
+  keyWords: ["wołowina", "sos", "xxx"],
 };
 
 export default gulaszPoWegiersku;

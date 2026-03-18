@@ -13,13 +13,12 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
 import { countIngredientUsage, ingredientTypeLabels } from "../../utils";
 import type { IngredientItem, IngredientType } from "../../types";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type IngredientsProps = {
   setShowAllIngredients: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const ingredientUsage = countIngredientUsage(recipes);
 const allGroups = [
   { label: "Mięso", data: iMET },
   { label: "Zboża", data: iGRN },
@@ -39,8 +38,28 @@ const initialOpenTypes = Object.fromEntries(
 );
 
 function Ingredients({ setShowAllIngredients }: IngredientsProps) {
+  const getColumnCount = () => {
+    const width = window.innerWidth;
+
+    if (width <= 520) return 1;
+    if (width <= 720) return 2;
+    if (width <= 960) return 3;
+    if (width <= 1200) return 4;
+    return 5;
+  };
+
+  const ingredientUsage = useMemo(() => countIngredientUsage(recipes), []);
+
   const [openTypes, setOpenTypes] =
     useState<Record<string, boolean>>(initialOpenTypes);
+  const [columns, setColumns] = useState(getColumnCount());
+
+  useEffect(() => {
+    const handleResize = () => setColumns(getColumnCount());
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleType = (type: string) => {
     setOpenTypes((prev) => ({
@@ -78,7 +97,7 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
         return (
           <section key={group.label} className="ingredient-group">
             {Object.entries(grouped).map(([type, items]) => {
-              const rows = Math.ceil(items.length / 5);
+              const rows = Math.ceil(items.length / columns);
               return (
                 <div key={type} className="ingredient-subgroup">
                   <h2
@@ -87,7 +106,8 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                       toggleType(type);
                     }}
                   >
-                    <UtilsIcon name={"arrow"} color={"#fff"} />{" "}
+                    <UtilsIcon name={"arrow"} color={"#fff"} />
+                    {/* <IngredientIcon ingType={type as IngredientType} /> */}
                     {ingredientTypeLabels[type as IngredientType]}
                   </h2>
 
@@ -128,18 +148,6 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                               </span>
                             </div>
                           )}
-
-                          {/* {item.unitWeights && (
-                            <div className="units">
-                              {Object.entries(item.unitWeights).map(
-                                ([unit, weight]) => (
-                                  <span key={unit} className="unit">
-                                    {unit}: <strong>{weight} g</strong>
-                                  </span>
-                                ),
-                              )}
-                            </div>
-                          )} */}
 
                           <div className="ingredient-usage">
                             Użyto w przepisach:{" "}

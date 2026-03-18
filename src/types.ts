@@ -73,7 +73,7 @@ export type IngredientItem = {
   type: IngredientType;
   kcalPer100g: number;
   unitWeights?: Partial<Record<UnitType, number>>;
-  nutrientsPer100g?: [number, number, number]; // fat-carb-prot
+  nutrientsPer100g: [number, number, number]; // fat-carb-prot
 };
 
 export type Ingredient = {

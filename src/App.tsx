@@ -68,9 +68,9 @@ function App() {
   return (
     <div className="recipes-page">
       <div className="page-title">
-        <h1>
+        <h1 className="page-title-h1">
           <UtilsIcon name="logo" color="#099268" />
-          Przepisy {filteredRecipes.length}
+          <span className="h1-text">Przepisy</span> {filteredRecipes.length}
         </h1>
 
         <div className="page-title-options">

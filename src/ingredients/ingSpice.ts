@@ -42,6 +42,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 5,
     },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   black_pepper: {
@@ -52,6 +53,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 2,
       ziarno: 0.2,
     },
+    nutrientsPer100g: [3.3, 64, 10],
   },
 
   cayenne_pepper: {
@@ -61,6 +63,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [17, 57, 12],
   },
 
   granulated_garlic: {
@@ -70,6 +73,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 3,
     },
+    nutrientsPer100g: [0.7, 73, 17],
   },
 
   sweet_paprika: {
@@ -79,6 +83,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [13, 54, 14],
   },
 
   hot_paprika: {
@@ -88,6 +93,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [13, 54, 14],
   },
 
   smoked_paprika: {
@@ -97,6 +103,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [13, 54, 14],
   },
 
   chilli: {
@@ -106,6 +113,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [0.4, 9, 2],
   },
 
   curry: {
@@ -115,6 +123,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [14, 58, 12],
   },
 
   cinnamon: {
@@ -124,12 +133,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [1.2, 81, 4],
   },
 
   nutmeg: {
     name: "Gałka muszkatołowa",
     type: "spc",
     kcalPer100g: 525,
+    unitWeights: {
+      ziarno: 0.2,
+    },
+    nutrientsPer100g: [36, 49, 6],
   },
 
   allspice: {
@@ -139,6 +153,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       ziarno: 0.2,
     },
+    nutrientsPer100g: [8.7, 72, 6],
   },
 
   black_sesame: {
@@ -148,6 +163,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 3,
     },
+    nutrientsPer100g: [50, 23, 18],
   },
 
   cumin: {
@@ -157,6 +173,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 2,
     },
+    nutrientsPer100g: [22, 44, 18],
   },
 
   //
@@ -169,6 +186,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [1.1, 7, 3.5],
   },
 
   thyme: {
@@ -179,6 +197,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [7.4, 63, 9],
   },
 
   marjoram: {
@@ -189,6 +208,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [7, 61, 13],
   },
 
   herbes_de_provence: {
@@ -199,6 +219,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [6, 50, 10],
   },
 
   wild_garlic: {
@@ -209,6 +230,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [0.7, 8, 2.4],
   },
 
   bay_leaf: {
@@ -218,6 +240,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       listek: 1,
     },
+    nutrientsPer100g: [8.4, 75, 8],
   },
 
   caraway: {
@@ -228,6 +251,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [14.6, 50, 20],
   },
 
   savory: {
@@ -238,6 +262,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [5.9, 69, 6.7],
   },
 
   oregano: {
@@ -248,6 +273,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [10, 64, 11],
   },
 
   basil: {
@@ -258,6 +284,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżeczka: 1,
       łyżka: 3,
     },
+    nutrientsPer100g: [4, 61, 23],
   },
 
   //
@@ -270,6 +297,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ml: 1,
       łyżka: 15,
     },
+    nutrientsPer100g: [0, 3, 1],
   },
 
   vegetable_seasoning: {
@@ -279,6 +307,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       łyżeczka: 3,
     },
+    nutrientsPer100g: [1, 40, 5],
   },
 
   potato_seasoning: {
@@ -289,6 +318,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       łyżka: 10,
       łyżeczka: 5,
     },
+    nutrientsPer100g: [5, 45, 8],
   },
 
   gyros_spice: {
@@ -330,6 +360,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 40,
     },
+    nutrientsPer100g: [3, 50, 8],
   },
 
   knorr_bolognese_fix: {

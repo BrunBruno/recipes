@@ -9,7 +9,7 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const kebab: Recipe = {
-  name: "Kebab w picie",
+  name: "Kebab w Picie",
   type: "snack",
   images: ["kebab-w-picie.jpg"],
   time: 90,
