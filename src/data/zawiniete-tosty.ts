@@ -5,10 +5,10 @@ import { iMET } from "../ingredients/ingMeat";
 import { iSAU } from "../ingredients/ingSauce";
 import type { Recipe } from "../types";
 
-const wywinieteTosty: Recipe = {
-  name: "Wywinięte Tosty",
+const zawinieteTosty: Recipe = {
+  name: "Zawinięte Tosty",
   type: "snack",
-  images: [""],
+  images: ["zawiniete-tosty.jpg"],
   time: 25,
   portions: 2,
   ingredients: [
@@ -41,4 +41,4 @@ const wywinieteTosty: Recipe = {
   keyWords: ["pieczywo"],
 };
 
-export default wywinieteTosty;
+export default zawinieteTosty;
