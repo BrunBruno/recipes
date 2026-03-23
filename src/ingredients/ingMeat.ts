@@ -33,6 +33,7 @@ type IngId =
   | "meat_spread"
   | "canned_tuna"
   | "smoked_salmon"
+  | "fish_sticks"
   | "spicy_tenderloins"
   | "burger_patties";
 
@@ -374,6 +375,16 @@ export const iMET: Record<IngId, IngredientItem> = {
       plaster: 30,
     },
     nutrientsPer100g: [4, 0, 18],
+  },
+
+  fish_sticks: {
+    name: "Paluszki rybne",
+    type: "fsh",
+    kcalPer100g: 220,
+    unitWeights: {
+      szt: 30,
+    },
+    nutrientsPer100g: [12, 10, 13],
   },
 
   //
