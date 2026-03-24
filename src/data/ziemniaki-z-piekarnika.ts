@@ -4,7 +4,7 @@ import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
 const ziemniakiZPiekarnika: Recipe = {
-  name: "Pieczone Ziemniaki z Piekarnika",
+  name: "Ziemniaki z Piekarnika",
   type: "snack",
   images: [""],
   time: 40,

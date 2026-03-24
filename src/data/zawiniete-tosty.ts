@@ -38,7 +38,7 @@ const zawinieteTosty: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "xxx"],
 };
 
 export default zawinieteTosty;

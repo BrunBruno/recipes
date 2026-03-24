@@ -34,7 +34,7 @@ const kopytkaZCukrem: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["deser", "xxx"],
 };
 
 export default kopytkaZCukrem;

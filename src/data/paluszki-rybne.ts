@@ -33,7 +33,7 @@ const paluszkiRybne: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba"],
+  keyWords: ["ryba", "xxx"],
 };
 
 export default paluszkiRybne;

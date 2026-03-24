@@ -49,7 +49,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   frozen_fries: {
-    name: "Frytki z piekarnika",
+    name: "Frytki mrożone",
     type: "pot",
     kcalPer100g: 150,
     unitWeights: {
