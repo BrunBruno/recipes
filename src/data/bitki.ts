@@ -61,7 +61,7 @@ const bitki: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
-        "Podawaj bitki na talerzu z porcją ugotowanych ziemniaków.",
+        "Podawaj bitki z porcją ugotowanych ziemniaków.",
         "Ziemniaki polej sosem z rondelka.",
         "Obok dodaj buraczki w wiórkach jako dodatek.",
       ],

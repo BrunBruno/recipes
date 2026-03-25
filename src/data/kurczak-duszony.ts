@@ -60,7 +60,7 @@ const gotowanyKurczak: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kurczaka na talerzu z porcją ziemniaków.",
+        "Podawaj kurczaka z porcją ziemniaków.",
         "Mięso i ziemniaki polej przygotowanym sosem.",
         "Obok dodaj buraki z octu jako dodatek.",
       ],

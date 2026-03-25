@@ -48,7 +48,7 @@ const kurczakZPiekarnika: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kurczaka na talerzu z porcją ziemniaków.",
+        "Podawaj kurczaka z porcją ziemniaków.",
         "Ziemniaki polej tłuszczem z pieczenia kurczaka.",
         "Obok dodaj buraki z octu jako dodatek.",
       ],

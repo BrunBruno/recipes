@@ -32,12 +32,11 @@ const kurczakZPomidorem: Recipe = {
     },
     {
       title: "Dodatki",
-
       items: [
         { ingredient: iVEG.potato, amount: "3 × 200" },
         { ingredient: iFAT.butter, amount: 1.5, unit: "łyżeczka" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 100" },
+        { ingredient: iVEG.beets_shredded, amount: "3 × 150" },
         { ingredient: iSPC.salt },
       ],
     },
@@ -62,7 +61,7 @@ const kurczakZPomidorem: Recipe = {
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
         "Ubij ziemniaki z masłem i ciepłym mlekiem na puree.",
         "Dopraw puree solą do smaku.",
-        "Podawaj kurczaka z puree ziemniaczanym i burakami z octu.",
+        "Podawaj kurczaka z puree ziemniaczanym i burakami.",
       ],
     },
   ],
