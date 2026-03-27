@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const golabki: Recipe = {
   name: "Gołąbki",
+  description: "",
   type: "dinner",
   images: [""],
   time: 0,

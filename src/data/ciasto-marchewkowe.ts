@@ -10,13 +10,15 @@ import type { Recipe } from "../types";
 
 const ciastoMarchewkowe: Recipe = {
   name: "Ciasto Marchewkowe",
+  description:
+    "Wilgotne i aromatyczne ciasto marchewkowe z dodatkiem ananasa, orzechów i cynamonu, przełożone kremową polewą serową.",
   type: "dessert",
   images: [""],
   time: 95,
   portions: 10,
   ingredients: [
     {
-      title: "Ciasto",
+      title: "Składniki na ciasto",
       items: [
         { ingredient: iGRN.flour, amount: 200 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -26,14 +28,14 @@ const ciastoMarchewkowe: Recipe = {
         { ingredient: iOTH.walnuts, amount: 50 },
         { ingredient: iOTH.coconut_flakes, amount: 50 },
         { ingredient: iOTH.sugar, amount: 200 },
-        { ingredient: iOTH.baking_powder, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iOTH.baking_soda, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSPC.cinnamon, amount: 1, unit: "łyżeczka" },
+        { ingredient: iOTH.baking_powder, amount: 0.5, unit: "lzi" },
+        { ingredient: iOTH.baking_soda, amount: 1, unit: "lzi" },
+        { ingredient: iSPC.cinnamon, amount: 1, unit: "lzi" },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Polewa",
+      title: "Składniki na polewe",
       items: [
         { ingredient: iDIR.cream_cheese, amount: 125 },
         { ingredient: iFAT.butter, amount: 50 },

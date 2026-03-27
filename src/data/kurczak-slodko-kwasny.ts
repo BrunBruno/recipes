@@ -5,20 +5,23 @@ import { iSAU } from "../ingredients/ingSauce";
 import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak w Sosie Słodko-Kwaśnym",
+  description:
+    "Kurczak w aromatycznym sosie słodko-kwaśnym, szybki do przygotowania i podawany z ryżem. Idealny na lekki obiad dla 3 osób.",
   type: "dinner",
   images: ["kurczak-slodko-kwasny.jpg"],
   time: 30,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
-        { ingredient: iGRN.rice, amount: "3 × 100" },
+        { ingredient: iGRN.rice, amount: `${portions} × 100` },
         { ingredient: iSAU.winiary_sweet_sour_sauce, amount: 1, unit: "opak" },
-        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.salt },
       ],
     },

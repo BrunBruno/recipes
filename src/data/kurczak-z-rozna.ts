@@ -5,22 +5,24 @@ import type { Recipe } from "../types";
 
 const kurczakZRozna: Recipe = {
   name: "Kurczak z Rożna",
+  description:
+    "Pieczony kurczak z rożna przyprawiony mieszanką papryk, czosnku i ziół, z chrupiącą skórką i soczystym mięsem. Idealny obiad dla 4 osób.",
   type: "dinner",
   images: [""],
   time: 90,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kurczaka",
       items: [
         { ingredient: iMET.chicken_whole, amount: 1, unit: "szt" },
-        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
-        { ingredient: iSPC.salt, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSPC.sweet_paprika, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSPC.hot_paprika, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSPC.smoked_paprika, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iSPC.vegetable_seasoning, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
+        { ingredient: iSPC.salt, amount: 1, unit: "lzi" },
+        { ingredient: iSPC.sweet_paprika, amount: 1, unit: "lzi" },
+        { ingredient: iSPC.hot_paprika, amount: 1, unit: "lzi" },
+        { ingredient: iSPC.smoked_paprika, amount: 1, unit: "lzi" },
+        { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "lzi" },
+        { ingredient: iSPC.vegetable_seasoning, amount: 0.5, unit: "lzi" },
       ],
     },
   ],

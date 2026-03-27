@@ -26,7 +26,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 60,
     unitWeights: {
       ml: 1,
-      szklanka: 250,
+      szk: 250,
     },
     nutrientsPer100g: [3.2, 4.7, 3.2],
   }, //
@@ -36,7 +36,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     kcalPer100g: 48,
     unitWeights: {
-      szklanka: 250,
+      szk: 250,
     },
     nutrientsPer100g: [1.5, 5, 3.5],
   },
@@ -67,7 +67,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     kcalPer100g: 97,
     unitWeights: {
-      łyżka: 20,
+      lz: 20,
     },
     nutrientsPer100g: [5, 3.6, 9],
   },
@@ -78,8 +78,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 46,
     unitWeights: {
       ml: 1,
-      szklanka: 250,
-      łyżka: 15,
+      szk: 250,
+      lz: 15,
       opak: 400,
     },
     nutrientsPer100g: [1.5, 4.6, 3.6],
@@ -91,7 +91,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 136,
     unitWeights: {
       ml: 1,
-      łyżka: 15,
+      lz: 15,
     },
     nutrientsPer100g: [12, 4, 3],
   },
@@ -102,7 +102,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 191,
     unitWeights: {
       ml: 1,
-      łyżka: 15,
+      lz: 15,
     },
     nutrientsPer100g: [18, 4.8, 2.5],
   },
@@ -113,7 +113,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 293,
     unitWeights: {
       ml: 1,
-      łyżka: 15,
+      lz: 15,
     },
     nutrientsPer100g: [30, 3.4, 2.3],
   }, //
@@ -124,7 +124,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 344,
     unitWeights: {
       ml: 1,
-      łyżka: 15,
+      lz: 15,
     },
     nutrientsPer100g: [36, 3, 2],
   },
@@ -164,8 +164,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "che",
     kcalPer100g: 338,
     unitWeights: {
-      plaster: 20,
-      kostka: 250,
+      plas: 20,
+      kst: 250,
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
@@ -176,8 +176,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "che",
     kcalPer100g: 338,
     unitWeights: {
-      plaster: 20,
-      kostka: 250,
+      plas: 20,
+      kst: 250,
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
@@ -189,7 +189,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 343,
     unitWeights: {
       opak: 350,
-      plaster: 90,
+      plas: 90,
     },
     nutrientsPer100g: [27, 0, 25],
   },
@@ -199,7 +199,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "che",
     kcalPer100g: 402,
     unitWeights: {
-      plaster: 10,
+      plas: 10,
     },
     nutrientsPer100g: [30, 0, 32],
   },

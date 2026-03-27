@@ -9,13 +9,15 @@ import type { Recipe } from "../types";
 
 const cynamonki: Recipe = {
   name: "Cynamonki",
+  description:
+    "Miękkie i puszyste cynamonki z delikatnym cynamonowym nadzieniem i słodkim lukrem na wierzchu, idealne na deser lub śniadanie.",
   type: "dessert",
   images: [""],
   time: 150,
   portions: 12,
   ingredients: [
     {
-      title: "Ciasto",
+      title: "Składniki na ciasto",
       items: [
         { ingredient: iGRN.flour, amount: 600 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -29,10 +31,10 @@ const cynamonki: Recipe = {
       ],
     },
     {
-      title: "Lukier",
+      title: "Składniki na lukier",
       items: [
-        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "szklanka" },
-        { ingredient: iOTH.water, amount: "2-3", unit: "łyżka" },
+        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "szk" },
+        { ingredient: iOTH.water, amount: "2-3", unit: "lz" },
       ],
     },
   ],

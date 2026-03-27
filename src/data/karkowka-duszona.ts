@@ -5,29 +5,32 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 5;
 const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
+  description:
+    "Delikatna karkówka duszona z musztardą i cebulą, podawana z ziemniakami i surówką colesław, idealna na sycący obiad.",
   type: "dinner",
   images: ["karkowka-duszona.jpg"],
   time: 60,
-  portions: 5,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
-        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
-        { ingredient: iSAU.sarepska_mustard, amount: 10, unit: "łyżeczka" },
+        { ingredient: iFAT.oil, amount: 5, unit: "lz" },
+        { ingredient: iSAU.sarepska_mustard, amount: 10, unit: "lzi" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "5 × 200" },
-        { ingredient: iVEG.coleslaw, amount: "5 × 180" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.coleslaw, amount: `${portions} × 180` },
         { ingredient: iSPC.salt },
       ],
     },

@@ -5,16 +5,18 @@ import type { Recipe } from "../types";
 
 const grysikowa: Recipe = {
   name: "Grysikowa",
+  description:
+    "Szybka i prosta zupa grysikowa na rosole, idealna na lekkie śniadanie lub obiad dla dzieci i dorosłych.",
   type: "soup",
   images: [""],
   time: 10,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iOTH.rosol, amount: 500 },
-        { ingredient: iGRN.semolina, amount: 1.5, unit: "łyżka" },
+        { ingredient: iGRN.semolina, amount: 1.5, unit: "lz" },
         { ingredient: iSPC.salt },
       ],
     },

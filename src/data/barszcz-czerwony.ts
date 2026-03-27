@@ -5,13 +5,15 @@ import type { Recipe } from "../types";
 
 const barszczCzerwony: Recipe = {
   name: "Barszcz Czerwony",
+  description:
+    "Domowy barszcz czerwony o intensywnym kolorze i lekko kwaśnym smaku, przygotowywany na bazie kiszonych buraków. Idealny na zimno lub na ciepło.",
   type: "soup",
   images: [""],
   time: 720,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iVEG.beetroot, amount: 2, unit: "szt" },
         { ingredient: iOTH.water, amount: 700, unit: "ml" },

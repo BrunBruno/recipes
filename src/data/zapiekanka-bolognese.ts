@@ -9,13 +9,15 @@ import type { Recipe } from "../types";
 
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
+  description:
+    "Aromatyczna zapiekanka Bolognese z makaronem, mięsem mielonym, warzywami i roztopionym serem - idealny obiad dla całej rodziny.",
   type: "dinner",
   images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
   time: 70,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.fusilli_pasta, amount: 400 },
         { ingredient: iMET.ground_pork, amount: 400 },
@@ -24,11 +26,11 @@ const zapiekankaBolognese: Recipe = {
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 200 },
-        { ingredient: iSAU.tomato_paste, amount: 2, unit: "łyżeczka" },
-        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
+        { ingredient: iSAU.tomato_paste, amount: 2, unit: "lzi" },
+        { ingredient: iFAT.oil, amount: 3, unit: "lz" },
         { ingredient: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },
-        { ingredient: iSPC.allspice, amount: 3, unit: "ziarno" },
-        { ingredient: iSPC.bay_leaf, amount: 2, unit: "listek" },
+        { ingredient: iSPC.allspice, amount: 3, unit: "ziar" },
+        { ingredient: iSPC.bay_leaf, amount: 2, unit: "lst" },
       ],
     },
   ],

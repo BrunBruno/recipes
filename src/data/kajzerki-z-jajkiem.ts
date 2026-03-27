@@ -8,20 +8,22 @@ import { iVEG } from "../ingredients/ingVegetable";
 
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
+  description:
+    "Kajzerki z jajkiem na twardo, szynką, serem żółtym, sałatą i majonezem, szybka i prosta kanapka.",
   type: "snack",
   images: ["kajzerki-z-jajkiem.jpg"],
   time: 20,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-        { ingredient: iMET.ham_slices, amount: 4, unit: "plaster" },
-        { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plaster" },
-        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
-        { ingredient: iSAU.mayonnaise, amount: 4, unit: "łyżeczka" },
+        { ingredient: iMET.ham_slices, amount: 4, unit: "plas" },
+        { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plas" },
+        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ingredient: iSAU.mayonnaise, amount: 4, unit: "lzi" },
         { ingredient: iFAT.butter, amount: 10 },
       ],
     },

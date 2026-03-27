@@ -5,20 +5,23 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
   name: "Kotlety w Płatkach",
+  description:
+    "Kotlety schabowe w płatkach kukurydzianych – panierowane w jajku i chrupiących płatkach, smażone na złoty kolor, podawane z frytkami i buraczkami w occie.",
   type: "dinner",
   images: [""],
   time: 50,
-  portions: 5,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kotlety",
       items: [
-        { ingredient: iMET.pork_loin, amount: 10, unit: "plaster" },
+        { ingredient: iMET.pork_loin, amount: 10, unit: "plas" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iGRN.cornflakes, amount: 160 },
-        { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 10, unit: "lz" },
         { ingredient: iSPC.herbes_de_provence },
         { ingredient: iSPC.granulated_garlic },
         { ingredient: iSPC.sweet_paprika },
@@ -27,10 +30,10 @@ const kotletySchaboweWPlatkach: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.frozen_fries, amount: "5 × 150" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "5 × 100", },
+        { ingredient: iVEG.frozen_fries, amount: `${portions} × 150` },
+        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
         { ingredient: iSPC.salt },
       ],
     },

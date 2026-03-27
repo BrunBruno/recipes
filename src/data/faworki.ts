@@ -8,31 +8,33 @@ import type { Recipe } from "../types";
 
 const faworki: Recipe = {
   name: "Faworki",
+  description:
+    "Chrupiące i lekkie faworki, smażone na złoty kolor, posypane cukrem pudrem - klasyczny polski przysmak karnawałowy.",
   type: "dessert",
   images: ["faworki.jpg", "faworki-2.jpg"],
   time: 90,
   portions: 8,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.flour, amount: 320 },
         { ingredient: iMET.egg_yolk, amount: 4, unit: "szt" },
-        { ingredient: iDIR.cream_18, amount: 5, unit: "łyżka" },
+        { ingredient: iDIR.cream_18, amount: 5, unit: "lz" },
         {
           ingredient: iFAT.rendered_lard,
           amount: 2,
-          unit: "kostka",
+          unit: "kst",
           excludeFromCalc: true,
         },
         {
           ingredient: iFAT.rendered_lard,
           amount: 2 * 0.3,
-          unit: "kostka",
+          unit: "kst",
           invisible: true,
         },
-        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "łyżka" },
-        { ingredient: iOTH.spirit, amount: 2, unit: "łyżeczka" },
+        { ingredient: iOTH.powdered_sugar, amount: 1, unit: "lz" },
+        { ingredient: iOTH.spirit, amount: 2, unit: "lzi" },
         { ingredient: iSPC.salt },
       ],
     },

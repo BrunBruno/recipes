@@ -33,17 +33,17 @@ export type UnitType =
   | "g"
   | "ml"
   | "szt"
-  | "łyżka"
-  | "łyżeczka"
-  | "szklanka"
+  | "lz"
+  | "lzi"
+  | "szk"
   | "opak"
-  | "kostka"
-  | "plaster"
-  | "kromka"
-  | "ząbek"
-  | "listek"
-  | "ziarno"
-  | "pęto";
+  | "kst"
+  | "plas"
+  | "krom"
+  | "zbk"
+  | "lst"
+  | "ziar"
+  | "peto";
 
 export type KeyWord =
   | "xxx"
@@ -97,6 +97,7 @@ export type RecipeStepGroup = {
 
 export type Recipe = {
   name: string;
+  description: string;
   type: MealType;
   images: string[];
   portions: number;

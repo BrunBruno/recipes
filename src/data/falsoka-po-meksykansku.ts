@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const fasolkaPoMeksykansku: Recipe = {
   name: "Fasolka Po Meksykańsku",
+  description: "",
   type: "dinner",
   images: [""],
   time: 0,

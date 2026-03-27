@@ -7,21 +7,24 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const gotowanyKurczak: Recipe = {
   name: "Kurczak Duszony",
+  description:
+    "Delikatny kurczak duszony w aromatycznym sosie śmietanowo-przyprawowym, podawany z ziemniakami i buraczkami. Idealny na rodzinny obiad.",
   type: "dinner",
   images: ["kurczak-duszony.jpg"],
   time: 45,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kurczaka i sos",
       items: [
         { ingredient: iMET.chicken_thigh, amount: 600 },
-        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
-        { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
-        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iOTH.water },
+        { ingredient: iFAT.oil, amount: 3, unit: "lz" },
+        { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
+        { ingredient: iGRN.flour, amount: 1, unit: "lz" },
+        { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.wild_garlic },
         { ingredient: iSPC.curry },
@@ -31,10 +34,10 @@ const gotowanyKurczak: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 200" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "4 × 100" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
         { ingredient: iSPC.salt },
       ],
     },

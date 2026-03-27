@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const trotOrzechowy: Recipe = {
   name: "Tort Orzechowy",
+  description: "",
   type: "dessert",
   images: [""],
   time: 0,

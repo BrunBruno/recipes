@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const pieczonaPaczka: Recipe = {
   name: "Pieczona Kaczka",
+  description: "",
   type: "dinner",
   images: [""],
   time: 0,

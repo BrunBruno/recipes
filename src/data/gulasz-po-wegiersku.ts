@@ -6,27 +6,30 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const gulaszPoWegiersku: Recipe = {
   name: "Gulasz po Węgiersku",
+  description:
+    "Klasyczny gulasz po węgiersku z wołowiną, podawany z kopytkami i buraczkami, idealny na sycący obiad.",
   type: "dinner",
   images: ["gulasz-po-wegiersku.jpg"],
   time: 90,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na gulasz",
       items: [
         { ingredient: iMET.stew_beef, amount: 500 },
-        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 5, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: "3 × 250" },
-        { ingredient: iVEG.fried_beets, amount: "3 × 150" },
+        { ingredient: iGRN.gnocchi, amount: `${portions} × 250` },
+        { ingredient: iVEG.fried_beets, amount: `${portions} × 150` },
         { ingredient: iSPC.salt },
       ],
     },

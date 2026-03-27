@@ -8,23 +8,25 @@ import type { Recipe } from "../types";
 
 const racuchy: Recipe = {
   name: "Racuchy",
+  description:
+    "Puszyste racuchy z jabłkami, smażone na maśle klarowanym, słodkie i aromatyczne, idealne na deser lub słodkie śniadanie.",
   type: "dessert",
   images: ["racuchy.jpg"],
   time: 25,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.flour, amount: 150, unit: "g" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iFRT.apple, amount: 2, unit: "szt" },
         { ingredient: iDIR.kefir, amount: 200, unit: "ml" },
-        { ingredient: iFAT.clarified_butter, amount: 2, unit: "łyżeczka" },
-        { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "łyżka" },
-        { ingredient: iOTH.sugar, amount: 1, unit: "łyżka" },
-        { ingredient: iOTH.baking_soda, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iOTH.powdered_sugar, amount: 2, unit: "łyżeczka" },
+        { ingredient: iFAT.clarified_butter, amount: 2, unit: "lzi" },
+        { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "lz" },
+        { ingredient: iOTH.sugar, amount: 1, unit: "lz" },
+        { ingredient: iOTH.baking_soda, amount: 0.5, unit: "lzi" },
+        { ingredient: iOTH.powdered_sugar, amount: 2, unit: "lzi" },
       ],
     },
   ],

@@ -6,23 +6,26 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
+  description:
+    "Szybki kurczak po chińsku z warzywami w aromatycznym sosie, podawany z ryżem. Idealny na lekki i kolorowy obiad.",
   type: "dinner",
   images: ["./kurczak-po-chinsku.jpg"],
   time: 30,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.carrot, amount: 120 },
         { ingredient: iVEG.bell_pepper, amount: 100 },
         { ingredient: iVEG.leek, amount: 120 },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iGRN.rice, amount: "3 × 100" },
-        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iGRN.rice, amount: `${portions} × 100` },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "opak" },
       ],
     },

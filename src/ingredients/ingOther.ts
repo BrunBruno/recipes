@@ -34,9 +34,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
-      szklanka: 250,
-      łyżka: 15,
-      łyżeczka: 5,
+      szk: 250,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -46,9 +46,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "sug",
     kcalPer100g: 400,
     unitWeights: {
-      łyżeczka: 4,
-      łyżka: 12,
-      szklanka: 250,
+      lzi: 4,
+      lz: 12,
+      szk: 250,
     },
     nutrientsPer100g: [0, 100, 0],
   }, //
@@ -58,9 +58,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "sug",
     kcalPer100g: 400,
     unitWeights: {
-      łyżeczka: 4,
-      łyżka: 12,
-      szklanka: 160,
+      lzi: 4,
+      lz: 12,
+      szk: 160,
     },
     nutrientsPer100g: [0, 100, 0],
   },
@@ -70,8 +70,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "sug",
     kcalPer100g: 394,
     unitWeights: {
-      łyżka: 12,
-      łyżeczka: 4,
+      lz: 12,
+      lzi: 4,
       opak: 30,
     },
     nutrientsPer100g: [0, 98, 0],
@@ -82,7 +82,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "sug",
     kcalPer100g: 304,
     unitWeights: {
-      łyżeczka: 7,
+      lzi: 7,
     },
     nutrientsPer100g: [0, 82, 0.3],
   },
@@ -92,8 +92,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 228,
     unitWeights: {
-      łyżka: 7.5,
-      łyżeczka: 2.5,
+      lz: 7.5,
+      lzi: 2.5,
     },
     nutrientsPer100g: [13, 20, 20],
   },
@@ -104,7 +104,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     kcalPer100g: 288,
     unitWeights: {
       ml: 1,
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 12, 0],
   },
@@ -114,7 +114,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 2,
     unitWeights: {
-      łyżka: 5,
+      lz: 5,
     },
     nutrientsPer100g: [0, 0.5, 0.1],
   },
@@ -124,8 +124,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 360,
     unitWeights: {
-      łyżka: 6,
-      łyżeczka: 2,
+      lz: 6,
+      lzi: 2,
     },
     nutrientsPer100g: [0, 86, 0],
   },
@@ -135,7 +135,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 0,
     unitWeights: {
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -145,7 +145,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 53,
     unitWeights: {
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 28, 0],
   },
@@ -155,7 +155,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 0,
     unitWeights: {
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -166,8 +166,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
-      łyżeczka: 5,
-      łyżka: 15,
+      lzi: 5,
+      lz: 15,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -178,7 +178,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     kcalPer100g: 105,
     unitWeights: {
       opak: 7,
-      kostka: 100,
+      kst: 100,
     },
     nutrientsPer100g: [1, 10, 8],
   },
@@ -188,7 +188,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 325,
     unitWeights: {
-      łyżeczka: 3,
+      lzi: 3,
       opak: 7,
     },
     nutrientsPer100g: [3, 35, 26],
@@ -199,7 +199,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 350,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [0, 0, 85],
   },
@@ -221,7 +221,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "nut",
     kcalPer100g: 654,
     unitWeights: {
-      łyżka: 10,
+      lz: 10,
     },
     nutrientsPer100g: [65, 13, 15],
   },
@@ -231,7 +231,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "nut",
     kcalPer100g: 660,
     unitWeights: {
-      łyżka: 7,
+      lz: 7,
     },
     nutrientsPer100g: [64, 24, 6],
   },
@@ -253,7 +253,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     type: "oth",
     kcalPer100g: 555,
     unitWeights: {
-      kostka: 10,
+      kst: 10,
       opak: 100,
     },
     nutrientsPer100g: [45, 18, 11],

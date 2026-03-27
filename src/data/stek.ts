@@ -6,18 +6,20 @@ import type { Recipe } from "../types";
 
 const stek: Recipe = {
   name: "Stek",
+  description:
+    "Soczysty stek z aromatycznym masłem, czosnkiem i tymiankiem - szybkie i eleganckie danie dla miłośników wołowiny.",
   type: "snack",
   images: ["stek.jpg"],
   time: 20,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
-        { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
-        { ingredient: iFAT.oil, amount: 1, unit: "łyżeczka" },
-        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
+        { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },
+        { ingredient: iFAT.oil, amount: 1, unit: "lzi" },
+        { ingredient: iFAT.butter, amount: 1, unit: "lz" },
         { ingredient: iSPC.thyme },
         { ingredient: iSPC.salt },
       ],

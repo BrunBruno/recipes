@@ -5,15 +5,18 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 4;
 const kotletDevolay: Recipe = {
   name: "Kotlet Devolay",
+  description:
+    "Klasyczny kotlet Devolay z kurczaka z masłem czosnkowo-ziołowym w środku, panierowany i delikatnie smażony, podawany z puree ziemniaczanym i warzywami na parze.",
   type: "dinner",
   images: [""],
   time: 60,
-  portions: 4,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na mięso",
       items: [
         { ingredient: iMET.chicken_breast, amount: 900 },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
@@ -23,10 +26,10 @@ const kotletDevolay: Recipe = {
       ],
     },
     {
-      title: "Masło czosnkowo-ziołowe",
+      title: "Składniki na masło czosnkowo-ziołowe",
       items: [
         { ingredient: iFAT.butter, amount: 100 },
-        { ingredient: iVEG.garlic, amount: 4, unit: "ząbek" },
+        { ingredient: iVEG.garlic, amount: 4, unit: "zbk" },
         { ingredient: iVEG.parsley },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.salt },
@@ -34,9 +37,9 @@ const kotletDevolay: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "4 × 200" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
         { ingredient: iVEG.frozen_vegetable_mix, amount: 300 },
       ],
     },

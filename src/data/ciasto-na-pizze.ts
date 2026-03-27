@@ -6,16 +6,18 @@ import type { Recipe } from "../types";
 
 const ciastoNaPizze: Recipe = {
   name: "Ciasto na Pizze",
+  description:
+    "Sprężyste i aromatyczne ciasto na pizzę, łatwe do formowania i idealne jako baza pod ulubione dodatki.",
   type: "other",
   images: [""],
   time: 60,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.flour, amount: 250 },
-        { ingredient: iFAT.olive, amount: "1-2", unit: "łyżka" },
+        { ingredient: iFAT.olive, amount: "1-2", unit: "lz" },
         { ingredient: iOTH.water, amount: 150, unit: "ml" },
         { ingredient: iOTH.instant_yeast, amount: 6 },
         { ingredient: iSPC.salt },

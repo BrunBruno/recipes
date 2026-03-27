@@ -26,8 +26,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     kcalPer100g: 345,
     unitWeights: {
-      łyżka: 12,
-      szklanka: 160,
+      lz: 12,
+      szk: 160,
       opak: 500,
     },
     nutrientsPer100g: [1.2, 71, 11],
@@ -38,7 +38,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     kcalPer100g: 351,
     unitWeights: {
-      łyżka: 10,
+      lz: 10,
     },
     nutrientsPer100g: [1.5, 4.4, 12],
   }, //
@@ -71,7 +71,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     kcalPer100g: 360,
     unitWeights: {
-      łyżka: 13,
+      lz: 13,
     },
     nutrientsPer100g: [1, 73, 12],
   },
@@ -112,7 +112,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 354,
     unitWeights: {
       opak: 500,
-      szklanka: 250,
+      szk: 250,
     },
     nutrientsPer100g: [1.5, 71, 12],
   }, //
@@ -157,7 +157,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
       szt: 22,
-      kromka: 22,
+      krom: 22,
     },
     nutrientsPer100g: [3.2, 50, 8.6],
   }, //

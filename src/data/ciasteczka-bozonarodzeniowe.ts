@@ -7,21 +7,23 @@ import type { Recipe } from "../types";
 
 const ciasteczkaBozonarodzeniowe: Recipe = {
   name: "Ciasteczka Bożonarodzeniowe",
+  description:
+    "Kruche ciasteczka bożonarodzeniowe idealne do wykrawania i dekorowania, doskonałe na świąteczny stół i wspólne pieczenie.",
   type: "dessert",
   images: [""],
   time: 85,
   portions: 24,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
-        { ingredient: iGRN.flour, amount: 1.5, unit: "szklanka" },
+        { ingredient: iGRN.flour, amount: 1.5, unit: "szk" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iFAT.butter, amount: 0.5, unit: "kostka" },
-        { ingredient: iFAT.margarine, amount: 0.5, unit: "kostka" },
-        { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
-        { ingredient: iOTH.sugar, amount: 1.5, unit: "szklanka" },
-        { ingredient: iOTH.baking_powder, amount: 2, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 0.5, unit: "kst" },
+        { ingredient: iFAT.margarine, amount: 0.5, unit: "kst" },
+        { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
+        { ingredient: iOTH.sugar, amount: 1.5, unit: "szk" },
+        { ingredient: iOTH.baking_powder, amount: 2, unit: "lzi" },
       ],
     },
   ],

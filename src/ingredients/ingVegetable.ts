@@ -32,6 +32,7 @@ type IngId =
   | "red_cabbage"
   | "savoy_cabbage"
   | "coleslaw"
+  | "cucumber_salad"
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
@@ -84,7 +85,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 16,
     unitWeights: {
       szt: 300,
-      plaster: 10,
+      plas: 10,
     },
     nutrientsPer100g: [0.1, 3.6, 0.7],
   },
@@ -134,7 +135,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     kcalPer100g: 149,
     unitWeights: {
-      ząbek: 5,
+      zbk: 5,
     },
     nutrientsPer100g: [0.5, 33, 6.4],
   },
@@ -228,8 +229,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     kcalPer100g: 30,
     unitWeights: {
-      łyżka: 3,
-      pęto: 50,
+      lz: 3,
+      peto: 50,
     },
     nutrientsPer100g: [0.7, 4.4, 3.3],
   },
@@ -239,8 +240,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     kcalPer100g: 36,
     unitWeights: {
-      pęto: 30,
-      listek: 1,
+      peto: 30,
+      lst: 1,
     },
     nutrientsPer100g: [0.8, 6.3, 3],
   },
@@ -250,7 +251,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     kcalPer100g: 32,
     unitWeights: {
-      pęto: 100,
+      peto: 100,
     },
     nutrientsPer100g: [1.8, 7.3, 2.6],
   },
@@ -341,7 +342,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "jar",
     kcalPer100g: 590,
     unitWeights: {
-      łyżka: 10,
+      lz: 10,
     },
     nutrientsPer100g: [44, 40, 6],
   }, //
@@ -354,6 +355,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [12, 10, 1.5],
+  },
+
+  cucumber_salad: {
+    name: "Surówka z ogórkiem",
+    type: "jar",
+    kcalPer100g: 101,
+    unitWeights: {
+      opak: 300,
+    },
+    nutrientsPer100g: [5.6, 9.9, 0.8],
   },
 
   fried_beets: {

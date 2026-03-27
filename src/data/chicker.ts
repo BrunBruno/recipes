@@ -7,13 +7,15 @@ import type { Recipe } from "../types";
 
 const chicker: Recipe = {
   name: "Chickery",
+  description:
+    "Szybkie kanapki z kurczakiem w chrupiącej panierce, podawane z dwoma wyrazistymi sosami - ostrym i miodowo-musztardowym.",
   type: "snack",
   images: [""],
   time: 25,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kanapki",
       items: [
         { ingredient: iMET.spicy_tenderloins, amount: 400 },
         { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
@@ -21,13 +23,13 @@ const chicker: Recipe = {
       ],
     },
     {
-      title: "Sosy",
+      title: "Składniki na sosy",
       items: [
-        { ingredient: iSAU.ketchup, amount: 1.5, unit: "łyżeczka" },
-        { ingredient: iSAU.mustard, amount: 2, unit: "łyżeczka" },
-        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSAU.sriracha, amount: 2, unit: "łyżeczka" },
-        { ingredient: iOTH.honey, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSAU.ketchup, amount: 1.5, unit: "lzi" },
+        { ingredient: iSAU.mustard, amount: 2, unit: "lzi" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "lzi" },
+        { ingredient: iSAU.sriracha, amount: 2, unit: "lzi" },
+        { ingredient: iOTH.honey, amount: 0.5, unit: "lzi" },
       ],
     },
   ],

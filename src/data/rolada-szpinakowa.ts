@@ -8,21 +8,23 @@ import type { Recipe } from "../types";
 
 const roladaSzpinakowa: Recipe = {
   name: "Rolada Szpinakowa",
+  description:
+    "Lekka i efektowna rolada szpinakowa z kremowym serkiem chrzanowym i wędzonym łososiem, idealna jako przekąska lub na przyjęcie.",
   type: "snack",
   images: [""],
   time: 60,
   portions: 6,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
-        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
         { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iMET.smoked_salmon, amount: 250 },
         { ingredient: iDIR.cream_cheese_horseradish, amount: 200 },
-        { ingredient: iGRN.flour, amount: 2, unit: "łyżka" },
-        { ingredient: iFAT.olive, amount: "2-3", unit: "łyżka" },
+        { ingredient: iGRN.flour, amount: 2, unit: "lz" },
+        { ingredient: iFAT.olive, amount: "2-3", unit: "lz" },
         { ingredient: iSPC.nutmeg },
         { ingredient: iSPC.black_sesame },
         { ingredient: iSPC.salt },

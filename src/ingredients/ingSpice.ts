@@ -40,7 +40,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 0,
     unitWeights: {
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -50,8 +50,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 251,
     unitWeights: {
-      łyżeczka: 2,
-      ziarno: 0.2,
+      lzi: 2,
+      ziar: 0.2,
     },
     nutrientsPer100g: [3.3, 64, 10],
   },
@@ -61,7 +61,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 318,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [17, 57, 12],
   },
@@ -71,7 +71,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 331,
     unitWeights: {
-      łyżeczka: 3,
+      lzi: 3,
     },
     nutrientsPer100g: [0.7, 73, 17],
   },
@@ -81,7 +81,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 282,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
   },
@@ -91,7 +91,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 282,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
   },
@@ -101,7 +101,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 282,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
   },
@@ -111,7 +111,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 40,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [0.4, 9, 2],
   },
@@ -121,7 +121,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 325,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [14, 58, 12],
   },
@@ -131,7 +131,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 247,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [1.2, 81, 4],
   },
@@ -141,7 +141,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 525,
     unitWeights: {
-      ziarno: 0.2,
+      ziar: 0.2,
     },
     nutrientsPer100g: [36, 49, 6],
   },
@@ -151,7 +151,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 263,
     unitWeights: {
-      ziarno: 0.2,
+      ziar: 0.2,
     },
     nutrientsPer100g: [8.7, 72, 6],
   },
@@ -161,7 +161,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 573,
     unitWeights: {
-      łyżeczka: 3,
+      lzi: 3,
     },
     nutrientsPer100g: [50, 23, 18],
   },
@@ -171,7 +171,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 375,
     unitWeights: {
-      łyżeczka: 2,
+      lzi: 2,
     },
     nutrientsPer100g: [22, 44, 18],
   },
@@ -183,8 +183,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 43,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [1.1, 7, 3.5],
   },
@@ -194,8 +194,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 276,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [7.4, 63, 9],
   },
@@ -205,8 +205,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 271,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [7, 61, 13],
   },
@@ -216,8 +216,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 241,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [6, 50, 10],
   },
@@ -227,8 +227,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 42,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [0.7, 8, 2.4],
   },
@@ -238,7 +238,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 313,
     unitWeights: {
-      listek: 1,
+      lst: 1,
     },
     nutrientsPer100g: [8.4, 75, 8],
   },
@@ -248,8 +248,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 333,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [14.6, 50, 20],
   },
@@ -259,8 +259,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 287,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [5.9, 69, 6.7],
   },
@@ -270,8 +270,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 306,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [10, 64, 11],
   },
@@ -281,8 +281,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "hrb",
     kcalPer100g: 233,
     unitWeights: {
-      łyżeczka: 1,
-      łyżka: 3,
+      lzi: 1,
+      lz: 3,
     },
     nutrientsPer100g: [4, 61, 23],
   },
@@ -295,7 +295,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 16,
     unitWeights: {
       ml: 1,
-      łyżka: 15,
+      lz: 15,
     },
     nutrientsPer100g: [0, 3, 1],
   },
@@ -305,7 +305,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 200,
     unitWeights: {
-      łyżeczka: 3,
+      lzi: 3,
     },
     nutrientsPer100g: [1, 40, 5],
   },
@@ -315,8 +315,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 250,
     unitWeights: {
-      łyżka: 10,
-      łyżeczka: 5,
+      lz: 10,
+      lzi: 5,
     },
     nutrientsPer100g: [5, 45, 8],
   },
@@ -326,8 +326,8 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     kcalPer100g: 280,
     unitWeights: {
-      łyżka: 10,
-      łyżeczka: 3,
+      lz: 10,
+      lzi: 3,
     },
     nutrientsPer100g: [8, 45, 8],
   },

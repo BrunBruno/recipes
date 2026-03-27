@@ -7,13 +7,15 @@ import type { Recipe } from "../types";
 
 const lazanki: Recipe = {
   name: "Łazanki",
+  description:
+    "Tradycyjne polskie łazanki z kiszoną kapustą, kiełbasą, boczkiem, pieczarkami i cebulą, podawane z makaronem. Idealny obiad dla 5 osób.",
   type: "dinner",
   images: ["lazanki.jpg"],
   time: 50,
   portions: 5,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iMET.sausage, amount: 200 },
@@ -21,7 +23,7 @@ const lazanki: Recipe = {
         { ingredient: iVEG.sauerkraut, amount: 400 },
         { ingredient: iVEG.onion, amount: 280 },
         { ingredient: iVEG.mushrooms, amount: 150 },
-        { ingredient: iFAT.oil, amount: 10, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 10, unit: "lz" },
         { ingredient: iSPC.bay_leaf },
         { ingredient: iSPC.caraway },
         { ingredient: iSPC.allspice },

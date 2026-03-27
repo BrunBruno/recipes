@@ -5,20 +5,23 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
+  description:
+    "Delikatne kotleciki z piersi kurczaka obtoczone w jajku, mące i aromatycznych przyprawach, smażone na złoty kolor. Podawane z ziemniakami i buraczkami w occie.",
   type: "dinner",
   images: ["kotlety-z-kurczaka.jpg", "kotlety-z-kurczaka-2.jpg"],
   time: 30,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kotlety",
       items: [
         { ingredient: iMET.chicken_breast, amount: 1, unit: "opak" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
-        { ingredient: iFAT.oil },
+        { ingredient: iGRN.flour, amount: 3, unit: "lz" },
+        { ingredient: iFAT.oil, amount: 6, unit: "lz" },
         { ingredient: iSPC.wild_garlic },
         { ingredient: iSPC.herbes_de_provence },
         { ingredient: iSPC.marjoram },
@@ -30,12 +33,13 @@ const kotletyZKurczaka: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 200" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "3 × 100" },
-        { ingredient: iSPC.salt },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
+        { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

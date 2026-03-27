@@ -10,37 +10,39 @@ import type { Recipe } from "../types";
 
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
+  description:
+    "Domowy burger drwala z soczystą wołowiną, chrupiącym boczkiem i panierowanym serem, podany z warzywami i wyrazistym sosem.",
   type: "snack",
   images: [""],
   time: 50,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na burgery",
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
-        { ingredient: iMET.bacon_slices, amount: 8, unit: "plaster" },
+        { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
         { ingredient: iDIR.lilliputian_cheese, amount: 350 },
         { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
-        { ingredient: iGRN.breadcrumbs, amount: 2, unit: "łyżka" },
+        { ingredient: iGRN.breadcrumbs, amount: 2, unit: "lz" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
-        { ingredient: iFAT.oil, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Sosy",
+      title: "Składniki na sos",
       items: [
-        { ingredient: iSAU.ketchup, amount: 1, unit: "łyżka" },
-        { ingredient: iSAU.mustard, amount: 3, unit: "łyżka" },
-        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
+        { ingredient: iSAU.ketchup, amount: 1, unit: "lz" },
+        { ingredient: iSAU.mustard, amount: 3, unit: "lz" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "lz" },
       ],
     },
   ],

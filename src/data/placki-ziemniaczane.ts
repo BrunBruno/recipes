@@ -8,20 +8,22 @@ import type { Recipe } from "../types";
 
 const plackiZiemniaczane: Recipe = {
   name: "Placki Ziemniaczane",
+  description:
+    "Klasyczne polskie placki ziemniaczane - chrupiące na zewnątrz, miękkie w środku, podawane na śniadanie lub kolację. Idealne z dodatkiem śmietany lub sosu jabłkowego.",
   type: "snack",
   images: [""],
   time: 30,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iVEG.potato, amount: 5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-        { ingredient: iVEG.garlic, amount: 1, unit: "ząbek" },
+        { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
-        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iFAT.oil, amount: 4, unit: "łyżka" },
+        { ingredient: iGRN.flour, amount: 1, unit: "lz" },
+        { ingredient: iFAT.oil, amount: 4, unit: "lz" },
         { ingredient: iSPC.savory },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },

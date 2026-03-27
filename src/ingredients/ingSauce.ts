@@ -18,8 +18,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 109,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 25, 1.7],
   }, //
@@ -29,8 +29,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 96,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [5.5, 3.1, 5.2],
   }, //
@@ -40,8 +40,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 101,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [5.1, 8.3, 3.7],
   }, //
@@ -51,8 +51,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 631,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
       opak: 500,
     },
     nutrientsPer100g: [68, 2.3, 1.9],
@@ -63,8 +63,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 371,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [35, 11, 1.9],
   }, //
@@ -74,8 +74,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 87,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [0.5, 19, 1.6],
   }, //
@@ -85,8 +85,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 142,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [0.2, 34, 0.8],
   }, //
@@ -96,8 +96,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 328,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [28, 18, 1.6],
   }, //
@@ -107,8 +107,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     kcalPer100g: 82,
     unitWeights: {
-      łyżka: 15,
-      łyżeczka: 5,
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [0.3, 18, 4],
   },

@@ -7,13 +7,15 @@ import type { Recipe } from "../types";
 
 const kapustaZasmazana: Recipe = {
   name: "Kapusta Zasmażana",
+  description:
+    "Tradycyjna kapusta zasmażana z kiszonej kapusty z marchewką, cebulą i przyprawami, z delikatną zasmażką z mąki i oleju.",
   type: "salad",
   images: [""],
   time: 80,
   portions: 10,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iVEG.sauerkraut, amount: 1000 },
         { ingredient: iVEG.onion, amount: 2, unit: "szt" },
@@ -21,10 +23,10 @@ const kapustaZasmazana: Recipe = {
         { ingredient: iOTH.water, amount: 750, unit: "ml" },
         { ingredient: iFAT.oil, amount: 70 },
         { ingredient: iGRN.flour, amount: 30 },
-        { ingredient: iSPC.allspice, amount: 4, unit: "ziarno" },
+        { ingredient: iOTH.sugar, amount: 1, unit: "lz" },
         { ingredient: iSPC.bay_leaf, amount: 1, unit: "szt" },
-        { ingredient: iSPC.black_pepper, amount: 0.33, unit: "łyżeczka" },
-        { ingredient: iOTH.sugar, amount: 1, unit: "łyżka" },
+        { ingredient: iSPC.allspice, amount: 4, unit: "ziar" },
+        { ingredient: iSPC.black_pepper, amount: 0.33, unit: "lzi" },
       ],
     },
   ],

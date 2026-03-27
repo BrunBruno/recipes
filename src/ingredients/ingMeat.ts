@@ -10,6 +10,7 @@ type IngId =
   | "chicken_thigh"
   | "chicken_whole"
   | "chicken_soup_portion"
+  | "ground_chicken"
   | "poultry_liver"
   | "turkey_breast"
   | "turkey_wing"
@@ -139,6 +140,16 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [13, 0, 19],
   },
 
+  ground_chicken: {
+    name: "Mięso mielone z kurczaka",
+    type: "met",
+    kcalPer100g: 143,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [17, 0, 8],
+  },
+
   //
 
   turkey_breast: {
@@ -179,7 +190,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 190,
     unitWeights: {
-      plaster: 72,
+      plas: 72,
       opak: 360,
     },
     nutrientsPer100g: [10, 0, 22],
@@ -190,7 +201,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 250,
     unitWeights: {
-      plaster: 100,
+      plas: 100,
       opak: 500,
     },
     nutrientsPer100g: [22, 0, 18],
@@ -231,7 +242,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 143,
     unitWeights: {
-      plaster: 60,
+      plas: 60,
       opak: 600,
     },
     nutrientsPer100g: [4, 0, 26],
@@ -286,7 +297,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 102,
     unitWeights: {
-      plaster: 15,
+      plas: 15,
       opak: 140,
     },
     nutrientsPer100g: [2, 3, 18],
@@ -297,7 +308,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 413,
     unitWeights: {
-      plaster: 10,
+      plas: 10,
       opak: 160,
     },
     nutrientsPer100g: [36, 1.5, 20],
@@ -308,7 +319,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 518,
     unitWeights: {
-      plaster: 15,
+      plas: 15,
       opak: 120,
     },
     nutrientsPer100g: [53, 1, 37],
@@ -329,7 +340,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     kcalPer100g: 227,
     unitWeights: {
-      pęto: 100,
+      peto: 100,
     },
     nutrientsPer100g: [18.4, 2, 13.1],
   }, //
@@ -372,7 +383,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 117,
     unitWeights: {
       opak: 100,
-      plaster: 30,
+      plas: 30,
     },
     nutrientsPer100g: [4, 0, 18],
   },

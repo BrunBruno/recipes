@@ -6,22 +6,24 @@ import type { Recipe } from "../types";
 
 const jajkoSadzone: Recipe = {
   name: "Jajka Sadzone",
+  description:
+    "Proste jajka sadzone smażone na maśle klarowanym, podawane z ziemniakami i groszkiem konserwowym, doprawione solą, pieprzem i koperkiem.",
   type: "dinner",
   images: ["jajko-sadzone.jpg"],
   time: 10,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lz" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: 200 },
         { ingredient: iVEG.canned_peas, amount: 100 },

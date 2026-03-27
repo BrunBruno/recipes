@@ -4,17 +4,20 @@ import { iMET } from "../ingredients/ingMeat";
 import { iSPC } from "../ingredients/ingSpice";
 import type { Recipe } from "../types";
 
+const portions = 5;
 const spaghettiCarbonara: Recipe = {
   name: "Spaghetti Carbonara",
+  description:
+    "Kremowe spaghetti Carbonara z boczkiem, żółtkami i parmezanem Parmigiano Reggiano, idealnie al dente - szybki i elegancki obiad.",
   type: "dinner",
   images: ["spaghetti-carbonara.jpg"],
   time: 30,
-  portions: 5,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: "5 × 100" },
+        { ingredient: iGRN.spaghetti_pasta, amount: `${portions} × 100` },
         { ingredient: iDIR.parmigiano_reggiano, amount: 100 },
         { ingredient: iMET.bacon_block, amount: 300 },
         { ingredient: iMET.egg_yolk, amount: 8, unit: "szt" },
@@ -38,7 +41,7 @@ const spaghettiCarbonara: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron",  "xxx"],
+  keyWords: ["makaron", "xxx"],
 };
 
 export default spaghettiCarbonara;

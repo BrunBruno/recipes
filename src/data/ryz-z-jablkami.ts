@@ -7,17 +7,19 @@ import type { Recipe } from "../types";
 
 const ryzZJablkami: Recipe = {
   name: "Ryż z Jabłkami",
+  description:
+    "Delikatny deser z ryżu i jabłek, podsmażanych na maśle z dodatkiem cynamonu, idealny na ciepłą i słodką przekąskę.",
   type: "dessert",
   images: ["ryz-z-jablkami.jpg"],
   time: 30,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.rice, amount: 100 },
         { ingredient: iFRT.apple, amount: 2, unit: "szt" },
-        { ingredient: iOTH.sugar, amount: 2, unit: "łyżeczka" },
+        { ingredient: iOTH.sugar, amount: 2, unit: "lzi" },
         { ingredient: iFAT.butter, amount: 3 },
         { ingredient: iSPC.cinnamon },
         { ingredient: iSPC.salt },

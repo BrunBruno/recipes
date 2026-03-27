@@ -10,18 +10,20 @@ import type { Recipe } from "../types";
 
 const kebab: Recipe = {
   name: "Kebab w Picie",
+  description:
+    "Domowy kebab w picie z mieloną wołowiną, świeżymi warzywami i aromatycznym sosem jogurtowo-majonezowym - idealny na sycący posiłek dla całej rodziny.",
   type: "snack",
   images: ["kebab-w-picie.jpg"],
   time: 90,
   portions: 4,
   ingredients: [
     {
-      title: "Mięso",
+      title: "Składniki na mięso",
       items: [
         { ingredient: iMET.ground_beef, amount: 500 },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
-        { ingredient: iDIR.greek_yogurt, amount: 1, unit: "łyżka" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
+        { ingredient: iDIR.greek_yogurt, amount: 1, unit: "lz" },
         { ingredient: iSPC.cumin },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.black_pepper },
@@ -29,17 +31,17 @@ const kebab: Recipe = {
       ],
     },
     {
-      title: "Sos",
+      title: "Składniki na sos",
       items: [
-        { ingredient: iDIR.greek_yogurt, amount: 5, unit: "łyżka" },
-        { ingredient: iSAU.mayonnaise, amount: 2, unit: "łyżka" },
-        { ingredient: iVEG.garlic, amount: 2, unit: "ząbek" },
+        { ingredient: iDIR.greek_yogurt, amount: 5, unit: "lz" },
+        { ingredient: iSAU.mayonnaise, amount: 2, unit: "lz" },
+        { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
         { ingredient: iSPC.granulated_garlic },
         { ingredient: iSPC.cumin },
       ],
     },
     {
-      title: "Pita",
+      title: "Składniki na pity",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
         { ingredient: iFAT.olive, amount: 30, unit: "ml" },
@@ -49,7 +51,7 @@ const kebab: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.chinese_cabbage, amount: 0.25, unit: "szt" },

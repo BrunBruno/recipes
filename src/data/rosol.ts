@@ -6,13 +6,15 @@ import type { Recipe } from "../types";
 
 const rosol: Recipe = {
   name: "Rosół",
+  description:
+    "Tradycyjny, aromatyczny rosół z indyka, kurczaka i wieprzowiny, gotowany z warzywami i przyprawami przez kilka godzin, idealny jako baza do zup lub na niedzielny obiad.",
   type: "soup",
   images: [""],
   time: 240,
   portions: 6,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.turkey_wing, amount: 500, excludeFromCalc: true },
         { ingredient: iMET.turkey_neck, amount: 200, excludeFromCalc: true },
@@ -29,10 +31,10 @@ const rosol: Recipe = {
         { ingredient: iVEG.leek, amount: 1, unit: "szt" },
         { ingredient: iVEG.savoy_cabbage, amount: 80 },
         { ingredient: iVEG.parsley, amount: 10 },
-        { ingredient: iOTH.water },
-        { ingredient: iSPC.bay_leaf, amount: 2, unit: "listek" },
-        { ingredient: iSPC.allspice, amount: 3, unit: "ziarno" },
-        { ingredient: iSPC.black_pepper, amount: 6, unit: "ziarno" },
+        { ingredient: iOTH.water, amount: 3000, unit: "ml" },
+        { ingredient: iSPC.bay_leaf, amount: 2, unit: "lst" },
+        { ingredient: iSPC.allspice, amount: 3, unit: "ziar" },
+        { ingredient: iSPC.black_pepper, amount: 6, unit: "ziar" },
         { ingredient: iSPC.salt },
       ],
     },

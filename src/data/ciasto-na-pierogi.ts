@@ -6,18 +6,20 @@ import type { Recipe } from "../types";
 
 const ciastoNaPierogi: Recipe = {
   name: "Ciasto na Pierogi",
+  description:
+    "Elastyczne i miękkie ciasto na pierogi, łatwe do wałkowania i lepienia, idealne na domowe pierogi z dowolnym farszem.",
   type: "other",
   images: [""],
   time: 60,
   portions: 6,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
         { ingredient: iFAT.oil, amount: 50, unit: "ml" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iSPC.salt, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iSPC.salt, amount: 0.5, unit: "lzi" },
       ],
     },
   ],

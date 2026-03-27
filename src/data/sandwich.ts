@@ -5,19 +5,21 @@ import { iSAU } from "../ingredients/ingSauce";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
-const sandwichRecipe: Recipe = {
+const sandwich: Recipe = {
   name: "Sandwiche",
+  description:
+    "Szybkie i chrupiące sandwiche z szynką, żółtym serem i ogórkiem, podawane z ketchupem i sosem czosnkowym - idealna przekąska na każdą porę dnia.",
   type: "snack",
   images: ["sandwiche.jpg", "sandwiche-2.jpg"],
   time: 10,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
-        { ingredient: iGRN.toast_bread, amount: 4, unit: "kromka" },
-        { ingredient: iMET.ham_slices, amount: 2, unit: "plaster" },
-        { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plaster" },
+        { ingredient: iGRN.toast_bread, amount: 4, unit: "krom" },
+        { ingredient: iMET.ham_slices, amount: 2, unit: "plas" },
+        { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plas" },
         { ingredient: iVEG.pickled_cucumber, amount: 0.5, unit: "szt" },
         { ingredient: iSAU.ketchup },
         { ingredient: iSAU.garlic_sauce },
@@ -28,7 +30,7 @@ const sandwichRecipe: Recipe = {
     {
       title: "",
       steps: [
-        "Ogórka kiszonego pokroić w cienkie plasterki.",
+        "Ogórka kiszonego pokroić w cienkie plaski.",
         "Na dwóch tostach ułożyć ser, szynkę oraz ogórka.",
         "Przykryć pozostałymi tostami.",
         "Włożyć sandwiche do rozgrzanego sandwichera i opiekać, aż będą złociste i chrupiące.",
@@ -39,4 +41,4 @@ const sandwichRecipe: Recipe = {
   keyWords: ["pieczywo", "ser", "xxx"],
 };
 
-export default sandwichRecipe;
+export default sandwich;

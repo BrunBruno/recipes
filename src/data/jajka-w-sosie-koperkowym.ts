@@ -9,25 +9,27 @@ import type { Recipe } from "../types";
 
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
+  description:
+    "Klasyczne jajka w sosie koperkowym - jajka na twardo w kremowym sosie z masła, mąki, śmietany i koperku, podawane z ziemniakami i ogórkiem kiszonym.",
   type: "dinner",
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iOTH.water, amount: 0.5, unit: "szklanka" },
-        { ingredient: iDIR.cream_30, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.butter, amount: 1, unit: "lz" },
+        { ingredient: iGRN.flour, amount: 1, unit: "lz" },
+        { ingredient: iOTH.water, amount: 0.5, unit: "szk" },
+        { ingredient: iDIR.cream_30, amount: 2, unit: "lz" },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: 200 },
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },

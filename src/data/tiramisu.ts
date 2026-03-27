@@ -5,20 +5,22 @@ import type { Recipe } from "../types";
 
 const tiramisu: Recipe = {
   name: "Tiramisu",
+  description:
+    "Klasyczne włoskie tiramisu z warstwami biszkoptów nasączonych kawą i kremem mascarpone, posypane aromatycznym kakao - lekki i elegancki deser.",
   type: "dessert",
   images: [""],
   time: 20,
   portions: 8,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iDIR.mascarpone, amount: 500 },
         { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
         { ingredient: iOTH.sugar, amount: 150 },
-        { ingredient: iOTH.cocoa, amount: 2, unit: "łyżka" },
-        { ingredient: iOTH.grain_coffee, amount: 1, unit: "łyżka" },
+        { ingredient: iOTH.cocoa, amount: 2, unit: "lz" },
+        { ingredient: iOTH.grain_coffee, amount: 1, unit: "lz" },
       ],
     },
   ],

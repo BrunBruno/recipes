@@ -7,37 +7,40 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 4;
 const bitki: Recipe = {
   name: "Bitki",
+  description:
+    "Soczyste bitki wieprzowe duszone w aromatycznym sosie z przyprawami i cebulą, idealne na tradycyjny obiad z ziemniakami i buraczkami.",
   type: "dinner",
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
-  portions: 4,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na mięso i sos",
       items: [
         { ingredient: iMET.pork_tenderloin, amount: 600 },
-        { ingredient: iGRN.flour, amount: 3, unit: "łyżka" },
-        { ingredient: iFAT.oil, amount: 5, unit: "łyżka" },
-        { ingredient: iDIR.cream_30, amount: 2, unit: "łyżka" },
+        { ingredient: iGRN.flour, amount: 3, unit: "lz" },
+        { ingredient: iFAT.oil, amount: 5, unit: "lz" },
+        { ingredient: iDIR.cream_30, amount: 2, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.marjoram },
         { ingredient: iSPC.bay_leaf },
         { ingredient: iSPC.wild_garlic },
-        { ingredient: iSPC.salt },
-        { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.allspice },
+        { ingredient: iSPC.black_pepper },
+        { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "4 × 200" },
-        { ingredient: iVEG.beets_shredded, amount: "4 × 150" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.beets_shredded, amount: `${portions} × 150` },
         { ingredient: iSPC.salt },
       ],
     },

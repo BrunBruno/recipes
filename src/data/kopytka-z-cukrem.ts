@@ -6,17 +6,19 @@ import type { Recipe } from "../types";
 
 const kopytkaZCukrem: Recipe = {
   name: "Kopytka z Cukrem",
+  description:
+    "Proste i szybkie kopytka z cukrem - delikatne kluski ziemniaczane podane z roztopionym masłem i posypane cukrem, idealne na słodki deser.",
   type: "dessert",
   images: ["kopytka-z-cukrem.jpg"],
   time: 15,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iGRN.gnocchi, amount: 500 },
-        { ingredient: iOTH.sugar, amount: 8, unit: "łyżeczka" },
-        { ingredient: iFAT.butter, amount: 2, unit: "łyżeczka" },
+        { ingredient: iOTH.sugar, amount: 8, unit: "lzi" },
+        { ingredient: iFAT.butter, amount: 2, unit: "lzi" },
         { ingredient: iSPC.salt },
       ],
     },

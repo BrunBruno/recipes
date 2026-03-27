@@ -5,19 +5,21 @@ import { iFAT } from "../ingredients/ingFat";
 
 const marchewkaZTymiankiem: Recipe = {
   name: "Marchewka z tymiankiem",
+  description:
+    "Pieczona marchewka z oliwą i mieszanką przypraw: tymiankiem, curry i ziołami prowansalskimi. Idealny dodatek do obiadu lub jako samodzielna przekąska.",
   type: "salad",
   images: [""],
   time: 40,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iVEG.carrot, amount: 4, unit: "szt" },
-        { ingredient: iFAT.olive, amount: 1, unit: "łyżka" },
-        { ingredient: iSPC.thyme, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iSPC.curry, amount: 0.5, unit: "łyżeczka" },
-        { ingredient: iSPC.herbes_de_provence, amount: 1, unit: "łyżeczka" },
+        { ingredient: iFAT.olive, amount: 1, unit: "lz" },
+        { ingredient: iSPC.thyme, amount: 0.5, unit: "lzi" },
+        { ingredient: iSPC.curry, amount: 0.5, unit: "lzi" },
+        { ingredient: iSPC.herbes_de_provence, amount: 1, unit: "lzi" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
       ],

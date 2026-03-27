@@ -6,6 +6,7 @@ import {
   calculateRecipeKcal,
   calculateRecipeKcalPer100g,
   calculateRecipeNutrients,
+  formatUnit,
 } from "../../utils";
 import type { Recipe } from "../../types";
 
@@ -14,7 +15,7 @@ type RecipeCardProps = {
   setSelectedRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
 };
 
-const SWIPE_THRESHOLD = 50;
+const swipeThreshold = 50;
 
 function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
   const touchStartX = useRef<number | null>(null);
@@ -58,7 +59,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
     const deltaX = touchStartX.current - touchEndX.current;
 
-    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+    if (Math.abs(deltaX) < swipeThreshold) return;
 
     setActiveImageIndex((prev) => {
       if (!selectedRecipe) return 0;
@@ -135,62 +136,6 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         <UtilsIcon name="close" color="#fff" />
       </button>
 
-      <div className="recipe-details-params">
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcal(selectedRecipe))} 
-                ${getStatusClass("kcal", calculateRecipeKcal(selectedRecipe))}
-              `}
-        >
-          <span>{calculateRecipeKcal(selectedRecipe)}</span>
-        </div>
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
-                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
-              `}
-        >
-          <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
-        </div>
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.time)} 
-                ${getStatusClass("time", selectedRecipe.time)}
-              `}
-        >
-          <span>{selectedRecipe.time}</span>
-        </div>
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.portions)}
-              `}
-        >
-          <span>{selectedRecipe.portions}</span>
-        </div>
-
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[0])}
-              `}
-        >
-          <span>{calculateRecipeNutrients(selectedRecipe)[0]}</span>
-        </div>
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[1])}
-              `}
-        >
-          <span>{calculateRecipeNutrients(selectedRecipe)[1]}</span>
-        </div>
-        <div
-          className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[2])}
-              `}
-        >
-          <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
-        </div>
-      </div>
-
       <div className="recipe-details-header">
         <div
           className="details-images"
@@ -198,7 +143,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           onTouchMove={(e) => handleTouchMove(e)}
           onTouchEnd={() => handleTouchEnd()}
         >
-          {selectedRecipe.images.length > 1 && (
+          {selectedRecipe.images.length > 1 && activeImageIndex !== 0 && (
             <div
               className="images-arrow"
               onClick={() => {
@@ -228,25 +173,29 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                 <div
                   key={`ind-${i}`}
                   className={`image-indicator ${activeImageIndex === i ? "active" : ""}`}
+                  onClick={() => {
+                    setActiveImageIndex(i);
+                  }}
                 />
               ))}
             </div>
           )}
 
-          {selectedRecipe.images.length > 1 && (
-            <div
-              className="images-arrow"
-              onClick={() => {
-                setActiveImageIndex((prev) => {
-                  if (prev === selectedRecipe.images.length - 1)
-                    return selectedRecipe.images.length - 1;
-                  return prev + 1;
-                });
-              }}
-            >
-              <UtilsIcon name="arrow" color="#ffffff" />
-            </div>
-          )}
+          {selectedRecipe.images.length > 1 &&
+            activeImageIndex !== selectedRecipe.images.length - 1 && (
+              <div
+                className="images-arrow"
+                onClick={() => {
+                  setActiveImageIndex((prev) => {
+                    if (prev === selectedRecipe.images.length - 1)
+                      return selectedRecipe.images.length - 1;
+                    return prev + 1;
+                  });
+                }}
+              >
+                <UtilsIcon name="arrow" color="#ffffff" />
+              </div>
+            )}
         </div>
 
         <h2
@@ -266,45 +215,45 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         </div>
       ) : (
         <div ref={contentRef} className="recipe-details-content">
-          <section>
-            <h3>Składniki</h3>
+          <section className="description-section">
+            {selectedRecipe.description}
+          </section>
+          <section className="ingredients-section">
             <div className="ingredients-container">
               {selectedRecipe.ingredients.map((group, groupIndex) => (
                 <div key={groupIndex} className="recipe-ingredient-group">
-                  {group.title && (
-                    <h4 className="ingredient-group-title">{group.title}</h4>
-                  )}
-                  <ul className="ingredients-list">
-                    {group.items.map((ingredient, index) => {
-                      if (ingredient.invisible) return;
-                      return (
-                        <li key={index} className="ingredient-item">
-                          <div className="ingredient-indicator">
-                            <IngredientIcon
-                              ingType={ingredient.ingredient.type}
-                            />
-                          </div>
-                          <span className="ingredient-name">
-                            {ingredient.ingredient.name}
-                          </span>
-                          <span className="ingredient-amount">
-                            {ingredient.amount}
-                            {ingredient.amount
-                              ? ingredient.unit
-                                ? ` ${ingredient.unit}`
-                                : " g"
-                              : ""}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <div className="ingredients-list-container">
+                    {group.title && (
+                      <h4 className="ingredient-group-title">{group.title}</h4>
+                    )}
+                    <ul className="ingredients-list">
+                      {group.items.map((ingredient, index) => {
+                        if (ingredient.invisible) return;
+                        return (
+                          <li key={index} className="ingredient-item">
+                            <div className="ingredient-indicator">
+                              <IngredientIcon
+                                ingType={ingredient.ingredient.type}
+                              />
+                            </div>
+                            <span className="ingredient-name">
+                              {ingredient.ingredient.name}
+                            </span>
+                            <span className="ingredient-amount">
+                              {ingredient.amount}
+                              {ingredient.amount ? formatUnit(ingredient) : ""}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               ))}
             </div>
           </section>
 
-          <section>
+          <section className="steps-section">
             <h3>Sposób przygotowania</h3>
             {Array.isArray(selectedRecipe.steps) &&
               selectedRecipe.steps.map((step, index) => (
@@ -318,6 +267,62 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                 </div>
               ))}
           </section>
+
+          <div className="recipe-details-params">
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeKcal(selectedRecipe))} 
+                ${getStatusClass("kcal", calculateRecipeKcal(selectedRecipe))}
+              `}
+            >
+              <span>{calculateRecipeKcal(selectedRecipe)}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
+                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
+              `}
+            >
+              <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.time)} 
+                ${getStatusClass("time", selectedRecipe.time)}
+              `}
+            >
+              <span>{selectedRecipe.time}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(selectedRecipe.portions)}
+              `}
+            >
+              <span>{selectedRecipe.portions}</span>
+            </div>
+
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[0])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[0]}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[1])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[1]}</span>
+            </div>
+            <div
+              className={`recipe-param 
+                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[2])}
+              `}
+            >
+              <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
+            </div>
+          </div>
         </div>
       )}
     </div>

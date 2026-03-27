@@ -24,7 +24,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     type: "frt",
     kcalPer100g: 50,
     unitWeights: {
-      plaster: 80,
+      plas: 80,
     },
     nutrientsPer100g: [0.1, 13, 0.5],
   },
@@ -34,7 +34,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     type: "frt",
     kcalPer100g: 52,
     unitWeights: {
-      szklanka: 125,
+      szk: 125,
     },
     nutrientsPer100g: [0.3, 12, 1.1],
   },
@@ -56,7 +56,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     type: "frt",
     kcalPer100g: 314,
     unitWeights: {
-      łyżka: 10,
+      lz: 10,
     },
     nutrientsPer100g: [0.7, 72, 3],
   },
@@ -69,7 +69,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 21,
     unitWeights: {
       ml: 1,
-      łyżeczka: 5,
+      lzi: 5,
     },
     nutrientsPer100g: [0, 0.4, 0.1],
   }, //

@@ -8,21 +8,23 @@ import type { Recipe } from "../types";
 
 const pancakes: Recipe = {
   name: "Pancakes",
+  description:
+    "Puszyste pancakes z maślanką i jajkiem, smażone na patelni, idealne na deser lub słodkie śniadanie, podawane z syropem lub cukrem pudrem.",
   type: "dessert",
   images: ["pancakes.jpg"],
   time: 30,
   portions: 3,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
-        { ingredient: iGRN.flour, amount: 1.25, unit: "szklanka" },
+        { ingredient: iGRN.flour, amount: 1.25, unit: "szk" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
-        { ingredient: iDIR.buttermilk, amount: 1.25, unit: "szklanka" },
-        { ingredient: iOTH.powdered_sugar, amount: 0.25, unit: "szklanka" },
-        { ingredient: iOTH.baking_powder, amount: 1, unit: "łyżeczka" },
-        { ingredient: iOTH.baking_soda, amount: 1, unit: "łyżeczka" },
-        { ingredient: iFAT.oil, amount: 0.25, unit: "szklanka" },
+        { ingredient: iDIR.buttermilk, amount: 1.25, unit: "szk" },
+        { ingredient: iOTH.powdered_sugar, amount: 0.25, unit: "szk" },
+        { ingredient: iOTH.baking_powder, amount: 1, unit: "lzi" },
+        { ingredient: iOTH.baking_soda, amount: 1, unit: "lzi" },
+        { ingredient: iFAT.oil, amount: 0.25, unit: "szk" },
         { ingredient: iSPC.salt },
       ],
     },

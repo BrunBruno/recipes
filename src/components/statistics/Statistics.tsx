@@ -1,29 +1,20 @@
 import "./statistics.css";
 import { useEffect, useRef } from "react";
 import UtilsIcon from "../../assets/utilsIcon";
-import { iDIR } from "../../ingredients/ingDairy";
-import { iFAT } from "../../ingredients/ingFat";
-import { iFRT } from "../../ingredients/ingFruit";
-import { iGRN } from "../../ingredients/ingGrain";
-import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
-import { iSAU } from "../../ingredients/ingSauce";
-import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { IngredientType, MealType } from "../../types";
 import {
   interpolateColor,
   kcalTopColors,
   kcalLowColors,
-  ingredientTypeColor,
   MealTypesData,
-  ingredientTypeLabels,
   countDoneRecipes,
   countIngredientTypes,
   countIngredientUsage,
   countRecipeCalories,
   countRecipeKcalPer100g,
   countRecipesTypes,
+  IngredientTypeData,
+  ingredientCollections,
 } from "../../utils";
 import {
   ArcElement,
@@ -87,7 +78,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
 
   const createChart = (
     canvas: HTMLCanvasElement | null,
-    chartRef: React.MutableRefObject<Chart | null>,
+    chartRef: React.RefObject<Chart | null>,
     labels: string[],
     data: number[],
     colors?: string[],
@@ -110,8 +101,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
           {
             data,
             backgroundColor:
-              colors ??
-              labels.map((_, i) => (i % 2 === 0 ? "#099268" : "#c3fae8")),
+              colors ?? labels.map((_, i) => (i % 2 === 0 ? "#666" : "#ccc")),
             borderRadius: 0,
             borderSkipped: false,
           },
@@ -146,7 +136,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
   };
 
   // creates all charts
-  const createCharts = () => {
+  const renderCharts = () => {
     const topN = (obj: Record<string, number>, n: number) =>
       Object.entries(obj)
         .sort((a, b) => b[1] - a[1])
@@ -226,18 +216,6 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     );
 
     const ingredientTypeMap: Record<string, IngredientType> = {};
-    const ingredientCollections = [
-      iDIR,
-      iFAT,
-      iFRT,
-      iGRN,
-      iMET,
-      iOTH,
-      iSAU,
-      iSPC,
-      iVEG,
-    ];
-
     ingredientCollections.forEach((col) => {
       Object.values(col).forEach((i) => {
         ingredientTypeMap[i.name] = i.type;
@@ -250,7 +228,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       chartRefs.ingredientUsage,
       topIng.map(([k]) => k),
       topIng.map(([, v]) => v),
-      topIng.map(([k]) => ingredientTypeColor[ingredientTypeMap[k]]),
+      topIng.map(([k]) => IngredientTypeData[ingredientTypeMap[k]].color),
     );
 
     const recipeLabels = Object.keys(recipeTypeCount);
@@ -268,14 +246,12 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     );
     const ingLabels = itcSorted.map(([k]) => k as IngredientType);
     const ingValues = itcSorted.map(([, v]) => v);
-    // const ingLabels = Object.keys(ingredientTypeCount);
-    // const ingValues = Object.values(ingredientTypeCount);
     createChart(
       canvasRefs.ingredientTypes.current,
       chartRefs.ingredientTypes,
-      ingLabels.map((k) => ingredientTypeLabels[k as IngredientType]),
+      ingLabels.map((k) => IngredientTypeData[k as IngredientType].label),
       ingValues,
-      ingLabels.map((k) => ingredientTypeColor[k as IngredientType]),
+      ingLabels.map((k) => IngredientTypeData[k as IngredientType].color),
     );
 
     createChart(
@@ -291,7 +267,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     if (!showStatistics) return;
 
     requestAnimationFrame(() => {
-      createCharts();
+      renderCharts();
     });
   }, [showStatistics]);
 

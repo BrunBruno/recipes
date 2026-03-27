@@ -7,20 +7,22 @@ import type { Recipe } from "../types";
 
 const zawinieteTosty: Recipe = {
   name: "Zawinięte Tosty",
+  description:
+    "Chrupiące roladki z tostów wypełnione serem i boczkiem, z delikatnym akcentem ketchupu i majonezu - szybka i smakowita przekąska.",
   type: "snack",
   images: ["zawiniete-tosty.jpg"],
   time: 25,
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
-        { ingredient: iGRN.toast_bread, amount: 8, unit: "kromka" },
-        { ingredient: iDIR.yellow_cheese, amount: 8, unit: "plaster" },
-        { ingredient: iMET.bacon_slices, amount: 8, unit: "plaster" },
-        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżeczka" },
-        { ingredient: iSAU.ketchup, amount: 1, unit: "łyżeczka" },
-        { ingredient: iFAT.oil, amount: 0.5, unit: "łyżeczka" },
+        { ingredient: iGRN.toast_bread, amount: 8, unit: "krom" },
+        { ingredient: iDIR.yellow_cheese, amount: 8, unit: "plas" },
+        { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "lzi" },
+        { ingredient: iSAU.ketchup, amount: 1, unit: "lzi" },
+        { ingredient: iFAT.oil, amount: 0.5, unit: "lzi" },
       ],
     },
   ],
@@ -30,7 +32,7 @@ const zawinieteTosty: Recipe = {
       steps: [
         "Z kromek chleba tostowego odetnij skórki, a następnie rozwałkuj je cienko wałkiem.",
         "Każdą kromkę delikatnie posmaruj ketchupem i majonezem.",
-        "Na każdej kromce ułóż plaster żółtego sera.",
+        "Na każdej kromce ułóż plasterek żółtego sera.",
         "Zwiń kromki ciasno w roladki.",
         "Każdą roladkę owiń w plaster boczku.",
         "Wierzch roladek posmaruj niewielką ilością oleju.",

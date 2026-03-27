@@ -6,18 +6,20 @@ import type { Recipe } from "../types";
 
 const omlet: Recipe = {
   name: "Omlet",
+  description:
+    "Prosty omlet z jajek z dodatkiem podsmażonej cebuli i papryki. Szybkie śniadanie lub przekąska, delikatne i puszyste, doprawione solą i pieprzem.",
   type: "snack",
   images: ["omlet.jpg"],
   time: 15,
   portions: 1,
   ingredients: [
     {
-      title: "",
+      title: "Lista składników",
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.25, unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "łyżeczka" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
       ],

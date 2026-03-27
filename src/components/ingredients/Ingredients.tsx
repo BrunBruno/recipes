@@ -11,7 +11,7 @@ import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
-import { countIngredientUsage, ingredientTypeLabels } from "../../utils";
+import { countIngredientUsage, IngredientTypeData } from "../../utils";
 import type { IngredientItem, IngredientType } from "../../types";
 import { useEffect, useMemo, useState } from "react";
 
@@ -107,8 +107,7 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                     }}
                   >
                     <UtilsIcon name={"arrow"} color={"#fff"} />
-                    {/* <IngredientIcon ingType={type as IngredientType} /> */}
-                    {ingredientTypeLabels[type as IngredientType]}
+                    {IngredientTypeData[type as IngredientType].label}
                   </h2>
 
                   <ul
@@ -129,7 +128,7 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                             <div className="ingredient-meta">
                               <IngredientIcon ingType={item.type} />
                               <span className="type">
-                                {ingredientTypeLabels[item.type]}
+                                {IngredientTypeData[item.type].label}
                               </span>
                             </div>
 

@@ -200,6 +200,7 @@ const UtilsIcon = ({ name, color }: UtilsIconProps) => {
         </svg>
       );
   }
+
   return <></>;
 };
 

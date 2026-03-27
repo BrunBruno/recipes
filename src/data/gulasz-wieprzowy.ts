@@ -7,21 +7,24 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
+  description:
+    "Gulasz wieprzowy w kremowym sosie z papryką i czosnkiem, podawany z kopytkami i buraczkami - sycący i aromatyczny obiad dla całej rodziny.",
   type: "dinner",
   images: ["gulasz-wieprzowy.jpg"],
   time: 80,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na gulasz",
       items: [
         { ingredient: iMET.stew_pork, amount: 500 },
-        { ingredient: iFAT.oil, amount: 3, unit: "łyżka" },
-        { ingredient: iFAT.butter, amount: 1, unit: "łyżka" },
-        { ingredient: iGRN.flour, amount: 1, unit: "łyżka" },
-        { ingredient: iDIR.cream_18, amount: 2, unit: "łyżka" },
+        { ingredient: iFAT.oil, amount: 3, unit: "lz" },
+        { ingredient: iFAT.butter, amount: 1, unit: "lz" },
+        { ingredient: iGRN.flour, amount: 1, unit: "lz" },
+        { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.chives },
@@ -33,10 +36,10 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: "3 × 250" },
-        { ingredient: iVEG.fried_beets, amount: "3 × 150" },
+        { ingredient: iGRN.gnocchi, amount: `${portions} × 250` },
+        { ingredient: iVEG.fried_beets, amount: `${portions} × 150` },
         { ingredient: iSPC.salt },
       ],
     },
@@ -52,14 +55,14 @@ const gulaszWieprzowy: Recipe = {
         "Dopraw solą, pieprzem, papryką, czosnkiem, chilli i szczypiorkiem do smaku.",
       ],
     },
-{
-  title: "Przykładowe podanie",
-  steps: [
-    "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-    "Podawaj gulasz z porcją ugotowanych kopytek.",
-    "Obok dodaj porcję buraczków zasmażanych.",
-  ],
-},
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
+        "Podawaj gulasz z porcją ugotowanych kopytek.",
+        "Obok dodaj porcję buraczków zasmażanych.",
+      ],
+    },
   ],
   keyWords: ["wieprzowina", "sos", "xxx"],
 };

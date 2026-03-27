@@ -9,17 +9,19 @@ import type { Recipe } from "../types";
 
 const roladaWieprzowa: Recipe = {
   name: "Rolada Wieprzowa",
+  description:
+    "Soczysta rolada wieprzowa z boczkiem, kiełbasą i ogórkiem konserwowym, duszona w aromatycznym sosie śmietanowo-musztardowym - idealna na obiad dla całej rodziny.",
   type: "dinner",
   images: [""],
   time: 90,
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na rolady",
       items: [
         { ingredient: iMET.pork_ham, amount: 1, unit: "opak" },
         { ingredient: iMET.bacon_block, amount: 0.5, unit: "opak" },
-        { ingredient: iMET.sausage, amount: 0.5, unit: "pęto" },
+        { ingredient: iMET.sausage, amount: 0.5, unit: "peto" },
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour },

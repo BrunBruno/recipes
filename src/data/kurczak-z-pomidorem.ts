@@ -6,23 +6,26 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
+  description:
+    "Pieczony kurczak z plasterkami pomidora, cebulą i ziołowym sosem majonezowo-śmietanowym, podawany z puree ziemniaczanym i burakami. Idealny obiad dla 3 osób.",
   type: "dinner",
   images: ["kurczak-z-pomidorem.jpg"],
   time: 70,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kurczaka",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-        { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kostka" },
-        { ingredient: iDIR.cream_18, amount: 1, unit: "łyżka" },
-        { ingredient: iSAU.mayonnaise, amount: 1, unit: "łyżka" },
-        { ingredient: iFAT.olive, amount: 2, unit: "łyżka" },
+        { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
+        { ingredient: iDIR.cream_18, amount: 1, unit: "lz" },
+        { ingredient: iSAU.mayonnaise, amount: 1, unit: "lz" },
+        { ingredient: iFAT.olive, amount: 2, unit: "lz" },
         { ingredient: iSPC.herbes_de_provence },
         { ingredient: iSPC.wild_garlic },
         { ingredient: iSPC.sweet_paprika },
@@ -31,12 +34,12 @@ const kurczakZPomidorem: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "3 × 200" },
-        { ingredient: iFAT.butter, amount: 1.5, unit: "łyżeczka" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iFAT.butter, amount: 1.5, unit: "lzi" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_shredded, amount: "3 × 150" },
+        { ingredient: iVEG.beets_shredded, amount: `{portions} × 150` },
         { ingredient: iSPC.salt },
       ],
     },

@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka Po Bretońsku",
+  description: "",
   type: "dinner",
   images: [""],
   time: 0,

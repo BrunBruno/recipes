@@ -4,15 +4,18 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 3;
 const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
+  description:
+    "Soczyste pałki z kurczaka pieczone w aromatycznych przyprawach i sosie barbecue. Podawane z frytkami i ogórkiem kiszonym jako klasyczne danie obiadowe.",
   type: "dinner",
   images: ["palki-barbecue.jpg"],
   time: 60,
-  portions: 3,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kurczaka",
       items: [
         { ingredient: iMET.chicken_drums, amount: 2, unit: "opak" },
         { ingredient: iSAU.barbecue_sauce },
@@ -23,10 +26,14 @@ const palkiBarbecue: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.frozen_fries, amount: "3 × 150" },
-        { ingredient: iVEG.pickled_cucumber, amount: "3 × 2", unit: "szt" },
+        { ingredient: iVEG.frozen_fries, amount: `${portions} × 150` },
+        {
+          ingredient: iVEG.pickled_cucumber,
+          amount: `${portions} × 2`,
+          unit: "szt",
+        },
         { ingredient: iSPC.salt },
       ],
     },

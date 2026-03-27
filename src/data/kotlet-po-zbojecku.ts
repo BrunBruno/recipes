@@ -2,6 +2,7 @@ import type { Recipe } from "../types";
 
 const kotletPoZbojecku: Recipe = {
   name: "Kotlet po Zbójecku",
+  description: "",
   type: "dinner",
   images: [""],
   time: 0,

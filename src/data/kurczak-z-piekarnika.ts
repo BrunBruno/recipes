@@ -4,18 +4,21 @@ import { iSPC } from "../ingredients/ingSpice";
 import { iVEG } from "../ingredients/ingVegetable";
 import type { Recipe } from "../types";
 
+const portions = 4;
 const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
+  description:
+    "Soczysty kurczak pieczony w piekarniku z aromatycznymi przyprawami, podawany z ziemniakami i burakami. Idealny obiad dla 4 osób.",
   type: "dinner",
   images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
   time: 60,
-  portions: 4,
+  portions: portions,
   ingredients: [
     {
-      title: "",
+      title: "Składniki na kurczaka",
       items: [
         { ingredient: iMET.chicken_quarters, amount: 4, unit: "szt" },
-        { ingredient: iFAT.butter, amount: 2, unit: "łyżeczka" },
+        { ingredient: iFAT.butter, amount: 2, unit: "lzi" },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.hot_paprika },
         { ingredient: iSPC.smoked_paprika },
@@ -24,10 +27,10 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: "4 × 200" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: "4 × 100" },
+        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
         { ingredient: iSPC.salt },
       ],
     },
