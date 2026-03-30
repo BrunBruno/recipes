@@ -18,7 +18,7 @@ const kotletDevolay: Recipe = {
     {
       title: "Składniki na mięso",
       items: [
-        { ingredient: iMET.chicken_breast, amount: 900 },
+        { ingredient: iMET.ground_chicken, amount: 600 },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iGRN.flour },
         { ingredient: iGRN.breadcrumbs },

@@ -80,7 +80,7 @@ function RecipeCard({
   };
 
   // recipe stats
-  const getFontSizeClass = (value: number): string => {
+  const getFontSizeClass = (value: number | string): string => {
     const length = String(value).length;
 
     if (length <= 2) return "font-xl";
@@ -212,20 +212,17 @@ function RecipeCard({
           {selectedRecipe.name}
         </h2>
 
-        {selectedRecipe.images.length > 0 && selectedRecipe.images[0] !== "" && (
-          <button
-            className="resize-button"
-            onClick={() => {
-              console.log(
-                selectedRecipe.images[activeImageIndex],
-                activeImageIndex,
-              );
-              setEnlargedImageUrl(selectedRecipe.images[activeImageIndex]);
-            }}
-          >
-            <UtilsIcon name="resize" color="#fff" />
-          </button>
-        )}
+        {selectedRecipe.images.length > 0 &&
+          selectedRecipe.images[0] !== "" && (
+            <button
+              className="resize-button"
+              onClick={() => {
+                setEnlargedImageUrl(selectedRecipe.images[activeImageIndex]);
+              }}
+            >
+              <UtilsIcon name="resize" color="#fff" />
+            </button>
+          )}
       </div>
 
       {selectedRecipe.ingredients.length === 0 &&

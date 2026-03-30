@@ -9,6 +9,6 @@ const loadedRecipes: Recipe[] = Object.values(modules).map(
 );
 
 export const recipes: Recipe[] = loadedRecipes
-  .filter((r) => r.steps.length > 0 && r.ingredients.length > 0)
-  // .filter((r) => r.steps.length === 0 || r.ingredients.length === 0)
+  // .filter((r) => r.steps.length > 0 && r.ingredients.length > 0)
+  .filter((r) => r.steps.length === 0 || r.ingredients.length === 0)
   .sort((a, b) => a.name.localeCompare(b.name));

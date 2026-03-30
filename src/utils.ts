@@ -231,7 +231,7 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
 export const calculateRecipeNutrients = (
   recipe: Recipe,
-): [number, number, number] => {
+): [string, string, string] => {
   const DEFAULT_FAT_GRAMS = 15;
 
   let totalFat = 0;
@@ -291,13 +291,17 @@ export const calculateRecipeNutrients = (
 
   if (recipe.portions) {
     return [
-      Math.round((10 * totalFat) / recipe.portions) / 10,
-      Math.round((10 * totalCarb) / recipe.portions) / 10,
-      Math.round((10 * totalProt) / recipe.portions) / 10,
+      (Math.round((10 * totalFat) / recipe.portions) / 10).toFixed(1),
+      (Math.round((10 * totalCarb) / recipe.portions) / 10).toFixed(1),
+      (Math.round((10 * totalProt) / recipe.portions) / 10).toFixed(1),
     ];
   }
 
-  return [Math.round(totalFat), Math.round(totalCarb), Math.round(totalProt)];
+  return [
+    Math.round(totalFat).toFixed(1),
+    Math.round(totalCarb).toFixed(1),
+    Math.round(totalProt).toFixed(1),
+  ];
 };
 
 export const keywordAliases: Record<KeyWord, string[]> = {

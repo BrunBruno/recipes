@@ -117,7 +117,6 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                     }}
                   >
                     {items.map(([id, item]) => {
-                      console.log(item.name, item.type);
                       return (
                         <li key={id} className="ingredient-card">
                           <div className="ingredient-card-header">
