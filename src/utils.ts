@@ -438,7 +438,7 @@ export const countRecipeKcalPer100g = (recipes: Recipe[]) => {
 };
 
 export const formatUnit = (ingredient: Ingredient): string => {
-  if (!ingredient.amount || !ingredient.unit) return "";
+  if (!ingredient.amount || !ingredient.unit) return " g";
 
   let count: number;
   if (typeof ingredient.amount === "string") {

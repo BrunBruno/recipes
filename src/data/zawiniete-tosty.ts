@@ -1,5 +1,4 @@
 import { iDIR } from "../ingredients/ingDairy";
-import { iFAT } from "../ingredients/ingFat";
 import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
 import { iSAU } from "../ingredients/ingSauce";
@@ -22,7 +21,7 @@ const zawinieteTosty: Recipe = {
         { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ingredient: iSAU.mayonnaise, amount: 1, unit: "lzi" },
         { ingredient: iSAU.ketchup, amount: 1, unit: "lzi" },
-        { ingredient: iFAT.oil, amount: 0.5, unit: "lzi" },
+        { ingredient: iMET.egg, amount: 1, unit: "szt" },
       ],
     },
   ],
@@ -35,7 +34,7 @@ const zawinieteTosty: Recipe = {
         "Na każdej kromce ułóż plasterek żółtego sera.",
         "Zwiń kromki ciasno w roladki.",
         "Każdą roladkę owiń w plaster boczku.",
-        "Wierzch roladek posmaruj niewielką ilością oleju.",
+        "Wierzch roladek posmaruj niewielką ilością rozbełtanego jajka.",
         "Piecz w piekarniku nagrzanym do 180°C, aż uzyskają pożądany stopień zrumienienia.",
       ],
     },

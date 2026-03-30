@@ -13,11 +13,16 @@ import type { Recipe } from "../../types";
 type RecipeCardProps = {
   selectedRecipe: Recipe;
   setSelectedRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
+  setEnlargedImageUrl: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const swipeThreshold = 50;
 
-function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
+function RecipeCard({
+  selectedRecipe,
+  setSelectedRecipe,
+  setEnlargedImageUrl,
+}: RecipeCardProps) {
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -206,6 +211,21 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         >
           {selectedRecipe.name}
         </h2>
+
+        {selectedRecipe.images.length > 0 && selectedRecipe.images[0] !== "" && (
+          <button
+            className="resize-button"
+            onClick={() => {
+              console.log(
+                selectedRecipe.images[activeImageIndex],
+                activeImageIndex,
+              );
+              setEnlargedImageUrl(selectedRecipe.images[activeImageIndex]);
+            }}
+          >
+            <UtilsIcon name="resize" color="#fff" />
+          </button>
+        )}
       </div>
 
       {selectedRecipe.ingredients.length === 0 &&
