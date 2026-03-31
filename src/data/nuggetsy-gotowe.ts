@@ -1,8 +1,7 @@
 import { iMET } from "../ingredients/ingMeat";
 import { iVEG } from "../ingredients/ingVegetable";
-import { iSAU } from "../ingredients/ingSauce";
-import type { Recipe } from "../types";
 import { iFAT } from "../ingredients/ingFat";
+import type { Recipe } from "../types";
 
 const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",
