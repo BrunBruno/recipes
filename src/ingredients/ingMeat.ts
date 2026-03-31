@@ -34,8 +34,10 @@ type IngId =
   | "meat_spread"
   | "canned_tuna"
   | "smoked_salmon"
+  | "smoked_mackerel"
   | "fish_sticks"
   | "spicy_tenderloins"
+  | "chicken_nuggets"
   | "burger_patties";
 
 export const iMET: Record<IngId, IngredientItem> = {
@@ -388,6 +390,16 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [4, 0, 18],
   },
 
+  smoked_mackerel: {
+    name: "Makrela wędzona",
+    type: "fsh",
+    kcalPer100g: 305,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [25, 0, 19],
+  },
+
   fish_sticks: {
     name: "Paluszki rybne",
     type: "fsh",
@@ -408,6 +420,16 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [8, 3, 24],
+  },
+
+  chicken_nuggets: {
+    name: "Nuggetsy z kurczaka",
+    type: "met",
+    kcalPer100g: 212,
+    unitWeights: {
+      opak: 300,
+    },
+    nutrientsPer100g: [12, 14, 13],
   },
 
   burger_patties: {
