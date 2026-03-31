@@ -17,14 +17,14 @@ const kurczakPoChinsku: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.carrot, amount: 120 },
         { ingredient: iVEG.bell_pepper, amount: 100 },
         { ingredient: iVEG.leek, amount: 120 },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iGRN.rice, amount: `${portions} × 100` },
+        { ingredient: iGRN.rice, amount: portions * 100 },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.knorr_chinese_fix, amount: 1, unit: "opak" },
       ],

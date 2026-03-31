@@ -16,7 +16,7 @@ const pancakes: Recipe = {
   portions: 3,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 1.25, unit: "szk" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },

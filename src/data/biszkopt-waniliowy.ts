@@ -16,7 +16,7 @@ const biszkoptWaniliowy: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 90 },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
@@ -24,7 +24,7 @@ const biszkoptWaniliowy: Recipe = {
         { ingredient: iDIR.milk, amount: 30 },
         { ingredient: iOTH.sugar, amount: 90 },
         { ingredient: iOTH.vanilla_extract, amount: 2, unit: "ml" },
-        { ingredient: iSPC.salt, amount: 1 },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

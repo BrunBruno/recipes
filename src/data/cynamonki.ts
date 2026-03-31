@@ -17,7 +17,7 @@ const cynamonki: Recipe = {
   portions: 12,
   ingredients: [
     {
-      title: "Składniki na ciasto",
+      title: "Cynamonki",
       items: [
         { ingredient: iGRN.flour, amount: 600 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -31,7 +31,7 @@ const cynamonki: Recipe = {
       ],
     },
     {
-      title: "Składniki na lukier",
+      title: "Lukier",
       items: [
         { ingredient: iOTH.powdered_sugar, amount: 1, unit: "szk" },
         { ingredient: iOTH.water, amount: "2-3", unit: "lz" },

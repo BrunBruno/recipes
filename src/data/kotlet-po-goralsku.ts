@@ -17,7 +17,7 @@ const kotletPoGoralsku: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "Kotlety",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plas" },
         { ingredient: iMET.bacon_slices, amount: 10, unit: "plas" },
@@ -35,8 +35,8 @@ const kotletPoGoralsku: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
-        { ingredient: iVEG.sauerkraut, amount: `${portions} × 120` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.sauerkraut, amount: portions * 120 },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },

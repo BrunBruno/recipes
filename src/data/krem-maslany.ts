@@ -13,7 +13,7 @@ const kremMaslany: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iFAT.butter, amount: 200 },
         { ingredient: iDIR.condensed_milk, amount: 200 },

@@ -13,7 +13,7 @@ const nuggetsyGotowe: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.chicken_nuggets, amount: 1, unit: "opak" },
         { ingredient: iVEG.frozen_fries, amount: 150 },

@@ -16,7 +16,7 @@ const kotletySchaboweWPlatkach: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kotlety",
+      title: "Kotlety",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plas" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -32,8 +32,8 @@ const kotletySchaboweWPlatkach: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.frozen_fries, amount: `${portions} × 150` },
-        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
+        { ingredient: iVEG.frozen_fries, amount: portions * 150 },
+        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

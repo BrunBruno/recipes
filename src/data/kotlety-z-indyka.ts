@@ -16,7 +16,7 @@ const kotletyZIndyka: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kotlety",
+      title: "Kotlety",
       items: [
         { ingredient: iMET.turkey_breast, amount: 600 },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
@@ -33,8 +33,8 @@ const kotletyZIndyka: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
-        { ingredient: iVEG.cucumber_salad, amount: `${portions} × 150` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.cucumber_salad, amount: portions * 150 },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
@@ -62,7 +62,7 @@ const kotletyZIndyka: Recipe = {
       ],
     },
   ],
-  keyWords: ["indyk"],
+  keyWords: ["indyk", "xxx"],
 };
 
 export default kotletyZIndyka;

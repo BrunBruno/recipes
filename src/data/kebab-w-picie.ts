@@ -18,7 +18,7 @@ const kebab: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Składniki na mięso",
+      title: "Mięso",
       items: [
         { ingredient: iMET.ground_beef, amount: 500 },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
@@ -31,7 +31,7 @@ const kebab: Recipe = {
       ],
     },
     {
-      title: "Składniki na sos",
+      title: "Sos",
       items: [
         { ingredient: iDIR.greek_yogurt, amount: 5, unit: "lz" },
         { ingredient: iSAU.mayonnaise, amount: 2, unit: "lz" },
@@ -41,7 +41,7 @@ const kebab: Recipe = {
       ],
     },
     {
-      title: "Składniki na pity",
+      title: "Pity",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
         { ingredient: iFAT.olive, amount: 30, unit: "ml" },
@@ -51,7 +51,7 @@ const kebab: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "Dodatki",
       items: [
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.chinese_cabbage, amount: 0.25, unit: "szt" },

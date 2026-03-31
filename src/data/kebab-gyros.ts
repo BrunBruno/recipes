@@ -17,20 +17,30 @@ const kebabGyros: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "Podstawowe",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iGRN.tortilla, amount: 5, unit: "szt" },
-        { ingredient: iDIR.yogurt_natural, amount: 150 },
+        { ingredient: iSPC.gyros_spice, amount: 2, unit: "lz" },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
         { ingredient: iVEG.radish, amount: 1, unit: "opak" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 10, unit: "szt" },
-        { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
+      ],
+    },
+    {
+      title: "Sos",
+      items: [
         { ingredient: iSAU.mayonnaise, amount: 2, unit: "lz" },
-        { ingredient: iSPC.gyros_spice, amount: 2, unit: "lz" },
+        { ingredient: iDIR.yogurt_natural, amount: 150 },
+        { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
       ],
     },
   ],

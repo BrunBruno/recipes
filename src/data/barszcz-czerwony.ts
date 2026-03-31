@@ -13,12 +13,12 @@ const barszczCzerwony: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.beetroot, amount: 2, unit: "szt" },
         { ingredient: iOTH.water, amount: 700, unit: "ml" },
-        { ingredient: iOTH.rosol, amount: 300 },
-        { ingredient: iOTH.citric_acid },
+        { ingredient: iOTH.rosol, amount: 300, unit: "ml" },
+        { ingredient: iOTH.citric_acid, amount: 0.5, unit: "lzi" },
         { ingredient: iSPC.maggi },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },

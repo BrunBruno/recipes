@@ -15,15 +15,15 @@ const babeczki: Recipe = {
   portions: 12,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 2, unit: "szk" },
-        { ingredient: iOTH.baking_powder, amount: 1, unit: "lzi" },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iOTH.sugar, amount: 1, unit: "szk" },
         { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "opak" },
-        { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iDIR.milk, amount: 1, unit: "szk" },
         { ingredient: iFAT.oil, amount: 0.5, unit: "szk" },
+        { ingredient: iOTH.baking_powder, amount: 1, unit: "lzi" },
       ],
     },
   ],

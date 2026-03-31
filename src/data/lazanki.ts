@@ -15,7 +15,7 @@ const lazanki: Recipe = {
   portions: 5,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iMET.sausage, amount: 200 },

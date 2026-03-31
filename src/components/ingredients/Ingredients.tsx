@@ -95,13 +95,13 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
         const grouped = groupByType(group.data);
 
         return (
-          <section key={group.label} className="ingredient-group">
+          <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
               const rows = Math.ceil(items.length / columns);
               return (
                 <div key={type} className="ingredient-subgroup">
                   <h2
-                    className={`ingredient-group-title ${openTypes[type] ? "open" : ""}`}
+                    className={`ing-group-title ${openTypes[type] ? "open" : ""}`}
                     onClick={() => {
                       toggleType(type);
                     }}
@@ -159,6 +159,27 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                           </div>
 
                           <span className="ingredient-id">{id}</span>
+
+                          <div className="nutrient-indicator">
+                            <div
+                              className="nutrient-fat"
+                              style={{
+                                height: `${item.nutrientsPer100g[0]}%`,
+                              }}
+                            ></div>
+                            <div
+                              className="nutrient-carb"
+                              style={{
+                                height: `${item.nutrientsPer100g[1]}%`,
+                              }}
+                            ></div>
+                            <div
+                              className="nutrient-prot"
+                              style={{
+                                height: `${item.nutrientsPer100g[2]}%`,
+                              }}
+                            ></div>
+                          </div>
                         </li>
                       );
                     })}

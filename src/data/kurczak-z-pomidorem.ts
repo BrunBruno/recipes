@@ -17,7 +17,7 @@ const kurczakZPomidorem: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
@@ -36,10 +36,10 @@ const kurczakZPomidorem: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iFAT.butter, amount: 1.5, unit: "lzi" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_shredded, amount: `{portions} × 150` },
+        { ingredient: iVEG.beets_shredded, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

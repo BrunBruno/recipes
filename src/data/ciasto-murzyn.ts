@@ -15,7 +15,7 @@ const ciastoMurzyn: Recipe = {
   portions: 10,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 2, unit: "szk" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },

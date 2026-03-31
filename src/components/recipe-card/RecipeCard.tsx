@@ -13,7 +13,7 @@ import type { Recipe } from "../../types";
 type RecipeCardProps = {
   selectedRecipe: Recipe;
   setSelectedRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
-  setEnlargedImageUrl: React.Dispatch<React.SetStateAction<string>>;
+  // setEnlargedImageUrl: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const swipeThreshold = 50;
@@ -21,7 +21,7 @@ const swipeThreshold = 50;
 function RecipeCard({
   selectedRecipe,
   setSelectedRecipe,
-  setEnlargedImageUrl,
+  // setEnlargedImageUrl,
 }: RecipeCardProps) {
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -212,7 +212,7 @@ function RecipeCard({
           {selectedRecipe.name}
         </h2>
 
-        {selectedRecipe.images.length > 0 &&
+        {/* {selectedRecipe.images.length > 0 &&
           selectedRecipe.images[0] !== "" && (
             <button
               className="resize-button"
@@ -220,9 +220,9 @@ function RecipeCard({
                 setEnlargedImageUrl(selectedRecipe.images[activeImageIndex]);
               }}
             >
-              <UtilsIcon name="resize" color="#fff" />
+               <UtilsIcon name="resize" color="#fff" /> 
             </button>
-          )}
+          )} */}
       </div>
 
       {selectedRecipe.ingredients.length === 0 &&
@@ -234,15 +234,30 @@ function RecipeCard({
         <div ref={contentRef} className="recipe-details-content">
           <section className="description-section">
             {selectedRecipe.description}
+            <br /> <br />
+            przeliczona na{" "}
+            <span style={{ color: "#20c997", fontWeight: "bold" }}>
+              {selectedRecipe.portions}
+            </span>{" "}
+            {selectedRecipe.portions === 1
+              ? "porcję"
+              : selectedRecipe.portions < 5
+                ? "porcje"
+                : "porcji"}
+            :
           </section>
           <section className="ingredients-section">
-            <div className="ingredients-container">
+            <div
+              className={`${"ingredients-container"} ${selectedRecipe.ingredients.length === 1 ? "one-ingredient-list" : ""}`}
+            >
               {selectedRecipe.ingredients.map((group, groupIndex) => (
                 <div key={groupIndex} className="recipe-ingredient-group">
                   <div className="ingredients-list-container">
-                    {group.title && (
-                      <h4 className="ingredient-group-title">{group.title}</h4>
-                    )}
+                    <h4 className="ingredient-group-title">
+                      {group.title
+                        ? `Składniki: ${group.title}`
+                        : "Lista składników"}
+                    </h4>
                     <ul className="ingredients-list">
                       {group.items.map((ingredient, index) => {
                         if (ingredient.invisible) return;
@@ -258,8 +273,13 @@ function RecipeCard({
                             </span>
                             <span className="ingredient-amount">
                               {ingredient.amount}
-                              {ingredient.amount ? formatUnit(ingredient) : ""}
+                              <span className="ingredient-unit">
+                                {ingredient.amount
+                                  ? formatUnit(ingredient)
+                                  : ""}
+                              </span>
                             </span>
+                            <span className="ingredient-unit"></span>
                           </li>
                         );
                       })}

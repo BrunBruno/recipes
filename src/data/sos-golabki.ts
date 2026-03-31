@@ -15,7 +15,7 @@ const sosDoGolabkow: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 2, unit: "lz" },
         { ingredient: iVEG.tomato_puree, amount: 250, unit: "ml" },

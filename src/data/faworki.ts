@@ -16,7 +16,7 @@ const faworki: Recipe = {
   portions: 8,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 320 },
         { ingredient: iMET.egg_yolk, amount: 4, unit: "szt" },

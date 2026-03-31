@@ -14,11 +14,10 @@ const jajkoSadzone: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "Jajka sadzone",
       items: [
         { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "lz" },
-        { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
@@ -28,6 +27,7 @@ const jajkoSadzone: Recipe = {
         { ingredient: iVEG.potato, amount: 200 },
         { ingredient: iVEG.canned_peas, amount: 100 },
         { ingredient: iSPC.dill },
+        { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },

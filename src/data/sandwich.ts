@@ -15,7 +15,7 @@ const sandwich: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.toast_bread, amount: 4, unit: "krom" },
         { ingredient: iMET.ham_slices, amount: 2, unit: "plas" },

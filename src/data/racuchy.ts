@@ -16,7 +16,7 @@ const racuchy: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 150, unit: "g" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },

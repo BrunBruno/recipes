@@ -15,7 +15,7 @@ const kapustaZasmazana: Recipe = {
   portions: 10,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.sauerkraut, amount: 1000 },
         { ingredient: iVEG.onion, amount: 2, unit: "szt" },
@@ -24,7 +24,7 @@ const kapustaZasmazana: Recipe = {
         { ingredient: iFAT.oil, amount: 70 },
         { ingredient: iGRN.flour, amount: 30 },
         { ingredient: iOTH.sugar, amount: 1, unit: "lz" },
-        { ingredient: iSPC.bay_leaf, amount: 1, unit: "szt" },
+        { ingredient: iSPC.bay_leaf, amount: 1, unit: "lst" },
         { ingredient: iSPC.allspice, amount: 4, unit: "ziar" },
         { ingredient: iSPC.black_pepper, amount: 0.33, unit: "lzi" },
       ],

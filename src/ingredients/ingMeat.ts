@@ -230,7 +230,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   },
 
   stew_pork: {
-    name: "Mięso na gulasz (wieprzowe)",
+    name: "Mięso wieprzowe na gulasz",
     type: "met",
     kcalPer100g: 242,
     unitWeights: {
@@ -263,7 +263,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   //
 
   stew_beef: {
-    name: "Mięso na gulasz (wołowe)",
+    name: "Mięso wołowe na gulasz",
     type: "met",
     kcalPer100g: 215,
     unitWeights: {

@@ -18,7 +18,7 @@ const ciastoMarchewkowe: Recipe = {
   portions: 10,
   ingredients: [
     {
-      title: "Składniki na ciasto",
+      title: "Ciasto",
       items: [
         { ingredient: iGRN.flour, amount: 200 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -35,7 +35,7 @@ const ciastoMarchewkowe: Recipe = {
       ],
     },
     {
-      title: "Składniki na polewe",
+      title: "Polewa",
       items: [
         { ingredient: iDIR.cream_cheese, amount: 125 },
         { ingredient: iFAT.butter, amount: 50 },

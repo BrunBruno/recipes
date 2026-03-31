@@ -17,7 +17,7 @@ const gulaszPoWegiersku: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na gulasz",
+      title: "Gulasz",
       items: [
         { ingredient: iMET.stew_beef, amount: 500 },
         { ingredient: iFAT.oil, amount: 5, unit: "lz" },
@@ -28,8 +28,8 @@ const gulaszPoWegiersku: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: `${portions} × 250` },
-        { ingredient: iVEG.fried_beets, amount: `${portions} × 150` },
+        { ingredient: iGRN.gnocchi, amount: portions * 250 },
+        { ingredient: iVEG.fried_beets, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

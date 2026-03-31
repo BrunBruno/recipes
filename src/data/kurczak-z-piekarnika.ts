@@ -15,7 +15,7 @@ const kurczakZPiekarnika: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_quarters, amount: 4, unit: "szt" },
         { ingredient: iFAT.butter, amount: 2, unit: "lzi" },
@@ -29,8 +29,8 @@ const kurczakZPiekarnika: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
-        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

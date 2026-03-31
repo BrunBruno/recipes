@@ -14,7 +14,7 @@ const rosol: Recipe = {
   portions: 6,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.turkey_wing, amount: 500, excludeFromCalc: true },
         { ingredient: iMET.turkey_neck, amount: 200, excludeFromCalc: true },

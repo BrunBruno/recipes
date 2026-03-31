@@ -1,5 +1,6 @@
 import { iDIR } from "../ingredients/ingDairy";
 import { iFAT } from "../ingredients/ingFat";
+import { iGRN } from "../ingredients/ingGrain";
 import { iMET } from "../ingredients/ingMeat";
 import { iSAU } from "../ingredients/ingSauce";
 import { iVEG } from "../ingredients/ingVegetable";
@@ -15,20 +16,31 @@ const gotowyBurger: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Składniki na burgery",
+      title: "Burger warzywny",
       items: [
-        { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
-        { ingredient: iMET.bacon_slices, amount: 4, unit: "plas" },
-        { ingredient: iMET.egg, amount: 2, unit: "szt" },
-        { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plas" },
         { ingredient: iVEG.tomato, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.pickled_cucumber, amount: 1, unit: "szt" },
+      ],
+    },
+    {
+      title: "Burger mięsny",
+      items: [
+        { ingredient: iMET.bacon_slices, amount: 4, unit: "plas" },
+        { ingredient: iMET.egg, amount: 2, unit: "szt" },
+        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ingredient: iVEG.fried_onion, amount: 2, unit: "lz" },
+      ],
+    },
+    {
+      title: "Podstawowe",
+      items: [
+        { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
+        { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
+        { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plas" },
         { ingredient: iSAU.mayonnaise, amount: 4, unit: "lzi" },
         { ingredient: iSAU.ketchup, amount: 4, unit: "lzi" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
       ],
     },
   ],

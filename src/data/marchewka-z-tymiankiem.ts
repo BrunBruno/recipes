@@ -13,7 +13,7 @@ const marchewkaZTymiankiem: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "Marchewka",
       items: [
         { ingredient: iVEG.carrot, amount: 4, unit: "szt" },
         { ingredient: iFAT.olive, amount: 1, unit: "lz" },

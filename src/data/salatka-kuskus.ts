@@ -15,7 +15,7 @@ const salatkaKuskus: Recipe = {
   portions: 8,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
         { ingredient: iMET.egg, amount: 4, unit: "szt" },

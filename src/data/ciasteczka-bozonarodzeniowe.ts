@@ -15,7 +15,7 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
   portions: 24,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 1.5, unit: "szk" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },

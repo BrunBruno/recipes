@@ -15,7 +15,7 @@ const kajzerkiZPomidorem: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.kaiser_roll, amount: 2, unit: "szt" },
         { ingredient: iMET.ham_slices, amount: 4, unit: "plas" },

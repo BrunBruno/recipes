@@ -15,9 +15,9 @@ const spaghettiCarbonara: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: `${portions} × 100` },
+        { ingredient: iGRN.spaghetti_pasta, amount: portions * 100 },
         { ingredient: iDIR.parmigiano_reggiano, amount: 100 },
         { ingredient: iMET.bacon_block, amount: 300 },
         { ingredient: iMET.egg_yolk, amount: 8, unit: "szt" },

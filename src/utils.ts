@@ -55,11 +55,12 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   che: { label: "Sery", color: "#fcc419" },
   wat: { label: "Woda", color: "#1c7ed6" },
   msh: { label: "Grzyby", color: "#ced4da" },
-  pot: { label: "Ziemniaki", color: "#B79268" },
-  nut: { label: "Orzechy", color: "#B79268" },
+  pot: { label: "Ziemniaki", color: "#b79268" },
+  nut: { label: "Orzechy", color: "#b79268" },
   hrb: { label: "Zioła", color: "#40c057" },
   jar: { label: "Przetwory", color: "#40c057" },
   sug: { label: "Cukry", color: "#ffffff" },
+  bun: { label: "Pieczywo", color: "#b79268" },
   oth: { label: "Inne", color: "#ced4da" },
 };
 
@@ -139,10 +140,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
       let value = amount;
 
       if (typeof amount === "string") {
-        if (amount.includes("×")) {
-          const parts = amount.split("×").map(Number);
-          value = parts.reduce((a, b) => a * b, 1);
-        } else if (amount.includes("-")) {
+        if (amount.includes("-")) {
           const parts = amount.split("-").map(Number);
           value = parts.reduce((a, b) => a + b, 0) / parts.length;
         } else {
@@ -191,10 +189,7 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
       let value = amount;
 
       if (typeof amount === "string") {
-        if (amount.includes("×")) {
-          const parts = amount.split("×").map(Number);
-          value = parts.reduce((a, b) => a * b, 1);
-        } else if (amount.includes("-")) {
+        if (amount.includes("-")) {
           const parts = amount.split("-").map(Number);
           value = parts.reduce((a, b) => a + b, 0) / parts.length;
         } else {
@@ -250,10 +245,7 @@ export const calculateRecipeNutrients = (
       let value = amount;
 
       if (typeof amount === "string") {
-        if (amount.includes("×")) {
-          const parts = amount.split("×").map(Number);
-          value = parts.reduce((a, b) => a * b, 1);
-        } else if (amount.includes("-")) {
+        if (amount.includes("-")) {
           const parts = amount.split("-").map(Number);
           value = parts.reduce((a, b) => a + b, 0) / parts.length;
         } else {
@@ -381,6 +373,7 @@ export const countIngredientTypes = () => {
     hrb: 0,
     jar: 0,
     sug: 0,
+    bun: 0,
     oth: 0,
   };
 
@@ -446,8 +439,8 @@ export const formatUnit = (ingredient: Ingredient): string => {
 
   let count: number;
   if (typeof ingredient.amount === "string") {
-    const match = ingredient.amount.match(/^(\d+)\s*×\s*\d+/);
-    count = match ? parseInt(match[1], 10) : 1;
+    const match = ingredient.amount.match(/^(\d+)\s*-\s*\d+/);
+    count = match ? (parseInt(match[0], 10) + parseInt(match[1], 10)) / 2 : 1;
   } else {
     count = ingredient.amount;
   }

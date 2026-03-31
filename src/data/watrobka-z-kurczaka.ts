@@ -15,7 +15,7 @@ const watrobkaZKurczaka: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.poultry_liver, amount: 400 },
         { ingredient: iVEG.onion, amount: "2-3", unit: "szt" },

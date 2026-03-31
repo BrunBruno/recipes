@@ -10,14 +10,14 @@ const portions = 5;
 const kotletSchabowy: Recipe = {
   name: "Kotlety Schabowe",
   description:
-    "Klasyczne kotlety schabowe – cienko rozbite plastry schabu panierowane w mące, jajku i bułce tartej, smażone na złoty kolor. Podawane z ziemniakami i mizerią ze świeżego ogórka, cebuli i śmietany.",
+    "Klasyczne kotlety schabowe - cienko rozbite plastry schabu panierowane w mące, jajku i bułce tartej, smażone na złoty kolor. Podawane z ziemniakami i mizerią ze świeżego ogórka, cebuli i śmietany.",
   type: "dinner",
   images: ["kotlet-schabowy.jpg", "kotlet-schabowy-2.jpg"],
   time: 50,
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kotlety",
+      title: "Kotlety",
       items: [
         { ingredient: iMET.pork_loin, amount: 10, unit: "plas" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
@@ -36,7 +36,7 @@ const kotletSchabowy: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iDIR.cream_18, amount: 10, unit: "lz" },
         { ingredient: iVEG.cucumber, amount: 2.5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1.25, unit: "szt" },

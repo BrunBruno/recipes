@@ -16,7 +16,7 @@ const skladaki: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
         { ingredient: iMET.salami, amount: 12, unit: "plas" },

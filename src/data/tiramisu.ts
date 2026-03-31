@@ -13,7 +13,7 @@ const tiramisu: Recipe = {
   portions: 8,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iDIR.mascarpone, amount: 500 },

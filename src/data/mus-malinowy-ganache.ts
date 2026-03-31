@@ -13,7 +13,7 @@ const musMalinowyGanache: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iDIR.cream_36, amount: 170 },
         { ingredient: iFRT.raspberries, amount: 200 },

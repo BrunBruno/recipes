@@ -10,6 +10,12 @@ import Ingredients from "./components/ingredients/Ingredients";
 import RecipesGrid from "./components/recipes-grid/RecipesGrid";
 import RecipeCard from "./components/recipe-card/RecipeCard";
 
+recipes.forEach((recipe) => {
+  if (recipe.ingredients.length > 1) {
+    console.log(recipe.name);
+  }
+});
+
 function App() {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -20,7 +26,6 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
   const [showStatistics, setShowStatistics] = useState<boolean>(false);
-  const [enlargedImageUrl, setEnlargedImageUrl] = useState<string>("");
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
@@ -150,23 +155,8 @@ function App() {
         <RecipeCard
           selectedRecipe={selectedRecipe}
           setSelectedRecipe={setSelectedRecipe}
-          setEnlargedImageUrl={setEnlargedImageUrl}
         />
       )}
-
-      <div
-        className={`enlarged-image ${enlargedImageUrl ? "visible" : ""}`}
-        style={{ backgroundImage: `url(full/${enlargedImageUrl})` }}
-      >
-        <div
-          className="close-image"
-          onClick={() => {
-            setEnlargedImageUrl("");
-          }}
-        >
-          <UtilsIcon name="close" color="#fff" />
-        </div>
-      </div>
 
       <RecipesGrid
         filteredRecipes={filteredRecipes}

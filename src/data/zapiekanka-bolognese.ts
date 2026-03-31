@@ -17,7 +17,7 @@ const zapiekankaBolognese: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.fusilli_pasta, amount: 400 },
         { ingredient: iMET.ground_pork, amount: 400 },

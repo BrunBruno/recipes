@@ -13,9 +13,9 @@ const grysikowa: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
-        { ingredient: iOTH.rosol, amount: 500 },
+        { ingredient: iOTH.rosol, amount: 500, unit: "ml" },
         { ingredient: iGRN.semolina, amount: 1.5, unit: "lz" },
         { ingredient: iSPC.salt },
       ],

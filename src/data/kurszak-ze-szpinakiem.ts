@@ -16,7 +16,7 @@ const kurczakZeSzpinakiem: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iVEG.frozen_spinach, amount: 100 },
@@ -32,10 +32,10 @@ const kurczakZeSzpinakiem: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iFAT.butter, amount: 1.5, unit: "lzi" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
+        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

@@ -19,30 +19,41 @@ const burgerDrwala: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na burgery",
+      title: "Mięso",
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
-        { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
-        { ingredient: iMET.egg, amount: "1-2", unit: "szt" },
-        { ingredient: iDIR.lilliputian_cheese, amount: 350 },
-        { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
-        { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
-        { ingredient: iGRN.breadcrumbs, amount: "0-2", unit: "lz" },
-        { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
-        { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-        { ingredient: iFAT.oil, amount: 4, unit: "lz" },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
     {
-      title: "Składniki na sos",
+      title: "Ser",
       items: [
-        { ingredient: iSAU.ketchup, amount: `${portions} × 1`, unit: "lzi" },
-        { ingredient: iSAU.mustard, amount: `${portions} × 2`, unit: "lzi" },
-        { ingredient: iSAU.mayonnaise, amount: `${portions} × 1`, unit: "lzi" },
+        { ingredient: iDIR.lilliputian_cheese, amount: 350 },
+        { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
+        { ingredient: iGRN.breadcrumbs, amount: "0-2", unit: "lz" },
+        { ingredient: iMET.egg, amount: "1-2", unit: "szt" },
+        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
+      ],
+    },
+    {
+      title: "Dodatki",
+      items: [
+        { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
+        { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
+        { ingredient: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
+        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+      ],
+    },
+    {
+      title: "Sos",
+      items: [
+        { ingredient: iSAU.ketchup, amount: portions * 1, unit: "lzi" },
+        { ingredient: iSAU.mustard, amount: portions * 2, unit: "lzi" },
+        { ingredient: iSAU.mayonnaise, amount: portions * 1, unit: "lzi" },
       ],
     },
   ],
@@ -71,7 +82,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "ser", "pieczywo"],
+  keyWords: ["wołowina", "ser", "pieczywo", "xxx"],
 };
 
 export default burgerDrwala;

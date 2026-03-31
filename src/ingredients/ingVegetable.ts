@@ -172,7 +172,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   beetroot: {
-    name: "Burak",
+    name: "Burak czerwony",
     type: "veg",
     kcalPer100g: 43,
     unitWeights: {

@@ -18,7 +18,7 @@ const bitki: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na mięso i sos",
+      title: "Mięso i sos",
       items: [
         { ingredient: iMET.pork_tenderloin, amount: 600 },
         { ingredient: iGRN.flour, amount: 3, unit: "lz" },
@@ -39,8 +39,8 @@ const bitki: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
-        { ingredient: iVEG.beets_shredded, amount: `${portions} × 150` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.beets_shredded, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

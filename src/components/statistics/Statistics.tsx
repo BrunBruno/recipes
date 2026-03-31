@@ -81,12 +81,9 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     chartRef: React.RefObject<Chart | null>,
     labels: string[],
     data: number[],
-    colors?: string[],
+    colors: string[],
+    unit: string,
   ) => {
-    const truncateLabel = (label: string) => {
-      return label.length > 12 ? label.slice(0, 9) + "..." : label;
-    };
-
     if (!canvas) return;
 
     if (chartRef.current) {
@@ -96,7 +93,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     chartRef.current = new Chart(canvas, {
       type: "bar",
       data: {
-        labels: labels.map(truncateLabel),
+        labels: labels,
         datasets: [
           {
             data,
@@ -114,9 +111,27 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
           legend: {
             display: false,
           },
+          tooltip: {
+            callbacks: {
+              title: (tooltipItems) => tooltipItems[0].label,
+              label: (tooltipItem) => `${tooltipItem.raw} ${unit}`,
+            },
+            bodyFont: {
+              size: 14,
+            },
+            backgroundColor: "#333",
+            padding: 10,
+          },
         },
+
         scales: {
           x: {
+            ticks: {
+              callback: function (value) {
+                const label = this.getLabelForValue(value as number);
+                return label.length > 12 ? label.slice(0, 9) + "..." : label;
+              },
+            },
             grid: {
               display: true,
               color: "#222",
@@ -163,6 +178,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       allKcal.map(([k]) => k),
       allKcal.map(([, v]) => v),
       allKcalColors,
+      "kcal",
     );
 
     const allKcalDensity = sorted(recipeKcalPer100g);
@@ -177,6 +193,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       allKcalDensity.map(([k]) => k),
       allKcalDensity.map(([, v]) => v),
       allKcalDenColors,
+      "kcal / 100g",
     );
 
     const topKcal = topN(recipeCalories, 10);
@@ -186,6 +203,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       topKcal.map(([k]) => k),
       topKcal.map(([, v]) => v),
       kcalTopColors,
+      "kcal",
     );
 
     const lowKcal = bottomN(recipeCalories, 10);
@@ -195,6 +213,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       lowKcal.map(([k]) => k),
       lowKcal.map(([, v]) => v),
       kcalLowColors,
+      "kcal",
     );
 
     const topKcalDensity = topN(recipeKcalPer100g, 10);
@@ -204,6 +223,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       topKcalDensity.map(([k]) => k),
       topKcalDensity.map(([, v]) => v),
       kcalTopColors,
+      "kcal / 100g",
     );
 
     const lowKcalDensity = bottomN(recipeKcalPer100g, 10);
@@ -213,6 +233,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       lowKcalDensity.map(([k]) => k),
       lowKcalDensity.map(([, v]) => v),
       kcalLowColors,
+      "kcal / 100g",
     );
 
     const ingredientTypeMap: Record<string, IngredientType> = {};
@@ -229,6 +250,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       topIng.map(([k]) => k),
       topIng.map(([, v]) => v),
       topIng.map(([k]) => IngredientTypeData[ingredientTypeMap[k]].color),
+      "",
     );
 
     const recipeLabels = Object.keys(recipeTypeCount);
@@ -239,6 +261,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       recipeLabels.map((k) => MealTypesData[k as MealType].label),
       recipeValues,
       recipeLabels.map((k) => MealTypesData[k as MealType].color),
+      "",
     );
 
     const itcSorted = Object.entries(ingredientTypeCount).sort(
@@ -252,6 +275,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       ingLabels.map((k) => IngredientTypeData[k as IngredientType].label),
       ingValues,
       ingLabels.map((k) => IngredientTypeData[k as IngredientType].color),
+      "",
     );
 
     createChart(
@@ -260,6 +284,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       ["Zrobione", "Nie zrobione"],
       [doneRecipeCount.yes, doneRecipeCount.no],
       ["#0ca678", "#f03e3e"],
+      "",
     );
   };
 

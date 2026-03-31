@@ -14,7 +14,7 @@ const hotHog: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.sausages, amount: 4, unit: "szt" },
         { ingredient: iGRN.hotdog_buns, amount: 4, unit: "szt" },

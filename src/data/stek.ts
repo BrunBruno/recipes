@@ -14,7 +14,7 @@ const stek: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
         { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },

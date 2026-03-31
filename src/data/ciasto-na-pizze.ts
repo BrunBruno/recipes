@@ -14,7 +14,7 @@ const ciastoNaPizze: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 250 },
         { ingredient: iFAT.olive, amount: "1-2", unit: "lz" },

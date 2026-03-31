@@ -15,7 +15,7 @@ const ryzZJablkami: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.rice, amount: 100 },
         { ingredient: iFRT.apple, amount: 2, unit: "szt" },

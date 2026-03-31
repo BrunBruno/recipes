@@ -13,7 +13,7 @@ const maczanka: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.sausage, amount: 1, unit: "peto" },
         { ingredient: iFAT.butter, amount: 1, unit: "lzi" },

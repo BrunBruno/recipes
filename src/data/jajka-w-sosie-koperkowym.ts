@@ -17,7 +17,7 @@ const jajkaWSosieKoperkowym: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "Jajka i sos",
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iFAT.butter, amount: 1, unit: "lz" },

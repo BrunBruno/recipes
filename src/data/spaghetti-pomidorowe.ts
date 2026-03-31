@@ -18,10 +18,10 @@ const spaghettiPomidorowe: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: `${portions} × 100` },
+        { ingredient: iGRN.spaghetti_pasta, amount: portions * 100 },
         { ingredient: iVEG.canned_tomatoes, amount: 2, unit: "opak" },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
-        { ingredient: iDIR.yellow_cheese, amount: `${portions} × 50` },
+        { ingredient: iDIR.yellow_cheese, amount: portions * 50 },
         { ingredient: iFAT.butter, amount: 1, unit: "lzi" },
         { ingredient: iSPC.basil },
         { ingredient: iSPC.oregano },
@@ -32,7 +32,7 @@ const spaghettiPomidorowe: Recipe = {
   ],
   steps: [
     {
-      title: "Lista składników",
+      title: "",
       steps: [
         "Podsmaż czosnek krótko na maśle, uważając aby się nie przypalił.",
         "Dodaj pomidory z puszki lub pół słoika.",

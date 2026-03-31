@@ -13,7 +13,7 @@ const kurczakZRozna: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_whole, amount: 1, unit: "szt" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },

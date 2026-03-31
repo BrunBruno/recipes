@@ -18,7 +18,7 @@ const gotowanyKurczak: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na kurczaka i sos",
+      title: "Mięso i sos",
       items: [
         { ingredient: iMET.chicken_thigh, amount: 600 },
         { ingredient: iFAT.oil, amount: 3, unit: "lz" },
@@ -36,8 +36,8 @@ const gotowanyKurczak: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
-        { ingredient: iVEG.beets_whole_vinegar, amount: `${portions} × 100` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

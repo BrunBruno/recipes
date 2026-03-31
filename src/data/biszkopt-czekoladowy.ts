@@ -15,7 +15,7 @@ const biszkoptCzekoladowy: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 75 },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },

@@ -14,7 +14,7 @@ const salatkaJarzynowa: Recipe = {
   portions: 8,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
         { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },

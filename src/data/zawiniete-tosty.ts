@@ -14,7 +14,7 @@ const zawinieteTosty: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.toast_bread, amount: 8, unit: "krom" },
         { ingredient: iDIR.yellow_cheese, amount: 8, unit: "plas" },

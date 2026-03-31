@@ -16,7 +16,7 @@ const sosPieczarkowy: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.mushrooms, amount: 0.5, unit: "opak" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },

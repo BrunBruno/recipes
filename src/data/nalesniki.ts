@@ -16,7 +16,7 @@ const nalesniki: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 200 },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },

@@ -15,7 +15,7 @@ const chicker: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Składniki na kanapki",
+      title: "Kanapki",
       items: [
         { ingredient: iMET.spicy_tenderloins, amount: 400 },
         { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
@@ -23,7 +23,7 @@ const chicker: Recipe = {
       ],
     },
     {
-      title: "Składniki na sosy",
+      title: "Sosy",
       items: [
         { ingredient: iSAU.ketchup, amount: 1.5, unit: "lzi" },
         { ingredient: iSAU.mustard, amount: 2, unit: "lzi" },

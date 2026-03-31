@@ -14,7 +14,7 @@ const kopytkaZCukrem: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.gnocchi, amount: 500 },
         { ingredient: iOTH.sugar, amount: 8, unit: "lzi" },

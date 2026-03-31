@@ -131,7 +131,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   kaiser_roll: {
     name: "Kajzerka",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 275,
     unitWeights: {
       szt: 70,
@@ -142,7 +142,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   tortilla: {
     name: "Tortilla",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 300,
     unitWeights: {
       szt: 60,
@@ -152,7 +152,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   toast_bread: {
     name: "Tosty",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 267,
     unitWeights: {
       opak: 500,
@@ -164,7 +164,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   hamburger_buns: {
     name: "Bułki hamburgerowe",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 277,
     unitWeights: {
       szt: 80,
@@ -175,7 +175,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   chicken_buns: {
     name: "Bułki do chickerów",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 282,
     unitWeights: {
       szt: 80,
@@ -185,7 +185,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   hotdog_buns: {
     name: "Bułki hotdogowe",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 316,
     unitWeights: {
       szt: 70,
@@ -195,7 +195,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   french_hotdog_buns: {
     name: "Bułki do hot dogów francuskich",
-    type: "grn",
+    type: "bun",
     kcalPer100g: 316,
     unitWeights: {
       szt: 85,

@@ -13,7 +13,7 @@ const frenchHotDog: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.sausages, amount: 2, unit: "szt" },
         { ingredient: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },

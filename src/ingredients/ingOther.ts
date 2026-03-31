@@ -293,6 +293,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Rosół",
     type: "oth",
     kcalPer100g: 35,
+    unitWeights: {
+      ml: 1,
+    },
     nutrientsPer100g: [5, 1.5, 1],
   },
 };

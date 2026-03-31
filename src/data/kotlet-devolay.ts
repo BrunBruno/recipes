@@ -16,7 +16,7 @@ const kotletDevolay: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Składniki na mięso",
+      title: "Mięso",
       items: [
         { ingredient: iMET.ground_chicken, amount: 600 },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
@@ -26,7 +26,7 @@ const kotletDevolay: Recipe = {
       ],
     },
     {
-      title: "Składniki na masło czosnkowo-ziołowe",
+      title: "Masło czosnkowo-ziołowe",
       items: [
         { ingredient: iFAT.butter, amount: 100 },
         { ingredient: iVEG.garlic, amount: 4, unit: "zbk" },
@@ -39,7 +39,7 @@ const kotletDevolay: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: `${portions} × 200` },
+        { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iVEG.frozen_vegetable_mix, amount: 300 },
       ],
     },

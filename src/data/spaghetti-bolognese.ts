@@ -16,11 +16,11 @@ const spaghettiBolognese: Recipe = {
   portions: portions,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: `${portions} × 100` },
+        { ingredient: iGRN.spaghetti_pasta, amount: portions * 100 },
         { ingredient: iMET.ground_beef, amount: 400 },
-        { ingredient: iDIR.yellow_cheese, amount: `${portions} × 50` },
+        { ingredient: iDIR.yellow_cheese, amount: portions * 50 },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },
       ],

@@ -14,7 +14,7 @@ const ciastoNaPierogi: Recipe = {
   portions: 6,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iGRN.flour, amount: 500 },
         { ingredient: iFAT.oil, amount: 50, unit: "ml" },

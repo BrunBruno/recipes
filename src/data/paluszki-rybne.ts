@@ -14,7 +14,7 @@ const paluszkiRybne: Recipe = {
   portions: 1,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iMET.fish_sticks, amount: 5, unit: "szt" },
         { ingredient: iFAT.oil, amount: 1, unit: "lzi" },

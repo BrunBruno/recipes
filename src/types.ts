@@ -27,6 +27,7 @@ export type IngredientType =
   | "hrb" // herbs
   | "jar" // preserves
   | "sug" // sugars
+  | "bun" // baking
   | "oth";
 
 export type UnitType =

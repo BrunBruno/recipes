@@ -16,7 +16,7 @@ const roladaSzpinakowa: Recipe = {
   portions: 6,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },

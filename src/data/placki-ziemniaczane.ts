@@ -16,7 +16,7 @@ const plackiZiemniaczane: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iVEG.potato, amount: 5, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },

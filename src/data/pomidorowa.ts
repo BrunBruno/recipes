@@ -15,7 +15,7 @@ const pomidorowa: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "Lista składników",
+      title: "",
       items: [
         { ingredient: iOTH.rosol, amount: 700 },
         { ingredient: iVEG.tomato_puree, amount: 200 },
