@@ -6,10 +6,12 @@ type IngId =
   | "rice"
   | "couscous"
   | "semolina"
+  | "bulgur"
   | "fusilli_pasta"
   | "spaghetti_pasta"
   | "thin_pasta"
   | "lazanki_pasta"
+  | "white_beans"
   | "gnocchi"
   | "kaiser_roll"
   | "tortilla"
@@ -76,6 +78,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1, 73, 12],
   },
 
+  bulgur: {
+    name: "Kasza bulgur",
+    type: "grn",
+    kcalPer100g: 342,
+    unitWeights: {
+      szk: 200,
+      opak: 400,
+    },
+    nutrientsPer100g: [1.3, 76, 12],
+  },
+
   fusilli_pasta: {
     name: "Makaron świderki",
     type: "grn",
@@ -116,6 +129,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [1.5, 71, 12],
   }, //
+
+  white_beans: {
+    name: "Fasola biała",
+    type: "grn",
+    kcalPer100g: 333,
+    unitWeights: {
+      szk: 200,
+      opak: 400,
+    },
+    nutrientsPer100g: [1.2, 60, 21],
+  },
 
   gnocchi: {
     name: "Kopytka",

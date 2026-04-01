@@ -25,6 +25,7 @@ type IngId =
   | "savory"
   | "oregano"
   | "basil"
+  | "coriander"
   | "maggi"
   | "vegetable_seasoning"
   | "potato_seasoning"
@@ -286,6 +287,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [4, 61, 23],
+  },
+
+  coriander: {
+    name: "Kolendra",
+    type: "hrb",
+    kcalPer100g: 298,
+    unitWeights: {
+      lzi: 1,
+      lz: 3,
+    },
+    nutrientsPer100g: [18, 55, 12],
   },
 
   //

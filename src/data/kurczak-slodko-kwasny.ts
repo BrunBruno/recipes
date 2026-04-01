@@ -20,7 +20,7 @@ const kurczakSlodkoKwasny: Recipe = {
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iGRN.rice, amount: portions * 100 },
-        { ingredient: iSAU.winiary_sweet_sour_sauce, amount: 1, unit: "opak" },
+        { ingredient: iSAU.sweet_sour_sauce, amount: 1, unit: "opak" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.salt },
       ],

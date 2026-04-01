@@ -25,6 +25,7 @@ type IngId =
   | "tomato_puree"
   | "canned_corn"
   | "canned_peas"
+  | "canned_red_beans"
   | "pickled_cucumber"
   | "sauerkraut"
   | "fried_onion"
@@ -316,6 +317,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [0.4, 14, 5],
+  },
+
+  canned_red_beans: {
+    name: "Fasola czerwona z puszki",
+    type: "jar",
+    kcalPer100g: 110,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [0.5, 20, 7],
   },
 
   pickled_cucumber: {

@@ -61,24 +61,25 @@ const burgerDrwala: Recipe = {
     {
       title: "Przygotowanie sosu",
       steps: [
-        "Do kubka dodaj majonez, ketchup oraz musztardy w proporcjach 1:1:2 łyżeczki na jednego burgera.",
+        "Do kubka dodaj majonez, ketchup oraz musztarde w proporcjach 1:1:2 łyżeczki na jednego burgera.",
         "Wymieszaj sos i odstaw do przegryzienia.",
       ],
     },
     {
       title: "Przygotowanie burgerów",
       steps: [
-        "Uformuj kotlety wołowe z samego mięsa i odstaw je do lodówki.",
+        "Uformuj kotlety wołowe z samego mięsa wołowego i odstaw je do lodówki.",
         "Ser Liliput pokrój na 4 równe kawałki.",
         "Chrupki serowe rozetrzyj w moździerzu i wsyp do miski. W razie potrzeby dodaj bułkę tartą.",
         "Do drugiej miski wbij 1-2 jajka i rozbełtaj.",
         "Kawałki sera wielokrotnie maczaj w jajku i obtaczaj w chrupkach, aż uzyskasz solidną panierkę.",
         "Plastry boczku usmaż na patelni i odstaw.",
         "Na patelni z dodatkiem oleju usmaż panierowany ser, uważając, aby się nie rozpłynął.",
+        "Można usmażyć ser na samym tłuszczu z boczku, jeśli wytopiło się go odpowiednio dużo.",
         "Na tej samej patelni usmaż kotlety wołowe.",
         "Przed smażeniem mięsa kotlety można rozpłaszyć, jeśli są zbyt zbite lub małe.",
         "Umyj i pokrój pozostałe warzywa.",
-        "Złóż burgera z przygotowanych składników: bułka, sos, kotlet, ser, boczek i warzywa.",
+        "Złóż burgera z przygotowanych składników.",
       ],
     },
   ],

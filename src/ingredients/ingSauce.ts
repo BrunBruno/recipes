@@ -10,7 +10,8 @@ type IngId =
   | "barbecue_sauce"
   | "curry_sauce"
   | "tomato_paste"
-  | "winiary_sweet_sour_sauce";
+  | "sweet_sour_sauce"
+  | "sechuan_chili_fusion";
 
 export const iSAU: Record<IngId, IngredientItem> = {
   ketchup: {
@@ -115,13 +116,23 @@ export const iSAU: Record<IngId, IngredientItem> = {
 
   // gotowe
 
-  winiary_sweet_sour_sauce: {
-    name: "Sos słodko-kwaśny Winiary",
+  sweet_sour_sauce: {
+    name: "Sos słodko-kwaśny",
     type: "sau",
     kcalPer100g: 120,
     unitWeights: {
       opak: 250,
     },
     nutrientsPer100g: [2, 24, 1],
+  },
+
+  sechuan_chili_fusion: {
+    name: "Seczuański chili fusion",
+    type: "sau",
+    kcalPer100g: 71,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [0, 18, 1],
   },
 };

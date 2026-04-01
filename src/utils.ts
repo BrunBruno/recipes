@@ -15,6 +15,8 @@ import type {
   Recipe,
 } from "./types";
 
+export const DAILY_NUTRIENTS = [3213, 98, 441, 64]; // [kcal, fat, carbs, protein]
+
 export const ingredientCollections = [
   iDIR,
   iFAT,

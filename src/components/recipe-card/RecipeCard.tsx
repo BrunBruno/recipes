@@ -6,9 +6,31 @@ import {
   calculateRecipeKcal,
   calculateRecipeKcalPer100g,
   calculateRecipeNutrients,
+  DAILY_NUTRIENTS,
   formatUnit,
 } from "../../utils";
 import type { Recipe } from "../../types";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+import ChartDataLabels from "chartjs-plugin-datalabels";
+
+ChartJS.register(ChartDataLabels);
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+);
 
 type RecipeCardProps = {
   selectedRecipe: Recipe;
@@ -124,6 +146,69 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
     contentEl.addEventListener("scroll", handleScrollEnd);
     contentEl.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const RecipeDailyCharts = (
+    kcal: number,
+    nutrients: [string, string, string],
+  ) => {
+    
+
+    const values = [kcal];
+    for (let nut in nutrients) {
+      values.push(parseFloat(nutrients[nut]));
+    }
+    const data = values.map((val, i) => (val / DAILY_NUTRIENTS[i]) * 100);
+    const maxRange = Math.round(Math.max(...data) + 10);
+
+    const barData = {
+      labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko"],
+      datasets: [
+        {
+          label: "Pokrycie (%)",
+          data: data,
+          backgroundColor: ["#099268", "#f59f00", "#1098ad", "#f03e3e"],
+        },
+      ],
+    };
+
+    return (
+      <div className="recipe-daily-chart">
+        <Bar
+          data={barData}
+          options={{
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: maxRange,
+                ticks: {
+                  callback: (val) => val + "%",
+                },
+                grid: {
+                  display: true,
+                  color: "#222",
+                  lineWidth: 1,
+                },
+              },
+            },
+            plugins: {
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                formatter: (val: number) => val.toFixed(1) + "%",
+                color: "#aaa",
+                font: {
+                  weight: "bold",
+                },
+              },
+              legend: {
+                display: false,
+              },
+            },
+          }}
+        />
+      </div>
+    );
   };
 
   return (
@@ -345,6 +430,12 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
             >
               <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
             </div>
+          </section>
+          <section className="recipe-details-daily">
+            {RecipeDailyCharts(
+              calculateRecipeKcal(selectedRecipe),
+              calculateRecipeNutrients(selectedRecipe),
+            )}
           </section>
         </div>
       )}
