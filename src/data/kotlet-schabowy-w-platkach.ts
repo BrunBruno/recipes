@@ -7,11 +7,11 @@ import type { Recipe } from "../types";
 
 const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
-  name: "Kotlety w Płatkach",
+  name: "Kotlety Schabowe w Płatkach",
   description:
-    "Kotlety schabowe w płatkach kukurydzianych – panierowane w jajku i chrupiących płatkach, smażone na złoty kolor, podawane z frytkami i buraczkami w occie.",
+    "Kotlety schabowe w płatkach kukurydzianych - panierowane w jajku i chrupiących płatkach, smażone na złoty kolor, podawane z frytkami i buraczkami w occie.",
   type: "dinner",
-  images: [""],
+  images: ["kotlet-schabowy-w-platkach.jpg"],
   time: 50,
   portions: portions,
   ingredients: [
@@ -32,8 +32,8 @@ const kotletySchaboweWPlatkach: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.frozen_fries, amount: portions * 150 },
-        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
+        { ingredient: iVEG.potato, amount: portions * 200 },
+        { ingredient: iVEG.corn_salad, amount: portions * 200 },
         { ingredient: iSPC.salt },
       ],
     },
@@ -43,7 +43,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       title: "",
       steps: [
         "Schab pokrój na kotlety, rozbij tłuczkiem i oprósz solą oraz pieprzem.",
-        "Płatki kukurydziane lekko rozgnieć, aby nie były w całości.",
+        "Płatki kukurydziane lekko rozgnieć lub zmiel w moździerzu, aby nie były w całości.",
         "Jajka roztrzep w misce.",
         "Każdy kotlet obtocz najpierw w jajku, a następnie w płatkach kukurydzianych.",
         "Rozgrzej olej na patelni.",
@@ -54,13 +54,13 @@ const kotletySchaboweWPlatkach: Recipe = {
     {
       title: "Przykładowe podanie",
       steps: [
-        "Upiecz frytki w piekarniku zgodnie z instrukcją na opakowaniu.",
-        "Podawaj usmażone kotlety na talerzu z porcją frytek.",
-        "Obok dodaj buraczki w occie jako dodatek warzywny.",
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Podawaj usmażone kotlety na talerzu z porcją ziemniaków.",
+        "Obok dodaj surówkę z kukurydzą jako dodatek warzywny.",
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["wieprzowina", "xxx"],
 };
 
 export default kotletySchaboweWPlatkach;

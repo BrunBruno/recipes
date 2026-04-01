@@ -33,6 +33,7 @@ type IngId =
   | "savoy_cabbage"
   | "coleslaw"
   | "cucumber_salad"
+  | "corn_salad"
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
@@ -365,6 +366,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [5.6, 9.9, 0.8],
+  },
+
+  corn_salad: {
+    name: "Surówka z kukurydzą",
+    type: "jar",
+    kcalPer100g: 95,
+    unitWeights: {
+      opak: 450,
+    },
+    nutrientsPer100g: [5.1, 9.5, 1],
   },
 
   fried_beets: {

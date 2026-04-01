@@ -13,16 +13,11 @@ import type { Recipe } from "../../types";
 type RecipeCardProps = {
   selectedRecipe: Recipe;
   setSelectedRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
-  // setEnlargedImageUrl: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const swipeThreshold = 50;
 
-function RecipeCard({
-  selectedRecipe,
-  setSelectedRecipe,
-  // setEnlargedImageUrl,
-}: RecipeCardProps) {
+function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -132,16 +127,19 @@ function RecipeCard({
   };
 
   return (
-    <div className={`recipe-details ${headerCollapsed ? "collapsed" : ""}`}>
-      <button
-        className="close-button"
-        onClick={() => setSelectedRecipe(null)}
-        aria-label="Close recipe details"
-      >
-        <UtilsIcon name="close" color="#fff" />
-      </button>
-
+    <div
+      ref={contentRef}
+      className={`recipe-details ${headerCollapsed ? "collapsed" : ""}`}
+    >
       <div className="recipe-details-header">
+        <button
+          className="close-button"
+          onClick={() => setSelectedRecipe(null)}
+          aria-label="Close recipe details"
+        >
+          <UtilsIcon name="close" color="#fff" />
+        </button>
+
         <div
           className="details-images"
           onTouchStart={(e) => handleTouchStart(e)}
@@ -211,19 +209,9 @@ function RecipeCard({
         >
           {selectedRecipe.name}
         </h2>
-
-        {/* {selectedRecipe.images.length > 0 &&
-          selectedRecipe.images[0] !== "" && (
-            <button
-              className="resize-button"
-              onClick={() => {
-                setEnlargedImageUrl(selectedRecipe.images[activeImageIndex]);
-              }}
-            >
-               <UtilsIcon name="resize" color="#fff" /> 
-            </button>
-          )} */}
       </div>
+
+      <div className="header-filler" />
 
       {selectedRecipe.ingredients.length === 0 &&
       selectedRecipe.steps.length === 0 ? (
@@ -231,11 +219,11 @@ function RecipeCard({
           <UtilsIcon name="empty" color="#aaaaaa" />
         </div>
       ) : (
-        <div ref={contentRef} className="recipe-details-content">
+        <div className="recipe-details-content">
           <section className="description-section">
             {selectedRecipe.description}
             <br /> <br />
-            przeliczona na{" "}
+            Lista składników przeliczona na{" "}
             <span style={{ color: "#20c997", fontWeight: "bold" }}>
               {selectedRecipe.portions}
             </span>{" "}
@@ -289,7 +277,6 @@ function RecipeCard({
               ))}
             </div>
           </section>
-
           <section className="steps-section">
             <h3>Sposób przygotowania</h3>
             {Array.isArray(selectedRecipe.steps) &&
@@ -304,8 +291,7 @@ function RecipeCard({
                 </div>
               ))}
           </section>
-
-          <div className="recipe-details-params">
+          <section className="recipe-details-params">
             <div
               className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeKcal(selectedRecipe))} 
@@ -359,7 +345,7 @@ function RecipeCard({
             >
               <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
             </div>
-          </div>
+          </section>
         </div>
       )}
     </div>

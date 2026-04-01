@@ -10,9 +10,16 @@
   display: grid;
   grid-template-rows: 420px auto;
   box-shadow: 0 0 0.5rem 0 #000;
+  border-bottom: solid 0.3rem #333;
 
   transition: grid-template-rows 0.3s;
   animation: modalIn 0.25s ease;
+
+  overflow-y: scroll;
+}
+
+.recipe-details::-webkit-scrollbar {
+  display: none;
 }
 
 .recipe-details.collapsed {
@@ -45,11 +52,13 @@
   cursor: pointer;
 }
 
+.recipe-details.collapsed .recipe-details-title:hover {
+  filter: drop-shadow(0 0 0.5rem #fff);
+}
+
 .recipe-details.collapsed .close-button {
   top: 0.5rem;
   right: 0.5rem;
-  background-color: transparent;
-  border: none;
 }
 
 .recipe-details.collapsed .images-arrow {
@@ -156,7 +165,11 @@
 }
 
 .recipe-details-header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #111;
+  border-bottom: solid 0.3rem #333;
   height: 420px;
   overflow: hidden;
   transition:
@@ -187,24 +200,6 @@
     left 0.3s ease,
     opacity 0.3s ease,
     transform 0.3s ease;
-}
-
-.resize-button {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  height: 3rem;
-  aspect-ratio: 1/1 !important;
-  cursor: pointer;
-  user-select: none;
-  background-color: #0000;
-  border: none;
-  opacity: 0.6;
-}
-
-.resize-button svg {
-  width: 2rem;
 }
 
 .images-arrow {
@@ -265,7 +260,7 @@
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+  text-shadow: 0 0.3rem 0.3rem #000;
   transition:
     bottom 0.3s ease,
     font-size 0.3s ease,
@@ -273,14 +268,12 @@
 }
 
 .recipe-details-content {
+  position: relative;
   border: solid 0.3rem #333;
+  border-top: none;
+  border-bottom: none;
   gap: 4rem;
   padding: 1rem 3rem;
-  overflow-y: auto;
-}
-
-.recipe-details-content::-webkit-scrollbar {
-  display: none;
 }
 
 .ingredients-container {
@@ -439,8 +432,9 @@
   height: 3.2rem;
   padding: 0.5rem;
 
-  border: solid 0.2rem #333;
-  background-color: #111;
+  border: none;
+  background-color: #0000;
+  filter: drop-shadow(0 0.3rem 0.3rem #000);
   color: #ffffff;
   font-size: 1.6rem;
   cursor: pointer;
@@ -456,7 +450,8 @@
 }
 
 .close-button:hover {
-  background-color: #2b2f38;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 0.5rem #fff);
 }
 
 @keyframes modalIn {
@@ -485,6 +480,7 @@
     margin: 0;
     inset: 0;
     grid-template-rows: 280px auto;
+    border-bottom: none;
   }
 
   .ingredients-container {
@@ -503,7 +499,6 @@
   }
 
   .recipe-details-header {
-    position: relative;
     height: 280px;
   }
 
@@ -523,7 +518,6 @@
   .close-button {
     width: 2.8rem;
     height: 2.8rem;
-    border: none;
   }
 
   .recipe-details-content {

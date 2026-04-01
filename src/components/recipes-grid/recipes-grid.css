@@ -3,7 +3,6 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
   padding: 8rem 4rem 4rem 4rem;
-  min-height: calc(100dvh - 12rem - 5rem);
 }
 
 .recipe-card {

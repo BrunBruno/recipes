@@ -10,12 +10,6 @@ import Ingredients from "./components/ingredients/Ingredients";
 import RecipesGrid from "./components/recipes-grid/RecipesGrid";
 import RecipeCard from "./components/recipe-card/RecipeCard";
 
-recipes.forEach((recipe) => {
-  if (recipe.ingredients.length > 1) {
-    console.log(recipe.name);
-  }
-});
-
 function App() {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -158,10 +152,12 @@ function App() {
         />
       )}
 
-      <RecipesGrid
-        filteredRecipes={filteredRecipes}
-        setSelectedRecipe={setSelectedRecipe}
-      />
+      <div className="grid-container">
+        <RecipesGrid
+          filteredRecipes={filteredRecipes}
+          setSelectedRecipe={setSelectedRecipe}
+        />
+      </div>
 
       <footer className="footer">
         <button
