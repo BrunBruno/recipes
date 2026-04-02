@@ -27,6 +27,7 @@ type IngId =
   | "canned_peas"
   | "canned_red_beans"
   | "pickled_cucumber"
+  | "pickled_cucumber_vinegar"
   | "sauerkraut"
   | "fried_onion"
   | "chinese_cabbage"
@@ -60,6 +61,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5, 25, 3],
   },
+
+  ///////////////////////////////
 
   onion: {
     name: "Cebula",
@@ -183,11 +186,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 10, 1.6],
   },
 
-  //
+  ///////////////////////////////
+
+  frozen_vegetable_mix: {
+    name: "Mrożona mieszanka warzyw",
+    type: "veg",
+    kcalPer100g: 40,
+    nutrientsPer100g: [0.5, 7, 2.5],
+  },
+
+  ///////////////////////////////
 
   chinese_cabbage: {
     name: "Kapusta pekińska",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 16,
     unitWeights: {
       szt: 800,
@@ -197,7 +209,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   red_cabbage: {
     name: "Kapusta czerwona",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 31,
     unitWeights: {
       szt: 1000,
@@ -207,7 +219,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   savoy_cabbage: {
     name: "Kapusta włoska",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 27,
     unitWeights: {
       szt: 800,
@@ -217,7 +229,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   lettuce: {
     name: "Sałata",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 15,
     unitWeights: {
       opak: 150,
@@ -228,7 +240,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   chives: {
     name: "Szczypiorek",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 30,
     unitWeights: {
       lz: 3,
@@ -239,7 +251,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   parsley: {
     name: "Pietruszka Zielona",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 36,
     unitWeights: {
       peto: 30,
@@ -250,7 +262,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   spring_onion: {
     name: "Cebulka Zielona",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 32,
     unitWeights: {
       peto: 100,
@@ -258,11 +270,11 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.8, 7.3, 2.6],
   },
 
-  //
+  ///////////////////////////////
 
   frozen_spinach: {
     name: "Mrożony szpinak",
-    type: "veg",
+    type: "gee",
     kcalPer100g: 23,
     unitWeights: {
       opak: 450,
@@ -270,14 +282,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.4, 3.6, 2.9],
   },
 
-  frozen_vegetable_mix: {
-    name: "Mrożona mieszanka warzyw",
-    type: "veg",
-    kcalPer100g: 40,
-    nutrientsPer100g: [0.5, 7, 2.5],
-  },
-
-  //
+  ///////////////////////////////
 
   canned_tomatoes: {
     name: "Pomidory z puszki",
@@ -300,7 +305,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   canned_corn: {
-    name: "Kukurydza",
+    name: "Kukurydza konserwowa",
     type: "jar",
     kcalPer100g: 86,
     unitWeights: {
@@ -337,7 +342,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 60,
     },
     nutrientsPer100g: [0.5, 1, 0.5],
-  }, //
+    verified: true,
+  },
+
+  pickled_cucumber_vinegar: {
+    name: "Ogórek konserwowy",
+    type: "jar",
+    kcalPer100g: 15,
+    unitWeights: {
+      szt: 100,
+      opak: 500,
+    },
+    nutrientsPer100g: [0.2, 3, 0.5],
+  },
 
   sauerkraut: {
     name: "Kapusta kiszona",
@@ -357,7 +374,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [44, 40, 6],
-  }, //
+    verified: true,
+  },
 
   coleslaw: {
     name: "Colesław",
@@ -397,7 +415,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.6, 12.4, 1.3],
-  }, //
+    verified: true,
+  },
 
   beets_shredded: {
     name: "Buraczki wiórki",

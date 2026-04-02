@@ -22,6 +22,7 @@ type IngId =
   | "stew_pork"
   | "pork_tenderloin"
   | "pork_rib"
+  | "pork_shoulder"
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
@@ -36,6 +37,7 @@ type IngId =
   | "smoked_salmon"
   | "smoked_mackerel"
   | "fish_sticks"
+  | "pork_knuckle_ready"
   | "spicy_tenderloins"
   | "chicken_nuggets"
   | "burger_patties";
@@ -71,9 +73,11 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 0.7, 10.9],
   },
 
+  //////////////////////////////
+
   chicken_breast: {
     name: "Pierś z kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 164,
     unitWeights: {
       opak: 400,
@@ -83,7 +87,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_quarters: {
     name: "Ćwiartka kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 190,
     unitWeights: {
       szt: 250,
@@ -94,7 +98,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_drums: {
     name: "Pałki z kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 190,
     unitWeights: {
       opak: 500,
@@ -104,7 +108,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_thigh: {
     name: "Udo kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 215,
     unitWeights: {
       opak: 500,
@@ -114,7 +118,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   poultry_liver: {
     name: "Wątroba drobiowa",
-    type: "met",
+    type: "pou",
     kcalPer100g: 119,
     unitWeights: {
       opak: 450,
@@ -124,7 +128,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_whole: {
     name: "Kurczak cały",
-    type: "met",
+    type: "pou",
     kcalPer100g: 165,
     unitWeights: {
       szt: 1200,
@@ -134,7 +138,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_soup_portion: {
     name: "Porcja rosołowa z kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 190,
     unitWeights: {
       szt: 400,
@@ -144,7 +148,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   ground_chicken: {
     name: "Mięso mielone z kurczaka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 143,
     unitWeights: {
       opak: 400,
@@ -152,11 +156,11 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [17, 0, 8],
   },
 
-  //
+  //////////////////////////////
 
   turkey_breast: {
     name: "Pierś z indyka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 135,
     unitWeights: {
       opak: 600,
@@ -167,7 +171,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   turkey_wing: {
     name: "Skrzydło z indyka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 203,
     unitWeights: {
       szt: 300,
@@ -177,7 +181,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   turkey_neck: {
     name: "Szyja z indyka",
-    type: "met",
+    type: "pou",
     kcalPer100g: 170,
     unitWeights: {
       szt: 250,
@@ -185,7 +189,29 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 0, 18],
   },
 
-  //
+  //////////////////////////////
+
+  spicy_tenderloins: {
+    name: "Pikantne polędwiczki",
+    type: "pou",
+    kcalPer100g: 178,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [8, 3, 24],
+  },
+
+  chicken_nuggets: {
+    name: "Nuggetsy z kurczaka",
+    type: "pou",
+    kcalPer100g: 212,
+    unitWeights: {
+      opak: 300,
+    },
+    nutrientsPer100g: [12, 14, 13],
+  },
+
+  //////////////////////////////
 
   pork_loin: {
     name: "Schab",
@@ -260,7 +286,15 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [24, 0, 17],
   },
 
-  //
+  pork_shoulder: {
+    name: "Łopatka wieprzowa",
+    type: "met",
+    kcalPer100g: 250,
+    unitWeights: {},
+    nutrientsPer100g: [20, 0, 17],
+  },
+
+  //////////////////////////////
 
   stew_beef: {
     name: "Mięso wołowe na gulasz",
@@ -292,7 +326,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [20, 0, 18],
   },
 
-  //
+  //////////////////////////////
 
   ham_slices: {
     name: "Szynka",
@@ -303,7 +337,8 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 140,
     },
     nutrientsPer100g: [2, 3, 18],
-  }, //
+    verified: true,
+  },
 
   salami: {
     name: "Salami",
@@ -314,7 +349,8 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 160,
     },
     nutrientsPer100g: [36, 1.5, 20],
-  }, //
+    verified: true,
+  },
 
   bacon_slices: {
     name: "Boczek w plastrach",
@@ -345,7 +381,8 @@ export const iMET: Record<IngId, IngredientItem> = {
       peto: 100,
     },
     nutrientsPer100g: [18.4, 2, 13.1],
-  }, //
+    verified: true,
+  },
 
   sausages: {
     name: "Parówki",
@@ -355,7 +392,8 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 50,
     },
     nutrientsPer100g: [21, 2.7, 13],
-  }, //
+    verified: true,
+  },
 
   meat_spread: {
     name: "Pasztet",
@@ -365,9 +403,31 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 131,
     },
     nutrientsPer100g: [14, 6.7, 1.4],
-  }, //
+    verified: true,
+  },
 
-  //
+  pork_knuckle_ready: {
+    name: "Golonka gotowa",
+    type: "met",
+    kcalPer100g: 280,
+    unitWeights: {
+      szt: 800,
+    },
+    nutrientsPer100g: [24, 0, 20],
+  },
+
+  burger_patties: {
+    name: "Kotleciki hamburgerowe",
+    type: "met",
+    kcalPer100g: 255,
+    unitWeights: {
+      szt: 50,
+      opak: 250,
+    },
+    nutrientsPer100g: [20, 3, 17],
+  },
+
+  //////////////////////////////
 
   canned_tuna: {
     name: "Tuńczyk w sosie własnym",
@@ -408,38 +468,5 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 30,
     },
     nutrientsPer100g: [12, 10, 13],
-  },
-
-  //
-
-  spicy_tenderloins: {
-    name: "Pikantne polędwiczki",
-    type: "met",
-    kcalPer100g: 178,
-    unitWeights: {
-      opak: 400,
-    },
-    nutrientsPer100g: [8, 3, 24],
-  },
-
-  chicken_nuggets: {
-    name: "Nuggetsy z kurczaka",
-    type: "met",
-    kcalPer100g: 212,
-    unitWeights: {
-      opak: 300,
-    },
-    nutrientsPer100g: [12, 14, 13],
-  },
-
-  burger_patties: {
-    name: "Gotowe kotleciki hamburgerowe",
-    type: "met",
-    kcalPer100g: 255,
-    unitWeights: {
-      szt: 50,
-      opak: 250,
-    },
-    nutrientsPer100g: [20, 3, 17],
   },
 };

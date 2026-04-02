@@ -1,4 +1,4 @@
-// iMET, iDIR, iFAT, iGRN, iVEG, iSAU, iSPC, iOTH
+// iMET, iDIR, iFAT, iGRN, iVEG, iSPC, iOTH
 
 export type MealType =
   | "dinner"
@@ -9,25 +9,42 @@ export type MealType =
   | "other";
 
 export type IngredientType =
+  // iMET
   | "met" // meat
+  | "pou" // drób
   | "fsh" // fish
-  | "dir" // diary
-  | "fat" // fats
-  | "veg" // vegetables
-  | "frt" // fruits
-  | "grn" // grains
-  | "spc" // spices
-  | "sau" // sauces
   | "egg" // eggs
+
+  // iDIR
+  | "dir" // diary
   | "che" // cheese
-  | "wat" // water
+
+  // iFAT
+  | "fat" // fats
+
+  // iVEG
+  | "veg" // vegetables
+  | "gee" // greens
+  | "jar" // preserves
   | "msh" // mushroom
   | "pot" // potatoes
+
+  // iFRT
+  | "frt" // fruits
   | "nut" // orzechy
-  | "hrb" // herbs
-  | "jar" // preserves
-  | "sug" // sugars
+
+  // iGRN
+  | "grn" // grains
   | "bun" // baking
+
+  // iSPC
+  | "spc" // spices
+  | "hrb" // herbs
+  | "sau" // sauces
+
+  // iOTH
+  | "wat" // water
+  | "sug" // sugars
   | "oth";
 
 export type UnitType =
@@ -76,6 +93,7 @@ export type IngredientItem = {
   kcalPer100g: number;
   unitWeights?: Partial<Record<UnitType, number>>;
   nutrientsPer100g: [number, number, number]; // fat-carb-prot
+  verified?: boolean;
 };
 
 export type Ingredient = {

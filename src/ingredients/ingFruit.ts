@@ -6,7 +6,9 @@ type IngId =
   | "raspberries"
   | "olives"
   | "raisins"
-  | "lemon_juice";
+  | "lemon_juice"
+  | "walnuts"
+  | "coconut_flakes";
 
 export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
@@ -41,7 +43,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
 
   olives: {
     name: "Oliwki",
-    type: "veg",
+    type: "frt",
     kcalPer100g: 115,
     unitWeights: {
       szt: 5,
@@ -49,7 +51,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 6, 0.8],
   },
 
-  //
+  ////////////////////////////////////
 
   raisins: {
     name: "Rodzynki",
@@ -61,7 +63,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.7, 72, 3],
   },
 
-  //
+  ////////////////////////////////////
 
   lemon_juice: {
     name: "Sok z cytryny",
@@ -72,5 +74,28 @@ export const iFRT: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 0.4, 0.1],
-  }, //
+    verified: true,
+  },
+
+  ////////////////////////////////////
+
+  walnuts: {
+    name: "Orzechy włoskie",
+    type: "nut",
+    kcalPer100g: 654,
+    unitWeights: {
+      lz: 10,
+    },
+    nutrientsPer100g: [65, 13, 15],
+  },
+
+  coconut_flakes: {
+    name: "Wiórki kokosowe",
+    type: "nut",
+    kcalPer100g: 660,
+    unitWeights: {
+      lz: 7,
+    },
+    nutrientsPer100g: [64, 24, 6],
+  },
 };

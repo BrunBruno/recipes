@@ -86,7 +86,6 @@
 
 .recipe-daily-chart {
   margin: auto;
-  margin-top: 2rem;
   width: 90%;
 }
 
@@ -98,7 +97,6 @@
   display: flex;
   justify-content: space-evenly;
   transition: opacity 0.3s 0.3s;
-  border-bottom: dashed 0.3rem #333333;
 }
 
 .recipe-param {

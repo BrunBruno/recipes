@@ -1,6 +1,6 @@
 import type { Recipe } from "./types";
 
-const modules = import.meta.glob("./data/*.ts", {
+const modules = import.meta.glob("./data/**/*.ts", {
   eager: true,
 });
 

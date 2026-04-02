@@ -6,6 +6,7 @@ type IngId =
   | "condensed_milk"
   | "yogurt_natural"
   | "greek_yogurt"
+  | "strawberry_yogurt"
   | "kefir"
   | "cream_12"
   | "cream_18"
@@ -29,7 +30,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [3.2, 4.7, 3.2],
-  }, //
+    verified: true,
+  },
 
   buttermilk: {
     name: "Maślanka",
@@ -72,6 +74,17 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5, 3.6, 9],
   },
 
+  strawberry_yogurt: {
+    name: "Jogurt truskawkowy",
+    type: "dir",
+    kcalPer100g: 90,
+    unitWeights: {
+      opak: 150,
+      szk: 250,
+    },
+    nutrientsPer100g: [2, 14, 3],
+  },
+
   kefir: {
     name: "Kefir",
     type: "dir",
@@ -83,7 +96,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.5, 4.6, 3.6],
-  }, //
+    verified: true,
+  },
 
   cream_12: {
     name: "Śmietana 12%",
@@ -116,7 +130,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [30, 3.4, 2.3],
-  }, //
+    verified: true,
+  },
 
   cream_36: {
     name: "Śmietanka 36%",
@@ -159,6 +174,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [40, 4.9, 3.4],
   },
 
+  ////////////////////////////
+
   yellow_cheese: {
     name: "Ser żółty",
     type: "che",
@@ -169,7 +186,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
-  }, //
+    verified: true,
+  },
 
   gouda_cheese: {
     name: "Ser gouda",
@@ -181,7 +199,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
-  }, //
+    verified: true,
+  },
 
   lilliputian_cheese: {
     name: "Ser Liliput",

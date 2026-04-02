@@ -7,7 +7,6 @@ import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
-import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
@@ -27,7 +26,6 @@ const allGroups = [
   { label: "Warzywa", data: iVEG },
   { label: "Owoce", data: iFRT },
   { label: "Inne", data: iOTH },
-  { label: "Sosy", data: iSAU },
   { label: "Przyprawy", data: iSPC },
 ];
 const groupedTypes = allGroups.flatMap((group) =>
@@ -97,14 +95,21 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
         return (
           <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
-              const rows = Math.ceil(items.length / columns);
+              const sortedItems = items.sort(([_, itemA], [__, itemB]) => {
+                const usageA = ingredientUsage[itemA.name] ?? 0;
+                const usageB = ingredientUsage[itemB.name] ?? 0;
+
+                if (usageB !== usageA) return usageB - usageA;
+                return itemA.name.localeCompare(itemB.name);
+              });
+
+              const rows = Math.ceil(sortedItems.length / columns);
+
               return (
                 <div key={type} className="ingredient-subgroup">
                   <h2
                     className={`ing-group-title ${openTypes[type] ? "open" : ""}`}
-                    onClick={() => {
-                      toggleType(type);
-                    }}
+                    onClick={() => toggleType(type)}
                   >
                     <UtilsIcon name={"arrow"} color={"#fff"} />
                     {IngredientTypeData[type as IngredientType].label}
@@ -113,76 +118,74 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                   <ul
                     className={`ingredient-list`}
                     style={{
-                      maxHeight: openTypes[type] ? `${rows * 200}px` : "0px",
+                      maxHeight: openTypes[type] ? `${rows * 210}px` : "0px",
                     }}
                   >
-                    {items.map(([id, item]) => {
-                      return (
-                        <li key={id} className="ingredient-card">
-                          <div className="ingredient-card-header">
-                            <span className="ingredient-name">{item.name}</span>
+                    {sortedItems.map(([id, item]) => (
+                      <li key={id} className="ingredient-card">
+                        <div className="ing-card-header">
+                          <span className="ingredient-name">{item.name}</span>
+                          {item.verified && (
+                            <UtilsIcon name="check" color="#fff" />
+                          )}
+                        </div>
+
+                        <div className="ingredient-card-content">
+                          <div className="ingredient-meta">
+                            <IngredientIcon ingType={item.type} />
+                            <span className="type">
+                              {IngredientTypeData[item.type].label}
+                            </span>
                           </div>
 
-                          <div className="ingredient-card-content">
-                            <div className="ingredient-meta">
-                              <IngredientIcon ingType={item.type} />
-                              <span className="type">
-                                {IngredientTypeData[item.type].label}
+                          <div className="kcal">
+                            <strong>{item.kcalPer100g} kcal / 100 g</strong>
+                          </div>
+
+                          {item.nutrientsPer100g && (
+                            <div className="macros">
+                              <span>
+                                T: <strong>{item.nutrientsPer100g[0]} g</strong>
+                              </span>
+                              <span>
+                                W: <strong>{item.nutrientsPer100g[1]} g</strong>
+                              </span>
+                              <span>
+                                B: <strong>{item.nutrientsPer100g[2]} g</strong>
                               </span>
                             </div>
+                          )}
 
-                            <div className="kcal">
-                              <strong>{item.kcalPer100g} kcal / 100 g</strong>
-                            </div>
-
-                            {item.nutrientsPer100g && (
-                              <div className="macros">
-                                <span>
-                                  T:{" "}
-                                  <strong>{item.nutrientsPer100g[0]} g</strong>
-                                </span>
-                                <span>
-                                  W:{" "}
-                                  <strong>{item.nutrientsPer100g[1]} g</strong>
-                                </span>
-                                <span>
-                                  B:{" "}
-                                  <strong>{item.nutrientsPer100g[2]} g</strong>
-                                </span>
-                              </div>
-                            )}
-
-                            <div className="ingredient-usage">
-                              Użyto w przepisach:{" "}
-                              <strong>{ingredientUsage[item.name] ?? 0}</strong>
-                            </div>
+                          <div className="ingredient-usage">
+                            Użyto w przepisach:{" "}
+                            <strong>{ingredientUsage[item.name] ?? 0}</strong>
                           </div>
+                        </div>
 
-                          <span className="ingredient-id">{id}</span>
+                        <span className="ingredient-id">{id}</span>
 
-                          <div className="nutrient-indicator">
-                            <div
-                              className="nutrient-fat"
-                              style={{
-                                height: `${item.nutrientsPer100g[0]}%`,
-                              }}
-                            ></div>
-                            <div
-                              className="nutrient-carb"
-                              style={{
-                                height: `${item.nutrientsPer100g[1]}%`,
-                              }}
-                            ></div>
-                            <div
-                              className="nutrient-prot"
-                              style={{
-                                height: `${item.nutrientsPer100g[2]}%`,
-                              }}
-                            ></div>
-                          </div>
-                        </li>
-                      );
-                    })}
+                        <div className="nutrient-indicator">
+                          <div
+                            className="nutrient-fat"
+                            style={{
+                              height: `${item.nutrientsPer100g[0]}%`,
+                            }}
+                          ></div>
+                          <div
+                            className="nutrient-carb"
+                            style={{
+                              height: `${item.nutrientsPer100g[1]}%`,
+                            }}
+                          ></div>
+                          <div
+                            className="nutrient-prot"
+                            style={{
+                              height: `${item.nutrientsPer100g[2]}%`,
+                            }}
+                          ></div>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               );

@@ -7,12 +7,15 @@ type IngId =
   | "couscous"
   | "semolina"
   | "bulgur"
+  | "buckwheat"
   | "fusilli_pasta"
   | "spaghetti_pasta"
   | "thin_pasta"
   | "lazanki_pasta"
   | "white_beans"
   | "gnocchi"
+  | "silesian_dumplings"
+  | "steamed_dumplings"
   | "kaiser_roll"
   | "tortilla"
   | "toast_bread"
@@ -33,7 +36,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.2, 71, 11],
-  }, //
+    verified: true,
+  },
 
   breadcrumbs: {
     name: "Bułka tarta",
@@ -43,9 +47,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [1.5, 4.4, 12],
-  }, //
-
-  //
+    verified: true,
+  },
 
   rice: {
     name: "Ryż",
@@ -56,10 +59,11 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.1, 75, 8.9],
-  }, //
+    verified: true,
+  },
 
   couscous: {
-    name: "Kuskus",
+    name: "Kasza kuskus",
     type: "grn",
     kcalPer100g: 347,
     unitWeights: {
@@ -89,6 +93,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.3, 76, 12],
   },
 
+  buckwheat: {
+    name: "Kasza gryczana",
+    type: "grn",
+    kcalPer100g: 343,
+    unitWeights: {
+      szk: 180,
+      opak: 100,
+    },
+    nutrientsPer100g: [3.4, 72, 13],
+  },
+
   fusilli_pasta: {
     name: "Makaron świderki",
     type: "grn",
@@ -97,7 +112,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [2.1, 74, 13],
-  }, //
+    verified: true,
+  },
 
   spaghetti_pasta: {
     name: "Makaron spaghetti",
@@ -107,7 +123,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.9, 72, 12],
-  }, //
+    verified: true,
+  },
 
   thin_pasta: {
     name: "Makaron nitki",
@@ -117,7 +134,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [1.2, 73, 11],
-  }, //
+    verified: true,
+  },
 
   lazanki_pasta: {
     name: "Makaron łazanki",
@@ -128,7 +146,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [1.5, 71, 12],
-  }, //
+    verified: true,
+  },
 
   white_beans: {
     name: "Fasola biała",
@@ -149,7 +168,39 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.2, 30, 3],
-  }, //
+    verified: true,
+  },
+
+  silesian_dumplings: {
+    name: "Kluski śląskie",
+    type: "grn",
+    kcalPer100g: 160,
+    unitWeights: {
+      szt: 30,
+    },
+    nutrientsPer100g: [0.5, 36, 4],
+  },
+
+  steamed_dumplings: {
+    name: "Kluski na parze",
+    type: "grn",
+    kcalPer100g: 220,
+    unitWeights: {
+      szt: 80,
+      opak: 400,
+    },
+    nutrientsPer100g: [2, 42, 6],
+  },
+
+  cornflakes: {
+    name: "Płatki kukurydziane",
+    type: "grn",
+    kcalPer100g: 383,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [1.4, 83, 7.5],
+  },
 
   //
 
@@ -184,7 +235,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       krom: 22,
     },
     nutrientsPer100g: [3.2, 50, 8.6],
-  }, //
+    verified: true,
+  },
 
   hamburger_buns: {
     name: "Bułki hamburgerowe",
@@ -215,7 +267,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szt: 70,
     },
     nutrientsPer100g: [8.3, 51, 7.7],
-  }, //
+    verified: true,
+  },
 
   french_hotdog_buns: {
     name: "Bułki do hot dogów francuskich",
@@ -225,15 +278,5 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szt: 85,
     },
     nutrientsPer100g: [8.3, 51, 7.7],
-  },
-
-  cornflakes: {
-    name: "Płatki kukurydziane",
-    type: "grn",
-    kcalPer100g: 383,
-    unitWeights: {
-      opak: 500,
-    },
-    nutrientsPer100g: [1.4, 83, 7.5],
   },
 };

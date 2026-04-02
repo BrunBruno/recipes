@@ -18,8 +18,6 @@ type IngId =
   | "instant_yeast"
   | "gelatin"
   | "food_coloring"
-  | "walnuts"
-  | "coconut_flakes"
   | "white_chocolate"
   | "dark_chocolate"
   | "chocolate_cream"
@@ -39,6 +37,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
+    verified: true,
   },
 
   sugar: {
@@ -51,7 +50,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 100, 0],
-  }, //
+    verified: true,
+  },
 
   powdered_sugar: {
     name: "Cukier puder",
@@ -216,28 +216,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   //
 
-  walnuts: {
-    name: "Orzechy włoskie",
-    type: "nut",
-    kcalPer100g: 654,
-    unitWeights: {
-      lz: 10,
-    },
-    nutrientsPer100g: [65, 13, 15],
-  },
-
-  coconut_flakes: {
-    name: "Wiórki kokosowe",
-    type: "nut",
-    kcalPer100g: 660,
-    unitWeights: {
-      lz: 7,
-    },
-    nutrientsPer100g: [64, 24, 6],
-  },
-
-  //
-
   white_chocolate: {
     name: "Biała czekolada",
     type: "oth",
@@ -257,7 +235,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 100,
     },
     nutrientsPer100g: [45, 18, 11],
-  }, //
+    verified: true,
+  },
 
   chocolate_cream: {
     name: "Krem czekoladowy",
@@ -267,7 +246,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [34, 56.8, 2.9],
-  }, //
+    verified: true,
+  },
 
   cheese_snacks: {
     name: "Chrupki serowe",
@@ -277,7 +257,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 130,
     },
     nutrientsPer100g: [28, 58, 5.8],
-  }, //
+    verified: true,
+  },
 
   ladyfingers: {
     name: "Biszkopty",

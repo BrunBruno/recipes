@@ -4,7 +4,6 @@ import { iFRT } from "./ingredients/ingFruit";
 import { iGRN } from "./ingredients/ingGrain";
 import { iMET } from "./ingredients/ingMeat";
 import { iOTH } from "./ingredients/ingOther";
-import { iSAU } from "./ingredients/ingSauce";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type {
@@ -24,7 +23,6 @@ export const ingredientCollections = [
   iGRN,
   iMET,
   iOTH,
-  iSAU,
   iSPC,
   iVEG,
 ];
@@ -42,27 +40,43 @@ export const MealTypesData: Record<MealType, DictRecord> = {
   salad: { label: "Sałatka", color: "#ae3ec9" },
   other: { label: "Inne", color: "#f76707" },
 };
-
 export const IngredientTypeData: Record<IngredientType, DictRecord> = {
+  // iMET
   met: { label: "Mięso", color: "#f03e3e" },
+  pou: { label: "Drób", color: "#f03e3e" },
   fsh: { label: "Ryby", color: "#1c7ed6" },
-  dir: { label: "Nabiał", color: "#ffffff" },
-  fat: { label: "Tłuszcze", color: "#fcc419" },
-  veg: { label: "Warzywa", color: "#40c057" },
-  frt: { label: "Owoce", color: "#40c057" },
-  grn: { label: "Zboża", color: "#fcc419" },
-  spc: { label: "Przyprawy", color: "#adb5bd" },
-  sau: { label: "Sosy", color: "#f03e3e" },
   egg: { label: "Jajka", color: "#ffec99" },
+
+  // iDIR
+  dir: { label: "Nabiał", color: "#ffffff" },
   che: { label: "Sery", color: "#fcc419" },
-  wat: { label: "Woda", color: "#1c7ed6" },
+
+  // iFAT
+  fat: { label: "Tłuszcze", color: "#fcc419" },
+
+  // iVEG
+  veg: { label: "Warzywa", color: "#40c057" },
+  gee: { label: "Zielenina", color: "#40c057" },
+  jar: { label: "Przetwory", color: "#40c057" },
   msh: { label: "Grzyby", color: "#ced4da" },
   pot: { label: "Ziemniaki", color: "#b79268" },
+
+  // iFRT
+  frt: { label: "Owoce", color: "#40c057" },
   nut: { label: "Orzechy", color: "#b79268" },
-  hrb: { label: "Zioła", color: "#40c057" },
-  jar: { label: "Przetwory", color: "#40c057" },
-  sug: { label: "Cukry", color: "#ffffff" },
+
+  // iGRN
+  grn: { label: "Zboża", color: "#fcc419" },
   bun: { label: "Pieczywo", color: "#b79268" },
+
+  // iSPC
+  spc: { label: "Przyprawy", color: "#adb5bd" },
+  hrb: { label: "Zioła", color: "#40c057" },
+  sau: { label: "Sosy", color: "#f03e3e" },
+
+  // iOTH
+  wat: { label: "Woda", color: "#1c7ed6" },
+  sug: { label: "Cukry", color: "#ffffff" },
   oth: { label: "Inne", color: "#ced4da" },
 };
 
@@ -357,25 +371,42 @@ export const countRecipesTypes = (recipes: Recipe[]) => {
 
 export const countIngredientTypes = () => {
   const usage: Record<IngredientType, number> = {
+    // iMET
     met: 0,
+    pou: 0,
     fsh: 0,
-    dir: 0,
-    fat: 0,
-    veg: 0,
-    frt: 0,
-    grn: 0,
-    spc: 0,
-    sau: 0,
     egg: 0,
+
+    // iDIR
+    dir: 0,
     che: 0,
-    wat: 0,
+
+    // iFAT
+    fat: 0,
+
+    // iVEG
+    veg: 0,
+    gee: 0,
+    jar: 0,
     msh: 0,
     pot: 0,
+
+    // iFRT
+    frt: 0,
     nut: 0,
-    hrb: 0,
-    jar: 0,
-    sug: 0,
+
+    // iGRN
+    grn: 0,
     bun: 0,
+
+    // iSPC
+    spc: 0,
+    hrb: 0,
+    sau: 0,
+
+    // iOTH
+    wat: 0,
+    sug: 0,
     oth: 0,
   };
 
@@ -386,7 +417,6 @@ export const countIngredientTypes = () => {
     iGRN,
     iMET,
     iOTH,
-    iSAU,
     iSPC,
     iVEG,
   ];
@@ -454,7 +484,10 @@ export const formatUnit = (ingredient: Ingredient): string => {
     singular: string,
     dual: string,
     plural: string,
+    fraction: string,
   ) => {
+    if (!Number.isInteger(n)) return fraction;
+
     const n10 = n % 10;
     const n100 = n % 100;
     if (n === 1) return singular;
@@ -464,29 +497,29 @@ export const formatUnit = (ingredient: Ingredient): string => {
 
   switch (unit) {
     case "szt":
-      return ` ${pluralize(count, "sztuka", "sztuki", "sztuk")}`;
+      return ` ${pluralize(count, "sztuka", "sztuki", "sztuk", "sztuki")}`;
     case "lz":
-      return ` ${pluralize(count, "łyżka", "łyżki", "łyżek")}`;
+      return ` ${pluralize(count, "łyżka", "łyżki", "łyżek", "łyżki")}`;
     case "lzi":
-      return ` ${pluralize(count, "łyżeczka", "łyżeczki", "łyżeczek")}`;
+      return ` ${pluralize(count, "łyżeczka", "łyżeczki", "łyżeczek", "łyżeczki")}`;
     case "szk":
-      return ` ${pluralize(count, "szklanka", "szklanki", "szklanek")}`;
+      return ` ${pluralize(count, "szklanka", "szklanki", "szklanek", "szklanki")}`;
     case "opak":
-      return ` ${pluralize(count, "opakowanie", "opakowania", "opakowań")}`;
+      return ` ${pluralize(count, "opakowanie", "opakowania", "opakowań", "opakowania")}`;
     case "kst":
-      return ` ${pluralize(count, "kostka", "kostki", "kostek")}`;
+      return ` ${pluralize(count, "kostka", "kostki", "kostek", "kostki")}`;
     case "plas":
-      return ` ${pluralize(count, "plaster", "plastry", "plastrów")}`;
+      return ` ${pluralize(count, "plaster", "plastry", "plastrów", "plastra")}`;
     case "krom":
-      return ` ${pluralize(count, "kromka", "kromki", "kromek")}`;
+      return ` ${pluralize(count, "kromka", "kromki", "kromek", "kromki")}`;
     case "zbk":
-      return ` ${pluralize(count, "ząbek", "ząbki", "ząbków")}`;
+      return ` ${pluralize(count, "ząbek", "ząbki", "ząbków", "ząbka")}`;
     case "lst":
-      return ` ${pluralize(count, "listek", "listki", "lst")}`;
+      return ` ${pluralize(count, "listek", "listki", "listków", "listka")}`;
     case "ziar":
-      return ` ${pluralize(count, "ziarno", "ziarna", "ziaren")}`;
+      return ` ${pluralize(count, "ziarno", "ziarna", "ziaren", "ziarna")}`;
     case "peto":
-      return ` ${pluralize(count, "pęto", "pęta", "pęt")}`;
+      return ` ${pluralize(count, "pęto", "pęta", "pęt", "pęta")}`;
     default:
       return ` ${unit}`;
   }

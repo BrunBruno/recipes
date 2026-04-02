@@ -111,6 +111,9 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
           legend: {
             display: false,
           },
+          datalabels: {
+            display: false,
+          },
           tooltip: {
             callbacks: {
               title: (tooltipItems) => tooltipItems[0].label,

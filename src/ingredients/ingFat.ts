@@ -32,7 +32,8 @@ export const iFAT: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [99.8, 0, 0],
-  }, //
+    verified: true,
+  },
 
   oil: {
     name: "Olej",

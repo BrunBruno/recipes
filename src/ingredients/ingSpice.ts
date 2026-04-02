@@ -33,7 +33,18 @@ type IngId =
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
   | "knorr_chinese_fix"
-  | "knorr_bolognese_fix";
+  | "knorr_bolognese_fix"
+  | "ketchup"
+  | "mustard"
+  | "sarepska_mustard"
+  | "mayonnaise"
+  | "garlic_sauce"
+  | "sriracha"
+  | "barbecue_sauce"
+  | "curry_sauce"
+  | "tomato_paste"
+  | "sweet_sour_sauce"
+  | "sechuan_chili_fusion";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   salt: {
@@ -177,7 +188,95 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [22, 44, 18],
   },
 
-  //
+  ///////////////////////////////////////
+
+  maggi: {
+    name: "Maggi",
+    type: "spc",
+    kcalPer100g: 16,
+    unitWeights: {
+      ml: 1,
+      lz: 15,
+    },
+    nutrientsPer100g: [0, 3, 1],
+  },
+
+  vegetable_seasoning: {
+    name: "Jarzynka",
+    type: "spc",
+    kcalPer100g: 200,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [1, 40, 5],
+  },
+
+  potato_seasoning: {
+    name: "Przyprawa do ziemniaków",
+    type: "spc",
+    kcalPer100g: 250,
+    unitWeights: {
+      lz: 10,
+      lzi: 5,
+    },
+    nutrientsPer100g: [5, 45, 8],
+  },
+
+  gyros_spice: {
+    name: "Przyprawa gyros",
+    type: "spc",
+    kcalPer100g: 280,
+    unitWeights: {
+      lz: 10,
+      lzi: 3,
+    },
+    nutrientsPer100g: [8, 45, 8],
+  },
+
+  knorr_bouillon_cube: {
+    name: "Kostka rosołowa Knorr",
+    type: "spc",
+    kcalPer100g: 6,
+    unitWeights: {
+      opak: 120,
+      szt: 10,
+    },
+    nutrientsPer100g: [0.5, 0.5, 0.5],
+  },
+
+  knorr_goulash_fix: {
+    name: "Fix Knorr gulasz węgierski",
+    type: "spc",
+    kcalPer100g: 92,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [4.6, 2.6, 9.8],
+    verified: true,
+  },
+
+  knorr_chinese_fix: {
+    name: "Fix Knorr do dań po chińsku",
+    type: "spc",
+    kcalPer100g: 250,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [3, 50, 8],
+  },
+
+  knorr_bolognese_fix: {
+    name: "Fix Knorr Bolognese",
+    type: "spc",
+    kcalPer100g: 141,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [3.8, 18, 8.1],
+    verified: true,
+  },
+
+  ///////////////////////////////////////
 
   dill: {
     name: "Koperek",
@@ -300,89 +399,135 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [18, 55, 12],
   },
 
-  //
+  ///////////////////////////////////////
 
-  maggi: {
-    name: "Maggi",
-    type: "spc",
-    kcalPer100g: 16,
+  ketchup: {
+    name: "Ketchup",
+    type: "sau",
+    kcalPer100g: 109,
     unitWeights: {
-      ml: 1,
       lz: 15,
-    },
-    nutrientsPer100g: [0, 3, 1],
-  },
-
-  vegetable_seasoning: {
-    name: "Jarzynka",
-    type: "spc",
-    kcalPer100g: 200,
-    unitWeights: {
-      lzi: 3,
-    },
-    nutrientsPer100g: [1, 40, 5],
-  },
-
-  potato_seasoning: {
-    name: "Przyprawa do ziemniaków",
-    type: "spc",
-    kcalPer100g: 250,
-    unitWeights: {
-      lz: 10,
       lzi: 5,
     },
-    nutrientsPer100g: [5, 45, 8],
+    nutrientsPer100g: [0, 25, 1.7],
+    verified: true,
   },
 
-  gyros_spice: {
-    name: "Przyprawa gyros",
-    type: "spc",
-    kcalPer100g: 280,
+  mustard: {
+    name: "Musztarda",
+    type: "sau",
+    kcalPer100g: 96,
     unitWeights: {
-      lz: 10,
-      lzi: 3,
+      lz: 15,
+      lzi: 5,
     },
-    nutrientsPer100g: [8, 45, 8],
+    nutrientsPer100g: [5.5, 3.1, 5.2],
+    verified: true,
   },
 
-  knorr_bouillon_cube: {
-    name: "Kostka rosołowa Knorr",
-    type: "spc",
-    kcalPer100g: 6,
+  sarepska_mustard: {
+    name: "Musztarda sarepska",
+    type: "sau",
+    kcalPer100g: 101,
     unitWeights: {
-      opak: 120,
-      szt: 10,
+      lz: 15,
+      lzi: 5,
     },
-    nutrientsPer100g: [0.5, 0.5, 0.5],
+    nutrientsPer100g: [5.1, 8.3, 3.7],
+    verified: true,
   },
 
-  knorr_goulash_fix: {
-    name: "Fix Knorr gulasz węgierski",
-    type: "spc",
-    kcalPer100g: 92,
+  mayonnaise: {
+    name: "Majonez",
+    type: "sau",
+    kcalPer100g: 631,
     unitWeights: {
-      opak: 40,
+      lz: 15,
+      lzi: 5,
+      opak: 500,
     },
-    nutrientsPer100g: [4.6, 2.6, 9.8],
-  }, //
-
-  knorr_chinese_fix: {
-    name: "Fix Knorr do dań po chińsku",
-    type: "spc",
-    kcalPer100g: 250,
-    unitWeights: {
-      opak: 40,
-    },
-    nutrientsPer100g: [3, 50, 8],
+    nutrientsPer100g: [68, 2.3, 1.9],
+    verified: true,
   },
 
-  knorr_bolognese_fix: {
-    name: "Fix Knorr Bolognese",
-    type: "spc",
-    kcalPer100g: 141,
+  garlic_sauce: {
+    name: "Sos czosnkowy",
+    type: "sau",
+    kcalPer100g: 371,
     unitWeights: {
-      opak: 40,
+      lz: 15,
+      lzi: 5,
     },
-    nutrientsPer100g: [3.8, 18, 8.1],
-  }, //
+    nutrientsPer100g: [35, 11, 1.9],
+    verified: true,
+  },
+
+  sriracha: {
+    name: "Sos sriracha",
+    type: "sau",
+    kcalPer100g: 87,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0.5, 19, 1.6],
+    verified: true,
+  },
+
+  barbecue_sauce: {
+    name: "Sos barbecue",
+    type: "sau",
+    kcalPer100g: 142,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0.2, 34, 0.8],
+    verified: true,
+  },
+
+  curry_sauce: {
+    name: "Sos curry",
+    type: "sau",
+    kcalPer100g: 328,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [28, 18, 1.6],
+    verified: true,
+  },
+
+  tomato_paste: {
+    name: "Koncentrat pomidorowy",
+    type: "sau",
+    kcalPer100g: 82,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0.3, 18, 4],
+  },
+
+  ///////////////////////////////////////
+
+  sweet_sour_sauce: {
+    name: "Sos słodko-kwaśny",
+    type: "sau",
+    kcalPer100g: 120,
+    unitWeights: {
+      opak: 250,
+    },
+    nutrientsPer100g: [2, 24, 1],
+  },
+
+  sechuan_chili_fusion: {
+    name: "Seczuański chili fusion",
+    type: "sau",
+    kcalPer100g: 71,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [0, 18, 1],
+  },
 };
