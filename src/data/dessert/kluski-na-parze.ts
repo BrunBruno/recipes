@@ -3,7 +3,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
 
 const kluskiNaParze: Recipe = {
-  name: "Kluski na Parze z Jogurtem Truskawkowym",
+  name: "Kluski na Parze",
   description:
     "Delikatne kluski na parze podane z jogurtem truskawkowym. Prosty i szybki deser lub słodki posiłek.",
   type: "dessert",

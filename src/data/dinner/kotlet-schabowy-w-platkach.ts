@@ -7,7 +7,7 @@ import type { Recipe } from "../../types";
 
 const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
-  name: "Kotlety Schabowe w Płatkach",
+  name: "Kotlety w Płatkach",
   description:
     "Kotlety schabowe w płatkach kukurydzianych - panierowane w jajku i chrupiących płatkach, smażone na złoty kolor, podawane z frytkami i buraczkami w occie.",
   type: "dinner",

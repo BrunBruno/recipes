@@ -11,7 +11,7 @@ const pancakes: Recipe = {
   description:
     "Puszyste pancakes z maślanką i jajkiem, smażone na patelni, idealne na deser lub słodkie śniadanie, podawane z syropem lub cukrem pudrem.",
   type: "dessert",
-  images: ["pancakes.jpg"],
+  images: ["pancakes.jpg", "pancakes-2.jpg"],
   time: 30,
   portions: 3,
   ingredients: [

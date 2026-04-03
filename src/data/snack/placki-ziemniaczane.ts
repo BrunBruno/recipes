@@ -11,7 +11,7 @@ const plackiZiemniaczane: Recipe = {
   description:
     "Klasyczne polskie placki ziemniaczane - chrupiące na zewnątrz, miękkie w środku, podawane na śniadanie lub kolację. Idealne z dodatkiem śmietany lub sosu jabłkowego.",
   type: "snack",
-  images: [""],
+  images: ["placki-ziemniaczane.jpg"],
   time: 30,
   portions: 2,
   ingredients: [
