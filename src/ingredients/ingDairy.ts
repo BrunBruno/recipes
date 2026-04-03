@@ -77,6 +77,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   strawberry_yogurt: {
     name: "Jogurt truskawkowy",
     type: "dir",
+    color: "#fa5252",
     kcalPer100g: 90,
     unitWeights: {
       opak: 150,
@@ -178,7 +179,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   yellow_cheese: {
     name: "Ser żółty",
-    type: "che",
+    type: "dir",
+    subType: "che",
+    color: "#fcc419",
     kcalPer100g: 338,
     unitWeights: {
       plas: 20,
@@ -191,7 +194,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   gouda_cheese: {
     name: "Ser gouda",
-    type: "che",
+    type: "dir",
+    subType: "che",
+    color: "#fcc419",
     kcalPer100g: 338,
     unitWeights: {
       plas: 20,
@@ -204,7 +209,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   lilliputian_cheese: {
     name: "Ser Liliput",
-    type: "che",
+    type: "dir",
+    subType: "che",
+    color: "#fcc419",
     kcalPer100g: 343,
     unitWeights: {
       opak: 350,
@@ -215,7 +222,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   parmigiano_reggiano: {
     name: "Ser Parmigiano Reggiano",
-    type: "che",
+    type: "dir",
+    subType: "che",
+    color: "#fcc419",
     kcalPer100g: 402,
     unitWeights: {
       plas: 10,

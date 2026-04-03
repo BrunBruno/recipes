@@ -28,7 +28,9 @@ type IngId =
 export const iOTH: Record<IngId, IngredientItem> = {
   water: {
     name: "Woda",
-    type: "wat",
+    type: "oth",
+    subType: "wat",
+    color: "#1c7ed6",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
@@ -42,7 +44,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   sugar: {
     name: "Cukier",
-    type: "sug",
+    type: "oth",
+    subType: "sug",
+    color: "#ffffff",
     kcalPer100g: 400,
     unitWeights: {
       lzi: 4,
@@ -55,7 +59,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   powdered_sugar: {
     name: "Cukier puder",
-    type: "sug",
+    type: "oth",
+    subType: "sug",
+    color: "#ffffff",
     kcalPer100g: 400,
     unitWeights: {
       lzi: 4,
@@ -67,7 +73,9 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   vanilla_sugar: {
     name: "Cukier wanilinowy",
-    type: "sug",
+    type: "oth",
+    subType: "sug",
+    color: "#ffffff",
     kcalPer100g: 394,
     unitWeights: {
       lz: 12,
@@ -79,23 +87,14 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   honey: {
     name: "Miód",
-    type: "sug",
+    type: "oth",
+    subType: "hon",
+    color: "#fcc419",
     kcalPer100g: 304,
     unitWeights: {
       lzi: 7,
     },
     nutrientsPer100g: [0, 82, 0.3],
-  },
-
-  cocoa: {
-    name: "Kakao",
-    type: "oth",
-    kcalPer100g: 228,
-    unitWeights: {
-      lz: 7.5,
-      lzi: 2.5,
-    },
-    nutrientsPer100g: [13, 20, 20],
   },
 
   vanilla_extract: {
@@ -109,9 +108,24 @@ export const iOTH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 12, 0],
   },
 
+  cocoa: {
+    name: "Kakao",
+    type: "oth",
+    subType: "cof",
+    color: "#6F4E37",
+    kcalPer100g: 228,
+    unitWeights: {
+      lz: 7.5,
+      lzi: 2.5,
+    },
+    nutrientsPer100g: [13, 20, 20],
+  },
+
   coffee: {
     name: "Kawa",
     type: "oth",
+    subType: "cof",
+    color: "#6F4E37",
     kcalPer100g: 2,
     unitWeights: {
       lz: 5,
@@ -122,6 +136,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   grain_coffee: {
     name: "Kawa zbożowa",
     type: "oth",
+    subType: "cof",
+    color: "#6F4E37",
     kcalPer100g: 360,
     unitWeights: {
       lz: 6,
@@ -163,6 +179,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   spirit: {
     name: "Spirytus",
     type: "oth",
+    subType: "wat",
+    color: "#ffffff",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,

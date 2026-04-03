@@ -43,41 +43,11 @@ type IngId =
   | "burger_patties";
 
 export const iMET: Record<IngId, IngredientItem> = {
-  egg: {
-    name: "Jajko",
-    type: "egg",
-    kcalPer100g: 151,
-    unitWeights: {
-      szt: 60,
-    },
-    nutrientsPer100g: [10.9, 0.9, 12.4],
-  },
-
-  egg_yolk: {
-    name: "Żółtko",
-    type: "egg",
-    kcalPer100g: 322,
-    unitWeights: {
-      szt: 17,
-    },
-    nutrientsPer100g: [16, 0.6, 16],
-  },
-
-  egg_white: {
-    name: "Białko",
-    type: "egg",
-    kcalPer100g: 52,
-    unitWeights: {
-      szt: 43,
-    },
-    nutrientsPer100g: [0.2, 0.7, 10.9],
-  },
-
-  //////////////////////////////
-
   chicken_breast: {
     name: "Pierś z kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 164,
     unitWeights: {
       opak: 400,
@@ -87,7 +57,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_quarters: {
     name: "Ćwiartka kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 190,
     unitWeights: {
       szt: 250,
@@ -98,7 +70,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_drums: {
     name: "Pałki z kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 190,
     unitWeights: {
       opak: 500,
@@ -108,7 +82,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_thigh: {
     name: "Udo kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 215,
     unitWeights: {
       opak: 500,
@@ -116,19 +92,11 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [15, 0, 17],
   },
 
-  poultry_liver: {
-    name: "Wątroba drobiowa",
-    type: "pou",
-    kcalPer100g: 119,
-    unitWeights: {
-      opak: 450,
-    },
-    nutrientsPer100g: [4.8, 1.5, 17],
-  },
-
   chicken_whole: {
     name: "Kurczak cały",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 165,
     unitWeights: {
       szt: 1200,
@@ -138,7 +106,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_soup_portion: {
     name: "Porcja rosołowa z kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 190,
     unitWeights: {
       szt: 400,
@@ -148,7 +118,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   ground_chicken: {
     name: "Mięso mielone z kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#faa2c1",
     kcalPer100g: 143,
     unitWeights: {
       opak: 400,
@@ -156,11 +128,25 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [17, 0, 8],
   },
 
+  poultry_liver: {
+    name: "Wątroba drobiowa",
+    type: "met",
+    subType: "pou",
+    color: "#a61e4d",
+    kcalPer100g: 119,
+    unitWeights: {
+      opak: 450,
+    },
+    nutrientsPer100g: [4.8, 1.5, 17],
+  },
+
   //////////////////////////////
 
   turkey_breast: {
     name: "Pierś z indyka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#f06595",
     kcalPer100g: 135,
     unitWeights: {
       opak: 600,
@@ -171,7 +157,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   turkey_wing: {
     name: "Skrzydło z indyka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#f06595",
     kcalPer100g: 203,
     unitWeights: {
       szt: 300,
@@ -181,7 +169,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   turkey_neck: {
     name: "Szyja z indyka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#f06595",
     kcalPer100g: 170,
     unitWeights: {
       szt: 250,
@@ -193,7 +183,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   spicy_tenderloins: {
     name: "Pikantne polędwiczki",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#f76707",
     kcalPer100g: 178,
     unitWeights: {
       opak: 400,
@@ -203,7 +195,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   chicken_nuggets: {
     name: "Nuggetsy z kurczaka",
-    type: "pou",
+    type: "met",
+    subType: "pou",
+    color: "#f76707",
     kcalPer100g: 212,
     unitWeights: {
       opak: 300,
@@ -216,6 +210,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_loin: {
     name: "Schab",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 190,
     unitWeights: {
       plas: 72,
@@ -227,6 +222,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_neck: {
     name: "Karkówka",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 250,
     unitWeights: {
       plas: 100,
@@ -238,6 +234,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_ham: {
     name: "Szynka ze schabu",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 145,
     unitWeights: {
       opak: 500,
@@ -248,6 +245,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   ground_pork: {
     name: "Mięso mielone wieprzowe",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 263,
     unitWeights: {
       opak: 400,
@@ -258,6 +256,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   stew_pork: {
     name: "Mięso wieprzowe na gulasz",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 242,
     unitWeights: {
       opak: 500,
@@ -268,6 +267,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_tenderloin: {
     name: "Polędwica wieprzowa",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 143,
     unitWeights: {
       plas: 60,
@@ -279,6 +279,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_rib: {
     name: "Żeberko wieprzowe",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 291,
     unitWeights: {
       szt: 80,
@@ -289,6 +290,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   pork_shoulder: {
     name: "Łopatka wieprzowa",
     type: "met",
+    color: "#f06595",
     kcalPer100g: 250,
     unitWeights: {},
     nutrientsPer100g: [20, 0, 17],
@@ -299,6 +301,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   stew_beef: {
     name: "Mięso wołowe na gulasz",
     type: "met",
+    color: "#c92a2a",
     kcalPer100g: 215,
     unitWeights: {
       opak: 500,
@@ -309,6 +312,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   ground_beef: {
     name: "Mięso mielone wołowe",
     type: "met",
+    color: "#c92a2a",
     kcalPer100g: 250,
     unitWeights: {
       opak: 400,
@@ -319,6 +323,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   beef_steak: {
     name: "Stek wołowy",
     type: "met",
+    color: "#c92a2a",
     kcalPer100g: 250,
     unitWeights: {
       szt: 200,
@@ -343,6 +348,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   salami: {
     name: "Salami",
     type: "met",
+    color: "#a61e4d",
     kcalPer100g: 413,
     unitWeights: {
       plas: 10,
@@ -355,6 +361,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   bacon_slices: {
     name: "Boczek w plastrach",
     type: "met",
+    subType: "bac",
     kcalPer100g: 518,
     unitWeights: {
       plas: 15,
@@ -366,6 +373,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   bacon_block: {
     name: "Boczek w kostce",
     type: "met",
+    subType: "bac",
     kcalPer100g: 518,
     unitWeights: {
       opak: 250,
@@ -376,6 +384,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausage: {
     name: "Kiełbasa",
     type: "met",
+    subType: "sau",
     kcalPer100g: 227,
     unitWeights: {
       peto: 100,
@@ -387,6 +396,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages: {
     name: "Parówki",
     type: "met",
+    subType: "sau",
     kcalPer100g: 252,
     unitWeights: {
       szt: 50,
@@ -398,12 +408,25 @@ export const iMET: Record<IngId, IngredientItem> = {
   meat_spread: {
     name: "Pasztet",
     type: "met",
+    color: "#b79268",
     kcalPer100g: 187,
     unitWeights: {
       opak: 131,
     },
     nutrientsPer100g: [14, 6.7, 1.4],
     verified: true,
+  },
+
+  burger_patties: {
+    name: "Kotleciki hamburgerowe",
+    type: "met",
+    color: "#b79268",
+    kcalPer100g: 255,
+    unitWeights: {
+      szt: 50,
+      opak: 250,
+    },
+    nutrientsPer100g: [20, 3, 17],
   },
 
   pork_knuckle_ready: {
@@ -416,22 +439,13 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [24, 0, 20],
   },
 
-  burger_patties: {
-    name: "Kotleciki hamburgerowe",
-    type: "met",
-    kcalPer100g: 255,
-    unitWeights: {
-      szt: 50,
-      opak: 250,
-    },
-    nutrientsPer100g: [20, 3, 17],
-  },
-
   //////////////////////////////
 
   canned_tuna: {
     name: "Tuńczyk w sosie własnym",
-    type: "fsh",
+    type: "met",
+    subType: "fsh",
+    color: "#b79268",
     kcalPer100g: 120,
     unitWeights: {
       opak: 160,
@@ -441,7 +455,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   smoked_salmon: {
     name: "Łosoś wędzony",
-    type: "fsh",
+    type: "met",
+    subType: "fsh",
+    color: "#d6336c",
     kcalPer100g: 117,
     unitWeights: {
       opak: 100,
@@ -452,7 +468,9 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   smoked_mackerel: {
     name: "Makrela wędzona",
-    type: "fsh",
+    type: "met",
+    subType: "fsh",
+    color: "#b79268",
     kcalPer100g: 305,
     unitWeights: {
       szt: 300,
@@ -462,11 +480,51 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   fish_sticks: {
     name: "Paluszki rybne",
-    type: "fsh",
+    type: "met",
+    subType: "fsh",
+    color: "#f76707",
     kcalPer100g: 220,
     unitWeights: {
       szt: 30,
     },
     nutrientsPer100g: [12, 10, 13],
+  },
+
+  //////////////////////////////
+
+  egg: {
+    name: "Jajko",
+    type: "met",
+    subType: "egg",
+    color: "#ffec99",
+    kcalPer100g: 151,
+    unitWeights: {
+      szt: 60,
+    },
+    nutrientsPer100g: [10.9, 0.9, 12.4],
+  },
+
+  egg_yolk: {
+    name: "Żółtko",
+    type: "met",
+    subType: "egg",
+    color: "#fcc419",
+    kcalPer100g: 322,
+    unitWeights: {
+      szt: 17,
+    },
+    nutrientsPer100g: [16, 0.6, 16],
+  },
+
+  egg_white: {
+    name: "Białko",
+    type: "met",
+    subType: "egg",
+    color: "#ffffff",
+    kcalPer100g: 52,
+    unitWeights: {
+      szt: 43,
+    },
+    nutrientsPer100g: [0.2, 0.7, 10.9],
   },
 };

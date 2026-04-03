@@ -9,43 +9,14 @@ export type MealType =
   | "other";
 
 export type IngredientType =
-  // iMET
-  | "met" // meat
-  | "pou" // drób
-  | "fsh" // fish
-  | "egg" // eggs
-
-  // iDIR
-  | "dir" // diary
-  | "che" // cheese
-
-  // iFAT
-  | "fat" // fats
-
-  // iVEG
-  | "veg" // vegetables
-  | "gee" // greens
-  | "jar" // preserves
-  | "msh" // mushroom
-  | "pot" // potatoes
-
-  // iFRT
-  | "frt" // fruits
-  | "nut" // orzechy
-
-  // iGRN
-  | "grn" // grains
-  | "bun" // baking
-
-  // iSPC
+  | "met" // meats / fishes / eggs
+  | "dir" // diary / cheese
+  | "fat" // fats / butter
+  | "veg" // vegetables / greens / fresh herbs / mushrooms
+  | "frt" // fruits / nuts
+  | "grn" // grains / bakery
   | "spc" // spices
-  | "hrb" // herbs
-  | "sau" // sauces
-
-  // iOTH
-  | "wat" // water
-  | "sug" // sugars
-  | "oth";
+  | "oth"; // other / sugars / water
 
 export type UnitType =
   | "g"
@@ -90,6 +61,8 @@ export type KeyWord =
 export type IngredientItem = {
   name: string;
   type: IngredientType;
+  subType?: string;
+  color?: string;
   kcalPer100g: number;
   unitWeights?: Partial<Record<UnitType, number>>;
   nutrientsPer100g: [number, number, number]; // fat-carb-prot

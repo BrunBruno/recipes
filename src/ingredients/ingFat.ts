@@ -13,6 +13,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   butter: {
     name: "Masło",
     type: "fat",
+    subType: "but",
     kcalPer100g: 744,
     unitWeights: {
       kst: 200,
@@ -25,6 +26,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   clarified_butter: {
     name: "Masło klarowane",
     type: "fat",
+    subType: "but",
     kcalPer100g: 898,
     unitWeights: {
       lzi: 5,
@@ -51,6 +53,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   olive: {
     name: "Oliwa",
     type: "fat",
+    color: "#808000",
     kcalPer100g: 884,
     unitWeights: {
       lz: 10,
@@ -64,6 +67,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   margarine: {
     name: "Margaryna",
     type: "fat",
+    subType: "but",
     kcalPer100g: 657,
     unitWeights: {
       lzi: 5,
@@ -76,6 +80,8 @@ export const iFAT: Record<IngId, IngredientItem> = {
   lard: {
     name: "Słonina",
     type: "fat",
+    subType: "but",
+    color: "#ffffff",
     kcalPer100g: 818,
     unitWeights: {
       lzi: 5,
@@ -89,6 +95,8 @@ export const iFAT: Record<IngId, IngredientItem> = {
   rendered_lard: {
     name: "Smalec",
     type: "fat",
+    subType: "but",
+    color: "#ffffff",
     kcalPer100g: 900,
     unitWeights: {
       lzi: 5,

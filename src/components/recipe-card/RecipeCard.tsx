@@ -152,8 +152,6 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
     kcal: number,
     nutrients: [string, string, string],
   ) => {
-    
-
     const values = [kcal];
     for (let nut in nutrients) {
       values.push(parseFloat(nutrients[nut]));
@@ -339,6 +337,8 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                             <div className="ingredient-indicator">
                               <IngredientIcon
                                 ingType={ingredient.ingredient.type}
+                                subType={ingredient.ingredient.subType}
+                                color={ingredient.ingredient.color}
                               />
                             </div>
                             <span className="ingredient-name">

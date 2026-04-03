@@ -25,8 +25,8 @@ const allGroups = [
   { label: "Tłuszcze", data: iFAT },
   { label: "Warzywa", data: iVEG },
   { label: "Owoce", data: iFRT },
-  { label: "Inne", data: iOTH },
   { label: "Przyprawy", data: iSPC },
+  { label: "Inne", data: iOTH },
 ];
 const groupedTypes = allGroups.flatMap((group) =>
   Object.values(group.data).map((item) => item.type),
@@ -95,12 +95,12 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
         return (
           <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
+              // const sortedItems = items;
               const sortedItems = items.sort(([_, itemA], [__, itemB]) => {
                 const usageA = ingredientUsage[itemA.name] ?? 0;
                 const usageB = ingredientUsage[itemB.name] ?? 0;
 
-                if (usageB !== usageA) return usageB - usageA;
-                return itemA.name.localeCompare(itemB.name);
+                return usageB - usageA;
               });
 
               const rows = Math.ceil(sortedItems.length / columns);
@@ -132,7 +132,11 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
 
                         <div className="ingredient-card-content">
                           <div className="ingredient-meta">
-                            <IngredientIcon ingType={item.type} />
+                            <IngredientIcon
+                              ingType={item.type}
+                              subType={item.subType}
+                              color={item.color}
+                            />
                             <span className="type">
                               {IngredientTypeData[item.type].label}
                             </span>

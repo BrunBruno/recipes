@@ -14,6 +14,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
     name: "Jabłko",
     type: "frt",
+    color: "#f03e3e",
     kcalPer100g: 52,
     unitWeights: {
       szt: 150,
@@ -24,6 +25,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   pineapple: {
     name: "Ananas",
     type: "frt",
+    subType: "ana",
+    color: "#fcc419",
     kcalPer100g: 50,
     unitWeights: {
       plas: 80,
@@ -34,6 +37,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   raspberries: {
     name: "Maliny",
     type: "frt",
+    subType: "rbr",
+    color: "#a61e4d",
     kcalPer100g: 52,
     unitWeights: {
       szk: 125,
@@ -44,6 +49,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   olives: {
     name: "Oliwki",
     type: "frt",
+    subType: "oli",
+    color: "#808000",
     kcalPer100g: 115,
     unitWeights: {
       szt: 5,
@@ -56,6 +63,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   raisins: {
     name: "Rodzynki",
     type: "frt",
+    subType: "alm",
+    color: "#a61e4d",
     kcalPer100g: 314,
     unitWeights: {
       lz: 10,
@@ -68,6 +77,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   lemon_juice: {
     name: "Sok z cytryny",
     type: "frt",
+    subType: "jui",
+    color: "#fcc419",
     kcalPer100g: 21,
     unitWeights: {
       ml: 1,
@@ -81,7 +92,9 @@ export const iFRT: Record<IngId, IngredientItem> = {
 
   walnuts: {
     name: "Orzechy włoskie",
-    type: "nut",
+    type: "frt",
+    subType: "nut",
+    color: "#b79268",
     kcalPer100g: 654,
     unitWeights: {
       lz: 10,
@@ -91,7 +104,9 @@ export const iFRT: Record<IngId, IngredientItem> = {
 
   coconut_flakes: {
     name: "Wiórki kokosowe",
-    type: "nut",
+    type: "frt",
+    subType: "nut",
+    color: "#ffffff",
     kcalPer100g: 660,
     unitWeights: {
       lz: 7,

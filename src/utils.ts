@@ -41,42 +41,13 @@ export const MealTypesData: Record<MealType, DictRecord> = {
   other: { label: "Inne", color: "#f76707" },
 };
 export const IngredientTypeData: Record<IngredientType, DictRecord> = {
-  // iMET
   met: { label: "Mięso", color: "#f03e3e" },
-  pou: { label: "Drób", color: "#f03e3e" },
-  fsh: { label: "Ryby", color: "#1c7ed6" },
-  egg: { label: "Jajka", color: "#ffec99" },
-
-  // iDIR
   dir: { label: "Nabiał", color: "#ffffff" },
-  che: { label: "Sery", color: "#fcc419" },
-
-  // iFAT
   fat: { label: "Tłuszcze", color: "#fcc419" },
-
-  // iVEG
   veg: { label: "Warzywa", color: "#40c057" },
-  gee: { label: "Zielenina", color: "#40c057" },
-  jar: { label: "Przetwory", color: "#40c057" },
-  msh: { label: "Grzyby", color: "#ced4da" },
-  pot: { label: "Ziemniaki", color: "#b79268" },
-
-  // iFRT
   frt: { label: "Owoce", color: "#40c057" },
-  nut: { label: "Orzechy", color: "#b79268" },
-
-  // iGRN
   grn: { label: "Zboża", color: "#fcc419" },
-  bun: { label: "Pieczywo", color: "#b79268" },
-
-  // iSPC
-  spc: { label: "Przyprawy", color: "#adb5bd" },
-  hrb: { label: "Zioła", color: "#40c057" },
-  sau: { label: "Sosy", color: "#f03e3e" },
-
-  // iOTH
-  wat: { label: "Woda", color: "#1c7ed6" },
-  sug: { label: "Cukry", color: "#ffffff" },
+  spc: { label: "Przyprawy", color: "#868e96" },
   oth: { label: "Inne", color: "#ced4da" },
 };
 
@@ -371,42 +342,13 @@ export const countRecipesTypes = (recipes: Recipe[]) => {
 
 export const countIngredientTypes = () => {
   const usage: Record<IngredientType, number> = {
-    // iMET
     met: 0,
-    pou: 0,
-    fsh: 0,
-    egg: 0,
-
-    // iDIR
     dir: 0,
-    che: 0,
-
-    // iFAT
     fat: 0,
-
-    // iVEG
     veg: 0,
-    gee: 0,
-    jar: 0,
-    msh: 0,
-    pot: 0,
-
-    // iFRT
     frt: 0,
-    nut: 0,
-
-    // iGRN
     grn: 0,
-    bun: 0,
-
-    // iSPC
     spc: 0,
-    hrb: 0,
-    sau: 0,
-
-    // iOTH
-    wat: 0,
-    sug: 0,
     oth: 0,
   };
 
