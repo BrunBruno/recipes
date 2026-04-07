@@ -54,7 +54,7 @@ const gulaszPoWegiersku: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "sos", "xxx"],
+  keyWords: ["wołowina", "sos"],
 };
 
 export default gulaszPoWegiersku;

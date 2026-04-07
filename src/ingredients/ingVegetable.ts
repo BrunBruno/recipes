@@ -39,7 +39,8 @@ type IngId =
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
-  | "mushrooms";
+  | "mushrooms"
+  | "white_beans";
 
 export const iVEG: Record<IngId, IngredientItem> = {
   potato: {
@@ -57,7 +58,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   frozen_fries: {
     name: "Frytki mrożone",
     type: "veg",
-    subType: "pot",
+    subType: "frs",
     color: "#fcc419",
     kcalPer100g: 150,
     unitWeights: {
@@ -499,7 +500,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 5.5, 1.2],
   },
 
-  //
+  /////////////////////////////////
 
   mushrooms: {
     name: "Pieczarki",
@@ -511,5 +512,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [0.3, 3.3, 3.1],
+  },
+
+  /////////////////////////////////
+
+  white_beans: {
+    name: "Fasola biała",
+    type: "veg",
+    subType: "ben",
+    color: "#ffffff",
+    kcalPer100g: 333,
+    unitWeights: {
+      szk: 200,
+      opak: 400,
+    },
+    nutrientsPer100g: [1.2, 60, 21],
   },
 };

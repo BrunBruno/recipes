@@ -67,7 +67,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "xxx"],
+  keyWords: ["wieprzowina"],
 };
 
 export default kotletPoGoralsku;

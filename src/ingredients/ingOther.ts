@@ -5,11 +5,8 @@ type IngId =
   | "sugar"
   | "powdered_sugar"
   | "vanilla_sugar"
-  | "cocoa"
   | "honey"
   | "vanilla_extract"
-  | "coffee"
-  | "grain_coffee"
   | "citric_acid"
   | "baking_powder"
   | "baking_soda"
@@ -40,6 +37,20 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 0, 0],
     verified: true,
+  },
+
+  spirit: {
+    name: "Spirytus",
+    type: "oth",
+    subType: "wat",
+    color: "#ffffff",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+      lzi: 5,
+      lz: 15,
+    },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   sugar: {
@@ -108,44 +119,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 12, 0],
   },
 
-  cocoa: {
-    name: "Kakao",
-    type: "oth",
-    subType: "cof",
-    color: "#6F4E37",
-    kcalPer100g: 228,
-    unitWeights: {
-      lz: 7.5,
-      lzi: 2.5,
-    },
-    nutrientsPer100g: [13, 20, 20],
-  },
-
-  coffee: {
-    name: "Kawa",
-    type: "oth",
-    subType: "cof",
-    color: "#6F4E37",
-    kcalPer100g: 2,
-    unitWeights: {
-      lz: 5,
-    },
-    nutrientsPer100g: [0, 0.5, 0.1],
-  },
-
-  grain_coffee: {
-    name: "Kawa zbożowa",
-    type: "oth",
-    subType: "cof",
-    color: "#6F4E37",
-    kcalPer100g: 360,
-    unitWeights: {
-      lz: 6,
-      lzi: 2,
-    },
-    nutrientsPer100g: [0, 86, 0],
-  },
-
   citric_acid: {
     name: "Kwasek cytrynowy",
     type: "oth",
@@ -172,20 +145,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
     kcalPer100g: 0,
     unitWeights: {
       lzi: 5,
-    },
-    nutrientsPer100g: [0, 0, 0],
-  },
-
-  spirit: {
-    name: "Spirytus",
-    type: "oth",
-    subType: "wat",
-    color: "#ffffff",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-      lzi: 5,
-      lz: 15,
     },
     nutrientsPer100g: [0, 0, 0],
   },
@@ -237,6 +196,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   white_chocolate: {
     name: "Biała czekolada",
     type: "oth",
+    subType: "cho",
+    color: "#ffffff",
     kcalPer100g: 540,
     unitWeights: {
       opak: 100,
@@ -247,6 +208,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   dark_chocolate: {
     name: "Gorzka czekolada",
     type: "oth",
+    subType: "cho",
+    color: "#6F4E37",
     kcalPer100g: 555,
     unitWeights: {
       kst: 10,
@@ -259,6 +222,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   chocolate_cream: {
     name: "Krem czekoladowy",
     type: "oth",
+    subType: "cho",
+    color: "#6F4E37",
     kcalPer100g: 550,
     unitWeights: {
       opak: 400,
@@ -270,6 +235,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   cheese_snacks: {
     name: "Chrupki serowe",
     type: "oth",
+    subType: "cri",
+    color: "#f59f00",
     kcalPer100g: 513,
     unitWeights: {
       opak: 130,
@@ -281,6 +248,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   ladyfingers: {
     name: "Biszkopty",
     type: "oth",
+    subType: "bis",
+    color: "#f59f00",
     kcalPer100g: 380,
     unitWeights: {
       opak: 200,
@@ -291,6 +260,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
   rosol: {
     name: "Rosół",
     type: "oth",
+    subType: "sup",
+    color: "#f59f00",
     kcalPer100g: 35,
     unitWeights: {
       ml: 1,

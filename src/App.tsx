@@ -35,6 +35,18 @@ function App() {
     );
   };
 
+  // const filteredRecipes = recipes.filter((r) => {
+  //   const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
+
+  //   const query = normalize(searchQuery);
+
+  //   const nameMatch = r.name.toLowerCase().includes(query);
+  //   const keywordsMatch = r.keyWords
+  //     ? matchesKeyword(query, r.keyWords)
+  //     : false;
+
+  //   return typeMatch && (nameMatch || keywordsMatch);
+  // });
   const filteredRecipes = recipes.filter((r) => {
     const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
 
@@ -45,7 +57,17 @@ function App() {
       ? matchesKeyword(query, r.keyWords)
       : false;
 
-    return typeMatch && (nameMatch || keywordsMatch);
+    const hasImages = r.images.some((img) => img !== "");
+    const onlyEmptyImages = r.images.every((img) => img === "");
+
+    const specialMatch =
+      query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
+
+    return (
+      typeMatch &&
+      specialMatch &&
+      (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
+    );
   });
 
   useEffect(() => {

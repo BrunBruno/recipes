@@ -35,7 +35,6 @@ export type UnitType =
   | "peto";
 
 export type KeyWord =
-  | "xxx"
   | "ciasto"
   | "deser"
   | "biszkopt"
@@ -87,11 +86,12 @@ export type RecipeStepGroup = {
   steps: string[];
 };
 
+export type NonEmptyArray<T> = [T, ...T[]];
 export type Recipe = {
   name: string;
   description: string;
   type: MealType;
-  images: string[];
+  images: NonEmptyArray<string>;
   portions: number;
   time: number;
   ingredients: RecipeIngredientGroup[];

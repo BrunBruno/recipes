@@ -45,6 +45,7 @@ const burgerDrwala: Recipe = {
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iVEG.fried_onion },
       ],
     },
     {
@@ -82,7 +83,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "ser", "pieczywo", "xxx"],
+  keyWords: ["wołowina", "ser", "pieczywo"],
 };
 
 export default burgerDrwala;

@@ -40,7 +40,16 @@ type IngId =
   | "pork_knuckle_ready"
   | "spicy_tenderloins"
   | "chicken_nuggets"
-  | "burger_patties";
+  | "burger_patties"
+  | "sardines_in_oil"
+  | "herring_in_oil"
+  | "herring_in_tomato_sauce"
+  | "herring_in_vinegar"
+  | "pollock"
+  | "carp"
+  | "cod"
+  | "salmon"
+  | "squid_frozen_ready";
 
 export const iMET: Record<IngId, IngredientItem> = {
   chicken_breast: {
@@ -333,90 +342,6 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   //////////////////////////////
 
-  ham_slices: {
-    name: "Szynka",
-    type: "met",
-    kcalPer100g: 102,
-    unitWeights: {
-      plas: 15,
-      opak: 140,
-    },
-    nutrientsPer100g: [2, 3, 18],
-    verified: true,
-  },
-
-  salami: {
-    name: "Salami",
-    type: "met",
-    color: "#a61e4d",
-    kcalPer100g: 413,
-    unitWeights: {
-      plas: 10,
-      opak: 160,
-    },
-    nutrientsPer100g: [36, 1.5, 20],
-    verified: true,
-  },
-
-  bacon_slices: {
-    name: "Boczek w plastrach",
-    type: "met",
-    subType: "bac",
-    kcalPer100g: 518,
-    unitWeights: {
-      plas: 15,
-      opak: 120,
-    },
-    nutrientsPer100g: [53, 1, 37],
-  },
-
-  bacon_block: {
-    name: "Boczek w kostce",
-    type: "met",
-    subType: "bac",
-    kcalPer100g: 518,
-    unitWeights: {
-      opak: 250,
-    },
-    nutrientsPer100g: [53, 1, 37],
-  },
-
-  sausage: {
-    name: "Kiełbasa",
-    type: "met",
-    subType: "sau",
-    kcalPer100g: 227,
-    unitWeights: {
-      peto: 100,
-    },
-    nutrientsPer100g: [18.4, 2, 13.1],
-    verified: true,
-  },
-
-  sausages: {
-    name: "Parówki",
-    type: "met",
-    subType: "sau",
-    kcalPer100g: 252,
-    unitWeights: {
-      szt: 50,
-    },
-    nutrientsPer100g: [21, 2.7, 13],
-    verified: true,
-  },
-
-  meat_spread: {
-    name: "Pasztet",
-    type: "met",
-    color: "#b79268",
-    kcalPer100g: 187,
-    unitWeights: {
-      opak: 131,
-    },
-    nutrientsPer100g: [14, 6.7, 1.4],
-    verified: true,
-  },
-
   burger_patties: {
     name: "Kotleciki hamburgerowe",
     type: "met",
@@ -441,16 +366,141 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   //////////////////////////////
 
-  canned_tuna: {
-    name: "Tuńczyk w sosie własnym",
+  ham_slices: {
+    name: "Szynka",
     type: "met",
-    subType: "fsh",
-    color: "#b79268",
-    kcalPer100g: 120,
+    subType: "ham",
+    kcalPer100g: 102,
     unitWeights: {
+      plas: 15,
+      opak: 140,
+    },
+    nutrientsPer100g: [2, 3, 18],
+    verified: true,
+  },
+
+  salami: {
+    name: "Salami",
+    type: "met",
+    subType: "ham",
+    color: "#a61e4d",
+    kcalPer100g: 413,
+    unitWeights: {
+      plas: 10,
       opak: 160,
     },
-    nutrientsPer100g: [1, 0, 26],
+    nutrientsPer100g: [36, 1.5, 20],
+    verified: true,
+  },
+
+  bacon_slices: {
+    name: "Boczek w plastrach",
+    type: "met",
+    subType: "ham",
+    kcalPer100g: 518,
+    unitWeights: {
+      plas: 15,
+      opak: 120,
+    },
+    nutrientsPer100g: [53, 1, 37],
+  },
+
+  bacon_block: {
+    name: "Boczek w kostce",
+    type: "met",
+    subType: "ham",
+    kcalPer100g: 518,
+    unitWeights: {
+      opak: 250,
+    },
+    nutrientsPer100g: [53, 1, 37],
+  },
+
+  sausage: {
+    name: "Kiełbasa",
+    type: "met",
+    subType: "ham",
+    kcalPer100g: 227,
+    unitWeights: {
+      peto: 100,
+    },
+    nutrientsPer100g: [18.4, 2, 13.1],
+    verified: true,
+  },
+
+  sausages: {
+    name: "Parówki",
+    type: "met",
+    subType: "ham",
+    kcalPer100g: 252,
+    unitWeights: {
+      szt: 50,
+    },
+    nutrientsPer100g: [21, 2.7, 13],
+    verified: true,
+  },
+
+  meat_spread: {
+    name: "Pasztet",
+    type: "met",
+    subType: "can",
+    color: "#b79268",
+    kcalPer100g: 187,
+    unitWeights: {
+      opak: 131,
+    },
+    nutrientsPer100g: [14, 6.7, 1.4],
+    verified: true,
+  },
+
+  //////////////////////////////
+
+  pollock: {
+    name: "Mintaj",
+    type: "met",
+    subType: "fsh",
+    color: "#faa2c1",
+    kcalPer100g: 90,
+    unitWeights: {
+      szt: 250,
+    },
+    nutrientsPer100g: [0.5, 1, 19],
+  },
+
+  carp: {
+    name: "Karp",
+    type: "met",
+    subType: "fsh",
+    color: "#faa2c1",
+    kcalPer100g: 127,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [5, 3, 20],
+  },
+
+  cod: {
+    name: "Dorsz",
+    type: "met",
+    subType: "fsh",
+    color: "#faa2c1",
+    kcalPer100g: 82,
+    unitWeights: {
+      szt: 200,
+    },
+    nutrientsPer100g: [0.5, 0.2, 18],
+  },
+
+  salmon: {
+    name: "Łosoś",
+    type: "met",
+    subType: "fsh",
+    color: "#d6336c",
+    kcalPer100g: 208,
+    unitWeights: {
+      szt: 200,
+    },
+    nutrientsPer100g: [13, 13, 20],
   },
 
   smoked_salmon: {
@@ -488,6 +538,78 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 30,
     },
     nutrientsPer100g: [12, 10, 13],
+  },
+
+  canned_tuna: {
+    name: "Tuńczyk w sosie własnym",
+    type: "met",
+    subType: "can",
+    color: "#b79268",
+    kcalPer100g: 120,
+    unitWeights: {
+      opak: 160,
+    },
+    nutrientsPer100g: [1, 0, 26],
+  },
+
+  sardines_in_oil: {
+    name: "Sardynki w oleju",
+    type: "met",
+    subType: "can",
+    color: "#fcc419",
+    kcalPer100g: 208,
+    unitWeights: {
+      opak: 120,
+    },
+    nutrientsPer100g: [11, 11, 25],
+  },
+
+  herring_in_oil: {
+    name: "Śledź w oleju",
+    type: "met",
+    subType: "can",
+    color: "#fcc419",
+    kcalPer100g: 230,
+    unitWeights: {
+      opak: 150,
+    },
+    nutrientsPer100g: [17, 20, 16],
+  },
+
+  herring_in_tomato_sauce: {
+    name: "Śledź w sosie pomidorowym",
+    type: "met",
+    subType: "can",
+    color: "#f03e3e",
+    kcalPer100g: 165,
+    unitWeights: {
+      opak: 150,
+    },
+    nutrientsPer100g: [12, 8, 12],
+  },
+
+  herring_in_vinegar: {
+    name: "Śledź w occie",
+    type: "met",
+    subType: "can",
+    color: "#868e96",
+    kcalPer100g: 120,
+    unitWeights: {
+      opak: 150,
+    },
+    nutrientsPer100g: [13, 2, 10],
+  },
+
+  squid_frozen_ready: {
+    name: "Kalmary",
+    type: "met",
+    subType: "sea",
+    color: "#f76707",
+    kcalPer100g: 92,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [1, 1, 18],
   },
 
   //////////////////////////////

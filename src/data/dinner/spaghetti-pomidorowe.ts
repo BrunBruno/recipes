@@ -45,7 +45,7 @@ const spaghettiPomidorowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos", "xxx"],
+  keyWords: ["makaron", "sos"],
 };
 
 export default spaghettiPomidorowe;

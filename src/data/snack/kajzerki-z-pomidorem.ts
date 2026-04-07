@@ -39,7 +39,7 @@ const kajzerkiZPomidorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "xxx"],
+  keyWords: ["pieczywo"],
 };
 
 export default kajzerkiZPomidorem;

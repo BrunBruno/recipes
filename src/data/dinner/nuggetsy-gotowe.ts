@@ -35,7 +35,7 @@ const nuggetsyGotowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "xxx"],
+  keyWords: ["kurczak"],
 };
 
 export default nuggetsyGotowe;

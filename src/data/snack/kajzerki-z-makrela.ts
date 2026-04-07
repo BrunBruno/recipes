@@ -31,7 +31,7 @@ const kajzerkiZMakrela: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "ryba", "xxx"],
+  keyWords: ["pieczywo", "ryba"],
 };
 
 export default kajzerkiZMakrela;

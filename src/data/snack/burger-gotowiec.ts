@@ -68,7 +68,7 @@ const gotowyBurger: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "kurczak", "xxx"],
+  keyWords: ["pieczywo", "kurczak"],
 };
 
 export default gotowyBurger;

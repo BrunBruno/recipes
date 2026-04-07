@@ -25,8 +25,8 @@ const racuchy: Recipe = {
         { ingredient: iFAT.clarified_butter, amount: 2, unit: "lzi" },
         { ingredient: iOTH.vanilla_sugar, amount: 1, unit: "lz" },
         { ingredient: iOTH.sugar, amount: 1, unit: "lz" },
-        { ingredient: iOTH.baking_soda, amount: 0.5, unit: "lzi" },
         { ingredient: iOTH.powdered_sugar, amount: 2, unit: "lzi" },
+        { ingredient: iOTH.baking_soda, amount: 0.5, unit: "lzi" },
       ],
     },
   ],
@@ -44,7 +44,7 @@ const racuchy: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "owoce", "naleśnik", "xxx"],
+  keyWords: ["ciasto", "owoce", "naleśnik"],
 };
 
 export default racuchy;

@@ -48,7 +48,7 @@ const lazanki: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "xxx"],
+  keyWords: ["makaron"],
 };
 
 export default lazanki;

@@ -37,7 +37,7 @@ const stek: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "xxx"],
+  keyWords: ["wołowina"],
 };
 
 export default stek;

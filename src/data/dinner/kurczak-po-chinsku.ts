@@ -43,7 +43,7 @@ const kurczakPoChinsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "ryż", "xxx"],
+  keyWords: ["kurczak", "ryż"],
 };
 
 export default kurczakPoChinsku;

@@ -56,7 +56,7 @@ const karkowkaDuszona: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "xxx"],
+  keyWords: ["wieprzowina"],
 };
 
 export default karkowkaDuszona;

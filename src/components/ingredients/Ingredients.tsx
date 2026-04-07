@@ -95,13 +95,13 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
         return (
           <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
-              // const sortedItems = items;
-              const sortedItems = items.sort(([_, itemA], [__, itemB]) => {
-                const usageA = ingredientUsage[itemA.name] ?? 0;
-                const usageB = ingredientUsage[itemB.name] ?? 0;
+              const sortedItems = items;
+              // const sortedItems = items.sort(([_, itemA], [__, itemB]) => {
+              //   const usageA = ingredientUsage[itemA.name] ?? 0;
+              //   const usageB = ingredientUsage[itemB.name] ?? 0;
 
-                return usageB - usageA;
-              });
+              //   return usageB - usageA;
+              // });
 
               const rows = Math.ceil(sortedItems.length / columns);
 

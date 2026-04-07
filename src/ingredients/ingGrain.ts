@@ -12,7 +12,6 @@ type IngId =
   | "spaghetti_pasta"
   | "thin_pasta"
   | "lazanki_pasta"
-  | "white_beans"
   | "gnocchi"
   | "silesian_dumplings"
   | "steamed_dumplings"
@@ -23,7 +22,10 @@ type IngId =
   | "chicken_buns"
   | "hotdog_buns"
   | "french_hotdog_buns"
-  | "cornflakes";
+  | "cornflakes"
+  | "cocoa"
+  | "coffee"
+  | "grain_coffee";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   flour: {
@@ -152,21 +154,11 @@ export const iGRN: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  white_beans: {
-    name: "Fasola biała",
-    type: "grn",
-    color: "#ffffff",
-    kcalPer100g: 333,
-    unitWeights: {
-      szk: 200,
-      opak: 400,
-    },
-    nutrientsPer100g: [1.2, 60, 21],
-  },
-
   gnocchi: {
     name: "Kopytka",
     type: "grn",
+    subType: "bun",
+    color: "#fcc419",
     kcalPer100g: 148,
     unitWeights: {
       opak: 500,
@@ -178,6 +170,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
   silesian_dumplings: {
     name: "Kluski śląskie",
     type: "grn",
+    subType: "bun",
+    color: "#fcc419",
     kcalPer100g: 160,
     unitWeights: {
       szt: 30,
@@ -188,6 +182,8 @@ export const iGRN: Record<IngId, IngredientItem> = {
   steamed_dumplings: {
     name: "Kluski na parze",
     type: "grn",
+    subType: "bun",
+    color: "#ffffff",
     kcalPer100g: 220,
     unitWeights: {
       szt: 80,
@@ -206,7 +202,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.4, 83, 7.5],
   },
 
-  //
+  /////////////////////////////////
 
   kaiser_roll: {
     name: "Kajzerka",
@@ -236,7 +232,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
   toast_bread: {
     name: "Tosty",
     type: "grn",
-    subType: "bun",
+    subType: "brd",
     color: "#b79268",
     kcalPer100g: 267,
     unitWeights: {
@@ -296,5 +292,47 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szt: 85,
     },
     nutrientsPer100g: [8.3, 51, 7.7],
+  },
+
+  /////////////////////////////////
+
+
+
+  cocoa: {
+    name: "Kakao",
+    type: "grn",
+    subType: "ben",
+    color: "#6F4E37",
+    kcalPer100g: 228,
+    unitWeights: {
+      lz: 7.5,
+      lzi: 2.5,
+    },
+    nutrientsPer100g: [13, 20, 20],
+  },
+
+  coffee: {
+    name: "Kawa",
+    type: "grn",
+    subType: "ben",
+    color: "#6F4E37",
+    kcalPer100g: 2,
+    unitWeights: {
+      lz: 5,
+    },
+    nutrientsPer100g: [0, 0.5, 0.1],
+  },
+
+  grain_coffee: {
+    name: "Kawa zbożowa",
+    type: "grn",
+    subType: "ben",
+    color: "#6F4E37",
+    kcalPer100g: 360,
+    unitWeights: {
+      lz: 6,
+      lzi: 2,
+    },
+    nutrientsPer100g: [0, 86, 0],
   },
 };

@@ -64,7 +64,7 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "sos", "xxx"],
+  keyWords: ["wieprzowina", "sos"],
 };
 
 export default gulaszWieprzowy;

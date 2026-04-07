@@ -8,7 +8,7 @@ const salatkaJarzynowa: Recipe = {
   description:
     "Klasyczna sałatka jarzynowa z gotowanych warzyw, jajek i groszku, połączona kremowym majonezem - idealna na święta lub jako dodatek do obiadu.",
   type: "salad",
-  images: [""],
+  images: ["salatka-jarzynowa.jpg"],
   time: 40,
   portions: 8,
   ingredients: [

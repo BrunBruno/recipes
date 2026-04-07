@@ -51,7 +51,7 @@ const jajkoSadzone: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "xxx"],
+  keyWords: ["jajko"],
 };
 
 export default jajkoSadzone;

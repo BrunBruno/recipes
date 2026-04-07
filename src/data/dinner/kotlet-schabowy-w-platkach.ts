@@ -63,7 +63,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "xxx"],
+  keyWords: ["wieprzowina"],
 };
 
 export default kotletySchaboweWPlatkach;

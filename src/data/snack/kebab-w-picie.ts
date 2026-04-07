@@ -96,7 +96,7 @@ const kebab: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "naleśnik", "xxx"],
+  keyWords: ["wołowina", "naleśnik"],
 };
 
 export default kebab;

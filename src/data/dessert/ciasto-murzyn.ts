@@ -22,7 +22,7 @@ const ciastoMurzyn: Recipe = {
         { ingredient: iFAT.butter, amount: 1, unit: "kst" },
         { ingredient: iDIR.milk, amount: 0.5, unit: "szk" },
         { ingredient: iOTH.sugar, amount: 1, unit: "szk" },
-        { ingredient: iOTH.cocoa, amount: 3, unit: "lz" },
+        { ingredient: iGRN.cocoa, amount: 3, unit: "lz" },
         { ingredient: iOTH.baking_powder, amount: 1, unit: "lzi" },
       ],
     },
@@ -42,7 +42,7 @@ const ciastoMurzyn: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "biszkopt", "xxx"],
+  keyWords: ["ciasto", "biszkopt"],
 };
 
 export default ciastoMurzyn;

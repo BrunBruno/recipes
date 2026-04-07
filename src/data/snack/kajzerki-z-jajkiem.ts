@@ -6,7 +6,6 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 import { iSPC } from "../../ingredients/ingSpice";
 
-
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
   description:
@@ -41,7 +40,7 @@ const kajzerkiZJajkiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "jajko", "xxx"],
+  keyWords: ["pieczywo", "jajko"],
 };
 
 export default kajzerkiZJajkiem;

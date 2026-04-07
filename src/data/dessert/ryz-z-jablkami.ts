@@ -39,7 +39,7 @@ const ryzZJablkami: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryż", "owoce", "xxx"],
+  keyWords: ["ryż", "owoce"],
 };
 
 export default ryzZJablkami;

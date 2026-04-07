@@ -52,7 +52,7 @@ const zapiekankaBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos", "xxx"],
+  keyWords: ["makaron", "sos"],
 };
 
 export default zapiekankaBolognese;

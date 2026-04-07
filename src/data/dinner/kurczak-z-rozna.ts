@@ -17,12 +17,12 @@ const kurczakZRozna: Recipe = {
       items: [
         { ingredient: iMET.chicken_whole, amount: 1, unit: "szt" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
-        { ingredient: iSPC.salt, amount: 1, unit: "lzi" },
         { ingredient: iSPC.sweet_paprika, amount: 1, unit: "lzi" },
         { ingredient: iSPC.hot_paprika, amount: 1, unit: "lzi" },
         { ingredient: iSPC.smoked_paprika, amount: 1, unit: "lzi" },
         { ingredient: iSPC.granulated_garlic, amount: 0.5, unit: "lzi" },
         { ingredient: iSPC.vegetable_seasoning, amount: 0.5, unit: "lzi" },
+        { ingredient: iSPC.salt, amount: 1, unit: "lzi" },
       ],
     },
   ],
