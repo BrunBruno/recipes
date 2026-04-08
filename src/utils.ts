@@ -170,7 +170,6 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
       if (item.excludeFromCalc) continue;
 
       const { ingredient, amount, unit } = item;
-      // if (ingredient.type === "wat") continue;
 
       let grams = 0;
       let value = amount;

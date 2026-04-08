@@ -22,7 +22,7 @@ const plackiZiemniaczane: Recipe = {
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
-        { ingredient: iGRN.flour, amount: 1, unit: "lz" },
+        { ingredient: iGRN.flour, amount: 2, unit: "lz" },
         { ingredient: iFAT.oil, amount: 4, unit: "lz" },
         { ingredient: iSPC.savory },
         { ingredient: iSPC.black_pepper },

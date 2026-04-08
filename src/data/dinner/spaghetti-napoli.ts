@@ -1,7 +1,7 @@
 import type { Recipe } from "../../types";
 
-const xxxxxx: Recipe = {
-  name: "xxxxxx",
+const spaghettiNapoli: Recipe = {
+  name: "Spaghetti Napoli",
   description: "",
   type: "dinner",
   images: [""],
@@ -11,4 +11,4 @@ const xxxxxx: Recipe = {
   steps: [],
 };
 
-export default xxxxxx;
+export default spaghettiNapoli;

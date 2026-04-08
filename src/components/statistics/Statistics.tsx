@@ -240,9 +240,13 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     );
 
     const ingredientTypeMap: Record<string, IngredientType> = {};
+    const ingredientColorMap: Record<string, string> = {};
+
     ingredientCollections.forEach((col) => {
       Object.values(col).forEach((i) => {
         ingredientTypeMap[i.name] = i.type;
+        ingredientColorMap[i.name] =
+          i.color ?? IngredientTypeData[i.type].color;
       });
     });
 
@@ -252,7 +256,7 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       chartRefs.ingredientUsage,
       topIng.map(([k]) => k),
       topIng.map(([, v]) => v),
-      topIng.map(([k]) => IngredientTypeData[ingredientTypeMap[k]].color),
+      topIng.map(([k]) => ingredientColorMap[k]),
       "",
     );
 

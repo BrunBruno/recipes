@@ -37,6 +37,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iVEG.corn_salad, amount: portions * 200 },
+        { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
     },
