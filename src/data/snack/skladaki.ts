@@ -1,4 +1,5 @@
 import { iDIR } from "../../ingredients/ingDairy";
+import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -15,17 +16,23 @@ const skladaki: Recipe = {
   portions: 2,
   ingredients: [
     {
-      title: "",
+      title: "Składaki",
       items: [
         { ingredient: iGRN.tortilla, amount: 4, unit: "szt" },
         { ingredient: iMET.salami, amount: 12, unit: "plas" },
         { ingredient: iDIR.yellow_cheese, amount: "0.5-1", unit: "kst" },
         { ingredient: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        { ingredient: iSPC.oregano },
+      ],
+    },
+    {
+      title: "Sos",
+      items: [
         { ingredient: iVEG.garlic, amount: "1-2", unit: "zbk" },
         { ingredient: iSPC.tomato_paste, amount: "3-4", unit: "lzi" },
         { ingredient: iSPC.ketchup, amount: "0-1", unit: "lzi" },
-        { ingredient: iSPC.oregano },
+        { ingredient: iFAT.oil, amount: 0.5, unit: "lzi" },
         { ingredient: iSPC.basil },
       ],
     },

@@ -33,6 +33,7 @@ const faworki: Recipe = {
           unit: "kst",
           invisible: true,
         },
+        { ingredient: iFAT.oil, amount: 500, unit: "ml", alt: true },
         { ingredient: iOTH.powdered_sugar, amount: 1, unit: "lz" },
         { ingredient: iOTH.spirit, amount: 2, unit: "lzi" },
         { ingredient: iSPC.salt },

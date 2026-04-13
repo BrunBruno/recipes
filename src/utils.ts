@@ -119,7 +119,7 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc) continue;
+      if (item.excludeFromCalc || item.alt) continue;
 
       const { ingredient, amount, unit } = item;
 
@@ -167,7 +167,7 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc) continue;
+      if (item.excludeFromCalc || item.alt) continue;
 
       const { ingredient, amount, unit } = item;
 
@@ -221,7 +221,7 @@ export const calculateRecipeNutrients = (
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc) continue;
+      if (item.excludeFromCalc || item.alt) continue;
 
       const { ingredient, amount, unit } = item;
 

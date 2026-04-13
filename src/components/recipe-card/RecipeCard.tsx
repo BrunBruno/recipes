@@ -333,7 +333,19 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                       {group.items.map((ingredient, index) => {
                         if (ingredient.invisible) return;
                         return (
-                          <li key={index} className="ingredient-item">
+                          <li
+                            key={index}
+                            className={
+                              ingredient.alt
+                                ? "ingredient-item-alt"
+                                : "ingredient-item"
+                            }
+                          >
+                            {ingredient.alt && (
+                              <div className="ingredient-alt ">
+                                <UtilsIcon name="swap" color="#666" />
+                              </div>
+                            )}
                             <div className="ingredient-indicator">
                               <IngredientIcon
                                 ingType={ingredient.ingredient.type}

@@ -17,6 +17,8 @@ type IngId =
   | "steamed_dumplings"
   | "kaiser_roll"
   | "tortilla"
+  | "tortilla_mini"
+  | "taco_shell_corn"
   | "toast_bread"
   | "hamburger_buns"
   | "chicken_buns"
@@ -229,6 +231,30 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [6.7, 49, 8.8],
   },
 
+  tortilla_mini: {
+    name: "Mini tortilla",
+    type: "grn",
+    subType: "bun",
+    color: "#b79268",
+    kcalPer100g: 310,
+    unitWeights: {
+      szt: 30,
+    },
+    nutrientsPer100g: [7, 50, 8],
+  },
+
+  taco_shell_corn: {
+    name: "Muszla kukurydziana do taco",
+    type: "grn",
+    subType: "bun",
+    color: "#fcc419",
+    kcalPer100g: 480,
+    unitWeights: {
+      szt: 12,
+    },
+    nutrientsPer100g: [24, 64, 6],
+  },
+
   toast_bread: {
     name: "Tosty",
     type: "grn",
@@ -295,8 +321,6 @@ export const iGRN: Record<IngId, IngredientItem> = {
   },
 
   /////////////////////////////////
-
-
 
   cocoa: {
     name: "Kakao",

@@ -6,6 +6,7 @@ type IngId =
   | "tomato"
   | "cucumber"
   | "bell_pepper"
+  | "chili_pepper"
   | "carrot"
   | "parsley_root"
   | "leek"
@@ -15,6 +16,8 @@ type IngId =
   | "radish"
   | "beetroot"
   | "lettuce"
+  | "lettuce_romaine"
+  | "lettuce_iceberg"
   | "chives"
   | "parsley"
   | "spring_onion"
@@ -115,6 +118,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 6, 1],
+  },
+
+  chili_pepper: {
+    name: "Papryczka chili",
+    type: "veg",
+    subType: "pep",
+    color: "#f03e3e",
+    kcalPer100g: 40,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [0.4, 9, 2],
   },
 
   carrot: {
@@ -270,6 +285,28 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 2.9, 1.4],
   },
 
+  lettuce_romaine: {
+    name: "Sałata rzymska",
+    type: "veg",
+    subType: "gee",
+    kcalPer100g: 17,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0.3, 3.3, 1.2],
+  },
+
+  lettuce_iceberg: {
+    name: "Sałata lodowa",
+    type: "veg",
+    subType: "gee",
+    kcalPer100g: 14,
+    unitWeights: {
+      szt: 500,
+    },
+    nutrientsPer100g: [0.1, 3, 1],
+  },
+
   chives: {
     name: "Szczypiorek",
     type: "veg",
@@ -283,7 +320,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   parsley: {
-    name: "Pietruszka Zielona",
+    name: "Natka Pietruszki",
     type: "veg",
     subType: "fhr",
     kcalPer100g: 36,

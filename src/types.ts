@@ -74,6 +74,7 @@ export type Ingredient = {
   unit?: UnitType;
   excludeFromCalc?: boolean;
   invisible?: boolean;
+  alt?: boolean;
 };
 
 export type RecipeIngredientGroup = {

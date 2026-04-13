@@ -340,20 +340,34 @@
 
 .ingredients-list {
   list-style: none;
-  padding: 1rem 2rem;
+  padding: 1rem 1.2rem;
   margin: 0;
   border: solid #333333 0.2rem;
 }
 
-.ingredients-list li {
+.ingredient-item {
   display: grid;
   grid-template-columns: 1rem auto 6rem;
-  padding: 0;
+  padding: 0 0.5rem;
   font-size: 0.95rem;
   border-bottom: 1px solid #333333;
 }
 
-.ingredients-list li:last-child {
+.ingredient-item:last-child {
+  border: none;
+}
+
+.ingredient-item-alt {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1rem auto 6rem;
+  background-color: #111111;
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #333333;
+}
+
+.ingredient-item-alt:last-child {
   border: none;
 }
 
@@ -393,6 +407,22 @@
   height: 1.2rem;
   aspect-ratio: 1/1;
   margin: auto;
+}
+
+.ingredient-alt {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1.4rem;
+  height: 1.4rem;
+  aspect-ratio: 1/1;
+  opacity: 0.3;
+}
+
+.ingredient-alt svg {
+  height: 1.4rem;
 }
 
 .steps h4 {

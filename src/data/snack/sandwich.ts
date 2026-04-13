@@ -19,6 +19,7 @@ const sandwich: Recipe = {
       items: [
         { ingredient: iGRN.toast_bread, amount: 4, unit: "krom" },
         { ingredient: iMET.ham_slices, amount: 2, unit: "plas" },
+        { ingredient: iMET.salami, amount: 2, unit: "plas", alt: true },
         { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plas" },
         { ingredient: iVEG.pickled_cucumber, amount: 0.5, unit: "szt" },
         { ingredient: iSPC.ketchup },

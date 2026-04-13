@@ -11,7 +11,7 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
 import { countIngredientUsage, IngredientTypeData } from "../../utils";
-import type { IngredientItem, IngredientType } from "../../types";
+import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
 
 type IngredientsProps = {
@@ -19,14 +19,14 @@ type IngredientsProps = {
 };
 
 const allGroups = [
-  { label: "Mięso", data: iMET },
-  { label: "Zboża", data: iGRN },
-  { label: "Nabiał", data: iDIR },
+  { label: "Mięso / Ryby / Jajka", data: iMET },
+  { label: "Zboża / Pieczywo / Ziarna", data: iGRN },
+  { label: "Nabiał / Sery", data: iDIR },
   { label: "Tłuszcze", data: iFAT },
-  { label: "Warzywa", data: iVEG },
-  { label: "Owoce", data: iFRT },
-  { label: "Przyprawy", data: iSPC },
-  { label: "Inne", data: iOTH },
+  { label: "Warzywa / Zielenina / Przetwory / Grzyby", data: iVEG },
+  { label: "Owoce / Orzechy", data: iFRT },
+  { label: "Przyprawy / Zioła / Sosy", data: iSPC },
+  { label: "Cukry / Gotowe / Pozostałe", data: iOTH },
 ];
 const groupedTypes = allGroups.flatMap((group) =>
   Object.values(group.data).map((item) => item.type),
@@ -112,13 +112,13 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                     onClick={() => toggleType(type)}
                   >
                     <UtilsIcon name={"arrow"} color={"#fff"} />
-                    {IngredientTypeData[type as IngredientType].label}
+                    {group.label}
                   </h2>
 
                   <ul
                     className={`ingredient-list`}
                     style={{
-                      maxHeight: openTypes[type] ? `${rows * 210}px` : "0px",
+                      maxHeight: openTypes[type] ? `${rows * 202}px` : "0px",
                     }}
                   >
                     {sortedItems.map(([id, item]) => (

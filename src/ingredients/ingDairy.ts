@@ -12,6 +12,7 @@ type IngId =
   | "cream_18"
   | "cream_30"
   | "cream_36"
+  | "sour_cream"
   | "cream_cheese"
   | "cream_cheese_horseradish"
   | "mascarpone"
@@ -143,6 +144,16 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [36, 3, 2],
+  },
+
+  sour_cream: {
+    name: "Kwaśna śmietana",
+    type: "dir",
+    kcalPer100g: 206,
+    unitWeights: {
+      lz: 12,
+    },
+    nutrientsPer100g: [20, 3.5, 2.5],
   },
 
   cream_cheese: {

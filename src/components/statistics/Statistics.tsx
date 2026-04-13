@@ -153,7 +153,6 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
     });
   };
 
-  // creates all charts
   const renderCharts = () => {
     const topN = (obj: Record<string, number>, n: number) =>
       Object.entries(obj)
