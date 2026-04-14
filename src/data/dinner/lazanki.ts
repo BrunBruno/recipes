@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -20,7 +21,7 @@ const lazanki: Recipe = {
         { ingredient: iGRN.lazanki_pasta, amount: 240 },
         { ingredient: iMET.sausage, amount: 200 },
         { ingredient: iMET.bacon_block, amount: 100 },
-        { ingredient: iVEG.sauerkraut, amount: 400 },
+        { ingredient: iJAR.sauerkraut, amount: 400 },
         { ingredient: iVEG.onion, amount: 280 },
         { ingredient: iVEG.mushrooms, amount: 150 },
         { ingredient: iFAT.oil, amount: 10, unit: "lz" },

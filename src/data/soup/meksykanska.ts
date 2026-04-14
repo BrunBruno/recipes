@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -23,10 +24,10 @@ const meksykanska: Recipe = {
         { ingredient: iVEG.parsley_root, amount: 100 },
         { ingredient: iVEG.garlic, amount: 4, unit: "zbk" },
         { ingredient: iVEG.potato, amount: 300 },
-        { ingredient: iVEG.canned_red_beans, amount: 1, unit: "opak" },
-        { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
-        { ingredient: iVEG.canned_tomatoes, amount: 1, unit: "opak" },
-        { ingredient: iSPC.tomato_paste, amount: 2, unit: "lz" },
+        { ingredient: iJAR.canned_red_beans, amount: 1, unit: "opak" },
+        { ingredient: iJAR.canned_corn, amount: 1, unit: "opak" },
+        { ingredient: iJAR.canned_tomatoes, amount: 1, unit: "opak" },
+        { ingredient: iJAR.tomato_paste, amount: 2, unit: "lz" },
         { ingredient: iFAT.olive, amount: 5, unit: "lz" },
         { ingredient: iOTH.water, amount: 4, unit: "szk" },
         { ingredient: iOTH.sugar, amount: 1, unit: "lzi" },

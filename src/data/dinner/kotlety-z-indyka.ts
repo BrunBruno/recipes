@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -34,7 +35,7 @@ const kotletyZIndyka: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.cucumber_salad, amount: portions * 150 },
+        { ingredient: iJAR.cucumber_salad, amount: portions * 150 },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },

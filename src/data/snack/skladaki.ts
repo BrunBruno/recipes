@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -30,8 +31,8 @@ const skladaki: Recipe = {
       title: "Sos",
       items: [
         { ingredient: iVEG.garlic, amount: "1-2", unit: "zbk" },
-        { ingredient: iSPC.tomato_paste, amount: "3-4", unit: "lzi" },
-        { ingredient: iSPC.ketchup, amount: "0-1", unit: "lzi" },
+        { ingredient: iJAR.tomato_paste, amount: "3-4", unit: "lzi" },
+        { ingredient: iJAR.ketchup, amount: "0-1", unit: "lzi" },
         { ingredient: iFAT.oil, amount: 0.5, unit: "lzi" },
         { ingredient: iSPC.basil },
       ],

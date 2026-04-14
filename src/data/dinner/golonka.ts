@@ -1,8 +1,8 @@
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
+import { iJAR } from "../../ingredients/ingJAR";
 
 const portions = 2;
 const golonka: Recipe = {
@@ -19,7 +19,7 @@ const golonka: Recipe = {
       items: [
         { ingredient: iMET.pork_knuckle_ready, amount: 1, unit: "szt" },
         { ingredient: iGRN.silesian_dumplings, amount: portions * 250 },
-        { ingredient: iVEG.fried_beets, amount: portions * 150 },
+        { ingredient: iJAR.fried_beets, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

@@ -15,19 +15,15 @@ type IngId =
   | "instant_yeast"
   | "gelatin"
   | "food_coloring"
-  | "white_chocolate"
-  | "dark_chocolate"
-  | "chocolate_cream"
-  | "cheese_snacks"
-  | "ladyfingers"
   | "rosol";
 
 export const iOTH: Record<IngId, IngredientItem> = {
+  //// LIQUIDS ////
   water: {
     name: "Woda",
     type: "oth",
     subType: "wat",
-    color: "#1c7ed6",
+    color: "#64B5F6",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
@@ -43,7 +39,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Spirytus",
     type: "oth",
     subType: "wat",
-    color: "#ffffff",
+    color: "#BBDEFB",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
@@ -53,11 +49,26 @@ export const iOTH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 0, 0],
   },
 
+  vanilla_extract: {
+    name: "Ekstrakt waniliowy",
+    type: "oth",
+    subType: "wat",
+    color: "#6D4C41",
+    kcalPer100g: 288,
+    unitWeights: {
+      ml: 1,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0, 12, 0],
+  },
+
+  //// SUGARS ////
+
   sugar: {
     name: "Cukier",
     type: "oth",
     subType: "sug",
-    color: "#ffffff",
+    color: "#FAFAFA",
     kcalPer100g: 400,
     unitWeights: {
       lzi: 4,
@@ -72,7 +83,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Cukier puder",
     type: "oth",
     subType: "sug",
-    color: "#ffffff",
+    color: "#FFFFFF",
     kcalPer100g: 400,
     unitWeights: {
       lzi: 4,
@@ -86,7 +97,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Cukier wanilinowy",
     type: "oth",
     subType: "sug",
-    color: "#ffffff",
+    color: "#FFF8E1",
     kcalPer100g: 394,
     unitWeights: {
       lz: 12,
@@ -100,7 +111,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Miód",
     type: "oth",
     subType: "hon",
-    color: "#fcc419",
+    color: "#F9A825",
     kcalPer100g: 304,
     unitWeights: {
       lzi: 7,
@@ -108,20 +119,12 @@ export const iOTH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 82, 0.3],
   },
 
-  vanilla_extract: {
-    name: "Ekstrakt waniliowy",
-    type: "oth",
-    kcalPer100g: 288,
-    unitWeights: {
-      ml: 1,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 12, 0],
-  },
+  //// OTHER ////
 
   citric_acid: {
     name: "Kwasek cytrynowy",
     type: "oth",
+    color: "#E0F7FA",
     kcalPer100g: 0,
     unitWeights: {
       lzi: 5,
@@ -132,6 +135,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   baking_powder: {
     name: "Proszek do pieczenia",
     type: "oth",
+    color: "#F5F5F5",
     kcalPer100g: 53,
     unitWeights: {
       lzi: 5,
@@ -142,6 +146,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   baking_soda: {
     name: "Soda oczyszczona",
     type: "oth",
+    color: "#ECEFF1",
     kcalPer100g: 0,
     unitWeights: {
       lzi: 5,
@@ -152,6 +157,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   yeast: {
     name: "Drożdże",
     type: "oth",
+    color: "#D7A86E",
     kcalPer100g: 105,
     unitWeights: {
       opak: 7,
@@ -163,6 +169,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   instant_yeast: {
     name: "Drożdże błyskawiczne",
     type: "oth",
+    color: "#C49A6C",
     kcalPer100g: 325,
     unitWeights: {
       lzi: 3,
@@ -174,6 +181,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   gelatin: {
     name: "Żelatyna",
     type: "oth",
+    color: "#E0E0E0",
     kcalPer100g: 350,
     unitWeights: {
       lzi: 2,
@@ -184,6 +192,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   food_coloring: {
     name: "Barwnik spożywczy",
     type: "oth",
+    color: "#228be6",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
@@ -193,75 +202,13 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   //
 
-  white_chocolate: {
-    name: "Biała czekolada",
-    type: "oth",
-    subType: "cho",
-    color: "#ffffff",
-    kcalPer100g: 540,
-    unitWeights: {
-      opak: 100,
-    },
-    nutrientsPer100g: [30, 59, 7],
-  },
-
-  dark_chocolate: {
-    name: "Gorzka czekolada",
-    type: "oth",
-    subType: "cho",
-    color: "#6F4E37",
-    kcalPer100g: 555,
-    unitWeights: {
-      kst: 10,
-      opak: 100,
-    },
-    nutrientsPer100g: [45, 18, 11],
-    verified: true,
-  },
-
-  chocolate_cream: {
-    name: "Krem czekoladowy",
-    type: "oth",
-    subType: "cho",
-    color: "#6F4E37",
-    kcalPer100g: 550,
-    unitWeights: {
-      opak: 400,
-    },
-    nutrientsPer100g: [34, 56.8, 2.9],
-    verified: true,
-  },
-
-  cheese_snacks: {
-    name: "Chrupki serowe",
-    type: "oth",
-    subType: "cri",
-    color: "#f59f00",
-    kcalPer100g: 513,
-    unitWeights: {
-      opak: 130,
-    },
-    nutrientsPer100g: [28, 58, 5.8],
-    verified: true,
-  },
-
-  ladyfingers: {
-    name: "Biszkopty",
-    type: "oth",
-    subType: "bis",
-    color: "#f59f00",
-    kcalPer100g: 380,
-    unitWeights: {
-      opak: 200,
-    },
-    nutrientsPer100g: [6, 72, 8],
-  },
+  
 
   rosol: {
     name: "Rosół",
     type: "oth",
     subType: "sup",
-    color: "#f59f00",
+    color: "#FFD54F",
     kcalPer100g: 35,
     unitWeights: {
       ml: 1,

@@ -1,8 +1,8 @@
 import { iMET } from "../../ingredients/ingMeat";
-import { iVEG } from "../../ingredients/ingVegetable";
 import { iFAT } from "../../ingredients/ingFat";
 import type { Recipe } from "../../types";
 import { iSPC } from "../../ingredients/ingSpice";
+import { iJAR } from "../../ingredients/ingJAR";
 
 const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",
@@ -17,8 +17,8 @@ const nuggetsyGotowe: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.chicken_nuggets, amount: 1, unit: "opak" },
-        { ingredient: iVEG.frozen_fries, amount: 150 },
-        { ingredient: iVEG.frozen_vegetable_mix, amount: 200 },
+        { ingredient: iJAR.frozen_fries, amount: 150 },
+        { ingredient: iJAR.frozen_vegetable_mix, amount: 200 },
         { ingredient: iFAT.oil, amount: 2, unit: "lzi" },
         { ingredient: iSPC.salt },
       ],

@@ -13,6 +13,7 @@ import { recipes } from "../../recipes";
 import { countIngredientUsage, IngredientTypeData } from "../../utils";
 import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
+import { iJAR } from "../../ingredients/ingJAR";
 
 type IngredientsProps = {
   setShowAllIngredients: React.Dispatch<React.SetStateAction<boolean>>;
@@ -23,9 +24,10 @@ const allGroups = [
   { label: "Zboża / Pieczywo / Ziarna", data: iGRN },
   { label: "Nabiał / Sery", data: iDIR },
   { label: "Tłuszcze", data: iFAT },
-  { label: "Warzywa / Zielenina / Przetwory / Grzyby", data: iVEG },
+  { label: "Warzywa / Zielenina  / Grzyby", data: iVEG },
   { label: "Owoce / Orzechy", data: iFRT },
   { label: "Przyprawy / Zioła / Sosy", data: iSPC },
+  { label: "Przetwory / Mrożonki / Soki", data: iJAR },
   { label: "Cukry / Gotowe / Pozostałe", data: iOTH },
 ];
 const groupedTypes = allGroups.flatMap((group) =>

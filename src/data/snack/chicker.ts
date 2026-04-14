@@ -1,7 +1,7 @@
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
-import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
@@ -25,10 +25,10 @@ const chicker: Recipe = {
     {
       title: "Sosy",
       items: [
-        { ingredient: iSPC.ketchup, amount: 1.5, unit: "lzi" },
-        { ingredient: iSPC.mustard, amount: 2, unit: "lzi" },
-        { ingredient: iSPC.mayonnaise, amount: 1, unit: "lzi" },
-        { ingredient: iSPC.sriracha, amount: 2, unit: "lzi" },
+        { ingredient: iJAR.ketchup, amount: 1.5, unit: "lzi" },
+        { ingredient: iJAR.mustard, amount: 2, unit: "lzi" },
+        { ingredient: iJAR.mayonnaise, amount: 1, unit: "lzi" },
+        { ingredient: iJAR.sriracha, amount: 2, unit: "lzi" },
         { ingredient: iOTH.honey, amount: 0.5, unit: "lzi" },
       ],
     },

@@ -1,6 +1,7 @@
 import type { IngredientItem } from "../types";
 
 type IngId =
+  //// SPICES ////
   | "salt"
   | "black_pepper"
   | "cayenne_pepper"
@@ -12,21 +13,24 @@ type IngId =
   | "curry"
   | "cinnamon"
   | "nutmeg"
+  | "allspice"
   | "black_sesame"
   | "cumin"
+
+  //// HERBS ////
   | "dill"
   | "thyme"
   | "marjoram"
   | "herbes_de_provence"
   | "wild_garlic"
   | "bay_leaf"
-  | "allspice"
   | "caraway"
   | "savory"
   | "oregano"
   | "basil"
   | "coriander"
-  | "maggi"
+
+  //// SEASONINGS ////
   | "vegetable_seasoning"
   | "potato_seasoning"
   | "gyros_spice"
@@ -34,23 +38,14 @@ type IngId =
   | "knorr_goulash_fix"
   | "knorr_chinese_fix"
   | "knorr_bolognese_fix"
-  | "ketchup"
-  | "mustard"
-  | "sarepska_mustard"
-  | "mayonnaise"
-  | "garlic_sauce"
-  | "sriracha"
-  | "barbecue_sauce"
-  | "curry_sauce"
-  | "tomato_paste"
-  | "sweet_sour_sauce"
-  | "sechuan_chili_fusion";
+  | "knorr_crispy_chicken_fix";
 
 export const iSPC: Record<IngId, IngredientItem> = {
+  //// SPICES ////
   salt: {
     name: "Sól",
     type: "spc",
-    color: "#ffffff",
+    color: "#FAFAFA",
     kcalPer100g: 0,
     unitWeights: {
       lzi: 5,
@@ -61,6 +56,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   black_pepper: {
     name: "Pieprz",
     type: "spc",
+    color: "#444444",
     kcalPer100g: 251,
     unitWeights: {
       lzi: 2,
@@ -71,7 +67,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
 
   cayenne_pepper: {
     name: "Pieprz cayenne",
-    color: "#f03e3e",
+    color: "#D32F2F",
     type: "spc",
     kcalPer100g: 318,
     unitWeights: {
@@ -83,7 +79,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   granulated_garlic: {
     name: "Czosnek granulowany",
     type: "spc",
-    color: "#ffffff",
+    color: "#F5E6C8",
     kcalPer100g: 331,
     unitWeights: {
       lzi: 3,
@@ -94,7 +90,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   sweet_paprika: {
     name: "Papryka słodka",
     type: "spc",
-    color: "#f03e3e",
+    color: "#E53935",
     kcalPer100g: 282,
     unitWeights: {
       lzi: 2,
@@ -105,7 +101,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   hot_paprika: {
     name: "Papryka ostra",
     type: "spc",
-    color: "#f03e3e",
+    color: "#C62828",
     kcalPer100g: 282,
     unitWeights: {
       lzi: 2,
@@ -116,7 +112,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   smoked_paprika: {
     name: "Papryka wędzona",
     type: "spc",
-    color: "#f03e3e",
+    color: "#8D3B2E",
     kcalPer100g: 282,
     unitWeights: {
       lzi: 2,
@@ -127,7 +123,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   chilli: {
     name: "Chilli",
     type: "spc",
-    color: "#f03e3e",
+    color: "#B71C1C",
     kcalPer100g: 40,
     unitWeights: {
       lzi: 2,
@@ -138,7 +134,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   curry: {
     name: "Curry",
     type: "spc",
-    color: "#fcc419",
+    color: "#FBC02D",
     kcalPer100g: 325,
     unitWeights: {
       lzi: 2,
@@ -149,7 +145,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   cinnamon: {
     name: "Cynamon",
     type: "spc",
-    color: "#b79268",
+    color: "#8D6E63",
     kcalPer100g: 247,
     unitWeights: {
       lzi: 2,
@@ -160,7 +156,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   nutmeg: {
     name: "Gałka muszkatołowa",
     type: "spc",
-    color: "#b79268",
+    color: "#A1887F",
     kcalPer100g: 525,
     unitWeights: {
       ziar: 0.2,
@@ -171,6 +167,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   allspice: {
     name: "Ziele angielskie",
     type: "spc",
+    color: "#6D4C41",
     kcalPer100g: 263,
     unitWeights: {
       ziar: 0.2,
@@ -181,6 +178,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   black_sesame: {
     name: "Czarny sezam",
     type: "spc",
+    color: "#4F4F4F",
     kcalPer100g: 573,
     unitWeights: {
       lzi: 3,
@@ -191,7 +189,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   cumin: {
     name: "Kumin rzymski",
     type: "spc",
-    color: "#fcc419",
+    color: "#C19A6B",
     kcalPer100g: 375,
     unitWeights: {
       lzi: 2,
@@ -199,12 +197,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [22, 44, 18],
   },
 
-  ///////////////////////////////////////
+  //// SEASONINGS ////
 
   vegetable_seasoning: {
     name: "Jarzynka",
     type: "spc",
-    color: "#fcc419",
+    color: "#FCC419",
     kcalPer100g: 200,
     unitWeights: {
       lzi: 3,
@@ -215,7 +213,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   potato_seasoning: {
     name: "Przyprawa do ziemniaków",
     type: "spc",
-    color: "#f76707",
+    color: "#F76707",
     kcalPer100g: 250,
     unitWeights: {
       lz: 10,
@@ -227,7 +225,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   gyros_spice: {
     name: "Przyprawa gyros",
     type: "spc",
-    color: "#f76707",
+    color: "#C96F3B",
     kcalPer100g: 280,
     unitWeights: {
       lz: 10,
@@ -239,7 +237,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   knorr_bouillon_cube: {
     name: "Kostka rosołowa Knorr",
     type: "spc",
-    color: "#fcc419",
+    color: "#FFEB3B",
     kcalPer100g: 6,
     unitWeights: {
       opak: 120,
@@ -251,6 +249,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   knorr_goulash_fix: {
     name: "Fix Knorr gulasz węgierski",
     type: "spc",
+    color: "#D84315",
     kcalPer100g: 92,
     unitWeights: {
       opak: 40,
@@ -262,6 +261,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   knorr_chinese_fix: {
     name: "Fix Knorr do dań po chińsku",
     type: "spc",
+    color: "#FF7043",
     kcalPer100g: 250,
     unitWeights: {
       opak: 40,
@@ -270,8 +270,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_bolognese_fix: {
-    name: "Fix Knorr Bolognese",
+    name: "Fix Knorr bolognese",
     type: "spc",
+    color: "#C62828",
     kcalPer100g: 141,
     unitWeights: {
       opak: 40,
@@ -280,13 +281,25 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  ///////////////////////////////////////
+  knorr_crispy_chicken_fix: {
+    name: "Fix Knorr chrupiący kurczak",
+    type: "spc",
+    color: "#FBC02D",
+    kcalPer100g: 342,
+    unitWeights: {
+      opak: 70,
+    },
+    nutrientsPer100g: [1.6, 68, 12],
+    verified: true,
+  },
+
+  //// HERBS ////
 
   dill: {
     name: "Koperek",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#4CAF50",
     kcalPer100g: 43,
     unitWeights: {
       lzi: 1,
@@ -299,7 +312,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Tymianek",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#6D8F4E",
     kcalPer100g: 276,
     unitWeights: {
       lzi: 1,
@@ -312,7 +325,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Majeranek",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#7CB342",
     kcalPer100g: 271,
     unitWeights: {
       lzi: 1,
@@ -325,7 +338,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Zioła prowansalskie",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#8BC34A",
     kcalPer100g: 241,
     unitWeights: {
       lzi: 1,
@@ -338,7 +351,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Czosnek niedźwiedzi",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#66BB6A",
     kcalPer100g: 42,
     unitWeights: {
       lzi: 1,
@@ -351,7 +364,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Liść laurowy",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#5D8C3A",
     kcalPer100g: 313,
     unitWeights: {
       lst: 1,
@@ -364,7 +377,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Kminek",
     type: "spc",
     subType: "hrb",
-    color: "#b79268",
+    color: "#795548",
     kcalPer100g: 333,
     unitWeights: {
       lzi: 1,
@@ -377,7 +390,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Cząber",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#689F38",
     kcalPer100g: 287,
     unitWeights: {
       lzi: 1,
@@ -390,7 +403,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Oregano",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#558B2F",
     kcalPer100g: 306,
     unitWeights: {
       lzi: 1,
@@ -403,7 +416,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Bazylia",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#2E7D32",
     kcalPer100g: 233,
     unitWeights: {
       lzi: 1,
@@ -416,179 +429,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Kolendra",
     type: "spc",
     subType: "hrb",
-    color: "#40c057",
+    color: "#81C784",
     kcalPer100g: 298,
     unitWeights: {
       lzi: 1,
       lz: 3,
     },
     nutrientsPer100g: [18, 55, 12],
-  },
-
-  ///////////////////////////////////////
-
-  ketchup: {
-    name: "Ketchup",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 109,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 25, 1.7],
-    verified: true,
-  },
-
-  mustard: {
-    name: "Musztarda",
-    type: "spc",
-    subType: "sau",
-    color: "#fcc419",
-    kcalPer100g: 96,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [5.5, 3.1, 5.2],
-    verified: true,
-  },
-
-  sarepska_mustard: {
-    name: "Musztarda sarepska",
-    type: "spc",
-    subType: "sau",
-    color: "#fcc419",
-    kcalPer100g: 101,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [5.1, 8.3, 3.7],
-    verified: true,
-  },
-
-  mayonnaise: {
-    name: "Majonez",
-    type: "spc",
-    subType: "sau",
-    color: "#ffffff",
-    kcalPer100g: 631,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-      opak: 500,
-    },
-    nutrientsPer100g: [68, 2.3, 1.9],
-    verified: true,
-  },
-
-  garlic_sauce: {
-    name: "Sos czosnkowy",
-    type: "spc",
-    subType: "sau",
-    color: "#ffffff",
-    kcalPer100g: 371,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [35, 11, 1.9],
-    verified: true,
-  },
-
-  sriracha: {
-    name: "Sos sriracha",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 87,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0.5, 19, 1.6],
-    verified: true,
-  },
-
-  barbecue_sauce: {
-    name: "Sos barbecue",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 142,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0.2, 34, 0.8],
-    verified: true,
-  },
-
-  curry_sauce: {
-    name: "Sos curry",
-    type: "spc",
-    subType: "sau",
-    color: "#f76707",
-    kcalPer100g: 328,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [28, 18, 1.6],
-    verified: true,
-  },
-
-  tomato_paste: {
-    name: "Koncentrat pomidorowy",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 82,
-    unitWeights: {
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0.3, 18, 4],
-  },
-
-  maggi: {
-    name: "Maggi",
-    type: "spc",
-    subType: "sau",
-    color: "#868e96",
-    kcalPer100g: 16,
-    unitWeights: {
-      ml: 1,
-      lz: 15,
-    },
-    nutrientsPer100g: [0, 3, 1],
-  },
-
-  ///////////////////////////////////////
-
-  sweet_sour_sauce: {
-    name: "Sos słodko-kwaśny",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 120,
-    unitWeights: {
-      opak: 250,
-    },
-    nutrientsPer100g: [2, 24, 1],
-  },
-
-  sechuan_chili_fusion: {
-    name: "Seczuański chili fusion",
-    type: "spc",
-    subType: "sau",
-    color: "#f03e3e",
-    kcalPer100g: 71,
-    unitWeights: {
-      opak: 400,
-    },
-    nutrientsPer100g: [0, 18, 1],
   },
 };

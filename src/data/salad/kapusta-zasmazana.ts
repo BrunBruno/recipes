@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -17,7 +18,7 @@ const kapustaZasmazana: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iVEG.sauerkraut, amount: 1000 },
+        { ingredient: iJAR.sauerkraut, amount: 1000 },
         { ingredient: iVEG.onion, amount: 2, unit: "szt" },
         { ingredient: iVEG.carrot, amount: 1, unit: "szt" },
         { ingredient: iOTH.water, amount: 750, unit: "ml" },

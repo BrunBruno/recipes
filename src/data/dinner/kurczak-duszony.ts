@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -25,9 +26,9 @@ const gotowanyKurczak: Recipe = {
         { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
         { ingredient: iGRN.flour, amount: 1, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
+        { ingredient: iJAR.maggi },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.wild_garlic },
-        { ingredient: iSPC.maggi },
         { ingredient: iSPC.curry },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
@@ -37,7 +38,7 @@ const gotowanyKurczak: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
+        { ingredient: iJAR.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

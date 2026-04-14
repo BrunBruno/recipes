@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -19,7 +20,7 @@ const spaghettiPomidorowe: Recipe = {
       title: "",
       items: [
         { ingredient: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ingredient: iVEG.canned_tomatoes, amount: 2, unit: "opak" },
+        { ingredient: iJAR.canned_tomatoes, amount: 2, unit: "opak" },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
         { ingredient: iDIR.yellow_cheese, amount: portions * 50 },
         { ingredient: iFAT.butter, amount: 1, unit: "lzi" },

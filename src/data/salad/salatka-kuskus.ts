@@ -1,4 +1,5 @@
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -19,9 +20,9 @@ const salatkaKuskus: Recipe = {
         { ingredient: iGRN.couscous, amount: 1, unit: "opak" },
         { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iMET.canned_tuna, amount: 2, unit: "opak" },
-        { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
+        { ingredient: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-        { ingredient: iSPC.mayonnaise, amount: 1, unit: "opak" },
+        { ingredient: iJAR.mayonnaise, amount: 1, unit: "opak" },
         { ingredient: iSPC.salt },
         { ingredient: iSPC.black_pepper },
       ],

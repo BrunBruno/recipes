@@ -2,6 +2,7 @@ import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
 import { iFRT } from "./ingredients/ingFruit";
 import { iGRN } from "./ingredients/ingGrain";
+import { iJAR } from "./ingredients/ingJAR";
 import { iMET } from "./ingredients/ingMeat";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
@@ -25,6 +26,7 @@ export const ingredientCollections = [
   iOTH,
   iSPC,
   iVEG,
+  iJAR,
 ];
 
 type DictRecord = {
@@ -48,6 +50,7 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   frt: { label: "Owoce", color: "#40c057" },
   grn: { label: "Zboża", color: "#fcc419" },
   spc: { label: "Przyprawy", color: "#868e96" },
+  jar: { label: "Przetwory", color: "#40c057" },
   oth: { label: "Inne", color: "#ced4da" },
 };
 
@@ -347,19 +350,9 @@ export const countIngredientTypes = () => {
     frt: 0,
     grn: 0,
     spc: 0,
+    jar: 0,
     oth: 0,
   };
-
-  const ingredientCollections = [
-    iDIR,
-    iFAT,
-    iFRT,
-    iGRN,
-    iMET,
-    iOTH,
-    iSPC,
-    iVEG,
-  ];
 
   for (const collection of ingredientCollections) {
     for (const ingredient of Object.values(collection)) {

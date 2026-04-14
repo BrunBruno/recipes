@@ -1,5 +1,6 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -23,7 +24,7 @@ const kurczakZPomidorem: Recipe = {
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ingredient: iDIR.cream_18, amount: 1, unit: "lz" },
-        { ingredient: iSPC.mayonnaise, amount: 1, unit: "lz" },
+        { ingredient: iJAR.mayonnaise, amount: 1, unit: "lz" },
         { ingredient: iFAT.olive, amount: 2, unit: "lz" },
         { ingredient: iSPC.herbes_de_provence },
         { ingredient: iSPC.wild_garlic },
@@ -38,7 +39,7 @@ const kurczakZPomidorem: Recipe = {
         { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iFAT.butter, amount: 1.5, unit: "lzi" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_shredded, amount: portions * 150 },
+        { ingredient: iJAR.beets_shredded, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

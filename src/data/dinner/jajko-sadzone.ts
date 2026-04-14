@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -25,7 +26,7 @@ const jajkoSadzone: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: 200 },
-        { ingredient: iVEG.canned_peas, amount: 100 },
+        { ingredient: iJAR.canned_peas, amount: 100 },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },

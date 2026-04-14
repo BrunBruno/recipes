@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -21,11 +22,11 @@ const roladaWieprzowa: Recipe = {
         { ingredient: iMET.pork_ham, amount: 1, unit: "opak" },
         { ingredient: iMET.bacon_block, amount: 0.5, unit: "opak" },
         { ingredient: iMET.sausage, amount: 0.5, unit: "peto" },
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour },
         { ingredient: iDIR.cream_18 },
-        { ingredient: iSPC.sarepska_mustard },
+        { ingredient: iJAR.sarepska_mustard },
         { ingredient: iFAT.margarine },
         { ingredient: iFAT.butter },
         { ingredient: iSPC.salt },

@@ -1,6 +1,6 @@
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 3;
@@ -17,7 +17,7 @@ const palkiBarbecue: Recipe = {
       title: "Składniki na kurczaka",
       items: [
         { ingredient: iMET.chicken_drums, amount: 2, unit: "opak" },
-        { ingredient: iSPC.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
+        { ingredient: iJAR.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
         { ingredient: iSPC.sweet_paprika },
         { ingredient: iSPC.hot_paprika },
         { ingredient: iSPC.smoked_paprika },
@@ -27,9 +27,9 @@ const palkiBarbecue: Recipe = {
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.frozen_fries, amount: portions * 150 },
+        { ingredient: iJAR.frozen_fries, amount: portions * 150 },
         {
-          ingredient: iVEG.pickled_cucumber,
+          ingredient: iJAR.pickled_cucumber,
           amount: portions * 2,
           unit: "szt",
         },

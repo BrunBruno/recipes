@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -36,7 +37,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.corn_salad, amount: portions * 200 },
+        { ingredient: iJAR.corn_salad, amount: portions * 200 },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],

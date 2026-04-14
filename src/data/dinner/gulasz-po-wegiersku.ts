@@ -1,9 +1,9 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 3;
@@ -29,7 +29,7 @@ const gulaszPoWegiersku: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iGRN.gnocchi, amount: portions * 250 },
-        { ingredient: iVEG.fried_beets, amount: portions * 150 },
+        { ingredient: iJAR.fried_beets, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

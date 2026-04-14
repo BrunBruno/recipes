@@ -1,8 +1,8 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
@@ -21,7 +21,7 @@ const gotowyBurger: Recipe = {
         { ingredient: iVEG.tomato, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.pickled_cucumber, amount: 1, unit: "szt" },
+        { ingredient: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
     },
     {
@@ -30,7 +30,7 @@ const gotowyBurger: Recipe = {
         { ingredient: iMET.bacon_slices, amount: 4, unit: "plas" },
         { ingredient: iMET.egg, amount: 2, unit: "szt" },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ingredient: iVEG.fried_onion, amount: 2, unit: "lz" },
+        { ingredient: iJAR.fried_onion, amount: 2, unit: "lz" },
       ],
     },
     {
@@ -39,8 +39,8 @@ const gotowyBurger: Recipe = {
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
         { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
         { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plas" },
-        { ingredient: iSPC.mayonnaise, amount: 4, unit: "lzi" },
-        { ingredient: iSPC.ketchup, amount: 4, unit: "lzi" },
+        { ingredient: iJAR.mayonnaise, amount: 4, unit: "lzi" },
+        { ingredient: iJAR.ketchup, amount: 4, unit: "lzi" },
       ],
     },
   ],

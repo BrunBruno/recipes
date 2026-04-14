@@ -1,8 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const sandwich: Recipe = {
@@ -21,9 +20,9 @@ const sandwich: Recipe = {
         { ingredient: iMET.ham_slices, amount: 2, unit: "plas" },
         { ingredient: iMET.salami, amount: 2, unit: "plas", alt: true },
         { ingredient: iDIR.yellow_cheese, amount: 2, unit: "plas" },
-        { ingredient: iVEG.pickled_cucumber, amount: 0.5, unit: "szt" },
-        { ingredient: iSPC.ketchup },
-        { ingredient: iSPC.garlic_sauce },
+        { ingredient: iJAR.pickled_cucumber, amount: 0.5, unit: "szt" },
+        { ingredient: iJAR.ketchup },
+        { ingredient: iJAR.garlic_sauce },
       ],
     },
   ],

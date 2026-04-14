@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -19,7 +20,7 @@ const kurczakPoSeczuansku: Recipe = {
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iGRN.bulgur, amount: portions * 80 },
-        { ingredient: iSPC.sechuan_chili_fusion, amount: 1, unit: "opak" },
+        { ingredient: iJAR.sechuan_chili_fusion, amount: 1, unit: "opak" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.chilli },
         { ingredient: iSPC.salt },

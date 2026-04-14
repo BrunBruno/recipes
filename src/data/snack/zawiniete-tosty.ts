@@ -1,7 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
 const zawinieteTosty: Recipe = {
@@ -19,8 +19,8 @@ const zawinieteTosty: Recipe = {
         { ingredient: iGRN.toast_bread, amount: 8, unit: "krom" },
         { ingredient: iDIR.yellow_cheese, amount: 8, unit: "plas" },
         { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
-        { ingredient: iSPC.mayonnaise, amount: 1, unit: "lzi" },
-        { ingredient: iSPC.ketchup, amount: 1, unit: "lzi" },
+        { ingredient: iJAR.mayonnaise, amount: 1, unit: "lzi" },
+        { ingredient: iJAR.ketchup, amount: 1, unit: "lzi" },
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
       ],
     },

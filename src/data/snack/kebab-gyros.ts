@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -27,8 +28,8 @@ const kebabGyros: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-        { ingredient: iVEG.canned_corn, amount: 1, unit: "opak" },
+        { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ingredient: iVEG.radish, amount: 1, unit: "opak" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 10, unit: "szt" },
@@ -37,7 +38,7 @@ const kebabGyros: Recipe = {
     {
       title: "Sos",
       items: [
-        { ingredient: iSPC.mayonnaise, amount: 2, unit: "lz" },
+        { ingredient: iJAR.mayonnaise, amount: 2, unit: "lz" },
         { ingredient: iDIR.yogurt_natural, amount: 150 },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
       ],

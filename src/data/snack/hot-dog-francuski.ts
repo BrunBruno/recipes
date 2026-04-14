@@ -1,6 +1,6 @@
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
 const frenchHotDog: Recipe = {
@@ -17,10 +17,10 @@ const frenchHotDog: Recipe = {
       items: [
         { ingredient: iMET.sausages, amount: 2, unit: "szt" },
         { ingredient: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
-        { ingredient: iSPC.ketchup, amount: 10 },
-        { ingredient: iSPC.garlic_sauce, amount: 10 },
-        { ingredient: iSPC.mustard, amount: 10 },
-        { ingredient: iSPC.sriracha, amount: 10 },
+        { ingredient: iJAR.ketchup, amount: 10 },
+        { ingredient: iJAR.garlic_sauce, amount: 10 },
+        { ingredient: iJAR.mustard, amount: 10 },
+        { ingredient: iJAR.sriracha, amount: 10 },
       ],
     },
   ],

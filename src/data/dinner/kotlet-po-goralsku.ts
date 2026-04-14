@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -36,7 +37,7 @@ const kotletPoGoralsku: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.sauerkraut, amount: portions * 120 },
+        { ingredient: iJAR.sauerkraut, amount: portions * 120 },
         { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ingredient: iSPC.dill },
         { ingredient: iSPC.black_pepper },

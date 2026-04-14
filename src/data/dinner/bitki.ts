@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -40,7 +41,7 @@ const bitki: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.beets_shredded, amount: portions * 150 },
+        { ingredient: iJAR.beets_shredded, amount: portions * 150 },
         { ingredient: iSPC.salt },
       ],
     },

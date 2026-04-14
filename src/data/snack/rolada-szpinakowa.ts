@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -18,7 +19,7 @@ const roladaSzpinakowa: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iVEG.frozen_spinach, amount: 1, unit: "opak" },
+        { ingredient: iJAR.frozen_spinach, amount: 1, unit: "opak" },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
         { ingredient: iMET.egg, amount: 4, unit: "szt" },
         { ingredient: iMET.smoked_salmon, amount: 250 },

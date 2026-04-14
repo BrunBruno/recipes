@@ -1,7 +1,6 @@
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const hotHog: Recipe = {
@@ -18,12 +17,12 @@ const hotHog: Recipe = {
       items: [
         { ingredient: iMET.sausages, amount: 4, unit: "szt" },
         { ingredient: iGRN.hotdog_buns, amount: 4, unit: "szt" },
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-        { ingredient: iVEG.sauerkraut, amount: 160 },
-        { ingredient: iVEG.fried_onion, amount: 2, unit: "lz" },
-        { ingredient: iSPC.ketchup, amount: 20 },
-        { ingredient: iSPC.mustard, amount: 20 },
-        { ingredient: iSPC.garlic_sauce, amount: 20 },
+        { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iJAR.sauerkraut, amount: 160 },
+        { ingredient: iJAR.fried_onion, amount: 2, unit: "lz" },
+        { ingredient: iJAR.ketchup, amount: 20 },
+        { ingredient: iJAR.mustard, amount: 20 },
+        { ingredient: iJAR.garlic_sauce, amount: 20 },
       ],
     },
   ],

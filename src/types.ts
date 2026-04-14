@@ -1,5 +1,3 @@
-// iMET, iDIR, iFAT, iGRN, iVEG, iSPC, iOTH
-
 export type MealType =
   | "dinner"
   | "snack"
@@ -16,6 +14,7 @@ export type IngredientType =
   | "frt" // fruits / nuts
   | "grn" // grains / bakery
   | "spc" // spices
+  | "jar" // preserves / juices / sauces
   | "oth"; // other / sugars / water
 
 export type UnitType =

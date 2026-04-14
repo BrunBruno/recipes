@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -19,7 +20,7 @@ const kurczakSlodkoKwasny: Recipe = {
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
         { ingredient: iGRN.rice, amount: portions * 100 },
-        { ingredient: iSPC.sweet_sour_sauce, amount: 1, unit: "opak" },
+        { ingredient: iJAR.sweet_sour_sauce, amount: 1, unit: "opak" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
         { ingredient: iSPC.salt },
       ],

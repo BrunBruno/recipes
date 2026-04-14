@@ -1,3 +1,4 @@
+import { iJAR } from "../../ingredients/ingJAR";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -19,7 +20,7 @@ const barszczCzerwony: Recipe = {
         { ingredient: iOTH.water, amount: 700, unit: "ml" },
         { ingredient: iOTH.rosol, amount: 300, unit: "ml" },
         { ingredient: iOTH.citric_acid, amount: 0.5, unit: "lzi" },
-        { ingredient: iSPC.maggi },
+        { ingredient: iJAR.maggi },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],

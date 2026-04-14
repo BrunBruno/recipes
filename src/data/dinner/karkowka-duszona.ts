@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -19,7 +20,7 @@ const karkowkaDuszona: Recipe = {
       items: [
         { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
         { ingredient: iFAT.oil, amount: 5, unit: "lz" },
-        { ingredient: iSPC.sarepska_mustard, amount: 10, unit: "lzi" },
+        { ingredient: iJAR.sarepska_mustard, amount: 10, unit: "lzi" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
@@ -29,7 +30,7 @@ const karkowkaDuszona: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iVEG.coleslaw, amount: 2, unit: "opak" },
+        { ingredient: iJAR.coleslaw, amount: 2, unit: "opak" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],

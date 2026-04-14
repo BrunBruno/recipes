@@ -1,6 +1,6 @@
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const kajzerkiZPasztetem: Recipe = {
@@ -17,7 +17,7 @@ const kajzerkiZPasztetem: Recipe = {
       items: [
         { ingredient: iGRN.kaiser_roll, amount: 2, unit: "szt" },
         { ingredient: iMET.meat_spread, amount: 80 },
-        { ingredient: iVEG.pickled_cucumber, amount: 1, unit: "szt" },
+        { ingredient: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
     },
   ],

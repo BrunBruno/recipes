@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const paluszkiRybne: Recipe = {
@@ -18,8 +18,8 @@ const paluszkiRybne: Recipe = {
       items: [
         { ingredient: iMET.fish_sticks, amount: 5, unit: "szt" },
         { ingredient: iFAT.oil, amount: 1, unit: "lzi" },
-        { ingredient: iVEG.frozen_fries, amount: 200 },
-        { ingredient: iVEG.fried_beets, amount: 150 },
+        { ingredient: iJAR.frozen_fries, amount: 200 },
+        { ingredient: iJAR.fried_beets, amount: 150 },
         { ingredient: iSPC.salt },
       ],
     },

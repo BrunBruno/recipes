@@ -1,5 +1,6 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -19,7 +20,7 @@ const kurczakZeSzpinakiem: Recipe = {
       title: "Kurczak",
       items: [
         { ingredient: iMET.chicken_breast, amount: 400 },
-        { ingredient: iVEG.frozen_spinach, amount: 100 },
+        { ingredient: iJAR.frozen_spinach, amount: 100 },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },
         { ingredient: iDIR.cream_18, amount: 100, unit: "ml" },
@@ -35,7 +36,7 @@ const kurczakZeSzpinakiem: Recipe = {
         { ingredient: iVEG.potato, amount: portions * 200 },
         { ingredient: iFAT.butter, amount: 1.5, unit: "lzi" },
         { ingredient: iDIR.milk, amount: 100, unit: "ml" },
-        { ingredient: iVEG.beets_whole_vinegar, amount: portions * 100 },
+        { ingredient: iJAR.beets_whole_vinegar, amount: portions * 100 },
         { ingredient: iSPC.salt },
       ],
     },

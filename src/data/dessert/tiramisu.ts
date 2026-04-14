@@ -18,7 +18,7 @@ const tiramisu: Recipe = {
       items: [
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
         { ingredient: iDIR.mascarpone, amount: 500 },
-        { ingredient: iOTH.ladyfingers, amount: 2, unit: "opak" },
+        { ingredient: iGRN.ladyfingers, amount: 2, unit: "opak" },
         { ingredient: iOTH.sugar, amount: 150 },
         { ingredient: iGRN.cocoa, amount: 2, unit: "lz" },
         { ingredient: iGRN.grain_coffee, amount: 1, unit: "lz" },

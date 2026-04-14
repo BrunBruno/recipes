@@ -1,3 +1,4 @@
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -18,9 +19,9 @@ const salatkaJarzynowa: Recipe = {
         { ingredient: iVEG.carrot, amount: 3, unit: "szt" },
         { ingredient: iVEG.parsley_root, amount: 1, unit: "szt" },
         { ingredient: iVEG.celery_root, amount: 1, unit: "szt" },
-        { ingredient: iVEG.canned_peas, amount: 1, unit: "opak" },
+        { ingredient: iJAR.canned_peas, amount: 1, unit: "opak" },
         { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iSPC.mayonnaise, amount: 1, unit: "opak" },
+        { ingredient: iJAR.mayonnaise, amount: 1, unit: "opak" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],

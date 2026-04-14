@@ -1,8 +1,8 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -30,7 +30,7 @@ const burgerDrwala: Recipe = {
       title: "Ser",
       items: [
         { ingredient: iDIR.lilliputian_cheese, amount: 350 },
-        { ingredient: iOTH.cheese_snacks, amount: 1, unit: "opak" },
+        { ingredient: iGRN.cheese_snacks, amount: 1, unit: "opak" },
         { ingredient: iGRN.breadcrumbs, amount: "0-2", unit: "lz" },
         { ingredient: iMET.egg, amount: "1-2", unit: "szt" },
         { ingredient: iFAT.oil, amount: 2, unit: "lz" },
@@ -45,16 +45,16 @@ const burgerDrwala: Recipe = {
         { ingredient: iVEG.onion, amount: 0.5, unit: "szt", alt: true },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
-        { ingredient: iVEG.fried_onion },
+        { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iJAR.fried_onion },
       ],
     },
     {
       title: "Sos",
       items: [
-        { ingredient: iSPC.ketchup, amount: portions * 1, unit: "lzi" },
-        { ingredient: iSPC.mustard, amount: portions * 2, unit: "lzi" },
-        { ingredient: iSPC.mayonnaise, amount: portions * 1, unit: "lzi" },
+        { ingredient: iJAR.ketchup, amount: portions * 1, unit: "lzi" },
+        { ingredient: iJAR.mustard, amount: portions * 2, unit: "lzi" },
+        { ingredient: iJAR.mayonnaise, amount: portions * 1, unit: "lzi" },
       ],
     },
   ],

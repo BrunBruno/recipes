@@ -1,8 +1,8 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const pieczenWieprzowa: Recipe = {
@@ -18,7 +18,7 @@ const pieczenWieprzowa: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.pork_shoulder, amount: 500 },
-        { ingredient: iSPC.mustard, amount: 2, unit: "lz" },
+        { ingredient: iJAR.mustard, amount: 2, unit: "lz" },
         { ingredient: iFAT.oil, amount: 4, unit: "lz" },
         { ingredient: iSPC.marjoram, amount: 2, unit: "lzi" },
         { ingredient: iSPC.granulated_garlic, amount: 1, unit: "lzi" },
@@ -30,7 +30,7 @@ const pieczenWieprzowa: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iGRN.buckwheat, amount: 300 },
-        { ingredient: iVEG.pickled_cucumber_vinegar, amount: 200 },
+        { ingredient: iJAR.pickled_cucumber_vinegar, amount: 200 },
       ],
     },
   ],

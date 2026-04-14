@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -24,7 +25,7 @@ const sosPieczarkowy: Recipe = {
         { ingredient: iGRN.flour, amount: 1, unit: "lz" },
         { ingredient: iOTH.water, amount: 0.5, unit: "szk" },
         { ingredient: iFAT.butter },
-        { ingredient: iSPC.maggi },
+        { ingredient: iJAR.maggi },
         { ingredient: iSPC.vegetable_seasoning },
       ],
     },

@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -33,7 +34,7 @@ const kebab: Recipe = {
       title: "Sos",
       items: [
         { ingredient: iDIR.greek_yogurt, amount: 5, unit: "lz" },
-        { ingredient: iSPC.mayonnaise, amount: 2, unit: "lz" },
+        { ingredient: iJAR.mayonnaise, amount: 2, unit: "lz" },
         { ingredient: iVEG.garlic, amount: 2, unit: "zbk" },
         { ingredient: iSPC.granulated_garlic },
         { ingredient: iSPC.cumin },
@@ -52,7 +53,7 @@ const kebab: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ingredient: iVEG.pickled_cucumber, amount: 2, unit: "szt" },
+        { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ingredient: iVEG.chinese_cabbage, amount: 0.25, unit: "szt" },
         { ingredient: iVEG.red_cabbage, amount: 0.25, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },

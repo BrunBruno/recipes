@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -53,7 +54,7 @@ const tacos: Recipe = {
         { ingredient: iVEG.chili_pepper, amount: 1, unit: "szt" },
         { ingredient: iFRT.avocado, amount: 1, unit: "szt" },
         { ingredient: iFRT.lime, amount: 1, unit: "szt" },
-        { ingredient: iFRT.lime_juice, amount: 50, unit: "ml", alt: true },
+        { ingredient: iJAR.lime_juice, amount: 50, unit: "ml", alt: true },
         { ingredient: iSPC.coriander },
       ],
     },

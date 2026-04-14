@@ -1,5 +1,6 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -18,7 +19,7 @@ const pomidorowa: Recipe = {
       title: "",
       items: [
         { ingredient: iOTH.rosol, amount: 700 },
-        { ingredient: iVEG.tomato_puree, amount: 200 },
+        { ingredient: iJAR.tomato_puree, amount: 200 },
         { ingredient: iFAT.butter, amount: 1, unit: "lz" },
         { ingredient: iDIR.cream_30, amount: 80 },
         { ingredient: iVEG.parsley, amount: 10 },

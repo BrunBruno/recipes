@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -16,20 +17,26 @@ const zapiekankaBolognese: Recipe = {
   portions: 4,
   ingredients: [
     {
-      title: "",
+      title: "Farsz",
       items: [
-        { ingredient: iGRN.fusilli_pasta, amount: 400 },
         { ingredient: iMET.ground_pork, amount: 400 },
         { ingredient: iVEG.mushrooms, amount: 250 },
         { ingredient: iVEG.tomato, amount: "1-2", unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iVEG.bell_pepper, amount: 1, unit: "szt" },
-        { ingredient: iDIR.yellow_cheese, amount: 200 },
-        { ingredient: iSPC.tomato_paste, amount: 2, unit: "lzi" },
+        { ingredient: iJAR.tomato_paste, amount: 2, unit: "lzi" },
         { ingredient: iFAT.oil, amount: 3, unit: "lz" },
         { ingredient: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },
         { ingredient: iSPC.allspice, amount: 3, unit: "ziar" },
         { ingredient: iSPC.bay_leaf, amount: 2, unit: "lst" },
+      ],
+    },
+    {
+      title: "Zapiekanka",
+      items: [
+        { ingredient: iGRN.fusilli_pasta, amount: 400 },
+        { ingredient: iDIR.yellow_cheese, amount: 200 },
+        { ingredient: iSPC.salt },
       ],
     },
   ],

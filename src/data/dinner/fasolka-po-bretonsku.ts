@@ -1,3 +1,4 @@
+import { iJAR } from "../../ingredients/ingJAR";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -24,7 +25,7 @@ const fasolkaPoBretonsku: Recipe = {
         { ingredient: iVEG.parsley_root, amount: 100 },
         { ingredient: iVEG.leek, amount: 100 },
         { ingredient: iVEG.celery_root, amount: 100 },
-        { ingredient: iSPC.tomato_paste, amount: 1, unit: "lz" },
+        { ingredient: iJAR.tomato_paste, amount: 1, unit: "lz" },
         { ingredient: iSPC.marjoram },
         { ingredient: iSPC.bay_leaf },
         { ingredient: iSPC.allspice },
