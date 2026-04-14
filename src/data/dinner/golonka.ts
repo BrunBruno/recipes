@@ -2,7 +2,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 
 const portions = 2;
 const golonka: Recipe = {

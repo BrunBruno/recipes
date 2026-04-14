@@ -1,7 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 

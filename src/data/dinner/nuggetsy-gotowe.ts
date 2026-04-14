@@ -2,7 +2,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iFAT } from "../../ingredients/ingFat";
 import type { Recipe } from "../../types";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 
 const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",

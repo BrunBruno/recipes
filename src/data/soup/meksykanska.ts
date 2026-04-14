@@ -1,5 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";

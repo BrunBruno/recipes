@@ -2,7 +2,7 @@ import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
 import { iFRT } from "./ingredients/ingFruit";
 import { iGRN } from "./ingredients/ingGrain";
-import { iJAR } from "./ingredients/ingJAR";
+import { iJAR } from "./ingredients/ingJar";
 import { iMET } from "./ingredients/ingMeat";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
@@ -47,11 +47,11 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   dir: { label: "Nabiał", color: "#ffffff" },
   fat: { label: "Tłuszcze", color: "#fcc419" },
   veg: { label: "Warzywa", color: "#40c057" },
-  frt: { label: "Owoce", color: "#40c057" },
-  grn: { label: "Zboża", color: "#fcc419" },
-  spc: { label: "Przyprawy", color: "#868e96" },
-  jar: { label: "Przetwory", color: "#40c057" },
-  oth: { label: "Inne", color: "#ced4da" },
+  frt: { label: "Owoce", color: "#74b816" },
+  grn: { label: "Zboża", color: "#f76707" },
+  spc: { label: "Przyprawy", color: "#495057" },
+  jar: { label: "Przetwory", color: "#ae3ec9" },
+  oth: { label: "Inne", color: "#dee2e6" },
 };
 
 export const kcalTopColors = [
@@ -90,12 +90,18 @@ const rgbToHex = ([r, g, b]: number[]) => {
   return "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("");
 };
 
-export const interpolateColor = (kcal: number, min: number, max: number) => {
+export const interpolateColor = (
+  kcal: number,
+  min: number,
+  max: number,
+  startColor?: string,
+  endColor?: string,
+) => {
   const mid = (min + max) / 2;
 
-  const green = hexToRgb("#087f5b");
+  const green = hexToRgb(startColor ? startColor : "#087f5b");
   const white = hexToRgb("#FFFFFF");
-  const red = hexToRgb("#c92a2a");
+  const red = hexToRgb(endColor ? endColor : "#c92a2a");
 
   let t: number;
   let start: number[];
@@ -285,6 +291,51 @@ export const calculateRecipeNutrients = (
   ];
 };
 
+export const calculateRecipeWeight = (recipe: Recipe) => {
+  let totalGrams = 0;
+
+  for (const group of recipe.ingredients) {
+    for (const item of group.items) {
+      if (item.excludeFromCalc || item.alt) continue;
+
+      const { ingredient, amount, unit } = item;
+
+      let grams = 0;
+      let value = amount;
+
+      if (typeof amount === "string") {
+        if (amount.includes("-")) {
+          const parts = amount.split("-").map(Number);
+          value = parts.reduce((a, b) => a + b, 0) / parts.length;
+        } else {
+          console.warn(`Incorrect amount ${amount}`);
+          continue;
+        }
+      }
+
+      if (!value || typeof value === "string") {
+        continue;
+      } else {
+        if (!unit) {
+          grams = value;
+        } else if (ingredient.unitWeights?.[unit]) {
+          grams = value * ingredient.unitWeights[unit];
+        } else {
+          if (unit !== "g")
+            console.warn(`No unit ${unit} for ${ingredient.name}`);
+          grams = value;
+        }
+      }
+
+      totalGrams += grams;
+    }
+  }
+
+  if (totalGrams === 0) return 0;
+
+  return Math.round(totalGrams);
+};
+
 export const keywordAliases: Record<KeyWord, string[]> = {
   ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
   deser: ["deser", "desery", "słodkie", "słodko"],
@@ -346,11 +397,11 @@ export const countIngredientTypes = () => {
     met: 0,
     dir: 0,
     fat: 0,
+    grn: 0,
     veg: 0,
     frt: 0,
-    grn: 0,
-    spc: 0,
     jar: 0,
+    spc: 0,
     oth: 0,
   };
 
@@ -388,11 +439,58 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
   return usage;
 };
 
+export const countUsedIngredients = (usages: Record<string, number>) => {
+  const usage: Record<string, number> = {
+    yes: 0,
+    no: 0,
+  };
+
+  for (const collection of ingredientCollections) {
+    for (const ingredient of Object.values(collection)) {
+      usages[ingredient.name] > 0 ? usage["yes"]++ : usage["no"]++;
+    }
+  }
+
+  return usage;
+};
+
 export const countRecipeKcalPer100g = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
   recipes.forEach((recipe) => {
     usage[recipe.name] = calculateRecipeKcalPer100g(recipe);
+  });
+
+  return usage;
+};
+
+export const countRecipeWeight = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    usage[recipe.name] = calculateRecipeWeight(recipe);
+  });
+
+  return usage;
+};
+
+export const countRecipeWeightPerPortion = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    usage[recipe.name] = Math.round(
+      calculateRecipeWeight(recipe) / recipe.portions,
+    );
+  });
+
+  return usage;
+};
+
+export const countRecipePreparationTime = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    usage[recipe.name] = recipe.time;
   });
 
   return usage;

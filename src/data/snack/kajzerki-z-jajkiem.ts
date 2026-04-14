@@ -3,7 +3,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iFAT } from "../../ingredients/ingFat";
 import { iVEG } from "../../ingredients/ingVegetable";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 import type { Recipe } from "../../types";
 
 const kajzerkiZJajkiem: Recipe = {

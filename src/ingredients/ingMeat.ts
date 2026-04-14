@@ -55,6 +55,9 @@ type IngId =
   | "herring_in_tomato_sauce"
   | "herring_in_vinegar"
   | "pollock"
+  | "hake"
+  | "halibut"
+  | "panga"
   | "carp"
   | "cod"
   | "salmon"
@@ -480,6 +483,42 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 250,
     },
     nutrientsPer100g: [0.5, 1, 19],
+  },
+
+  hake: {
+    name: "Morszczuk",
+    type: "met",
+    subType: "fsh",
+    color: "#ECEFF1",
+    kcalPer100g: 90,
+    unitWeights: {
+      szt: 250,
+    },
+    nutrientsPer100g: [0.8, 1, 18],
+  },
+
+  halibut: {
+    name: "Halibut",
+    type: "met",
+    subType: "fsh",
+    color: "#E0E0E0",
+    kcalPer100g: 140,
+    unitWeights: {
+      szt: 400,
+    },
+    nutrientsPer100g: [0, 8, 20],
+  },
+
+  panga: {
+    name: "Panga",
+    type: "met",
+    subType: "fsh",
+    color: "#ECEFF1",
+    kcalPer100g: 92,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0, 2, 16],
   },
 
   carp: {

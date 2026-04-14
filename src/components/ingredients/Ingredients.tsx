@@ -13,7 +13,7 @@ import { recipes } from "../../recipes";
 import { countIngredientUsage, IngredientTypeData } from "../../utils";
 import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
-import { iJAR } from "../../ingredients/ingJAR";
+import { iJAR } from "../../ingredients/ingJar";
 
 type IngredientsProps = {
   setShowAllIngredients: React.Dispatch<React.SetStateAction<boolean>>;
