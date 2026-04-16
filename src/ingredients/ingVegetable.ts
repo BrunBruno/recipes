@@ -41,7 +41,8 @@ type IngId =
   //// MUSHROOMS ////
   | "mushrooms"
   | "forest_mushrooms"
-  | "chanterelle";
+  | "chanterelle"
+  | "dried_mushrooms";
 
 export const iVEG: Record<IngId, IngredientItem> = {
   //// VEGETABLES ////
@@ -461,5 +462,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [0.5, 6, 1.5],
+  },
+
+  dried_mushrooms: {
+    name: "Grzyby suszone",
+    type: "veg",
+    subType: "msh",
+    color: "#8D6E63",
+    kcalPer100g: 280,
+    unitWeights: {
+      opak: 50,
+    },
+    nutrientsPer100g: [9, 60, 3],
+    verified: false,
   },
 };

@@ -7,7 +7,8 @@ type IngId =
   | "olive"
   | "lard"
   | "rendered_lard"
-  | "margarine";
+  | "margarine"
+  | "peanut_butter";
 
 export const iFAT: Record<IngId, IngredientItem> = {
   butter: {
@@ -108,5 +109,18 @@ export const iFAT: Record<IngId, IngredientItem> = {
       kst: 200,
     },
     nutrientsPer100g: [100, 0, 0],
+  },
+
+  peanut_butter: {
+    name: "Masło orzechowe",
+    type: "fat",
+    subType: "but",
+    color: "#C68642",
+    kcalPer100g: 588,
+    unitWeights: {
+      lz: 16,
+      szk: 250,
+    },
+    nutrientsPer100g: [50, 20, 25],
   },
 };

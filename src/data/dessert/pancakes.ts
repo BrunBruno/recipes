@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -26,6 +27,17 @@ const pancakes: Recipe = {
         { ingredient: iOTH.baking_soda, amount: 1, unit: "lzi" },
         { ingredient: iFAT.oil, amount: 0.25, unit: "szk" },
         { ingredient: iSPC.salt },
+      ],
+    },
+    {
+      title: "Przykładowe dodatki",
+      items: [
+        { ingredient: iGRN.chocolate_cream, excludeFromCalc: true },
+        { ingredient: iGRN.nutella, excludeFromCalc: true },
+        { ingredient: iOTH.maple_syrup, excludeFromCalc: true },
+        { ingredient: iDIR.whipped_cream, excludeFromCalc: true },
+        { ingredient: iJAR.jam_strawberry, excludeFromCalc: true },
+        { ingredient: iFAT.peanut_butter, excludeFromCalc: true },
       ],
     },
   ],

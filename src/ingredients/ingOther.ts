@@ -1,21 +1,28 @@
 import type { IngredientItem } from "../types";
 
 type IngId =
+  //// LIQUIDS ////
   | "water"
+  | "spirit"
+  | "food_coloring"
+  | "vanilla_extract"
+  | "maple_syrup"
+  | "rosol"
+  | "maggi"
+
+  //// SUGARS ////
   | "sugar"
   | "powdered_sugar"
   | "vanilla_sugar"
   | "honey"
-  | "vanilla_extract"
+
+  //// OTHER ////
   | "citric_acid"
   | "baking_powder"
   | "baking_soda"
-  | "spirit"
   | "yeast"
   | "instant_yeast"
-  | "gelatin"
-  | "food_coloring"
-  | "rosol";
+  | "gelatin";
 
 export const iOTH: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -60,6 +67,56 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 12, 0],
+  },
+
+  maple_syrup: {
+    name: "Syrop klonowy",
+    type: "oth",
+    subType: "wat",
+    color: "#D9A066",
+    kcalPer100g: 260,
+    unitWeights: {
+      lz: 20,
+      szk: 320,
+    },
+    nutrientsPer100g: [0, 67, 0],
+  },
+
+  food_coloring: {
+    name: "Barwnik spożywczy",
+    type: "oth",
+    subType: "wat",
+    color: "#228be6",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+    },
+    nutrientsPer100g: [0, 0, 0],
+  },
+
+  rosol: {
+    name: "Rosół",
+    type: "oth",
+    subType: "wat",
+    color: "#FFD54F",
+    kcalPer100g: 35,
+    unitWeights: {
+      ml: 1,
+    },
+    nutrientsPer100g: [5, 1.5, 1],
+  },
+
+  maggi: {
+    name: "Maggi",
+    type: "jar",
+    subType: "wat",
+    color: "#4F3834",
+    kcalPer100g: 16,
+    unitWeights: {
+      ml: 1,
+      lz: 15,
+    },
+    nutrientsPer100g: [0, 3, 1],
   },
 
   //// SUGARS ////
@@ -187,32 +244,5 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0, 0, 85],
-  },
-
-  food_coloring: {
-    name: "Barwnik spożywczy",
-    type: "oth",
-    color: "#228be6",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-    },
-    nutrientsPer100g: [0, 0, 0],
-  },
-
-  //
-
-  
-
-  rosol: {
-    name: "Rosół",
-    type: "oth",
-    subType: "sup",
-    color: "#FFD54F",
-    kcalPer100g: 35,
-    unitWeights: {
-      ml: 1,
-    },
-    nutrientsPer100g: [5, 1.5, 1],
   },
 };

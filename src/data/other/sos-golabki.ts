@@ -21,7 +21,7 @@ const sosDoGolabkow: Recipe = {
         { ingredient: iJAR.tomato_puree, amount: 250, unit: "ml" },
         { ingredient: iOTH.water, amount: 0.5, unit: "szk" },
         { ingredient: iFAT.butter, amount: 1, unit: "lz" },
-        { ingredient: iJAR.maggi },
+        { ingredient: iOTH.maggi },
         { ingredient: iSPC.vegetable_seasoning },
         { ingredient: iSPC.salt },
       ],

@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -24,7 +24,7 @@ const sznycleMielone: Recipe = {
         { ingredient: iMET.egg, amount: 1, unit: "szt" },
         { ingredient: iGRN.breadcrumbs, amount: 100 },
         { ingredient: iFAT.oil, amount: 4, unit: "lz" },
-        { ingredient: iJAR.maggi },
+        { ingredient: iOTH.maggi },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],

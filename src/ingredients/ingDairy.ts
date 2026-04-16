@@ -13,12 +13,14 @@ type IngId =
   | "cream_30"
   | "cream_36"
   | "sour_cream"
+  | "whipped_cream"
   | "cream_cheese"
   | "cream_cheese_horseradish"
   | "mascarpone"
   | "mozzarella"
   | "yellow_cheese"
   | "gouda_cheese"
+  | "edam_cheese"
   | "lilliputian_cheese"
   | "parmigiano_reggiano"
   | "parmesan";
@@ -169,6 +171,18 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [20, 3.5, 2.5],
   },
 
+  whipped_cream: {
+    name: "Bita śmietana",
+    type: "dir",
+    color: "#FFF8F0",
+    kcalPer100g: 340,
+    unitWeights: {
+      lz: 15,
+      szk: 120,
+    },
+    nutrientsPer100g: [30, 3, 2],
+  },
+
   cream_cheese: {
     name: "Serek kremowy",
     type: "dir",
@@ -243,6 +257,20 @@ export const iDIR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [26, 1.1, 25],
     verified: true,
+  },
+
+  edam_cheese: {
+    name: "Ser Edam",
+    type: "dir",
+    subType: "che",
+    color: "#FFD54F",
+    kcalPer100g: 315,
+    unitWeights: {
+      plas: 20,
+      kst: 250,
+      opak: 300,
+    },
+    nutrientsPer100g: [25, 1.5, 24],
   },
 
   lilliputian_cheese: {

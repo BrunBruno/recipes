@@ -21,6 +21,7 @@ type IngId =
   | "wild_strawberry"
   | "raspberries"
   | "blackberry"
+  | "blueberry"
   | "olives"
   | "avocado"
   | "raisins"
@@ -245,6 +246,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     color: "#4A235A",
     kcalPer100g: 43,
     nutrientsPer100g: [0.5, 10, 1.4],
+  },
+
+  blueberry: {
+    name: "Borówki",
+    type: "oth",
+    subType: "brr",
+    color: "#4B5CC4",
+    kcalPer100g: 57,
+    unitWeights: {
+      szk: 150,
+    },
+    nutrientsPer100g: [0.3, 14, 0.7],
   },
 
   olives: {

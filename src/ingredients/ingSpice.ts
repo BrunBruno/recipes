@@ -38,7 +38,8 @@ type IngId =
   | "knorr_goulash_fix"
   | "knorr_chinese_fix"
   | "knorr_bolognese_fix"
-  | "knorr_crispy_chicken_fix";
+  | "knorr_crispy_chicken_fix"
+  | "fix_napoli";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -291,6 +292,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [1.6, 68, 12],
     verified: true,
+  },
+
+  fix_napoli: {
+    name: "Fix Napoli",
+    type: "spc",
+    color: "#E53935",
+    kcalPer100g: 280,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [6, 60, 5],
   },
 
   //// HERBS ////

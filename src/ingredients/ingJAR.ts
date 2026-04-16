@@ -13,6 +13,7 @@ type IngId =
   | "beets_whole_vinegar"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
+  | "jam_strawberry"
 
   //// CANNED ////
   | "canned_tomatoes"
@@ -38,7 +39,6 @@ type IngId =
   | "lime_juice"
 
   //// SAUCES ////
-  | "maggi"
   | "ketchup"
   | "mustard"
   | "sarepska_mustard"
@@ -176,6 +176,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [0, 18, 1],
+  },
+
+  jam_strawberry: {
+    name: "Dżem truskawkowy",
+    type: "jar",
+    color: "#C62828",
+    kcalPer100g: 250,
+    unitWeights: {
+      lz: 20,
+      szk: 320,
+    },
+    nutrientsPer100g: [0.1, 60, 0.3],
   },
 
   //// CANNED ////
@@ -471,18 +483,5 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [28, 18, 1.6],
     verified: true,
-  },
-
-  maggi: {
-    name: "Maggi",
-    type: "jar",
-    subType: "sau",
-    color: "#4F3834",
-    kcalPer100g: 16,
-    unitWeights: {
-      ml: 1,
-      lz: 15,
-    },
-    nutrientsPer100g: [0, 3, 1],
   },
 };

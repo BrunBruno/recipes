@@ -9,6 +9,8 @@ type IngId =
   | "semolina"
   | "bulgur"
   | "buckwheat"
+  | "millet_groats"
+  | "barley_groats"
 
   //// PASTA ////
   | "fusilli_pasta"
@@ -43,6 +45,7 @@ type IngId =
   | "white_chocolate"
   | "dark_chocolate"
   | "chocolate_cream"
+  | "nutella"
   | "ladyfingers";
 
 export const iGRN: Record<IngId, IngredientItem> = {
@@ -130,6 +133,32 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 100,
     },
     nutrientsPer100g: [3.4, 72, 13],
+  },
+
+  millet_groats: {
+    name: "Kasza jaglana",
+    type: "grn",
+    color: "#FDD835",
+    kcalPer100g: 378,
+    unitWeights: {
+      lz: 15,
+      szk: 200,
+      opak: 100,
+    },
+    nutrientsPer100g: [11, 73, 4],
+  },
+
+  barley_groats: {
+    name: "Kasza jęczmienna",
+    type: "grn",
+    color: "#D7CCC8",
+    kcalPer100g: 354,
+    unitWeights: {
+      lz: 15,
+      szk: 200,
+      opak: 100,
+    },
+    nutrientsPer100g: [10, 74, 2],
   },
 
   //// PASTA ////
@@ -445,6 +474,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [34, 56.8, 2.9],
     verified: true,
+  },
+
+  nutella: {
+    name: "Nutella",
+    type: "grn",
+    subType: "cho",
+    color: "#5A3A2E",
+    kcalPer100g: 539,
+    unitWeights: {
+      lz: 15,
+      szk: 300,
+    },
+    nutrientsPer100g: [31, 57, 6],
   },
 
   ladyfingers: {

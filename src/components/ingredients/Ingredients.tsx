@@ -164,7 +164,17 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
 
                           <div className="ingredient-usage">
                             Użyto w przepisach:{" "}
-                            <strong>{ingredientUsage[item.name] ?? 0}</strong>
+                            <strong
+                              className={
+                                !ingredientUsage[item.name]
+                                  ? "none"
+                                  : ingredientUsage[item.name] > 3
+                                    ? "many"
+                                    : "def"
+                              }
+                            >
+                              {ingredientUsage[item.name] ?? 0}
+                            </strong>
                           </div>
                         </div>
 

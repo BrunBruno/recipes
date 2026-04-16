@@ -26,7 +26,7 @@ const gotowanyKurczak: Recipe = {
         { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
         { ingredient: iGRN.flour, amount: 1, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iJAR.maggi },
+        { ingredient: iOTH.maggi },
         { ingredient: iVEG.chives },
         { ingredient: iSPC.wild_garlic },
         { ingredient: iSPC.curry },

@@ -186,6 +186,13 @@
   margin-right: 0.5rem;
 }
 
+.ingredient-usage strong.none {
+  color: #e03131;
+}
+.ingredient-usage strong.many {
+  color: #099268;
+}
+
 .ingredient-id {
   position: absolute;
   right: 1rem;
