@@ -19,6 +19,7 @@ type IngredientsProps = {
   setShowAllIngredients: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+const displayUnused = false;
 const allGroups = [
   { label: "Mięso / Ryby / Jajka", data: iMET },
   { label: "Zboża / Pieczywo / Ziarna", data: iGRN },
@@ -27,8 +28,8 @@ const allGroups = [
   { label: "Warzywa / Zielenina  / Grzyby", data: iVEG },
   { label: "Owoce / Orzechy", data: iFRT },
   { label: "Przyprawy / Zioła / Sosy", data: iSPC },
-  { label: "Przetwory / Mrożonki / Soki", data: iJAR },
-  { label: "Cukry / Gotowe / Pozostałe", data: iOTH },
+  { label: "Przetwory / Mrożonki / Sosy", data: iJAR },
+  { label: "Cukry / Pozostałe", data: iOTH },
 ];
 const groupedTypes = allGroups.flatMap((group) =>
   Object.values(group.data).map((item) => item.type),
@@ -114,7 +115,14 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                     onClick={() => toggleType(type)}
                   >
                     <UtilsIcon name={"arrow"} color={"#fff"} />
-                    {group.label}
+                    {group.label} ({" "}
+                    {
+                      items.filter(
+                        ([_, item]) =>
+                          displayUnused || ingredientUsage[item.name],
+                      ).length
+                    }{" "}
+                    )
                   </h2>
 
                   <ul
@@ -123,85 +131,93 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
                       maxHeight: openTypes[type] ? `${rows * 202}px` : "0px",
                     }}
                   >
-                    {sortedItems.map(([id, item]) => (
-                      <li key={id} className="ingredient-card">
-                        <div className="ing-card-header">
-                          <span className="ingredient-name">{item.name}</span>
-                          {item.verified && (
-                            <UtilsIcon name="check" color="#fff" />
-                          )}
-                        </div>
+                    {sortedItems.map(([id, item]) => {
+                      if (!ingredientUsage[item.name] && !displayUnused)
+                        return <></>;
 
-                        <div className="ingredient-card-content">
-                          <div className="ingredient-meta">
-                            <IngredientIcon
-                              ingType={item.type}
-                              subType={item.subType}
-                              color={item.color}
-                            />
-                            <span className="type">
-                              {IngredientTypeData[item.type].label}
-                            </span>
+                      return (
+                        <li key={id} className="ingredient-card">
+                          <div className="ing-card-header">
+                            <span className="ingredient-name">{item.name}</span>
+                            {item.verified && (
+                              <UtilsIcon name="check" color="#fff" />
+                            )}
                           </div>
 
-                          <div className="kcal">
-                            <strong>{item.kcalPer100g} kcal / 100 g</strong>
-                          </div>
-
-                          {item.nutrientsPer100g && (
-                            <div className="macros">
-                              <span>
-                                T: <strong>{item.nutrientsPer100g[0]} g</strong>
-                              </span>
-                              <span>
-                                W: <strong>{item.nutrientsPer100g[1]} g</strong>
-                              </span>
-                              <span>
-                                B: <strong>{item.nutrientsPer100g[2]} g</strong>
+                          <div className="ingredient-card-content">
+                            <div className="ingredient-meta">
+                              <IngredientIcon
+                                ingType={item.type}
+                                subType={item.subType}
+                                color={item.color}
+                              />
+                              <span className="type">
+                                {IngredientTypeData[item.type].label}
                               </span>
                             </div>
-                          )}
 
-                          <div className="ingredient-usage">
-                            Użyto w przepisach:{" "}
-                            <strong
-                              className={
-                                !ingredientUsage[item.name]
-                                  ? "none"
-                                  : ingredientUsage[item.name] > 3
-                                    ? "many"
-                                    : "def"
-                              }
-                            >
-                              {ingredientUsage[item.name] ?? 0}
-                            </strong>
+                            <div className="kcal">
+                              <strong>{item.kcalPer100g} kcal / 100 g</strong>
+                            </div>
+
+                            {item.nutrientsPer100g && (
+                              <div className="macros">
+                                <span>
+                                  T:{" "}
+                                  <strong>{item.nutrientsPer100g[0]} g</strong>
+                                </span>
+                                <span>
+                                  W:{" "}
+                                  <strong>{item.nutrientsPer100g[1]} g</strong>
+                                </span>
+                                <span>
+                                  B:{" "}
+                                  <strong>{item.nutrientsPer100g[2]} g</strong>
+                                </span>
+                              </div>
+                            )}
+
+                            <div className="ingredient-usage">
+                              Użyto w przepisach:{" "}
+                              <strong
+                                className={
+                                  !ingredientUsage[item.name]
+                                    ? "none"
+                                    : ingredientUsage[item.name] > 3
+                                      ? "many"
+                                      : "def"
+                                }
+                              >
+                                {ingredientUsage[item.name] ?? 0}
+                              </strong>
+                            </div>
                           </div>
-                        </div>
 
-                        <span className="ingredient-id">{id}</span>
+                          <span className="ingredient-id">{id}</span>
 
-                        <div className="nutrient-indicator">
-                          <div
-                            className="nutrient-fat"
-                            style={{
-                              height: `${item.nutrientsPer100g[0]}%`,
-                            }}
-                          ></div>
-                          <div
-                            className="nutrient-carb"
-                            style={{
-                              height: `${item.nutrientsPer100g[1]}%`,
-                            }}
-                          ></div>
-                          <div
-                            className="nutrient-prot"
-                            style={{
-                              height: `${item.nutrientsPer100g[2]}%`,
-                            }}
-                          ></div>
-                        </div>
-                      </li>
-                    ))}
+                          <div className="nutrient-indicator">
+                            <div
+                              className="nutrient-fat"
+                              style={{
+                                height: `${item.nutrientsPer100g[0]}%`,
+                              }}
+                            ></div>
+                            <div
+                              className="nutrient-carb"
+                              style={{
+                                height: `${item.nutrientsPer100g[1]}%`,
+                              }}
+                            ></div>
+                            <div
+                              className="nutrient-prot"
+                              style={{
+                                height: `${item.nutrientsPer100g[2]}%`,
+                              }}
+                            ></div>
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               );

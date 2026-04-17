@@ -1,9 +1,13 @@
 import type { IngredientItem } from "../types";
 
 type IngId =
+  //// DAIRY ////
   | "milk"
   | "buttermilk"
   | "condensed_milk"
+  | "skim_milk"
+  | "whole_milk"
+  | "powdered_milk"
   | "yogurt_natural"
   | "greek_yogurt"
   | "strawberry_yogurt"
@@ -14,16 +18,27 @@ type IngId =
   | "cream_36"
   | "sour_cream"
   | "whipped_cream"
+  | "quark"
+
+  //// CHEESE ////
+  | "cottage_cheese"
+  | "ricotta"
   | "cream_cheese"
   | "cream_cheese_horseradish"
   | "mascarpone"
   | "mozzarella"
+  | "burrata"
+  | "feta"
+  | "camembert"
+  | "halloumi"
   | "yellow_cheese"
   | "gouda_cheese"
   | "edam_cheese"
   | "lilliputian_cheese"
   | "parmigiano_reggiano"
-  | "parmesan";
+  | "parmesan"
+  | "cheddar_cheese"
+  | "oscypek";
 
 export const iDIR: Record<IngId, IngredientItem> = {
   milk: {
@@ -59,6 +74,42 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [7.5, 11, 5.5],
+  },
+
+  skim_milk: {
+    name: "Mleko odtłuszczone",
+    type: "dir",
+    color: "#FAFAFA",
+    kcalPer100g: 34,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+    },
+    nutrientsPer100g: [0.1, 5, 3.4],
+  },
+
+  whole_milk: {
+    name: "Mleko pełne",
+    type: "dir",
+    color: "#FFFDF7",
+    kcalPer100g: 64,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+    },
+    nutrientsPer100g: [3.6, 4.8, 3.3],
+  },
+
+  powdered_milk: {
+    name: "Mleko w proszku",
+    type: "dir",
+    color: "#F4F1DA",
+    kcalPer100g: 496,
+    unitWeights: {
+      lz: 8,
+      szk: 100,
+    },
+    nutrientsPer100g: [27, 38, 26],
   },
 
   yogurt_natural: {
@@ -183,6 +234,39 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [30, 3, 2],
   },
 
+  quark: {
+    name: "Twaróg",
+    type: "dir",
+    color: "#F5F5F5",
+    kcalPer100g: 133,
+    unitWeights: {
+      opak: 250,
+    },
+    nutrientsPer100g: [4.5, 3.3, 18],
+  },
+
+  cottage_cheese: {
+    name: "Serek wiejski",
+    type: "dir",
+    color: "#F8F8F8",
+    kcalPer100g: 98,
+    unitWeights: {
+      opak: 200,
+    },
+    nutrientsPer100g: [4, 3, 11],
+  },
+
+  ricotta: {
+    name: "Ricotta",
+    type: "dir",
+    color: "#FFFDF7",
+    kcalPer100g: 174,
+    unitWeights: {
+      lz: 15,
+    },
+    nutrientsPer100g: [11, 3, 13],
+  },
+
   cream_cheese: {
     name: "Serek kremowy",
     type: "dir",
@@ -227,7 +311,57 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [17, 3, 18],
   },
 
+  burrata: {
+    name: "Burrata",
+    type: "dir",
+    color: "#FFFDF8",
+    kcalPer100g: 300,
+    unitWeights: {
+      szt: 125,
+    },
+    nutrientsPer100g: [25, 2, 12],
+  },
+
   //// ChEESE ////
+
+  feta: {
+    name: "Ser feta",
+    type: "dir",
+    subType: "che",
+    color: "#FFFDFC",
+    kcalPer100g: 264,
+    unitWeights: {
+      g: 1,
+      kst: 200,
+    },
+    nutrientsPer100g: [21, 4, 14],
+  },
+
+  camembert: {
+    name: "Camembert",
+    type: "dir",
+    subType: "che",
+    color: "#F5E6A8",
+    kcalPer100g: 300,
+    unitWeights: {
+      szt: 120,
+      plas: 30,
+    },
+    nutrientsPer100g: [24, 0.5, 20],
+  },
+
+  halloumi: {
+    name: "Halloumi",
+    type: "dir",
+    subType: "che",
+    color: "#FFF7D6",
+    kcalPer100g: 321,
+    unitWeights: {
+      plas: 30,
+      opak: 225,
+    },
+    nutrientsPer100g: [25, 2, 22],
+  },
 
   yellow_cheese: {
     name: "Ser żółty",
@@ -308,5 +442,30 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [29, 4, 36],
+  },
+
+  cheddar_cheese: {
+    name: "Ser cheddar",
+    type: "dir",
+    subType: "che",
+    color: "#FFD35A",
+    kcalPer100g: 402,
+    unitWeights: {
+      plas: 20,
+    },
+    nutrientsPer100g: [33, 1.3, 25],
+  },
+
+  oscypek: {
+    name: "Oscypek",
+    type: "dir",
+    subType: "che",
+    color: "#E8C76A",
+    kcalPer100g: 386,
+    unitWeights: {
+      szt: 600,
+      plas: 25,
+    },
+    nutrientsPer100g: [32, 2, 24],
   },
 };

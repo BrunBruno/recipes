@@ -1,12 +1,22 @@
 import type { IngredientItem } from "../types";
 
 type IngId =
+  //// FRUITS ////
   | "apple"
   | "pear"
+  | "fig"
   | "pineapple"
   | "kiwi"
+  | "passion_fruit"
   | "peach"
   | "nectarine"
+  | "plum"
+  | "apricot"
+  | "mango"
+  | "papaya"
+  | "melon"
+  | "watermelon"
+  | "pomegranate"
   | "banana"
   | "lime"
   | "lemon"
@@ -22,11 +32,23 @@ type IngId =
   | "raspberries"
   | "blackberry"
   | "blueberry"
+  | "redcurrant"
+  | "blackcurrant"
+  | "cranberry"
+  | "gooseberry"
   | "olives"
   | "avocado"
   | "raisins"
+
+  //// NUTS ////
   | "walnuts"
-  | "coconut_flakes";
+  | "coconut_flakes"
+  | "almonds"
+  | "hazelnuts"
+  | "cashews"
+  | "peanuts"
+  | "pistachios"
+  | "coconut";
 
 export const iFRT: Record<IngId, IngredientItem> = {
   //// FRUITS ////
@@ -53,6 +75,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 15, 0.4],
   },
 
+  fig: {
+    name: "Figa",
+    type: "frt",
+    subType: "per",
+    color: "#8B5E3C",
+    kcalPer100g: 74,
+    unitWeights: {
+      szt: 50,
+    },
+    nutrientsPer100g: [0.3, 19, 0.8],
+  },
+
   pineapple: {
     name: "Ananas",
     type: "frt",
@@ -77,6 +111,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.5, 15, 1.1],
   },
 
+  passion_fruit: {
+    name: "Marakuja",
+    type: "frt",
+    subType: "kwi",
+    color: "#6A0DAD",
+    kcalPer100g: 97,
+    unitWeights: {
+      szt: 18,
+    },
+    nutrientsPer100g: [0.7, 23, 2.2],
+  },
+
   peach: {
     name: "Brzoskwinia",
     type: "frt",
@@ -99,6 +145,90 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 11, 1.1],
+  },
+
+  plum: {
+    name: "Śliwka",
+    type: "frt",
+    subType: "plu",
+    color: "#7B3F8C",
+    kcalPer100g: 46,
+    unitWeights: {
+      szt: 55,
+    },
+    nutrientsPer100g: [0.3, 11, 0.7],
+  },
+
+  apricot: {
+    name: "Morela",
+    type: "frt",
+    subType: "plu",
+    color: "#F4A460",
+    kcalPer100g: 48,
+    unitWeights: {
+      szt: 35,
+    },
+    nutrientsPer100g: [0.4, 11, 1.4],
+  },
+
+  mango: {
+    name: "Mango",
+    type: "frt",
+    subType: "man",
+    color: "#FFB347",
+    kcalPer100g: 60,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0.4, 15, 0.8],
+  },
+
+  papaya: {
+    name: "Papaja",
+    type: "frt",
+    subType: "man",
+    color: "#FFA07A",
+    kcalPer100g: 43,
+    unitWeights: {
+      szt: 500,
+    },
+    nutrientsPer100g: [0.3, 11, 0.5],
+  },
+
+  melon: {
+    name: "Melon",
+    type: "frt",
+    subType: "mel",
+    color: "#E6D690",
+    kcalPer100g: 34,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [0.2, 8, 0.8],
+  },
+
+  watermelon: {
+    name: "Arbuz",
+    type: "frt",
+    subType: "mel",
+    color: "#FC6C6C",
+    kcalPer100g: 30,
+    unitWeights: {
+      szt: 3000,
+    },
+    nutrientsPer100g: [0.2, 8, 0.6],
+  },
+
+  pomegranate: {
+    name: "Granat",
+    type: "frt",
+    subType: "gra",
+    color: "#C72C48",
+    kcalPer100g: 83,
+    unitWeights: {
+      szt: 280,
+    },
+    nutrientsPer100g: [1.2, 19, 1.7],
   },
 
   banana: {
@@ -250,7 +380,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
 
   blueberry: {
     name: "Borówki",
-    type: "oth",
+    type: "frt",
     subType: "brr",
     color: "#4B5CC4",
     kcalPer100g: 57,
@@ -258,6 +388,54 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [0.3, 14, 0.7],
+  },
+
+  cranberry: {
+    name: "Żurawina",
+    type: "frt",
+    subType: "brr",
+    color: "#B22222",
+    kcalPer100g: 46,
+    unitWeights: {
+      szk: 100,
+    },
+    nutrientsPer100g: [0.1, 12, 0.4],
+  },
+
+  blackcurrant: {
+    name: "Czarna porzeczka",
+    type: "frt",
+    subType: "brr",
+    color: "#2E003E",
+    kcalPer100g: 63,
+    unitWeights: {
+      szk: 100,
+    },
+    nutrientsPer100g: [0.4, 15, 1.4],
+  },
+
+  redcurrant: {
+    name: "Czerwona porzeczka",
+    type: "frt",
+    subType: "brr",
+    color: "#D7263D",
+    kcalPer100g: 56,
+    unitWeights: {
+      szk: 100,
+    },
+    nutrientsPer100g: [0.2, 14, 1.4],
+  },
+
+  gooseberry: {
+    name: "Agrest",
+    type: "frt",
+    subType: "brr",
+    color: "#A3C585",
+    kcalPer100g: 44,
+    unitWeights: {
+      szk: 100,
+    },
+    nutrientsPer100g: [0.6, 10, 0.9],
   },
 
   olives: {
@@ -322,5 +500,82 @@ export const iFRT: Record<IngId, IngredientItem> = {
       lz: 7,
     },
     nutrientsPer100g: [64, 24, 6],
+  },
+
+  almonds: {
+    name: "Migdały",
+    type: "frt",
+    subType: "nut",
+    color: "#D2B48C",
+    kcalPer100g: 579,
+    unitWeights: {
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [50, 22, 21],
+  },
+
+  hazelnuts: {
+    name: "Orzechy laskowe",
+    type: "frt",
+    subType: "nut",
+    color: "#A0522D",
+    kcalPer100g: 628,
+    unitWeights: {
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [61, 17, 15],
+  },
+
+  cashews: {
+    name: "Orzechy nerkowca",
+    type: "frt",
+    subType: "nut",
+    color: "#E6BE8A",
+    kcalPer100g: 553,
+    unitWeights: {
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [44, 30, 18],
+  },
+
+  peanuts: {
+    name: "Orzeszki ziemne",
+    type: "frt",
+    subType: "nut",
+    color: "#C68642",
+    kcalPer100g: 567,
+    unitWeights: {
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [49, 16, 26],
+  },
+
+  pistachios: {
+    name: "Pistacje",
+    type: "frt",
+    subType: "nut",
+    color: "#93C572",
+    kcalPer100g: 560,
+    unitWeights: {
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [45, 28, 20],
+  },
+
+  coconut: {
+    name: "Kokos",
+    type: "frt",
+    subType: "nut",
+    color: "#F5F5DC",
+    kcalPer100g: 354,
+    unitWeights: {
+      szt: 500,
+    },
+    nutrientsPer100g: [33, 15, 3],
   },
 };

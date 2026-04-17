@@ -86,7 +86,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     name: "Barwnik spożywczy",
     type: "oth",
     subType: "wat",
-    color: "#228be6",
+    color: "#d6336c",
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
@@ -108,7 +108,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
 
   maggi: {
     name: "Maggi",
-    type: "jar",
+    type: "oth",
     subType: "wat",
     color: "#4F3834",
     kcalPer100g: 16,

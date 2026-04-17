@@ -455,7 +455,10 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
       </div>
 
       <div className="statistics-element">
-        <h2>Wykonane przepisy</h2>
+        <h2>
+          Wykonane przepisy{" "}
+          {((100 * doneRecipeCount.yes) / recipes.length).toFixed(1)}%
+        </h2>
         <div className="chart-wrapper">
           <canvas ref={canvasRefs.doneRecipes}></canvas>
         </div>
