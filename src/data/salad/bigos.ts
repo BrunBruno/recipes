@@ -7,6 +7,7 @@ const bigos: Recipe = {
   images: [""],
   time: 360,
   portions: 20,
+  executionDifficulty: null,
   ingredients: [],
   steps: [],
 };

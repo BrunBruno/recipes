@@ -16,6 +16,7 @@ const kotletPoGoralsku: Recipe = {
   images: ["kotlet-po-goralsku.jpg", "kotlet-po-goralsku-2.jpg"],
   time: 70,
   portions: portions,
+  executionDifficulty: 4,
   ingredients: [
     {
       title: "Kotlety",

@@ -14,6 +14,7 @@ const sosPieczarkowy: Recipe = {
   images: [""],
   time: 15,
   portions: 2,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

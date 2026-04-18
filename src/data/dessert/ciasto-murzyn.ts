@@ -13,6 +13,7 @@ const ciastoMurzyn: Recipe = {
   images: ["ciasto-murzyn.jpg"],
   time: 45,
   portions: 10,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",

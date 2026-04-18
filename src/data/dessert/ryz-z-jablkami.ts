@@ -13,6 +13,7 @@ const ryzZJablkami: Recipe = {
   images: ["ryz-z-jablkami.jpg"],
   time: 30,
   portions: 1,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

@@ -12,6 +12,7 @@ const stek: Recipe = {
   images: ["stek.jpg"],
   time: 20,
   portions: 1,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

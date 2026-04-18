@@ -12,6 +12,7 @@ const palkiBarbecue: Recipe = {
   images: ["palki-barbecue.jpg"],
   time: 60,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Składniki na kurczaka",

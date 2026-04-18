@@ -13,6 +13,7 @@ const sznycleMielone: Recipe = {
   images: [""],
   time: 30,
   portions: 2,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

@@ -16,6 +16,7 @@ const ciastoMarchewkowe: Recipe = {
   images: [""],
   time: 95,
   portions: 10,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "Ciasto",

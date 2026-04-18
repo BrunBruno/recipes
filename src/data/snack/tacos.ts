@@ -16,6 +16,7 @@ const tacos: Recipe = {
   images: [""],
   time: 35,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "Farsz mięsny",

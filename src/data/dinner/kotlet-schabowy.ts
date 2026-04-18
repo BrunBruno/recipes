@@ -15,6 +15,7 @@ const kotletSchabowy: Recipe = {
   images: ["kotlet-schabowy.jpg", "kotlet-schabowy-2.jpg"],
   time: 50,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Kotlety",

@@ -7,7 +7,6 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iGRN } from "../../ingredients/ingGrain";
 
 const portions = 4;
-
 const grzybowa: Recipe = {
   name: "Grzybowa",
   description:
@@ -16,6 +15,7 @@ const grzybowa: Recipe = {
   images: [""],
   time: 60,
   portions: portions,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

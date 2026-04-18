@@ -15,6 +15,7 @@ const kotletyZIndyka: Recipe = {
   images: ["kotlety-z-indyka.jpg", "kotlety-z-indyka-2.jpg"],
   time: 40,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Kotlety",

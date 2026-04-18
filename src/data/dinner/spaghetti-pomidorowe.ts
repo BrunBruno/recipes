@@ -15,6 +15,7 @@ const spaghettiPomidorowe: Recipe = {
   images: ["spaghetti-pomidorowe.jpg"],
   time: 40,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

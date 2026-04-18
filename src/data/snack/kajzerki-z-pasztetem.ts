@@ -11,6 +11,7 @@ const kajzerkiZPasztetem: Recipe = {
   images: ["kajzerki-z-pasztetem.jpg"],
   time: 5,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

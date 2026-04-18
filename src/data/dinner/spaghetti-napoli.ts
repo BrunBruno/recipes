@@ -15,6 +15,7 @@ const spaghettiNapoli: Recipe = {
   images: ["spaghetti-napoli.jpg"],
   time: 20,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

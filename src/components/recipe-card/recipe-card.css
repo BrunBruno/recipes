@@ -71,6 +71,15 @@
   border-bottom: dashed 0.3rem #333333;
 }
 
+.diff-rating {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.diff-rating svg {
+  height: 1.6rem;
+}
+
 .ingredients-section {
   border-bottom: dashed 0.3rem #333333;
 }

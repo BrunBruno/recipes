@@ -11,6 +11,7 @@ const marchewkaZTymiankiem: Recipe = {
   images: [""],
   time: 40,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "Marchewka",

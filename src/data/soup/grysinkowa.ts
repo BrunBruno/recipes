@@ -11,6 +11,7 @@ const grysikowa: Recipe = {
   images: [""],
   time: 10,
   portions: 2,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

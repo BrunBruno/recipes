@@ -15,6 +15,7 @@ const pancakes: Recipe = {
   images: ["pancakes.jpg", "pancakes-2.jpg"],
   time: 30,
   portions: 3,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

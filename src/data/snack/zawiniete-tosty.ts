@@ -12,6 +12,7 @@ const zawinieteTosty: Recipe = {
   images: ["zawiniete-tosty.jpg"],
   time: 25,
   portions: 2,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

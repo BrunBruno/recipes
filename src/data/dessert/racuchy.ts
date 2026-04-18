@@ -14,6 +14,7 @@ const racuchy: Recipe = {
   images: ["racuchy.jpg"],
   time: 25,
   portions: 2,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

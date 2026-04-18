@@ -306,6 +306,22 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           <section className="description-section">
             {selectedRecipe.description}
             <br /> <br />
+            {selectedRecipe.executionDifficulty && (
+              <div className="diff-rating">
+                <span>Uciążliwość wykonania:</span>
+                {Array.from({ length: selectedRecipe.executionDifficulty }).map(
+                  () => (
+                    <UtilsIcon name="star-full" color="#0ca678" />
+                  ),
+                )}
+                {Array.from({
+                  length: 5 - selectedRecipe.executionDifficulty,
+                }).map(() => (
+                  <UtilsIcon name="star-empty" color="#0ca678" />
+                ))}
+              </div>
+            )}
+            <br />
             Lista składników przeliczona na{" "}
             <span style={{ color: "#20c997", fontWeight: "bold" }}>
               {selectedRecipe.portions}

@@ -17,6 +17,7 @@ const gulaszWieprzowy: Recipe = {
   images: ["gulasz-wieprzowy.jpg"],
   time: 80,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Gulasz",

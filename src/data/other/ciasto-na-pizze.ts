@@ -12,6 +12,7 @@ const ciastoNaPizze: Recipe = {
   images: [""],
   time: 60,
   portions: 1,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

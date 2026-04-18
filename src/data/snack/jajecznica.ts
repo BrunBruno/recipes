@@ -12,6 +12,7 @@ const jajecznica: Recipe = {
   images: ["jajecznica.jpg", "jajecznica-2.jpg"],
   time: 15,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Jajecznica",

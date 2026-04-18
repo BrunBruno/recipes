@@ -15,6 +15,7 @@ const kurczakPoChinsku: Recipe = {
   images: ["./kurczak-po-chinsku.jpg"],
   time: 30,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

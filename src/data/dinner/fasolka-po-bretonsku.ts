@@ -12,6 +12,7 @@ const fasolkaPoBretonsku: Recipe = {
   images: ["fasolka-po-bretonsku.jpg"],
   time: 120,
   portions: 5,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

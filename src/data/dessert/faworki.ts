@@ -14,6 +14,7 @@ const faworki: Recipe = {
   images: ["faworki.jpg", "faworki-2.jpg"],
   time: 90,
   portions: 8,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

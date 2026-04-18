@@ -11,6 +11,7 @@ const barszczCzerwony: Recipe = {
   images: [""],
   time: 720,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

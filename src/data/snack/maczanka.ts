@@ -11,6 +11,7 @@ const maczanka: Recipe = {
   images: ["maczanka.jpg"],
   time: 15,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

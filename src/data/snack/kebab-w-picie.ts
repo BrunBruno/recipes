@@ -16,6 +16,7 @@ const kebab: Recipe = {
   images: ["kebab-w-picie.jpg"],
   time: 90,
   portions: 4,
+  executionDifficulty: 5,
   ingredients: [
     {
       title: "Mięso",

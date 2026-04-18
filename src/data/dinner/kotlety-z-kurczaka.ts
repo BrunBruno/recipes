@@ -15,6 +15,7 @@ const kotletyZKurczaka: Recipe = {
   images: ["kotlety-z-kurczaka.jpg", "kotlety-z-kurczaka-2.jpg"],
   time: 30,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Kotlety",

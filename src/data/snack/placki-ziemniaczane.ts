@@ -14,6 +14,7 @@ const plackiZiemniaczane: Recipe = {
   images: ["placki-ziemniaczane.jpg"],
   time: 30,
   portions: 2,
+  executionDifficulty: 4,
   ingredients: [
     {
       title: "",

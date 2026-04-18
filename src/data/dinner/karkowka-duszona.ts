@@ -14,6 +14,7 @@ const karkowkaDuszona: Recipe = {
   images: ["karkowka-duszona.jpg"],
   time: 60,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Mięso",

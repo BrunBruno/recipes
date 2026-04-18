@@ -13,6 +13,7 @@ const musMalinowyGanache: Recipe = {
   images: [""],
   time: 25,
   portions: 1,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

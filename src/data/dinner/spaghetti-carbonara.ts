@@ -13,6 +13,7 @@ const spaghettiCarbonara: Recipe = {
   images: ["spaghetti-carbonara.jpg"],
   time: 30,
   portions: portions,
+  executionDifficulty: 4,
   ingredients: [
     {
       title: "",

@@ -13,6 +13,7 @@ const salatkaKuskus: Recipe = {
   images: [""],
   time: 40,
   portions: 8,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",

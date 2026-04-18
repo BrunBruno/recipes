@@ -15,6 +15,7 @@ const zapiekankaBolognese: Recipe = {
   images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
   time: 70,
   portions: 4,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Farsz",

@@ -13,6 +13,7 @@ const pieczenWieprzowa: Recipe = {
   images: [""],
   time: 100,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

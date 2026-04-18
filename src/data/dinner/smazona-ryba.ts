@@ -12,6 +12,7 @@ const smazonaRyba: Recipe = {
   images: [""],
   time: 0,
   portions: 2,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

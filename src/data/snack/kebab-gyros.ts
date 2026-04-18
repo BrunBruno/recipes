@@ -15,6 +15,7 @@ const kebabGyros: Recipe = {
   images: [""],
   time: 30,
   portions: 4,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Podstawowe",

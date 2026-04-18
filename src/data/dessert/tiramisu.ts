@@ -12,6 +12,7 @@ const tiramisu: Recipe = {
   images: [""],
   time: 20,
   portions: 8,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

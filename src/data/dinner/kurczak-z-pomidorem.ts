@@ -15,6 +15,7 @@ const kurczakZPomidorem: Recipe = {
   images: ["kurczak-z-pomidorem.jpg"],
   time: 70,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Kurczak",

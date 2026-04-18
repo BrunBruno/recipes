@@ -11,6 +11,7 @@ const frenchHotDog: Recipe = {
   images: ["hot-dog-francuski.jpg"],
   time: 10,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

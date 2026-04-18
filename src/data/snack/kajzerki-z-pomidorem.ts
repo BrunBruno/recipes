@@ -13,6 +13,7 @@ const kajzerkiZPomidorem: Recipe = {
   images: ["kajzerki-z-pomidorem.jpg"],
   time: 5,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

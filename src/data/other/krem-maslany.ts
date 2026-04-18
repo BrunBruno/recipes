@@ -11,6 +11,7 @@ const kremMaslany: Recipe = {
   images: [""],
   time: 30,
   portions: 1,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

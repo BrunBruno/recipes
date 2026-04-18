@@ -12,6 +12,7 @@ const omlet: Recipe = {
   images: ["omlet.jpg"],
   time: 15,
   portions: 1,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

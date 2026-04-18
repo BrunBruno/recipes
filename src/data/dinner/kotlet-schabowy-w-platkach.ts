@@ -18,6 +18,7 @@ const kotletySchaboweWPlatkach: Recipe = {
   ],
   time: 50,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Kotlety",

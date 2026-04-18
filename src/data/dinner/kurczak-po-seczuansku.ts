@@ -14,6 +14,7 @@ const kurczakPoSeczuansku: Recipe = {
   images: [""],
   time: 30,
   portions: portions,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

@@ -15,6 +15,7 @@ const kurczakZeSzpinakiem: Recipe = {
   images: ["kurczak-ze-szpinakiem.jpg", "kurczak-ze-szpinakiem-2.jpg"],
   time: 40,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Kurczak",

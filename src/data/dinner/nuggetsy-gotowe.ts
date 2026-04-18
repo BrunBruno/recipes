@@ -12,6 +12,7 @@ const nuggetsyGotowe: Recipe = {
   images: ["nuggetsy-gotowe.jpg"],
   time: 30,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

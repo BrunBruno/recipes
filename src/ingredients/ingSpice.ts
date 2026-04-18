@@ -39,6 +39,7 @@ type IngId =
   | "knorr_chinese_fix"
   | "knorr_bolognese_fix"
   | "knorr_crispy_chicken_fix"
+  | "fix_carbonara_knorr"
   | "fix_napoli";
 
 export const iSPC: Record<IngId, IngredientItem> = {
@@ -291,6 +292,18 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 70,
     },
     nutrientsPer100g: [1.6, 68, 12],
+    verified: true,
+  },
+
+  fix_carbonara_knorr: {
+    name: "Fix Knorr spaghetti carbonara",
+    type: "spc",
+    color: "#FFFD8D",
+    kcalPer100g: 500,
+    unitWeights: {
+      opak: 38,
+    },
+    nutrientsPer100g: [32, 35, 17],
     verified: true,
   },
 

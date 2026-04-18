@@ -15,6 +15,7 @@ const skladaki: Recipe = {
   images: ["skladaki.jpg", "skladaki-2.jpg", "skladaki-3.jpg"],
   time: 15,
   portions: 2,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Składaki",

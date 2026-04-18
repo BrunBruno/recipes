@@ -13,6 +13,7 @@ const babeczki: Recipe = {
   images: [""],
   time: 30,
   portions: 12,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

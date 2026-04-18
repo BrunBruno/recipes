@@ -12,6 +12,7 @@ const paluszkiRybne: Recipe = {
   images: ["paluszki-rybne.jpg"],
   time: 20,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

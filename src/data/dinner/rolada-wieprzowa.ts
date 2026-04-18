@@ -15,6 +15,7 @@ const roladaWieprzowa: Recipe = {
   images: [""],
   time: 90,
   portions: 4,
+  executionDifficulty: 5,
   ingredients: [
     {
       title: "Składniki na rolady",

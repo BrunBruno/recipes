@@ -14,6 +14,7 @@ const gotowyBurger: Recipe = {
   images: ["burger-gotowiec.jpg"],
   time: 30,
   portions: 2,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Burger warzywny",

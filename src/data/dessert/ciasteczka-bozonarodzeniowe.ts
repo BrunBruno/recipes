@@ -13,6 +13,7 @@ const ciasteczkaBozonarodzeniowe: Recipe = {
   images: [""],
   time: 85,
   portions: 24,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

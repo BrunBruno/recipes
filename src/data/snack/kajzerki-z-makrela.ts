@@ -11,6 +11,7 @@ const kajzerkiZMakrela: Recipe = {
   images: ["kajzerki-z-makrela.jpg"],
   time: 15,
   portions: 1,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",

@@ -17,6 +17,7 @@ const gotowanyKurczak: Recipe = {
   images: ["kurczak-duszony.jpg"],
   time: 45,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Mięso i sos",

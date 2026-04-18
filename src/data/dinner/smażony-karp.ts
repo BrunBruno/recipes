@@ -7,6 +7,7 @@ const smazonyKarp: Recipe = {
   images: [""],
   time: 0,
   portions: 0,
+  executionDifficulty: null,
   ingredients: [],
   steps: [],
 };

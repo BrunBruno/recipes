@@ -16,6 +16,7 @@ const burgerDrwala: Recipe = {
   images: ["burger-drwala.jpg"],
   time: 50,
   portions: portions,
+  executionDifficulty: 4,
   ingredients: [
     {
       title: "Mięso",

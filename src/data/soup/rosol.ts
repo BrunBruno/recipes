@@ -12,6 +12,7 @@ const rosol: Recipe = {
   images: [""],
   time: 240,
   portions: 6,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

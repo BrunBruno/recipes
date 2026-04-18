@@ -13,6 +13,7 @@ const jajkoSadzone: Recipe = {
   images: ["jajko-sadzone.jpg"],
   time: 10,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Jajka sadzone",

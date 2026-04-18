@@ -14,6 +14,7 @@ const kapustaZasmazana: Recipe = {
   images: [""],
   time: 80,
   portions: 10,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

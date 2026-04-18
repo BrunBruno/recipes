@@ -14,6 +14,7 @@ const pomidorowa: Recipe = {
   images: [""],
   time: 15,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

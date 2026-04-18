@@ -17,6 +17,7 @@ const bitki: Recipe = {
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Mięso i sos",

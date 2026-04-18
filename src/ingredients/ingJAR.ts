@@ -40,6 +40,7 @@ type IngId =
 
   //// SAUCES ////
   | "ketchup"
+  | "spicy_ketchup"
   | "mustard"
   | "sarepska_mustard"
   | "mayonnaise"
@@ -384,6 +385,19 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 25, 1.7],
     verified: true,
+  },
+
+  spicy_ketchup: {
+    name: "Pikantny ketchup",
+    type: "jar",
+    subType: "sau",
+    color: "#C62828",
+    kcalPer100g: 110,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0, 25, 1.8],
   },
 
   mustard: {

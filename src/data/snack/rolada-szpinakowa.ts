@@ -15,6 +15,7 @@ const roladaSzpinakowa: Recipe = {
   images: [""],
   time: 60,
   portions: 6,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

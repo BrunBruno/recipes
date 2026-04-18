@@ -13,6 +13,7 @@ const watrobkaZKurczaka: Recipe = {
   images: ["watrobka-z-kurczaka.jpg"],
   time: 20,
   portions: 2,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

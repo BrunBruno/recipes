@@ -13,6 +13,7 @@ const biszkoptCzekoladowy: Recipe = {
   images: [""],
   time: 50,
   portions: 1,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

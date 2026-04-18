@@ -13,6 +13,7 @@ const kurczakZRozna: Recipe = {
   images: ["kurczak-z-rozna.jpg"],
   time: 90,
   portions: portions,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "Kurczak",

@@ -13,6 +13,7 @@ const golonka: Recipe = {
   images: [""],
   time: 60,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

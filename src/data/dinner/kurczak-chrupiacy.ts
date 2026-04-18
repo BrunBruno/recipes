@@ -15,6 +15,7 @@ const kurczakChrupiacy: Recipe = {
   images: ["kurczak-chrupiacy.jpg"],
   time: 30,
   portions: portions,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Kurczak",

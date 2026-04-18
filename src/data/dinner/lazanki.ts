@@ -14,6 +14,7 @@ const lazanki: Recipe = {
   images: ["lazanki.jpg"],
   time: 50,
   portions: 5,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",

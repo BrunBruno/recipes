@@ -15,6 +15,7 @@ const gulaszPoWegiersku: Recipe = {
   images: ["gulasz-po-wegiersku.jpg"],
   time: 90,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Gulasz",

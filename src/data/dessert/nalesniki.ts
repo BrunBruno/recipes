@@ -14,6 +14,7 @@ const nalesniki: Recipe = {
   images: [""],
   time: 20,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

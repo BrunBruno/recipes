@@ -14,6 +14,7 @@ const kurczakZPiekarnika: Recipe = {
   images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
   time: 60,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Kurczak",

@@ -94,6 +94,7 @@ export type Recipe = {
   images: NonEmptyArray<string>;
   portions: number;
   time: number;
+  executionDifficulty: number | null;
   ingredients: RecipeIngredientGroup[];
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];

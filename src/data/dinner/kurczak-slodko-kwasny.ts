@@ -14,6 +14,7 @@ const kurczakSlodkoKwasny: Recipe = {
   images: ["kurczak-slodko-kwasny.jpg"],
   time: 30,
   portions: portions,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

@@ -14,6 +14,7 @@ const kajzerkiZJajkiem: Recipe = {
   images: ["kajzerki-z-jajkiem.jpg"],
   time: 20,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

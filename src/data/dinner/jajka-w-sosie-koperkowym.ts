@@ -16,6 +16,7 @@ const jajkaWSosieKoperkowym: Recipe = {
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: 1,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "Jajka i sos",

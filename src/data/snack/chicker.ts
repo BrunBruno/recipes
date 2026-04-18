@@ -1,3 +1,4 @@
+import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
@@ -10,9 +11,10 @@ const chicker: Recipe = {
   description:
     "Szybkie kanapki z kurczakiem w chrupiącej panierce, podawane z dwoma wyrazistymi sosami - ostrym i miodowo-musztardowym.",
   type: "snack",
-  images: [""],
+  images: ["chickery.jpg"],
   time: 25,
   portions: 2,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "Kanapki",
@@ -20,15 +22,17 @@ const chicker: Recipe = {
         { ingredient: iMET.spicy_tenderloins, amount: 400 },
         { ingredient: iGRN.chicken_buns, amount: 4, unit: "szt" },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ingredient: iFAT.oil, amount: 1, unit: "lz" },
       ],
     },
     {
       title: "Sosy",
       items: [
         { ingredient: iJAR.ketchup, amount: 1.5, unit: "lzi" },
+        { ingredient: iJAR.sriracha, amount: 2, unit: "lzi" },
+        { ingredient: iJAR.spicy_ketchup, amount: 2, unit: "lzi", alt: true },
         { ingredient: iJAR.mustard, amount: 2, unit: "lzi" },
         { ingredient: iJAR.mayonnaise, amount: 1, unit: "lzi" },
-        { ingredient: iJAR.sriracha, amount: 2, unit: "lzi" },
         { ingredient: iOTH.honey, amount: 0.5, unit: "lzi" },
       ],
     },

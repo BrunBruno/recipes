@@ -12,6 +12,7 @@ const salatkaJarzynowa: Recipe = {
   images: ["salatka-jarzynowa.jpg"],
   time: 40,
   portions: 8,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",

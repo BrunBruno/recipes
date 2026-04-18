@@ -10,6 +10,7 @@ const kluskiNaParze: Recipe = {
   images: [""],
   time: 10,
   portions: 2,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

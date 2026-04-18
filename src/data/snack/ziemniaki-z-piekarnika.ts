@@ -11,6 +11,7 @@ const ziemniakiZPiekarnika: Recipe = {
   images: [""],
   time: 40,
   portions: 4,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

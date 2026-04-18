@@ -12,6 +12,7 @@ const kopytkaZCukrem: Recipe = {
   images: ["kopytka-z-cukrem.jpg"],
   time: 15,
   portions: 2,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

@@ -12,6 +12,7 @@ const sandwich: Recipe = {
   images: ["sandwiche.jpg", "sandwiche-2.jpg"],
   time: 10,
   portions: 1,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

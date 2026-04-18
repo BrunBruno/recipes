@@ -14,6 +14,7 @@ const kotletPoZbojnicku: Recipe = {
   images: [""],
   time: 40,
   portions: 4,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "",

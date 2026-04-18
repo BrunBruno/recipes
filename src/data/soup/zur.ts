@@ -7,6 +7,7 @@ const zur: Recipe = {
   images: ["zur.jpg"],
   time: 0,
   portions: 0,
+  executionDifficulty: null,
   ingredients: [],
   steps: [],
   keyWords: ["zupa"],

@@ -15,6 +15,7 @@ const cynamonki: Recipe = {
   images: [""],
   time: 150,
   portions: 12,
+  executionDifficulty: null,
   ingredients: [
     {
       title: "Cynamonki",
