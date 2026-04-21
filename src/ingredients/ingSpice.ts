@@ -33,6 +33,7 @@ type IngId =
   //// SEASONINGS ////
   | "vegetable_seasoning"
   | "potato_seasoning"
+  | "meat_seasoning"
   | "gyros_spice"
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
@@ -222,6 +223,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [5, 45, 8],
+  },
+
+  meat_seasoning: {
+    name: "Przyprawa do mięs",
+    type: "spc",
+    color: "#C94B3F",
+    kcalPer100g: 250,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [5, 30, 10],
   },
 
   gyros_spice: {

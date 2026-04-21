@@ -1,37 +1,33 @@
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
+import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const portions = 3;
-const gulaszPoWegiersku: Recipe = {
-  name: "Gulasz po Węgiersku",
+const portions = 2;
+
+const gulaszWegrerski: Recipe = {
+  name: "Gulasz po węgiersku",
   description:
-    "Klasyczny gulasz po węgiersku z wołowiną, podawany z kopytkami i buraczkami, idealny na sycący obiad.",
+    "Aromatyczny gulasz wieprzowy z papryką i cebulą, duszony w intensywnym sosie przyprawowym.",
   type: "dinner",
-  images: ["gulasz-po-wegiersku.jpg"],
-  time: 90,
+  images: [""],
+  time: 50,
   portions: portions,
-  executionDifficulty: 1,
+  executionDifficulty: 2,
   ingredients: [
     {
-      title: "Gulasz",
+      title: "",
       items: [
-        { ingredient: iMET.stew_beef, amount: 500 },
-        { ingredient: iFAT.oil, amount: 5, unit: "lz" },
-        { ingredient: iOTH.water, amount: 250, unit: "ml" },
+        { ingredient: iMET.stew_beef, amount: 400 },
+        { ingredient: iMET.stew_pork, amount: 400, alt: true },
+        { ingredient: iVEG.bell_pepper, amount: 1, unit: "szt" },
+        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
+        { ingredient: iFAT.oil, amount: 3, unit: "lz" },
+        { ingredient: iOTH.water, amount: 2, unit: "szk" },
         { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
-      ],
-    },
-    {
-      title: "Przykładowe dodatki",
-      items: [
-        { ingredient: iGRN.gnocchi, amount: portions * 250 },
-        { ingredient: iJAR.fried_beets, amount: portions * 150 },
-        { ingredient: iSPC.salt },
+        { ingredient: iSPC.meat_seasoning },
       ],
     },
   ],
@@ -39,23 +35,17 @@ const gulaszPoWegiersku: Recipe = {
     {
       title: "",
       steps: [
-        "Mięso wołowe pokrój w kostkę.",
-        "Na patelni lub w garnku rozgrzej niewielką ilość oleju i podsmaż mięso, aż się zarumieni.",
-        "W osobnym garnku wymieszaj Fix Knorr z 250 ml wody.",
-        "Dodaj podsmażone mięso do garnka z sosem i całość zagotuj.",
-        "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-        "Podawaj gulasz z porcją ugotowanych kopytek.",
-        "Obok dodaj porcję buraczków zasmażanych.",
+        "Pokrój mięso, paprykę i cebulę w grubą kostkę.",
+        "Oprósz wieprzowinę przyprawą do mięs.",
+        "Rozgrzej olej w garnku i obsmaż mięso.",
+        "Dodaj paprykę i cebulę, smaż jeszcze około 5 minut.",
+        "Wymieszaj fix gulaszowy z wodą i wlej do garnka.",
+        "Duś pod przykryciem przez około 30 minut.",
+        "Podawaj z kopytkami lub plackami ziemniaczanymi, opcjonalnie ze śmietaną.",
       ],
     },
   ],
-  keyWords: ["wołowina", "sos"],
+  keyWords: [],
 };
 
-export default gulaszPoWegiersku;
+export default gulaszWegrerski;
