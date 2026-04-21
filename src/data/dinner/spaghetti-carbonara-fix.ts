@@ -24,7 +24,7 @@ const spaghettiCarbonaraFix: Recipe = {
         { ingredient: iMET.bacon_block, amount: 150 },
         { ingredient: iDIR.cream_18, amount: 100, unit: "ml" },
         { ingredient: iOTH.water, amount: 200, unit: "ml" },
-        { ingredient: iSPC.fix_carbonara_knorr, amount: 1, unit: "opak" },
+        { ingredient: iSPC.knorr_carbonara_fix, amount: 1, unit: "opak" },
         { ingredient: iSPC.salt },
       ],
     },

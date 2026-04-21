@@ -39,8 +39,8 @@ type IngId =
   | "knorr_chinese_fix"
   | "knorr_bolognese_fix"
   | "knorr_crispy_chicken_fix"
-  | "fix_carbonara_knorr"
-  | "fix_napoli";
+  | "knorr_carbonara_fix"
+  | "knorr_napoli_fix";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -295,7 +295,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  fix_carbonara_knorr: {
+  knorr_carbonara_fix: {
     name: "Fix Knorr spaghetti carbonara",
     type: "spc",
     color: "#FFFD8D",
@@ -307,7 +307,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  fix_napoli: {
+  knorr_napoli_fix: {
     name: "Fix Napoli",
     type: "spc",
     color: "#E53935",

@@ -4,6 +4,7 @@ type IngId =
   //// PRESERVES ////
   | "tomato_puree"
   | "tomato_paste"
+  | "tomato_passata"
   | "pickled_cucumber"
   | "pickled_cucumber_vinegar"
   | "sauerkraut"
@@ -73,6 +74,17 @@ export const iJAR: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0.3, 18, 4],
+  },
+
+  tomato_passata: {
+    name: "Passata pomidorowa",
+    type: "jar",
+    color: "#D94C3A",
+    kcalPer100g: 33,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [0.2, 5.6, 1.5],
   },
 
   pickled_cucumber: {

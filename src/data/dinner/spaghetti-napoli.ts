@@ -25,7 +25,7 @@ const spaghettiNapoli: Recipe = {
         { ingredient: iFAT.oil, amount: 1, unit: "lz" },
         { ingredient: iJAR.tomato_paste, amount: 2, unit: "lzi" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iSPC.fix_napoli, amount: 1, unit: "opak" },
+        { ingredient: iSPC.knorr_napoli_fix, amount: 1, unit: "opak" },
         { ingredient: iSPC.salt },
       ],
     },
