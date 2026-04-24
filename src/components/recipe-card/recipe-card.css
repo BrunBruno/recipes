@@ -359,10 +359,10 @@
   grid-template-columns: 1rem auto 6rem;
   padding: 0 0.5rem;
   font-size: 0.95rem;
-  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
 }
 
-.ingredient-item:last-child {
+.ingredient-item:first-child {
   border: none;
 }
 
@@ -370,10 +370,9 @@
   position: relative;
   display: grid;
   grid-template-columns: 1rem auto 6rem;
-  background-color: #111111;
+  background-color: #181818;
   padding: 0 0.5rem;
   font-size: 0.95rem;
-  border-bottom: 1px solid #333333;
 }
 
 .ingredient-item-alt:last-child {

@@ -21,7 +21,6 @@ const gulaszWegrerski: Recipe = {
       title: "",
       items: [
         { ingredient: iMET.stew_beef, amount: 400 },
-        { ingredient: iMET.stew_pork, amount: 400, alt: true },
         { ingredient: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iFAT.oil, amount: 3, unit: "lz" },

@@ -39,7 +39,7 @@ const gotowyBurger: Recipe = {
       items: [
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
         { ingredient: iMET.burger_patties, amount: 4, unit: "szt" },
-        { ingredient: iDIR.yellow_cheese, amount: 4, unit: "plas" },
+        { ingredient: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ingredient: iJAR.mayonnaise, amount: 4, unit: "lzi" },
         { ingredient: iJAR.ketchup, amount: 4, unit: "lzi" },
       ],

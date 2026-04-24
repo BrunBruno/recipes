@@ -7,6 +7,7 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 4;
 const kebabGyros: Recipe = {
   name: "Kebab Gyros",
   description:
@@ -14,7 +15,7 @@ const kebabGyros: Recipe = {
   type: "snack",
   images: [""],
   time: 30,
-  portions: 4,
+  portions: portions,
   executionDifficulty: 3,
   ingredients: [
     {
@@ -33,7 +34,7 @@ const kebabGyros: Recipe = {
         { ingredient: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ingredient: iVEG.radish, amount: 1, unit: "opak" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
-        { ingredient: iVEG.lettuce, amount: 10, unit: "szt" },
+        { ingredient: iVEG.lettuce, amount: portions * 2.5, unit: "szt" },
       ],
     },
     {

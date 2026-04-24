@@ -22,7 +22,7 @@ const burgerDrwala: Recipe = {
       title: "Mięso",
       items: [
         { ingredient: iMET.ground_beef, amount: 400 },
-        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
+        { ingredient: iFAT.oil, amount: portions * 0.5, unit: "lz" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
       ],
@@ -34,7 +34,7 @@ const burgerDrwala: Recipe = {
         { ingredient: iGRN.cheese_snacks, amount: 1, unit: "opak" },
         { ingredient: iGRN.breadcrumbs, amount: "0-2", unit: "lz" },
         { ingredient: iMET.egg, amount: "1-2", unit: "szt" },
-        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
+        { ingredient: iFAT.oil, amount: portions * 0.5, unit: "lz" },
       ],
     },
     {
@@ -43,7 +43,6 @@ const burgerDrwala: Recipe = {
         { ingredient: iGRN.hamburger_buns, amount: 4, unit: "szt" },
         { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ingredient: iVEG.red_onion, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.onion, amount: 0.5, unit: "szt", alt: true },
         { ingredient: iVEG.lettuce, amount: 4, unit: "szt" },
         { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
         { ingredient: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
@@ -72,7 +71,7 @@ const burgerDrwala: Recipe = {
       steps: [
         "Uformuj kotlety wołowe z samego mięsa wołowego i odstaw je do lodówki.",
         "Ser Liliput pokrój na 4 równe kawałki.",
-        "Chrupki serowe rozetrzyj w moździerzu i wsyp do miski. W razie potrzeby dodaj bułkę tartą.",
+        "Chrupki serowe rozetrzyj w moździerzu lub rozgnieć w worku i wsyp do miski. W razie potrzeby dodaj bułkę tartą.",
         "Do drugiej miski wbij 1-2 jajka i rozbełtaj.",
         "Kawałki sera wielokrotnie maczaj w jajku i obtaczaj w chrupkach, aż uzyskasz solidną panierkę.",
         "Plastry boczku usmaż na patelni i odstaw.",

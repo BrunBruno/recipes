@@ -30,8 +30,8 @@ const chicker: Recipe = {
       items: [
         { ingredient: iJAR.ketchup, amount: 1.5, unit: "lzi" },
         { ingredient: iJAR.sriracha, amount: 2, unit: "lzi" },
-        { ingredient: iJAR.spicy_ketchup, amount: 2, unit: "lzi", alt: true },
-        { ingredient: iJAR.mustard, amount: 2, unit: "lzi" },
+        { ingredient: iJAR.spicy_ketchup, alt: true },
+        { ingredient: iJAR.mustard_dessert, amount: 2, unit: "lzi" },
         { ingredient: iJAR.mayonnaise, amount: 1, unit: "lzi" },
         { ingredient: iOTH.honey, amount: 0.5, unit: "lzi" },
       ],
@@ -43,6 +43,7 @@ const chicker: Recipe = {
       steps: [
         "Wymieszaj ketchup z sosem sriracha, aby uzyskać ostry sos.",
         "Wymieszaj musztardę, majonez i miód, aby uzyskać sos miodowo-musztardowy.",
+        "Odstaw sosy do lodówki do przegryzienia.",
       ],
     },
     {

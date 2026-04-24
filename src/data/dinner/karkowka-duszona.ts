@@ -21,7 +21,7 @@ const karkowkaDuszona: Recipe = {
       items: [
         { ingredient: iMET.pork_neck, amount: 2, unit: "opak" },
         { ingredient: iFAT.oil, amount: 5, unit: "lz" },
-        { ingredient: iJAR.sarepska_mustard, amount: 10, unit: "lzi" },
+        { ingredient: iJAR.mustard_sarepska, amount: 10, unit: "lzi" },
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },

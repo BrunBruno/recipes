@@ -20,7 +20,7 @@ const frenchHotDog: Recipe = {
         { ingredient: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
         { ingredient: iJAR.ketchup, amount: 10 },
         { ingredient: iJAR.garlic_sauce, amount: 10 },
-        { ingredient: iJAR.mustard, amount: 10 },
+        { ingredient: iJAR.mustard_bbq, amount: 10 },
         { ingredient: iJAR.sriracha, amount: 10 },
       ],
     },

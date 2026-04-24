@@ -27,7 +27,7 @@ const roladaWieprzowa: Recipe = {
         { ingredient: iVEG.onion, amount: 1, unit: "szt" },
         { ingredient: iGRN.flour },
         { ingredient: iDIR.cream_18 },
-        { ingredient: iJAR.sarepska_mustard },
+        { ingredient: iJAR.mustard_sarepska },
         { ingredient: iFAT.margarine },
         { ingredient: iFAT.butter },
         { ingredient: iSPC.salt },

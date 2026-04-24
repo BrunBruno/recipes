@@ -22,7 +22,7 @@ const hotHog: Recipe = {
         { ingredient: iJAR.sauerkraut, amount: 160 },
         { ingredient: iJAR.fried_onion, amount: 2, unit: "lz" },
         { ingredient: iJAR.ketchup, amount: 20 },
-        { ingredient: iJAR.mustard, amount: 20 },
+        { ingredient: iJAR.mustard_dessert, amount: 20 },
         { ingredient: iJAR.garlic_sauce, amount: 20 },
       ],
     },
@@ -32,7 +32,7 @@ const hotHog: Recipe = {
       title: "",
       steps: [
         "Podgrzej bułki oraz parówki w mikrofalówce.",
-        "Pokrój ogórki kiszone wzdłuż.",
+        "Pokrój ogórki kiszone.",
         "Otwórz bułki i ułóż po bokach ogórki kiszone.",
         "Włóż parówkę do bułki.",
         "Polej całość ketchupem, musztardą i sosem czosnkowym.",

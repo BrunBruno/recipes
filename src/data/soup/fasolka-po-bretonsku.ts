@@ -8,7 +8,7 @@ const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka po Bretońsku",
   description:
     "Tradycyjna fasolka po bretońsku na wywarze mięsnym z kiełbasą, boczkiem i majerankiem. Sycące danie obiadowe.",
-  type: "dinner",
+  type: "soup",
   images: ["fasolka-po-bretonsku.jpg"],
   time: 120,
   portions: 5,
@@ -21,6 +21,7 @@ const fasolkaPoBretonsku: Recipe = {
         { ingredient: iMET.sausage, amount: 1, unit: "peto" },
         { ingredient: iMET.bacon_block, amount: 150 },
         { ingredient: iMET.pork_rib, amount: 200, excludeFromCalc: true },
+        { ingredient: iMET.chicken_soup_portion, amount: 200, alt: true },
         { ingredient: iVEG.onion, amount: 120 },
         { ingredient: iVEG.carrot, amount: 150 },
         { ingredient: iVEG.parsley_root, amount: 100 },

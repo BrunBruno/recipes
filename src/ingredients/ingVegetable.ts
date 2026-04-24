@@ -26,6 +26,7 @@ type IngId =
   | "lettuce"
   | "lettuce_romaine"
   | "lettuce_iceberg"
+  | "lettuce_butter"
   | "chinese_cabbage"
   | "red_cabbage"
   | "savoy_cabbage"
@@ -300,7 +301,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#7CB342",
     kcalPer100g: 17,
     unitWeights: {
-      szt: 300,
+      szt: 5,
+      opak: 300,
     },
     nutrientsPer100g: [0.3, 3.3, 1.2],
   },
@@ -312,9 +314,23 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#C5E1A5",
     kcalPer100g: 14,
     unitWeights: {
-      szt: 500,
+      szt: 5,
+      opak: 500,
     },
     nutrientsPer100g: [0.1, 3, 1],
+  },
+
+  lettuce_butter: {
+    name: "Sałata masłowa",
+    type: "veg",
+    subType: "gee",
+    color: "#AED581",
+    kcalPer100g: 14,
+    unitWeights: {
+      szt: 10,
+      opak: 300,
+    },
+    nutrientsPer100g: [1.4, 0.2, 2.9],
   },
 
   chinese_cabbage: {

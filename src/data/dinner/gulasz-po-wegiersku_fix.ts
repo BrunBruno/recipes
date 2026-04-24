@@ -43,7 +43,7 @@ const gulaszPoWegierskuFix: Recipe = {
         "Na patelni lub w garnku rozgrzej niewielką ilość oleju i podsmaż mięso, aż się zarumieni.",
         "W osobnym garnku wymieszaj Fix Knorr z 250 ml wody.",
         "Dodaj podsmażone mięso do garnka z sosem i całość zagotuj.",
-        "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu.",
+        "Duś gulasz na małym ogniu przez około 1 godzinę, mieszając od czasu do czasu aby sos się nie przypalił.",
       ],
     },
     {

@@ -37,7 +37,7 @@ const ciastoMurzyn: Recipe = {
         "Do pozostałej masy dodaj jajka, mąkę oraz proszek do pieczenia.",
         "Całość dokładnie wymieszaj mikserem.",
         "Wlej ciasto do małej formy.",
-        "Piecz przez około 30 minut.",
+        "Piecz przez około 30-40 minut.",
         "Sprawdź patyczkiem, czy ciasto jest upieczone.",
         "Po upieczeniu polej ciasto przygotowaną wcześniej polewą.",
       ],

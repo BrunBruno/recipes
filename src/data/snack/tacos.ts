@@ -36,20 +36,10 @@ const tacos: Recipe = {
       title: "Dodatki",
       items: [
         { ingredient: iGRN.tortilla_mini, amount: 12, unit: "szt" },
-        {
-          ingredient: iGRN.taco_shell_corn,
-          amount: 12,
-          unit: "szt",
-          alt: true,
-        },
+        { ingredient: iGRN.taco_shell_corn, alt: true },
         { ingredient: iDIR.sour_cream, amount: 4, unit: "lz" },
-        { ingredient: iVEG.lettuce_romaine, amount: 1, unit: "szt" },
-        {
-          ingredient: iVEG.lettuce_iceberg,
-          amount: 0.5,
-          unit: "szt",
-          alt: true,
-        },
+        { ingredient: iVEG.lettuce_romaine, amount: 1, unit: "opak" },
+        { ingredient: iVEG.lettuce_iceberg, alt: true },
         { ingredient: iVEG.tomato, amount: 2, unit: "szt" },
         { ingredient: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ingredient: iVEG.chili_pepper, amount: 1, unit: "szt" },

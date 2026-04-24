@@ -60,6 +60,7 @@ const bitki: Recipe = {
         "Dodaj przyprawy: pieprz, paprykę, czosnek niedźwiedzi lub granulowany, majeranek, ziele angielskie i liść laurowy.",
         "Gotuj na małym ogniu do miękkości mięsa.",
         "Na końcu dopraw sos śmietaną 30% i posyp posiekanym szczypiorkiem.",
+        "Dokładnie wymieszaj.",
       ],
     },
     {

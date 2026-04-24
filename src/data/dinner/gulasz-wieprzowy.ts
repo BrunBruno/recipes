@@ -25,6 +25,7 @@ const gulaszWieprzowy: Recipe = {
         { ingredient: iMET.stew_pork, amount: 500 },
         { ingredient: iFAT.oil, amount: 3, unit: "lz" },
         { ingredient: iFAT.butter, amount: 1, unit: "lz" },
+        { ingredient: iFAT.rendered_lard, alt: true },
         { ingredient: iGRN.flour, amount: 1, unit: "lz" },
         { ingredient: iDIR.cream_18, amount: 2, unit: "lz" },
         { ingredient: iOTH.water, amount: 250, unit: "ml" },
@@ -50,7 +51,8 @@ const gulaszWieprzowy: Recipe = {
     {
       title: "",
       steps: [
-        "Mięso podsmaż na oleju, następnie dodaj masło lub smalec i smaż przez około 30 minut.",
+        "Mięso wieprzowe pokrój w kostkę.",
+        "Następnie podsmaż je na oleju, dodaj masło lub smalec i smaż przez około 30 minut.",
         "Zalej mięso wodą, dodaj posiekaną cebulę i duś, aż mięso będzie miękkie.",
         "W szklance wymieszaj mąkę, śmietanę oraz niewielką ilość wody.",
         "Dodaj mieszankę do gulaszu, aby go zagęścić.",

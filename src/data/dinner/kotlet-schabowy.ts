@@ -38,9 +38,8 @@ const kotletSchabowy: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ingredient: iVEG.potato, amount: portions * 200 },
-        { ingredient: iDIR.cream_18, amount: 10, unit: "lz" },
-        { ingredient: iVEG.cucumber, amount: 2.5, unit: "szt" },
-        { ingredient: iVEG.onion, amount: 1.25, unit: "szt" },
+        { ingredient: iDIR.cream_18, amount: portions * 2, unit: "lz" },
+        { ingredient: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
         { ingredient: iVEG.spring_onion },
         { ingredient: iSPC.black_pepper },
         { ingredient: iSPC.salt },
@@ -63,8 +62,8 @@ const kotletSchabowy: Recipe = {
       title: "Przykładowe podanie",
       steps: [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Pokrój ogórka w cienkie plasterki i dodaj posiekaną cebulę.",
-        "Dodaj śmietanę, koperek, sól i pieprz, a następnie wymieszaj.",
+        "Pokrój ogórka w cienkie plasterki i dodaj zieloną cebulkę.",
+        "Dodaj śmietanę, sól i pieprz, a następnie wymieszaj.",
         "Podawaj danie z porcją ziemniaków i przygotowaną mizerią.",
       ],
     },

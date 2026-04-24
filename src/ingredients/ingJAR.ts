@@ -43,7 +43,10 @@ type IngId =
   | "ketchup"
   | "spicy_ketchup"
   | "mustard"
-  | "sarepska_mustard"
+  | "mustard_sarepska"
+  | "mustard_dessert"
+  | "mustard_russian"
+  | "mustard_bbq"
   | "mayonnaise"
   | "garlic_sauce"
   | "sriracha"
@@ -426,7 +429,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  sarepska_mustard: {
+  mustard_sarepska: {
     name: "Musztarda sarepska",
     type: "jar",
     subType: "sau",
@@ -438,6 +441,45 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5.1, 8.3, 3.7],
     verified: true,
+  },
+
+  mustard_dessert: {
+    name: "Musztarda deserowa",
+    type: "jar",
+    subType: "sau",
+    color: "#FDD835",
+    kcalPer100g: 120,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [4.5, 4.0, 10.0],
+  },
+
+  mustard_russian: {
+    name: "Musztarda rosyjska",
+    type: "jar",
+    subType: "sau",
+    color: "#C78C06",
+    kcalPer100g: 150,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [6.0, 6.5, 7.0],
+  },
+
+  mustard_bbq: {
+    name: "Musztarda barbecue",
+    type: "jar",
+    subType: "sau",
+    color: "#CD7A00",
+    kcalPer100g: 140,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [3.5, 2.5, 20.0],
   },
 
   mayonnaise: {
