@@ -17,10 +17,10 @@ const ciastoNaPierogi: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.flour, amount: 500 },
-        { ingredient: iFAT.oil, amount: 50, unit: "ml" },
-        { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iSPC.salt, amount: 0.5, unit: "lzi" },
+        { ing: iGRN.flour, amount: 500 },
+        { ing: iFAT.oil, amount: 50, unit: "ml" },
+        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iSPC.salt, amount: 0.5, unit: "lzi" },
       ],
     },
   ],

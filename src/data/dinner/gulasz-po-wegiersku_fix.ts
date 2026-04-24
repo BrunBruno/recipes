@@ -20,18 +20,18 @@ const gulaszPoWegierskuFix: Recipe = {
     {
       title: "Gulasz",
       items: [
-        { ingredient: iMET.stew_beef, amount: 500 },
-        { ingredient: iFAT.oil, amount: 5, unit: "lz" },
-        { ingredient: iOTH.water, amount: 250, unit: "ml" },
-        { ingredient: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
+        { ing: iMET.stew_beef, amount: 500 },
+        { ing: iFAT.oil, amount: 5, unit: "lz" },
+        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
       ],
     },
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iGRN.gnocchi, amount: portions * 250 },
-        { ingredient: iJAR.fried_beets, amount: portions * 150 },
-        { ingredient: iSPC.salt },
+        { ing: iGRN.gnocchi, amount: portions * 250 },
+        { ing: iJAR.fried_beets, amount: portions * 150 },
+        { ing: iSPC.salt },
       ],
     },
   ],

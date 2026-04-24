@@ -19,12 +19,12 @@ const kurczakPoSeczuansku: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.chicken_breast, amount: 400 },
-        { ingredient: iGRN.bulgur, amount: portions * 80 },
-        { ingredient: iJAR.sechuan_chili_fusion, amount: 1, unit: "opak" },
-        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
-        { ingredient: iSPC.chilli },
-        { ingredient: iSPC.salt },
+        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iGRN.bulgur, amount: portions * 80 },
+        { ing: iJAR.sechuan_chili_fusion, amount: 1, unit: "opak" },
+        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        { ing: iSPC.chilli },
+        { ing: iSPC.salt },
       ],
     },
   ],

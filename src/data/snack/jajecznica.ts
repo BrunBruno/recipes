@@ -17,18 +17,18 @@ const jajecznica: Recipe = {
     {
       title: "Jajecznica",
       items: [
-        { ingredient: iMET.egg, amount: "3-5", unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lz" },
-        { ingredient: iSPC.salt },
+        { ing: iMET.egg, amount: "3-5", unit: "szt" },
+        { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
+        { ing: iSPC.salt },
       ],
     },
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iMET.sausage, amount: 0.5, unit: "peto" },
-        { ingredient: iVEG.onion, amount: 1, unit: "szt" },
-        { ingredient: iVEG.tomato, amount: 1, unit: "szt" },
-        { ingredient: iVEG.chives },
+        { ing: iMET.sausage, amount: 0.5, unit: "peto" },
+        { ing: iVEG.onion, amount: 1, unit: "szt" },
+        { ing: iVEG.tomato, amount: 1, unit: "szt" },
+        { ing: iVEG.chives },
       ],
     },
   ],

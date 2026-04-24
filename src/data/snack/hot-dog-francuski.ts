@@ -16,12 +16,12 @@ const frenchHotDog: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.sausages, amount: 2, unit: "szt" },
-        { ingredient: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
-        { ingredient: iJAR.ketchup, amount: 10 },
-        { ingredient: iJAR.garlic_sauce, amount: 10 },
-        { ingredient: iJAR.mustard_bbq, amount: 10 },
-        { ingredient: iJAR.sriracha, amount: 10 },
+        { ing: iMET.sausages, amount: 2, unit: "szt" },
+        { ing: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
+        { ing: iJAR.ketchup, amount: 10 },
+        { ing: iJAR.garlic_sauce, amount: 10 },
+        { ing: iJAR.mustard_bbq, amount: 10 },
+        { ing: iJAR.sriracha, amount: 10 },
       ],
     },
   ],

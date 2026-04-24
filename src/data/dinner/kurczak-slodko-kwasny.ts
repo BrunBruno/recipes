@@ -19,11 +19,11 @@ const kurczakSlodkoKwasny: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.chicken_breast, amount: 400 },
-        { ingredient: iGRN.rice, amount: portions * 100 },
-        { ingredient: iJAR.sweet_sour_sauce, amount: 1, unit: "opak" },
-        { ingredient: iFAT.oil, amount: 2, unit: "lz" },
-        { ingredient: iSPC.salt },
+        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iGRN.rice, amount: portions * 100 },
+        { ing: iJAR.sweet_sour_sauce, amount: 1, unit: "opak" },
+        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        { ing: iSPC.salt },
       ],
     },
   ],

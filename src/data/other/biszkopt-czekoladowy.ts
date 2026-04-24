@@ -18,12 +18,12 @@ const biszkoptCzekoladowy: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.flour, amount: 75 },
-        { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iFAT.oil, amount: 30 },
-        { ingredient: iDIR.milk, amount: 40 },
-        { ingredient: iOTH.sugar, amount: 90 },
-        { ingredient: iGRN.cocoa, amount: 15 },
+        { ing: iGRN.flour, amount: 75 },
+        { ing: iMET.egg, amount: 3, unit: "szt" },
+        { ing: iFAT.oil, amount: 30 },
+        { ing: iDIR.milk, amount: 40 },
+        { ing: iOTH.sugar, amount: 90 },
+        { ing: iGRN.cocoa, amount: 15 },
       ],
     },
   ],

@@ -364,13 +364,13 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                             )}
                             <div className="ingredient-indicator">
                               <IngredientIcon
-                                ingType={ingredient.ingredient.type}
-                                subType={ingredient.ingredient.subType}
-                                color={ingredient.ingredient.color}
+                                ingType={ingredient.ing.type}
+                                subType={ingredient.ing.subType}
+                                color={ingredient.ing.color}
                               />
                             </div>
                             <span className="ingredient-name">
-                              {ingredient.ingredient.name}
+                              {ingredient.ing.name}
                             </span>
                             <span className="ingredient-amount">
                               {ingredient.amount}

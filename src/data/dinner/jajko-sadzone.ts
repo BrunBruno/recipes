@@ -18,19 +18,19 @@ const jajkoSadzone: Recipe = {
     {
       title: "Jajka sadzone",
       items: [
-        { ingredient: iMET.egg, amount: "2-3", unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lz" },
-        { ingredient: iSPC.salt },
+        { ing: iMET.egg, amount: "2-3", unit: "szt" },
+        { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
+        { ing: iSPC.salt },
       ],
     },
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iVEG.potato, amount: 200 },
-        { ingredient: iJAR.canned_peas, amount: 100 },
-        { ingredient: iSPC.dill },
-        { ingredient: iSPC.black_pepper },
-        { ingredient: iSPC.salt },
+        { ing: iVEG.potato, amount: 200 },
+        { ing: iJAR.canned_peas, amount: 100 },
+        { ing: iSPC.dill },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
   ],

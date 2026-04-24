@@ -16,10 +16,10 @@ const maczanka: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.sausage, amount: 1, unit: "peto" },
-        { ingredient: iFAT.butter, amount: 1, unit: "lzi" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ingredient: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iMET.sausage, amount: 1, unit: "peto" },
+        { ing: iFAT.butter, amount: 1, unit: "lzi" },
+        { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
+        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
       ],
     },
   ],

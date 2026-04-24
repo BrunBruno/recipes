@@ -17,11 +17,11 @@ const paluszkiRybne: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.fish_sticks, amount: 5, unit: "szt" },
-        { ingredient: iFAT.oil, amount: 1, unit: "lzi" },
-        { ingredient: iJAR.frozen_fries, amount: 200 },
-        { ingredient: iJAR.fried_beets, amount: 150 },
-        { ingredient: iSPC.salt },
+        { ing: iMET.fish_sticks, amount: 5, unit: "szt" },
+        { ing: iFAT.oil, amount: 1, unit: "lzi" },
+        { ing: iJAR.frozen_fries, amount: 200 },
+        { ing: iJAR.fried_beets, amount: 150 },
+        { ing: iSPC.salt },
       ],
     },
   ],

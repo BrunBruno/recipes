@@ -18,12 +18,12 @@ const spaghettiCarbonara: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ingredient: iDIR.parmigiano_reggiano, amount: 100 },
-        { ingredient: iMET.bacon_block, amount: 300 },
-        { ingredient: iMET.egg_yolk, amount: 8, unit: "szt" },
-        { ingredient: iSPC.black_pepper },
-        { ingredient: iSPC.salt },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
+        { ing: iDIR.parmigiano_reggiano, amount: 100 },
+        { ing: iMET.bacon_block, amount: 300 },
+        { ing: iMET.egg_yolk, amount: 8, unit: "szt" },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
   ],

@@ -17,12 +17,12 @@ const zawinieteTosty: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.toast_bread, amount: 8, unit: "krom" },
-        { ingredient: iDIR.yellow_cheese, amount: 8, unit: "plas" },
-        { ingredient: iMET.bacon_slices, amount: 8, unit: "plas" },
-        { ingredient: iJAR.mayonnaise, amount: 1, unit: "lzi" },
-        { ingredient: iJAR.ketchup, amount: 1, unit: "lzi" },
-        { ingredient: iMET.egg, amount: 1, unit: "szt" },
+        { ing: iGRN.toast_bread, amount: 8, unit: "krom" },
+        { ing: iDIR.yellow_cheese, amount: 8, unit: "plas" },
+        { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
+        { ing: iJAR.mayonnaise, amount: 1, unit: "lzi" },
+        { ing: iJAR.ketchup, amount: 1, unit: "lzi" },
+        { ing: iMET.egg, amount: 1, unit: "szt" },
       ],
     },
   ],

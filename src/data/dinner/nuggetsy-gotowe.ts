@@ -17,11 +17,11 @@ const nuggetsyGotowe: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.chicken_nuggets, amount: 1, unit: "opak" },
-        { ingredient: iJAR.frozen_fries, amount: 150 },
-        { ingredient: iJAR.frozen_vegetable_mix, amount: 200 },
-        { ingredient: iFAT.oil, amount: 2, unit: "lzi" },
-        { ingredient: iSPC.salt },
+        { ing: iMET.chicken_nuggets, amount: 1, unit: "opak" },
+        { ing: iJAR.frozen_fries, amount: 150 },
+        { ing: iJAR.frozen_vegetable_mix, amount: 200 },
+        { ing: iFAT.oil, amount: 2, unit: "lzi" },
+        { ing: iSPC.salt },
       ],
     },
   ],

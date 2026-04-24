@@ -17,12 +17,12 @@ const omlet: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.egg, amount: 3, unit: "szt" },
-        { ingredient: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-        { ingredient: iVEG.onion, amount: 0.25, unit: "szt" },
-        { ingredient: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ingredient: iSPC.black_pepper },
-        { ingredient: iSPC.salt },
+        { ing: iMET.egg, amount: 3, unit: "szt" },
+        { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion, amount: 0.25, unit: "szt" },
+        { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
   ],

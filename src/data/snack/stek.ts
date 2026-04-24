@@ -17,12 +17,12 @@ const stek: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iMET.beef_steak, amount: 1, unit: "szt" },
-        { ingredient: iVEG.garlic, amount: 1, unit: "zbk" },
-        { ingredient: iFAT.oil, amount: 1, unit: "lzi" },
-        { ingredient: iFAT.butter, amount: 1, unit: "lz" },
-        { ingredient: iSPC.thyme },
-        { ingredient: iSPC.salt },
+        { ing: iMET.beef_steak, amount: 1, unit: "szt" },
+        { ing: iVEG.garlic, amount: 1, unit: "zbk" },
+        { ing: iFAT.oil, amount: 1, unit: "lzi" },
+        { ing: iFAT.butter, amount: 1, unit: "lz" },
+        { ing: iSPC.thyme },
+        { ing: iSPC.salt },
       ],
     },
   ],

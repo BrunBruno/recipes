@@ -17,11 +17,11 @@ const ciastoNaPizze: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.flour, amount: 250 },
-        { ingredient: iFAT.olive, amount: "1-2", unit: "lz" },
-        { ingredient: iOTH.water, amount: 150, unit: "ml" },
-        { ingredient: iOTH.instant_yeast, amount: 6 },
-        { ingredient: iSPC.salt },
+        { ing: iGRN.flour, amount: 250 },
+        { ing: iFAT.olive, amount: "1-2", unit: "lz" },
+        { ing: iOTH.water, amount: 150, unit: "ml" },
+        { ing: iOTH.instant_yeast, amount: 6 },
+        { ing: iSPC.salt },
       ],
     },
   ],

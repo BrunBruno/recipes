@@ -15,8 +15,8 @@ const kluskiNaParze: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.steamed_dumplings, amount: 400 },
-        { ingredient: iDIR.strawberry_yogurt, amount: 300 },
+        { ing: iGRN.steamed_dumplings, amount: 400 },
+        { ing: iDIR.strawberry_yogurt, amount: 300 },
       ],
     },
   ],

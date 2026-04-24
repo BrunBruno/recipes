@@ -17,24 +17,20 @@ const palkiBarbecue: Recipe = {
     {
       title: "Składniki na kurczaka",
       items: [
-        { ingredient: iMET.chicken_drums, amount: 2, unit: "opak" },
-        { ingredient: iJAR.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
-        { ingredient: iSPC.sweet_paprika },
-        { ingredient: iSPC.hot_paprika },
-        { ingredient: iSPC.smoked_paprika },
-        { ingredient: iSPC.granulated_garlic },
+        { ing: iMET.chicken_drums, amount: 2, unit: "opak" },
+        { ing: iJAR.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
+        { ing: iSPC.sweet_paprika },
+        { ing: iSPC.hot_paprika },
+        { ing: iSPC.smoked_paprika },
+        { ing: iSPC.granulated_garlic },
       ],
     },
     {
       title: "Przykładowe dodatki",
       items: [
-        { ingredient: iJAR.frozen_fries, amount: portions * 150 },
-        {
-          ingredient: iJAR.pickled_cucumber,
-          amount: portions * 2,
-          unit: "szt",
-        },
-        { ingredient: iSPC.salt },
+        { ing: iJAR.frozen_fries, amount: portions * 150 },
+        { ing: iJAR.pickled_cucumber, amount: portions * 2, unit: "szt" },
+        { ing: iSPC.salt },
       ],
     },
   ],

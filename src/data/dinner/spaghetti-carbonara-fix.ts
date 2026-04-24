@@ -20,12 +20,12 @@ const spaghettiCarbonaraFix: Recipe = {
     {
       title: "",
       items: [
-        { ingredient: iGRN.spaghetti_pasta, amount: portions * 200 },
-        { ingredient: iMET.bacon_block, amount: 150 },
-        { ingredient: iDIR.cream_18, amount: 100, unit: "ml" },
-        { ingredient: iOTH.water, amount: 200, unit: "ml" },
-        { ingredient: iSPC.knorr_carbonara_fix, amount: 1, unit: "opak" },
-        { ingredient: iSPC.salt },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 200 },
+        { ing: iMET.bacon_block, amount: 150 },
+        { ing: iDIR.cream_18, amount: 100, unit: "ml" },
+        { ing: iOTH.water, amount: 200, unit: "ml" },
+        { ing: iSPC.knorr_carbonara_fix, amount: 1, unit: "opak" },
+        { ing: iSPC.salt },
       ],
     },
   ],

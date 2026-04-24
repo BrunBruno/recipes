@@ -68,10 +68,10 @@ export type IngredientItem = {
 };
 
 export type Ingredient = {
-  ingredient: IngredientItem;
+  ing: IngredientItem;
   amount?: number | string;
   unit?: UnitType;
-  excludeFromCalc?: boolean;
+  exclude?: boolean;
   invisible?: boolean;
   alt?: boolean;
 };

@@ -128,9 +128,9 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc || item.alt) continue;
+      if (item.exclude || item.alt) continue;
 
-      const { ingredient, amount, unit } = item;
+      const { ing, amount, unit } = item;
 
       let grams = 0;
       let value = amount;
@@ -146,22 +146,20 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
       }
 
       if (!value || typeof value === "string") {
-        if (ingredient.type === "fat")
-          grams = DEFAULT_FAT_GRAMS * recipe.portions;
+        if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
         else continue;
       } else {
         if (!unit) {
           grams = value;
-        } else if (ingredient.unitWeights?.[unit]) {
-          grams = value * ingredient.unitWeights[unit];
+        } else if (ing.unitWeights?.[unit]) {
+          grams = value * ing.unitWeights[unit];
         } else {
-          if (unit !== "g")
-            console.warn(`No unit ${unit} for ${ingredient.name}`);
+          if (unit !== "g") console.warn(`No unit ${unit} for ${ing.name}`);
           grams = value;
         }
       }
 
-      totalKcal += (grams / 100) * ingredient.kcalPer100g;
+      totalKcal += (grams / 100) * ing.kcalPer100g;
     }
   }
 
@@ -176,9 +174,9 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc || item.alt) continue;
+      if (item.exclude || item.alt) continue;
 
-      const { ingredient, amount, unit } = item;
+      const { ing, amount, unit } = item;
 
       let grams = 0;
       let value = amount;
@@ -194,23 +192,21 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
       }
 
       if (!value || typeof value === "string") {
-        if (ingredient.type === "fat")
-          grams = DEFAULT_FAT_GRAMS * recipe.portions;
+        if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
         else continue;
       } else {
         if (!unit) {
           grams = value;
-        } else if (ingredient.unitWeights?.[unit]) {
-          grams = value * ingredient.unitWeights[unit];
+        } else if (ing.unitWeights?.[unit]) {
+          grams = value * ing.unitWeights[unit];
         } else {
-          if (unit !== "g")
-            console.warn(`No unit ${unit} for ${ingredient.name}`);
+          if (unit !== "g") console.warn(`No unit ${unit} for ${ing.name}`);
           grams = value;
         }
       }
 
       totalGrams += grams;
-      totalKcal += (grams / 100) * ingredient.kcalPer100g;
+      totalKcal += (grams / 100) * ing.kcalPer100g;
     }
   }
 
@@ -230,11 +226,11 @@ export const calculateRecipeNutrients = (
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc || item.alt) continue;
+      if (item.exclude || item.alt) continue;
 
-      const { ingredient, amount, unit } = item;
+      const { ing, amount, unit } = item;
 
-      if (!ingredient.nutrientsPer100g) continue;
+      if (!ing.nutrientsPer100g) continue;
 
       let grams = 0;
       let value = amount;
@@ -250,7 +246,7 @@ export const calculateRecipeNutrients = (
       }
 
       if (!value || typeof value === "string") {
-        if (ingredient.type === "fat") {
+        if (ing.type === "fat") {
           grams = DEFAULT_FAT_GRAMS * recipe.portions;
         } else {
           continue;
@@ -258,17 +254,17 @@ export const calculateRecipeNutrients = (
       } else {
         if (!unit) {
           grams = value;
-        } else if (ingredient.unitWeights?.[unit]) {
-          grams = value * ingredient.unitWeights[unit];
+        } else if (ing.unitWeights?.[unit]) {
+          grams = value * ing.unitWeights[unit];
         } else {
           if (unit !== "g") {
-            console.warn(`No unit ${unit} for ${ingredient.name}`);
+            console.warn(`No unit ${unit} for ${ing.name}`);
           }
           grams = value;
         }
       }
 
-      const [fat, carb, prot] = ingredient.nutrientsPer100g;
+      const [fat, carb, prot] = ing.nutrientsPer100g;
 
       totalFat += (grams / 100) * fat;
       totalCarb += (grams / 100) * carb;
@@ -296,9 +292,9 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.excludeFromCalc || item.alt) continue;
+      if (item.exclude || item.alt) continue;
 
-      const { ingredient, amount, unit } = item;
+      const { ing, amount, unit } = item;
 
       let grams = 0;
       let value = amount;
@@ -318,11 +314,10 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
       } else {
         if (!unit) {
           grams = value;
-        } else if (ingredient.unitWeights?.[unit]) {
-          grams = value * ingredient.unitWeights[unit];
+        } else if (ing.unitWeights?.[unit]) {
+          grams = value * ing.unitWeights[unit];
         } else {
-          if (unit !== "g")
-            console.warn(`No unit ${unit} for ${ingredient.name}`);
+          if (unit !== "g") console.warn(`No unit ${unit} for ${ing.name}`);
           grams = value;
         }
       }
@@ -366,7 +361,7 @@ export const countIngredientUsage = (recipes: Recipe[]) => {
   recipes.forEach((recipe) => {
     recipe.ingredients.forEach((group) => {
       group.items.forEach((item) => {
-        const key = item.ingredient.name;
+        const key = item.ing.name;
         usage[key] = (usage[key] ?? 0) + 1;
       });
     });
