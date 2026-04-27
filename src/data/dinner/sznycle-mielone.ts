@@ -13,7 +13,7 @@ const sznycleMielone: Recipe = {
   description:
     "Klasyczne kotlety mielone z wieprzowiny z dodatkiem namoczonej bułki, cebuli i czosnku. Soczyste w środku, chrupiące na zewnątrz.",
   type: "dinner",
-  images: ["sznycle-mielone.jpg"],
+  images: ["sznycle-mielone.jpg", "sznycle-mielone-2.jpg"],
   time: 30,
   portions: portions,
   executionDifficulty: 2,

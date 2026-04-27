@@ -1,5 +1,6 @@
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -22,6 +23,8 @@ const fasolkaPoBretonsku: Recipe = {
         { ing: iMET.bacon_block, amount: 150 },
         { ing: iMET.pork_rib, amount: 200, exclude: true },
         { ing: iMET.chicken_soup_portion, amount: 200, alt: true },
+        { ing: iOTH.water, amount: 2000, unit: "ml", exclude: true },
+        { ing: iOTH.meat_stock, amount: 2000, unit: "ml", invisible: true },
         { ing: iVEG.onion, amount: 120 },
         { ing: iVEG.carrot, amount: 150 },
         { ing: iVEG.parsley_root, amount: 100 },

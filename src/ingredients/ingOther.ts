@@ -9,6 +9,7 @@ type IngId =
   | "maple_syrup"
   | "rosol"
   | "maggi"
+  | "meat_stock"
 
   //// SUGARS ////
   | "sugar"
@@ -117,6 +118,19 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [0, 3, 1],
+  },
+
+  meat_stock: {
+    name: "Wywar mięsny",
+    type: "oth",
+    subType: "wat",
+    color: "#BCAAA4",
+    kcalPer100g: 45,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+    },
+    nutrientsPer100g: [1.2, 0.6, 0.2],
   },
 
   //// SUGARS ////

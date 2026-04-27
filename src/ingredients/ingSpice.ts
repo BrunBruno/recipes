@@ -41,7 +41,8 @@ type IngId =
   | "knorr_bolognese_fix"
   | "knorr_crispy_chicken_fix"
   | "knorr_carbonara_fix"
-  | "knorr_napoli_fix";
+  | "knorr_napoli_fix"
+  | "knorr_mushroom_sauce_fix";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -328,6 +329,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 40,
     },
     nutrientsPer100g: [6, 60, 5],
+  },
+
+  knorr_mushroom_sauce_fix: {
+    name: "Knorr Fix Sos Pieczarkowy",
+    type: "spc",
+    color: "#8D6E63",
+    kcalPer100g: 320,
+    unitWeights: {
+      opak: 37,
+    },
+    nutrientsPer100g: [6.5, 5.5, 63],
   },
 
   //// HERBS ////

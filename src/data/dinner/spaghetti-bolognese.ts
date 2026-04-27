@@ -12,7 +12,7 @@ const spaghettiBolognese: Recipe = {
   description:
     "Klasyczne spaghetti bolognese z mięsem mielonym w aromatycznym sosie pomidorowym z dodatkiem czosnku, cebuli i ziół.",
   type: "dinner",
-  images: ["spaghetti-bolognese.jpg"],
+  images: ["spaghetti-bolognese.jpg", "spaghetti-bolognese-2.jpg"],
   time: 60,
   portions: portions,
   executionDifficulty: 1,

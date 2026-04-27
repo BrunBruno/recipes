@@ -34,6 +34,7 @@ type IngId =
   | "coleslaw"
   | "cucumber_salad"
   | "corn_salad"
+  | "red_cabbage"
 
   //// JUICES ////
   | "lemon_juice"
@@ -357,6 +358,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 450,
     },
     nutrientsPer100g: [5.1, 9.5, 1],
+  },
+
+  red_cabbage: {
+    name: "Modra Kapusta",
+    type: "jar",
+    subType: "sal",
+    color: "#7E57C2",
+    kcalPer100g: 72,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [1.4, 4.8, 8.9],
   },
 
   //// JUICES ////
