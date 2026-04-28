@@ -10,11 +10,11 @@ import type { Recipe } from "../../types";
 
 const portions = 4;
 const roladaWieprzowa: Recipe = {
-  name: "Rolada Wieprzowa",
+  name: "Rolada Śląska",
   description:
     "Soczysta rolada wieprzowa z boczkiem, kiełbasą i ogórkiem konserwowym, duszona w aromatycznym sosie śmietanowo-musztardowym, podawana z kluskami śląskimi i modrą kapustą.",
   type: "dinner",
-  images: [""],
+  images: ["rolada-wieprzowa.jpg"],
   time: 90,
   portions: portions,
   executionDifficulty: 5,
@@ -22,7 +22,8 @@ const roladaWieprzowa: Recipe = {
     {
       title: "Składniki na rolady",
       items: [
-        { ing: iMET.pork_ham, amount: 800 },
+        { ing: iMET.beef_round, amount: 800 },
+        { ing: iMET.pork_ham, alt: true },
         { ing: iMET.bacon_block, amount: 120 },
         { ing: iMET.sausage, amount: 180 },
         { ing: iJAR.pickled_cucumber, amount: 120 },

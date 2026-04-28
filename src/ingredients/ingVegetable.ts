@@ -5,10 +5,16 @@ type IngId =
   | "potato"
   | "onion"
   | "tomato"
+  | "cherry_tomato"
+  | "roma_tomato"
   | "cucumber"
   | "bell_pepper"
   | "chili_pepper"
+  | "red_bell_pepper"
+  | "yellow_bell_pepper"
+  | "green_bell_pepper"
   | "carrot"
+  | "baby_carrot"
   | "parsley_root"
   | "leek"
   | "garlic"
@@ -107,6 +113,24 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 3.9, 0.9],
   },
 
+  cherry_tomato: {
+    name: "Pomidorki koktajlowe",
+    type: "veg",
+    subType: "tom",
+    color: "#E53935",
+    kcalPer100g: 18,
+    nutrientsPer100g: [0.9, 0.2, 3.9],
+  },
+
+  roma_tomato: {
+    name: "Pomidor malinowy",
+    type: "veg",
+    subType: "tom",
+    color: "#EF5350",
+    kcalPer100g: 19,
+    nutrientsPer100g: [0.9, 0.2, 4.1],
+  },
+
   cucumber: {
     name: "Ogórek zielony",
     type: "veg",
@@ -144,6 +168,33 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.4, 9, 2],
   },
 
+  red_bell_pepper: {
+    name: "Papryka czerwona",
+    type: "veg",
+    subType: "pep",
+    color: "#D32F2F",
+    kcalPer100g: 31,
+    nutrientsPer100g: [1.0, 0.3, 6.0],
+  },
+
+  yellow_bell_pepper: {
+    name: "Papryka żółta",
+    type: "veg",
+    subType: "pep",
+    color: "#FBC02D",
+    kcalPer100g: 27,
+    nutrientsPer100g: [1.0, 0.2, 6.3],
+  },
+
+  green_bell_pepper: {
+    name: "Papryka zielona",
+    type: "veg",
+    subType: "pep",
+    color: "#43A047",
+    kcalPer100g: 20,
+    nutrientsPer100g: [0.9, 0.2, 4.6],
+  },
+
   carrot: {
     name: "Marchew",
     type: "veg",
@@ -154,6 +205,15 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.2, 10, 0.9],
+  },
+
+  baby_carrot: {
+    name: "Marchew mini",
+    type: "veg",
+    subType: "car",
+    color: "#FB8C00",
+    kcalPer100g: 35,
+    nutrientsPer100g: [0.8, 0.2, 8.2],
   },
 
   parsley_root: {

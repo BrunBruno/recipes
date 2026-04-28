@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// GRAINS ////
   | "flour"
+  | "potato_starch"
   | "breadcrumbs"
   | "rice"
   | "couscous"
@@ -62,6 +63,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [1.2, 71, 11],
     verified: true,
+  },
+
+  potato_starch: {
+    name: "Mąka ziemniaczana",
+    type: "grn",
+    color: "#F5F5A1",
+    kcalPer100g: 348,
+    nutrientsPer100g: [0.3, 0.1, 86.0],
   },
 
   breadcrumbs: {

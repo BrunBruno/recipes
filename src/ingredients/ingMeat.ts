@@ -31,6 +31,7 @@ type IngId =
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
+  | "beef_round"
 
   //// PROCESSED ////
   | "ham_slices"
@@ -350,6 +351,14 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 200,
     },
     nutrientsPer100g: [20, 0, 18],
+  },
+
+  beef_round: {
+    name: "Wołowina z udźca",
+    type: "met",
+    color: "#8D6E63",
+    kcalPer100g: 154,
+    nutrientsPer100g: [21.0, 7.0, 0],
   },
 
   //////////////////////////////
