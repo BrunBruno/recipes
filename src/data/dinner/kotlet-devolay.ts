@@ -43,6 +43,8 @@ const kotletDevolay: Recipe = {
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.frozen_vegetable_mix, amount: 300 },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
   ],

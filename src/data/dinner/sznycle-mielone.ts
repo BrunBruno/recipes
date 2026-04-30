@@ -41,7 +41,7 @@ const sznycleMielone: Recipe = {
         { ing: iDIR.milk, amount: portions * 10, unit: "ml" },
         { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
         { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
-        { ing: iVEG.spring_onion, alt: true },
+        { ing: iVEG.spring_onion },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

@@ -43,6 +43,8 @@ const roladaWieprzowa: Recipe = {
       items: [
         { ing: iGRN.silesian_dumplings, amount: portions * 250 },
         { ing: iJAR.red_cabbage, amount: portions * 180 },
+        { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
+        { ing: iSPC.salt },
       ],
     },
   ],
