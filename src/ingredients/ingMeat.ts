@@ -8,6 +8,7 @@ type IngId =
 
   //// POULTRY ////
   | "chicken_breast"
+  | "chicken_tenderloin"
   | "chicken_quarters"
   | "chicken_drums"
   | "chicken_thigh"
@@ -75,6 +76,18 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.5, 0, 23.1],
+  },
+
+  chicken_tenderloin: {
+    name: "Polędwiczki z kurczaka",
+    type: "met",
+    subType: "pou",
+    color: "#F5D7B2",
+    kcalPer100g: 120,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [1.2, 0, 22],
   },
 
   chicken_quarters: {

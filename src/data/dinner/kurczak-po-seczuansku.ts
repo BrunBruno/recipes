@@ -11,7 +11,7 @@ const kurczakPoSeczuansku: Recipe = {
   description:
     "Pikantny kurczak w stylu seczuańskim z gotowym sosem Ben's Original Chili Fusion. Szybki i aromatyczny obiad podawany z ryżem.",
   type: "dinner",
-  images: [""],
+  images: ["kurczak-po-seczuansku.jpg"],
   time: 30,
   portions: portions,
   executionDifficulty: null,

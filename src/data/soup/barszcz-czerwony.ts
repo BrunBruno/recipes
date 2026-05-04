@@ -9,9 +9,9 @@ const barszczCzerwony: Recipe = {
     "Domowy barszcz czerwony o intensywnym kolorze i lekko kwaśnym smaku, przygotowywany na bazie kiszonych buraków. Idealny na zimno lub na ciepło.",
   type: "soup",
   images: [""],
-  time: 720,
-  portions: 4,
-  executionDifficulty: null,
+  time: 45,
+  portions: 2,
+  executionDifficulty: 2,
   ingredients: [
     {
       title: "",

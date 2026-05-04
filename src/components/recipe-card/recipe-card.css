@@ -137,7 +137,7 @@
   content: "kcal";
 }
 .recipe-param:nth-child(2)::after {
-  content: "kc/100";
+  content: "kc/100g";
 }
 .recipe-param:nth-child(3)::after {
   content: "min";
