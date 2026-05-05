@@ -30,7 +30,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   water: {
     name: "Woda",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#64B5F6",
     kcalPer100g: 0,
     unitWeights: {
@@ -46,7 +46,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   spirit: {
     name: "Spirytus",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#BBDEFB",
     kcalPer100g: 0,
     unitWeights: {
@@ -60,7 +60,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   vanilla_extract: {
     name: "Ekstrakt waniliowy",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#6D4C41",
     kcalPer100g: 288,
     unitWeights: {
@@ -73,7 +73,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   maple_syrup: {
     name: "Syrop klonowy",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#D9A066",
     kcalPer100g: 260,
     unitWeights: {
@@ -86,7 +86,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   food_coloring: {
     name: "Barwnik spożywczy",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#d6336c",
     kcalPer100g: 0,
     unitWeights: {
@@ -98,7 +98,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   rosol: {
     name: "Rosół",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#FFD54F",
     kcalPer100g: 35,
     unitWeights: {
@@ -110,7 +110,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   maggi: {
     name: "Maggi",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#4F3834",
     kcalPer100g: 16,
     unitWeights: {
@@ -123,7 +123,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
   meat_stock: {
     name: "Wywar mięsny",
     type: "oth",
-    subType: "wat",
+    subType: "liq",
     color: "#BCAAA4",
     kcalPer100g: 45,
     unitWeights: {

@@ -10,7 +10,11 @@ const kurczakJalapeno: Recipe = {
   description:
     "Pikantne kawałki kurczaka w chrupiącej panierce jalapeno, pieczone w piekarniku lub airfryerze. Prosty i szybki obiad.",
   type: "dinner",
-  images: ["kurczak-jalapeno.jpg", "kurczak-jalapeno-2.jpg"],
+  images: [
+    "kurczak-jalapeno.jpg",
+    "kurczak-jalapeno-2.jpg",
+    "kurczak-jalapeno-3.jpg",
+  ],
   time: 25,
   portions: portions,
   executionDifficulty: 1,

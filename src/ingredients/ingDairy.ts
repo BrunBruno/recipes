@@ -234,9 +234,12 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [30, 3, 2],
   },
 
+  //// ChEESE ////
+
   quark: {
     name: "Twaróg",
     type: "dir",
+    subType: "che",
     color: "#F5F5F5",
     kcalPer100g: 133,
     unitWeights: {
@@ -248,6 +251,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   cottage_cheese: {
     name: "Serek wiejski",
     type: "dir",
+    subType: "che",
     color: "#F8F8F8",
     kcalPer100g: 98,
     unitWeights: {
@@ -259,6 +263,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   ricotta: {
     name: "Ricotta",
     type: "dir",
+    subType: "che",
     color: "#FFFDF7",
     kcalPer100g: 174,
     unitWeights: {
@@ -270,6 +275,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   cream_cheese: {
     name: "Serek kremowy",
     type: "dir",
+    subType: "che",
     color: "#F5F5F0",
     kcalPer100g: 225,
     unitWeights: {
@@ -281,6 +287,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   cream_cheese_horseradish: {
     name: "Serek śmietankowy z chrzanem",
     type: "dir",
+    subType: "che",
     color: "#E0E0E0",
     kcalPer100g: 240,
     unitWeights: {
@@ -292,6 +299,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   mascarpone: {
     name: "Serek mascarpone",
     type: "dir",
+    subType: "che",
     color: "#FFF8E7",
     kcalPer100g: 392,
     unitWeights: {
@@ -303,6 +311,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   mozzarella: {
     name: "Mozzarella",
     type: "dir",
+    subType: "che",
     color: "#FDFDFD",
     kcalPer100g: 280,
     unitWeights: {
@@ -314,6 +323,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   burrata: {
     name: "Burrata",
     type: "dir",
+    subType: "che",
     color: "#FFFDF8",
     kcalPer100g: 300,
     unitWeights: {
@@ -321,8 +331,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [25, 2, 12],
   },
-
-  //// ChEESE ////
 
   feta: {
     name: "Ser feta",

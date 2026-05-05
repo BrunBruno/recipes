@@ -28,7 +28,7 @@ const spaghettiBolognese: Recipe = {
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iFAT.olive, amount: 1, unit: "lz" },
-        { ing: iFAT.oil, amount: 1, alt: true },
+        { ing: iFAT.oil, alt: true },
         { ing: iSPC.basil },
         { ing: iSPC.oregano },
         { ing: iSPC.knorr_bolognese_fix },

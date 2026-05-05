@@ -381,6 +381,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     kcalPer100g: 21,
     unitWeights: {
       ml: 1,
+      lz: 10,
       lzi: 5,
     },
     nutrientsPer100g: [0, 0.4, 0.1],
@@ -394,7 +395,9 @@ export const iJAR: Record<IngId, IngredientItem> = {
     color: "#B2FF59",
     kcalPer100g: 25,
     unitWeights: {
+      ml: 1,
       lz: 10,
+      lzi: 5,
     },
     nutrientsPer100g: [0.1, 8, 0.4],
   },

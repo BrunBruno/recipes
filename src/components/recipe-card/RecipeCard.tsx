@@ -21,6 +21,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import KeywordsIcon from "../../assets/keywordsIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -292,6 +293,12 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         >
           {selectedRecipe.name}
         </h2>
+
+        <div className="key-icons">
+          {selectedRecipe.keyWords?.map((key) => (
+            <KeywordsIcon type={key} />
+          ))}
+        </div>
       </div>
 
       <div className="header-filler" />

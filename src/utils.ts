@@ -80,13 +80,13 @@ export const kcalLowColors = [
   "#e6fcf5",
 ];
 
-const hexToRgb = (hex: string) => {
+export const hexToRgb = (hex: string) => {
   const m = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
   if (!m) throw new Error("Invalid hex");
   return [parseInt(m[1], 16), parseInt(m[2], 16), parseInt(m[3], 16)];
 };
 
-const rgbToHex = ([r, g, b]: number[]) => {
+export const rgbToHex = ([r, g, b]: number[]) => {
   return "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("");
 };
 

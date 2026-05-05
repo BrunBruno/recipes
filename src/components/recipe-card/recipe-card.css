@@ -285,6 +285,12 @@
     transform 0.3s ease;
 }
 
+.key-icons {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
 .recipe-details-content {
   position: relative;
   border: solid 0.3rem #333;

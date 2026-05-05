@@ -44,7 +44,7 @@ const gulaszWegrerski: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["wołowina"],
 };
 
 export default gulaszWegrerski;

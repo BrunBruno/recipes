@@ -24,7 +24,12 @@ const faworki: Recipe = {
         { ing: iDIR.cream_18, amount: 5, unit: "lz" },
         { ing: iFAT.rendered_lard, amount: 2, unit: "kst", exclude: true },
         { ing: iFAT.oil, amount: 500, unit: "ml", alt: true },
-        { ing: iFAT.oil, amount: 2 * 0.3, unit: "kst", invisible: true },
+        {
+          ing: iFAT.rendered_lard,
+          amount: 2 * 0.3,
+          unit: "kst",
+          invisible: true,
+        },
         { ing: iOTH.powdered_sugar, amount: 1, unit: "lz" },
         { ing: iOTH.spirit, amount: 2, unit: "lzi" },
         { ing: iSPC.salt },

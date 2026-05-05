@@ -10,7 +10,7 @@ const laneCiasto: Recipe = {
   description:
     "Rosół z delikatnym lanym ciastem, podany z marchewką, mięsem i koperkiem, doprawiony pieprzem oraz maggi.",
   type: "soup",
-  images: [""],
+  images: ["lane-ciasto.jpg"],
   time: 20,
   portions: 2,
   executionDifficulty: 2,
