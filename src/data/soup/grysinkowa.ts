@@ -8,10 +8,10 @@ const grysikowa: Recipe = {
   description:
     "Szybka i prosta zupa grysikowa na rosole, idealna na lekkie śniadanie lub obiad dla dzieci i dorosłych.",
   type: "soup",
-  images: [""],
+  images: ["grysinkowa.jpg"],
   time: 10,
   portions: 2,
-  executionDifficulty: null,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",

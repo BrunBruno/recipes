@@ -52,7 +52,12 @@ type IngId =
   | "garlic_sauce"
   | "sriracha"
   | "barbecue_sauce"
-  | "curry_sauce";
+  | "curry_sauce"
+  | "american_sauce"
+  | "thousand_island"
+  | "mexican_sauce"
+  | "remoulade"
+  | "sun_mustard";
 
 export const iJAR: Record<IngId, IngredientItem> = {
   //// PRESERVES ////
@@ -567,5 +572,70 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [28, 18, 1.6],
     verified: true,
+  },
+
+  american_sauce: {
+    name: "Sos amerykański",
+    type: "jar",
+    subType: "sau",
+    color: "#FF8B00",
+    kcalPer100g: 150,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [1.5, 20, 10],
+  },
+
+  thousand_island: {
+    name: "Sos 1000 wysp",
+    type: "jar",
+    subType: "sau",
+    color: "#F5A97F",
+    kcalPer100g: 370,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [1, 15, 35],
+  },
+
+  mexican_sauce: {
+    name: "Sos meksykański",
+    type: "jar",
+    subType: "sau",
+    color: "#E53935",
+    kcalPer100g: 90,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [2, 18, 1],
+  },
+
+  remoulade: {
+    name: "Remoulada",
+    type: "jar",
+    subType: "sau",
+    color: "#F5E6A3",
+    kcalPer100g: 480,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [1, 6, 50],
+  },
+
+  sun_mustard: {
+    name: "Musztarda słoneczna",
+    type: "jar",
+    subType: "sau",
+    color: "#FBC02D",
+    kcalPer100g: 160,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [5, 8, 10],
   },
 };

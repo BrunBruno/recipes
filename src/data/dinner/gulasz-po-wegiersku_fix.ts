@@ -27,6 +27,10 @@ const gulaszPoWegierskuFix: Recipe = {
       ],
     },
     {
+      title: "",
+      items: [],
+    },
+    {
       title: "Przykładowe dodatki",
       items: [
         { ing: iGRN.gnocchi, amount: portions * 250 },

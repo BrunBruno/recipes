@@ -24,6 +24,19 @@ const frenchHotDog: Recipe = {
         { ing: iJAR.sriracha, amount: 10 },
       ],
     },
+    {
+      title: "Inne proponowane sosy",
+      items: [
+        { ing: iJAR.american_sauce, exclude: true },
+        { ing: iJAR.thousand_island, exclude: true },
+        { ing: iJAR.spicy_ketchup, exclude: true },
+        { ing: iJAR.mustard_dessert, exclude: true },
+        { ing: iJAR.sun_mustard, exclude: true },
+        { ing: iJAR.mexican_sauce, exclude: true },
+        { ing: iJAR.remoulade, exclude: true },
+        { ing: iJAR.curry_sauce, exclude: true },
+      ],
+    },
   ],
 
   steps: [

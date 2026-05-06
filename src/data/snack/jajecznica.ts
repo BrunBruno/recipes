@@ -9,7 +9,7 @@ const jajecznica: Recipe = {
   description:
     "Prosta i szybka jajecznica na maśle klarowanym z możliwością dodania kiełbasy, cebuli, pomidora i szczypiorku - gotowa w 15 minut dla 1 osoby.",
   type: "snack",
-  images: ["jajecznica.jpg", "jajecznica-2.jpg"],
+  images: ["jajecznica.jpg", "jajecznica-2.jpg", "jajecznica-3.jpg"],
   time: 15,
   portions: 1,
   executionDifficulty: 1,
@@ -26,6 +26,7 @@ const jajecznica: Recipe = {
       title: "Przykładowe dodatki",
       items: [
         { ing: iMET.sausage, amount: 0.5, unit: "peto" },
+        { ing: iMET.bacon_block, amount: 100, exclude: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.chives },

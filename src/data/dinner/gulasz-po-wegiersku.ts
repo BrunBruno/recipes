@@ -12,7 +12,7 @@ const gulaszWegrerski: Recipe = {
   description:
     "Aromatyczny gulasz wieprzowy z papryką i cebulą, duszony w intensywnym sosie przyprawowym.",
   type: "dinner",
-  images: [""],
+  images: ["gulasz-po-wegiersku.jpg"],
   time: 50,
   portions: portions,
   executionDifficulty: 2,

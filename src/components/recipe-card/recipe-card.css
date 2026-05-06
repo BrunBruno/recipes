@@ -64,6 +64,9 @@
 .recipe-details.collapsed .images-arrow {
   display: none;
 }
+.recipe-details.collapsed .key-icons {
+  display: none;
+}
 
 .description-section {
   padding: 2rem;
@@ -289,6 +292,12 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key-icons svg {
+  height: 1.6rem;
 }
 
 .recipe-details-content {
