@@ -10,6 +10,7 @@ const ogorkowa: Recipe = {
   executionDifficulty: null,
   ingredients: [],
   steps: [],
+    keyWords: ["zupa"],
 };
 
 export default ogorkowa;

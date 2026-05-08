@@ -10,6 +10,7 @@ const krupnikZSercami: Recipe = {
   executionDifficulty: null,
   ingredients: [],
   steps: [],
+  keyWords: ["zupa"],
 };
 
 export default krupnikZSercami;

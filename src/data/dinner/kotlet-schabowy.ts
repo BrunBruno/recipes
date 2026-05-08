@@ -18,7 +18,7 @@ const kotletSchabowy: Recipe = {
   executionDifficulty: 3,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
       items: [
         { ing: iMET.pork_loin, amount: 10, unit: "plas" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
@@ -35,7 +35,8 @@ const kotletSchabowy: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },

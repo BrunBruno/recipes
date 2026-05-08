@@ -20,7 +20,8 @@ const bitki: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Mięso i sos",
+      title: "",
+      // isMain: true,
       items: [
         { ing: iMET.pork_tenderloin, amount: 600 },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
@@ -39,7 +40,8 @@ const bitki: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.beets_shredded, amount: portions * 150 },

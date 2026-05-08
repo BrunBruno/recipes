@@ -17,7 +17,7 @@ const smazonaRyba: Recipe = {
   executionDifficulty: null,
   ingredients: [
     {
-      title: "Ryba",
+      title: "",
       items: [
         { ing: iMET.pollock, amount: 1, unit: "szt" },
         { ing: iMET.cod, amount: 1, unit: "szt", alt: true },
@@ -32,7 +32,8 @@ const smazonaRyba: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.sauerkraut, amount: portions * 100 },
@@ -46,7 +47,7 @@ const smazonaRyba: Recipe = {
   ],
   steps: [
     {
-      title: "Ryba",
+      title: "",
       steps: [
         "Jeśli używasz mrożonej ryby, najpierw ją rozmroź i osusz.",
         "Rybę posól i opcjonalnie skrop sokiem z cytryny lub limonki.",

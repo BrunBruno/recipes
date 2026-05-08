@@ -335,7 +335,7 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
   deser: ["deser", "desery", "słodkie", "słodko"],
   biszkopt: ["biszkopt", "biszkopty", "biszkoptowy", "biszkoptowa"],
-  wołowina: ["wołowina", "wołowe", "wołowiny"],
+  wołowina: ["wołowina", "wolowina", "wołowe", "wolowe", "wołowiny"],
   wieprzowina: ["wieprzowina", "wieprzowe", "wieprzowa"],
   kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczaczek", "drób"],
   indyk: ["indyk", "indyka", "indycze"],

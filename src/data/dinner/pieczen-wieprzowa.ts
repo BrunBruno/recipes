@@ -28,7 +28,8 @@ const pieczenWieprzowa: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iGRN.buckwheat, amount: 300 },
         { ing: iJAR.pickled_cucumber_vinegar, amount: 200 },

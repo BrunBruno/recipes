@@ -18,7 +18,7 @@ const cynamonki: Recipe = {
   executionDifficulty: null,
   ingredients: [
     {
-      title: "Cynamonki",
+      title: "Ciasto",
       items: [
         { ing: iGRN.flour, amount: 600 },
         { ing: iMET.egg, amount: 2, unit: "szt" },

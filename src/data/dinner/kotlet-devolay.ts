@@ -39,7 +39,8 @@ const kotletDevolay: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.frozen_vegetable_mix, amount: 300 },

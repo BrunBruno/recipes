@@ -54,7 +54,7 @@ const rosol: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa", "kurczak"],
+  keyWords: ["zupa"],
 };
 
 export default rosol;

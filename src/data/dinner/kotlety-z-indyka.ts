@@ -18,7 +18,7 @@ const kotletyZIndyka: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
       items: [
         { ing: iMET.turkey_breast, amount: 600 },
         { ing: iMET.egg, amount: 1, unit: "szt" },
@@ -33,7 +33,8 @@ const kotletyZIndyka: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.cucumber_salad, amount: portions * 150 },

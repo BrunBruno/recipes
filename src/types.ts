@@ -78,6 +78,8 @@ export type Ingredient = {
 
 export type RecipeIngredientGroup = {
   title: string;
+  isMain?: boolean;
+  isAdd?: boolean;
   items: Ingredient[];
 };
 

@@ -16,7 +16,7 @@ const kurczakZRozna: Recipe = {
   executionDifficulty: 3,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_whole, amount: 1, unit: "szt" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
@@ -29,7 +29,8 @@ const kurczakZRozna: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iJAR.frozen_fries, amount: portions * 150 },
         { ing: iJAR.sauerkraut, amount: portions * 150 },

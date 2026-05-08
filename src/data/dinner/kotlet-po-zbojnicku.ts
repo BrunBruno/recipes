@@ -18,6 +18,7 @@ const kotletPoZbojnicku: Recipe = {
   ingredients: [
     {
       title: "",
+      // isMain: true,
       items: [
         { ing: iMET.pork_loin, amount: 4, unit: "plas" },
         { ing: iVEG.mushrooms, amount: 300 },

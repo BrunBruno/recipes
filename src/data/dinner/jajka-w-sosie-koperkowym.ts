@@ -19,7 +19,8 @@ const jajkaWSosieKoperkowym: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Jajka i sos",
+      title: "",
+      // isMain: true,
       items: [
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
@@ -31,7 +32,8 @@ const jajkaWSosieKoperkowym: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: 200 },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },

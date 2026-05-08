@@ -19,7 +19,7 @@ const sznycleMielone: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
       items: [
         { ing: iMET.ground_pork, amount: 1, unit: "opak" },
         { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
@@ -34,7 +34,8 @@ const sznycleMielone: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iFAT.butter, amount: portions, unit: "lzi" },

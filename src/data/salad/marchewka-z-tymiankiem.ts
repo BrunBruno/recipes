@@ -14,7 +14,7 @@ const marchewkaZTymiankiem: Recipe = {
   executionDifficulty: null,
   ingredients: [
     {
-      title: "Marchewka",
+      title: "",
       items: [
         { ing: iVEG.carrot, amount: 4, unit: "szt" },
         { ing: iFAT.olive, amount: 1, unit: "lz" },

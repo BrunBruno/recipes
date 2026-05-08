@@ -18,7 +18,7 @@ const kurczakChrupiacy: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 400, unit: "g" },
         { ing: iFAT.oil, amount: 80, unit: "ml" },
@@ -29,7 +29,8 @@ const kurczakChrupiacy: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iJAR.frozen_fries, amount: portions * 200, unit: "g" },
         { ing: iJAR.cucumber_salad, amount: portions * 150, unit: "g" },

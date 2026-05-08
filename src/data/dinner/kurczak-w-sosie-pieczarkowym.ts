@@ -19,7 +19,7 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
   executionDifficulty: 1,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 700 },
         { ing: iGRN.rice, amount: portions * 100 },

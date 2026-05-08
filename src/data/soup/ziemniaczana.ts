@@ -10,6 +10,7 @@ const ziemniaczana: Recipe = {
   executionDifficulty: null,
   ingredients: [],
   steps: [],
+  keyWords: ["zupa"],
 };
 
 export default ziemniaczana;

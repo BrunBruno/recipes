@@ -17,7 +17,7 @@ const kurczakZPiekarnika: Recipe = {
   executionDifficulty: 1,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_quarters, amount: 4, unit: "szt" },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
@@ -29,7 +29,8 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },

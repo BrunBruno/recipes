@@ -19,7 +19,7 @@ const tacos: Recipe = {
   executionDifficulty: null,
   ingredients: [
     {
-      title: "Farsz mięsny",
+      title: "Farsz",
       items: [
         { ing: iMET.ground_beef, amount: 500 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },

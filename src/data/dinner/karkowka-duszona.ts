@@ -17,7 +17,8 @@ const karkowkaDuszona: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Mięso",
+      title: "",
+      // isMain: true,
       items: [
         { ing: iMET.pork_neck, amount: 2, unit: "opak" },
         { ing: iFAT.oil, amount: 5, unit: "lz" },
@@ -28,7 +29,8 @@ const karkowkaDuszona: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.coleslaw, amount: 2, unit: "opak" },

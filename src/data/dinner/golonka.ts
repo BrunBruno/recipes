@@ -19,7 +19,8 @@ const golonka: Recipe = {
       title: "",
       items: [
         { ing: iMET.pork_knuckle_ready, amount: 1, unit: "szt" },
-        { ing: iGRN.silesian_dumplings, amount: portions * 250 },
+        { ing: iGRN.gnocchi, amount: portions * 250 },
+        { ing: iGRN.silesian_dumplings, alt: true },
         { ing: iJAR.fried_beets, amount: portions * 150 },
         { ing: iSPC.salt },
       ],

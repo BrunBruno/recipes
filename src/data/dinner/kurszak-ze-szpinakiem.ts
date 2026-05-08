@@ -18,7 +18,7 @@ const kurczakZeSzpinakiem: Recipe = {
   executionDifficulty: 3,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
         { ing: iJAR.frozen_spinach, amount: 100 },
@@ -32,7 +32,8 @@ const kurczakZeSzpinakiem: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iFAT.butter, amount: 1.5, unit: "lzi" },

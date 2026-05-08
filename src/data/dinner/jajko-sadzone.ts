@@ -16,7 +16,8 @@ const jajkoSadzone: Recipe = {
   executionDifficulty: 1,
   ingredients: [
     {
-      title: "Jajka sadzone",
+      title: "",
+      // isMain: true,
       items: [
         { ing: iMET.egg, amount: "2-3", unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
@@ -24,7 +25,8 @@ const jajkoSadzone: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: 200 },
         { ing: iJAR.canned_peas, amount: 100 },

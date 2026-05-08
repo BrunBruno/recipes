@@ -20,7 +20,7 @@ const kurczakJalapeno: Recipe = {
   executionDifficulty: 1,
   ingredients: [
     {
-      title: "Kurczak",
+      title: "",
       items: [
         { ing: iMET.chicken_tenderloin, amount: 400, unit: "g" },
         { ing: iMET.chicken_breast, alt: true },
@@ -29,7 +29,8 @@ const kurczakJalapeno: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iJAR.frozen_fries, amount: portions * 200, unit: "g" },
         { ing: iJAR.sauerkraut, amount: portions * 150, unit: "g" },

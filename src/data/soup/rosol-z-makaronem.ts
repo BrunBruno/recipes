@@ -43,6 +43,7 @@ const rosolZMakaronem: Recipe = {
       ],
     },
   ],
+  keyWords: ["zupa", "makaron"],
 };
 
 export default rosolZMakaronem;

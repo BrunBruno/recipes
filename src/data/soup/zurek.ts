@@ -10,6 +10,7 @@ const zurek: Recipe = {
   executionDifficulty: null,
   ingredients: [],
   steps: [],
+  keyWords: ["zupa"],
 };
 
 export default zurek;

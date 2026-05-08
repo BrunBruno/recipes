@@ -18,7 +18,7 @@ const kotletyZKurczaka: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 1, unit: "opak" },
         { ing: iMET.egg, amount: 3, unit: "szt" },
@@ -35,7 +35,8 @@ const kotletyZKurczaka: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },

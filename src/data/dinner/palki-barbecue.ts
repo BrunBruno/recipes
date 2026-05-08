@@ -15,7 +15,7 @@ const palkiBarbecue: Recipe = {
   executionDifficulty: 3,
   ingredients: [
     {
-      title: "Składniki na kurczaka",
+      title: "",
       items: [
         { ing: iMET.chicken_drums, amount: 2, unit: "opak" },
         { ing: iJAR.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
@@ -26,7 +26,8 @@ const palkiBarbecue: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iJAR.frozen_fries, amount: portions * 150 },
         { ing: iJAR.pickled_cucumber, amount: portions * 2, unit: "szt" },

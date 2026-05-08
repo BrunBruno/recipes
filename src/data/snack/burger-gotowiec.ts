@@ -17,6 +17,17 @@ const gotowyBurger: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
+      title: "Podstawowe",
+      isMain: true,
+      items: [
+        { ing: iGRN.hamburger_buns, amount: 4, unit: "szt" },
+        { ing: iMET.burger_patties, amount: 4, unit: "szt" },
+        { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
+        { ing: iJAR.mayonnaise, amount: 4, unit: "lzi" },
+        { ing: iJAR.ketchup, amount: 4, unit: "lzi" },
+      ],
+    },
+    {
       title: "Burger warzywny",
       items: [
         { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
@@ -32,16 +43,6 @@ const gotowyBurger: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
-      ],
-    },
-    {
-      title: "Podstawowe",
-      items: [
-        { ing: iGRN.hamburger_buns, amount: 4, unit: "szt" },
-        { ing: iMET.burger_patties, amount: 4, unit: "szt" },
-        { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
-        { ing: iJAR.mayonnaise, amount: 4, unit: "lzi" },
-        { ing: iJAR.ketchup, amount: 4, unit: "lzi" },
       ],
     },
   ],

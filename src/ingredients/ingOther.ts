@@ -133,6 +133,18 @@ export const iOTH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.2, 0.6, 0.2],
   },
 
+  honey: {
+    name: "Miód",
+    type: "oth",
+    subType: "liq",
+    color: "#F9A825",
+    kcalPer100g: 304,
+    unitWeights: {
+      lzi: 7,
+    },
+    nutrientsPer100g: [0, 82, 0.3],
+  },
+
   //// SUGARS ////
 
   sugar: {
@@ -176,18 +188,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [0, 98, 0],
-  },
-
-  honey: {
-    name: "Miód",
-    type: "oth",
-    subType: "hon",
-    color: "#F9A825",
-    kcalPer100g: 304,
-    unitWeights: {
-      lzi: 7,
-    },
-    nutrientsPer100g: [0, 82, 0.3],
   },
 
   //// OTHER ////

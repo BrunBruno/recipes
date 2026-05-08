@@ -341,16 +341,19 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
             :
           </section>
           <section className="ingredients-section">
-            <div
-              className={`${"ingredients-container"} ${selectedRecipe.ingredients.length === 1 ? "one-ingredient-list" : ""}`}
-            >
+            <div className={`${"ingredients-container"}`}>
               {selectedRecipe.ingredients.map((group, groupIndex) => (
-                <div key={groupIndex} className="recipe-ingredient-group">
+                <div
+                  key={groupIndex}
+                  className={`recipe-ingredient-group ${group.isMain || selectedRecipe.ingredients.length === 1 ? "main-group" : ""}`}
+                >
                   <div className="ingredients-list-container">
                     <h4 className="ingredient-group-title">
-                      {group.title
-                        ? `Składniki: ${group.title}`
-                        : "Lista składników"}
+                      {group.isAdd
+                        ? "Przykładowe dodaki"
+                        : group.title
+                          ? `Składniki: ${group.title}`
+                          : "Lista składników"}
                     </h4>
                     <ul className="ingredients-list">
                       {group.items.map((ingredient, index) => {

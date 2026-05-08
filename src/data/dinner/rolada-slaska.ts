@@ -9,7 +9,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 4;
-const roladaWieprzowa: Recipe = {
+const roladaSlaska: Recipe = {
   name: "Rolada Śląska",
   description:
     "Soczysta rolada wieprzowa z boczkiem, kiełbasą i ogórkiem konserwowym, duszona w aromatycznym sosie śmietanowo-musztardowym, podawana z kluskami śląskimi i modrą kapustą.",
@@ -20,7 +20,7 @@ const roladaWieprzowa: Recipe = {
   executionDifficulty: 5,
   ingredients: [
     {
-      title: "Składniki na rolady",
+      title: "",
       items: [
         { ing: iMET.beef_round, amount: 800 },
         { ing: iMET.pork_ham, alt: true },
@@ -39,7 +39,8 @@ const roladaWieprzowa: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iGRN.silesian_dumplings, amount: portions * 250 },
         { ing: iJAR.red_cabbage, amount: portions * 180 },
@@ -70,7 +71,7 @@ const roladaWieprzowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["wołowina"],
 };
 
-export default roladaWieprzowa;
+export default roladaSlaska;

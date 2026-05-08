@@ -1,4 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -12,13 +14,14 @@ const gulaszWegrerski: Recipe = {
   description:
     "Aromatyczny gulasz wieprzowy z papryką i cebulą, duszony w intensywnym sosie przyprawowym.",
   type: "dinner",
-  images: ["gulasz-po-wegiersku.jpg"],
+  images: ["gulasz-po-wegiersku.jpg", "gulasz-po-wegiersku-2.jpg"],
   time: 50,
   portions: portions,
-  executionDifficulty: 2,
+  executionDifficulty: 3,
   ingredients: [
     {
       title: "",
+      // isMain: true,
       items: [
         { ing: iMET.stew_beef, amount: 400 },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
@@ -27,6 +30,15 @@ const gulaszWegrerski: Recipe = {
         { ing: iOTH.water, amount: 2, unit: "szk" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
         { ing: iSPC.meat_seasoning },
+      ],
+    },
+    {
+      title: "",
+      isAdd: true,
+      items: [
+        { ing: iGRN.buckwheat, amount: portions * 100 },
+        { ing: iJAR.pickled_cucumber, amount: portions * 2, unit: "szt" },
+        { ing: iSPC.salt },
       ],
     },
   ],
@@ -40,7 +52,14 @@ const gulaszWegrerski: Recipe = {
         "Dodaj paprykę i cebulę, smaż jeszcze około 5 minut.",
         "Wymieszaj fix gulaszowy z wodą i wlej do garnka.",
         "Duś pod przykryciem przez około 30 minut.",
-        "Podawaj z kopytkami lub plackami ziemniaczanymi, opcjonalnie ze śmietaną.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Ugotuj kaszę gryczaną w osolonej wodzie do miękkości.",
+        "Podawaj gulasz z porcją kaszy gryczanej.",
+        "Dodaj ogórka konserwowego pokrojonego w plasterki lub ćwiartki.",
       ],
     },
   ],

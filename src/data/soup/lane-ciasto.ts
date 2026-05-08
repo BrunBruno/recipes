@@ -46,6 +46,7 @@ const laneCiasto: Recipe = {
       ],
     },
   ],
+  keyWords: ["zupa"],
 };
 
 export default laneCiasto;

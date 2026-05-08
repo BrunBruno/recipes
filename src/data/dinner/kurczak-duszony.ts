@@ -20,7 +20,7 @@ const gotowanyKurczak: Recipe = {
   executionDifficulty: 2,
   ingredients: [
     {
-      title: "Mięso i sos",
+      title: "",
       items: [
         { ing: iMET.chicken_thigh, amount: 600 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
@@ -36,7 +36,8 @@ const gotowanyKurczak: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },

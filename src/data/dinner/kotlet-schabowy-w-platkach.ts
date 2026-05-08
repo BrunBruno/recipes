@@ -21,7 +21,7 @@ const kotletySchaboweWPlatkach: Recipe = {
   executionDifficulty: 3,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
       items: [
         { ing: iMET.pork_loin, amount: 10, unit: "plas" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
@@ -35,7 +35,8 @@ const kotletySchaboweWPlatkach: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.corn_salad, amount: portions * 200 },

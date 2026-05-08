@@ -19,7 +19,8 @@ const kotletPoGoralsku: Recipe = {
   executionDifficulty: 4,
   ingredients: [
     {
-      title: "Kotlety",
+      title: "",
+      // isMain: true,
       items: [
         { ing: iMET.pork_loin, amount: 10, unit: "plas" },
         { ing: iMET.bacon_slices, amount: 10, unit: "plas" },
@@ -35,7 +36,8 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
     {
-      title: "Przykładowe dodatki",
+      title: "",
+      isAdd: true,
       items: [
         { ing: iVEG.potato, amount: portions * 200 },
         { ing: iJAR.sauerkraut, amount: portions * 120 },
