@@ -8,7 +8,7 @@ const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",
   description:
     "Gotowe nuggetsy z piekarnika podane z frytkami oraz mieszanką warzyw na patelnię.",
-  type: "dinner",
+  type: "snack",
   images: ["nuggetsy-gotowe.jpg"],
   time: 30,
   portions: 1,

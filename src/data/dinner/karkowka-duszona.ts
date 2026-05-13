@@ -11,7 +11,7 @@ const karkowkaDuszona: Recipe = {
   description:
     "Delikatna karkówka duszona z musztardą i cebulą, podawana z ziemniakami i surówką colesław, idealna na sycący obiad.",
   type: "dinner",
-  images: ["karkowka-duszona.jpg"],
+  images: ["karkowka-duszona.jpg", "karkowka-duszona-2.jpg"],
   time: 60,
   portions: portions,
   executionDifficulty: 2,

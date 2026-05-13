@@ -5,12 +5,12 @@ import type { Recipe } from "../../types";
 import { iJAR } from "../../ingredients/ingJar";
 
 const portions = 2;
-const golonka: Recipe = {
+const golonkaGotowa: Recipe = {
   name: "Golonka Gotowa",
   description:
     "Gotowa golonka pieczona w piekarniku, podawana z kluskami śląskimi polanymi sosem z pieczenia oraz buraczkami zasmażanymi.",
   type: "dinner",
-  images: [""],
+  images: ["golonka-gotowa.jpg"],
   time: 60,
   portions: portions,
   executionDifficulty: 1,
@@ -42,4 +42,4 @@ const golonka: Recipe = {
   keyWords: ["wieprzowina"],
 };
 
-export default golonka;
+export default golonkaGotowa;

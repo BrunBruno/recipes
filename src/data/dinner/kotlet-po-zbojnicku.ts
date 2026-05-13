@@ -7,7 +7,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
 
 const kotletPoZbojnicku: Recipe = {
-  name: "Kotlet po Zbójnicku",
+  name: "Kotlety po Zbójnicku",
   description:
     "Soczyste kotlety schabowe zapiekane z pieczarkami, cebulą i żółtym serem. Syte danie obiadowe o wyrazistym smaku.",
   type: "dinner",

@@ -10,7 +10,7 @@ import type { Recipe } from "../../types";
 const portions = 2;
 
 const gulaszWegrerski: Recipe = {
-  name: "Gulasz po węgiersku",
+  name: "Gulasz po Węgiersku",
   description:
     "Aromatyczny gulasz wieprzowy z papryką i cebulą, duszony w intensywnym sosie przyprawowym.",
   type: "dinner",
