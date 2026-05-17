@@ -11,7 +11,7 @@ const krazkiKalmaroweGotowe: Recipe = {
   description:
     "Gotowe krążki kalmarowe w panierce przygotowane w piekarniku lub na patelni, podane z frytkami i warzywami.",
   type: "snack",
-  images: ["krazki-kalmarowe-gotowe.jpg"],
+  images: ["krazki-kalmarowe-gotowe.jpg", "krazki-kalmarowe-gotowe-2.jpg"],
   time: 30,
   portions: portions,
   executionDifficulty: 1,

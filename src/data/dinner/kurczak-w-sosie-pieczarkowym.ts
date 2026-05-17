@@ -13,7 +13,12 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
   description:
     "Delikatny filet z kurczaka duszony w kremowym sosie pieczarkowym z użyciem Knorr Fix. Szybki i sycący obiad dla całej rodziny.",
   type: "dinner",
-  images: [""],
+  images: [
+    "kurczak-w-sosie-pieczarkowym.jpg",
+    "kurczak-w-sosie-pieczarkowym-2.jpg",
+    "kurczak-w-sosie-pieczarkowym-3.jpg",
+    "kurczak-w-sosie-pieczarkowym-4.jpg",
+  ],
   time: 40,
   portions: portions,
   executionDifficulty: 1,

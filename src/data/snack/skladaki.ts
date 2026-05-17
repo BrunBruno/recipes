@@ -12,7 +12,12 @@ const skladaki: Recipe = {
   description:
     "Chrupiące składaki z tortilli wypełnione salami, serem, warzywami i aromatycznym sosem pomidorowym - szybka i smaczna przekąska na ciepło.",
   type: "snack",
-  images: ["skladaki.jpg", "skladaki-2.jpg", "skladaki-3.jpg"],
+  images: [
+    "skladaki.jpg",
+    "skladaki-2.jpg",
+    "skladaki-3.jpg",
+    "skladaki-4.jpg",
+  ],
   time: 15,
   portions: 2,
   executionDifficulty: 1,
