@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -37,6 +38,15 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
         { ing: iSPC.black_pepper },
       ],
     },
+    {
+      title: "",
+      isAdd: true,
+      items: [
+        { ing: iGRN.penne_pasta, amount: portions * 100 },
+        { ing: iJAR.frozen_vegetable_mix, amount: portions * 150 },
+        { ing: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {
@@ -52,6 +62,15 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
         "Duś całość na małym ogniu około 10 minut, aż sos zgęstnieje.",
         "Dopraw pieprzem według uznania.",
         "Podawaj kurczaka na ugotowanym ryżu.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Makaron rurki ugotuj al dente w osolonej wodzie zgodnie z instrukcją na opakowaniu.",
+        "Warzywa gotuj na parze przez około 15-20 minut, aż będą miękkie.",
+        "Na talerzu ułóż porcję makaronu, następnie kurczaka w sosie pieczarkowym.",
+        "Obok podaj warzywa gotowane na parze jako lekki dodatek.",
       ],
     },
   ],
