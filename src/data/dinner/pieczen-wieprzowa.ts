@@ -10,7 +10,7 @@ const pieczenWieprzowa: Recipe = {
   description:
     "Soczysta pieczeń wieprzowa pieczona w rękawie, doprawiona musztardą i przyprawami, podawana z kaszą gryczaną oraz ogórkiem konserwowym.",
   type: "dinner",
-  images: [""],
+  images: ["pieczen-wieprzowa.jpg"],
   time: 100,
   portions: 4,
   executionDifficulty: null,

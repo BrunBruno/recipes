@@ -7,7 +7,7 @@ const kluskiNaParze: Recipe = {
   description:
     "Delikatne kluski na parze podane z jogurtem truskawkowym. Prosty i szybki deser lub słodki posiłek.",
   type: "dessert",
-  images: [""],
+  images: ["kluski-na-parze.jpg"],
   time: 10,
   portions: 2,
   executionDifficulty: 1,

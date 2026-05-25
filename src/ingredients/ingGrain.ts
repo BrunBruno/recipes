@@ -19,6 +19,9 @@ type IngId =
   | "thin_pasta"
   | "lazanki_pasta"
   | "penne_pasta"
+  | "macaroni_pasta"
+
+  //// ////
   | "gnocchi"
   | "silesian_dumplings"
   | "steamed_dumplings"
@@ -232,6 +235,18 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [1.5, 70, 12],
+  },
+
+  macaroni_pasta: {
+    name: "Makaron macaroni",
+    type: "grn",
+    color: "#E4BE63",
+    kcalPer100g: 360,
+    unitWeights: {
+      opak: 400,
+      szk: 250,
+    },
+    nutrientsPer100g: [1.8, 72, 12],
   },
 
   ////

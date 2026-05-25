@@ -43,7 +43,10 @@ type IngId =
   | "knorr_carbonara_fix"
   | "knorr_napoli_fix"
   | "knorr_mushroom_sauce_fix"
-  | "jalapeno_chicken_seasoning";
+  | "jalapeno_chicken_seasoning"
+  | "knorr_meatballs_fix"
+  | "knorr_mac_and_cheese_fix"
+  | "winiary_tomato_sauce";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -352,6 +355,41 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [5, 40, 10],
+  },
+
+  knorr_meatballs_fix: {
+    name: "Knorr Fix Soczyste Kotlety Mielone",
+    type: "spc",
+    color: "#C68642",
+    kcalPer100g: 316,
+    unitWeights: {
+      opak: 70,
+    },
+    nutrientsPer100g: [4.6, 50, 20],
+    verified: true,
+  },
+
+  knorr_mac_and_cheese_fix: {
+    name: "Knorr Fix Mac'n Cheese",
+    type: "spc",
+    color: "#F2B94B",
+    kcalPer100g: 435,
+    unitWeights: {
+      opak: 43,
+    },
+    nutrientsPer100g: [20, 48, 14],
+    verified: true,
+  },
+
+  winiary_tomato_sauce: {
+    name: "Winiary Sos Pomidorowy",
+    type: "spc",
+    color: "#D94C3A",
+    kcalPer100g: 320,
+    unitWeights: {
+      opak: 33,
+    },
+    nutrientsPer100g: [4, 68, 8],
   },
 
   //// HERBS ////

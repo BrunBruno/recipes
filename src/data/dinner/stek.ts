@@ -8,8 +8,8 @@ const stek: Recipe = {
   name: "Stek",
   description:
     "Soczysty stek z aromatycznym masłem, czosnkiem i tymiankiem - szybkie i eleganckie danie dla miłośników wołowiny.",
-  type: "snack",
-  images: ["stek.jpg"],
+  type: "dinner",
+  images: ["stek.jpg", "stek-2.jpg"],
   time: 20,
   portions: 1,
   executionDifficulty: 2,
