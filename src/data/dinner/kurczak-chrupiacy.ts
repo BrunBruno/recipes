@@ -8,7 +8,7 @@ import type { Recipe } from "../../types";
 
 const portions = 2;
 const kurczakChrupiacy: Recipe = {
-  name: "Kurczak Chrupiacy",
+  name: "Chrupiacy Kurczak",
   description:
     "Soczyste kawałki kurczaka w chrupiącej panierce, smażone na złoty kolor. Idealne z frytkami i świeżą surówką.",
   type: "dinner",

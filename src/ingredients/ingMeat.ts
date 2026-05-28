@@ -36,6 +36,11 @@ type IngId =
 
   //// PROCESSED ////
   | "ham_slices"
+  | "ham_cooked"
+  | "polendwica"
+  | "chicken_ham"
+  | "smoked_ham"
+  | "ham_canned"
   | "salami"
   | "bacon_slices"
   | "bacon_block"
@@ -413,6 +418,71 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [2, 3, 18],
     verified: true,
+  },
+
+  ham_cooked: {
+    name: "Szynka gotowana",
+    type: "met",
+    subType: "ham",
+    color: "#F6A6A1",
+    kcalPer100g: 108,
+    unitWeights: {
+      plas: 15,
+      opak: 140,
+    },
+    nutrientsPer100g: [2, 4, 18],
+  },
+
+  polendwica: {
+    name: "Polędwica",
+    type: "met",
+    subType: "ham",
+    color: "#E9967A",
+    kcalPer100g: 118,
+    unitWeights: {
+      plas: 12,
+      opak: 120,
+    },
+    nutrientsPer100g: [2, 5, 19],
+  },
+
+  chicken_ham: {
+    name: "Szynka z kurczaka",
+    type: "met",
+    subType: "ham",
+    color: "#F4B6A6",
+    kcalPer100g: 95,
+    unitWeights: {
+      plas: 15,
+      opak: 120,
+    },
+    nutrientsPer100g: [2, 2, 17],
+  },
+
+  smoked_ham: {
+    name: "Szynka zawędzana",
+    type: "met",
+    subType: "ham",
+    color: "#D97B66",
+    kcalPer100g: 125,
+    unitWeights: {
+      plas: 15,
+      opak: 140,
+    },
+    nutrientsPer100g: [2, 6, 19],
+  },
+
+  ham_canned: {
+    name: "Szynka konserwowa",
+    type: "met",
+    subType: "ham",
+    color: "#E07A73",
+    kcalPer100g: 145,
+    unitWeights: {
+      plas: 15,
+      opak: 140,
+    },
+    nutrientsPer100g: [3, 9, 13],
   },
 
   salami: {

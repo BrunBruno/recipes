@@ -11,7 +11,7 @@ const pomidorowa: Recipe = {
   description:
     "Delikatna i aromatyczna zupa pomidorowa na rosole, wzbogacona masłem i śmietaną, idealna na szybki obiad dla całej rodziny.",
   type: "soup",
-  images: ["pomidorowa.jpg"],
+  images: ["pomidorowa.jpg", "pomidorowa-2.jpg"],
   time: 15,
   portions: 4,
   executionDifficulty: null,
