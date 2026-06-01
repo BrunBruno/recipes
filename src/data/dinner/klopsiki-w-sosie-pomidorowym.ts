@@ -12,7 +12,10 @@ const klopsikiWSosiePomidorowym: Recipe = {
   description:
     "Delikatne klopsiki w aromatycznym sosie pomidorowym Winiary - prosty i domowy obiad idealny do ziemniaków, ryżu lub makaronu.",
   type: "dinner",
-  images: ["klopsiki-w-sosie-pomidorowym.jpg"],
+  images: [
+    "klopsiki-w-sosie-pomidorowym.jpg",
+    "klopsiki-w-sosie-pomidorowym-2.jpg",
+  ],
   time: 45,
   portions: portions,
   executionDifficulty: 2,

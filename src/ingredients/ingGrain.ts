@@ -28,6 +28,12 @@ type IngId =
 
   //// BAKERY ////
   | "kaiser_roll"
+  | "multigrain_kaiser_roll"
+  | "graham_roll"
+  | "rye_bread"
+  | "sunflower_bread"
+  | "morning_roll"
+  | "wheat_bread"
   | "tortilla"
   | "tortilla_mini"
   | "taco_shell_corn"
@@ -302,6 +308,84 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 350,
     },
     nutrientsPer100g: [3, 54, 8.5],
+  },
+
+  multigrain_kaiser_roll: {
+    name: "Kajzerka wieloziarnista",
+    type: "grn",
+    subType: "bun",
+    color: "#C8925B",
+    kcalPer100g: 265,
+    unitWeights: {
+      szt: 75,
+      opak: 375,
+    },
+    nutrientsPer100g: [4.5, 46, 10],
+  },
+
+  graham_roll: {
+    name: "Bułka grahamka",
+    type: "grn",
+    subType: "bun",
+    color: "#B68452",
+    kcalPer100g: 255,
+    unitWeights: {
+      szt: 80,
+      opak: 400,
+    },
+    nutrientsPer100g: [3, 48, 9],
+  },
+
+  morning_roll: {
+    name: "Bułka poranna",
+    type: "grn",
+    subType: "bun",
+    color: "#D9A066",
+    kcalPer100g: 270,
+    unitWeights: {
+      szt: 75,
+      opak: 375,
+    },
+    nutrientsPer100g: [3.5, 52, 8],
+  },
+
+  rye_bread: {
+    name: "Chleb żytni",
+    type: "grn",
+    subType: "brd",
+    color: "#7A5A3A",
+    kcalPer100g: 230,
+    unitWeights: {
+      krom: 35,
+      szt: 500,
+    },
+    nutrientsPer100g: [2.5, 43, 6],
+  },
+
+  sunflower_bread: {
+    name: "Chleb słonecznikowy",
+    type: "grn",
+    subType: "brd",
+    color: "#9A6B3F",
+    kcalPer100g: 285,
+    unitWeights: {
+      krom: 40,
+      szt: 550,
+    },
+    nutrientsPer100g: [9, 38, 10],
+  },
+
+  wheat_bread: {
+    name: "Chleb pszenny",
+    type: "grn",
+    subType: "brd",
+    color: "#D6A15F",
+    kcalPer100g: 255,
+    unitWeights: {
+      krom: 35,
+      szt: 500,
+    },
+    nutrientsPer100g: [3, 49, 8],
   },
 
   tortilla: {
