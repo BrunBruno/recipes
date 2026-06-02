@@ -23,9 +23,9 @@ const burgerDomowy: Recipe = {
       title: "Mięso",
       items: [
         { ing: iMET.ground_beef, amount: 600 },
-        { ing: iSPC.salt },
+        { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.black_pepper },
-        { ing: iFAT.oil, amount: 1, unit: "lz" },
+        { ing: iSPC.salt },
       ],
     },
     {
@@ -36,7 +36,7 @@ const burgerDomowy: Recipe = {
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
-        { ing: iJAR.pickled_cucumber, amount: 3, unit: "szt" },
+        { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
       ],
     },
     {

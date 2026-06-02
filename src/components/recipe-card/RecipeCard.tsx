@@ -296,7 +296,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
         <div className="key-icons">
           {selectedRecipe.keyWords?.map((key) => (
-            <KeywordsIcon type={key} />
+            <KeywordsIcon key={key} type={key} />
           ))}
         </div>
       </div>
@@ -317,14 +317,18 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>
                 {Array.from({ length: selectedRecipe.executionDifficulty }).map(
-                  () => (
-                    <UtilsIcon name="star-full" color="#0ca678" />
+                  (_, i) => (
+                    <UtilsIcon
+                      key={`fs${i}`}
+                      name="star-full"
+                      color="#0ca678"
+                    />
                   ),
                 )}
                 {Array.from({
                   length: 5 - selectedRecipe.executionDifficulty,
-                }).map(() => (
-                  <UtilsIcon name="star-empty" color="#0ca678" />
+                }).map((_, i) => (
+                  <UtilsIcon key={`es${i}`} name="star-empty" color="#0ca678" />
                 ))}
               </div>
             )}
@@ -350,7 +354,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                   <div className="ingredients-list-container">
                     <h4 className="ingredient-group-title">
                       {group.isAdd
-                        ? "Przykładowe dodaki"
+                        ? "Przykładowe dodatki"
                         : group.title
                           ? `Składniki: ${group.title}`
                           : "Lista składników"}

@@ -1,8 +1,11 @@
+import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
+import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 4;
@@ -32,6 +35,18 @@ const klopsikiWSosiePomidorowym: Recipe = {
         { ing: iSPC.salt },
       ],
     },
+    {
+      title: "",
+      isAdd: true,
+      items: [
+        { ing: iVEG.potato, amount: portions * 200 },
+        { ing: iFAT.butter, amount: portions, unit: "lzi" },
+        { ing: iDIR.milk, amount: portions * 10, unit: "ml" },
+        { ing: iJAR.canned_peas, amount: portions * 100 },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
+      ],
+    },
   ],
   steps: [
     {
@@ -47,6 +62,16 @@ const klopsikiWSosiePomidorowym: Recipe = {
         "Gotuj na małym ogniu przez 3 minuty, często mieszając.",
         "Dodaj klopsiki do gotowego sosu.",
         "Duś całość na małym ogniu przez około 15 minut.",
+      ],
+    },
+    {
+      title: "Przykładowe podanie",
+      steps: [
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Odcedź ziemniaki i ubij je z masłem oraz odrobiną mleka na gładkie puree.",
+        "Podgrzej groszek konserwowy i odcedź go z zalewy.",
+        "Dopraw puree solą i pieprzem do smaku.",
+        "Podawaj klopsiki w sosie pomidorowym z porcją puree i groszkiem obok.",
       ],
     },
   ],

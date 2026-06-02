@@ -27,13 +27,21 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
     };
   }, []);
 
+  const setRecipe = (recipe: Recipe) => {
+    window.history.pushState({ recipeModal: true }, "");
+
+    setSelectedRecipe(recipe);
+  };
+
   return (
     <div className={`recipes-grid ${listView ? "list-view" : ""}`}>
       {filteredRecipes.map((recipe, index) => (
         <div
           key={index}
           className={`recipe-card`}
-          onClick={() => setSelectedRecipe(recipe)}
+          onClick={() => {
+            setRecipe(recipe);
+          }}
         >
           <div
             className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}

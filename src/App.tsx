@@ -73,6 +73,22 @@ function App() {
     }
   }, [showSearch]);
 
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedRecipe) {
+        setSelectedRecipe(null);
+
+        window.history.pushState(null, "");
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [selectedRecipe]);
+
   if (recipes.length > 0 && recipes[0] === undefined) return;
 
   return (

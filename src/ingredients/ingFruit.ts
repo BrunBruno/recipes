@@ -263,6 +263,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 29,
     unitWeights: {
       szt: 120,
+      plas: 10,
     },
     nutrientsPer100g: [0.3, 9, 1.1],
   },
