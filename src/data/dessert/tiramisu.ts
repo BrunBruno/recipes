@@ -9,7 +9,7 @@ const tiramisu: Recipe = {
   description:
     "Klasyczne włoskie tiramisu z warstwami biszkoptów nasączonych kawą i kremem mascarpone, posypane aromatycznym kakao - lekki i elegancki deser.",
   type: "dessert",
-  images: [""],
+  images: ["tiramisu.jpg"],
   time: 20,
   portions: 8,
   executionDifficulty: 2,

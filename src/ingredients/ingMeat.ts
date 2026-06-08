@@ -55,6 +55,7 @@ type IngId =
   | "fish_sticks"
   | "pork_knuckle_ready"
   | "spicy_tenderloins"
+  | "spicy_wings"
   | "chicken_nuggets"
   | "burger_patties"
   | "sardines_in_oil"
@@ -231,6 +232,18 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [8, 3, 24],
+  },
+
+  spicy_wings: {
+    name: "Pikantne skrzydełka",
+    type: "met",
+    subType: "pou",
+    color: "#F76707",
+    kcalPer100g: 235,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [15, 8, 18],
   },
 
   chicken_nuggets: {

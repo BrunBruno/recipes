@@ -57,7 +57,8 @@ type IngId =
   | "thousand_island"
   | "mexican_sauce"
   | "remoulade"
-  | "sun_mustard";
+  | "sun_mustard"
+  | "horseradish_sauce";
 
 export const iJAR: Record<IngId, IngredientItem> = {
   //// PRESERVES ////
@@ -637,5 +638,17 @@ export const iJAR: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [5, 8, 10],
+  },
+
+  horseradish_sauce: {
+    name: "Sos chrzanowy",
+    type: "jar",
+    color: "#F8F9FA",
+    kcalPer100g: 210,
+    unitWeights: {
+      lzi: 15,
+      opak: 200,
+    },
+    nutrientsPer100g: [1, 20, 3],
   },
 };

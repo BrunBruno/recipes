@@ -13,7 +13,7 @@ const burgerDomowy: Recipe = {
   name: "Burger Domowy",
   description:
     "Klasyczny domowy burger typu smash burger z czystej wołowiny, podany w wieloziarnistej kajzerce z cheddarem, świeżymi warzywami i wyrazistym sosem z ogórkiem kiszonym.",
-  type: "dinner",
+  type: "snack",
   images: ["burger-domowy.jpg"],
   time: 35,
   portions: portions,

@@ -12,7 +12,11 @@ const zapiekankaBolognese: Recipe = {
   description:
     "Aromatyczna zapiekanka Bolognese z makaronem, mięsem mielonym, warzywami i roztopionym serem - idealny obiad dla całej rodziny.",
   type: "dinner",
-  images: ["zapiekanka-bolognese.jpg", "zapiekanka-bolognese-2.jpg"],
+  images: [
+    "zapiekanka-bolognese.jpg",
+    "zapiekanka-bolognese-2.jpg",
+    "zapiekanka-bolognese-3.jpg",
+  ],
   time: 70,
   portions: 4,
   executionDifficulty: 3,
