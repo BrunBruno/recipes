@@ -9,7 +9,12 @@ const sandwich: Recipe = {
   description:
     "Szybkie i chrupiące sandwiche z szynką, żółtym serem i ogórkiem, podawane z ketchupem i sosem czosnkowym - idealna przekąska na każdą porę dnia.",
   type: "snack",
-  images: ["sandwiche.jpg", "sandwiche-2.jpg", "sandwiche-3.jpg"],
+  images: [
+    "sandwiche.jpg",
+    "sandwiche-2.jpg",
+    "sandwiche-3.jpg",
+    "sandwiche-4.jpg",
+  ],
   time: 10,
   portions: 1,
   executionDifficulty: 1,

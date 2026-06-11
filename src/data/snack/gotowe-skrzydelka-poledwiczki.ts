@@ -9,7 +9,10 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
   description:
     "Gotowe panierowane polędwiczki z kurczaka pieczone razem z frytkami, podawane z prostym sosem sriracha majo.",
   type: "dinner",
-  images: ["gotowe-skrzydelka-poledwiczki.jpg"],
+  images: [
+    "gotowe-skrzydelka-poledwiczki.jpg",
+    "gotowe-skrzydelka-poledwiczki-2.jpg",
+  ],
   time: 25,
   portions: portions,
   executionDifficulty: 1,
