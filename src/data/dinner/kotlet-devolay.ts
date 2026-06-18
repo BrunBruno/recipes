@@ -12,7 +12,11 @@ const kotletDevolay: Recipe = {
   description:
     "Klasyczny kotlet Devolay z kurczaka z masłem czosnkowo-ziołowym w środku, panierowany i delikatnie smażony, podawany z puree ziemniaczanym i warzywami na parze.",
   type: "dinner",
-  images: [""],
+  images: [
+    "kotlet-devolay.jpg",
+    "kotlet-devolay-2.jpg",
+    "kotlet-devolay-3.jpg",
+  ],
   time: 60,
   portions: portions,
   executionDifficulty: null,
@@ -21,10 +25,12 @@ const kotletDevolay: Recipe = {
       title: "Mięso",
       items: [
         { ing: iMET.ground_chicken, amount: 600 },
-        { ing: iMET.egg, amount: 3, unit: "szt" },
-        { ing: iGRN.flour },
-        { ing: iGRN.breadcrumbs },
-        { ing: iFAT.oil },
+        { ing: iMET.egg, amount: 2, unit: "szt" },
+        { ing: iGRN.flour, amount: 3, unit: "lz" },
+        { ing: iGRN.breadcrumbs, amount: 6, unit: "lz" },
+        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
     {
@@ -34,8 +40,7 @@ const kotletDevolay: Recipe = {
         { ing: iVEG.garlic, amount: 4, unit: "zbk" },
         { ing: iVEG.parsley },
         { ing: iSPC.dill },
-        { ing: iSPC.salt },
-        { ing: iSPC.black_pepper },
+        { ing: iSPC.wild_garlic },
       ],
     },
     {
@@ -57,7 +62,7 @@ const kotletDevolay: Recipe = {
         "Dodaj drobno posiekany czosnek oraz koper lub pietruszkę.",
         "Dopraw solą i pieprzem, dokładnie wymieszaj.",
         "Przełóż masło do woreczka lub folii spożywczej.",
-        "Uformuj 4 - 5 małych wałków i włóż do zamrażalnika do całkowitego zamrożenia.",
+        "Uformuj 4-5 małych wałków i włóż do zamrażalnika do całkowitego zamrożenia.",
       ],
     },
     {

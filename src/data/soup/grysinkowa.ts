@@ -28,7 +28,7 @@ const grysikowa: Recipe = {
       steps: [
         "Zagotuj około 1/2 litra rosołu.",
         "Powoli wsyp czubatą łyżkę kaszy manny, cały czas mieszając.",
-        "Gotuj 2 - 3 minuty aż kasza napęcznieje.",
+        "Gotuj 2-3 minuty aż kasza napęcznieje.",
         "Jeśli zupa jest zbyt gęsta, dolej trochę rosołu i wymieszaj.",
         "Dopraw do smaku solą i podawaj gorącą.",
       ],

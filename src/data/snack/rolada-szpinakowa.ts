@@ -43,7 +43,7 @@ const roladaSzpinakowa: Recipe = {
         "Oddziel białka od żółtek.",
         "Do wystudzonego szpinaku dodaj żółtka, mąkę oraz szczyptę gałki muszkatołowej i dokładnie wymieszaj.",
         "Białka ubij na sztywną pianę i delikatnie wmieszaj ją do masy szpinakowej.",
-        "Masę wylej na dużą prostokątną blachę wyłożoną papierem do pieczenia, rozprowadzając ją na wysokość około 1,5 - 2 cm.",
+        "Masę wylej na dużą prostokątną blachę wyłożoną papierem do pieczenia, rozprowadzając ją na wysokość około 1.5-2 cm.",
         "Piecz w piekarniku nagrzanym do 200°C przez około 10 minut.",
         "Po upieczeniu wyjmij i pozostaw do całkowitego ostudzenia - masa powinna być elastyczna.",
         "Ostudzoną masę posmaruj serkiem śmietankowym z chrzanem.",

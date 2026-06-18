@@ -12,7 +12,7 @@ const spaghettiPomidorowe: Recipe = {
   description:
     "Spaghetti w aromatycznym sosie pomidorowym z czosnkiem i ziołami, podawane ze startym żółtym serem - szybki i lekki obiad dla każdego.",
   type: "dinner",
-  images: ["spaghetti-pomidorowe.jpg"],
+  images: ["spaghetti-pomidorowe.jpg","spaghetti-pomidorowe-2.jpg"],
   time: 40,
   portions: portions,
   executionDifficulty: 2,

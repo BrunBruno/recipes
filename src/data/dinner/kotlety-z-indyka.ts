@@ -48,12 +48,12 @@ const kotletyZIndyka: Recipe = {
     {
       title: "",
       steps: [
-        "Pierś indyka pokrój na kotlety o grubości około 1 - 1.5 cm.",
+        "Pierś indyka pokrój na kotlety o grubości około 1-1.5 cm.",
         "Delikatnie rozbij kotlety tłuczkiem i przypraw.",
         "Przygotuj trzy talerze: jeden z mąką, drugi z roztrzepanym jajkiem, trzeci z bułką tartą.",
         "Każdy kotlet obtocz najpierw w mące, potem w jajku, a na końcu w bułce tartej. Dla chrupkości możesz powtórzyć panierkę.",
         "Rozgrzej olej na patelni na średnim ogniu.",
-        "Smaż kotlety po 4 - 5 minut z każdej strony, aż będą złociste i dobrze wysmażone w środku.",
+        "Smaż kotlety po 4-5 minut z każdej strony, aż będą złociste i dobrze wysmażone w środku.",
       ],
     },
     {

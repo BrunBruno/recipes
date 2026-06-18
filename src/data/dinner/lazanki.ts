@@ -44,7 +44,7 @@ const lazanki: Recipe = {
         "Na patelni rozgrzej olej i masło, zeszklij cebulę. Dodaj od razu pieczarki.",
         "Dodaj kiełbasę oraz boczek i smaż kilka minut, aż się lekko zarumieni.",
         "Usuń nadmiar wody z kapusty kiszonej. Wyrzuć także liście laurowe oraz ziele.",
-        "Dodaj ugotowaną kapustę i smaż całość 5 - 7 minut.",
+        "Dodaj ugotowaną kapustę i smaż całość 5-7 minut.",
         "Usmażone składniki połącz z makaronem i dokładnie wszystko wymieszaj.",
         "Dopraw solą i pieprzem do smaku.",
       ],

@@ -31,7 +31,7 @@ const omlet: Recipe = {
       title: "",
       steps: [
         "Warzywa pokrój w drobną kostkę.",
-        "Na patelni rozgrzej niewielką ilość masła i podsmaż warzywa przez 2 - 3 minuty.",
+        "Na patelni rozgrzej niewielką ilość masła i podsmaż warzywa przez 2-3 minuty.",
         "Jajka wbij do miski, dopraw solą i pieprzem, a następnie dokładnie roztrzep.",
         "Wlej jajka na patelnię z warzywami i smaż na małym ogniu pod przykryciem.",
         "Gdy spód omletu się zetnie, ostrożnie przewróć omlet na drugą stronę.",

@@ -11,7 +11,11 @@ const kurczakSlodkoKwasny: Recipe = {
   description:
     "Kurczak w aromatycznym sosie słodko-kwaśnym, szybki do przygotowania i podawany z ryżem. Idealny na lekki obiad dla 3 osób.",
   type: "dinner",
-  images: ["kurczak-slodko-kwasny.jpg"],
+  images: [
+    "kurczak-slodko-kwasny.jpg",
+    "kurczak-slodko-kwasny-2.jpg",
+    "kurczak-slodko-kwasny-3.jpg",
+  ],
   time: 30,
   portions: portions,
   executionDifficulty: 1,

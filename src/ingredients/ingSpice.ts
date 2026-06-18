@@ -46,7 +46,8 @@ type IngId =
   | "jalapeno_chicken_seasoning"
   | "knorr_meatballs_fix"
   | "knorr_mac_and_cheese_fix"
-  | "winiary_tomato_sauce";
+  | "winiary_tomato_sauce"
+  | "winiary_pork_neck";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -390,6 +391,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 33,
     },
     nutrientsPer100g: [4, 68, 8],
+  },
+
+  winiary_pork_neck: {
+    name: "Winiary Karkówka",
+    type: "spc",
+    color: "#BE5A33",
+    kcalPer100g: 143,
+    unitWeights: {
+      opak: 30,
+    },
+    nutrientsPer100g: [7.6, 11.3, 6.5],
   },
 
   //// HERBS ////

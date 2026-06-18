@@ -39,7 +39,7 @@ const racuchy: Recipe = {
         "Dodaj kefir oraz jajko i wymieszaj wszystko na jednolitą masę bez grudek.",
         "Jabłka obierz i pokrój w drobną kostkę, następnie dodaj do ciasta i delikatnie wymieszaj.",
         "Na patelni rozgrzej masło klarowane na średnim ogniu.",
-        "Nakładaj po około 2 - 3 łyżki ciasta na jeden placek i smaż przez około 1.5 minuty na złoty kolor.",
+        "Nakładaj po około 2-3 łyżki ciasta na jeden placek i smaż przez około 1.5 minuty na złoty kolor.",
         "Obróć racuchy na drugą stronę i smaż do zarumienienia.",
         "Podawaj posypane cukrem pudrem.",
       ],

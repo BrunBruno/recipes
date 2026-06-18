@@ -38,7 +38,7 @@ const ciastoNaPierogi: Recipe = {
         "Każde kółko delikatnie rozciągnij w dłoniach, nałóż farsz i złóż pieroga, dokładnie sklejając brzegi.",
         "Uformowane pierogi układaj na stolnicy i przykryj lekko wilgotną ściereczką, aby nie wysychały.",
         "Gotuj pierogi partiami w osolonej, wrzącej wodzie.",
-        "Wyławiaj pierogi po 3 - 4 minutach od momentu wypłynięcia na powierzchnię.",
+        "Wyławiaj pierogi po 3-4 minutach od momentu wypłynięcia na powierzchnię.",
       ],
     },
   ],

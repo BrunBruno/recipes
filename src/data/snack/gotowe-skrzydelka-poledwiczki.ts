@@ -12,6 +12,7 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
   images: [
     "gotowe-skrzydelka-poledwiczki.jpg",
     "gotowe-skrzydelka-poledwiczki-2.jpg",
+    "gotowe-skrzydelka-poledwiczki-3.jpg",
   ],
   time: 25,
   portions: portions,

@@ -69,7 +69,7 @@ const kebab: Recipe = {
         "Do mięsa mielonego dodaj cebulę, czosnek, łyżkę jogurtu i przyprawy.",
         "Dokładnie wyrabiaj masę przez kilka minut.",
         "Mięso rozłóż między dwa arkusze papieru do pieczenia i rozwałkuj jak najcieniej.",
-        "Zwiń w kilka warstw i piecz w piekarniku nagrzanym do 190°C przez 20 - 25 minut.",
+        "Zwiń w kilka warstw i piecz w piekarniku nagrzanym do 190°C przez 20-25 minut.",
       ],
     },
     {

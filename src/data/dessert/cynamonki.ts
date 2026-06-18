@@ -12,7 +12,7 @@ const cynamonki: Recipe = {
   description:
     "Miękkie i puszyste cynamonki z delikatnym cynamonowym nadzieniem i słodkim lukrem na wierzchu, idealne na deser lub śniadanie.",
   type: "dessert",
-  images: [""],
+  images: ["cynamonki.jpg"],
   time: 150,
   portions: 12,
   executionDifficulty: null,
