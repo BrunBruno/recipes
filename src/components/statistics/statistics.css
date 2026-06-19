@@ -1,8 +1,8 @@
 .statistics {
-  position: fixed;
+  /* position: fixed;
   z-index: 999;
   top: 0;
-  left: 0;
+  left: 0; */
   width: calc(100% - 4rem);
   height: calc(100vh - 4rem);
   background-color: rgba(0, 0, 0, 0.85);
@@ -11,6 +11,10 @@
   gap: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.statistics::-webkit-scrollbar {
+  display: none;
 }
 
 .statistics-element {

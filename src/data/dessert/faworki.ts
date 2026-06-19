@@ -11,7 +11,8 @@ const faworki: Recipe = {
   description:
     "Chrupiące i lekkie faworki, smażone na złoty kolor, posypane cukrem pudrem - klasyczny polski przysmak karnawałowy.",
   type: "dessert",
-  images: ["faworki.jpg", "faworki-2.jpg"],
+  // images: ["faworki.jpg", "faworki-2.jpg"],
+  images: [""],
   time: 90,
   portions: 8,
   executionDifficulty: null,

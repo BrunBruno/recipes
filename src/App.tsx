@@ -1,218 +1,78 @@
+import { useState, type JSX } from "react";
 import "./app.css";
-import { useEffect, useRef, useState } from "react";
-import { recipes } from "./recipes";
-import { type KeyWord, type MealType, type Recipe } from "./types";
-import { keywordAliases, MealTypesData } from "./utils";
-import RecipeTypeIcon from "./assets/recipeTypeIcon";
-import UtilsIcon from "./assets/utilsIcon";
-import Statistics from "./components/statistics/Statistics";
+import RecipesPage from "./components/recipes-page/RecipesPage";
+import UserPage from "./components/user-page/UserPage";
 import Ingredients from "./components/ingredients/Ingredients";
-import RecipesGrid from "./components/recipes-grid/RecipesGrid";
-import RecipeCard from "./components/recipe-card/RecipeCard";
+import Statistics from "./components/statistics/Statistics";
 
 function App() {
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [activeTypes, setActiveTypes] = useState<MealType[]>([]);
-  const [showFilters, setShowFilters] = useState<boolean>(false);
-  const [showSearch, setShowSearch] = useState<boolean>(false);
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
-  const [showStatistics, setShowStatistics] = useState<boolean>(false);
-
-  const toggleType = (type: MealType) => {
-    setActiveTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
-    );
-  };
-  const normalize = (text: string) => text.toLowerCase().trim();
-  const matchesKeyword = (query: string, recipeKeywords: KeyWord[]) => {
-    const q = normalize(query);
-
-    return recipeKeywords.some((kw) =>
-      keywordAliases[kw].some((alias) => alias.includes(q)),
-    );
-  };
-
-  const filteredRecipes = recipes.filter((r) => {
-    const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
-
-    const query = normalize(searchQuery);
-
-    const nameMatch = r.name.toLowerCase().includes(query);
-    const keywordsMatch = r.keyWords
-      ? matchesKeyword(query, r.keyWords)
-      : false;
-
-    const hasImages = r.images.some((img) => img !== "");
-    const onlyEmptyImages = r.images.every((img) => img === "");
-
-    const specialMatch =
-      query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
-
-    return (
-      typeMatch &&
-      specialMatch &&
-      (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
-    );
-  });
-
-  useEffect(() => {
-    document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
-  }, [selectedRecipe]);
-  useEffect(() => {
-    document.body.style.overflow =
-      showAllIngredients || showStatistics ? "hidden" : "auto";
-  }, [showAllIngredients, showStatistics]);
-
-  useEffect(() => {
-    if (showSearch) {
-      setSearchQuery("");
-      searchInputRef.current?.focus();
-    }
-  }, [showSearch]);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      if (selectedRecipe) {
-        setSelectedRecipe(null);
-
-        window.history.pushState(null, "");
-      }
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, [selectedRecipe]);
-
-  if (recipes.length > 0 && recipes[0] === undefined) return;
+  const [content, setContent] = useState<JSX.Element>(<UserPage />);
 
   return (
-    <div className="recipes-page">
-      <div className="page-title">
-        <h1 className="page-title-h1">
-          <UtilsIcon name="logo" color="#099268" />
-          <span className="h1-text">Przepisy</span> {filteredRecipes.length}
-        </h1>
-
-        <div className="page-title-options">
-          <button
-            className="toggle-search-btn"
-            onClick={() => {
-              setShowSearch((prev) => !prev);
-              setShowFilters(false);
-            }}
+    <main>
+      {content}
+      <nav>
+        <div
+          className="nav-item"
+          onClick={() => {
+            setContent(<UserPage />);
+          }}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#eee"
           >
-            <UtilsIcon name="search" color="#999999" />
-          </button>
-          <button
-            className="toggle-filters-btn"
-            onClick={() => {
-              setShowFilters((prev) => !prev);
-              setShowSearch(false);
-            }}
-          >
-            <UtilsIcon name="filter" color="#999999" />
-          </button>
-
-          <div
-            className={`filter-buttons-bg ${showSearch ? "show" : ""}`}
-            onClick={() => setShowSearch((prev) => !prev)}
-          ></div>
-
-          <div className={`recipe-search ${showSearch ? "show" : ""}`}>
-            <label className="recipe-search-label">
-              <UtilsIcon name="search" color="#999999" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Szukaj przepisu..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="recipe-search-input"
-              />
-            </label>
-          </div>
-
-          <div
-            className={`filter-buttons-bg ${showFilters ? "show" : ""}`}
-            onClick={() => setShowFilters((prev) => !prev)}
-          ></div>
-
-          <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
-            {Object.entries(MealTypesData).map(([key, { label, color }]) => (
-              <button
-                key={key}
-                className="filter-btn"
-                style={{
-                  borderColor: activeTypes.includes(key as MealType)
-                    ? color
-                    : "#666",
-                }}
-                onClick={() => toggleType(key as MealType)}
-              >
-                <div className="filter-svg">
-                  <RecipeTypeIcon
-                    type={key as MealType}
-                    color={activeTypes.includes(key as MealType) ? "" : "#666"}
-                  />
-                </div>
-                <span className="filter-text">{label}</span>
-              </button>
-            ))}
-          </div>
+            <g>
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path d="M3 4.995C3 3.893 3.893 3 4.995 3h14.01C20.107 3 21 3.893 21 4.995v14.01A1.995 1.995 0 0 1 19.005 21H4.995A1.995 1.995 0 0 1 3 19.005V4.995zM6.357 18h11.49a6.992 6.992 0 0 0-5.745-3 6.992 6.992 0 0 0-5.745 3zM12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+            </g>
+          </svg>
         </div>
-      </div>
-
-      {selectedRecipe && (
-        <div className="details-bg" onClick={() => setSelectedRecipe(null)} />
-      )}
-      {selectedRecipe && (
-        <RecipeCard
-          selectedRecipe={selectedRecipe}
-          setSelectedRecipe={setSelectedRecipe}
-        />
-      )}
-
-      <div className="grid-container">
-        <RecipesGrid
-          filteredRecipes={filteredRecipes}
-          setSelectedRecipe={setSelectedRecipe}
-        />
-      </div>
-
-      <footer className="footer">
-        <button
-          className="footer-button"
-          onClick={() => setShowAllIngredients((prev) => !prev)}
+        <div
+          className="nav-item"
+          onClick={() => {
+            setContent(<RecipesPage />);
+          }}
         >
-          <UtilsIcon name="ingredients" color="#fff" />
-          <span>Składniki</span>
-        </button>
-        <button
-          className="footer-button"
-          onClick={() => setShowStatistics((prev) => !prev)}
+          <svg
+            fill="#eee"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12,39h32V2H12C8.691,2,6,4.691,6,8v34.417C6,45.496,8.691,48,12,48h32v-2H12c-2.168,0-4-1.641-4-3.583C8,40.501,9.757,39,12,39z M36.709,31.706C36.514,31.902,36.257,32,36,32c-0.255,0-0.511-0.097-0.705-0.292l-6.523-6.494l-1.76,1.76l-1.846-1.879l3.153-3.153l8.387,8.349C37.097,30.681,37.099,31.314,36.709,31.706z M16.286,10.007l7.733,7.781l-3.044,3.044L16.23,16C14.568,14.338,14.594,11.637,16.286,10.007z M14.329,30.293l13.024-13.024c-0.034-0.085-0.083-0.163-0.107-0.252c-0.399-1.509-0.322-3.426,1.045-4.777c2.031-2.094,5.497-2.989,6.998-1.505c1.501,1.571,0.596,4.909-1.435,6.916c-1.444,1.428-3.298,1.545-4.8,1.16c-0.104-0.027-0.196-0.081-0.294-0.122L14.743,31.707C14.548,31.902,15.292,32,15.036,32s-0.512-0.098-0.707-0.293C13.938,31.316,13.938,30.684,14.329,30.293z" />
+          </svg>
+        </div>
+        <div
+          className="nav-item"
+          onClick={() => {
+            setContent(<Ingredients />);
+          }}
         >
-          <UtilsIcon name="statistics" color="#fff" />
-          <span>Statystyki</span>
-        </button>
-      </footer>
-
-      {showAllIngredients && (
-        <Ingredients setShowAllIngredients={setShowAllIngredients} />
-      )}
-
-      {showStatistics && (
-        <Statistics
-          showStatistics={showStatistics}
-          setShowStatistics={setShowStatistics}
-        />
-      )}
-    </div>
+          <svg
+            fill="#eee"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M29 0C27.894531 0 27 0.898438 27 2L27 4C27 5.101563 27.894531 6 29 6L39 6C40.105469 6 41 5.101563 41 4L41 2C41 0.898438 40.105469 0 39 0 Z M 28.09375 7.875C27.164063 9.613281 26.363281 11.855469 25.78125 13.65625L40.53125 22L44 22L44 21.8125C44 19.492188 42.09375 12.074219 39.84375 7.90625C39.574219 7.964844 39.285156 8 39 8L29 8C28.6875 8 28.382813 7.941406 28.09375 7.875 Z M 14.625 13.78125C9.632813 13.78125 5.6875 17.167969 4.65625 22L12.25 22L19.59375 15.0625C18.089844 14.222656 16.398438 13.78125 14.625 13.78125 Z M 23.1875 14.6875C22.980469 14.710938 22.785156 14.816406 22.625 14.96875L15.15625 22L36.46875 22L23.8125 14.8125C23.621094 14.703125 23.394531 14.664063 23.1875 14.6875 Z M 2.84375 24C1.273438 24 0 25.273438 0 26.84375L0 30.15625C0 31.726563 1.273438 33 2.84375 33L47.15625 33C48.726563 33 50 31.726563 50 30.15625L50 26.84375C50 25.273438 48.726563 24 47.15625 24 Z M 3 35L3 36C3 36.195313 3.007813 36.304688 6.4375 47.4375C6.457031 47.503906 6.527344 47.65625 6.5625 47.71875C7.160156 48.789063 7.816406 50 9.21875 50L40.78125 50C42.519531 50 43.117188 48.507813 43.5625 47.4375C46.988281 36.304688 47 36.195313 47 36L47 35L37 35L37 45L34 45L34 35L30 35L30 45L27 45L27 35L23 35L23 45L20 45L20 35L16 35L16 45L13 45L13 35Z" />
+          </svg>
+        </div>
+        <div
+          className="nav-item"
+          onClick={() => {
+            setContent(<Statistics />);
+          }}
+        >
+          <svg
+            fill="#eee"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M20,2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V4A2,2,0,0,0,20,2ZM9,17a1,1,0,0,1-2,0V15a1,1,0,0,1,2,0Zm4,0a1,1,0,0,1-2,0V11a1,1,0,0,1,2,0Zm4,0a1,1,0,0,1-2,0V7a1,1,0,0,1,2,0Z"></path>
+          </svg>
+        </div>
+      </nav>
+    </main>
   );
 }
 

@@ -15,9 +15,7 @@ import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
 import { iJAR } from "../../ingredients/ingJar";
 
-type IngredientsProps = {
-  setShowAllIngredients: React.Dispatch<React.SetStateAction<boolean>>;
-};
+type IngredientsProps = {};
 
 const displayUnused = false;
 const allGroups = [
@@ -38,7 +36,7 @@ const initialOpenTypes = Object.fromEntries(
   groupedTypes.map((type) => [type, true]),
 );
 
-function Ingredients({ setShowAllIngredients }: IngredientsProps) {
+function Ingredients({}: IngredientsProps) {
   const getColumnCount = () => {
     const width = window.innerWidth;
 
@@ -84,14 +82,6 @@ function Ingredients({ setShowAllIngredients }: IngredientsProps) {
 
   return (
     <div className="all-ingredients">
-      <div
-        className="close-ingredients"
-        onClick={() => {
-          setShowAllIngredients(false);
-        }}
-      >
-        <UtilsIcon name="close" color="#fff" />
-      </div>
       {allGroups.map((group) => {
         const grouped = groupByType(group.data);
 

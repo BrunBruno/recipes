@@ -1,6 +1,5 @@
 import "./statistics.css";
 import { useEffect, useRef } from "react";
-import UtilsIcon from "../../assets/utilsIcon";
 import type { IngredientType, MealType } from "../../types";
 import {
   interpolateColor,
@@ -42,10 +41,7 @@ Chart.register(
   Legend,
 );
 
-type StatisticsProps = {
-  showStatistics: boolean;
-  setShowStatistics: React.Dispatch<React.SetStateAction<boolean>>;
-};
+type StatisticsProps = {};
 
 const recipeTypeCount = countRecipesTypes(recipes);
 const ingredientTypeCount = countIngredientTypes();
@@ -58,7 +54,7 @@ const recipeWeights = countRecipeWeight(recipes);
 const recipeWeightsPerPortion = countRecipeWeightPerPortion(recipes);
 const recipesPrepTimes = countRecipePreparationTime(recipes);
 
-function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
+function Statistics({}: StatisticsProps) {
   const canvasRefs = {
     calories: useRef<HTMLCanvasElement | null>(null),
     kcalDensity: useRef<HTMLCanvasElement | null>(null),
@@ -387,24 +383,13 @@ function Statistics({ showStatistics, setShowStatistics }: StatisticsProps) {
   };
 
   useEffect(() => {
-    if (!showStatistics) return;
-
     requestAnimationFrame(() => {
       renderCharts();
     });
-  }, [showStatistics]);
+  }, []);
 
   return (
     <div className="statistics">
-      <div
-        className="close-statistics"
-        onClick={() => {
-          setShowStatistics(false);
-        }}
-      >
-        <UtilsIcon name="close" color="#fff" />
-      </div>
-
       <div className="statistics-element">
         <h2>Dziesięć najbardziej kalorycznych przepisów na 100g</h2>
         <div className="chart-wrapper">

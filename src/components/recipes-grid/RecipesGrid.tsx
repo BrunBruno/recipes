@@ -48,17 +48,23 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
             style={{
               backgroundImage: listView
                 ? `linear-gradient(170deg, rgba(0,0,0,0.1) 40%,rgba(${hexToRgb(MealTypesData[recipe.type].color)},0.2))`
-                : `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6)),
-                   url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
+                : `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4)),
+                     url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
             }}
           ></div>
 
           <div
-            className="card-svg"
-            style={{ borderColor: MealTypesData[recipe.type].color }}
+            className="card-mark"
+            style={{ backgroundColor: MealTypesData[recipe.type].color }}
           >
-            <RecipeTypeIcon type={recipe.type} />
+            <div
+              className="card-svg"
+              // style={{ borderColor: MealTypesData[recipe.type].color }}
+            >
+              <RecipeTypeIcon type={recipe.type} color="#000" />
+            </div>
           </div>
+
           {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
             <div
               className="card-warning"
