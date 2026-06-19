@@ -6,7 +6,7 @@ import Ingredients from "./components/ingredients/Ingredients";
 import Statistics from "./components/statistics/Statistics";
 
 function App() {
-  const [content, setContent] = useState<JSX.Element>(<UserPage />);
+  const [content, setContent] = useState<JSX.Element>(<RecipesPage />);
 
   return (
     <main>

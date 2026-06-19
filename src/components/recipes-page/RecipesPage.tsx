@@ -4,10 +4,8 @@ import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
 import type { Recipe, MealType, KeyWord } from "../../types";
 import { keywordAliases, MealTypesData } from "../../utils";
-import Ingredients from "../ingredients/Ingredients";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
-import Statistics from "../statistics/Statistics";
 import "./recipes-page.css";
 
 function RecipesPage() {
@@ -18,8 +16,6 @@ function RecipesPage() {
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
-//   const [showAllIngredients, setShowAllIngredients] = useState<boolean>(false);
-//   const [showStatistics, setShowStatistics] = useState<boolean>(false);
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
@@ -61,10 +57,6 @@ function RecipesPage() {
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
   }, [selectedRecipe]);
-//   useEffect(() => {
-//     document.body.style.overflow =
-//       showAllIngredients || showStatistics ? "hidden" : "auto";
-//   }, [showAllIngredients, showStatistics]);
 
   useEffect(() => {
     if (showSearch) {
@@ -90,8 +82,6 @@ function RecipesPage() {
   }, [selectedRecipe]);
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
-
-  // return <UserPage />;
 
   return (
     <div className="recipes-page">
@@ -186,34 +176,6 @@ function RecipesPage() {
           setSelectedRecipe={setSelectedRecipe}
         />
       </div>
-
-      {/* <footer className="footer">
-        <button
-          className="footer-button"
-          onClick={() => setShowAllIngredients((prev) => !prev)}
-        >
-          <UtilsIcon name="ingredients" color="#fff" />
-          <span>Składniki</span>
-        </button>
-        <button
-          className="footer-button"
-          onClick={() => setShowStatistics((prev) => !prev)}
-        >
-          <UtilsIcon name="statistics" color="#fff" />
-          <span>Statystyki</span>
-        </button>
-      </footer> */}
-
-      {/* {showAllIngredients && (
-        <Ingredients setShowAllIngredients={setShowAllIngredients} />
-      )}
-
-      {showStatistics && (
-        <Statistics
-          showStatistics={showStatistics}
-          setShowStatistics={setShowStatistics}
-        />
-      )} */}
     </div>
   );
 }
