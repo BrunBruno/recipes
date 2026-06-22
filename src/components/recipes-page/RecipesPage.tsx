@@ -112,8 +112,11 @@ function RecipesPage() {
           </button>
 
           <div
-            className={`filter-buttons-bg ${showSearch ? "show" : ""}`}
-            onClick={() => setShowSearch((prev) => !prev)}
+            className={`filter-buttons-bg ${showSearch || showFilters ? "show" : ""}`}
+            onClick={() => {
+              setShowSearch(false);
+              setShowFilters(false);
+            }}
           ></div>
 
           <div className={`recipe-search ${showSearch ? "show" : ""}`}>
@@ -130,10 +133,10 @@ function RecipesPage() {
             </label>
           </div>
 
-          <div
+          {/* <div
             className={`filter-buttons-bg ${showFilters ? "show" : ""}`}
             onClick={() => setShowFilters((prev) => !prev)}
-          ></div>
+          ></div> */}
 
           <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
             {Object.entries(MealTypesData).map(([key, { label, color }]) => (
@@ -161,7 +164,13 @@ function RecipesPage() {
       </div>
 
       {selectedRecipe && (
-        <div className="details-bg" onClick={() => setSelectedRecipe(null)} />
+        <div
+          className="details-bg"
+          onClick={() => {
+            setSelectedRecipe(null);
+            window.history.pushState(null, "");
+          }}
+        />
       )}
       {selectedRecipe && (
         <RecipeCard

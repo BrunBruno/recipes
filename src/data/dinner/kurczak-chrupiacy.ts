@@ -22,8 +22,14 @@ const kurczakChrupiacy: Recipe = {
       items: [
         { ing: iMET.chicken_breast, amount: 400, unit: "g" },
         { ing: iFAT.oil, amount: 80, unit: "ml" },
-        { ing: iMET.egg, amount: 1, unit: "szt" },
-        { ing: iDIR.milk, amount: 50, unit: "ml", alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.egg, amount: 1, unit: "szt" },
+            { ing: iDIR.milk, amount: 50, unit: "ml" },
+          ],
+          selected: 0,
+        },
         { ing: iGRN.breadcrumbs, amount: 50, unit: "g" },
         { ing: iSPC.knorr_crispy_chicken_fix, amount: 1, unit: "opak" },
       ],

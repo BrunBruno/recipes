@@ -12,7 +12,10 @@ const wrapWieprzowyJajecznica: Recipe = {
   description:
     "Soczysta wieprzowina, jajecznica, ser cheddar, pomidor i sałata, podane w tortilli z sosem musztardowo-chrzanowym.",
   type: "snack",
-  images: [""],
+  images: [
+    "wrap-wieprzowina-z-jajecznica.jpg",
+    "wrap-wieprzowina-z-jajecznica-2.jpg",
+  ],
   time: 15,
   portions: portions,
   executionDifficulty: 1,
@@ -22,12 +25,13 @@ const wrapWieprzowyJajecznica: Recipe = {
       items: [
         { ing: iGRN.tortilla, amount: portions, unit: "szt" },
         { ing: iMET.burger_patties, amount: portions, unit: "szt" },
-        { ing: iMET.egg, amount: portions * 2, unit: "szt" },
+        { ing: iMET.egg, amount: portions, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: portions, unit: "szt" },
         { ing: iJAR.mustard_dessert, amount: 30 },
-        { ing: iJAR.horseradish_sauce, amount: 30 },
+        { ing: iJAR.mayonnaise, amount: 30 },
+        { ing: iJAR.horseradish_sauce, amount: 10 },
         { ing: iFAT.butter, amount: 5 },
       ],
     },

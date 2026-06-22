@@ -7,7 +7,7 @@ const kajzerkiZDzemem: Recipe = {
   name: "Kajzerki z Dżemem",
   description:
     "Proste kajzerki posmarowane masłem i dżemem. Szybka słodka przekąska lub śniadanie.",
-  type: "snack",
+  type: "breakfast",
   images: ["kajzerki-z-dzemem.jpg"],
   time: 5,
   portions: 1,

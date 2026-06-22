@@ -1,8 +1,9 @@
 export type MealType =
+  | "breakfast"
   | "dinner"
-  | "snack"
   | "soup"
   | "dessert"
+  | "snack"
   | "salad"
   | "other";
 
@@ -76,11 +77,17 @@ export type Ingredient = {
   alt?: boolean;
 };
 
+export type IngredientChoice = {
+  type: "choice";
+  options: Ingredient[];
+  selected: number;
+};
+
 export type RecipeIngredientGroup = {
   title: string;
   isMain?: boolean;
   isAdd?: boolean;
-  items: Ingredient[];
+  items: (IngredientChoice | Ingredient)[];
 };
 
 export type RecipeStepGroup = {

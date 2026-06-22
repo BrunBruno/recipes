@@ -7,7 +7,7 @@ const kajzerkiZMakrela: Recipe = {
   name: "Kajzerki z Makrelą",
   description:
     "Kajzerki z pastą z makreli, majonezem i warzywami - szybka i pożywna kanapka.",
-  type: "snack",
+  type: "breakfast",
   images: ["kajzerki-z-makrela.jpg"],
   time: 15,
   portions: 1,

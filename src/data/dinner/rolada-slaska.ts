@@ -22,8 +22,14 @@ const roladaSlaska: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.beef_round, amount: 800 },
-        { ing: iMET.pork_ham, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.beef_round, amount: 800 },
+            { ing: iMET.pork_ham, amount: 800 },
+          ],
+          selected: 0,
+        },
         { ing: iMET.bacon_block, amount: 120 },
         { ing: iMET.sausage, amount: 180 },
         { ing: iJAR.pickled_cucumber, amount: 120 },

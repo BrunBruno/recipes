@@ -22,8 +22,14 @@ const kurczakJalapeno: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_tenderloin, amount: 400, unit: "g" },
-        { ing: iMET.chicken_breast, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.chicken_tenderloin, amount: 400 },
+            { ing: iMET.chicken_breast, amount: 400 },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
         { ing: iSPC.jalapeno_chicken_seasoning, amount: 1, unit: "opak" },
       ],
@@ -32,8 +38,8 @@ const kurczakJalapeno: Recipe = {
       title: "",
       isAdd: true,
       items: [
-        { ing: iJAR.frozen_fries, amount: portions * 200, unit: "g" },
-        { ing: iJAR.sauerkraut, amount: portions * 150, unit: "g" },
+        { ing: iJAR.frozen_fries, amount: portions * 200 },
+        { ing: iJAR.sauerkraut, amount: portions * 150 },
         { ing: iSPC.potato_seasoning },
       ],
     },

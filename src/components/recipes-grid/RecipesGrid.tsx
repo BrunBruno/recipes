@@ -4,6 +4,7 @@ import UtilsIcon from "../../assets/utilsIcon";
 import type { Recipe } from "../../types";
 import { hexToRgb, MealTypesData } from "../../utils";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 type RecipesGridProps = {
   filteredRecipes: Recipe[];
@@ -11,6 +12,7 @@ type RecipesGridProps = {
 };
 
 function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
+  const [disableHover, setDisableHover] = useState(false);
   const [listView, setListView] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,6 +29,17 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
     };
   }, []);
 
+  useEffect(() => {
+    const check = () => {
+      setDisableHover(window.innerWidth <= 960 || listView);
+    };
+
+    check();
+    window.addEventListener("resize", check);
+
+    return () => window.removeEventListener("resize", check);
+  }, [listView]);
+
   const setRecipe = (recipe: Recipe) => {
     window.history.pushState({ recipeModal: true }, "");
 
@@ -35,50 +48,66 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
 
   return (
     <div className={`recipes-grid ${listView ? "list-view" : ""}`}>
-      {filteredRecipes.map((recipe, index) => (
-        <div
-          key={index}
-          className={`recipe-card`}
-          onClick={() => {
-            setRecipe(recipe);
-          }}
-        >
-          <div
-            className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
-            style={{
-              backgroundImage: listView
-                ? `linear-gradient(170deg, rgba(0,0,0,0.1) 40%,rgba(${hexToRgb(MealTypesData[recipe.type].color)},0.2))`
-                : `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4)),
-                     url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
+      <AnimatePresence mode="popLayout">
+        {filteredRecipes.map((recipe) => (
+          <motion.div
+            key={recipe.name}
+            layout="position"
+            whileHover={
+              disableHover
+                ? {
+                    boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
+                  }
+                : {
+                    y: -10,
+                    boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
+                  }
+            }
+            transition={{
+              layout: { type: "spring", stiffness: 350, damping: 30 },
             }}
-          ></div>
-
-          <div
-            className="card-mark"
-            style={{ backgroundColor: MealTypesData[recipe.type].color }}
+            className={`recipe-card`}
+            onClick={() => {
+              setRecipe(recipe);
+            }}
           >
             <div
-              className="card-svg"
-              // style={{ borderColor: MealTypesData[recipe.type].color }}
-            >
-              <RecipeTypeIcon type={recipe.type} color="#000" />
-            </div>
-          </div>
+              className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
+              style={{
+                backgroundImage: listView
+                  ? `linear-gradient(170deg, rgba(0,0,0,0.1) 40%,rgba(${hexToRgb(MealTypesData[recipe.type].color)},0.2))`
+                  : `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4)),
+                     url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
+              }}
+            ></div>
 
-          {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
             <div
-              className="card-warning"
-              style={{ borderColor: MealTypesData[recipe.type].color }}
+              className="card-mark"
+              style={{ backgroundColor: MealTypesData[recipe.type].color }}
             >
-              <UtilsIcon name="warning" color="#f03e3e" />
+              <div
+                className="card-svg"
+                // style={{ borderColor: MealTypesData[recipe.type].color }}
+              >
+                <RecipeTypeIcon type={recipe.type} color="#000" />
+              </div>
             </div>
-          )}
 
-          <div className="recipe-card-content">
-            <h2>{recipe.name}</h2>
-          </div>
-        </div>
-      ))}
+            {(recipe.steps.length === 0 || recipe.ingredients.length === 0) && (
+              <div
+                className="card-warning"
+                style={{ borderColor: MealTypesData[recipe.type].color }}
+              >
+                <UtilsIcon name="warning" color="#f03e3e" />
+              </div>
+            )}
+
+            <div className="recipe-card-content">
+              <h2>{recipe.name}</h2>
+            </div>
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   );
 }

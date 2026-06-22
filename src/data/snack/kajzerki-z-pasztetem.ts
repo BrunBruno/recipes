@@ -7,7 +7,7 @@ const kajzerkiZPasztetem: Recipe = {
   name: "Kajzerki z Pasztetem",
   description:
     "Proste kanapki z kajzerki posmarowane pasztetem z dodatkiem ogórka kiszonego, doprawione pieprzem.",
-  type: "snack",
+  type: "breakfast",
   images: ["kajzerki-z-pasztetem.jpg"],
   time: 5,
   portions: 1,

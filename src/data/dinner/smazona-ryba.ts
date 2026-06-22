@@ -19,10 +19,16 @@ const smazonaRyba: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pollock, amount: 1, unit: "szt" },
-        { ing: iMET.cod, amount: 1, unit: "szt", alt: true },
-        { ing: iMET.hake, amount: 1, unit: "szt", alt: true },
-        { ing: iMET.halibut, amount: 1, unit: "szt", alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.pollock, amount: 1, unit: "szt" },
+            { ing: iMET.cod, amount: 1, unit: "szt" },
+            { ing: iMET.hake, amount: 1, unit: "szt" },
+            { ing: iMET.halibut, amount: 1, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.oil, amount: 4, unit: "lz" },
         { ing: iGRN.flour, amount: 80 },
         { ing: iMET.egg, amount: 1, unit: "szt" },

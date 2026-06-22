@@ -8,14 +8,14 @@ const jajecznica: Recipe = {
   name: "Jajecznica",
   description:
     "Prosta i szybka jajecznica na maśle klarowanym z możliwością dodania kiełbasy, cebuli, pomidora i szczypiorku - gotowa w 15 minut dla 1 osoby.",
-  type: "snack",
+  type: "breakfast",
   images: [
     "jajecznica.jpg",
     "jajecznica-2.jpg",
     "jajecznica-3.jpg",
     "jajecznica-4.jpg",
     "jajecznica-5.jpg",
-    "jajecznica-6.jpg"
+    "jajecznica-6.jpg",
   ],
   time: 15,
   portions: 1,

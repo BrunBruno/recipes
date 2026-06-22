@@ -122,8 +122,7 @@ function Ingredients({}: IngredientsProps) {
                     }}
                   >
                     {sortedItems.map(([id, item]) => {
-                      if (!ingredientUsage[item.name] && !displayUnused)
-                        return <></>;
+                      if (!ingredientUsage[item.name] && !displayUnused) return;
 
                       return (
                         <li key={id} className="ingredient-card">

@@ -12,7 +12,11 @@ const spaghettiBolognese: Recipe = {
   description:
     "Klasyczne spaghetti bolognese z mięsem mielonym w aromatycznym sosie pomidorowym z dodatkiem czosnku, cebuli i ziół.",
   type: "dinner",
-  images: ["spaghetti-bolognese.jpg", "spaghetti-bolognese-2.jpg"],
+  images: [
+    "spaghetti-bolognese.jpg",
+    "spaghetti-bolognese-2.jpg",
+    "spaghetti-bolognese-3.jpg",
+  ],
   time: 60,
   portions: portions,
   executionDifficulty: 1,
@@ -21,14 +25,32 @@ const spaghettiBolognese: Recipe = {
       title: "",
       items: [
         { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ing: iMET.ground_pork, amount: 500 },
-        { ing: iMET.ground_beef, alt: true },
-        { ing: iJAR.tomato_passata, amount: 400 },
-        { ing: iJAR.canned_tomatoes, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.ground_pork, amount: 500 },
+            { ing: iMET.ground_beef, amount: 500 },
+          ],
+          selected: 0,
+        },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.tomato_passata, amount: 400 },
+            { ing: iJAR.canned_tomatoes, amount: 400 },
+          ],
+          selected: 0,
+        },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
-        { ing: iFAT.olive, amount: 1, unit: "lz" },
-        { ing: iFAT.oil, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iFAT.olive, amount: 1, unit: "lz" },
+            { ing: iFAT.oil, amount: 1, unit: "lz" },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.basil },
         { ing: iSPC.oregano },
         { ing: iSPC.knorr_bolognese_fix },

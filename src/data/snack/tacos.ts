@@ -35,17 +35,36 @@ const tacos: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ing: iGRN.tortilla_mini, amount: 12, unit: "szt" },
-        { ing: iGRN.taco_shell_corn, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.tortilla_mini, amount: 12, unit: "szt" },
+            { ing: iGRN.taco_shell_corn, amount: 12, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iDIR.sour_cream, amount: 4, unit: "lz" },
-        { ing: iVEG.lettuce_romaine, amount: 1, unit: "opak" },
-        { ing: iVEG.lettuce_iceberg, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iVEG.lettuce_romaine, amount: 1, unit: "opak" },
+            { ing: iVEG.lettuce_iceberg, amount: 1, unit: "opak" },
+          ],
+          selected: 0,
+        },
         { ing: iVEG.tomato, amount: 2, unit: "szt" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
         { ing: iFRT.avocado, amount: 1, unit: "szt" },
-        { ing: iFRT.lime, amount: 1, unit: "szt" },
-        { ing: iJAR.lime_juice, amount: 50, unit: "ml", alt: true },
+
+        {
+          type: "choice",
+          options: [
+            { ing: iFRT.lime, amount: 1, unit: "szt" },
+            { ing: iJAR.lime_juice, amount: 50, unit: "ml" },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.coriander },
       ],
     },

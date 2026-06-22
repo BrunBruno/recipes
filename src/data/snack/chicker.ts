@@ -29,8 +29,14 @@ const chicker: Recipe = {
       title: "Sosy",
       items: [
         { ing: iJAR.ketchup, amount: 1.5, unit: "lzi" },
-        { ing: iJAR.sriracha, amount: 2, unit: "lzi" },
-        { ing: iJAR.spicy_ketchup, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.sriracha, amount: 2, unit: "lzi" },
+            { ing: iJAR.spicy_ketchup, amount: 2, unit: "lzi" },
+          ],
+          selected: 0,
+        },
         { ing: iJAR.mustard_dessert, amount: 2, unit: "lzi" },
         { ing: iJAR.mayonnaise, amount: 1, unit: "lzi" },
         { ing: iOTH.honey, amount: 0.5, unit: "lzi" },

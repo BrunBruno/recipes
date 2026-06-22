@@ -8,7 +8,7 @@ const tost: Recipe = {
   name: "Tosty",
   description:
     "Proste i szybkie tosty z tostera wyskakującego z szynką i roztopionym serem, podawane z ketchupem.",
-  type: "snack",
+  type: "breakfast",
   images: ["tosty.jpg"],
   time: 5,
   portions: 1,

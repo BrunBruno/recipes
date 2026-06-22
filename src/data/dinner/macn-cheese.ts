@@ -20,12 +20,24 @@ const macAndCheeseFix: Recipe = {
       title: "",
       items: [
         { ing: iGRN.macaroni_pasta, amount: portions * 100 },
-        { ing: iDIR.yellow_cheese, amount: portions * 50 },
-        { ing: iDIR.cheddar_cheese, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iDIR.yellow_cheese, amount: portions * 50 },
+            { ing: iDIR.cheddar_cheese, amount: portions * 50 },
+          ],
+          selected: 0,
+        },
         { ing: iMET.ham_canned, amount: portions * 50 },
         { ing: iDIR.milk, amount: 200, unit: "ml" },
-        { ing: iFAT.butter, amount: 50 },
-        { ing: iFAT.margarine, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iFAT.butter, amount: 50 },
+            { ing: iFAT.margarine, amount: 50 },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.knorr_mac_and_cheese_fix, amount: 1, unit: "opak" },
       ],
     },

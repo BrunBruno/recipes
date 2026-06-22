@@ -9,7 +9,7 @@ import {
   DAILY_NUTRIENTS,
   formatUnit,
 } from "../../utils";
-import type { Recipe } from "../../types";
+import type { Ingredient, Recipe } from "../../types";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -21,7 +21,6 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import KeywordsIcon from "../../assets/keywordsIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -47,6 +46,9 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+  const [ingredientState, setIngredientState] = useState(
+    selectedRecipe.ingredients,
+  );
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -210,6 +212,10 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
     );
   };
 
+  useEffect(() => {
+    setIngredientState(selectedRecipe.ingredients);
+  }, [selectedRecipe]);
+
   return (
     <div
       ref={contentRef}
@@ -218,7 +224,10 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
       <div className="recipe-details-header">
         <button
           className="close-button"
-          onClick={() => setSelectedRecipe(null)}
+          onClick={() => {
+            setSelectedRecipe(null);
+            window.history.pushState(null, "");
+          }}
           aria-label="Close recipe details"
         >
           <UtilsIcon name="close" color="#fff" />
@@ -294,14 +303,14 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           {selectedRecipe.name}
         </h2>
 
-        <div className="key-icons">
+        {/* <div className="key-icons">
           {selectedRecipe.keyWords?.map((key) => (
             <KeywordsIcon key={key} type={key} />
           ))}
-        </div>
+        </div> */}
       </div>
 
-      <div className="header-filler" />
+      {/* <div className="header-filler" /> */}
 
       {selectedRecipe.ingredients.length === 0 &&
       selectedRecipe.steps.length === 0 ? (
@@ -346,10 +355,11 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           </section>
           <section className="ingredients-section">
             <div className={`${"ingredients-container"}`}>
-              {selectedRecipe.ingredients.map((group, groupIndex) => (
+              {/* {selectedRecipe.ingredients.map((group, groupIndex) => ( */}
+              {ingredientState.map((group, groupIndex) => (
                 <div
                   key={groupIndex}
-                  className={`recipe-ingredient-group ${group.isMain || selectedRecipe.ingredients.length === 1 ? "main-group" : ""}`}
+                  className={`recipe-ingredient-group ${group.isMain || ingredientState.length === 1 ? "main-group" : ""}`}
                 >
                   <div className="ingredients-list-container">
                     <h4 className="ingredient-group-title">
@@ -360,7 +370,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                           : "Lista składników"}
                     </h4>
                     <ul className="ingredients-list">
-                      {group.items.map((ingredient, index) => {
+                      {/* {group.items.map((ingredient, index) => {
                         if (ingredient.invisible) return;
                         return (
                           <li
@@ -395,6 +405,95 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                               </span>
                             </span>
                             <span className="ingredient-unit"></span>
+                          </li>
+                        );
+                      })} */}
+                      {group.items.map((item, index) => {
+                        if ("type" in item && item.type === "choice") {
+                          const active = item.options[item.selected];
+
+                          return (
+                            <li key={index} className="ingredient-item-alt">
+                              <div className="ingredient-indicator">
+                                <IngredientIcon
+                                  ingType={active.ing.type}
+                                  subType={active.ing.subType}
+                                  color={active.ing.color}
+                                />
+                              </div>
+
+                              <span className="ingredient-name">
+                                {active.ing.name}
+                              </span>
+
+                              <span className="ingredient-amount">
+                                {active.amount}
+                                <span className="ingredient-unit">
+                                  {active.unit ? formatUnit(active) : ""}
+                                </span>
+                              </span>
+
+                              <button
+                                className="ingredient-alt"
+                                onClick={() => {
+                                  setIngredientState((prev) => {
+                                    const copy = structuredClone(prev);
+
+                                    const g = copy[groupIndex];
+                                    const it = g.items[index] as any;
+
+                                    it.selected = it.selected === 0 ? 1 : 0;
+
+                                    return copy;
+                                  });
+                                }}
+                              >
+                                <UtilsIcon name="swap" color="#fff" />
+                              </button>
+
+                              {/* <button
+                                type="button"
+                                onClick={() => {
+                                  setIngredientState((prev) => {
+                                    const copy = structuredClone(prev);
+
+                                    const g = copy[groupIndex];
+                                    const it = g.items[index] as any;
+
+                                    it.selected = it.selected === 0 ? 1 : 0;
+
+                                    return copy;
+                                  });
+                                }}
+                              >
+                                swap
+                              </button> */}
+                            </li>
+                          );
+                        }
+
+                        item = item as Ingredient;
+                        const ing = item.ing;
+                        if (item.exclude || item.invisible) return <></>;
+
+                        return (
+                          <li key={index} className="ingredient-item">
+                            <div className="ingredient-indicator">
+                              <IngredientIcon
+                                ingType={ing.type}
+                                subType={ing.subType}
+                                color={ing.color}
+                              />
+                            </div>
+
+                            <span className="ingredient-name">{ing.name}</span>
+
+                            <span className="ingredient-amount">
+                              {item.amount}
+                              <span className="ingredient-unit">
+                                {item.amount ? formatUnit(item) : ""}
+                              </span>
+                            </span>
                           </li>
                         );
                       })}

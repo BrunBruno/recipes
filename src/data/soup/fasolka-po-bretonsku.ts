@@ -21,8 +21,14 @@ const fasolkaPoBretonsku: Recipe = {
         { ing: iVEG.white_beans, amount: 300 },
         { ing: iMET.sausage, amount: 1, unit: "peto" },
         { ing: iMET.bacon_block, amount: 150 },
-        { ing: iMET.pork_rib, amount: 200, exclude: true },
-        { ing: iMET.chicken_soup_portion, amount: 200, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.pork_rib, amount: 200, exclude: true },
+            { ing: iMET.chicken_soup_portion, amount: 200, exclude: true },
+          ],
+          selected: 0,
+        },
         { ing: iOTH.water, amount: 2000, unit: "ml", exclude: true },
         { ing: iOTH.meat_stock, amount: 2000, unit: "ml", invisible: true },
         { ing: iVEG.onion, amount: 120 },

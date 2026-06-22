@@ -8,7 +8,7 @@ const sandwich: Recipe = {
   name: "Sandwiche",
   description:
     "Szybkie i chrupiące sandwiche z szynką, żółtym serem i ogórkiem, podawane z ketchupem i sosem czosnkowym - idealna przekąska na każdą porę dnia.",
-  type: "snack",
+  type: "breakfast",
   images: [
     "sandwiche.jpg",
     "sandwiche-2.jpg",
@@ -23,8 +23,14 @@ const sandwich: Recipe = {
       title: "",
       items: [
         { ing: iGRN.toast_bread, amount: 4, unit: "krom" },
-        { ing: iMET.ham_slices, amount: 2, unit: "plas" },
-        { ing: iMET.salami, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.ham_slices, amount: 2, unit: "plas" },
+            { ing: iMET.salami, amount: 2, unit: "plas" },
+          ],
+          selected: 0,
+        },
         { ing: iDIR.yellow_cheese, amount: 2, unit: "plas" },
         { ing: iJAR.pickled_cucumber, amount: 0.5, unit: "szt" },
         { ing: iJAR.ketchup },

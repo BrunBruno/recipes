@@ -46,6 +46,7 @@ type IngId =
   | "bacon_block"
   | "sausage"
   | "sausages"
+  | "serdelki"
   | "meat_spread"
 
   //// FISHES ////
@@ -560,6 +561,19 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 50,
     },
     nutrientsPer100g: [21, 2.7, 13],
+    verified: true,
+  },
+
+  serdelki: {
+    name: "Serdelki",
+    type: "met",
+    subType: "ham",
+    color: "#A85A4A",
+    kcalPer100g: 280,
+    unitWeights: {
+      szt: 75,
+    },
+    nutrientsPer100g: [14, 2, 25],
     verified: true,
   },
 

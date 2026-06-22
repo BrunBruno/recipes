@@ -10,7 +10,7 @@ const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
   description:
     "Kajzerki z jajkiem na twardo, szynką, serem żółtym, sałatą i majonezem, szybka i prosta kanapka.",
-  type: "snack",
+  type: "breakfast",
   images: ["kajzerki-z-jajkiem.jpg"],
   time: 20,
   portions: 1,

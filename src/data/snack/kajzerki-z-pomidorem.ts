@@ -9,7 +9,7 @@ const kajzerkiZPomidorem: Recipe = {
   name: "Kajzerki z Pomidorem",
   description:
     "Szybka kanapka z kajzerki z szynką, świeżym pomidorem, cebulą i masłem, doprawiona solą i pieprzem.",
-  type: "snack",
+  type: "breakfast",
   images: ["kajzerki-z-pomidorem.jpg"],
   time: 5,
   portions: 1,

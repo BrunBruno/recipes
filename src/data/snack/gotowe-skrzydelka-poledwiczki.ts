@@ -8,7 +8,7 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
   name: "Gotowe Skrzydełka / Polędwiczki",
   description:
     "Gotowe panierowane polędwiczki z kurczaka pieczone razem z frytkami, podawane z prostym sosem sriracha majo.",
-  type: "dinner",
+  type: "snack",
   images: [
     "gotowe-skrzydelka-poledwiczki.jpg",
     "gotowe-skrzydelka-poledwiczki-2.jpg",
@@ -21,8 +21,14 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
-        { ing: iMET.spicy_wings, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
+            { ing: iMET.spicy_wings, amount: 1, unit: "opak" },
+          ],
+          selected: 0,
+        },
         { ing: iJAR.frozen_fries, amount: 150 * portions },
         { ing: iJAR.mayonnaise, amount: 2, unit: "lzi" },
         { ing: iJAR.sriracha, amount: 1, unit: "lzi" },

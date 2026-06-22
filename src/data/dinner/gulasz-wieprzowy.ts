@@ -25,8 +25,14 @@ const gulaszWieprzowy: Recipe = {
       items: [
         { ing: iMET.stew_pork, amount: 500 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
-        { ing: iFAT.butter, amount: 1, unit: "lz" },
-        { ing: iFAT.rendered_lard, alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iFAT.butter, amount: 1, unit: "lz" },
+            { ing: iFAT.rendered_lard, amount: 1, unit: "lz" },
+          ],
+          selected: 0,
+        },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },

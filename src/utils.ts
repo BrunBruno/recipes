@@ -9,6 +9,7 @@ import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type {
   Ingredient,
+  IngredientChoice,
   IngredientType,
   KeyWord,
   MealType,
@@ -40,6 +41,7 @@ export const MealTypesData: Record<MealType, DictRecord> = {
   soup: { label: "Zupa", color: "#37b24d" },
   dessert: { label: "Deser", color: "#1c7ed6" },
   salad: { label: "Sałatka", color: "#ae3ec9" },
+  breakfast: { label: "Śniadanie", color: "#22b8cf" },
   other: { label: "Inne", color: "#f76707" },
 };
 export const IngredientTypeData: Record<IngredientType, DictRecord> = {
@@ -121,6 +123,61 @@ export const interpolateColor = (
   return rgbToHex(rgb);
 };
 
+// export const calculateRecipeKcal = (recipe: Recipe): number => {
+//   const DEFAULT_FAT_GRAMS = 12;
+
+//   let totalKcal = 0;
+
+//   for (const group of recipe.ingredients) {
+//     for (const item of group.items) {
+//       if (item.exclude || item.alt) continue;
+
+//       const { ing, amount, unit } = item;
+
+//       let grams = 0;
+//       let value = amount;
+
+//       if (typeof amount === "string") {
+//         if (amount.includes("-")) {
+//           const parts = amount.split("-").map(Number);
+//           value = parts.reduce((a, b) => a + b, 0) / parts.length;
+//         } else {
+//           console.warn(`Incorrect amount ${amount}`);
+//           continue;
+//         }
+//       }
+
+//       if (!value || typeof value === "string") {
+//         if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
+//         else continue;
+//       } else {
+//         if (!unit) {
+//           grams = value;
+//         } else if (ing.unitWeights?.[unit]) {
+//           grams = value * ing.unitWeights[unit];
+//         } else {
+//           if (unit !== "g") console.warn(`No unit ${unit} for ${ing.name}`);
+//           grams = value;
+//         }
+//       }
+
+//       totalKcal += (grams / 100) * ing.kcalPer100g;
+//     }
+//   }
+
+//   return Math.round(recipe.portions ? totalKcal / recipe.portions : totalKcal);
+// };
+
+const getActiveIngredient = (
+  item: Ingredient | IngredientChoice,
+): Ingredient => {
+  if ("type" in item && item.type === "choice") {
+    return item.options[item.selected];
+  }
+
+  return item as Ingredient;
+};
+
 export const calculateRecipeKcal = (recipe: Recipe): number => {
   const DEFAULT_FAT_GRAMS = 12;
 
@@ -128,9 +185,13 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.exclude || item.alt) continue;
+      const ingredientItem = getActiveIngredient(item);
 
-      const { ing, amount, unit } = item;
+      if (!ingredientItem) continue;
+
+      if (ingredientItem.exclude) continue;
+
+      const { ing, amount, unit } = ingredientItem;
 
       let grams = 0;
       let value = amount;
@@ -154,7 +215,9 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
         } else if (ing.unitWeights?.[unit]) {
           grams = value * ing.unitWeights[unit];
         } else {
-          if (unit !== "g") console.warn(`No unit ${unit} for ${ing.name}`);
+          if (unit !== "g") {
+            console.warn(`No unit ${unit} for ${ing.name}`);
+          }
           grams = value;
         }
       }
@@ -174,9 +237,13 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.exclude || item.alt) continue;
+      const ingredientItem = getActiveIngredient(item);
 
-      const { ing, amount, unit } = item;
+      if (!ingredientItem) continue;
+
+      if (ingredientItem.exclude) continue;
+
+      const { ing, amount, unit } = ingredientItem;
 
       let grams = 0;
       let value = amount;
@@ -226,9 +293,13 @@ export const calculateRecipeNutrients = (
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.exclude || item.alt) continue;
+      const ingredientItem = getActiveIngredient(item);
 
-      const { ing, amount, unit } = item;
+      if (!ingredientItem) continue;
+
+      if (ingredientItem.exclude) continue;
+
+      const { ing, amount, unit } = ingredientItem;
 
       if (!ing.nutrientsPer100g) continue;
 
@@ -292,9 +363,12 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
-      if (item.exclude || item.alt) continue;
+      const ingredientItem = getActiveIngredient(item);
+      if (!ingredientItem) continue;
 
-      const { ing, amount, unit } = item;
+      if (ingredientItem.exclude) continue;
+
+      const { ing, amount, unit } = ingredientItem;
 
       let grams = 0;
       let value = amount;
@@ -355,13 +429,33 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   zupa: ["zupa", "zupy", "zupka", "zupki"],
 };
 
+// export const countIngredientUsage = (recipes: Recipe[]) => {
+//   const usage: Record<string, number> = {};
+
+//   recipes.forEach((recipe) => {
+//     recipe.ingredients.forEach((group) => {
+//       group.items.forEach((item) => {
+//         const key = item.ing.name;
+//         usage[key] = (usage[key] ?? 0) + 1;
+//       });
+//     });
+//   });
+
+//   return usage;
+// };
+
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
   recipes.forEach((recipe) => {
     recipe.ingredients.forEach((group) => {
       group.items.forEach((item) => {
-        const key = item.ing.name;
+        const active = getActiveIngredient(item);
+
+        if (active.exclude) return;
+
+        const key = active.ing.name;
+
         usage[key] = (usage[key] ?? 0) + 1;
       });
     });
@@ -377,6 +471,7 @@ export const countRecipesTypes = (recipes: Recipe[]) => {
     soup: 0,
     dessert: 0,
     salad: 0,
+    breakfast: 0,
     other: 0,
   };
 

@@ -23,8 +23,14 @@ const faworki: Recipe = {
         { ing: iGRN.flour, amount: 320 },
         { ing: iMET.egg_yolk, amount: 4, unit: "szt" },
         { ing: iDIR.cream_18, amount: 5, unit: "lz" },
-        { ing: iFAT.rendered_lard, amount: 2, unit: "kst", exclude: true },
-        { ing: iFAT.oil, amount: 500, unit: "ml", alt: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iFAT.rendered_lard, amount: 2, unit: "kst", exclude: true },
+            { ing: iFAT.oil, amount: 500, unit: "ml", exclude: true },
+          ],
+          selected: 0,
+        },
         {
           ing: iFAT.rendered_lard,
           amount: 2 * 0.3,
