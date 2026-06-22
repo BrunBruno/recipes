@@ -19,7 +19,7 @@ const racuchy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.flour, amount: 150, unit: "g" },
+        { ing: iGRN.flour, amount: 150 },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iFRT.apple, amount: 2, unit: "szt" },
         { ing: iDIR.kefir, amount: 200, unit: "ml" },

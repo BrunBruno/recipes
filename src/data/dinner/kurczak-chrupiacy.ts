@@ -20,7 +20,7 @@ const kurczakChrupiacy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400, unit: "g" },
+        { ing: iMET.chicken_breast, amount: 400 },
         { ing: iFAT.oil, amount: 80, unit: "ml" },
         {
           type: "choice",
@@ -30,7 +30,7 @@ const kurczakChrupiacy: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iGRN.breadcrumbs, amount: 50, unit: "g" },
+        { ing: iGRN.breadcrumbs, amount: 50 },
         { ing: iSPC.knorr_crispy_chicken_fix, amount: 1, unit: "opak" },
       ],
     },
@@ -38,8 +38,8 @@ const kurczakChrupiacy: Recipe = {
       title: "",
       isAdd: true,
       items: [
-        { ing: iJAR.frozen_fries, amount: portions * 200, unit: "g" },
-        { ing: iJAR.cucumber_salad, amount: portions * 150, unit: "g" },
+        { ing: iJAR.frozen_fries, amount: portions * 200 },
+        { ing: iJAR.cucumber_salad, amount: portions * 150 },
         { ing: iSPC.potato_seasoning },
       ],
     },

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { IngredientType, Recipe } from "../../types";
+import type { Ingredient, IngredientType, Recipe } from "../../types";
 import type { MealEntry } from "./user-page-data";
 import "./user-page.css";
 import { recipes } from "../../recipes";
@@ -9,6 +9,7 @@ import {
   calculateRecipeKcal,
   calculateRecipeNutrients,
   DAILY_NUTRIENTS,
+  getActiveIngredient,
 } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
 
@@ -65,6 +66,7 @@ export default function UserPage() {
   function toGrams(
     item: MealEntry["recipe"]["ingredients"][number]["items"][number],
   ) {
+    item = item as Ingredient;
     const raw = item.amount;
 
     if (raw === undefined || raw === null) return 0;
@@ -88,9 +90,10 @@ export default function UserPage() {
 
       meal.recipe.ingredients.forEach((group) => {
         group.items.forEach((item) => {
-          const grams = toGrams(item) * ratio;
+          const ingredient = getActiveIngredient(item);
+          const grams = toGrams(ingredient) * ratio;
 
-          const key = `${item.ing.name}__${item.ing.color}__${item.ing.type}__${item.ing.subType}`;
+          const key = `${ingredient.ing.name}__${ingredient.ing.color}__${ingredient.ing.type}__${ingredient.ing.subType}`;
 
           result.set(key, (result.get(key) ?? 0) + grams);
         });

@@ -168,7 +168,7 @@ export const interpolateColor = (
 //   return Math.round(recipe.portions ? totalKcal / recipe.portions : totalKcal);
 // };
 
-const getActiveIngredient = (
+export const getActiveIngredient = (
   item: Ingredient | IngredientChoice,
 ): Ingredient => {
   if ("type" in item && item.type === "choice") {
