@@ -47,7 +47,8 @@ type IngId =
   | "knorr_meatballs_fix"
   | "knorr_mac_and_cheese_fix"
   | "winiary_tomato_sauce"
-  | "winiary_pork_neck";
+  | "winiary_pork_neck"
+  | "winiary_chicken_fix";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -402,6 +403,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [7.6, 11.3, 6.5],
+  },
+
+  winiary_chicken_fix: {
+    name: "Winiary Soczysty Kurczak",
+    type: "spc",
+    color: "#BE5A33",
+    kcalPer100g: 274,
+    unitWeights: {
+      opak: 28,
+    },
+    nutrientsPer100g: [6.5, 1.0, 10.8],
   },
 
   //// HERBS ////

@@ -16,6 +16,7 @@ function RecipesPage() {
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [filterUnused, setFilterUnused] = useState<boolean>(true);
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
@@ -31,28 +32,35 @@ function RecipesPage() {
     );
   };
 
-  const filteredRecipes = recipes.filter((r) => {
-    const typeMatch = activeTypes.length === 0 || activeTypes.includes(r.type);
+  const filteredRecipes = recipes
+    .filter((r) => {
+      const typeMatch =
+        activeTypes.length === 0 || activeTypes.includes(r.type);
 
-    const query = normalize(searchQuery);
+      const query = normalize(searchQuery);
 
-    const nameMatch = r.name.toLowerCase().includes(query);
-    const keywordsMatch = r.keyWords
-      ? matchesKeyword(query, r.keyWords)
-      : false;
+      const nameMatch = r.name.toLowerCase().includes(query);
+      const keywordsMatch = r.keyWords
+        ? matchesKeyword(query, r.keyWords)
+        : false;
 
-    const hasImages = r.images.some((img) => img !== "");
-    const onlyEmptyImages = r.images.every((img) => img === "");
+      const hasImages = r.images.some((img) => img !== "");
+      const onlyEmptyImages = r.images.every((img) => img === "");
 
-    const specialMatch =
-      query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
+      const specialMatch =
+        query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
 
-    return (
-      typeMatch &&
-      specialMatch &&
-      (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
+      return (
+        typeMatch &&
+        specialMatch &&
+        (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
+      );
+    })
+    .filter((r) =>
+      filterUnused
+        ? r.steps.length > 0 && r.ingredients.length > 0
+        : r.steps.length === 0 || r.ingredients.length === 0,
     );
-  });
 
   useEffect(() => {
     document.body.style.overflow = selectedRecipe ? "hidden" : "auto";
@@ -80,6 +88,20 @@ function RecipesPage() {
       window.removeEventListener("popstate", handlePopState);
     };
   }, [selectedRecipe]);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Shift") {
+        setFilterUnused((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, []);
 
   if (recipes.length > 0 && recipes[0] === undefined) return;
 

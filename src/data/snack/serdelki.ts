@@ -9,7 +9,7 @@ const serdelki: Recipe = {
   description:
     "Prosta przekąska z gotowanych lub podgrzanych w mikrofalówce serdelków, podawana z kajzerkami posmarowanymi masłem i musztardą.",
   type: "breakfast",
-  images: ["serdelki.jpg"],
+  images: ["serdelki.jpg", "serdelki-2.jpg"],
   time: 10,
   portions: 2,
   executionDifficulty: 1,
