@@ -56,7 +56,6 @@ const tacos: Recipe = {
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
         { ing: iFRT.avocado, amount: 1, unit: "szt" },
-
         {
           type: "choice",
           options: [

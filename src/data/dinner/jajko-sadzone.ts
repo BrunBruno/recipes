@@ -17,7 +17,7 @@ const jajkoSadzone: Recipe = {
   ingredients: [
     {
       title: "",
-      // isMain: true,
+
       items: [
         { ing: iMET.egg, amount: "2-3", unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },

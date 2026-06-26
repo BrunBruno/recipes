@@ -46,9 +46,11 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
   const [headerCollapsed, setHeaderCollapsed] = useState<boolean>(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
-  const [ingredientState, setIngredientState] = useState(
-    selectedRecipe.ingredients,
-  );
+  const [recipeState, setRecipeState] = useState(selectedRecipe);
+
+  useEffect(() => {
+    setRecipeState(structuredClone(selectedRecipe));
+  }, [selectedRecipe]);
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -151,7 +153,123 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
     contentEl.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const RecipeDailyCharts = (
+  const generateExtras = () => {
+    return (
+      <>
+        {recipeState.extrasMain &&
+          (() => {
+            const extraMain =
+              recipeState.extrasMain.options[recipeState.extrasMain.selected];
+
+            return (
+              <div className="recipe-ingredient-group">
+                <div className="ingredients-list-container">
+                  <h4 className="ingredient-group-title">
+                    {extraMain.title}
+                    <button
+                      className="group-alt"
+                      onClick={() => {
+                        setRecipeState((prev) => {
+                          const copy = structuredClone(prev);
+
+                          copy.extrasMain!.selected =
+                            (copy.extrasMain!.selected + 1) %
+                            copy.extrasMain!.options.length;
+
+                          return copy;
+                        });
+                      }}
+                    >
+                      <UtilsIcon name="swap" color="#fff" />
+                    </button>
+                  </h4>
+
+                  <ul className="ingredients-list">
+                    {extraMain.items.map((item, index) => (
+                      <li key={index} className="ingredient-item">
+                        <div className="ingredient-indicator">
+                          <IngredientIcon
+                            ingType={item.ing.type}
+                            subType={item.ing.subType}
+                            color={item.ing.color}
+                          />
+                        </div>
+
+                        <span className="ingredient-name">{item.ing.name}</span>
+
+                        <span className="ingredient-amount">
+                          {item.amount}
+                          <span className="ingredient-unit">
+                            {item.amount ? formatUnit(item) : ""}
+                          </span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })()}
+
+        {recipeState.extrasVeg &&
+          (() => {
+            const extraVeg =
+              recipeState.extrasVeg.options[recipeState.extrasVeg.selected];
+
+            return (
+              <div className="recipe-ingredient-group">
+                <div className="ingredients-list-container">
+                  <h4 className="ingredient-group-title">
+                    {extraVeg.title}
+                    <button
+                      className="group-alt"
+                      onClick={() => {
+                        setRecipeState((prev) => {
+                          const copy = structuredClone(prev);
+
+                          copy.extrasVeg!.selected =
+                            (copy.extrasVeg!.selected + 1) %
+                            copy.extrasVeg!.options.length;
+
+                          return copy;
+                        });
+                      }}
+                    >
+                      <UtilsIcon name="swap" color="#fff" />
+                    </button>
+                  </h4>
+
+                  <ul className="ingredients-list">
+                    {extraVeg.items.map((item, index) => (
+                      <li key={index} className="ingredient-item">
+                        <div className="ingredient-indicator">
+                          <IngredientIcon
+                            ingType={item.ing.type}
+                            subType={item.ing.subType}
+                            color={item.ing.color}
+                          />
+                        </div>
+
+                        <span className="ingredient-name">{item.ing.name}</span>
+
+                        <span className="ingredient-amount">
+                          {item.amount}
+                          <span className="ingredient-unit">
+                            {item.amount ? formatUnit(item) : ""}
+                          </span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })()}
+      </>
+    );
+  };
+
+  const recipeDailyCharts = (
     kcal: number,
     nutrients: [string, string, string],
   ) => {
@@ -211,10 +329,6 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
       </div>
     );
   };
-
-  useEffect(() => {
-    setIngredientState(selectedRecipe.ingredients);
-  }, [selectedRecipe]);
 
   return (
     <div
@@ -302,15 +416,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         >
           {selectedRecipe.name}
         </h2>
-
-        {/* <div className="key-icons">
-          {selectedRecipe.keyWords?.map((key) => (
-            <KeywordsIcon key={key} type={key} />
-          ))}
-        </div> */}
       </div>
-
-      {/* <div className="header-filler" /> */}
 
       {selectedRecipe.ingredients.length === 0 &&
       selectedRecipe.steps.length === 0 ? (
@@ -355,59 +461,18 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           </section>
           <section className="ingredients-section">
             <div className={`${"ingredients-container"}`}>
-              {/* {selectedRecipe.ingredients.map((group, groupIndex) => ( */}
-              {ingredientState.map((group, groupIndex) => (
+              {recipeState.ingredients.map((group, groupIndex) => (
                 <div
                   key={groupIndex}
-                  className={`recipe-ingredient-group ${group.isMain || ingredientState.length === 1 ? "main-group" : ""}`}
+                  className={`recipe-ingredient-group ${group.isMain || recipeState.ingredients.length === 1 ? "main-group" : ""}`}
                 >
                   <div className="ingredients-list-container">
                     <h4 className="ingredient-group-title">
-                      {group.isAdd
-                        ? "Przykładowe dodatki"
-                        : group.title
-                          ? `Składniki: ${group.title}`
-                          : "Lista składników"}
+                      {group.title
+                        ? `Składniki: ${group.title}`
+                        : "Lista składników"}
                     </h4>
                     <ul className="ingredients-list">
-                      {/* {group.items.map((ingredient, index) => {
-                        if (ingredient.invisible) return;
-                        return (
-                          <li
-                            key={index}
-                            className={
-                              ingredient.alt
-                                ? "ingredient-item-alt"
-                                : "ingredient-item"
-                            }
-                          >
-                            {ingredient.alt && (
-                              <div className="ingredient-alt ">
-                                <UtilsIcon name="swap" color="#666" />
-                              </div>
-                            )}
-                            <div className="ingredient-indicator">
-                              <IngredientIcon
-                                ingType={ingredient.ing.type}
-                                subType={ingredient.ing.subType}
-                                color={ingredient.ing.color}
-                              />
-                            </div>
-                            <span className="ingredient-name">
-                              {ingredient.ing.name}
-                            </span>
-                            <span className="ingredient-amount">
-                              {ingredient.amount}
-                              <span className="ingredient-unit">
-                                {ingredient.amount
-                                  ? formatUnit(ingredient)
-                                  : ""}
-                              </span>
-                            </span>
-                            <span className="ingredient-unit"></span>
-                          </li>
-                        );
-                      })} */}
                       {group.items.map((item, index) => {
                         if ("type" in item && item.type === "choice") {
                           const active = item.options[item.selected];
@@ -436,38 +501,18 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                               <button
                                 className="ingredient-alt"
                                 onClick={() => {
-                                  setIngredientState((prev) => {
+                                  setRecipeState((prev) => {
                                     const copy = structuredClone(prev);
-
-                                    const g = copy[groupIndex];
-                                    const it = g.items[index] as any;
-
-                                    it.selected = it.selected === 0 ? 1 : 0;
-
+                                    const it = copy.ingredients[groupIndex]
+                                      .items[index] as any;
+                                    it.selected =
+                                      (it.selected + 1) % it.options.length;
                                     return copy;
                                   });
                                 }}
                               >
                                 <UtilsIcon name="swap" color="#fff" />
                               </button>
-
-                              {/* <button
-                                type="button"
-                                onClick={() => {
-                                  setIngredientState((prev) => {
-                                    const copy = structuredClone(prev);
-
-                                    const g = copy[groupIndex];
-                                    const it = g.items[index] as any;
-
-                                    it.selected = it.selected === 0 ? 1 : 0;
-
-                                    return copy;
-                                  });
-                                }}
-                              >
-                                swap
-                              </button> */}
                             </li>
                           );
                         }
@@ -501,6 +546,9 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                   </div>
                 </div>
               ))}
+
+              {(selectedRecipe.extrasMain || selectedRecipe.extrasVeg) &&
+                generateExtras()}
             </div>
           </section>
           <section className="steps-section">
@@ -520,19 +568,19 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
           <section className="recipe-details-params">
             <div
               className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcal(selectedRecipe))} 
-                ${getStatusClass("kcal", calculateRecipeKcal(selectedRecipe))}
+                ${getFontSizeClass(calculateRecipeKcal(recipeState))} 
+                ${getStatusClass("kcal", calculateRecipeKcal(recipeState))}
               `}
             >
-              <span>{calculateRecipeKcal(selectedRecipe)}</span>
+              <span>{calculateRecipeKcal(recipeState)}</span>
             </div>
             <div
               className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
-                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
+                ${getFontSizeClass(calculateRecipeKcalPer100g(recipeState))} 
+                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(recipeState))}
               `}
             >
-              <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
+              <span>{calculateRecipeKcalPer100g(recipeState)}</span>
             </div>
             <div
               className={`recipe-param 
@@ -552,30 +600,30 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
 
             <div
               className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[0])}
+                ${getFontSizeClass(calculateRecipeNutrients(recipeState)[0])}
               `}
             >
-              <span>{calculateRecipeNutrients(selectedRecipe)[0]}</span>
+              <span>{calculateRecipeNutrients(recipeState)[0]}</span>
             </div>
             <div
               className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[1])}
+                ${getFontSizeClass(calculateRecipeNutrients(recipeState)[1])}
               `}
             >
-              <span>{calculateRecipeNutrients(selectedRecipe)[1]}</span>
+              <span>{calculateRecipeNutrients(recipeState)[1]}</span>
             </div>
             <div
               className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(selectedRecipe)[2])}
+                ${getFontSizeClass(calculateRecipeNutrients(recipeState)[2])}
               `}
             >
-              <span>{calculateRecipeNutrients(selectedRecipe)[2]}</span>
+              <span>{calculateRecipeNutrients(recipeState)[2]}</span>
             </div>
           </section>
           <section className="recipe-details-daily">
-            {RecipeDailyCharts(
-              calculateRecipeKcal(selectedRecipe),
-              calculateRecipeNutrients(selectedRecipe),
+            {recipeDailyCharts(
+              calculateRecipeKcal(recipeState),
+              calculateRecipeNutrients(recipeState),
             )}
           </section>
         </div>

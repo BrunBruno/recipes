@@ -22,7 +22,7 @@ type IngId =
   | "macaroni_pasta"
 
   //// ////
-  | "gnocchi"
+  | "kopytka"
   | "silesian_dumplings"
   | "steamed_dumplings"
 
@@ -257,7 +257,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
 
   ////
 
-  gnocchi: {
+  kopytka: {
     name: "Kopytka",
     type: "grn",
     subType: "bun",

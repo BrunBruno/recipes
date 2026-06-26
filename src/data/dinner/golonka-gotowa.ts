@@ -22,7 +22,7 @@ const golonkaGotowa: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.gnocchi, amount: portions * 250 },
+            { ing: iGRN.kopytka, amount: portions * 250 },
             { ing: iGRN.silesian_dumplings, amount: portions * 250 },
           ],
           selected: 0,

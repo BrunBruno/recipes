@@ -1,6 +1,5 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -21,7 +20,6 @@ const gulaszWegrerski: Recipe = {
   ingredients: [
     {
       title: "",
-      // isMain: true,
       items: [
         { ing: iMET.stew_beef, amount: 400 },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
@@ -32,16 +30,34 @@ const gulaszWegrerski: Recipe = {
         { ing: iSPC.meat_seasoning },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iGRN.buckwheat, amount: portions * 100 },
-        { ing: iJAR.pickled_cucumber, amount: portions * 2, unit: "szt" },
-        { ing: iSPC.salt },
-      ],
-    },
+    // {
+    //   title: "",
+    //   isAdd: true,
+    //   items: [
+    //     { ing: iGRN.buckwheat, amount: portions * 100 },
+    //     {
+    //       ing: iJAR.pickled_cucumber_vinegar,
+    //       amount: portions * 2,
+    //       unit: "szt",
+    //     },
+    //     { ing: iSPC.salt },
+    //   ],
+    // },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("kopytka-ready", portions),
+      dinnerSides("buckwheat", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("pickled-cucumber-vinegar", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",

@@ -22,7 +22,7 @@ const karkowkaDuszona: Recipe = {
   ingredients: [
     {
       title: "",
-      // isMain: true,
+
       items: [
         { ing: iMET.pork_neck, amount: 2, unit: "opak" },
         { ing: iFAT.oil, amount: 5, unit: "lz" },

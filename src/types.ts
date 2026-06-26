@@ -88,6 +88,17 @@ export type RecipeIngredientGroup = {
   isMain?: boolean;
   isAdd?: boolean;
   items: (IngredientChoice | Ingredient)[];
+  // items: Ingredient[];
+};
+
+export type ExtrasIngredientGroup = {
+  title: string;
+  items: Ingredient[];
+};
+
+export type ExtrasIngredientOptions = {
+  options: ExtrasIngredientGroup[];
+  selected: number;
 };
 
 export type RecipeStepGroup = {
@@ -105,6 +116,8 @@ export type Recipe = {
   time: number;
   executionDifficulty: number | null;
   ingredients: RecipeIngredientGroup[];
+  extrasMain?: ExtrasIngredientOptions;
+  extrasVeg?: ExtrasIngredientOptions;
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
 };

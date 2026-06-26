@@ -17,7 +17,7 @@ const kopytkaZCukrem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.gnocchi, amount: 500 },
+        { ing: iGRN.kopytka, amount: 500 },
         { ing: iOTH.sugar, amount: 8, unit: "lzi" },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
         { ing: iSPC.salt },

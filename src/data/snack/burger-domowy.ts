@@ -22,7 +22,7 @@ const burgerDomowy: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_beef, amount: 600 },
+        { ing: iMET.ground_beef, amount: 400 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

@@ -21,7 +21,7 @@ const gulaszWieprzowy: Recipe = {
   ingredients: [
     {
       title: "",
-      // isMain: true,
+
       items: [
         { ing: iMET.stew_pork, amount: 500 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
@@ -49,7 +49,7 @@ const gulaszWieprzowy: Recipe = {
       title: "",
       isAdd: true,
       items: [
-        { ing: iGRN.gnocchi, amount: portions * 250 },
+        { ing: iGRN.kopytka, amount: portions * 250 },
         { ing: iJAR.fried_beets, amount: portions * 150 },
         { ing: iSPC.salt },
       ],

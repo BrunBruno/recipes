@@ -20,7 +20,7 @@ const kotletPoGoralsku: Recipe = {
   ingredients: [
     {
       title: "",
-      // isMain: true,
+
       items: [
         { ing: iMET.pork_loin, amount: 10, unit: "plas" },
         { ing: iMET.bacon_slices, amount: 10, unit: "plas" },
