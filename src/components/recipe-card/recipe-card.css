@@ -106,9 +106,14 @@
   width: 100%;
   padding: 2rem 0;
   gap: 0;
+
+  transition: opacity 0.3s 0.3s;
+}
+
+.params-items {
   display: flex;
   justify-content: space-evenly;
-  transition: opacity 0.3s 0.3s;
+  padding-top: 1rem;
 }
 
 .recipe-param {
@@ -146,15 +151,12 @@
   content: "min";
 }
 .recipe-param:nth-child(4)::after {
-  content: "por.";
-}
-.recipe-param:nth-child(5)::after {
   content: "tłus.";
 }
-.recipe-param:nth-child(6)::after {
+.recipe-param:nth-child(5)::after {
   content: "węgl.";
 }
-.recipe-param:nth-child(7)::after {
+.recipe-param:nth-child(6)::after {
   content: "biał.";
 }
 
@@ -493,7 +495,8 @@
 
 .steps-list li {
   position: relative;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.2rem;
+  padding-left: 1rem;
   line-height: 1.5;
   font-size: 1.1rem;
   color: #cccccc;
@@ -544,6 +547,10 @@
 .close-button:hover {
   opacity: 0.8;
   filter: drop-shadow(0 0 0.5rem #fff);
+}
+
+.recipe-details-params h3 {
+  color: #eaeaea;
 }
 
 @keyframes modalIn {

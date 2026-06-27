@@ -1,9 +1,8 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 3;
@@ -32,18 +31,18 @@ const kotletyZIndyka: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.cucumber_salad, amount: portions * 150 },
-        { ing: iSPC.dill },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("cucumber-salad-ready", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -54,14 +53,6 @@ const kotletyZIndyka: Recipe = {
         "Każdy kotlet obtocz najpierw w mące, potem w jajku, a na końcu w bułce tartej. Dla chrupkości możesz powtórzyć panierkę.",
         "Rozgrzej olej na patelni na średnim ogniu.",
         "Smaż kotlety po 4-5 minut z każdej strony, aż będą złociste i dobrze wysmażone w środku.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kotlety z indyka na talerzu z porcją ziemniaków.",
-        "Obok dodaj surówkę z ogórka jako dodatek warzywny.",
       ],
     },
   ],

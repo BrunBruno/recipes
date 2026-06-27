@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iJAR } from "../../ingredients/ingJar";
@@ -31,18 +32,21 @@ const kurczakZeSzpinakiem: Recipe = {
         { ing: iSPC.cayenne_pepper },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iFAT.butter, amount: 1.5, unit: "lzi" },
-        { ing: iDIR.milk, amount: 100, unit: "ml" },
-        { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("mashed-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -55,15 +59,6 @@ const kurczakZeSzpinakiem: Recipe = {
         "Gotuj, aż śmietana zgęstnieje.",
         "Farsz nałóż na piersi kurczaka i posyp żółtym serem.",
         "Piecz w piekarniku nagrzanym do 190°C do upieczenie mięsa.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Ubij ziemniaki z masłem i ciepłym mlekiem na puree.",
-        "Dopraw puree solą do smaku.",
-        "Podawaj kurczaka z puree ziemniaczanym i burakami.",
       ],
     },
   ],

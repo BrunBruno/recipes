@@ -6,8 +6,7 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const portions = 2;
-
+const portions = 3;
 const gulaszWegrerski: Recipe = {
   name: "Gulasz po Węgiersku",
   description:
@@ -21,7 +20,7 @@ const gulaszWegrerski: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_beef, amount: 400 },
+        { ing: iMET.stew_beef, amount: 500 },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
@@ -30,19 +29,6 @@ const gulaszWegrerski: Recipe = {
         { ing: iSPC.meat_seasoning },
       ],
     },
-    // {
-    //   title: "",
-    //   isAdd: true,
-    //   items: [
-    //     { ing: iGRN.buckwheat, amount: portions * 100 },
-    //     {
-    //       ing: iJAR.pickled_cucumber_vinegar,
-    //       amount: portions * 2,
-    //       unit: "szt",
-    //     },
-    //     { ing: iSPC.salt },
-    //   ],
-    // },
   ],
   extrasMain: {
     options: [
@@ -70,14 +56,7 @@ const gulaszWegrerski: Recipe = {
         "Duś pod przykryciem przez około 30 minut.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj kaszę gryczaną w osolonej wodzie do miękkości.",
-        "Podawaj gulasz z porcją kaszy gryczanej.",
-        "Dodaj ogórka konserwowego pokrojonego w plasterki lub ćwiartki.",
-      ],
-    },
+   
   ],
   keyWords: ["wołowina"],
 };

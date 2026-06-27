@@ -6,7 +6,8 @@ import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type { ExtrasIngredientGroup } from "./types";
 
-type DinnerSidesNames =
+export type DinnerSidesNames =
+  | "oven-potatoes"
   | "boiled-potatoes"
   | "boiled-potatoes-dry"
   | "mashed-potatoes"
@@ -18,10 +19,14 @@ type DinnerSidesNames =
   | "spaghetti-pasta"
   | "kopytka-ready"
   | "silesian-dumplings-ready"
+  ////
   | "steamed-vegetables"
+  | "stir-fry-vegetables"
+  | "green-beans-boiled"
   | "sauteed-cabbage"
   | "sauerkraut-salad"
   | "cream-cucumber-salad"
+  | "peas-and-beets"
   | "beets-shredded-ready"
   | "beets-fried-ready"
   | "beets-whole-vinegar"
@@ -39,9 +44,27 @@ export const dinnerSides = (
   portions: number,
 ): ExtrasIngredientGroup => {
   switch (name) {
+    case "oven-potatoes":
+      return {
+        title: "Ziemniaki z piekarnika",
+        sideName: name,
+        items: [
+          { ing: iVEG.potato, amount: 1000 },
+          { ing: iFAT.oil, amount: 3, unit: "lz" },
+          { ing: iVEG.garlic, amount: 2, unit: "zbk" },
+          { ing: iSPC.caraway, amount: 0.5, unit: "lzi" },
+          { ing: iSPC.thyme, amount: 1, unit: "lzi" },
+          { ing: iSPC.potato_seasoning, amount: 1, unit: "lz" },
+          { ing: iSPC.sweet_paprika, amount: 2, unit: "lzi" },
+          { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },
+          { ing: iSPC.black_pepper, amount: 0.5, unit: "lzi" },
+          { ing: iSPC.salt, amount: 1, unit: "lzi" },
+        ],
+      };
     case "boiled-potatoes":
       return {
         title: "Ziemniaki gotowane",
+        sideName: name,
         items: [
           { ing: iVEG.potato, amount: portions * 200 },
           { ing: iSPC.dill },
@@ -52,6 +75,7 @@ export const dinnerSides = (
     case "boiled-potatoes-dry":
       return {
         title: "Ziemniaki gotowane",
+        sideName: name,
         items: [
           { ing: iVEG.potato, amount: portions * 200 },
           { ing: iSPC.salt },
@@ -60,6 +84,7 @@ export const dinnerSides = (
     case "mashed-potatoes":
       return {
         title: "Purée ziemniaczane",
+        sideName: name,
         items: [
           { ing: iVEG.potato, amount: portions * 200 },
           { ing: iFAT.butter, amount: portions, unit: "lzi" },
@@ -71,6 +96,7 @@ export const dinnerSides = (
     case "oven-fries":
       return {
         title: "Frytki z piekarnika",
+        sideName: name,
         items: [
           { ing: iJAR.frozen_fries, amount: portions * 200 },
           { ing: iSPC.potato_seasoning },
@@ -79,11 +105,13 @@ export const dinnerSides = (
     case "rice":
       return {
         title: "Ryż gotowany",
+        sideName: name,
         items: [{ ing: iGRN.rice, amount: portions * 100 }, { ing: iSPC.salt }],
       };
     case "buckwheat":
       return {
         title: "Kasza gryczana",
+        sideName: name,
         items: [
           { ing: iGRN.buckwheat, amount: portions * 100 },
           { ing: iSPC.salt },
@@ -92,6 +120,7 @@ export const dinnerSides = (
     case "bulgur":
       return {
         title: "Kasza bulgur",
+        sideName: name,
         items: [
           { ing: iGRN.bulgur, amount: portions * 80 },
           { ing: iSPC.salt },
@@ -100,6 +129,7 @@ export const dinnerSides = (
     case "penne-pasta":
       return {
         title: "Makaron penne",
+        sideName: name,
         items: [
           { ing: iGRN.penne_pasta, amount: portions * 100 },
           { ing: iSPC.salt },
@@ -107,7 +137,8 @@ export const dinnerSides = (
       };
     case "spaghetti-pasta":
       return {
-        title: "",
+        title: "Makaron spaghetti",
+        sideName: name,
         items: [
           { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
           { ing: iSPC.salt },
@@ -116,6 +147,7 @@ export const dinnerSides = (
     case "kopytka-ready":
       return {
         title: "Kopytka",
+        sideName: name,
         items: [
           { ing: iGRN.kopytka, amount: portions * 250 },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
@@ -125,6 +157,7 @@ export const dinnerSides = (
     case "silesian-dumplings-ready":
       return {
         title: "Kluski śląskie",
+        sideName: name,
         items: [
           { ing: iGRN.silesian_dumplings, amount: portions * 250 },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
@@ -137,15 +170,36 @@ export const dinnerSides = (
     case "steamed-vegetables":
       return {
         title: "Warzywa na parze",
+        sideName: name,
         items: [
           { ing: iJAR.frozen_vegetable_mix, amount: 150 * portions },
           { ing: iFAT.olive, amount: portions, unit: "lzi" },
           { ing: iSPC.salt },
         ],
       };
+    case "stir-fry-vegetables":
+      return {
+        title: "Warzywa na patelnie",
+        sideName: name,
+        items: [
+          { ing: iJAR.frozen_stir_fry, amount: 150 * portions },
+          { ing: iFAT.oil, amount: 1, unit: "lz" },
+        ],
+      };
+    case "green-beans-boiled":
+      return {
+        title: "Fasolka szparagowa",
+        sideName: name,
+        items: [
+          { ing: iJAR.frozen_green_beans, amount: 150 * portions },
+          { ing: iFAT.butter, amount: 0.5, unit: "lzi" },
+          { ing: iSPC.salt },
+        ],
+      };
     case "sauteed-cabbage":
       return {
         title: "Kapusta zasmażana",
+        sideName: name,
         items: [
           { ing: iJAR.sauerkraut, amount: portions * 120 },
           { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
@@ -156,6 +210,7 @@ export const dinnerSides = (
     case "sauerkraut-salad":
       return {
         title: "Surówka z koszonej kapusty",
+        sideName: name,
         items: [
           { ing: iJAR.sauerkraut, amount: portions * 100 },
           { ing: iVEG.carrot, amount: portions * 50 },
@@ -168,6 +223,7 @@ export const dinnerSides = (
     case "cream-cucumber-salad":
       return {
         title: "Mizeria",
+        sideName: name,
         items: [
           { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
           { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
@@ -176,9 +232,20 @@ export const dinnerSides = (
           { ing: iSPC.salt },
         ],
       };
+    case "peas-and-beets":
+      return {
+        title: "Buraczki z groszkiem",
+        sideName: name,
+        items: [
+          { ing: iJAR.beets_whole_vinegar, amount: portions * 120 },
+          { ing: iJAR.canned_peas, amount: portions * 80 },
+          { ing: iSPC.salt },
+        ],
+      };
     case "beets-shredded-ready":
       return {
         title: "Buraczki wiórki",
+        sideName: name,
         items: [
           { ing: iJAR.beets_shredded, amount: portions * 150 },
           { ing: iSPC.salt },
@@ -187,6 +254,7 @@ export const dinnerSides = (
     case "beets-fried-ready":
       return {
         title: "Buraczki zasmażane",
+        sideName: name,
         items: [
           { ing: iJAR.fried_beets, amount: portions * 150 },
           { ing: iSPC.salt },
@@ -195,6 +263,7 @@ export const dinnerSides = (
     case "beets-whole-vinegar":
       return {
         title: "Buraczki z octu",
+        sideName: name,
         items: [
           { ing: iJAR.beets_whole_vinegar, amount: portions * 200 },
           { ing: iSPC.salt },
@@ -203,11 +272,13 @@ export const dinnerSides = (
     case "sauerkraut":
       return {
         title: "Kapusta kiszona",
+        sideName: name,
         items: [{ ing: iJAR.sauerkraut, amount: portions * 150 }],
       };
     case "pickled-cucumber":
       return {
         title: "Ogórki kiszone",
+        sideName: name,
         items: [
           {
             ing: iJAR.pickled_cucumber,
@@ -219,6 +290,7 @@ export const dinnerSides = (
     case "pickled-cucumber-vinegar":
       return {
         title: "Ogórki konserwowe",
+        sideName: name,
         items: [
           {
             ing: iJAR.pickled_cucumber_vinegar,
@@ -230,27 +302,32 @@ export const dinnerSides = (
     case "canned-peas":
       return {
         title: "Groszek",
+        sideName: name,
         items: [{ ing: iJAR.canned_peas, amount: 100 * portions }],
       };
 
     case "coleslaw-ready":
       return {
         title: "Colesław",
+        sideName: name,
         items: [{ ing: iJAR.coleslaw, amount: portions * 180 }],
       };
     case "corn-salad-ready":
       return {
         title: "Sałatka z kukurydzą",
+        sideName: name,
         items: [{ ing: iJAR.corn_salad, amount: portions * 180 }],
       };
     case "cucumber-salad-ready":
       return {
         title: "Sałatka z ogórka",
+        sideName: name,
         items: [{ ing: iJAR.cucumber_salad, amount: portions * 180 }],
       };
     case "red-cabbage-ready":
       return {
-        title: "",
+        title: "Modra kapusta",
+        sideName: name,
         items: [{ ing: iJAR.red_cabbage, amount: portions * 180 }],
       };
   }
@@ -259,5 +336,129 @@ export const dinnerSides = (
 //  case "":
 //       return {
 //         title: "",
-//         items: [],
+//         sideName: name,
+//        items: [],
 //       };
+
+export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
+  switch (name) {
+    case "oven-potatoes":
+      return [
+        "Ziemniaki obierz, umyj i pokrój na ćwiartki.",
+        "W misce połącz olej z przyprawami, kminkiem oraz drobno posiekanym czosnkiem.",
+        "Dokładnie obtocz ziemniaki w marynacie.",
+        "Ułóż ziemniaki na blasze wyłożonej papierem do pieczenia i dodaj gałązki świeżego tymianku.",
+        "Piecz w piekarniku nagrzanym do 180-200°C przez około 30 minut, 1-2 razy przewracając ziemniaki w trakcie pieczenia.",
+        "Podawaj gorące, bezpośrednio po upieczeniu.",
+      ];
+    case "boiled-potatoes":
+      return [
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Odcedź i posyp świeżym koperkiem.",
+      ];
+    case "boiled-potatoes-dry":
+      return ["Ugotuj ziemniaki w osolonej wodzie do miękkości."];
+    case "mashed-potatoes":
+      return [
+        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        "Odcedź i ubij z masłem oraz ciepłym mlekiem na gładkie puree.",
+        "Dopraw solą i pieprzem do smaku.",
+      ];
+    case "oven-fries":
+      return [
+        "Rozgrzej piekarnik do 180°C.",
+        "Piecz frytki w piekarniku przez około 20 minut.",
+        "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
+      ];
+    case "rice":
+      return ["Ugotuj ryż w osolonej wodzie"];
+    case "buckwheat":
+      return ["Ugotuj kaszę gryczaną w osolonej wodzie do miękkości."];
+    case "bulgur":
+      return ["Ugotuj kaszę bulgur w osolonej wodzie."];
+    case "penne-pasta":
+      return ["Makaron penne ugotuj al dente w osolonej wodzie."];
+    case "spaghetti-pasta":
+      return ["Makaron spaghetti ugotuj al dente w osolonej wodzie."];
+    case "kopytka-ready":
+      return [
+        "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
+        "Wrzuć kopytka i gotuj przez około 10 minut.",
+        "Po wypłynięciu i ugotowaniu odcedź.",
+      ];
+
+    case "silesian-dumplings-ready":
+      return [
+        "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
+        "Wrzuć kluski śląskie i gotuj przez około 10 minut.",
+        "Po wypłynięciu i ugotowaniu odcedź.",
+      ];
+    case "steamed-vegetables":
+      return [
+        "Ugotuj warzywa na parze przez około 15-20 minut, aż będą miękkie.",
+        "Po ugotowaniu przypraw odrobiną soli i oliwy.",
+      ];
+    case "stir-fry-vegetables":
+      return [
+        "Rozgrzej patelnię z łyżką oleju.",
+        "Wrzuć mrożone warzywa bez rozmrażania.",
+        "Smaż na średnim ogniu przez 8-12 minut, często mieszając.",
+        "Smaż do momentu aż warzywa będą miękkie, ale lekko chrupiące.",
+      ];
+    case "green-beans-boiled":
+      return [
+        "Zagotuj osoloną wodę w garnku.",
+        "Wrzuć fasolkę szparagową (świeżą lub mrożoną) do wrzątku.",
+        "Gotuj 6-10 minut, aż będzie miękka, ale nadal lekko jędrna.",
+        "Odcedź fasolkę i opcjonalnie dodaj odrobinę masła lub oliwy.",
+        "Dopraw solą do smaku.",
+      ];
+    case "sauteed-cabbage":
+      return [
+        "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
+        "Dopraw solą i pieprzem i smaż, aż będzie miękka i lekko zrumieniona.",
+      ];
+    case "sauerkraut-salad":
+      return [
+        "Zetrzyj marchewkę na tarce.",
+        "Wymieszaj z kapustą kiszoną.",
+        "Dodaj olej, sok z cytryny, sól i pieprz.",
+      ];
+    case "cream-cucumber-salad":
+      return [
+        "Pokrój ogórka w cienkie plasterki i dodaj posiekaną zieloną cebulkę.",
+        "Dodaj śmietanę, sól i pieprz, a następnie wymieszaj.",
+      ];
+    case "peas-and-beets":
+      return ["Podaj buraki z octu wraz z groszkiem jako dodatek."];
+    case "beets-shredded-ready":
+      return ["Dodaj buraczki w wiórkach jako dodatek warzywny."];
+    case "beets-fried-ready":
+      return [
+        "Podgrzej buraczki zasmażane na patelni lub w garnku.",
+        "W razie potrzeby dopraw odrobiną soli lub cukru.",
+      ];
+    case "beets-whole-vinegar":
+      return ["Podaj buraki z octu jako dodatek."];
+    case "sauerkraut":
+      return ["Podaj lub lekko podgrzej kapustę kiszoną."];
+    case "pickled-cucumber":
+      return [
+        "Podaj ogórki kiszone, opcjonalnie pokrojone w plasterki lub ćwiartki.",
+      ];
+    case "pickled-cucumber-vinegar":
+      return [
+        "Pokrój ogórka konserwowego w plasterki lub ćwiartki i podaj jako dodatek.",
+      ];
+    case "canned-peas":
+      return ["Podgrzej groszek konserwowy i odcedź z zalewy."];
+    case "coleslaw-ready":
+      return ["Podaj surówkę colesław jako dodatek."];
+    case "corn-salad-ready":
+      return ["Podaj surówkę z kukurydzą jako dodatek."];
+    case "cucumber-salad-ready":
+      return ["Podaj surówkę z ogórka jako dodatek."];
+    case "red-cabbage-ready":
+      return ["Podaj modrą kapustę jako dodatek."];
+  }
+};

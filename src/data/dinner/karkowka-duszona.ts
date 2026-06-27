@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
@@ -22,7 +23,6 @@ const karkowkaDuszona: Recipe = {
   ingredients: [
     {
       title: "",
-
       items: [
         { ing: iMET.pork_neck, amount: 2, unit: "opak" },
         { ing: iFAT.oil, amount: 5, unit: "lz" },
@@ -32,17 +32,22 @@ const karkowkaDuszona: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.coleslaw, amount: 2, unit: "opak" },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes-dry", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("coleslaw-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -53,14 +58,6 @@ const karkowkaDuszona: Recipe = {
         "Duś pod przykryciem przez około 40 minut.",
         "Cebulę pokrój i podsmaż na patelni z masłem.",
         "Dodaj cebulę do duszącego się mięsa i wymieszaj.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Po ugotowaniu odcedź ziemniaki i polej je sosem z karkówki.",
-        "Podawaj karkówkę z ziemniakami i porcją surówki colesław.",
       ],
     },
   ],

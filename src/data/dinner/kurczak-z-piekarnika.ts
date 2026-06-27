@@ -1,8 +1,7 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 4;
@@ -28,16 +27,21 @@ const kurczakZPiekarnika: Recipe = {
         { ing: iSPC.black_pepper },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes-dry", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -48,15 +52,6 @@ const kurczakZPiekarnika: Recipe = {
         "Wstaw do piekarnika i piecz około 40-50 minut, aż mięso będzie miękkie, a skórka złocista.",
         "Na ostatnie 5-10 minut pieczenia, na każdej części kurczaka połóż mały kawałek masła, aby uzyskać chrupką skórkę.",
         "Wyjmij z piekarnika i odstaw na kilka minut przed podaniem.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kurczaka z porcją ziemniaków.",
-        "Ziemniaki polej tłuszczem z pieczenia kurczaka.",
-        "Obok dodaj buraki z octu jako dodatek.",
       ],
     },
   ],

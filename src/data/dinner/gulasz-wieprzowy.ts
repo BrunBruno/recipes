@@ -1,7 +1,7 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -45,16 +45,22 @@ const gulaszWieprzowy: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iGRN.kopytka, amount: portions * 250 },
-        { ing: iJAR.fried_beets, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("kopytka-ready", portions),
+      dinnerSides("boiled-potatoes-dry", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-shredded-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -67,14 +73,7 @@ const gulaszWieprzowy: Recipe = {
         "Dopraw solą, pieprzem, papryką, czosnkiem, chilli i szczypiorkiem do smaku.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj kopytka zgodnie z instrukcją na opakowaniu i odcedź.",
-        "Podawaj gulasz z porcją ugotowanych kopytek.",
-        "Obok dodaj porcję buraczków zasmażanych.",
-      ],
-    },
+   
   ],
   keyWords: ["wieprzowina", "sos"],
 };

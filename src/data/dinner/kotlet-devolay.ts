@@ -1,6 +1,6 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -43,17 +43,23 @@ const kotletDevolay: Recipe = {
         { ing: iSPC.wild_garlic },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.frozen_vegetable_mix, amount: 300 },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("mashed-potatoes", portions),
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("steamed-vegetables", portions),
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "Masło czosnkowo-ziołowe",
@@ -76,14 +82,6 @@ const kotletDevolay: Recipe = {
         "Każdy kotlet obtocz w mące, jajku i bułce tartej, a następnie ponownie w jajku i bułce tartej.",
         "Rozgrzej olej na bardzo małym ogniu.",
         "Smaż kotlety powoli, aż będą złociste z każdej strony i dobrze wysmażone w środku.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Przygotuj puree ziemniaczane.",
-        "Ugotuj warzywa na parze do miękkości.",
-        "Podawaj kotlet Devolay na talerzu z puree i warzywami.",
       ],
     },
   ],

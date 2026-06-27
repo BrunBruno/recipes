@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
@@ -44,17 +45,18 @@ const roladaSlaska: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iGRN.silesian_dumplings, amount: portions * 250 },
-        { ing: iJAR.red_cabbage, amount: portions * 180 },
-        { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("silesian-dumplings-ready", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("red-cabbage-ready", portions),
+      dinnerSides("beets-fried-ready", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -67,13 +69,6 @@ const roladaSlaska: Recipe = {
         "Na patelni rozgrzej margarynę z masłem i obsmaż rolady z każdej strony.",
         "Przełóż rolady do garnka, dodaj wodę i duś pod przykryciem około 1 godzinę.",
         "Pod koniec zagęść sos mąką wymieszaną ze śmietaną.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj kluski śląskie zgodnie z instrukcją na opakowaniu.",
-        "Podawaj roladę z porcją sosu, kluskami śląskimi oraz modrą kapustą.",
       ],
     },
   ],

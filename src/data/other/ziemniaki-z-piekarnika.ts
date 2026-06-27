@@ -7,7 +7,7 @@ const ziemniakiZPiekarnika: Recipe = {
   name: "Ziemniaki z Piekarnika",
   description:
     "Złociste i aromatyczne ziemniaki pieczone w piekarniku lub air fryerze z czosnkiem, tymiankiem i mieszanką przypraw - idealna chrupiąca przekąska.",
-  type: "snack",
+  type: "other",
   images: ["ziemniaki-z-piekarnika.jpg"],
   time: 40,
   portions: 4,

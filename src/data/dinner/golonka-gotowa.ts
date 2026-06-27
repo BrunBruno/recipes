@@ -1,8 +1,6 @@
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
-import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
-import { iJAR } from "../../ingredients/ingJar";
+import { dinnerSides } from "../../dinnerSides";
 
 const portions = 2;
 const golonkaGotowa: Recipe = {
@@ -17,21 +15,25 @@ const golonkaGotowa: Recipe = {
   ingredients: [
     {
       title: "",
-      items: [
-        { ing: iMET.pork_knuckle_ready, amount: 1, unit: "szt" },
-        {
-          type: "choice",
-          options: [
-            { ing: iGRN.kopytka, amount: portions * 250 },
-            { ing: iGRN.silesian_dumplings, amount: portions * 250 },
-          ],
-          selected: 0,
-        },
-        { ing: iJAR.fried_beets, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
+      items: [{ ing: iMET.pork_knuckle_ready, amount: 1, unit: "szt" }],
     },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("kopytka-ready", portions),
+      dinnerSides("silesian-dumplings-ready", portions),
+      dinnerSides("boiled-potatoes", portions),
+    ],
+
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-shredded-ready", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -39,9 +41,6 @@ const golonkaGotowa: Recipe = {
         "Rozgrzej piekarnik do 180°C.",
         "Golonkę wyjmij z opakowania i przełóż do naczynia żaroodpornego razem z sosem z opakowania.",
         "Piecz przez około 50-60 minut, co jakiś czas polewając sosem, aż skórka będzie lekko chrupiąca.",
-        "W międzyczasie ugotuj kluski śląskie według instrukcji na opakowaniu.",
-        "Po upieczeniu wyjmij golonkę, a powstałym sosem polej kluski.",
-        "Podawaj golonkę z kluskami śląskimi i buraczkami.",
       ],
     },
   ],

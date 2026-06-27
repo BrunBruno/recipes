@@ -21,6 +21,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { dinnerSidesSteps } from "../../dinnerSides";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -166,22 +167,24 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                 <div className="ingredients-list-container">
                   <h4 className="ingredient-group-title">
                     {extraMain.title}
-                    <button
-                      className="group-alt"
-                      onClick={() => {
-                        setRecipeState((prev) => {
-                          const copy = structuredClone(prev);
+                    {recipeState.extrasMain.options.length > 1 && (
+                      <button
+                        className="group-alt"
+                        onClick={() => {
+                          setRecipeState((prev) => {
+                            const copy = structuredClone(prev);
 
-                          copy.extrasMain!.selected =
-                            (copy.extrasMain!.selected + 1) %
-                            copy.extrasMain!.options.length;
+                            copy.extrasMain!.selected =
+                              (copy.extrasMain!.selected + 1) %
+                              copy.extrasMain!.options.length;
 
-                          return copy;
-                        });
-                      }}
-                    >
-                      <UtilsIcon name="swap" color="#fff" />
-                    </button>
+                            return copy;
+                          });
+                        }}
+                      >
+                        <UtilsIcon name="swap" color="#fff" />
+                      </button>
+                    )}
                   </h4>
 
                   <ul className="ingredients-list">
@@ -221,22 +224,24 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                 <div className="ingredients-list-container">
                   <h4 className="ingredient-group-title">
                     {extraVeg.title}
-                    <button
-                      className="group-alt"
-                      onClick={() => {
-                        setRecipeState((prev) => {
-                          const copy = structuredClone(prev);
+                    {recipeState.extrasVeg.options.length > 1 && (
+                      <button
+                        className="group-alt"
+                        onClick={() => {
+                          setRecipeState((prev) => {
+                            const copy = structuredClone(prev);
 
-                          copy.extrasVeg!.selected =
-                            (copy.extrasVeg!.selected + 1) %
-                            copy.extrasVeg!.options.length;
+                            copy.extrasVeg!.selected =
+                              (copy.extrasVeg!.selected + 1) %
+                              copy.extrasVeg!.options.length;
 
-                          return copy;
-                        });
-                      }}
-                    >
-                      <UtilsIcon name="swap" color="#fff" />
-                    </button>
+                            return copy;
+                          });
+                        }}
+                      >
+                        <UtilsIcon name="swap" color="#fff" />
+                      </button>
+                    )}
                   </h4>
 
                   <ul className="ingredients-list">
@@ -564,60 +569,75 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
                   </ol>
                 </div>
               ))}
+            {(recipeState.extrasMain || recipeState.extrasVeg) && (
+              <div className="steps">
+                <h4>Przykładowe podanie</h4>
+                <ol className="steps-list">
+                  {recipeState.extrasMain &&
+                    dinnerSidesSteps(
+                      recipeState.extrasMain.options[
+                        recipeState.extrasMain.selected
+                      ].sideName,
+                    ).map((s, i) => <li key={`main-${i}`}>{s}</li>)}
+
+                  {recipeState.extrasVeg &&
+                    dinnerSidesSteps(
+                      recipeState.extrasVeg.options[
+                        recipeState.extrasVeg.selected
+                      ].sideName,
+                    ).map((s, i) => <li key={`veg-${i}`}>{s}</li>)}
+                </ol>
+              </div>
+            )}
           </section>
           <section className="recipe-details-params">
-            <div
-              className={`recipe-param 
+            <h3>Wartości odżywcze w przeliczeniu na jedną porcję:</h3>
+            <div className="params-items">
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeKcal(recipeState))} 
                 ${getStatusClass("kcal", calculateRecipeKcal(recipeState))}
               `}
-            >
-              <span>{calculateRecipeKcal(recipeState)}</span>
-            </div>
-            <div
-              className={`recipe-param 
+              >
+                <span>{calculateRecipeKcal(recipeState)}</span>
+              </div>
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeKcalPer100g(recipeState))} 
                 ${getStatusClass("kcal100", calculateRecipeKcalPer100g(recipeState))}
               `}
-            >
-              <span>{calculateRecipeKcalPer100g(recipeState)}</span>
-            </div>
-            <div
-              className={`recipe-param 
+              >
+                <span>{calculateRecipeKcalPer100g(recipeState)}</span>
+              </div>
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(selectedRecipe.time)} 
                 ${getStatusClass("time", selectedRecipe.time)}
               `}
-            >
-              <span>{selectedRecipe.time}</span>
-            </div>
-            <div
-              className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.portions)}
-              `}
-            >
-              <span>{selectedRecipe.portions}</span>
-            </div>
-
-            <div
-              className={`recipe-param 
+              >
+                <span>{selectedRecipe.time}</span>
+              </div>
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeNutrients(recipeState)[0])}
               `}
-            >
-              <span>{calculateRecipeNutrients(recipeState)[0]}</span>
-            </div>
-            <div
-              className={`recipe-param 
+              >
+                <span>{calculateRecipeNutrients(recipeState)[0]}</span>
+              </div>
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeNutrients(recipeState)[1])}
               `}
-            >
-              <span>{calculateRecipeNutrients(recipeState)[1]}</span>
-            </div>
-            <div
-              className={`recipe-param 
+              >
+                <span>{calculateRecipeNutrients(recipeState)[1]}</span>
+              </div>
+              <div
+                className={`recipe-param 
                 ${getFontSizeClass(calculateRecipeNutrients(recipeState)[2])}
               `}
-            >
-              <span>{calculateRecipeNutrients(recipeState)[2]}</span>
+              >
+                <span>{calculateRecipeNutrients(recipeState)[2]}</span>
+              </div>
             </div>
           </section>
           <section className="recipe-details-daily">

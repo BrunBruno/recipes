@@ -1,4 +1,4 @@
-import { iDIR } from "../../ingredients/ingDairy";
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
@@ -33,21 +33,21 @@ const kotletyMielone: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iFAT.butter, amount: portions, unit: "lzi" },
-        { ing: iDIR.milk, amount: portions * 10, unit: "ml" },
-        { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
-        { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
-        { ing: iVEG.spring_onion },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("mashed-potatoes", portions),
+      dinnerSides("boiled-potatoes", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("cream-cucumber-salad", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -60,16 +60,6 @@ const kotletyMielone: Recipe = {
         "Jeśli masa jest zbyt luźna, dodaj trochę bułki tartej, aby uzyskać odpowiednią konsystencję.",
         "Formuj kotlety (lekko spłaszczone kulki) i obtaczaj je w bułce tartej.",
         "Na patelni rozgrzej olej i smaż kotlety na średnim ogniu z obu stron na złoty kolor (ok. 4-5 minut z każdej strony).",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Ubij ziemniaki z masłem i ciepłym mlekiem na puree.",
-        "Pokrój ogórka w cienkie plasterki i dodaj zieloną cebulkę.",
-        "Dodaj śmietanę, sól i pieprz, a następnie wymieszaj.",
-        "Podawaj danie z porcją ziemniaków i przygotowaną mizerią.",
       ],
     },
   ],

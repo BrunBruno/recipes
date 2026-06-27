@@ -1,7 +1,7 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -39,15 +39,18 @@ const bitki: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.beets_shredded, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("boiled-potatoes-dry", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -62,15 +65,6 @@ const bitki: Recipe = {
         "Gotuj na małym ogniu do miękkości mięsa.",
         "Na końcu dopraw sos śmietaną 30% i posyp posiekanym szczypiorkiem.",
         "Dokładnie wymieszaj.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
-        "Podawaj bitki z porcją ugotowanych ziemniaków.",
-        "Ziemniaki polej sosem z rondelka.",
-        "Obok dodaj buraczki w wiórkach jako dodatek warzywny.",
       ],
     },
   ],

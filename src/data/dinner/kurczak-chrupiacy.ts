@@ -1,14 +1,14 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
 const portions = 2;
 const kurczakChrupiacy: Recipe = {
-  name: "Chrupiacy Kurczak",
+  name: "Kurczak Chrupiący",
   description:
     "Soczyste kawałki kurczaka w chrupiącej panierce, smażone na złoty kolor. Idealne z frytkami i świeżą surówką.",
   type: "dinner",
@@ -34,16 +34,15 @@ const kurczakChrupiacy: Recipe = {
         { ing: iSPC.knorr_crispy_chicken_fix, amount: 1, unit: "opak" },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iJAR.frozen_fries, amount: portions * 200 },
-        { ing: iJAR.cucumber_salad, amount: portions * 150 },
-        { ing: iSPC.potato_seasoning },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("oven-fries", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("cucumber-salad-ready", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -54,13 +53,6 @@ const kurczakChrupiacy: Recipe = {
         "Każdy kawałek kurczaka zanurz w jajku z mlekiem, a następnie obtocz w panierce.",
         "Rozgrzej olej na patelni na średnim ogniu.",
         "Smaż kurczaka z obu stron, aż będzie złocisty, chrupiący i dobrze wysmażony w środku.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Przygotuj frytki według instrukcji.",
-        "Podawaj kurczaka z frytkami oraz surówką z ogórka.",
       ],
     },
   ],

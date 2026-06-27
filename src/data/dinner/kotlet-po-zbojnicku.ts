@@ -5,7 +5,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
+import { dinnerSides } from "../../dinnerSides";
 
 const portions = 5;
 const kotletPoZbojnicku: Recipe = {
@@ -34,17 +34,18 @@ const kotletPoZbojnicku: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.corn_salad, amount: portions * 150 },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("corn-salad-ready", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -58,14 +59,6 @@ const kotletPoZbojnicku: Recipe = {
         "Przełóż kotlety do naczynia żaroodpornego.",
         "Na każdym kotlecie ułóż pieczarki z cebulą i posyp startym serem.",
         "Zapiekaj w piekarniku nagrzanym do 180°C przez 10-15 minut, aż ser się roztopi i lekko zrumieni.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kotlety na talerzu z porcją ziemniaków.",
-        "Obok dodaj surówkę z kukurydzą jako dodatek warzywny.",
       ],
     },
   ],

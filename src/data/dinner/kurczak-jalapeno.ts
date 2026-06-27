@@ -1,5 +1,5 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -34,16 +34,18 @@ const kurczakJalapeno: Recipe = {
         { ing: iSPC.jalapeno_chicken_seasoning, amount: 1, unit: "opak" },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iJAR.frozen_fries, amount: portions * 200 },
-        { ing: iJAR.sauerkraut, amount: portions * 150 },
-        { ing: iSPC.potato_seasoning },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("oven-fries", portions),
+      dinnerSides("boiled-potatoes", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("sauerkraut", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -54,14 +56,6 @@ const kurczakJalapeno: Recipe = {
         "Ułóż kawałki kurczaka na blaszce wyłożonej papierem do pieczenia lub w koszyku airfryera.",
         "Piecz około 15 minut w piekarniku (lub około 10 minut w airfryerze), aż kurczak będzie złocisty i dobrze upieczony.",
         "Upewnij się, że mięso jest w pełni ugotowane w środku przed podaniem.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Przygotuj frytki według instrukcji na opakowaniu.",
-        "Podgrzej lub podaj na zimno kiszoną kapustę.",
-        "Podawaj kurczaka z frytkami i kiszoną kapustą, opcjonalnie dopraw frytki przyprawą.",
       ],
     },
   ],

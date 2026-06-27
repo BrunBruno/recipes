@@ -1,9 +1,9 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
+const portions = 1;
 const paluszkiRybne: Recipe = {
   name: "Paluszki Rybne",
   description:
@@ -11,20 +11,25 @@ const paluszkiRybne: Recipe = {
   type: "dinner",
   images: ["paluszki-rybne.jpg"],
   time: 20,
-  portions: 1,
+  portions: portions,
   executionDifficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iMET.fish_sticks, amount: 5, unit: "szt" },
-        { ing: iFAT.oil, amount: 1, unit: "lzi" },
-        { ing: iJAR.frozen_fries, amount: 200 },
-        { ing: iJAR.fried_beets, amount: 150 },
-        { ing: iSPC.salt },
+        { ing: iMET.fish_sticks, amount: 5 * portions, unit: "szt" },
+        { ing: iFAT.oil, amount: portions, unit: "lzi" },
       ],
     },
   ],
+  extrasMain: {
+    options: [dinnerSides("oven-fries", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("beets-fried-ready", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",

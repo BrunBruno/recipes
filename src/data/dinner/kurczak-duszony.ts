@@ -1,7 +1,7 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -35,16 +35,15 @@ const gotowanyKurczak: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("boiled-potatoes-dry", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("beets-whole-vinegar", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -60,15 +59,6 @@ const gotowanyKurczak: Recipe = {
         "Wlej do rondla, ciągle mieszając, aby zagęścić sos.",
         "Dodaj śmietanę według smaku i posiekany szczypiorek.",
         "Gotuj jeszcze chwilę, dopraw ewentualnie Maggi i podawaj.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kurczaka z porcją ziemniaków.",
-        "Mięso i ziemniaki polej przygotowanym sosem.",
-        "Obok dodaj buraki z octu jako dodatek.",
       ],
     },
   ],

@@ -1,10 +1,9 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 5;
@@ -35,19 +34,21 @@ const kotletPoGoralsku: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.sauerkraut, amount: portions * 120 },
-        { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ing: iSPC.dill },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("sauteed-cabbage", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -59,15 +60,6 @@ const kotletPoGoralsku: Recipe = {
         "Na tej samej patelni rozgrzej olej i smaż kotlety na złoty kolor z obu stron.",
         "Na usmażone kotlety połóż boczek, a na wierzch plaster sera.",
         "Przykryj patelnię i podgrzewaj na małym ogniu, aż ser się rozpuści.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
-        "Dopraw solą i pieprzem i smaż, aż kapusta będzie miękka i lekko zrumieniona.",
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj danie z porcją ziemniaków i podsmażaną kapustą.",
       ],
     },
   ],

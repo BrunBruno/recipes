@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iJAR } from "../../ingredients/ingJar";
@@ -34,18 +35,18 @@ const kurczakZPomidorem: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iFAT.butter, amount: 1.5, unit: "lzi" },
-        { ing: iDIR.milk, amount: 100, unit: "ml" },
-        { ing: iJAR.beets_shredded, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("mashed-potatoes", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -58,15 +59,6 @@ const kurczakZPomidorem: Recipe = {
         "Pokrój pomidory i ułóż je na mięsie.",
         "Posyp całość startym serem.",
         "Piecz przez około 60 minut (lub dłużej, aż mięso będzie miękkie).",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Ubij ziemniaki z masłem i ciepłym mlekiem na puree.",
-        "Dopraw puree solą do smaku.",
-        "Podawaj kurczaka z puree ziemniaczanym i burakami.",
       ],
     },
   ],

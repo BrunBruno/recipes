@@ -1,9 +1,9 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 2;
@@ -37,20 +37,15 @@ const smazonaRyba: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.sauerkraut, amount: portions * 100 },
-        { ing: iVEG.carrot, amount: portions * 50 },
-        { ing: iFAT.oil, amount: 2, unit: "lzi" },
-        { ing: iJAR.lemon_juice, amount: 1, unit: "lz" },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("boiled-potatoes", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("sauerkraut-salad", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -60,15 +55,6 @@ const smazonaRyba: Recipe = {
         "Obtocz kolejno w mące, jajku i bułce tartej.",
         "Smaż na rozgrzanym oleju na złoty kolor z obu stron.",
         "Kostki rybne można smażyć bez rozmrażania.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ziemniaki obierz i ugotuj w osolonej wodzie do miękkości.",
-        "Kapustę drobno poszatkuj, marchew zetrzyj na tarce.",
-        "Dodaj olej, sok z cytryny, sól i pieprz, wymieszaj surówkę.",
-        "Podawaj rybę z ziemniakami i świeżą surówką z kapusty i marchewki.",
       ],
     },
   ],

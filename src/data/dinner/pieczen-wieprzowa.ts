@@ -1,10 +1,11 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
+const portions = 4;
 const pieczenWieprzowa: Recipe = {
   name: "Pieczeń Wieprzowa",
   description:
@@ -16,30 +17,37 @@ const pieczenWieprzowa: Recipe = {
     "pieczen-wieprzowa-3.jpg",
   ],
   time: 100,
-  portions: 4,
+  portions: portions,
   executionDifficulty: null,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iMET.pork_shoulder, amount: 500 },
-        { ing: iJAR.mustard, amount: 2, unit: "lz" },
-        { ing: iFAT.oil, amount: 4, unit: "lz" },
+        { ing: iMET.pork_shoulder, amount: 125 * portions },
+        { ing: iJAR.mustard, amount: 0.5 * portions, unit: "lz" },
+        { ing: iFAT.oil, amount: portions, unit: "lz" },
         { ing: iSPC.marjoram, amount: 2, unit: "lzi" },
         { ing: iSPC.granulated_garlic, amount: 1, unit: "lzi" },
         { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iGRN.buckwheat, amount: 300 },
-        { ing: iJAR.pickled_cucumber_vinegar, amount: 200 },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("buckwheat", portions),
+      dinnerSides("bulgur", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("pickled-cucumber-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",

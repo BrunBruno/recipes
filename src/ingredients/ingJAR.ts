@@ -28,6 +28,8 @@ type IngId =
   | "frozen_fries"
   | "frozen_spinach"
   | "frozen_vegetable_mix"
+  | "frozen_stir_fry"
+  | "frozen_green_beans"
   | "strawberry_frozen"
 
   //// SALADS ////
@@ -302,6 +304,24 @@ export const iJAR: Record<IngId, IngredientItem> = {
     color: "#81C784",
     kcalPer100g: 40,
     nutrientsPer100g: [0.5, 7, 2.5],
+  },
+
+  frozen_stir_fry: {
+    name: "Warzywa na patelnię",
+    type: "jar",
+    subType: "fro",
+    color: "#66BB6A",
+    kcalPer100g: 50,
+    nutrientsPer100g: [0.7, 8.5, 2.5],
+  },
+
+  frozen_green_beans: {
+    name: "Fasolka szparagowa",
+    type: "jar",
+    subType: "fro",
+    color: "#66BB6A",
+    kcalPer100g: 35,
+    nutrientsPer100g: [0.2, 6.5, 2.3],
   },
 
   frozen_spinach: {

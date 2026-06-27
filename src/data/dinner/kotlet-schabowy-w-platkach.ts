@@ -1,9 +1,8 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 5;
@@ -34,17 +33,18 @@ const kotletySchaboweWPlatkach: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.corn_salad, amount: portions * 200 },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("corn-salad-ready", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -56,14 +56,6 @@ const kotletySchaboweWPlatkach: Recipe = {
         "Rozgrzej olej na patelni.",
         "Smaż kotlety na średnim ogniu z obu stron na złoty kolor.",
         "Po usmażeniu odsącz na ręczniku papierowym i podawaj na ciepło.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj usmażone kotlety na talerzu z porcją ziemniaków.",
-        "Obok dodaj surówkę z kukurydzą jako dodatek warzywny.",
       ],
     },
   ],

@@ -1,13 +1,13 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 1;
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
   description:
@@ -15,12 +15,11 @@ const jajkaWSosieKoperkowym: Recipe = {
   type: "dinner",
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
-  portions: 1,
+  portions: portions,
   executionDifficulty: 2,
   ingredients: [
     {
       title: "",
-
       items: [
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
@@ -31,16 +30,18 @@ const jajkaWSosieKoperkowym: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: 200 },
-        { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("boiled-potatoes-dry", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("pickled-cucumber", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -54,14 +55,7 @@ const jajkaWSosieKoperkowym: Recipe = {
         "Do sosu dodaj jajka lub podawaj jajka polane sosem koperkowym.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
-        "Jajka podawaj na talerzu z porcją ziemniaków, polane sosem koperkowym.",
-        "Obok dodaj ogórka kiszonego jako dodatek.",
-      ],
-    },
+   
   ],
   keyWords: ["jajko", "sos"],
 };

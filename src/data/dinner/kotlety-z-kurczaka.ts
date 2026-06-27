@@ -1,9 +1,8 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 3;
@@ -34,18 +33,21 @@ const kotletyZKurczaka: Recipe = {
         { ing: iSPC.curry },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iJAR.beets_whole_vinegar, amount: portions * 100 },
-        { ing: iSPC.dill },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -56,14 +58,6 @@ const kotletyZKurczaka: Recipe = {
         "Dodaj przyprawy (opcjonalnie curry jeśli chcemy uzyskać kurczaka curry).",
         "Dokładnie wymieszaj kotlety w cieście.",
         "Na niewielkiej ilości oleju rozgrzanego na patelni smaż kotlety z obu stron, aż będą złociste i usmażone w środku.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Podawaj kotlety na talerzu z porcją ziemniaków.",
-        "Obok dodaj buraki z octu jako dodatek.",
       ],
     },
   ],

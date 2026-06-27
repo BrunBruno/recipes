@@ -1,10 +1,10 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 1;
 const jajkoSadzone: Recipe = {
   name: "Jajka Sadzone",
   description:
@@ -12,30 +12,32 @@ const jajkoSadzone: Recipe = {
   type: "dinner",
   images: ["jajko-sadzone.jpg"],
   time: 10,
-  portions: 1,
+  portions: portions,
   executionDifficulty: 1,
   ingredients: [
     {
       title: "",
-
       items: [
-        { ing: iMET.egg, amount: "2-3", unit: "szt" },
+        { ing: iMET.egg, amount: 3 * portions, unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: 200 },
-        { ing: iJAR.canned_peas, amount: 100 },
-        { ing: iSPC.dill },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("mashed-potatoes", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("canned-peas", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -46,14 +48,7 @@ const jajkoSadzone: Recipe = {
         "Delikatnie posól i popieprz według smaku.",
       ],
     },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Otwórz puszkę groszku i odcedź.",
-        "Podawaj jajka na talerzu z porcją ziemniaków i groszkiem jako dodatkiem.",
-      ],
-    },
+
   ],
   keyWords: ["jajko"],
 };

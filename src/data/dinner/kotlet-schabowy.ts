@@ -1,9 +1,8 @@
-import { iDIR } from "../../ingredients/ingDairy";
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 5;
@@ -34,20 +33,22 @@ const kotletSchabowy: Recipe = {
         { ing: iSPC.salt },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 200 },
-        { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
-        { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
-        { ing: iVEG.spring_onion },
-        { ing: iSPC.dill },
-        { ing: iSPC.black_pepper },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("cream-cucumber-salad", portions),
+      dinnerSides("stir-fry-vegetables", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -58,15 +59,6 @@ const kotletSchabowy: Recipe = {
         "Na patelni rozgrzej olej na średnim ogniu.",
         "Smaż kotlety z obu stron na złoty kolor, aż będą dobrze usmażone.",
         "Odsącz z nadmiaru tłuszczu na papierowym ręczniku i podawaj od razu.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        "Pokrój ogórka w cienkie plasterki i dodaj zieloną cebulkę.",
-        "Dodaj śmietanę, sól i pieprz, a następnie wymieszaj.",
-        "Podawaj danie z porcją ziemniaków i przygotowaną mizerią.",
       ],
     },
   ],

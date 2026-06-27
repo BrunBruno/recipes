@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -25,16 +26,15 @@ const palkiBarbecue: Recipe = {
         { ing: iSPC.granulated_garlic },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iJAR.frozen_fries, amount: portions * 150 },
-        { ing: iJAR.pickled_cucumber, amount: portions * 2, unit: "szt" },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("oven-fries", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("pickled-cucumber", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -45,14 +45,6 @@ const palkiBarbecue: Recipe = {
         "Wyjmij naczynie i otwórz je, odlej nadmiar tłuszczu z kurczaka.",
         "Polej pałki sosem barbecue.",
         "Wstaw naczynie ponownie do piekarnika, tym razem otwarte, i piecz w 160°C aż sos się skarmelizuje.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Upiecz frytki w piekarniku zgodnie z instrukcją na opakowaniu.",
-        "Podawaj pałki barbecue na talerzu z porcją frytek.",
-        "Obok dodaj ogórka kiszonego jako dodatek.",
       ],
     },
   ],

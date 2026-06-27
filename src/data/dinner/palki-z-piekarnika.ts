@@ -1,7 +1,6 @@
-import { iJAR } from "../../ingredients/ingJar";
+import { dinnerSides } from "../../dinnerSides";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 3;
@@ -28,16 +27,22 @@ const palkiZPiekarnika: Recipe = {
         { ing: iSPC.winiary_chicken_fix, amount: 1, unit: "opak" },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iVEG.potato, amount: portions * 250 },
-        { ing: iJAR.fried_beets, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes-dry", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-shredded-ready", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "Pałki z kurczaka",
@@ -51,14 +56,6 @@ const palkiZPiekarnika: Recipe = {
         "Piecz na najniższym poziomie piekarnika przez około 60 minut.",
         "Jeśli chcesz uzyskać bardziej chrupiącą skórkę, na 10 minut przed końcem pieczenia rozetnij rękaw i rozchyl jego brzegi.",
         "Po upieczeniu odetnij końcówkę rękawa i przełóż zawartość do naczynia do serwowania.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Ugotuj ziemniaki w osolonej wodzie.",
-        "Podgrzej buraczki zasmażane.",
-        "Podawaj pałki z kurczaka z ziemniakami i buraczkami.",
       ],
     },
   ],

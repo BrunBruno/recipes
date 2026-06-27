@@ -43,16 +43,19 @@ Chart.register(
 
 type StatisticsProps = {};
 
-const recipeTypeCount = countRecipesTypes(recipes);
+const okRecipes = recipes.filter(
+  (r) => r.steps.length > 0 && r.ingredients.length > 0,
+);
+const recipeTypeCount = countRecipesTypes(okRecipes);
 const ingredientTypeCount = countIngredientTypes();
-const doneRecipeCount = countDoneRecipes(recipes);
-const ingredientUsage = countIngredientUsage(recipes);
-const recipeCalories = countRecipeCalories(recipes);
-const recipeKcalPer100g = countRecipeKcalPer100g(recipes);
+const doneRecipeCount = countDoneRecipes(okRecipes);
+const ingredientUsage = countIngredientUsage(okRecipes);
+const recipeCalories = countRecipeCalories(okRecipes);
+const recipeKcalPer100g = countRecipeKcalPer100g(okRecipes);
 const usedIngredients = countUsedIngredients(ingredientUsage);
-const recipeWeights = countRecipeWeight(recipes);
-const recipeWeightsPerPortion = countRecipeWeightPerPortion(recipes);
-const recipesPrepTimes = countRecipePreparationTime(recipes);
+const recipeWeights = countRecipeWeight(okRecipes);
+const recipeWeightsPerPortion = countRecipeWeightPerPortion(okRecipes);
+const recipesPrepTimes = countRecipePreparationTime(okRecipes);
 
 function Statistics({}: StatisticsProps) {
   const canvasRefs = {

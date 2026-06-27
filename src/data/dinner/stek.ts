@@ -1,9 +1,11 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 1;
 const stek: Recipe = {
   name: "Stek",
   description:
@@ -11,21 +13,32 @@ const stek: Recipe = {
   type: "dinner",
   images: ["stek.jpg", "stek-2.jpg"],
   time: 20,
-  portions: 1,
+  portions: portions,
   executionDifficulty: 2,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iMET.beef_steak, amount: 1, unit: "szt" },
-        { ing: iVEG.garlic, amount: 1, unit: "zbk" },
-        { ing: iFAT.oil, amount: 1, unit: "lzi" },
+        { ing: iMET.beef_steak, amount: portions, unit: "szt" },
+        { ing: iVEG.garlic, amount: portions, unit: "zbk" },
+        { ing: iFAT.oil, amount: portions, unit: "lzi" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iSPC.thyme },
         { ing: iSPC.salt },
       ],
     },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("oven-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [dinnerSides("green-beans-boiled", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",

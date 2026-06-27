@@ -1,5 +1,5 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -28,16 +28,18 @@ const kurczakZRozna: Recipe = {
         { ing: iSPC.salt, amount: 1, unit: "lzi" },
       ],
     },
-    {
-      title: "",
-      isAdd: true,
-      items: [
-        { ing: iJAR.frozen_fries, amount: portions * 150 },
-        { ing: iJAR.sauerkraut, amount: portions * 150 },
-        { ing: iSPC.salt },
-      ],
-    },
   ],
+  extrasMain: {
+    options: [dinnerSides("oven-fries", portions)],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("sauerkraut", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -50,14 +52,6 @@ const kurczakZRozna: Recipe = {
         "Piecz kurczaka przez około 70-90 minut, obracając go powoli na rożnie, aż skórka będzie złocista i chrupiąca, a mięso w środku dobrze wysmażone.",
         "Po upieczeniu odstaw kurczaka na 5 minut przed krojeniem, aby soki równomiernie się rozprowadziły.",
         "Podawaj z ulubionymi dodatkami: ziemniakami, surówką lub warzywami z pieca.",
-      ],
-    },
-    {
-      title: "Przykładowe podanie",
-      steps: [
-        "Upiecz frytki w piekarniku zgodnie z instrukcją na opakowaniu.",
-        "Podawaj pałki barbecue na talerzu z porcją frytek.",
-        "Obok dodaj kiszą kapustę jako dodatek.",
       ],
     },
   ],

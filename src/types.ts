@@ -1,3 +1,5 @@
+import type { DinnerSidesNames } from "./dinnerSides";
+
 export type MealType =
   | "breakfast"
   | "dinner"
@@ -93,6 +95,7 @@ export type RecipeIngredientGroup = {
 
 export type ExtrasIngredientGroup = {
   title: string;
+  sideName: DinnerSidesNames;
   items: Ingredient[];
 };
 
