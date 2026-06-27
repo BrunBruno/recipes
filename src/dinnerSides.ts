@@ -49,16 +49,16 @@ export const dinnerSides = (
         title: "Ziemniaki z piekarnika",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: 1000 },
-          { ing: iFAT.oil, amount: 3, unit: "lz" },
-          { ing: iVEG.garlic, amount: 2, unit: "zbk" },
-          { ing: iSPC.caraway, amount: 0.5, unit: "lzi" },
-          { ing: iSPC.thyme, amount: 1, unit: "lzi" },
-          { ing: iSPC.potato_seasoning, amount: 1, unit: "lz" },
-          { ing: iSPC.sweet_paprika, amount: 2, unit: "lzi" },
-          { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },
-          { ing: iSPC.black_pepper, amount: 0.5, unit: "lzi" },
-          { ing: iSPC.salt, amount: 1, unit: "lzi" },
+          { ing: iVEG.potato, amount: portions * 250 },
+          { ing: iFAT.oil, amount: portions * 0.8, unit: "lz" },
+          { ing: iVEG.garlic, amount: portions * 0.5, unit: "zbk" },
+          { ing: iSPC.caraway, amount: portions * 0.25, unit: "lzi" },
+          { ing: iSPC.thyme, amount: portions * 0.25, unit: "lzi" },
+          { ing: iSPC.potato_seasoning, amount: portions * 0.25, unit: "lz" },
+          { ing: iSPC.sweet_paprika, amount: portions * 0.5, unit: "lzi" },
+          { ing: iSPC.hot_paprika, amount: portions * 0.25, unit: "lzi" },
+          { ing: iSPC.black_pepper, amount: portions * 0.25, unit: "lzi" },
+          { ing: iSPC.salt, amount: portions * 0.25, unit: "lzi" },
         ],
       };
     case "boiled-potatoes":
@@ -183,7 +183,7 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iJAR.frozen_stir_fry, amount: 150 * portions },
-          { ing: iFAT.oil, amount: 1, unit: "lz" },
+          { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
         ],
       };
     case "green-beans-boiled":
@@ -202,7 +202,7 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iJAR.sauerkraut, amount: portions * 120 },
-          { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
+          { ing: iFAT.clarified_butter, amount: portions * 0.25, unit: "lzi" },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
         ],
@@ -214,8 +214,8 @@ export const dinnerSides = (
         items: [
           { ing: iJAR.sauerkraut, amount: portions * 100 },
           { ing: iVEG.carrot, amount: portions * 50 },
-          { ing: iFAT.oil, amount: 2, unit: "lzi" },
-          { ing: iJAR.lemon_juice, amount: 1, unit: "lz" },
+          { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
+          { ing: iJAR.lemon_juice, amount: portions * 0.25, unit: "lz" },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
         ],
@@ -332,13 +332,6 @@ export const dinnerSides = (
       };
   }
 };
-
-//  case "":
-//       return {
-//         title: "",
-//         sideName: name,
-//        items: [],
-//       };
 
 export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
   switch (name) {

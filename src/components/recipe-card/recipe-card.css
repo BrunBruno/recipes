@@ -69,7 +69,7 @@
 }
 
 .description-section {
-  padding: 2rem;
+  padding: 2rem 0;
   font-size: 1.2rem;
   border-bottom: dashed 0.3rem #333333;
 }
@@ -93,7 +93,7 @@
 }
 
 .recipe-details-daily {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .recipe-daily-chart {
@@ -101,19 +101,9 @@
   width: 90%;
 }
 
-.recipe-details-params {
-  z-index: 30;
-  width: 100%;
-  padding: 2rem 0;
-  gap: 0;
-
-  transition: opacity 0.3s 0.3s;
-}
-
 .params-items {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1rem;
 }
 
 .recipe-param {
@@ -375,7 +365,7 @@
 .ingredient-item {
   position: relative;
   display: grid;
-  grid-template-columns: 1rem auto 6rem;
+  grid-template-columns: 1rem auto 5rem;
   padding: 0 0.5rem;
   font-size: 0.95rem;
   border-top: 1px solid #333333;
@@ -385,7 +375,8 @@
   border: none;
 }
 
-.ingredient-item-alt {
+/* .ingredient-item-alt {
+  position: relative;
   display: grid;
   grid-template-columns: 1rem auto 4rem 2rem;
   padding: 0 0.5rem;
@@ -398,13 +389,12 @@
 }
 .ingredient-item-alt:first-child {
   border: none;
-}
+} */
 
 .ingredient-amount {
   display: flex;
   align-items: center;
   min-width: 0;
-
   padding: 0.4rem;
   padding-left: 0.6rem;
   padding-right: 0;
@@ -412,7 +402,6 @@
   font-size: 1rem;
   color: #20c997;
   white-space: nowrap;
-
   border-left: solid 1px #333333;
 }
 .ingredient-unit {
@@ -429,6 +418,7 @@
   color: #eaeaea;
   margin: 0 1rem;
   padding: 0.5rem 0;
+  max-width: 80%;
 }
 
 .ingredient-indicator {
@@ -439,6 +429,10 @@
 }
 
 .ingredient-alt {
+  position: absolute;
+  right: 6rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,6 +444,7 @@
   margin: auto 0;
   opacity: 0.4;
   padding: 0.2rem;
+  background-color: #0000;
 }
 
 .ingredient-alt:hover {
@@ -470,14 +465,15 @@
   height: 1.8rem;
   aspect-ratio: 1/1;
   margin: auto 0;
-  opacity: 0.4;
   padding: 0.4rem;
   border-radius: 0.3rem;
+  background-color: #0000;
+  opacity: 0.6;
 }
 
 .group-alt:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .steps h4 {
@@ -499,7 +495,7 @@
   padding-left: 1rem;
   line-height: 1.5;
   font-size: 1.1rem;
-  color: #cccccc;
+  color: #cacaca;
   counter-increment: step;
 }
 
@@ -551,6 +547,140 @@
 
 .recipe-details-params h3 {
   color: #eaeaea;
+}
+
+.add-to-day-section {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2rem 0;
+}
+
+.add-to-day-section h3 {
+  color: #eaeaea;
+}
+
+.add-to-day {
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+
+.add-to-day-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.input-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.add-input {
+  position: relative;
+  text-align: center;
+  display: flex;
+  padding: 0.3rem;
+  border-radius: 2rem;
+  background-color: #0000;
+  background-color: #222;
+  font-size: 1.4rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.add-input input {
+  text-align: center;
+  font-size: 1.4rem;
+  width: 4rem;
+  outline: none;
+  border: none;
+  background-color: #0000;
+  user-select: none;
+  color: #eaeaea;
+}
+
+.add-grams input {
+  font-size: 1rem;
+}
+
+.add-input button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  user-select: none;
+  font-size: 1.4rem;
+  border: none;
+  color: #eaeaea;
+}
+.add-input button:hover {
+  cursor: pointer;
+  background-color: #444;
+}
+
+.add-input::before {
+  color: #666;
+  background-color: #222;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  font-size: 0.6rem;
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.add-portions::before {
+  content: "porcji";
+}
+.add-grams::before {
+  content: "gram";
+}
+
+.add-input.active {
+  box-shadow: 0 0 0 0.1rem #20c997;
+}
+.add-input.active::before {
+  color: #20c997;
+}
+
+.add-button {
+  width: 10rem;
+  margin-top: 20px;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #222;
+  border: 2px solid #666;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #eaeaea;
+}
+
+.add-button:hover {
+  background-color: #333;
+  border-color: #20c997;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.recipe-params {
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+
+.recipe-params-data h3 {
+  text-align: center;
 }
 
 @keyframes modalIn {
@@ -645,8 +775,14 @@
 }
 
 @media (max-width: 820px) {
-  .recipe-daily-chart {
-    width: 100%;
+  .add-to-day-section {
+    grid-template-columns: 1fr;
+  }
+
+  .add-to-day {
+    display: grid;
+    grid-template-rows: 0 auto;
+    padding-bottom: 2rem;
   }
 }
 

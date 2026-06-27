@@ -413,7 +413,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
   },
 
   taco_shell_corn: {
-    name: "Muszla kukurydziana do taco",
+    name: "Muszla kukurydziana",
     type: "grn",
     subType: "bun",
     color: "#FBC02D",

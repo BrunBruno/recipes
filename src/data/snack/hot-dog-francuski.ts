@@ -26,6 +26,7 @@ const frenchHotDog: Recipe = {
     },
     {
       title: "Inne proponowane sosy",
+      isAdd: true,
       items: [
         { ing: iJAR.american_sauce, exclude: true },
         { ing: iJAR.thousand_island, exclude: true },

@@ -30,7 +30,7 @@ const jajecznica: Recipe = {
       ],
     },
     {
-      title: "",
+      title: "Proponowane dodatki",
       isAdd: true,
       items: [
         { ing: iMET.sausage, amount: 0.5, unit: "peto" },

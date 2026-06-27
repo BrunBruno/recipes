@@ -2,7 +2,7 @@ import "./recipes-grid.css";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import type { Recipe } from "../../types";
-import { hexToRgb, MealTypesData } from "../../utils";
+import { calculateRecipeKcal, hexToRgb, MealTypesData } from "../../utils";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -59,7 +59,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                     boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
                   }
                 : {
-                    y: -10,
+                    // y: -5,
                     boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
                   }
             }
@@ -85,10 +85,23 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
               className="card-mark"
               style={{ backgroundColor: MealTypesData[recipe.type].color }}
             >
-              <div
-                className="card-svg"
-                // style={{ borderColor: MealTypesData[recipe.type].color }}
-              >
+              <div className="mark-stat mark-kcal">
+                <UtilsIcon name="kcal" color="#000" />
+                <span
+                  style={{ backgroundColor: MealTypesData[recipe.type].color }}
+                >
+                  {calculateRecipeKcal(recipe)}
+                </span>
+              </div>
+              <div className="mark-stat mark-time">
+                <UtilsIcon name="time" color="#000" />
+                <span
+                  style={{ backgroundColor: MealTypesData[recipe.type].color }}
+                >
+                  {recipe.time}
+                </span>
+              </div>
+              <div className="card-svg">
                 <RecipeTypeIcon type={recipe.type} color="#000" />
               </div>
             </div>

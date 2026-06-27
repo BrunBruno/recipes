@@ -36,7 +36,7 @@ const pancakes: Recipe = {
       ],
     },
     {
-      title: "",
+      title: "Proponowane dodatki",
       isAdd: true,
       items: [
         { ing: iGRN.chocolate_cream, exclude: true },

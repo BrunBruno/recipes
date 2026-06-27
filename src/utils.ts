@@ -169,7 +169,10 @@ const getAllIngredientItems = (recipe: Recipe) => {
   return items;
 };
 
-export const calculateRecipeKcal = (recipe: Recipe): number => {
+export const calculateRecipeKcal = (
+  recipe: Recipe,
+  portions?: number,
+): number => {
   const DEFAULT_FAT_GRAMS = 12;
 
   let totalKcal = 0;
@@ -213,7 +216,12 @@ export const calculateRecipeKcal = (recipe: Recipe): number => {
     totalKcal += (grams / 100) * ing.kcalPer100g;
   }
 
-  return Math.round(recipe.portions ? totalKcal / recipe.portions : totalKcal);
+  const portMul = portions ? portions : 1;
+  return Math.round(
+    recipe.portions
+      ? (portMul * totalKcal) / recipe.portions
+      : portMul * totalKcal,
+  );
 };
 
 export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
@@ -267,6 +275,7 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
 export const calculateRecipeNutrients = (
   recipe: Recipe,
+  portions?: number,
 ): [string, string, string] => {
   const DEFAULT_FAT_GRAMS = 15;
 
@@ -322,18 +331,25 @@ export const calculateRecipeNutrients = (
     totalProt += (grams / 100) * prot;
   }
 
+  const portMul = portions ? portions : 1;
   if (recipe.portions) {
     return [
-      (Math.round((10 * totalFat) / recipe.portions) / 10).toFixed(1),
-      (Math.round((10 * totalCarb) / recipe.portions) / 10).toFixed(1),
-      (Math.round((10 * totalProt) / recipe.portions) / 10).toFixed(1),
+      ((portMul * Math.round((10 * totalFat) / recipe.portions)) / 10).toFixed(
+        1,
+      ),
+      ((portMul * Math.round((10 * totalCarb) / recipe.portions)) / 10).toFixed(
+        1,
+      ),
+      ((portMul * Math.round((10 * totalProt) / recipe.portions)) / 10).toFixed(
+        1,
+      ),
     ];
   }
 
   return [
-    Math.round(totalFat).toFixed(1),
-    Math.round(totalCarb).toFixed(1),
-    Math.round(totalProt).toFixed(1),
+    Math.round(portMul * totalFat).toFixed(1),
+    Math.round(portMul * totalCarb).toFixed(1),
+    Math.round(portMul * totalProt).toFixed(1),
   ];
 };
 
