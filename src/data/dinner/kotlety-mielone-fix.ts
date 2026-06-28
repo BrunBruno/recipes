@@ -5,10 +5,11 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kotletyMieloneFix: Recipe = {
-  name: "Kotlety Mielone (Fix)",
+  name: "Kotlety Mielone FIX",
   description:
     "Soczyste kotlety mielone przygotowane z pomocą Knorr Fix Soczyste Kotlety Mielone - prosty i klasyczny obiad dla całej rodziny.",
   type: "dinner",
@@ -23,7 +24,7 @@ const kotletyMieloneFix: Recipe = {
         { ing: iMET.ground_pork, amount: 500 },
         { ing: iGRN.breadcrumbs, amount: 20 },
         { ing: iOTH.water, amount: 175, unit: "ml" },
-        { ing: iFAT.oil, amount: 80 },
+        ...fryingFat(iFAT.oil, 80, "g", 0.5),
         { ing: iSPC.knorr_meatballs_fix, amount: 1, unit: "opak" },
       ],
     },

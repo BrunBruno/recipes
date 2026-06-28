@@ -11,7 +11,7 @@ const salatkaKuskus: Recipe = {
   description:
     "Pożywna sałatka z kuskusem, jajkami, tuńczykiem i kukurydzą, połączona majonezem i doprawiona solą oraz pieprzem - szybka i smaczna propozycja na lunch lub kolację.",
   type: "salad",
-  images: ["salatka-kuskus.jpg"],
+  images: ["salatka-kuskus.jpg", "salatka-kuskus-2.jpg"],
   time: 40,
   portions: 8,
   executionDifficulty: 3,

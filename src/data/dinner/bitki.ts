@@ -7,6 +7,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 const bitki: Recipe = {
@@ -21,11 +22,10 @@ const bitki: Recipe = {
   ingredients: [
     {
       title: "",
-
       items: [
         { ing: iMET.pork_tenderloin, amount: 600 },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
-        { ing: iFAT.oil, amount: 5, unit: "lz" },
+        ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },

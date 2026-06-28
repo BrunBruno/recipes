@@ -5,6 +5,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 5;
 const kotletPoGoralsku: Recipe = {
@@ -27,7 +28,7 @@ const kotletPoGoralsku: Recipe = {
         { ing: iDIR.yellow_cheese, amount: 10, unit: "plas" },
         { ing: iGRN.breadcrumbs, amount: 150 },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
-        { ing: iFAT.oil, amount: 10, unit: "lz" },
+        ...fryingFat(iFAT.oil, 10, "lz", 0.5),
         { ing: iSPC.thyme },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.black_pepper },

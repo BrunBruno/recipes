@@ -5,6 +5,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 
@@ -16,6 +17,10 @@ const klopsikiWSosiePomidorowym: Recipe = {
   images: [
     "klopsiki-w-sosie-pomidorowym.jpg",
     "klopsiki-w-sosie-pomidorowym-2.jpg",
+    "klopsiki-w-sosie-pomidorowym-3.jpg",
+    "klopsiki-w-sosie-pomidorowym-4.jpg",
+    "klopsiki-w-sosie-pomidorowym-5.jpg",
+    "klopsiki-w-sosie-pomidorowym-6.jpg",
   ],
   time: 45,
   portions: portions,
@@ -26,7 +31,7 @@ const klopsikiWSosiePomidorowym: Recipe = {
       items: [
         { ing: iMET.ground_pork, amount: 500 },
         { ing: iGRN.breadcrumbs, amount: 4, unit: "lz" },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iOTH.water, amount: 300, unit: "ml" },
         { ing: iSPC.winiary_tomato_sauce, amount: 1, unit: "opak" },
         { ing: iSPC.black_pepper },

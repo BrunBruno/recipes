@@ -6,6 +6,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kotletyMielone: Recipe = {
@@ -27,7 +28,7 @@ const kotletyMielone: Recipe = {
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 100 },
-        { ing: iFAT.oil, amount: 8, unit: "lz" },
+        ...fryingFat(iFAT.oil, 8, "lz", 0.5),
         { ing: iOTH.maggi },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

@@ -31,6 +31,7 @@ const faworki: Recipe = {
           ],
           selected: 0,
         },
+         { ing: iFAT.rendered_lard, amount: 2, unit: "kst", exclude: true },
         {
           ing: iFAT.rendered_lard,
           amount: 2 * 0.3,

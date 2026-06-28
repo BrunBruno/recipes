@@ -4,6 +4,7 @@ import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 const pieczenWieprzowa: Recipe = {
@@ -25,7 +26,7 @@ const pieczenWieprzowa: Recipe = {
       items: [
         { ing: iMET.pork_shoulder, amount: 125 * portions },
         { ing: iJAR.mustard, amount: 0.5 * portions, unit: "lz" },
-        { ing: iFAT.oil, amount: portions, unit: "lz" },
+        ...fryingFat(iFAT.oil, portions, "lz", 0.45),
         { ing: iSPC.marjoram, amount: 2, unit: "lzi" },
         { ing: iSPC.granulated_garlic, amount: 1, unit: "lzi" },
         { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },

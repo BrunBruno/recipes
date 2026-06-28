@@ -4,6 +4,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
@@ -21,8 +22,8 @@ const watrobkaZKurczaka: Recipe = {
         { ing: iMET.poultry_liver, amount: 400 },
         { ing: iVEG.onion, amount: "2-3", unit: "szt" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
-        { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.6),
+        ...fryingFat(iFAT.clarified_butter, 2, "lz", 0.8),
         { ing: iSPC.salt },
       ],
     },

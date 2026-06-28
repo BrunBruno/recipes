@@ -5,6 +5,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 2;
 const kurczakChrupiacy: Recipe = {
@@ -21,7 +22,7 @@ const kurczakChrupiacy: Recipe = {
       title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iFAT.oil, amount: 80, unit: "ml" },
+        ...fryingFat(iFAT.oil, 80, "ml", 0.55),
         {
           type: "choice",
           options: [

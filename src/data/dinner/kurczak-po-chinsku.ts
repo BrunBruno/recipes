@@ -5,6 +5,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kurczakPoChinsku: Recipe = {
@@ -12,7 +13,7 @@ const kurczakPoChinsku: Recipe = {
   description:
     "Szybki kurczak po chińsku z warzywami w aromatycznym sosie, podawany z ryżem. Idealny na lekki i kolorowy obiad.",
   type: "dinner",
-  images: ["./kurczak-po-chinsku.jpg"],
+  images: ["kurczak-po-chinsku.jpg", "kurczak-po-chinsku-2.jpg"],
   time: 30,
   portions: portions,
   executionDifficulty: 1,
@@ -26,7 +27,7 @@ const kurczakPoChinsku: Recipe = {
         { ing: iVEG.leek, amount: 120 },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iGRN.rice, amount: portions * 100 },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iSPC.knorr_chinese_fix, amount: 1, unit: "opak" },
       ],
     },

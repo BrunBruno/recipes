@@ -5,6 +5,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 const kotletDevolay: Recipe = {
@@ -28,7 +29,7 @@ const kotletDevolay: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 6, unit: "lz" },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.5),
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

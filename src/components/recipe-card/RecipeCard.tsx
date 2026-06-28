@@ -36,12 +36,11 @@ ChartJS.register(
 
 type RecipeCardProps = {
   selectedRecipe: Recipe;
-  setSelectedRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
 };
 
 const swipeThreshold = 50;
 
-function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
+function RecipeCard({ selectedRecipe }: RecipeCardProps) {
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -379,8 +378,7 @@ function RecipeCard({ selectedRecipe, setSelectedRecipe }: RecipeCardProps) {
         <button
           className="close-button"
           onClick={() => {
-            setSelectedRecipe(null);
-            window.history.pushState(null, "");
+            window.history.back();
           }}
           aria-label="Close recipe details"
         >

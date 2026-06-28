@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 1;
 const jajkoSadzone: Recipe = {
@@ -19,7 +20,7 @@ const jajkoSadzone: Recipe = {
       title: "",
       items: [
         { ing: iMET.egg, amount: 3 * portions, unit: "szt" },
-        { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
+        ...fryingFat(iFAT.clarified_butter, 1, "lz", 0.9),
         { ing: iSPC.salt },
       ],
     },
@@ -48,7 +49,6 @@ const jajkoSadzone: Recipe = {
         "Delikatnie posól i popieprz według smaku.",
       ],
     },
-
   ],
   keyWords: ["jajko"],
 };

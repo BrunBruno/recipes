@@ -7,10 +7,11 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 const kurczakWSosiePieczarkowymFix: Recipe = {
-  name: "Kurczak w Sosie Pieczarkowym (Fix)",
+  name: "Kurczak w Sosie Pieczarkowym FIX",
   description:
     "Delikatny filet z kurczaka duszony w kremowym sosie pieczarkowym z użyciem Knorr Fix. Szybki i sycący obiad dla całej rodziny.",
   type: "dinner",
@@ -31,7 +32,7 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
         { ing: iGRN.rice, amount: portions * 100 },
         { ing: iVEG.mushrooms, amount: 400 },
         { ing: iVEG.onion, amount: 120 },
-        { ing: iFAT.oil, amount: 5, unit: "lz" },
+        ...fryingFat(iFAT.oil, 5, "lz", 0.35),
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iDIR.cream_18, amount: 100 },
         { ing: iSPC.knorr_mushroom_sauce_fix, amount: 1, unit: "opak" },

@@ -4,10 +4,11 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const gulaszPoWegierskuFix: Recipe = {
-  name: "Gulasz po Węgiersku (Fix)",
+  name: "Gulasz po Węgiersku FIX",
   description:
     "Klasyczny gulasz po węgiersku z wołowiną, podawany z kopytkami i buraczkami, idealny na sycący obiad.",
   type: "dinner",
@@ -20,7 +21,7 @@ const gulaszPoWegierskuFix: Recipe = {
       title: "",
       items: [
         { ing: iMET.stew_beef, amount: 500 },
-        { ing: iFAT.oil, amount: 5, unit: "lz" },
+        ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
       ],

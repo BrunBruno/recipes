@@ -10,10 +10,12 @@ import { iVEG } from "./ingredients/ingVegetable";
 import type {
   Ingredient,
   IngredientChoice,
+  IngredientItem,
   IngredientType,
   KeyWord,
   MealType,
   Recipe,
+  UnitType,
 } from "./types";
 
 export const DAILY_NUTRIENTS = [3213, 98, 441, 140]; // [kcal, fat, carbs, protein]
@@ -621,3 +623,23 @@ export const formatUnit = (ingredient: Ingredient): string => {
       return ` ${unit}`;
   }
 };
+
+export const fryingFat = (
+  ing: IngredientItem,
+  amount: number,
+  unit: UnitType,
+  coef = 0.3,
+): Ingredient[] => [
+  {
+    ing,
+    amount,
+    unit,
+    exclude: true,
+  },
+  {
+    ing,
+    amount: amount * coef,
+    unit,
+    invisible: true,
+  },
+];

@@ -76,9 +76,8 @@ function RecipesPage() {
   useEffect(() => {
     const handlePopState = () => {
       if (selectedRecipe) {
+        console.log("popstate", window.history.length);
         setSelectedRecipe(null);
-
-        window.history.pushState(null, "");
       }
     };
 
@@ -155,11 +154,6 @@ function RecipesPage() {
             </label>
           </div>
 
-          {/* <div
-            className={`filter-buttons-bg ${showFilters ? "show" : ""}`}
-            onClick={() => setShowFilters((prev) => !prev)}
-          ></div> */}
-
           <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
             {Object.entries(MealTypesData).map(([key, { label, color }]) => (
               <button
@@ -189,17 +183,11 @@ function RecipesPage() {
         <div
           className="details-bg"
           onClick={() => {
-            setSelectedRecipe(null);
-            window.history.pushState(null, "");
+            window.history.back();
           }}
         />
       )}
-      {selectedRecipe && (
-        <RecipeCard
-          selectedRecipe={selectedRecipe}
-          setSelectedRecipe={setSelectedRecipe}
-        />
-      )}
+      {selectedRecipe && <RecipeCard selectedRecipe={selectedRecipe} />}
 
       <div className="grid-container">
         <RecipesGrid

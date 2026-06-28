@@ -5,6 +5,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 5;
 const karkowkaDuszona: Recipe = {
@@ -25,7 +26,7 @@ const karkowkaDuszona: Recipe = {
       title: "",
       items: [
         { ing: iMET.pork_neck, amount: 2, unit: "opak" },
-        { ing: iFAT.oil, amount: 5, unit: "lz" },
+        ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iJAR.mustard_sarepska, amount: 10, unit: "lzi" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iSPC.black_pepper },

@@ -4,6 +4,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 1;
 const stek: Recipe = {
@@ -21,8 +22,8 @@ const stek: Recipe = {
       items: [
         { ing: iMET.beef_steak, amount: portions, unit: "szt" },
         { ing: iVEG.garlic, amount: portions, unit: "zbk" },
-        { ing: iFAT.oil, amount: portions, unit: "lzi" },
-        { ing: iFAT.butter, amount: 1, unit: "lz" },
+        ...fryingFat(iFAT.oil, portions, "lzi", 0.55),
+        ...fryingFat(iFAT.butter, 1, "lz", 0.5),
         { ing: iSPC.thyme },
         { ing: iSPC.salt },
       ],

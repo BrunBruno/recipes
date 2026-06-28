@@ -1,4 +1,4 @@
-import { useState, type JSX } from "react";
+import { useEffect, useState, type JSX } from "react";
 import "./app.css";
 import RecipesPage from "./components/recipes-page/RecipesPage";
 import UserPage from "./components/user-page/UserPage";
@@ -7,6 +7,10 @@ import Statistics from "./components/statistics/Statistics";
 
 function App() {
   const [content, setContent] = useState<JSX.Element>(<RecipesPage />);
+
+  useEffect(() => {
+    console.log(window.history.length);
+  }, [window.history.length]);
 
   return (
     <main>

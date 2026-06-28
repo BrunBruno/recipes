@@ -6,6 +6,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kurczakZeSzpinakiem: Recipe = {
@@ -27,7 +28,7 @@ const kurczakZeSzpinakiem: Recipe = {
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
         { ing: iDIR.yellow_cheese, amount: 100 },
-        { ing: iFAT.oil, amount: 3, unit: "lz" },
+        ...fryingFat(iFAT.oil, 3, "lz", 0.55),
         { ing: iSPC.knorr_bouillon_cube, amount: 1, unit: "szt" },
         { ing: iSPC.cayenne_pepper },
       ],

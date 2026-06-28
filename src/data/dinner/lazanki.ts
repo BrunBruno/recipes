@@ -5,6 +5,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const lazanki: Recipe = {
   name: "Łazanki",
@@ -25,7 +26,7 @@ const lazanki: Recipe = {
         { ing: iJAR.sauerkraut, amount: 400 },
         { ing: iVEG.onion, amount: 280 },
         { ing: iVEG.mushrooms, amount: 150 },
-        { ing: iFAT.oil, amount: 10, unit: "lz" },
+        ...fryingFat(iFAT.oil, 10, "lz", 0.7),
         { ing: iSPC.bay_leaf },
         { ing: iSPC.caraway },
         { ing: iSPC.allspice },

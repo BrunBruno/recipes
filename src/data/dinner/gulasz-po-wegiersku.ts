@@ -5,6 +5,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const gulaszWegrerski: Recipe = {
@@ -23,7 +24,7 @@ const gulaszWegrerski: Recipe = {
         { ing: iMET.stew_beef, amount: 500 },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iFAT.oil, amount: 3, unit: "lz" },
+        ...fryingFat(iFAT.oil, 3, "lz", 0.5),
         { ing: iOTH.water, amount: 2, unit: "szk" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
         { ing: iSPC.meat_seasoning },
@@ -56,7 +57,6 @@ const gulaszWegrerski: Recipe = {
         "Duś pod przykryciem przez około 30 minut.",
       ],
     },
-   
   ],
   keyWords: ["wołowina"],
 };

@@ -8,6 +8,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 4;
 const roladaSlaska: Recipe = {
@@ -38,8 +39,8 @@ const roladaSlaska: Recipe = {
         { ing: iGRN.flour, amount: 20 },
         { ing: iDIR.cream_18, amount: 100 },
         { ing: iJAR.mustard_sarepska, amount: 25 },
-        { ing: iFAT.margarine, amount: 10 },
-        { ing: iFAT.butter, amount: 10 },
+        ...fryingFat(iFAT.margarine, 10, "g", 0.5),
+        ...fryingFat(iFAT.butter, 10, "g", 0.5),
         { ing: iOTH.water, amount: 400, unit: "ml" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

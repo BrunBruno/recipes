@@ -28,11 +28,12 @@ const gulaszWieprzowy: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iFAT.butter, amount: 1, unit: "lz" },
-            { ing: iFAT.rendered_lard, amount: 1, unit: "lz" },
+            { ing: iFAT.butter, amount: 1, unit: "lz", exclude: true },
+            { ing: iFAT.rendered_lard, amount: 1, unit: "lz", exclude: true },
           ],
           selected: 0,
         },
+        { ing: iFAT.butter, amount: 0.5, unit: "lz", invisible: true },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
@@ -73,7 +74,6 @@ const gulaszWieprzowy: Recipe = {
         "Dopraw solą, pieprzem, papryką, czosnkiem, chilli i szczypiorkiem do smaku.",
       ],
     },
-   
   ],
   keyWords: ["wieprzowina", "sos"],
 };

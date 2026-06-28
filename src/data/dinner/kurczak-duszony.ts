@@ -7,6 +7,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const gotowanyKurczak: Recipe = {
@@ -23,7 +24,7 @@ const gotowanyKurczak: Recipe = {
       title: "",
       items: [
         { ing: iMET.chicken_thigh, amount: 600 },
-        { ing: iFAT.oil, amount: 3, unit: "lz" },
+        ...fryingFat(iFAT.oil, 3, "lz", 0.3),
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },

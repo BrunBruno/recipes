@@ -5,6 +5,7 @@ import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 2;
 const smazonaRyba: Recipe = {
@@ -29,7 +30,7 @@ const smazonaRyba: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iFAT.oil, amount: 4, unit: "lz" },
+        ...fryingFat(iFAT.oil, 4, "lz", 0.75),
         { ing: iGRN.flour, amount: 80 },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 120 },

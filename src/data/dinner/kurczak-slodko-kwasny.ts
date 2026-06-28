@@ -4,6 +4,7 @@ import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kurczakSlodkoKwasny: Recipe = {
@@ -26,7 +27,7 @@ const kurczakSlodkoKwasny: Recipe = {
         { ing: iMET.chicken_breast, amount: 400 },
         { ing: iGRN.rice, amount: portions * 100 },
         { ing: iJAR.sweet_sour_sauce, amount: 1, unit: "opak" },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.4),
         { ing: iSPC.salt },
       ],
     },

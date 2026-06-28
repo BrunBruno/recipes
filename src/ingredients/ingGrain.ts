@@ -57,7 +57,8 @@ type IngId =
   | "dark_chocolate"
   | "chocolate_cream"
   | "nutella"
-  | "ladyfingers";
+  | "ladyfingers"
+  | "cupcake_mix";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   //// GRAINS ////
@@ -620,5 +621,16 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [6, 72, 8],
+  },
+
+  cupcake_mix: {
+    name: "Mieszanka w proszku do babeczek",
+    type: "grn",
+    color: "#eaeaea",
+    kcalPer100g: 354,
+    nutrientsPer100g: [19, 40, 4.9],
+    unitWeights: {
+      opak: 300,
+    },
   },
 };

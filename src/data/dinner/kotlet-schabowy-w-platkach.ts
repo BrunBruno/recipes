@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
@@ -25,7 +26,7 @@ const kotletySchaboweWPlatkach: Recipe = {
         { ing: iMET.pork_loin, amount: 10, unit: "plas" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.cornflakes, amount: 160 },
-        { ing: iFAT.oil, amount: 10, unit: "lz" },
+        ...fryingFat(iFAT.oil, 10, "lz", 0.55),
         { ing: iSPC.herbes_de_provence },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.sweet_paprika },

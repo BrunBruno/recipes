@@ -2,6 +2,7 @@ import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iMET } from "../../ingredients/ingMeat";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 1;
 const paluszkiRybne: Recipe = {
@@ -18,7 +19,7 @@ const paluszkiRybne: Recipe = {
       title: "",
       items: [
         { ing: iMET.fish_sticks, amount: 5 * portions, unit: "szt" },
-        { ing: iFAT.oil, amount: portions, unit: "lzi" },
+        ...fryingFat(iFAT.oil, 1, "lzi", 0.65),
       ],
     },
   ],

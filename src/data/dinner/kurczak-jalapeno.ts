@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 2;
 const kurczakJalapeno: Recipe = {
@@ -30,7 +31,7 @@ const kurczakJalapeno: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iFAT.oil, amount: 1, unit: "lz" },
+        ...fryingFat(iFAT.oil, 1, "lz", 0.4),
         { ing: iSPC.jalapeno_chicken_seasoning, amount: 1, unit: "opak" },
       ],
     },

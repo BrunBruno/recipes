@@ -4,10 +4,11 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const spaghettiBologneseFix: Recipe = {
-  name: "Spaghetti Bolognese (Fix)",
+  name: "Spaghetti Bolognese FIX",
   description:
     "Klasyczne spaghetti Bolognese z aromatycznym sosem mięsnym i startym żółtym serem - szybki i sycący obiad dla całej rodziny.",
   type: "dinner",
@@ -22,7 +23,7 @@ const spaghettiBologneseFix: Recipe = {
         { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
         { ing: iMET.ground_beef, amount: 400 },
         { ing: iDIR.yellow_cheese, amount: portions * 50 },
-        { ing: iFAT.oil, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, 2, "lz", 0.6),
         { ing: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },
       ],
     },

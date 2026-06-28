@@ -6,6 +6,7 @@ import type { Recipe } from "../../types";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
 import { dinnerSides } from "../../dinnerSides";
+import { fryingFat } from "../../utils";
 
 const portions = 5;
 const kotletPoZbojnicku: Recipe = {
@@ -27,7 +28,7 @@ const kotletPoZbojnicku: Recipe = {
         { ing: iDIR.yellow_cheese, amount: 150 },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 5, unit: "lz" },
-        { ing: iFAT.oil, amount: portions * 2 + 2, unit: "lz" },
+        ...fryingFat(iFAT.oil, portions * 2 + 2, "lz", 0.45),
         { ing: iSPC.vegetable_seasoning },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.black_pepper },

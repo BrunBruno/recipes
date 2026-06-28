@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kotletyZIndyka: Recipe = {
@@ -23,7 +24,7 @@ const kotletyZIndyka: Recipe = {
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 100 },
         { ing: iGRN.flour, amount: 50 },
-        { ing: iFAT.oil, amount: 6, unit: "lz" },
+        ...fryingFat(iFAT.oil, 6, "lz", 0.5),
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.hot_paprika },

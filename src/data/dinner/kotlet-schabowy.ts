@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 5;
 const kotletSchabowy: Recipe = {
@@ -23,7 +24,7 @@ const kotletSchabowy: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 150 },
-        { ing: iFAT.oil, amount: 10, unit: "lz" },
+        ...fryingFat(iFAT.oil, 10, "lz", 0.5),
         { ing: iSPC.thyme },
         { ing: iSPC.marjoram },
         { ing: iSPC.herbes_de_provence },

@@ -6,6 +6,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kurczakZPomidorem: Recipe = {
@@ -27,7 +28,7 @@ const kurczakZPomidorem: Recipe = {
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
         { ing: iJAR.mayonnaise, amount: 1, unit: "lz" },
-        { ing: iFAT.olive, amount: 2, unit: "lz" },
+        ...fryingFat(iFAT.olive, 2, "lz", 0.35),
         { ing: iSPC.herbes_de_provence },
         { ing: iSPC.wild_garlic },
         { ing: iSPC.sweet_paprika },

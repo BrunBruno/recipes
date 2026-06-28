@@ -784,6 +784,9 @@ input::-webkit-inner-spin-button {
     grid-template-rows: 0 auto;
     padding-bottom: 2rem;
   }
+  .recipe-details-title{
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 640px) {

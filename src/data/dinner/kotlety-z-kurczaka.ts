@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { fryingFat } from "../../utils";
 
 const portions = 3;
 const kotletyZKurczaka: Recipe = {
@@ -22,7 +23,7 @@ const kotletyZKurczaka: Recipe = {
         { ing: iMET.chicken_breast, amount: 1, unit: "opak" },
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
-        { ing: iFAT.oil, amount: 6, unit: "lz" },
+        ...fryingFat(iFAT.oil, 6, "lz", 0.45),
         { ing: iSPC.wild_garlic },
         { ing: iSPC.herbes_de_provence },
         { ing: iSPC.marjoram },
