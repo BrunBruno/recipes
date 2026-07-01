@@ -1,5 +1,6 @@
 import type { DinnerSidesNames } from "./dinnerSides";
 
+export type DayMealType = "breakfast" | "lunch" | "dinner";
 export type MealType =
   | "breakfast"
   | "dinner"
@@ -72,7 +73,8 @@ export type IngredientItem = {
 
 export type Ingredient = {
   ing: IngredientItem;
-  amount?: number | string;
+  // amount?: number | string;
+  amount?: number;
   unit?: UnitType;
   exclude?: boolean;
   invisible?: boolean;
@@ -123,4 +125,11 @@ export type Recipe = {
   extrasVeg?: ExtrasIngredientOptions;
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
+};
+
+export type DayIngredientPair = [string, number];
+export type DayIngredients = {
+  breakfast: DayIngredientPair[];
+  lunch: DayIngredientPair[];
+  dinner: DayIngredientPair[];
 };

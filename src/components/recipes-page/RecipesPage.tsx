@@ -2,13 +2,17 @@ import { useRef, useState, useEffect } from "react";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
-import type { Recipe, MealType, KeyWord } from "../../types";
+import type { Recipe, MealType, KeyWord, DayIngredients } from "../../types";
 import { keywordAliases, MealTypesData } from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
 
-function RecipesPage() {
+type RecipePageProps = {
+  setDayIngredients: React.Dispatch<React.SetStateAction<DayIngredients>>;
+};
+
+function RecipesPage({ setDayIngredients }: RecipePageProps) {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
@@ -76,7 +80,6 @@ function RecipesPage() {
   useEffect(() => {
     const handlePopState = () => {
       if (selectedRecipe) {
-        console.log("popstate", window.history.length);
         setSelectedRecipe(null);
       }
     };
@@ -187,7 +190,12 @@ function RecipesPage() {
           }}
         />
       )}
-      {selectedRecipe && <RecipeCard selectedRecipe={selectedRecipe} />}
+      {selectedRecipe && (
+        <RecipeCard
+          selectedRecipe={selectedRecipe}
+          setDayIngredients={setDayIngredients}
+        />
+      )}
 
       <div className="grid-container">
         <RecipesGrid

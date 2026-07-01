@@ -1,25 +1,72 @@
-import { useEffect, useState, type JSX } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./app.css";
 import RecipesPage from "./components/recipes-page/RecipesPage";
 import UserPage from "./components/user-page/UserPage";
 import Ingredients from "./components/ingredients/Ingredients";
 import Statistics from "./components/statistics/Statistics";
+import type { DayIngredients } from "./types";
+import {
+  STORAGE_KEY,
+  type DayRecord,
+} from "./components/user-page/user-page-data";
+import HistoryPage from "./components/history-page/HistoryPage";
+
+type Page = "user" | "recipes" | "ingredients" | "history" | "stats";
 
 function App() {
-  const [content, setContent] = useState<JSX.Element>(<RecipesPage />);
+  const [dayIngredients, setDayIngredients] = useState<DayIngredients>({
+    breakfast: [],
+    lunch: [],
+    dinner: [],
+  });
+  const [page, setPage] = useState<Page>("recipes");
+  const [history, setHistory] = useState<DayRecord[]>(() => loadDayRecords());
+
+  const prevRef = useRef(dayIngredients);
 
   useEffect(() => {
-    console.log(window.history.length);
-  }, [window.history.length]);
+    const prev = prevRef.current;
+
+    const nowEmpty =
+      dayIngredients.breakfast.length === 0 &&
+      dayIngredients.lunch.length === 0 &&
+      dayIngredients.dinner.length === 0;
+
+    const changed = JSON.stringify(prev) !== JSON.stringify(dayIngredients);
+
+    if (!nowEmpty && changed) {
+      setPage("user");
+    }
+
+    prevRef.current = dayIngredients;
+  }, [dayIngredients]);
+
+  function loadDayRecords(): DayRecord[] {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  }
 
   return (
     <main>
-      {content}
+      {page === "user" && (
+        <UserPage
+          dayIngredients={dayIngredients}
+          setDayIngredients={setDayIngredients}
+          loadDayRecords={loadDayRecords}
+          setHistory={setHistory}
+        />
+      )}
+      {page === "history" && <HistoryPage history={history} />}
+      {page === "recipes" && (
+        <RecipesPage setDayIngredients={setDayIngredients} />
+      )}
+      {page === "ingredients" && <Ingredients />}
+      {page === "stats" && <Statistics />}
       <nav>
         <div
           className="nav-item"
           onClick={() => {
-            setContent(<UserPage />);
+            setPage("user");
           }}
         >
           <svg
@@ -36,7 +83,7 @@ function App() {
         <div
           className="nav-item"
           onClick={() => {
-            setContent(<></>);
+            setPage("history");
           }}
         >
           <svg
@@ -50,7 +97,7 @@ function App() {
         <div
           className="nav-item"
           onClick={() => {
-            setContent(<RecipesPage />);
+            setPage("recipes");
           }}
         >
           <svg
@@ -64,7 +111,7 @@ function App() {
         <div
           className="nav-item"
           onClick={() => {
-            setContent(<Ingredients />);
+            setPage("ingredients");
           }}
         >
           <svg
@@ -78,7 +125,7 @@ function App() {
         <div
           className="nav-item"
           onClick={() => {
-            setContent(<Statistics />);
+            setPage("stats");
           }}
         >
           <svg

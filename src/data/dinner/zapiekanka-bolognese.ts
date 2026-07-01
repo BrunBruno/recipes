@@ -28,7 +28,7 @@ const zapiekankaBolognese: Recipe = {
         { ing: iGRN.fusilli_pasta, amount: 400 },
         { ing: iDIR.yellow_cheese, amount: 200 },
         { ing: iVEG.mushrooms, amount: 250 },
-        { ing: iVEG.tomato, amount: "1-2", unit: "szt" },
+        { ing: iVEG.tomato, amount: 2, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ing: iJAR.tomato_paste, amount: 2, unit: "lzi" },

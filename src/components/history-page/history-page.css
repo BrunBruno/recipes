@@ -1,0 +1,27 @@
+.history-page {
+  padding: 16px;
+  color: white;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-card {
+  background: #222;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.history-card h3 {
+  margin-bottom: 8px;
+}
+
+.history-macros {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}

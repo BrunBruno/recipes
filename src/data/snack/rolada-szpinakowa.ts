@@ -26,7 +26,7 @@ const roladaSzpinakowa: Recipe = {
         { ing: iMET.smoked_salmon, amount: 250 },
         { ing: iDIR.cream_cheese_horseradish, amount: 200 },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
-        { ing: iFAT.olive, amount: "2-3", unit: "lz" },
+        { ing: iFAT.olive, amount: 2, unit: "lz" },
         { ing: iSPC.nutmeg },
         { ing: iSPC.black_sesame },
         { ing: iSPC.salt },

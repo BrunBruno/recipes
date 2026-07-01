@@ -35,7 +35,7 @@ const cynamonki: Recipe = {
       title: "Lukier",
       items: [
         { ing: iOTH.powdered_sugar, amount: 1, unit: "szk" },
-        { ing: iOTH.water, amount: "2-3", unit: "lz" },
+        { ing: iOTH.water, amount: 2.5, unit: "lz" },
       ],
     },
   ],

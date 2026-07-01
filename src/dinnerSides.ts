@@ -2,6 +2,7 @@ import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
 import { iGRN } from "./ingredients/ingGrain";
 import { iJAR } from "./ingredients/ingJar";
+import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type { ExtrasIngredientGroup } from "./types";
@@ -20,6 +21,7 @@ export type DinnerSidesNames =
   | "kopytka-ready"
   | "silesian-dumplings-ready"
   ////
+  | "carrot-and-peas"
   | "steamed-vegetables"
   | "stir-fry-vegetables"
   | "green-beans-boiled"
@@ -167,6 +169,19 @@ export const dinnerSides = (
 
     //// ////
 
+    case "carrot-and-peas":
+      return {
+        title: "Marchewka z groszkiem",
+        sideName: name,
+        items: [
+          { ing: iVEG.carrot, amount: portions, unit: "szt" },
+          { ing: iJAR.canned_peas, amount: portions * 100, unit: "g" },
+          { ing: iFAT.butter, amount: portions * 0.25, unit: "lzi" },
+          { ing: iGRN.flour, amount: portions * 0.25, unit: "lz" },
+          { ing: iOTH.sugar },
+          { ing: iSPC.salt },
+        ],
+      };
     case "steamed-vegetables":
       return {
         title: "Warzywa na parze",
@@ -385,6 +400,19 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
         "Wrzuć kluski śląskie i gotuj przez około 10 minut.",
         "Po wypłynięciu i ugotowaniu odcedź.",
+      ];
+    ////
+
+    case "carrot-and-peas":
+      return [
+        "Marchewkę obierz, umyj i pokrój w kostkę.",
+        "Następnie wrzuć marchewkę do garnka i zalej wodą tylko tyle by zakrywała marchewkę.",
+        "Dodaj odrobinę soli i gotuj do miękkości pod przykryciem.",
+        "Kiedy marchew już zmięknie dodaj odsączony z zalewy groszek.",
+        "Na patelni rozpuść masło, dodajemy mąkę i mieszając smaż aż się spieni.",
+        "Zasmażką zapraw marchewkę z groszkiem.",
+        "Gotuj aż powstanie kremowy gęsty sos otaczający marchewkę.",
+        "Dopraw cukrem i solom.",
       ];
     case "steamed-vegetables":
       return [

@@ -13,7 +13,11 @@ const kurczakPoChinsku: Recipe = {
   description:
     "Szybki kurczak po chińsku z warzywami w aromatycznym sosie, podawany z ryżem. Idealny na lekki i kolorowy obiad.",
   type: "dinner",
-  images: ["kurczak-po-chinsku.jpg", "kurczak-po-chinsku-2.jpg"],
+  images: [
+    "kurczak-po-chinsku.jpg",
+    "kurczak-po-chinsku-2.jpg",
+    "kurczak-po-chinsku-3.jpg",
+  ],
   time: 30,
   portions: portions,
   executionDifficulty: 1,

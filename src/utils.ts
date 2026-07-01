@@ -189,15 +189,15 @@ export const calculateRecipeKcal = (
     let grams = 0;
     let value = amount;
 
-    if (typeof amount === "string") {
-      if (amount.includes("-")) {
-        const parts = amount.split("-").map(Number);
-        value = parts.reduce((a, b) => a + b, 0) / parts.length;
-      } else {
-        console.warn(`Incorrect amount ${amount}`);
-        continue;
-      }
-    }
+    // if (typeof amount === "string") {
+    //   if (amount.includes("-")) {
+    //     const parts = amount.split("-").map(Number);
+    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
+    //   } else {
+    //     console.warn(`Incorrect amount ${amount}`);
+    //     continue;
+    //   }
+    // }
 
     if (!value || typeof value === "string") {
       if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
@@ -242,15 +242,15 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
     let grams = 0;
     let value = amount;
 
-    if (typeof amount === "string") {
-      if (amount.includes("-")) {
-        const parts = amount.split("-").map(Number);
-        value = parts.reduce((a, b) => a + b, 0) / parts.length;
-      } else {
-        console.warn(`Incorrect amount ${amount}`);
-        continue;
-      }
-    }
+    // if (typeof amount === "string") {
+    //   if (amount.includes("-")) {
+    //     const parts = amount.split("-").map(Number);
+    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
+    //   } else {
+    //     console.warn(`Incorrect amount ${amount}`);
+    //     continue;
+    //   }
+    // }
 
     if (!value || typeof value === "string") {
       if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
@@ -297,15 +297,15 @@ export const calculateRecipeNutrients = (
     let grams = 0;
     let value = amount;
 
-    if (typeof amount === "string") {
-      if (amount.includes("-")) {
-        const parts = amount.split("-").map(Number);
-        value = parts.reduce((a, b) => a + b, 0) / parts.length;
-      } else {
-        console.warn(`Incorrect amount ${amount}`);
-        continue;
-      }
-    }
+    // if (typeof amount === "string") {
+    //   if (amount.includes("-")) {
+    //     const parts = amount.split("-").map(Number);
+    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
+    //   } else {
+    //     console.warn(`Incorrect amount ${amount}`);
+    //     continue;
+    //   }
+    // }
 
     if (!value || typeof value === "string") {
       if (ing.type === "fat") {
@@ -368,15 +368,15 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
     let grams = 0;
     let value = amount;
 
-    if (typeof amount === "string") {
-      if (amount.includes("-")) {
-        const parts = amount.split("-").map(Number);
-        value = parts.reduce((a, b) => a + b, 0) / parts.length;
-      } else {
-        console.warn(`Incorrect amount ${amount}`);
-        continue;
-      }
-    }
+    // if (typeof amount === "string") {
+    //   if (amount.includes("-")) {
+    //     const parts = amount.split("-").map(Number);
+    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
+    //   } else {
+    //     console.warn(`Incorrect amount ${amount}`);
+    //     continue;
+    //   }
+    // }
 
     if (!value || typeof value === "string") {
       continue;
@@ -569,12 +569,13 @@ export const formatUnit = (ingredient: Ingredient): string => {
   if (!ingredient.amount || !ingredient.unit) return " g";
 
   let count: number;
-  if (typeof ingredient.amount === "string") {
-    const match = ingredient.amount.match(/^(\d+)\s*-\s*\d+/);
-    count = match ? (parseInt(match[0], 10) + parseInt(match[1], 10)) / 2 : 1;
-  } else {
-    count = ingredient.amount;
-  }
+  // if (typeof ingredient.amount === "string") {
+  //   const match = ingredient.amount.match(/^(\d+)\s*-\s*\d+/);
+  //   count = match ? (parseInt(match[0], 10) + parseInt(match[1], 10)) / 2 : 1;
+  // } else {
+  //   count = ingredient.amount;
+  // }
+  count = ingredient.amount;
 
   const unit = ingredient.unit;
 

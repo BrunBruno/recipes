@@ -32,8 +32,8 @@ const burgerDrwala: Recipe = {
       items: [
         { ing: iDIR.lilliputian_cheese, amount: 350 },
         { ing: iGRN.cheese_snacks, amount: 1, unit: "opak" },
-        { ing: iGRN.breadcrumbs, amount: "0-2", unit: "lz" },
-        { ing: iMET.egg, amount: "1-2", unit: "szt" },
+        { ing: iGRN.breadcrumbs, amount: 1, unit: "lz" },
+        { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
       ],
     },

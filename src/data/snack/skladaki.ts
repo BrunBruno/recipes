@@ -27,7 +27,7 @@ const skladaki: Recipe = {
       items: [
         { ing: iGRN.tortilla, amount: 4, unit: "szt" },
         { ing: iMET.salami, amount: 12, unit: "plas" },
-        { ing: iDIR.yellow_cheese, amount: "0.5-1", unit: "kst" },
+        { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
         { ing: iSPC.oregano },
@@ -36,9 +36,9 @@ const skladaki: Recipe = {
     {
       title: "Sos",
       items: [
-        { ing: iVEG.garlic, amount: "1-2", unit: "zbk" },
-        { ing: iJAR.tomato_paste, amount: "3-4", unit: "lzi" },
-        { ing: iJAR.ketchup, amount: "0-1", unit: "lzi" },
+        { ing: iVEG.garlic, amount: 1, unit: "zbk" },
+        { ing: iJAR.tomato_paste, amount: 3, unit: "lzi" },
+        { ing: iJAR.ketchup, amount: 1, unit: "lzi" },
         { ing: iFAT.oil, amount: 0.5, unit: "lzi" },
         { ing: iSPC.basil },
       ],

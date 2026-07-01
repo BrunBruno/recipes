@@ -18,7 +18,7 @@ const kremMaslany: Recipe = {
       items: [
         { ing: iFAT.butter, amount: 200 },
         { ing: iDIR.condensed_milk, amount: 200 },
-        { ing: iOTH.vanilla_extract, amount: "1-2", unit: "lzi" },
+        { ing: iOTH.vanilla_extract, amount: 2, unit: "lzi" },
         { ing: iOTH.food_coloring },
       ],
     },
