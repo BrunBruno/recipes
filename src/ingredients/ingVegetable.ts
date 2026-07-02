@@ -10,6 +10,7 @@ type IngId =
   | "cucumber"
   | "bell_pepper"
   | "chili_pepper"
+  | "peperoni_pepper"
   | "red_bell_pepper"
   | "yellow_bell_pepper"
   | "green_bell_pepper"
@@ -19,6 +20,7 @@ type IngId =
   | "leek"
   | "garlic"
   | "celery_root"
+  | "ginger"
   | "red_onion"
   | "radish"
   | "beetroot"
@@ -29,10 +31,12 @@ type IngId =
   | "chives"
   | "parsley"
   | "spring_onion"
+  | "cress"
   | "lettuce"
   | "lettuce_romaine"
   | "lettuce_iceberg"
   | "lettuce_butter"
+  | "cabbage"
   | "chinese_cabbage"
   | "red_cabbage"
   | "savoy_cabbage"
@@ -154,6 +158,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 6, 1],
+    price: 19,
   },
 
   chili_pepper: {
@@ -166,6 +171,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 15,
     },
     nutrientsPer100g: [0.4, 9, 2],
+  },
+
+  peperoni_pepper: {
+    name: "Papryka peperoni",
+    type: "veg",
+    subType: "pep",
+    color: "#66BB6A",
+    kcalPer100g: 31,
+    unitWeights: {
+      szt: 25,
+    },
+    price: 40,
+    nutrientsPer100g: [0.3, 6, 1],
   },
 
   red_bell_pepper: {
@@ -205,6 +223,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.2, 10, 0.9],
+    price: 5,
   },
 
   baby_carrot: {
@@ -250,6 +269,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 200,
     },
     nutrientsPer100g: [0.3, 9.2, 1.5],
+  },
+
+  ginger: {
+    name: "Imbir",
+    type: "veg",
+    subType: "gng",
+    color: "#D7A86E",
+    kcalPer100g: 80,
+    unitWeights: {
+      szt: 50,
+      plas: 5,
+    },
+    nutrientsPer100g: [0.8, 17.8, 1.8],
+    price: 19,
   },
 
   radish: {
@@ -341,6 +374,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.8, 7.3, 2.6],
   },
 
+  cress: {
+    name: "Rzeżucha",
+    type: "veg",
+    subType: "fhr",
+    color: "#66BB6A",
+    kcalPer100g: 32,
+    unitWeights: {
+      g: 10,
+    },
+    nutrientsPer100g: [0.7, 5.5, 2.6],
+  },
+
   lettuce: {
     name: "Sałata",
     type: "veg",
@@ -391,6 +436,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [1.4, 0.2, 2.9],
+  },
+
+  cabbage: {
+    name: "Kapusta",
+    type: "veg",
+    subType: "gee",
+    color: "#7CB342",
+    kcalPer100g: 25,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [0.1, 5.8, 1.3],
   },
 
   chinese_cabbage: {

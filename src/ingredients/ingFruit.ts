@@ -145,6 +145,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 11, 1.1],
+    price: 15,
   },
 
   plum: {
@@ -389,6 +390,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [0.3, 14, 0.7],
+    price: 55,
   },
 
   cranberry: {

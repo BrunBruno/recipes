@@ -33,6 +33,7 @@ type IngId =
   | "ground_beef"
   | "beef_steak"
   | "beef_round"
+  | "mutton"
 
   //// PROCESSED ////
   | "ham_slices"
@@ -83,6 +84,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.5, 0, 23.1],
+    price: 22,
   },
 
   chicken_tenderloin: {
@@ -305,6 +307,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [23, 0, 17],
+    price: 22,
   },
 
   stew_pork: {
@@ -395,6 +398,19 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   //////////////////////////////
 
+  mutton: {
+    name: "Jagnięcina",
+    type: "met",
+    color: "#B71C1C",
+    kcalPer100g: 294,
+    unitWeights: {
+      g: 500,
+    },
+    nutrientsPer100g: [21, 0, 25],
+  },
+
+  //////////////////////////////
+
   burger_patties: {
     name: "Kotleciki hamburgerowe",
     type: "met",
@@ -478,12 +494,14 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "ham",
     color: "#D97B66",
-    kcalPer100g: 125,
+    kcalPer100g: 121,
     unitWeights: {
       plas: 15,
-      opak: 140,
+      opak: 250,
     },
-    nutrientsPer100g: [2, 6, 19],
+    nutrientsPer100g: [4, 2.8, 18],
+    price: 40,
+    verified: true,
   },
 
   ham_canned: {

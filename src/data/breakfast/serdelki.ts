@@ -18,8 +18,8 @@ const serdelki: Recipe = {
       title: "",
       items: [
         { ing: iMET.serdelki, amount: 6, unit: "szt" },
-        { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-        { ing: iFAT.butter, amount: 10 },
+        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iFAT.butter, amount: 5 },
         { ing: iJAR.mustard, amount: 2, unit: "lzi" },
       ],
     },

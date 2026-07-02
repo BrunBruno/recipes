@@ -3,12 +3,14 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// LIQUIDS ////
   | "water"
+  | "warm_water"
   | "spirit"
   | "food_coloring"
   | "vanilla_extract"
   | "maple_syrup"
   | "rosol"
   | "maggi"
+  | "soy_sauce"
   | "meat_stock"
 
   //// SUGARS ////
@@ -29,6 +31,22 @@ export const iOTH: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
   water: {
     name: "Woda",
+    type: "oth",
+    subType: "liq",
+    color: "#64B5F6",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0, 0, 0],
+    verified: true,
+  },
+
+  warm_water: {
+    name: "Ciepła woda",
     type: "oth",
     subType: "liq",
     color: "#64B5F6",
@@ -118,6 +136,18 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [0, 3, 1],
+  },
+
+  soy_sauce: {
+    name: "Sos sojowy",
+    type: "oth",
+    subType: "liq",
+    color: "#5D4037",
+    kcalPer100g: 53,
+    unitWeights: {
+      ml: 15,
+    },
+    nutrientsPer100g: [0.6, 4.9, 8],
   },
 
   meat_stock: {

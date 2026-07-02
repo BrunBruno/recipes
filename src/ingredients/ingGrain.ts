@@ -310,6 +310,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 350,
     },
     nutrientsPer100g: [3, 54, 8.5],
+    price: 4.2,
   },
 
   multigrain_kaiser_roll: {

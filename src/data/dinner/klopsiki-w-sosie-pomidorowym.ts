@@ -33,7 +33,7 @@ const klopsikiWSosiePomidorowym: Recipe = {
         { ing: iGRN.breadcrumbs, amount: 4, unit: "lz" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iOTH.water, amount: 300, unit: "ml" },
-        { ing: iSPC.winiary_tomato_sauce, amount: 1, unit: "opak" },
+        { ing: iSPC.winiary_tomato_sauce_fix, amount: 1, unit: "opak" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

@@ -32,7 +32,7 @@ const kurczakJalapeno: Recipe = {
           selected: 0,
         },
         ...fryingFat(iFAT.oil, 1, "lz", 0.4),
-        { ing: iSPC.jalapeno_chicken_seasoning, amount: 1, unit: "opak" },
+        { ing: iSPC.knorr_jalapeno_chicken_fix, amount: 1, unit: "opak" },
       ],
     },
   ],

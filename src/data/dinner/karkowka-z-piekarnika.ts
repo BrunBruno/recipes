@@ -22,7 +22,7 @@ const karkowkaZPiekarnika: Recipe = {
         { ing: iVEG.potato, amount: 600 },
         { ing: iVEG.carrot, amount: 200 },
         { ing: iJAR.beets_whole_vinegar, amount: portions * 200 },
-        { ing: iSPC.winiary_pork_neck, amount: 1, unit: "opak" },
+        { ing: iSPC.winiary_pork_neck_fix, amount: 1, unit: "opak" },
       ],
     },
   ],

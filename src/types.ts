@@ -68,6 +68,7 @@ export type IngredientItem = {
   kcalPer100g: number;
   unitWeights?: Partial<Record<UnitType, number>>;
   nutrientsPer100g: [number, number, number]; // fat-carb-prot
+  price?: number; // zl/kg
   verified?: boolean;
 };
 

@@ -166,6 +166,12 @@ function Ingredients({}: IngredientsProps) {
                               </div>
                             )}
 
+                            {item.price && (
+                              <div className="ing-price">
+                                <strong>{item.price.toFixed(2)}</strong> zł/kg
+                              </div>
+                            )}
+
                             <div className="ingredient-usage">
                               Użyto w przepisach:{" "}
                               <strong

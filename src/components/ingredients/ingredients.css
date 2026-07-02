@@ -190,6 +190,10 @@
   margin-right: 0.5rem;
 }
 
+.ing-price {
+  border-bottom: solid 1px #333;
+}
+
 .ingredient-usage strong.none {
   color: #e03131;
 }

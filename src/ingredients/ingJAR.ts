@@ -29,6 +29,7 @@ type IngId =
   | "frozen_spinach"
   | "frozen_vegetable_mix"
   | "frozen_stir_fry"
+  | "frozen_stir_fry_oriental"
   | "frozen_green_beans"
   | "strawberry_frozen"
 
@@ -313,6 +314,17 @@ export const iJAR: Record<IngId, IngredientItem> = {
     color: "#66BB6A",
     kcalPer100g: 50,
     nutrientsPer100g: [0.7, 8.5, 2.5],
+  },
+
+  frozen_stir_fry_oriental: {
+    name: "Warzywa na patelnię orientalne",
+    type: "jar",
+    subType: "fro",
+    color: "#66BB6A",
+    kcalPer100g: 33,
+    nutrientsPer100g: [0.3, 3.9, 2.1],
+    price: 16,
+    verified: true,
   },
 
   frozen_green_beans: {

@@ -429,12 +429,22 @@ export const countIngredientUsage = (recipes: Recipe[]) => {
   recipes.forEach((recipe) => {
     recipe.ingredients.forEach((group) => {
       group.items.forEach((item) => {
-        const active = getActiveIngredient(item);
+        item = item as IngredientChoice;
+        if (item.type === "choice") {
+          const choiceItem = item as IngredientChoice;
 
+          choiceItem.options.forEach((opt) => {
+            const key = opt.ing.name;
+            usage[key] = (usage[key] ?? 0) + 1;
+          });
+
+          return;
+        }
+
+        const active = getActiveIngredient(item);
         if (active.exclude) return;
 
         const key = active.ing.name;
-
         usage[key] = (usage[key] ?? 0) + 1;
       });
     });
@@ -509,14 +519,11 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
 };
 
 export const countUsedIngredients = (usages: Record<string, number>) => {
-  const usage: Record<string, number> = {
-    yes: 0,
-    no: 0,
-  };
+  const usage = { yes: 0, no: 0 };
 
   for (const collection of ingredientCollections) {
     for (const ingredient of Object.values(collection)) {
-      usages[ingredient.name] > 0 ? usage["yes"]++ : usage["no"]++;
+      usages[ingredient.name] > 0 ? usage.yes++ : usage.no++;
     }
   }
 

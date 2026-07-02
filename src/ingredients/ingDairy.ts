@@ -11,6 +11,7 @@ type IngId =
   | "yogurt_natural"
   | "greek_yogurt"
   | "strawberry_yogurt"
+  | "vanilla_skyr"
   | "kefir"
   | "cream_12"
   | "cream_18"
@@ -38,7 +39,8 @@ type IngId =
   | "parmigiano_reggiano"
   | "parmesan"
   | "cheddar_cheese"
-  | "oscypek";
+  | "oscypek"
+  | "tofu";
 
 export const iDIR: Record<IngId, IngredientItem> = {
   milk: {
@@ -145,6 +147,19 @@ export const iDIR: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [2, 14, 3],
+  },
+
+  vanilla_skyr: {
+    name: "Skyr waniliowy",
+    type: "dir",
+    color: "#F0F4C3",
+    kcalPer100g: 82,
+    unitWeights: {
+      szt: 150,
+    },
+    nutrientsPer100g: [0, 11, 9.6],
+    price: 22.6,
+    verified: true,
   },
 
   kefir: {
@@ -475,5 +490,17 @@ export const iDIR: Record<IngId, IngredientItem> = {
       plas: 25,
     },
     nutrientsPer100g: [32, 2, 24],
+  },
+
+  tofu: {
+    name: "Tofu",
+    type: "dir",
+    subType: "che",
+    color: "#E0E0E0",
+    kcalPer100g: 144,
+    unitWeights: {
+      g: 180,
+    },
+    nutrientsPer100g: [8, 2, 15],
   },
 };
