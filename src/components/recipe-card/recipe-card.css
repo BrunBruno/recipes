@@ -94,11 +94,8 @@
 
 .recipe-details-daily {
   padding: 1rem 0;
-}
-
-.recipe-daily-chart {
   margin: auto;
-  width: 90%;
+  width: 100%;
 }
 
 .params-items {
@@ -789,15 +786,11 @@ input::-webkit-inner-spin-button {
   .recipe-ingredient-group.main-group {
     grid-column: span 4;
   }
-
-  .recipe-daily-chart {
-    width: 100%;
-  }
 }
 
 @media (max-width: 960px) {
   .recipe-details {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     inset: 0;
     grid-template-rows: 280px auto;
@@ -855,10 +848,6 @@ input::-webkit-inner-spin-button {
   .recipe-details-image {
     height: 280px;
   }
-
-  .recipe-daily-chart {
-    width: 90%;
-  }
 }
 
 @media (max-width: 820px) {
@@ -867,12 +856,14 @@ input::-webkit-inner-spin-button {
   }
 
   .add-to-day {
-    display: grid;
-    grid-template-rows: 0 auto;
     padding-bottom: 2rem;
   }
+
   .recipe-details-title {
     pointer-events: none;
+  }
+  .recipe-details.collapsed .recipe-details-title {
+    pointer-events: all;
   }
 }
 

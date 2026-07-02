@@ -49,6 +49,7 @@ type IngId =
   | "grain_coffee"
 
   //// PROCESSED ////
+  | "oat_flakes"
   | "cornflakes"
   | "cheese_snacks"
 
@@ -531,6 +532,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
   },
 
   //// PROCESSED ////
+
+  oat_flakes: {
+    name: "Płatki owsiane",
+    type: "grn",
+    color: "#D8B589",
+    kcalPer100g: 364,
+    nutrientsPer100g: [6.9, 55.1, 14.2],
+    unitWeights: {
+      szk: 120,
+      opak: 500,
+    },
+    verified: true,
+  },
 
   cornflakes: {
     name: "Płatki kukurydziane",

@@ -1,13 +1,10 @@
 .user-page {
   margin: 0;
-  /* padding: 2rem; */
-  /* padding-top: 7rem; */
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  height: calc(100vh - 5rem);
+  height: calc(100dvh - 5rem);
   overflow: hidden;
-  /* gap: 2rem; */
 }
 
 .user-page h1 {
@@ -22,13 +19,10 @@
 }
 
 .meal-panel {
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   border: 0.2rem solid #333;
   height: calc(100vh - 5.4rem);
-  /* gap: 16px; */
 }
 
 .meal-card {
@@ -42,7 +36,6 @@
 }
 
 .meal-list {
-  /* display: flex; */
   gap: 0.5rem;
   padding: 0.5rem;
   overflow-y: auto;
@@ -50,9 +43,8 @@
 }
 
 .meal-ing {
-  display: inline-flex;
+  display: inline-block;
   margin: 0.25rem 0.5rem;
-  /* background-color: #f0f; */
   height: fit-content;
   background-color: #000;
   padding: 0.25rem 0.5rem;
@@ -69,8 +61,26 @@
   }
 }
 
-.meal-ing svg {
+.meal-ing-grid {
+  display: grid;
+  grid-template-columns: 2rem 4rem;
+}
+
+.meal-ing-grid svg {
   height: 1.2rem;
+  margin: auto;
+}
+
+.meal-ing-grid span:nth-child(2) {
+  font-size: 0.9rem;
+}
+
+.meal-ing-grid span:nth-child(3) {
+  text-align: center;
+  grid-column: 1/-1;
+  font-size: 0.7rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .meal-card h3 {
@@ -139,6 +149,7 @@
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #eaeaea;
 }
 
 .save-btn:hover {
@@ -204,4 +215,63 @@
   margin-top: 12px;
   max-height: 300px;
   overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .user-page {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    overflow: visible;
+  }
+
+  .meal-panel {
+    grid-template-rows: none;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    height: auto;
+  }
+
+  .meal-card {
+    /* grid-template-columns: 6rem 1fr 3rem; */
+    grid-template-columns: 0 1fr 3rem;
+    border: none;
+    height: auto;
+    min-height: 80px;
+    max-height: 240px;
+  }
+
+  .summary-card {
+    border: none;
+    height: 100%;
+  }
+
+  .meal-card h3 {
+    width: 0;
+    opacity: 0;
+  }
+  /* .meal-card h3 svg {
+    height: 3rem;
+  } */
+
+  .modal {
+    width: 90%;
+    margin-top: 4rem;
+  }
+
+  .modal h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal button,
+  .modal select,
+  .portions-input input {
+    font-size: 1.2rem;
+  }
+
+  .modal-ingredient-list {
+    grid-template-columns: 1fr;
+    max-height: 200px;
+  }
 }

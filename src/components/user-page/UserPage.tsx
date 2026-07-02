@@ -1,5 +1,10 @@
 import { useMemo, useState } from "react";
-import type { DayIngredients, DayMealType, IngredientItem } from "../../types";
+import type {
+  DayIngredientPair,
+  DayIngredients,
+  DayMealType,
+  IngredientItem,
+} from "../../types";
 import "./user-page.css";
 import MealPanelIcon from "../../assets/mealPanelIcon";
 import UtilsIcon from "../../assets/utilsIcon";
@@ -122,6 +127,30 @@ export default function UserPage({
     setHistory(updated);
   }
 
+  const renderIngGroup = (group: DayIngredientPair[]) => {
+    return (
+      <div className="meal-list">
+        {mapIngredients(group).map(({ ingredient, grams }) => (
+          <div
+            key={`${ingredient!.name}${grams}`}
+            className="meal-ing"
+            style={{ color: ingredient!.color }}
+          >
+            <div className="meal-ing-grid">
+              <IngredientIcon
+                ingType={ingredient!.type}
+                subType={ingredient!.subType}
+                color={ingredient!.color}
+              />
+              <span>{grams.toFixed(1)} g</span>
+              <span>{ingredient!.name}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="user-page">
       <h1>Moje posiłki</h1>
@@ -133,25 +162,7 @@ export default function UserPage({
             <span>Śniadanie</span>
           </h3>
 
-          <div className="meal-list">
-            {mapIngredients(dayIngredients.breakfast).map(
-              ({ ingredient, grams }) => (
-                <div
-                  key={ingredient!.name}
-                  className="meal-ing"
-                  style={{ color: ingredient!.color }}
-                >
-                  <IngredientIcon
-                    ingType={ingredient!.type}
-                    subType={ingredient!.subType}
-                    color={ingredient!.color}
-                  />
-                  {ingredient!.name}: {grams.toFixed(1)} g
-                  {/* {grams.toFixed(1)} g */}
-                </div>
-              ),
-            )}
-          </div>
+          {renderIngGroup(dayIngredients.breakfast)}
 
           <button
             onClick={() => {
@@ -169,25 +180,7 @@ export default function UserPage({
             <span>Obiad</span>
           </h3>
 
-          <div className="meal-list">
-            {mapIngredients(dayIngredients.lunch).map(
-              ({ ingredient, grams }) => (
-                <div
-                  key={ingredient!.name}
-                  className="meal-ing"
-                  style={{ color: ingredient!.color }}
-                >
-                  <IngredientIcon
-                    ingType={ingredient!.type}
-                    subType={ingredient!.subType}
-                    color={ingredient!.color}
-                  />
-                  {ingredient!.name}: {grams.toFixed(1)} g
-                  {/* {grams.toFixed(1)} g */}
-                </div>
-              ),
-            )}
-          </div>
+          {renderIngGroup(dayIngredients.lunch)}
 
           <button
             onClick={() => {
@@ -205,26 +198,7 @@ export default function UserPage({
             <span>Kolacja</span>
           </h3>
 
-          <div className="meal-list">
-            {mapIngredients(dayIngredients.dinner).map(
-              ({ ingredient, grams }) => (
-                <div
-                  key={ingredient!.name}
-                  className="meal-ing"
-                  style={{ color: ingredient!.color }}
-                >
-                  <IngredientIcon
-                    ingType={ingredient!.type}
-                    subType={ingredient!.subType}
-                    color={ingredient!.color}
-                  />
-                  {ingredient!.name}: {grams.toFixed(1)} g
-                  {/* {grams.toFixed(1)} g */}
-                </div>
-              ),
-            )}
-          </div>
-
+          {renderIngGroup(dayIngredients.dinner)}
           <button
             onClick={() => {
               setSelectedMealType("dinner");

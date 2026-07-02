@@ -2,7 +2,7 @@ import "./recipes-grid.css";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import type { Recipe } from "../../types";
-import { calculateRecipeKcal, hexToRgb, MealTypesData } from "../../utils";
+import { calculateRecipeKcal, MealTypesData } from "../../utils";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -13,32 +13,17 @@ type RecipesGridProps = {
 
 function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
   const [disableHover, setDisableHover] = useState(false);
-  const [listView, setListView] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        setListView((prev) => !prev);
-      }
-    };
-
-    window.addEventListener("keydown", handleKey);
-
-    return () => {
-      window.removeEventListener("keydown", handleKey);
-    };
-  }, []);
 
   useEffect(() => {
     const check = () => {
-      setDisableHover(window.innerWidth <= 960 || listView);
+      setDisableHover(window.innerWidth <= 960);
     };
 
     check();
     window.addEventListener("resize", check);
 
     return () => window.removeEventListener("resize", check);
-  }, [listView]);
+  }, []);
 
   const setRecipe = (recipe: Recipe) => {
     window.history.pushState({ recipeModal: true }, "");
@@ -47,7 +32,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
   };
 
   return (
-    <div className={`recipes-grid ${listView ? "list-view" : ""}`}>
+    <div className={`recipes-grid`}>
       <AnimatePresence mode="popLayout">
         {filteredRecipes.map((recipe) => (
           <motion.div
@@ -74,9 +59,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
             <div
               className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
               style={{
-                backgroundImage: listView
-                  ? `linear-gradient(170deg, rgba(0,0,0,0.1) 40%,rgba(${hexToRgb(MealTypesData[recipe.type].color)},0.2))`
-                  : `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4)),
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4)),
                      url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
               }}
             ></div>

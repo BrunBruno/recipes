@@ -365,7 +365,10 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Odcedź i posyp świeżym koperkiem.",
       ];
     case "boiled-potatoes-dry":
-      return ["Ugotuj ziemniaki w osolonej wodzie do miękkości."];
+      return [
+        "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
+        "Polej ziemniaki sosem z przygotowanego dania.",
+      ];
     case "mashed-potatoes":
       return [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",

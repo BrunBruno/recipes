@@ -1,11 +1,13 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
+const portions = 3;
 const nalesniki: Recipe = {
   name: "Naleśniki",
   description:
@@ -18,7 +20,7 @@ const nalesniki: Recipe = {
     "nalesniki-4.jpg",
   ],
   time: 20,
-  portions: 4,
+  portions: portions,
   executionDifficulty: null,
   ingredients: [
     {
@@ -30,7 +32,49 @@ const nalesniki: Recipe = {
         { ing: iOTH.water, amount: 100, unit: "ml" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iOTH.sugar, amount: 1, unit: "lz" },
+        {
+          type: "choice",
+          options: [
+            {
+              ing: iGRN.chocolate_cream,
+              amount: portions * 30,
+            },
+            {
+              ing: iGRN.nutella,
+              amount: portions * 30,
+            },
+            {
+              ing: iOTH.maple_syrup,
+              amount: portions * 20,
+            },
+            {
+              ing: iDIR.whipped_cream,
+              amount: portions * 35,
+            },
+            {
+              ing: iJAR.jam_strawberry,
+              amount: portions * 25,
+            },
+            {
+              ing: iFAT.peanut_butter,
+              amount: portions * 25,
+            },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.salt },
+      ],
+    },
+    {
+      title: "Proponowane dodatki",
+      isAdd: true,
+      items: [
+        { ing: iGRN.chocolate_cream, exclude: true },
+        { ing: iGRN.nutella, exclude: true },
+        { ing: iOTH.maple_syrup, exclude: true },
+        { ing: iDIR.whipped_cream, exclude: true },
+        { ing: iJAR.jam_strawberry, exclude: true },
+        { ing: iFAT.peanut_butter, exclude: true },
       ],
     },
   ],

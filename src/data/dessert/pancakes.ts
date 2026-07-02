@@ -7,6 +7,7 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
+const portions = 3;
 const pancakes: Recipe = {
   name: "Pancakes",
   description:
@@ -19,7 +20,7 @@ const pancakes: Recipe = {
     "pancakes-4.jpg",
   ],
   time: 30,
-  portions: 3,
+  portions: portions,
   executionDifficulty: 2,
   ingredients: [
     {
@@ -32,6 +33,36 @@ const pancakes: Recipe = {
         { ing: iOTH.baking_powder, amount: 1, unit: "lzi" },
         { ing: iOTH.baking_soda, amount: 1, unit: "lzi" },
         { ing: iFAT.oil, amount: 0.25, unit: "szk" },
+        {
+          type: "choice",
+          options: [
+            {
+              ing: iGRN.chocolate_cream,
+              amount: portions * 30,
+            },
+            {
+              ing: iGRN.nutella,
+              amount: portions * 30,
+            },
+            {
+              ing: iOTH.maple_syrup,
+              amount: portions * 20,
+            },
+            {
+              ing: iDIR.whipped_cream,
+              amount: portions * 35,
+            },
+            {
+              ing: iJAR.jam_strawberry,
+              amount: portions * 25,
+            },
+            {
+              ing: iFAT.peanut_butter,
+              amount: portions * 25,
+            },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.salt },
       ],
     },

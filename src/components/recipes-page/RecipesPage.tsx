@@ -93,7 +93,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Shift") {
+      if (e.key === "Enter") {
         setFilterUnused((prev) => !prev);
       }
     };

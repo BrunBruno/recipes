@@ -170,6 +170,10 @@
     border-radius: 0;
   }
 
+  .recipe-card:hover .recipe-card-bg {
+    transform: scale(1);
+  }
+
   .recipe-card:hover {
     transform: translateY(0);
   }

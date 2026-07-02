@@ -62,6 +62,20 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   const [mealType, setMealType] = useState<DayMealType>("breakfast");
 
   useEffect(() => {
+    if (selectedRecipe.type === "breakfast") {
+      setMealType("breakfast");
+    } else if (
+      selectedRecipe.type === "dinner" ||
+      selectedRecipe.type === "soup" ||
+      selectedRecipe.type === "dessert"
+    ) {
+      setMealType("lunch");
+    } else {
+      setMealType("dinner");
+    }
+  }, [selectedRecipe.type]);
+
+  useEffect(() => {
     setRecipeState(structuredClone(selectedRecipe));
   }, [selectedRecipe]);
 
@@ -351,7 +365,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                         <span className="ingredient-amount">
                           {item.amount}
                           <span className="ingredient-unit">
-                            {item.amount ? formatUnit(item) : ""}
+                            {item.amount ? formatUnit(item) : "g"}
                           </span>
                         </span>
                       </li>
@@ -373,7 +387,9 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
       values.push(parseFloat(nutrients[nut]));
     }
     const data = values.map((val, i) => (val / DAILY_NUTRIENTS[i]) * 100);
-    const maxRange = Math.round(Math.max(...data) + 10);
+    const maxRange = Math.round(
+      Math.max(...data) + 10 * (portions > 0 ? portions : 1),
+    );
 
     const barData = {
       labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko"],
@@ -393,11 +409,12 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
           options={{
             scales: {
               y: {
+                position: "right",
                 beginAtZero: true,
                 max: maxRange,
                 ticks: {
-                  display: false,
-                  // callback: (val) => val + "%",
+                  display: true,
+                  callback: (val) => val + "%",
                 },
                 grid: {
                   display: true,
@@ -553,6 +570,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 ? "porcje."
                 : "porcji."}
           </section>
+
           <section className="ingredients-section">
             <div className={`${"ingredients-container"}`}>
               {recipeState.ingredients.map((group, groupIndex) => (
@@ -588,7 +606,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                               <span className="ingredient-amount">
                                 {active.amount}
                                 <span className="ingredient-unit">
-                                  {active.unit ? formatUnit(active) : ""}
+                                  {active.amount ? formatUnit(active) : ""}
                                 </span>
                               </span>
 
@@ -646,6 +664,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 generateExtras()}
             </div>
           </section>
+
           <section className="steps-section">
             <h3>Sposób przygotowania</h3>
             {Array.isArray(selectedRecipe.steps) &&
@@ -735,7 +754,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                     </button>
                     <input
                       readOnly
-                      value={grams}
+                      value={grams.toFixed(1)}
                       onChange={(e) => updateFromGrams(Number(e.target.value))}
                     />
                     <button
