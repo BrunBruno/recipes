@@ -13,9 +13,9 @@ const kottuRoti: Recipe = {
   description:
     "Klasyczne lankijskie danie uliczne z porwanymi plackami roti, smażonymi z warzywami, jajkami oraz aromatycznymi przyprawami curry.",
   type: "dinner",
-  images: [""],
-  time: 60,
-  portions: 4,
+  images: ["kottu-roti.jpg"],
+  time: 70,
+  portions: 3,
   executionDifficulty: 4,
   ingredients: [
     {
@@ -53,12 +53,15 @@ const kottuRoti: Recipe = {
       items: [
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
         { ing: iVEG.carrot, amount: 1, unit: "szt" },
         { ing: iVEG.cabbage, amount: 0.5, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iVEG.ginger, amount: 20 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
+        { ing: iVEG.spring_onion },
+        { ing: iVEG.lemongrass },
+        { ing: iVEG.fresh_coriander },
       ],
     },
     {

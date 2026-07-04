@@ -32,6 +32,9 @@ type IngId =
   | "parsley"
   | "spring_onion"
   | "cress"
+  | "fresh_basil"
+  | "lemongrass"
+  | "fresh_coriander"
   | "lettuce"
   | "lettuce_romaine"
   | "lettuce_iceberg"
@@ -363,7 +366,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   spring_onion: {
-    name: "Cebulka Zielona",
+    name: "Cebulka zielona",
     type: "veg",
     subType: "fhr",
     color: "#81C784",
@@ -384,6 +387,44 @@ export const iVEG: Record<IngId, IngredientItem> = {
       g: 10,
     },
     nutrientsPer100g: [0.7, 5.5, 2.6],
+  },
+
+  fresh_basil: {
+    name: "Bazylia",
+    type: "veg",
+    subType: "fhr",
+    color: "#43A047",
+    kcalPer100g: 23,
+    unitWeights: {
+      lz: 2,
+      peto: 30,
+    },
+    nutrientsPer100g: [0.6, 2.7, 3.2],
+  },
+
+  lemongrass: {
+    name: "Trawa cytrynowa",
+    type: "veg",
+    subType: "fhr",
+    color: "#8BC34A",
+    kcalPer100g: 99,
+    unitWeights: {
+      szt: 20,
+    },
+    nutrientsPer100g: [0.5, 25.3, 1.8],
+  },
+
+  fresh_coriander: {
+    name: "Świeża kolendra",
+    type: "veg",
+    subType: "fhr",
+    color: "#4CAF50",
+    kcalPer100g: 23,
+    unitWeights: {
+      lz: 1,
+      peto: 30,
+    },
+    nutrientsPer100g: [0.5, 3.7, 2.1],
   },
 
   lettuce: {

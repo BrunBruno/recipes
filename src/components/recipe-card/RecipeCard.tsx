@@ -15,6 +15,7 @@ import type {
   DayIngredients,
   DayMealType,
   Ingredient,
+  IngredientChoice,
   Recipe,
 } from "../../types";
 import {
@@ -216,15 +217,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     setMealType(value);
   };
 
-  function isChoice(item: any) {
-    return item.type === "choice";
-  }
-  function resolveIngredient(item: any): Ingredient {
-    if (isChoice(item)) {
-      return item.options[item.selected];
-    }
-    return item as Ingredient;
-  }
   function toGrams(item: Ingredient) {
     const raw = item.amount;
 
@@ -238,19 +230,53 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
 
     return weight ? amount * weight : amount;
   }
-  const onAddToDay = () => {
-    const dayIngredients: DayIngredientPair[] = [];
+  function isChoice(item: any): item is IngredientChoice {
+    return item.type === "choice";
+  }
 
-    recipeState.ingredients.forEach((group) => {
-      group.items.forEach((item) => {
+  function resolveIngredient(item: any): Ingredient {
+    return isChoice(item) ? item.options[item.selected] : item;
+  }
+
+  function shouldInclude(item: Ingredient) {
+    if (item.exclude) return false;
+    if (!item.amount || item.amount <= 0) return false;
+
+    return true;
+  }
+
+  function collectIngredients(recipe: Recipe): Ingredient[] {
+    const result: Ingredient[] = [];
+
+    const addItems = (items: any[]) => {
+      items.forEach((item) => {
         const resolved = resolveIngredient(item);
 
-        const ratio = portions / selectedRecipe.portions;
-        const grams = toGrams(resolved) * ratio;
+        if (!shouldInclude(resolved)) return;
 
-        dayIngredients.push([resolved.ing.name, grams]);
+        result.push(resolved);
       });
-    });
+    };
+
+    recipe.ingredients.forEach((group) => addItems(group.items));
+
+    if (recipe.extrasMain) {
+      addItems(recipe.extrasMain.options[recipe.extrasMain.selected].items);
+    }
+
+    if (recipe.extrasVeg) {
+      addItems(recipe.extrasVeg.options[recipe.extrasVeg.selected].items);
+    }
+
+    return result;
+  }
+
+  const onAddToDay = () => {
+    const ratio = portions / selectedRecipe.portions;
+
+    const dayIngredients: DayIngredientPair[] = collectIngredients(
+      recipeState,
+    ).map((ingredient) => [ingredient.ing.name, toGrams(ingredient) * ratio]);
 
     setDayIngredients((prev) => ({
       ...prev,

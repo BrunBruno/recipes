@@ -11,6 +11,7 @@ import UtilsIcon from "../../assets/utilsIcon";
 import { DAILY_NUTRIENTS, ingredientCollections } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
 import { STORAGE_KEY, type DayRecord } from "./user-page-data";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ingredientLookup: Record<string, IngredientItem> = {};
 ingredientCollections.forEach((collection) => {
@@ -43,6 +44,10 @@ export default function UserPage({
   const [gramsInput, setGramsInput] = useState(100);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMealType, setSelectedMealType] = useState<DayMealType>();
+  const [selectedDate, setSelectedDate] = useState(
+    new Date().toISOString().split("T")[0],
+  );
+  const [search, setSearch] = useState("");
 
   function calculateMacros(day: DayIngredients): Macros {
     let kcal = 0;
@@ -73,20 +78,6 @@ export default function UserPage({
     };
   }
 
-  function mapIngredients(ingredients: [string, number][]) {
-    return ingredients
-      .map(([name, grams]) => {
-        const ing = ingredientLookup[name];
-
-        return {
-          name,
-          grams,
-          ingredient: ing,
-        };
-      })
-      .filter((i) => i.ingredient);
-  }
-
   const macros = useMemo(
     () => calculateMacros(dayIngredients),
     [dayIngredients],
@@ -108,10 +99,8 @@ export default function UserPage({
   function handleSaveDay() {
     if (!macros) return;
 
-    const today = new Date().toISOString().split("T")[0];
-
     const newRecord: DayRecord = {
-      date: today,
+      date: selectedDate,
       kcal: Math.round(macros.kcal),
       protein: Math.round(macros.protein),
       fat: Math.round(macros.fat),
@@ -120,36 +109,97 @@ export default function UserPage({
 
     const existing = loadDayRecords();
 
-    const updated = [...existing.filter((d) => d.date !== today), newRecord];
+    const updated = [
+      ...existing.filter((d) => d.date !== selectedDate),
+      newRecord,
+    ];
 
     saveDayRecords(updated);
-
     setHistory(updated);
   }
 
-  const renderIngGroup = (group: DayIngredientPair[]) => {
+  const getKey = (meal: DayMealType, index: number) => `${meal}-${index}`;
+
+  const sleep = (ms: number) =>
+    new Promise((resolve) => setTimeout(resolve, ms));
+
+  const clearDay = async () => {
+    const delay = 110;
+
+    const meals: DayMealType[] = ["breakfast", "lunch", "dinner"];
+
+    let state = structuredClone(dayIngredients);
+
+    const maxLen = Math.max(
+      state.breakfast.length,
+      state.lunch.length,
+      state.dinner.length,
+    );
+
+    for (let i = 0; i < maxLen; i++) {
+      const removals: { meal: DayMealType }[] = [];
+
+      for (const meal of meals) {
+        if (state[meal].length > 0) {
+          removals.push({ meal });
+        }
+      }
+
+      if (removals.length === 0) break;
+
+      for (const { meal } of removals) {
+        state[meal].splice(0, 1);
+      }
+
+      setDayIngredients(structuredClone(state));
+
+      await sleep(delay);
+    }
+  };
+
+  const renderIngGroup = (group: DayIngredientPair[], meal: DayMealType) => {
     return (
-      <div className="meal-list">
-        {mapIngredients(group).map(({ ingredient, grams }) => (
-          <div
-            key={`${ingredient!.name}${grams}`}
-            className="meal-ing"
-            style={{ color: ingredient!.color }}
-          >
-            <div className="meal-ing-grid">
-              <IngredientIcon
-                ingType={ingredient!.type}
-                subType={ingredient!.subType}
-                color={ingredient!.color}
-              />
-              <span>{grams.toFixed(1)} g</span>
-              <span>{ingredient!.name}</span>
-            </div>
-          </div>
-        ))}
+      <div className={`meal-list ${group.length === 0 ? "empty" : ""}`}>
+        <AnimatePresence initial={false}>
+          {group.map(([name, grams], index) => {
+            const ing = ingredientLookup[name];
+            const key = getKey(meal, index);
+
+            return (
+              <motion.div
+                key={key}
+                layout
+                initial={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -30, scale: 0.8 }}
+                transition={{
+                  layout: { duration: 0.2 },
+                  opacity: { duration: 0.1 },
+                }}
+                className="meal-ing"
+                style={{ color: ing?.color }}
+              >
+                <div className="meal-ing-grid">
+                  <IngredientIcon
+                    ingType={ing!.type}
+                    subType={ing!.subType}
+                    color={ing!.color}
+                  />
+                  <span>{grams.toFixed(1)} g</span>
+                  <span>{ing!.name}</span>
+                </div>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </div>
     );
   };
+
+  const filteredIngredients = useMemo(() => {
+    return allIngredients.filter((ing) =>
+      ing.name.toLowerCase().includes(search.toLowerCase()),
+    );
+  }, [search]);
 
   return (
     <div className="user-page">
@@ -157,56 +207,66 @@ export default function UserPage({
 
       <div className="meal-panel">
         <div className="meal-card">
-          <h3>
-            <MealPanelIcon type="breakfast" />
-            <span>Śniadanie</span>
-          </h3>
-
-          {renderIngGroup(dayIngredients.breakfast)}
-
-          <button
+          <div
+            className="meal-card-header"
             onClick={() => {
               setSelectedMealType("breakfast");
               setIsModalOpen(true);
             }}
           >
-            <UtilsIcon name="plus" color="#ffffff" />
-          </button>
+            <h3>
+              <MealPanelIcon type="breakfast" />
+              <span className="meal-name">Śniadanie</span>
+            </h3>
+            <div className="add-ingredient">
+              <UtilsIcon name="plus" color="#ffffff" />
+              <span>Dodaj</span>
+            </div>
+          </div>
+
+          {renderIngGroup(dayIngredients.breakfast, "breakfast")}
         </div>
 
         <div className="meal-card">
-          <h3>
-            <MealPanelIcon type="lunch" />
-            <span>Obiad</span>
-          </h3>
+          <div className="meal-card-header">
+            <h3>
+              <MealPanelIcon type="lunch" />
+              <span className="meal-name">Obiad</span>
+            </h3>
+            <button
+              className="add-ingredient"
+              onClick={() => {
+                setSelectedMealType("lunch");
+                setIsModalOpen(true);
+              }}
+            >
+              <UtilsIcon name="plus" color="#ffffff" />
+              <span>Dodaj</span>
+            </button>
+          </div>
 
-          {renderIngGroup(dayIngredients.lunch)}
-
-          <button
-            onClick={() => {
-              setSelectedMealType("lunch");
-              setIsModalOpen(true);
-            }}
-          >
-            <UtilsIcon name="plus" color="#ffffff" />
-          </button>
+          {renderIngGroup(dayIngredients.lunch, "lunch")}
         </div>
 
         <div className="meal-card">
-          <h3>
-            <MealPanelIcon type="dinner" />
-            <span>Kolacja</span>
-          </h3>
+          <div className="meal-card-header">
+            <h3>
+              <MealPanelIcon type="dinner" />
+              <span className="meal-name">Kolacja</span>
+            </h3>
+            <button
+              className="add-ingredient"
+              onClick={() => {
+                setSelectedMealType("dinner");
+                setIsModalOpen(true);
+              }}
+            >
+              <UtilsIcon name="plus" color="#ffffff" />
+              <span>Dodaj</span>
+            </button>
+          </div>
 
-          {renderIngGroup(dayIngredients.dinner)}
-          <button
-            onClick={() => {
-              setSelectedMealType("dinner");
-              setIsModalOpen(true);
-            }}
-          >
-            <UtilsIcon name="plus" color="#ffffff" />
-          </button>
+          {renderIngGroup(dayIngredients.dinner, "dinner")}
         </div>
       </div>
 
@@ -281,17 +341,34 @@ export default function UserPage({
           </div>
         </div>
 
-        <button className="save-btn" onClick={handleSaveDay}>
+        <div className="save-day">
+          <label>
+            Data:
+            <input
+              type="date"
+              value={selectedDate}
+              onChange={(e) => setSelectedDate(e.target.value)}
+            />
+          </label>
+        </div>
+
+        <button
+          className="save-btn"
+          onClick={() => {
+            handleSaveDay();
+            clearDay();
+          }}
+        >
           Zapisz dzień
         </button>
       </div>
 
       {isModalOpen && (
-        <div className="modal-backdrop">
-          <div className="modal">
+        <div className="modal-backdrop" onClick={() => setIsModalOpen(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h2>Dodaj składnik</h2>
 
-            <label>
+            <label className="modal-input">
               Gramatura:
               <input
                 type="number"
@@ -301,11 +378,17 @@ export default function UserPage({
               />
             </label>
 
+            <input
+              className="modal-search"
+              placeholder="Szukaj składnika..."
+              onChange={(e) => setSearch(e.target.value)}
+            />
+
             <div className="modal-ingredient-list">
-              {allIngredients.map((ing) => (
+              {filteredIngredients.map((ing) => (
                 <button
                   key={ing.name}
-                  className="ingredient-item"
+                  className="ingredient-item-button"
                   onClick={() => addIngredientToDay(ing)}
                 >
                   {ing.name}
@@ -313,7 +396,12 @@ export default function UserPage({
               ))}
             </div>
 
-            <button onClick={() => setIsModalOpen(false)}>Zamknij</button>
+            <button
+              className="modal-close"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Zamknij
+            </button>
           </div>
         </div>
       )}

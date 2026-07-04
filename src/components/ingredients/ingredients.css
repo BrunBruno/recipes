@@ -1,8 +1,4 @@
 .all-ingredients {
-  /* position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0; */
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
@@ -13,31 +9,33 @@
   display: none;
 }
 
-.close-ingredients {
-  position: fixed;
-
-  top: 1rem;
-  right: 2rem;
-  z-index: 9;
-
-  width: 2.8rem;
-  height: 2.8rem;
-
-  border: solid 0.2rem #333;
-  background-color: #111;
-  color: #ffffff;
-  font-size: 1.6rem;
-  cursor: pointer;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 99;
+.ingredient-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem 4rem;
 }
 
-.close-ingredients svg {
-  height: 2rem;
+.ingredient-stat {
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+
+.ingredient-stat .stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ingredient-stat .stat-label {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #aaa;
 }
 
 .ing-group {

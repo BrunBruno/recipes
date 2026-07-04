@@ -11,7 +11,7 @@ import { fryingFat } from "../../utils";
 
 const portions = 4;
 const kurczakWSosiePieczarkowymFix: Recipe = {
-  name: "Kurczak w Sosie Pieczarkowym FIX",
+  name: "Kurczak w Sosie Pieczarkowym",
   description:
     "Delikatny filet z kurczaka duszony w kremowym sosie pieczarkowym z użyciem Knorr Fix. Szybki i sycący obiad dla całej rodziny.",
   type: "dinner",

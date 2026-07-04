@@ -8,7 +8,7 @@ import { iMET } from "../../ingredients/ingMeat";
 const portions = 2;
 
 const spaghettiCarbonaraFix: Recipe = {
-  name: "Spaghetti Carbonara FIX",
+  name: "Spaghetti Carbonara",
   description:
     "Szybka carbonara z użyciem fixa Knorr, boczkiem i śmietaną - prosty i sycący obiad.",
   type: "dinner",

@@ -10,7 +10,11 @@ import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
-import { countIngredientUsage, IngredientTypeData } from "../../utils";
+import {
+  countIngredientUsage,
+  ingredientCollections,
+  IngredientTypeData,
+} from "../../utils";
 import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
 import { iJAR } from "../../ingredients/ingJar";
@@ -35,6 +39,14 @@ const groupedTypes = allGroups.flatMap((group) =>
 const initialOpenTypes = Object.fromEntries(
   groupedTypes.map((type) => [type, true]),
 );
+
+const ingredientLookup: Record<string, IngredientItem> = {};
+ingredientCollections.forEach((collection) => {
+  Object.values(collection).forEach((ing) => {
+    ingredientLookup[ing.name] = ing;
+  });
+});
+const allIngredients = Object.values(ingredientLookup);
 
 function Ingredients({}: IngredientsProps) {
   const getColumnCount = () => {
@@ -80,8 +92,47 @@ function Ingredients({}: IngredientsProps) {
     );
   };
 
+  const ingredientStats = useMemo(() => {
+    const all = allIngredients.length;
+
+    const used = allIngredients.filter(
+      (ing) => (ingredientUsage[ing.name] ?? 0) > 0,
+    ).length;
+
+    const verified = allIngredients.filter((ing) => ing.verified).length;
+
+    const priced = allIngredients.filter(
+      (ing) => ing.price !== undefined,
+    ).length;
+
+    return { all, used, verified, priced };
+  }, [ingredientUsage]);
+
   return (
     <div className="all-ingredients">
+      <div className="ingredient-stats">
+        <div className="ingredient-stat">
+          <span className="stat-value">
+            {ingredientStats.used}/{ingredientStats.all}
+          </span>
+          <span className="stat-label">Wykorzystanych</span>
+        </div>
+
+        <div className="ingredient-stat">
+          <span className="stat-value">
+            {ingredientStats.verified}/{ingredientStats.all}
+          </span>
+          <span className="stat-label">Zweryfikowanych</span>
+        </div>
+
+        <div className="ingredient-stat">
+          <span className="stat-value">
+            {ingredientStats.priced}/{ingredientStats.all}
+          </span>
+          <span className="stat-label">Z ceną</span>
+        </div>
+      </div>
+
       {allGroups.map((group) => {
         const grouped = groupByType(group.data);
 
@@ -89,13 +140,6 @@ function Ingredients({}: IngredientsProps) {
           <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
               const sortedItems = items;
-              // const sortedItems = items.sort(([_, itemA], [__, itemB]) => {
-              //   const usageA = ingredientUsage[itemA.name] ?? 0;
-              //   const usageB = ingredientUsage[itemB.name] ?? 0;
-
-              //   return usageB - usageA;
-              // });
-
               const rows = Math.ceil(sortedItems.length / columns);
 
               return (

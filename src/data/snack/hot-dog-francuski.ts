@@ -1,6 +1,7 @@
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 
 const frenchHotDog: Recipe = {
@@ -18,10 +19,82 @@ const frenchHotDog: Recipe = {
       items: [
         { ing: iMET.sausages, amount: 2, unit: "szt" },
         { ing: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
-        { ing: iJAR.ketchup, amount: 10 },
-        { ing: iJAR.garlic_sauce, amount: 10 },
-        { ing: iJAR.mustard_bbq, amount: 10 },
-        { ing: iJAR.sriracha, amount: 10 },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.ketchup, amount: 10 },
+            { ing: iJAR.garlic_sauce, amount: 10 },
+            { ing: iJAR.mustard_bbq, amount: 10 },
+            { ing: iJAR.sriracha, amount: 10 },
+            { ing: iJAR.american_sauce, amount: 10 },
+            { ing: iJAR.thousand_island, amount: 10 },
+            { ing: iJAR.spicy_ketchup, amount: 10 },
+            { ing: iJAR.mustard_dessert, amount: 10 },
+            { ing: iJAR.sun_mustard, amount: 10 },
+            { ing: iJAR.mexican_sauce, amount: 10 },
+            { ing: iJAR.remoulade, amount: 10 },
+            { ing: iJAR.curry_sauce, amount: 10 },
+            { ing: iOTH.none },
+          ],
+          selected: 0,
+        },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.ketchup, amount: 10 },
+            { ing: iJAR.garlic_sauce, amount: 10 },
+            { ing: iJAR.mustard_bbq, amount: 10 },
+            { ing: iJAR.sriracha, amount: 10 },
+            { ing: iJAR.american_sauce, amount: 10 },
+            { ing: iJAR.thousand_island, amount: 10 },
+            { ing: iJAR.spicy_ketchup, amount: 10 },
+            { ing: iJAR.mustard_dessert, amount: 10 },
+            { ing: iJAR.sun_mustard, amount: 10 },
+            { ing: iJAR.mexican_sauce, amount: 10 },
+            { ing: iJAR.remoulade, amount: 10 },
+            { ing: iJAR.curry_sauce, amount: 10 },
+            { ing: iOTH.none },
+          ],
+          selected: 1,
+        },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.ketchup, amount: 10 },
+            { ing: iJAR.garlic_sauce, amount: 10 },
+            { ing: iJAR.mustard_bbq, amount: 10 },
+            { ing: iJAR.sriracha, amount: 10 },
+            { ing: iJAR.american_sauce, amount: 10 },
+            { ing: iJAR.thousand_island, amount: 10 },
+            { ing: iJAR.spicy_ketchup, amount: 10 },
+            { ing: iJAR.mustard_dessert, amount: 10 },
+            { ing: iJAR.sun_mustard, amount: 10 },
+            { ing: iJAR.mexican_sauce, amount: 10 },
+            { ing: iJAR.remoulade, amount: 10 },
+            { ing: iJAR.curry_sauce, amount: 10 },
+            { ing: iOTH.none },
+          ],
+          selected: 2,
+        },
+        {
+          type: "choice",
+          options: [
+            { ing: iJAR.ketchup, amount: 10 },
+            { ing: iJAR.garlic_sauce, amount: 10 },
+            { ing: iJAR.mustard_bbq, amount: 10 },
+            { ing: iJAR.sriracha, amount: 10 },
+            { ing: iJAR.american_sauce, amount: 10 },
+            { ing: iJAR.thousand_island, amount: 10 },
+            { ing: iJAR.spicy_ketchup, amount: 10 },
+            { ing: iJAR.mustard_dessert, amount: 10 },
+            { ing: iJAR.sun_mustard, amount: 10 },
+            { ing: iJAR.mexican_sauce, amount: 10 },
+            { ing: iJAR.remoulade, amount: 10 },
+            { ing: iJAR.curry_sauce, amount: 10 },
+            { ing: iOTH.none },
+          ],
+          selected: 3,
+        },
       ],
     },
     {

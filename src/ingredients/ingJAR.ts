@@ -16,6 +16,9 @@ type IngId =
   | "sechuan_chili_fusion"
   | "jam_strawberry"
 
+  //// DRIED ////
+  | "sun_dried_tomatoes"
+
   //// CANNED ////
   | "canned_tomatoes"
   | "canned_corn"
@@ -214,6 +217,19 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szk: 320,
     },
     nutrientsPer100g: [0.1, 60, 0.3],
+  },
+
+  //// DRIED ////
+
+  sun_dried_tomatoes: {
+    name: "Suszone pomidory",
+    type: "veg",
+    color: "#B71C1C",
+    kcalPer100g: 258,
+    unitWeights: {
+      szt: 5,
+    },
+    nutrientsPer100g: [3, 56, 14],
   },
 
   //// CANNED ////

@@ -208,6 +208,7 @@ export const dinnerSides = (
         items: [
           { ing: iJAR.frozen_green_beans, amount: 150 * portions },
           { ing: iFAT.butter, amount: 0.5, unit: "lzi" },
+          { ing: iGRN.breadcrumbs, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
         ],
       };

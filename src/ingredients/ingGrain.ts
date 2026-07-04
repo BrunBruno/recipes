@@ -92,6 +92,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 351,
     unitWeights: {
       lz: 10,
+      lzi: 3,
     },
     nutrientsPer100g: [1.5, 4.4, 12],
     verified: true,

@@ -79,7 +79,6 @@ export type Ingredient = {
   unit?: UnitType;
   exclude?: boolean;
   invisible?: boolean;
-  alt?: boolean;
 };
 
 export type IngredientChoice = {

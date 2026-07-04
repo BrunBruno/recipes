@@ -25,7 +25,8 @@ type IngId =
   | "baking_soda"
   | "yeast"
   | "instant_yeast"
-  | "gelatin";
+  | "gelatin"
+  | "none";
 
 export const iOTH: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -145,7 +146,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     color: "#5D4037",
     kcalPer100g: 53,
     unitWeights: {
-      ml: 15,
+      ml: 1,
     },
     nutrientsPer100g: [0.6, 4.9, 8],
   },
@@ -288,5 +289,14 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0, 0, 85],
+  },
+
+  none: {
+    name: "NIC",
+    type: "oth",
+    subType: "non",
+    kcalPer100g: 0,
+    nutrientsPer100g: [0, 0, 0],
+    verified: true,
   },
 };

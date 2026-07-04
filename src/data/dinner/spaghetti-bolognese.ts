@@ -46,8 +46,8 @@ const spaghettiBolognese: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iFAT.olive, amount: 1, unit: "lz" },
-            { ing: iFAT.oil, amount: 1, unit: "lz" },
+            { ing: iFAT.olive, amount: 1, unit: "lz", exclude: true },
+            { ing: iFAT.oil, amount: 1, unit: "lz", exclude: true },
           ],
           selected: 0,
         },

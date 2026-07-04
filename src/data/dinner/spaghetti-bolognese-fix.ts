@@ -8,7 +8,7 @@ import { fryingFat } from "../../utils";
 
 const portions = 3;
 const spaghettiBologneseFix: Recipe = {
-  name: "Spaghetti Bolognese FIX",
+  name: "Spaghetti Bolognese",
   description:
     "Klasyczne spaghetti Bolognese z aromatycznym sosem mięsnym i startym żółtym serem - szybki i sycący obiad dla całej rodziny.",
   type: "dinner",

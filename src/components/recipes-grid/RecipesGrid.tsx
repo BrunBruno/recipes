@@ -34,9 +34,9 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
   return (
     <div className={`recipes-grid`}>
       <AnimatePresence mode="popLayout">
-        {filteredRecipes.map((recipe) => (
+        {filteredRecipes.map((recipe, i) => (
           <motion.div
-            key={recipe.name}
+            key={`${recipe.name}${i}`}
             layout="position"
             whileHover={
               disableHover
