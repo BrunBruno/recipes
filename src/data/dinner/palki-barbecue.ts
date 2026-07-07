@@ -1,6 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -19,7 +19,7 @@ const palkiBarbecue: Recipe = {
       title: "",
       items: [
         { ing: iMET.chicken_drums, amount: 2, unit: "opak" },
-        { ing: iJAR.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
+        { ing: iSAU.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.hot_paprika },
         { ing: iSPC.smoked_paprika },

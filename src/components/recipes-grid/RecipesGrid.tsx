@@ -34,9 +34,9 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
   return (
     <div className={`recipes-grid`}>
       <AnimatePresence mode="popLayout">
-        {filteredRecipes.map((recipe, i) => (
+        {filteredRecipes.map((recipe) => (
           <motion.div
-            key={`${recipe.name}${i}`}
+            key={`${recipe.fileName}`}
             layout="position"
             whileHover={
               disableHover
@@ -44,7 +44,6 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                     boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
                   }
                 : {
-                    // y: -5,
                     boxShadow: "0 12px 32px rgba(100, 100, 100, 0.6)",
                   }
             }

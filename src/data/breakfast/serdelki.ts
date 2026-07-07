@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
 
 const serdelki: Recipe = {
@@ -20,7 +20,7 @@ const serdelki: Recipe = {
         { ing: iMET.serdelki, amount: 6, unit: "szt" },
         { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
         { ing: iFAT.butter, amount: 5 },
-        { ing: iJAR.mustard, amount: 2, unit: "lzi" },
+        { ing: iSAU.mustard, amount: 2, unit: "lzi" },
       ],
     },
   ],

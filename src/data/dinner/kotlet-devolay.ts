@@ -1,6 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -39,9 +40,9 @@ const kotletDevolay: Recipe = {
       items: [
         { ing: iFAT.butter, amount: 100 },
         { ing: iVEG.garlic, amount: 4, unit: "zbk" },
-        { ing: iVEG.parsley },
-        { ing: iSPC.dill },
-        { ing: iSPC.wild_garlic },
+        { ing: iHRB.parsley },
+        { ing: iHRB.dill },
+        { ing: iHRB.wild_garlic },
       ],
     },
   ],

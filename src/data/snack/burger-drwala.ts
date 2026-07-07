@@ -3,6 +3,8 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
+import { iSNK } from "../../ingredients/ingSnack";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -31,7 +33,7 @@ const burgerDrwala: Recipe = {
       title: "Ser",
       items: [
         { ing: iDIR.lilliputian_cheese, amount: 350 },
-        { ing: iGRN.cheese_snacks, amount: 1, unit: "opak" },
+        { ing: iSNK.cheese_snacks, amount: 1, unit: "opak" },
         { ing: iGRN.breadcrumbs, amount: 1, unit: "lz" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
@@ -52,9 +54,9 @@ const burgerDrwala: Recipe = {
     {
       title: "Sos",
       items: [
-        { ing: iJAR.ketchup, amount: portions * 1, unit: "lzi" },
-        { ing: iJAR.mustard, amount: portions * 2, unit: "lzi" },
-        { ing: iJAR.mayonnaise, amount: portions * 1, unit: "lzi" },
+        { ing: iSAU.ketchup, amount: portions * 1, unit: "lzi" },
+        { ing: iSAU.mustard, amount: portions * 2, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: portions * 1, unit: "lzi" },
       ],
     },
   ],

@@ -1,6 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -25,9 +26,9 @@ const kotletSchabowy: Recipe = {
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 150 },
         ...fryingFat(iFAT.oil, 10, "lz", 0.5),
-        { ing: iSPC.thyme },
-        { ing: iSPC.marjoram },
-        { ing: iSPC.herbes_de_provence },
+        { ing: iHRB.thyme },
+        { ing: iHRB.marjoram },
+        { ing: iHRB.herbes_de_provence },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.black_pepper },

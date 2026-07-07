@@ -4,6 +4,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import { iMET } from "../../ingredients/ingMeat";
 import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
+import { iHRB } from "../../ingredients/ingHerb";
 
 const rosolZMakaronem: Recipe = {
   name: "Rosół z Makaronem",
@@ -23,7 +24,7 @@ const rosolZMakaronem: Recipe = {
         { ing: iVEG.carrot, amount: 2, unit: "szt" },
         { ing: iMET.chicken_soup_portion, amount: 100 },
         { ing: iOTH.maggi },
-        { ing: iSPC.dill },
+        { ing: iHRB.dill },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

@@ -1,5 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -12,7 +13,7 @@ const schabAlaStroganoff: Recipe = {
   description:
     "Kawałki schabu z pieczarkami i cebulą w kremowym sosie a'la stroganoff na bazie Fix Knorr.",
   type: "dinner",
-  images: [""],
+  images: ["schab-ala-stroganoff.jpg", "schab-ala-stroganoff-2.jpg"],
   time: 25,
   portions: portions,
   executionDifficulty: 1,
@@ -26,7 +27,7 @@ const schabAlaStroganoff: Recipe = {
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_pork_ala_stroganoff_fix, amount: 1, unit: "opak" },
-        { ing: iVEG.parsley },
+        { ing: iHRB.parsley },
       ],
     },
   ],

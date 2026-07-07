@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -52,8 +53,8 @@ const spaghettiBolognese: Recipe = {
           selected: 0,
         },
         { ing: iFAT.olive, amount: 1 * 0.45, unit: "lz", invisible: true },
-        { ing: iSPC.basil },
-        { ing: iSPC.oregano },
+        { ing: iHRB.basil },
+        { ing: iHRB.oregano },
         { ing: iSPC.knorr_bolognese_fix },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

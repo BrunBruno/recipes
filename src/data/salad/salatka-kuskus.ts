@@ -1,7 +1,9 @@
+import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -21,10 +23,10 @@ const salatkaKuskus: Recipe = {
       items: [
         { ing: iGRN.couscous, amount: 1, unit: "opak" },
         { ing: iMET.egg, amount: 4, unit: "szt" },
-        { ing: iMET.canned_tuna, amount: 2, unit: "opak" },
+        { ing: iFSH.canned_tuna, amount: 2, unit: "opak" },
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iJAR.mayonnaise, amount: 1, unit: "opak" },
+        { ing: iSAU.mayonnaise, amount: 1, unit: "opak" },
         { ing: iOTH.water, amount: 1, unit: "szk" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -64,7 +65,7 @@ const tacos: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iSPC.coriander },
+        { ing: iHRB.coriander },
       ],
     },
   ],

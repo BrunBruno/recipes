@@ -1,7 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
 
 const tost: Recipe = {
@@ -20,7 +20,7 @@ const tost: Recipe = {
         { ing: iGRN.toast_bread, amount: 4, unit: "krom" },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
-        { ing: iJAR.ketchup, amount: 20 },
+        { ing: iSAU.ketchup, amount: 20 },
       ],
     },
   ],

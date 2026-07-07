@@ -19,6 +19,7 @@ nav {
 }
 
 .nav-item {
+  position: relative;
   width: 100%;
   aspect-ratio: 1/1;
   padding: 0.5rem;
@@ -32,6 +33,32 @@ nav {
 .nav-item:hover {
   cursor: pointer;
   background-color: #222;
+}
+
+.nav-item > span {
+  position: absolute;
+  z-index: 99;
+  right: 120%;
+  background-color: #333;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  border-bottom: solid 1px #666;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.2s;
+}
+
+.nav-item:hover > span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+  .nav-item > span {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {

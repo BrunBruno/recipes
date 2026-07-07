@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -40,7 +41,7 @@ const kebabGyros: Recipe = {
     {
       title: "Sos",
       items: [
-        { ing: iJAR.mayonnaise, amount: 2, unit: "lz" },
+        { ing: iSAU.mayonnaise, amount: 2, unit: "lz" },
         { ing: iDIR.yogurt_natural, amount: 150 },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
       ],

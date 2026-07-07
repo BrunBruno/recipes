@@ -111,7 +111,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
     <div className="recipes-page">
       <div className="page-title">
         <h1 className="page-title-h1">
-          <UtilsIcon name="logo" color="#099268" />
+          <UtilsIcon name="logo" color="#fff" />
           <span className="h1-text">Przepisy</span> {filteredRecipes.length}
         </h1>
 

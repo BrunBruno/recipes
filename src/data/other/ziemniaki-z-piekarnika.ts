@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -19,8 +20,8 @@ const ziemniakiZPiekarnika: Recipe = {
         { ing: iVEG.potato, amount: 1000 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
-        { ing: iSPC.caraway, amount: 0.5, unit: "lzi" },
-        { ing: iSPC.thyme, amount: 1, unit: "lzi" },
+        { ing: iHRB.caraway, amount: 0.5, unit: "lzi" },
+        { ing: iHRB.thyme, amount: 1, unit: "lzi" },
         { ing: iSPC.potato_seasoning, amount: 1, unit: "lz" },
         { ing: iSPC.sweet_paprika, amount: 2, unit: "lzi" },
         { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },

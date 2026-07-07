@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -35,7 +36,7 @@ const kebab: Recipe = {
       title: "Sos",
       items: [
         { ing: iDIR.greek_yogurt, amount: 5, unit: "lz" },
-        { ing: iJAR.mayonnaise, amount: 2, unit: "lz" },
+        { ing: iSAU.mayonnaise, amount: 2, unit: "lz" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.cumin },

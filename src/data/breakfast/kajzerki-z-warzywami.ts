@@ -4,6 +4,7 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
+import { iHRB } from "../../ingredients/ingHerb";
 
 const kajzerkiZWarzywami: Recipe = {
   name: "Kajzerki z Warzywami",
@@ -30,8 +31,8 @@ const kajzerkiZWarzywami: Recipe = {
             { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
             { ing: iVEG.bell_pepper, amount: 0.25, unit: "szt" },
             { ing: iVEG.radish, amount: 4, unit: "szt" },
-            { ing: iVEG.cress, amount: 10 },
-            { ing: iVEG.chives, amount: 10 },
+            { ing: iHRB.cress, amount: 10 },
+            { ing: iHRB.chives, amount: 10 },
           ],
         },
         { ing: iSPC.salt },
@@ -44,8 +45,8 @@ const kajzerkiZWarzywami: Recipe = {
         { ing: iVEG.tomato, exclude: true },
         { ing: iVEG.bell_pepper, exclude: true },
         { ing: iVEG.radish, exclude: true },
-        { ing: iVEG.cress, exclude: true },
-        { ing: iVEG.chives, exclude: true },
+        { ing: iHRB.cress, exclude: true },
+        { ing: iHRB.chives, exclude: true },
       ],
     },
   ],

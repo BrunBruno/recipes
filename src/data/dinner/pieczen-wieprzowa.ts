@@ -1,7 +1,8 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
@@ -25,9 +26,9 @@ const pieczenWieprzowa: Recipe = {
       title: "",
       items: [
         { ing: iMET.pork_shoulder, amount: 125 * portions },
-        { ing: iJAR.mustard, amount: 0.5 * portions, unit: "lz" },
+        { ing: iSAU.mustard, amount: 0.5 * portions, unit: "lz" },
         ...fryingFat(iFAT.oil, portions, "lz", 0.45),
-        { ing: iSPC.marjoram, amount: 2, unit: "lzi" },
+        { ing: iHRB.marjoram, amount: 2, unit: "lzi" },
         { ing: iSPC.granulated_garlic, amount: 1, unit: "lzi" },
         { ing: iSPC.hot_paprika, amount: 0.5, unit: "lzi" },
         { ing: iSPC.salt },

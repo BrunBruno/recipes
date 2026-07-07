@@ -1,6 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -27,7 +28,7 @@ const kotletySchaboweWPlatkach: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.cornflakes, amount: 160 },
         ...fryingFat(iFAT.oil, 10, "lz", 0.55),
-        { ing: iSPC.herbes_de_provence },
+        { ing: iHRB.herbes_de_provence },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.black_pepper },

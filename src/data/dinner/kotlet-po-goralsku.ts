@@ -2,6 +2,7 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -29,7 +30,7 @@ const kotletPoGoralsku: Recipe = {
         { ing: iGRN.breadcrumbs, amount: 150 },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         ...fryingFat(iFAT.oil, 10, "lz", 0.5),
-        { ing: iSPC.thyme },
+        { ing: iHRB.thyme },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

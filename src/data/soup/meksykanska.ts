@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
@@ -32,9 +33,9 @@ const meksykanska: Recipe = {
         { ing: iFAT.olive, amount: 5, unit: "lz" },
         { ing: iOTH.water, amount: 4, unit: "szk" },
         { ing: iOTH.sugar, amount: 1, unit: "lzi" },
-        { ing: iSPC.oregano },
-        { ing: iSPC.coriander },
-        { ing: iSPC.caraway },
+        { ing: iHRB.oregano },
+        { ing: iHRB.coriander },
+        { ing: iHRB.caraway },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.chilli },
         { ing: iSPC.black_pepper },

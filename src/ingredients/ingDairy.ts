@@ -199,6 +199,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [18, 4.8, 2.5],
+    price: 11.5,
   },
 
   cream_30: {
@@ -398,6 +399,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
+    price: 30,
     verified: true,
   },
 
@@ -413,6 +415,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [26, 1.1, 25],
+    price: 30,
     verified: true,
   },
 

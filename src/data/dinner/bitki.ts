@@ -2,6 +2,7 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -29,10 +30,10 @@ const bitki: Recipe = {
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.chives },
-        { ing: iSPC.marjoram },
-        { ing: iSPC.bay_leaf },
-        { ing: iSPC.wild_garlic },
+        { ing: iHRB.chives },
+        { ing: iHRB.marjoram },
+        { ing: iHRB.bay_leaf },
+        { ing: iHRB.wild_garlic },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.allspice },
         { ing: iSPC.black_pepper },

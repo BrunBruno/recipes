@@ -1,5 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
+import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
@@ -23,10 +24,10 @@ const smazonaRyba: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iMET.pollock, amount: 1, unit: "szt" },
-            { ing: iMET.cod, amount: 1, unit: "szt" },
-            { ing: iMET.hake, amount: 1, unit: "szt" },
-            { ing: iMET.halibut, amount: 1, unit: "szt" },
+            { ing: iFSH.pollock, amount: 1, unit: "szt" },
+            { ing: iFSH.cod, amount: 1, unit: "szt" },
+            { ing: iFSH.hake, amount: 1, unit: "szt" },
+            { ing: iFSH.halibut, amount: 1, unit: "szt" },
           ],
           selected: 0,
         },

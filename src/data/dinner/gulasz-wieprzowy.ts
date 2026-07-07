@@ -2,6 +2,7 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -38,7 +39,7 @@ const gulaszWieprzowy: Recipe = {
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.chives },
+        { ing: iHRB.chives },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.chilli },

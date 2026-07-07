@@ -2,10 +2,10 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
 
@@ -29,8 +29,8 @@ const gotowanyKurczak: Recipe = {
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iOTH.maggi },
-        { ing: iVEG.chives },
-        { ing: iSPC.wild_garlic },
+        { ing: iHRB.chives },
+        { ing: iHRB.wild_garlic },
         { ing: iSPC.curry },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

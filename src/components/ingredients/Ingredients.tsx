@@ -18,20 +18,28 @@ import {
 import type { IngredientItem } from "../../types";
 import { useEffect, useMemo, useState } from "react";
 import { iJAR } from "../../ingredients/ingJar";
+import { iSNK } from "../../ingredients/ingSnack";
+import { iFSH } from "../../ingredients/ingFish";
+import { iHRB } from "../../ingredients/ingHerb";
+import { iSAU } from "../../ingredients/ingSauce";
 
 type IngredientsProps = {};
 
-const displayUnused = false;
+const displayUnused = true;
 const allGroups = [
-  { label: "Mięso / Ryby / Jajka", data: iMET },
-  { label: "Zboża / Pieczywo / Ziarna", data: iGRN },
-  { label: "Nabiał / Sery", data: iDIR },
+  { label: "Mięso", data: iMET },
+  { label: "Ryby", data: iFSH },
+  { label: "Zboża", data: iGRN },
+  { label: "Nabiał", data: iDIR },
   { label: "Tłuszcze", data: iFAT },
-  { label: "Warzywa / Zielenina  / Grzyby", data: iVEG },
-  { label: "Owoce / Orzechy", data: iFRT },
-  { label: "Przyprawy / Zioła / Sosy", data: iSPC },
-  { label: "Przetwory / Mrożonki / Sosy", data: iJAR },
-  { label: "Cukry / Pozostałe", data: iOTH },
+  { label: "Warzywa", data: iVEG },
+  { label: "Owoce", data: iFRT },
+  { label: "Sosy", data: iSAU },
+  { label: "Przetwory", data: iJAR },
+  { label: "Przekąski", data: iSNK },
+  { label: "Zioła", data: iHRB },
+  { label: "Przyprawy", data: iSPC },
+  { label: "Pozostałe", data: iOTH },
 ];
 const groupedTypes = allGroups.flatMap((group) =>
   Object.values(group.data).map((item) => item.type),
@@ -99,36 +107,51 @@ function Ingredients({}: IngredientsProps) {
       (ing) => (ingredientUsage[ing.name] ?? 0) > 0,
     ).length;
 
+    const mult = allIngredients.filter(
+      (ing) => (ingredientUsage[ing.name] ?? 0) > 3,
+    ).length;
+
     const verified = allIngredients.filter((ing) => ing.verified).length;
 
     const priced = allIngredients.filter(
       (ing) => ing.price !== undefined,
     ).length;
 
-    return { all, used, verified, priced };
+    return { all, used, mult, verified, priced };
   }, [ingredientUsage]);
 
   return (
     <div className="all-ingredients">
+      <h1>
+        <svg fill="#eee" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29 0C27.894531 0 27 0.898438 27 2L27 4C27 5.101563 27.894531 6 29 6L39 6C40.105469 6 41 5.101563 41 4L41 2C41 0.898438 40.105469 0 39 0 Z M 28.09375 7.875C27.164063 9.613281 26.363281 11.855469 25.78125 13.65625L40.53125 22L44 22L44 21.8125C44 19.492188 42.09375 12.074219 39.84375 7.90625C39.574219 7.964844 39.285156 8 39 8L29 8C28.6875 8 28.382813 7.941406 28.09375 7.875 Z M 14.625 13.78125C9.632813 13.78125 5.6875 17.167969 4.65625 22L12.25 22L19.59375 15.0625C18.089844 14.222656 16.398438 13.78125 14.625 13.78125 Z M 23.1875 14.6875C22.980469 14.710938 22.785156 14.816406 22.625 14.96875L15.15625 22L36.46875 22L23.8125 14.8125C23.621094 14.703125 23.394531 14.664063 23.1875 14.6875 Z M 2.84375 24C1.273438 24 0 25.273438 0 26.84375L0 30.15625C0 31.726563 1.273438 33 2.84375 33L47.15625 33C48.726563 33 50 31.726563 50 30.15625L50 26.84375C50 25.273438 48.726563 24 47.15625 24 Z M 3 35L3 36C3 36.195313 3.007813 36.304688 6.4375 47.4375C6.457031 47.503906 6.527344 47.65625 6.5625 47.71875C7.160156 48.789063 7.816406 50 9.21875 50L40.78125 50C42.519531 50 43.117188 48.507813 43.5625 47.4375C46.988281 36.304688 47 36.195313 47 36L47 35L37 35L37 45L34 45L34 35L30 35L30 45L27 45L27 35L23 35L23 45L20 45L20 35L16 35L16 45L13 45L13 35Z" />
+        </svg>
+        <span>Wszystkie składniki</span>
+      </h1>
+
       <div className="ingredient-stats">
         <div className="ingredient-stat">
-          <span className="stat-value">
-            {ingredientStats.used}/{ingredientStats.all}
-          </span>
+          <span className="stat-value">{ingredientStats.all}</span>
+          <span className="stat-label">Wszystkich</span>
+        </div>
+
+        <div className="ingredient-stat">
+          <span className="stat-value">{ingredientStats.used}</span>
           <span className="stat-label">Wykorzystanych</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">
-            {ingredientStats.verified}/{ingredientStats.all}
-          </span>
+          <span className="stat-value">{ingredientStats.mult}</span>
+          <span className="stat-label">Wielokrotnie</span>
+        </div>
+
+        <div className="ingredient-stat">
+          <span className="stat-value">{ingredientStats.verified}</span>
           <span className="stat-label">Zweryfikowanych</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">
-            {ingredientStats.priced}/{ingredientStats.all}
-          </span>
+          <span className="stat-value">{ingredientStats.priced}</span>
           <span className="stat-label">Z ceną</span>
         </div>
       </div>
@@ -162,7 +185,7 @@ function Ingredients({}: IngredientsProps) {
                   <ul
                     className={`ingredient-list`}
                     style={{
-                      maxHeight: openTypes[type] ? `${rows * 202}px` : "0px",
+                      maxHeight: openTypes[type] ? `${rows * 250}px` : "0px",
                     }}
                   >
                     {sortedItems.map(([id, item]) => {

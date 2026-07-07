@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
@@ -23,8 +24,8 @@ const gotowyBurger: Recipe = {
         { ing: iGRN.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.burger_patties, amount: 4, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
-        { ing: iJAR.mayonnaise, amount: 4, unit: "lzi" },
-        { ing: iJAR.ketchup, amount: 4, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },
+        { ing: iSAU.ketchup, amount: 4, unit: "lzi" },
       ],
     },
     {

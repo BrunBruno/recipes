@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -35,7 +36,7 @@ const zapiekankaBolognese: Recipe = {
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },
         { ing: iSPC.allspice, amount: 3, unit: "ziar" },
-        { ing: iSPC.bay_leaf, amount: 2, unit: "lst" },
+        { ing: iHRB.bay_leaf, amount: 2, unit: "lst" },
         { ing: iSPC.salt },
       ],
     },

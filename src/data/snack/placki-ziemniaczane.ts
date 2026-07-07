@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -25,7 +26,7 @@ const plackiZiemniaczane: Recipe = {
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
         { ing: iFAT.oil, amount: 4, unit: "lz" },
-        { ing: iSPC.savory },
+        { ing: iHRB.savory },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
         { ing: iOTH.water, amount: -350, invisible: true },

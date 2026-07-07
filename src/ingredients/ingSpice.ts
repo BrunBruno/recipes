@@ -18,19 +18,6 @@ type IngId =
   | "cumin"
   | "garam_masala"
 
-  //// HERBS ////
-  | "dill"
-  | "thyme"
-  | "marjoram"
-  | "herbes_de_provence"
-  | "wild_garlic"
-  | "bay_leaf"
-  | "caraway"
-  | "savory"
-  | "oregano"
-  | "basil"
-  | "coriander"
-
   //// SEASONINGS ////
   | "vegetable_seasoning"
   | "potato_seasoning"
@@ -48,7 +35,6 @@ type IngId =
   | "knorr_jalapeno_chicken_fix"
   | "knorr_meatballs_fix"
   | "knorr_mac_and_cheese_fix"
-  //
   | "knorr_bolognese_chili_fix"
   | "knorr_chinese_fired_rice_fix"
   | "knorr_sweet_sour_chicken_fix"
@@ -59,7 +45,6 @@ type IngId =
   | "winiary_tomato_sauce_fix"
   | "winiary_pork_neck_fix"
   | "winiary_chicken_fix"
-  //
   | "winiary_dark_roast_sauce_fix"
   | "winiary_peasant_stew_fix"
   //
@@ -295,9 +280,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.5, 0.5, 0.5],
   },
 
+  //// SACHETS ////
+
   knorr_goulash_fix: {
-    name: "Fix Knorr gulasz węgierski",
+    name: "Fix Gulasz Węgierski",
     type: "spc",
+    subType: "sah",
     color: "#D84315",
     kcalPer100g: 318,
     unitWeights: {
@@ -309,8 +297,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_chinese_fix: {
-    name: "Fix Knorr do dań po chińsku",
+    name: "Fix Dania po Chińsku",
     type: "spc",
+    subType: "sah",
     color: "#FF7043",
     kcalPer100g: 250,
     unitWeights: {
@@ -320,8 +309,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_bolognese_fix: {
-    name: "Fix Knorr bolognese",
+    name: "Fix Bolognese",
     type: "spc",
+    subType: "sah",
     color: "#C62828",
     kcalPer100g: 141,
     unitWeights: {
@@ -332,8 +322,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_crispy_chicken_fix: {
-    name: "Fix Knorr chrupiący kurczak",
+    name: "Fix Chrupiący Kurczak",
     type: "spc",
+    subType: "sah",
     color: "#FBC02D",
     kcalPer100g: 342,
     unitWeights: {
@@ -345,8 +336,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_carbonara_fix: {
-    name: "Fix Knorr spaghetti carbonara",
+    name: "Fix Spaghetti Carbonara",
     type: "spc",
+    subType: "sah",
     color: "#FFFD8D",
     kcalPer100g: 500,
     unitWeights: {
@@ -359,6 +351,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   knorr_napoli_fix: {
     name: "Fix Napoli",
     type: "spc",
+    subType: "sah",
     color: "#E53935",
     kcalPer100g: 280,
     unitWeights: {
@@ -368,8 +361,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_mushroom_sauce_fix: {
-    name: "Knorr Fix Sos Pieczarkowy",
+    name: "Fix Sos Pieczarkowy",
     type: "spc",
+    subType: "sah",
     color: "#8D6E63",
     kcalPer100g: 320,
     unitWeights: {
@@ -379,8 +373,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_jalapeno_chicken_fix: {
-    name: "Przyprawa do kurczaka jalapeno",
+    name: "Fix Kurczaka Jalapeno",
     type: "spc",
+    subType: "sah",
     color: "#C65A2E",
     kcalPer100g: 250,
     unitWeights: {
@@ -390,8 +385,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_meatballs_fix: {
-    name: "Knorr Fix Soczyste Kotlety Mielone",
+    name: "Fix Soczyste Kotlety Mielone",
     type: "spc",
+    subType: "sah",
     color: "#C68642",
     kcalPer100g: 316,
     unitWeights: {
@@ -402,8 +398,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_mac_and_cheese_fix: {
-    name: "Knorr Fix Mac'n Cheese",
+    name: "Fix Mac'n Cheese",
     type: "spc",
+    subType: "sah",
     color: "#F2B94B",
     kcalPer100g: 435,
     unitWeights: {
@@ -414,8 +411,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_bolognese_chili_fix: {
-    name: "Knorr Spaghetti Bolognese Chili Fix",
+    name: "Fix Spaghetti Bolognese Chili",
     type: "spc",
+    subType: "sah",
     color: "#8D6E63",
     kcalPer100g: 333,
     unitWeights: {
@@ -427,8 +425,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_chinese_fired_rice_fix: {
-    name: "Knorr Smażony Ryż po Chińsku Fix",
+    name: "Fix Smażony Ryż po Chińsku",
     type: "spc",
+    subType: "sah",
     color: "#D7CCC8",
     kcalPer100g: 385,
     unitWeights: {
@@ -440,8 +439,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_sweet_sour_chicken_fix: {
-    name: "Knorr Kurczak Słodko-Kwaśny Fix",
+    name: "Fix Kurczak Słodko-Kwaśny",
     type: "spc",
+    subType: "sah",
     color: "#EF9A9A",
     kcalPer100g: 371,
     unitWeights: {
@@ -453,8 +453,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_pork_ala_stroganoff_fix: {
-    name: "Knorr Schab à'la Stroganoff Fix",
+    name: "Fix Schab à'la Stroganoff",
     type: "spc",
+    subType: "sah",
     color: "#A1887F",
     kcalPer100g: 379,
     unitWeights: {
@@ -466,8 +467,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_four_cheese_spaghetti_fix: {
-    name: "Knorr Spaghetti 4 Sery Fix",
+    name: "Fix Spaghetti 4 Sery",
     type: "spc",
+    subType: "sah",
     color: "#FFF3E0",
     kcalPer100g: 450,
     unitWeights: {
@@ -479,8 +481,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_chicken_pasta_fix: {
-    name: "Knorr Chicken Pasta Fix",
+    name: "Fix Chicken Pasta",
     type: "spc",
+    subType: "sah",
     color: "#FFE0B2",
     kcalPer100g: 307,
     unitWeights: {
@@ -492,8 +495,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   winiary_tomato_sauce_fix: {
-    name: "Winiary Sos Pomidorowy",
+    name: "Fix Sos Pomidorowy",
     type: "spc",
+    subType: "sah",
     color: "#D94C3A",
     kcalPer100g: 320,
     unitWeights: {
@@ -504,8 +508,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   winiary_dark_roast_sauce_fix: {
-    name: "Winiary Sos Pieczeniowy Ciemny",
+    name: "Fix Sos Pieczeniowy Ciemny",
     type: "spc",
+    subType: "sah",
     color: "#5D4037",
     kcalPer100g: 36,
     unitWeights: {
@@ -517,8 +522,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   winiary_chicken_fix: {
-    name: "Winiary Soczysty Kurczak Fix",
+    name: "Fix Soczysty Kurczak",
     type: "spc",
+    subType: "sah",
     color: "#BE5A33",
     kcalPer100g: 274,
     unitWeights: {
@@ -528,8 +534,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   winiary_pork_neck_fix: {
-    name: "Winiary Karkówka Fix",
+    name: "Fix Karkówka",
     type: "spc",
+    subType: "sah",
     color: "#BE5A33",
     kcalPer100g: 143,
     unitWeights: {
@@ -539,8 +546,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   winiary_peasant_stew_fix: {
-    name: "Winiary Chłopski Garnek Fix",
+    name: "Fix Chłopski Garnek",
     type: "spc",
+    subType: "sah",
     color: "#6D4C41",
     kcalPer100g: 91,
     unitWeights: {
@@ -552,8 +560,9 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   kamis_penne_fix: {
-    name: "Kamis Penne Fix",
+    name: "Fix Makaron Penne",
     type: "spc",
+    subType: "sah",
     color: "#FFCC80",
     kcalPer100g: 331,
     unitWeights: {
@@ -562,150 +571,5 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5.2, 60, 7.6],
     price: 85.5,
     verified: true,
-  },
-
-  //// HERBS ////
-
-  dill: {
-    name: "Koperek",
-    type: "spc",
-    subType: "hrb",
-    color: "#4CAF50",
-    kcalPer100g: 43,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [1.1, 7, 3.5],
-  },
-
-  thyme: {
-    name: "Tymianek",
-    type: "spc",
-    subType: "hrb",
-    color: "#6D8F4E",
-    kcalPer100g: 276,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [7.4, 63, 9],
-  },
-
-  marjoram: {
-    name: "Majeranek",
-    type: "spc",
-    subType: "hrb",
-    color: "#7CB342",
-    kcalPer100g: 271,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [7, 61, 13],
-  },
-
-  herbes_de_provence: {
-    name: "Zioła prowansalskie",
-    type: "spc",
-    subType: "hrb",
-    color: "#8BC34A",
-    kcalPer100g: 241,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [6, 50, 10],
-  },
-
-  wild_garlic: {
-    name: "Czosnek niedźwiedzi",
-    type: "spc",
-    subType: "hrb",
-    color: "#66BB6A",
-    kcalPer100g: 42,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [0.7, 8, 2.4],
-  },
-
-  bay_leaf: {
-    name: "Liść laurowy",
-    type: "spc",
-    subType: "hrb",
-    color: "#5D8C3A",
-    kcalPer100g: 313,
-    unitWeights: {
-      lst: 1,
-      szt: 1,
-    },
-    nutrientsPer100g: [8.4, 75, 8],
-  },
-
-  caraway: {
-    name: "Kminek",
-    type: "spc",
-    subType: "hrb",
-    color: "#795548",
-    kcalPer100g: 333,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [14.6, 50, 20],
-  },
-
-  savory: {
-    name: "Cząber",
-    type: "spc",
-    subType: "hrb",
-    color: "#689F38",
-    kcalPer100g: 287,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [5.9, 69, 6.7],
-  },
-
-  oregano: {
-    name: "Oregano",
-    type: "spc",
-    subType: "hrb",
-    color: "#558B2F",
-    kcalPer100g: 306,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [10, 64, 11],
-  },
-
-  basil: {
-    name: "Bazylia",
-    type: "spc",
-    subType: "hrb",
-    color: "#2E7D32",
-    kcalPer100g: 233,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [4, 61, 23],
-  },
-
-  coriander: {
-    name: "Kolendra",
-    type: "spc",
-    subType: "hrb",
-    color: "#81C784",
-    kcalPer100g: 298,
-    unitWeights: {
-      lzi: 1,
-      lz: 3,
-    },
-    nutrientsPer100g: [18, 55, 12],
   },
 };

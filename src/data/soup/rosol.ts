@@ -1,3 +1,4 @@
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -29,8 +30,8 @@ const rosol: Recipe = {
         { ing: iVEG.onion, amount: 1, unit: "szt", exclude: true },
         { ing: iVEG.leek, amount: 1, unit: "szt", exclude: true },
         { ing: iVEG.savoy_cabbage, amount: 80, exclude: true },
-        { ing: iVEG.parsley, amount: 10 },
-        { ing: iSPC.bay_leaf, amount: 2, unit: "lst" },
+        { ing: iHRB.parsley, amount: 10 },
+        { ing: iHRB.bay_leaf, amount: 2, unit: "lst" },
         { ing: iSPC.allspice, amount: 3, unit: "ziar" },
         { ing: iSPC.black_pepper, amount: 6, unit: "ziar" },
         { ing: iSPC.salt },

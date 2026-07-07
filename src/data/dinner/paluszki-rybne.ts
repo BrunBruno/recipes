@@ -1,6 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
-import { iMET } from "../../ingredients/ingMeat";
+import { iFSH } from "../../ingredients/ingFish";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
 
@@ -10,7 +10,7 @@ const paluszkiRybne: Recipe = {
   description:
     "Chrupiące paluszki rybne smażone na niewielkiej ilości oleju, podawane z pieczonymi frytkami i burakami jako szybki obiad.",
   type: "dinner",
-  images: ["paluszki-rybne.jpg"],
+  images: ["paluszki-rybne.jpg", "paluszki-rybne-2.jpg"],
   time: 20,
   portions: portions,
   executionDifficulty: 1,
@@ -18,7 +18,7 @@ const paluszkiRybne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.fish_sticks, amount: 5 * portions, unit: "szt" },
+        { ing: iFSH.fish_sticks, amount: 5 * portions, unit: "szt" },
         ...fryingFat(iFAT.oil, 1, "lzi", 0.65),
       ],
     },
@@ -28,7 +28,10 @@ const paluszkiRybne: Recipe = {
     selected: 0,
   },
   extrasVeg: {
-    options: [dinnerSides("beets-fried-ready", portions)],
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("stir-fry-vegetables", portions),
+    ],
     selected: 0,
   },
   steps: [

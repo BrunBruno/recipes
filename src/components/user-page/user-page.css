@@ -15,7 +15,16 @@
   background-color: #111;
   margin: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.user-page h1 svg {
+  height: 2.4rem;
 }
 
 .meal-panel {
@@ -80,7 +89,6 @@
 
 .meal-ing {
   display: block;
-  width: 10rem;
   margin: 0.25rem 0.5rem;
   height: fit-content;
   background-color: #101010;
@@ -274,7 +282,7 @@
 }
 
 .modal {
-  width: min(720px, 92vw);
+  width: min(720px, 100vw);
   max-height: 85vh;
   overflow: hidden;
 
@@ -298,12 +306,18 @@
 }
 
 .modal h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+
+.modal-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .modal-input,
 .modal-search {
-  width: 100%;
   padding: 10px 12px;
   background: #222;
   border: 2px solid #444;
@@ -312,35 +326,25 @@
   font-size: 1rem;
 }
 
-.modal-search {
-  margin-top: 6px;
-}
-
-.portions-input {
-  font-size: 1.6rem;
-  display: flex;
-  gap: 1rem;
-}
-.portions-input input {
-  width: 3rem;
-  height: 2rem;
-  font-size: 1.6rem;
+.modal-input input {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  width: 5rem;
   text-align: center;
-  padding: 0.25rem;
-}
-
-.modal select {
-  font-size: 1.6rem;
-  padding: 0.25rem;
 }
 
 .modal button {
-  padding: 0.25rem;
+  padding: 0.5rem;
   font-size: 1.6rem;
   cursor: pointer;
   background-color: #222;
-  border: 2px solid #666;
+  border: 2px solid #555;
   border-radius: 8px;
+}
+
+.modal button:hover {
+  background-color: #333;
+  border: 2px solid #666;
 }
 
 .modal-ingredient-list {
@@ -353,21 +357,25 @@
   padding-right: 4px;
 }
 
+.modal-ingredient-list::-webkit-scrollbar {
+  display: none;
+}
+
 .ingredient-item-button {
-  padding: 8px;
   border-radius: 6px;
   background: #222;
-  border: 1px solid #333;
-  color: #fff;
+  color: #bbb;
   cursor: pointer;
   transition: 0.15s;
   text-align: left;
+  padding: 0.5rem !important;
   font-size: 1.2rem !important;
+  border: none !important;
 }
 
 .ingredient-item-button:hover {
+  color: #fff;
   background: #333;
-  transform: translateY(-1px);
 }
 
 .modal-close {
@@ -401,7 +409,6 @@
   }
 
   .meal-card {
-    /* grid-template-columns: 6rem 1fr 3rem; */
     grid-template-columns: 0 1fr 3rem;
     border: none;
     height: auto;
@@ -421,6 +428,7 @@
 
   .modal {
     width: 90%;
+    height: 100vh;
     margin-top: 4rem;
   }
 

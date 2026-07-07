@@ -1,8 +1,8 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -26,7 +26,7 @@ const wrapWieprzowinaZPieczarkami: Recipe = {
         { ing: iVEG.mushrooms, amount: 100 },
         { ing: iVEG.potato, amount: 150 },
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
-        { ing: iJAR.horseradish_sauce, amount: 60 },
+        { ing: iSAU.horseradish_sauce, amount: 60 },
         { ing: iFAT.oil, amount: 1, unit: "lzi" },
         { ing: iSPC.salt },
       ],

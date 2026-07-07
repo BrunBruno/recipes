@@ -6,12 +6,13 @@ import type { Recipe } from "../../types";
 
 const penneWSosiePomidorowym: Recipe = {
   name: "Penne w Sosie Pomidorowym",
-  description: "",
+  description:
+    "Makaron penne w kremowym sosie pomidorowym z mozzarellą, przygotowany na bazie Fix Kamis.",
   type: "dinner",
   images: [""],
-  time: 0,
-  portions: 0,
-  executionDifficulty: null,
+  time: 20,
+  portions: 2,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",
@@ -24,7 +25,20 @@ const penneWSosiePomidorowym: Recipe = {
       ],
     },
   ],
-  steps: [],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Ugotuj makaron penne al dente zgodnie z instrukcją na opakowaniu.",
+        "Na patelni lub w rondlu wymieszaj passatę pomidorową, śmietanę oraz zawartość opakowania Fix Penne Kamis.",
+        "Doprowadź sos do wrzenia i gotuj przez około 3 minuty, cały czas mieszając.",
+        "Dodaj ugotowany makaron do sosu i dokładnie wymieszaj, aby równomiernie pokrył się sosem.",
+        "Mozzarellę podziel na niewielkie kawałki i ułóż na gorącym makaronie.",
+        "Podawaj od razu, gdy mozzarella zacznie się delikatnie roztapiać.",
+      ],
+    },
+  ],
+  keyWords: ["makaron"],
 };
 
 export default penneWSosiePomidorowym;

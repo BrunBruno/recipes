@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -42,9 +43,9 @@ const burgerDomowy: Recipe = {
     {
       title: "Sos",
       items: [
-        { ing: iJAR.mayonnaise, amount: 4, unit: "lzi" },
-        { ing: iJAR.mustard, amount: 1, unit: "lzi" },
-        { ing: iJAR.ketchup, amount: 1, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },
+        { ing: iSAU.mustard, amount: 1, unit: "lzi" },
+        { ing: iSAU.ketchup, amount: 1, unit: "lzi" },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
     },

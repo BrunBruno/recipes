@@ -1,6 +1,23 @@
 .history-page {
-  padding: 16px;
-  color: white;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.history-page h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #111;
+  margin: 0;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .history-list {
@@ -24,4 +41,10 @@
   gap: 12px;
   font-size: 14px;
   opacity: 0.9;
+}
+
+.history-chart {
+  height: 520px;
+  margin-top: 2rem;
+  padding-right: 2rem;
 }

@@ -1,3 +1,4 @@
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
@@ -37,8 +38,8 @@ const fasolkaPoBretonsku: Recipe = {
         { ing: iVEG.leek, amount: 100 },
         { ing: iVEG.celery_root, amount: 100 },
         { ing: iJAR.tomato_paste, amount: 1, unit: "lz" },
-        { ing: iSPC.marjoram },
-        { ing: iSPC.bay_leaf },
+        { ing: iHRB.marjoram },
+        { ing: iHRB.bay_leaf },
         { ing: iSPC.allspice },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

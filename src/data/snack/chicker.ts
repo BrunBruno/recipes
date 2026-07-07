@@ -1,8 +1,8 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
@@ -28,17 +28,17 @@ const chicker: Recipe = {
     {
       title: "Sosy",
       items: [
-        { ing: iJAR.ketchup, amount: 1.5, unit: "lzi" },
+        { ing: iSAU.ketchup, amount: 1.5, unit: "lzi" },
         {
           type: "choice",
           options: [
-            { ing: iJAR.sriracha, amount: 2, unit: "lzi" },
-            { ing: iJAR.spicy_ketchup, amount: 2, unit: "lzi" },
+            { ing: iSAU.sriracha, amount: 2, unit: "lzi" },
+            { ing: iSAU.spicy_ketchup, amount: 2, unit: "lzi" },
           ],
           selected: 0,
         },
-        { ing: iJAR.mustard_dessert, amount: 2, unit: "lzi" },
-        { ing: iJAR.mayonnaise, amount: 1, unit: "lzi" },
+        { ing: iSAU.mustard_dessert, amount: 2, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: 1, unit: "lzi" },
         { ing: iOTH.honey, amount: 0.5, unit: "lzi" },
       ],
     },

@@ -2,6 +2,7 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -26,7 +27,7 @@ const jajkaWSosieKoperkowym: Recipe = {
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iOTH.water, amount: 0.5, unit: "szk" },
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
-        { ing: iSPC.dill },
+        { ing: iHRB.dill },
         { ing: iSPC.salt },
       ],
     },
@@ -55,7 +56,6 @@ const jajkaWSosieKoperkowym: Recipe = {
         "Do sosu dodaj jajka lub podawaj jajka polane sosem koperkowym.",
       ],
     },
-   
   ],
   keyWords: ["jajko", "sos"],
 };

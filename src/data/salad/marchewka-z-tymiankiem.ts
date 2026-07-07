@@ -2,6 +2,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 
 const marchewkaZTymiankiem: Recipe = {
   name: "Marchewka z Tymiankiem",
@@ -18,8 +19,8 @@ const marchewkaZTymiankiem: Recipe = {
       items: [
         { ing: iVEG.carrot, amount: 4, unit: "szt" },
         { ing: iFAT.olive, amount: 1, unit: "lz" },
-        { ing: iSPC.thyme, amount: 0.5, unit: "lzi" },
-        { ing: iSPC.herbes_de_provence, amount: 1, unit: "lzi" },
+        { ing: iHRB.thyme, amount: 0.5, unit: "lzi" },
+        { ing: iHRB.herbes_de_provence, amount: 1, unit: "lzi" },
         { ing: iSPC.curry, amount: 0.5, unit: "lzi" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

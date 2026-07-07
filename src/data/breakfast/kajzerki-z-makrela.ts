@@ -1,6 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iMET } from "../../ingredients/ingMeat";
 import type { Recipe } from "../../types";
 
 const kajzerkiZMakrela: Recipe = {
@@ -17,7 +17,7 @@ const kajzerkiZMakrela: Recipe = {
       title: "",
       items: [
         { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-        { ing: iMET.smoked_mackerel, amount: 0.5, unit: "szt" },
+        { ing: iFSH.smoked_mackerel, amount: 0.5, unit: "szt" },
         { ing: iFAT.butter, amount: 10 },
       ],
     },

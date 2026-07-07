@@ -1,10 +1,14 @@
 import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
+import { iFSH } from "./ingredients/ingFish";
 import { iFRT } from "./ingredients/ingFruit";
 import { iGRN } from "./ingredients/ingGrain";
+import { iHRB } from "./ingredients/ingHerb";
 import { iJAR } from "./ingredients/ingJar";
 import { iMET } from "./ingredients/ingMeat";
 import { iOTH } from "./ingredients/ingOther";
+import { iSAU } from "./ingredients/ingSauce";
+import { iSNK } from "./ingredients/ingSnack";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type {
@@ -26,10 +30,14 @@ export const ingredientCollections = [
   iFRT,
   iGRN,
   iMET,
-  iOTH,
+  iFSH,
+  iHRB,
   iSPC,
   iVEG,
+  iSAU,
   iJAR,
+  iSNK,
+  iOTH,
 ];
 
 type DictRecord = {
@@ -48,13 +56,17 @@ export const MealTypesData: Record<MealType, DictRecord> = {
 };
 export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   met: { label: "Mięso", color: "#f03e3e" },
+  fsh: { label: "Ryby", color: "#1c7ed6" },
   dir: { label: "Nabiał", color: "#ffffff" },
   fat: { label: "Tłuszcze", color: "#fcc419" },
   veg: { label: "Warzywa", color: "#40c057" },
   frt: { label: "Owoce", color: "#74b816" },
   grn: { label: "Zboża", color: "#f76707" },
+  hrb: { label: "Zioła", color: "#40c057" },
   spc: { label: "Przyprawy", color: "#495057" },
+  sau: { label: "Sosy", color: "#f03e3e" },
   jar: { label: "Przetwory", color: "#ae3ec9" },
+  snk: { label: "Przekąski", color: "#66d9e8" },
   oth: { label: "Inne", color: "#dee2e6" },
 };
 
@@ -189,16 +201,6 @@ export const calculateRecipeKcal = (
     let grams = 0;
     let value = amount;
 
-    // if (typeof amount === "string") {
-    //   if (amount.includes("-")) {
-    //     const parts = amount.split("-").map(Number);
-    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
-    //   } else {
-    //     console.warn(`Incorrect amount ${amount}`);
-    //     continue;
-    //   }
-    // }
-
     if (!value || typeof value === "string") {
       if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
       else continue;
@@ -241,16 +243,6 @@ export const calculateRecipeKcalPer100g = (recipe: Recipe): number => {
 
     let grams = 0;
     let value = amount;
-
-    // if (typeof amount === "string") {
-    //   if (amount.includes("-")) {
-    //     const parts = amount.split("-").map(Number);
-    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
-    //   } else {
-    //     console.warn(`Incorrect amount ${amount}`);
-    //     continue;
-    //   }
-    // }
 
     if (!value || typeof value === "string") {
       if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
@@ -296,16 +288,6 @@ export const calculateRecipeNutrients = (
 
     let grams = 0;
     let value = amount;
-
-    // if (typeof amount === "string") {
-    //   if (amount.includes("-")) {
-    //     const parts = amount.split("-").map(Number);
-    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
-    //   } else {
-    //     console.warn(`Incorrect amount ${amount}`);
-    //     continue;
-    //   }
-    // }
 
     if (!value || typeof value === "string") {
       if (ing.type === "fat") {
@@ -368,16 +350,6 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
     let grams = 0;
     let value = amount;
 
-    // if (typeof amount === "string") {
-    //   if (amount.includes("-")) {
-    //     const parts = amount.split("-").map(Number);
-    //     value = parts.reduce((a, b) => a + b, 0) / parts.length;
-    //   } else {
-    //     console.warn(`Incorrect amount ${amount}`);
-    //     continue;
-    //   }
-    // }
-
     if (!value || typeof value === "string") {
       continue;
     } else {
@@ -426,28 +398,28 @@ export const keywordAliases: Record<KeyWord, string[]> = {
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
-  recipes.forEach((recipe) => {
-    recipe.ingredients.forEach((group) => {
-      group.items.forEach((item) => {
-        item = item as IngredientChoice;
-        if (item.type === "choice") {
-          const choiceItem = item as IngredientChoice;
+  const addItems = (items: (Ingredient | IngredientChoice)[]) => {
+    items.forEach((item) => {
+      if ((item as IngredientChoice).type === "choice") {
+        (item as IngredientChoice).options.forEach((opt) => {
+          usage[opt.ing.name] = (usage[opt.ing.name] ?? 0) + 1;
+        });
+        return;
+      }
 
-          choiceItem.options.forEach((opt) => {
-            const key = opt.ing.name;
-            usage[key] = (usage[key] ?? 0) + 1;
-          });
+      const active = getActiveIngredient(item);
 
-          return;
-        }
+      if (active.exclude) return;
 
-        const active = getActiveIngredient(item);
-        if (active.exclude) return;
-
-        const key = active.ing.name;
-        usage[key] = (usage[key] ?? 0) + 1;
-      });
+      usage[active.ing.name] = (usage[active.ing.name] ?? 0) + 1;
     });
+  };
+
+  recipes.forEach((recipe) => {
+    recipe.ingredients.forEach((group) => addItems(group.items));
+    recipe.extrasMain?.options[0] &&
+      addItems(recipe.extrasMain.options[0].items);
+    recipe.extrasVeg?.options[0] && addItems(recipe.extrasVeg.options[0].items);
   });
 
   return usage;
@@ -474,13 +446,17 @@ export const countRecipesTypes = (recipes: Recipe[]) => {
 export const countIngredientTypes = () => {
   const usage: Record<IngredientType, number> = {
     met: 0,
+    fsh: 0,
     dir: 0,
     fat: 0,
     grn: 0,
     veg: 0,
     frt: 0,
+    sau: 0,
     jar: 0,
+    hrb: 0,
     spc: 0,
+    snk: 0,
     oth: 0,
   };
 
@@ -575,15 +551,7 @@ export const countRecipePreparationTime = (recipes: Recipe[]) => {
 export const formatUnit = (ingredient: Ingredient): string => {
   if (!ingredient.amount || !ingredient.unit) return " g";
 
-  let count: number;
-  // if (typeof ingredient.amount === "string") {
-  //   const match = ingredient.amount.match(/^(\d+)\s*-\s*\d+/);
-  //   count = match ? (parseInt(match[0], 10) + parseInt(match[1], 10)) / 2 : 1;
-  // } else {
-  //   count = ingredient.amount;
-  // }
-  count = ingredient.amount;
-
+  const count = ingredient.amount;
   const unit = ingredient.unit;
 
   const pluralize = (

@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -12,7 +13,7 @@ const spaghettiPomidorowe: Recipe = {
   description:
     "Spaghetti w aromatycznym sosie pomidorowym z czosnkiem i ziołami, podawane ze startym żółtym serem - szybki i lekki obiad dla każdego.",
   type: "dinner",
-  images: ["spaghetti-pomidorowe.jpg","spaghetti-pomidorowe-2.jpg"],
+  images: ["spaghetti-pomidorowe.jpg", "spaghetti-pomidorowe-2.jpg"],
   time: 40,
   portions: portions,
   executionDifficulty: 2,
@@ -25,8 +26,8 @@ const spaghettiPomidorowe: Recipe = {
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iDIR.yellow_cheese, amount: portions * 50 },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
-        { ing: iSPC.basil },
-        { ing: iSPC.oregano },
+        { ing: iHRB.basil },
+        { ing: iHRB.oregano },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

@@ -3,8 +3,8 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iFAT } from "../../ingredients/ingFat";
 import { iVEG } from "../../ingredients/ingVegetable";
-import { iJAR } from "../../ingredients/ingJar";
 import type { Recipe } from "../../types";
+import { iSAU } from "../../ingredients/ingSauce";
 
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
@@ -24,7 +24,7 @@ const kajzerkiZJajkiem: Recipe = {
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },
-        { ing: iJAR.mayonnaise, amount: 4, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },
         { ing: iFAT.butter, amount: 10 },
       ],
     },

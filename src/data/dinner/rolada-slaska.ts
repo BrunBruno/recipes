@@ -5,6 +5,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -38,7 +39,7 @@ const roladaSlaska: Recipe = {
         { ing: iVEG.onion, amount: 120 },
         { ing: iGRN.flour, amount: 20 },
         { ing: iDIR.cream_18, amount: 100 },
-        { ing: iJAR.mustard_sarepska, amount: 25 },
+        { ing: iSAU.mustard_sarepska, amount: 25 },
         ...fryingFat(iFAT.margarine, 10, "g", 0.5),
         ...fryingFat(iFAT.butter, 10, "g", 0.5),
         { ing: iOTH.water, amount: 400, unit: "ml" },

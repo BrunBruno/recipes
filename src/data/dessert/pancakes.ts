@@ -4,6 +4,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSNK } from "../../ingredients/ingSnack";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -37,11 +38,11 @@ const pancakes: Recipe = {
           type: "choice",
           options: [
             {
-              ing: iGRN.chocolate_cream,
+              ing: iSNK.chocolate_cream,
               amount: portions * 30,
             },
             {
-              ing: iGRN.nutella,
+              ing: iSNK.nutella,
               amount: portions * 30,
             },
             {
@@ -70,8 +71,8 @@ const pancakes: Recipe = {
       title: "Proponowane dodatki",
       isAdd: true,
       items: [
-        { ing: iGRN.chocolate_cream, exclude: true },
-        { ing: iGRN.nutella, exclude: true },
+        { ing: iSNK.chocolate_cream, exclude: true },
+        { ing: iSNK.nutella, exclude: true },
         { ing: iOTH.maple_syrup, exclude: true },
         { ing: iDIR.whipped_cream, exclude: true },
         { ing: iJAR.jam_strawberry, exclude: true },

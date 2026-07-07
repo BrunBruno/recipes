@@ -1,8 +1,8 @@
 import { iMET } from "../../ingredients/ingMeat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iFAT } from "../../ingredients/ingFat";
 import type { Recipe } from "../../types";
+import { iSAU } from "../../ingredients/ingSauce";
 
 const parowki: Recipe = {
   name: "Parówki",
@@ -20,7 +20,7 @@ const parowki: Recipe = {
         { ing: iMET.sausages, amount: 3, unit: "szt" },
         { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
         { ing: iFAT.butter, amount: 5 },
-        { ing: iJAR.ketchup, amount: 20 },
+        { ing: iSAU.ketchup, amount: 20 },
       ],
     },
   ],

@@ -1,5 +1,6 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
+import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
@@ -23,7 +24,7 @@ const roladaSzpinakowa: Recipe = {
         { ing: iJAR.frozen_spinach, amount: 1, unit: "opak" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iMET.egg, amount: 4, unit: "szt" },
-        { ing: iMET.smoked_salmon, amount: 250 },
+        { ing: iFSH.smoked_salmon, amount: 250 },
         { ing: iDIR.cream_cheese_horseradish, amount: 200 },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
         { ing: iFAT.olive, amount: 2, unit: "lz" },

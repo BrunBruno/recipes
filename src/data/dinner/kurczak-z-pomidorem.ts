@@ -1,8 +1,9 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -27,10 +28,10 @@ const kurczakZPomidorem: Recipe = {
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
-        { ing: iJAR.mayonnaise, amount: 1, unit: "lz" },
+        { ing: iSAU.mayonnaise, amount: 1, unit: "lz" },
         ...fryingFat(iFAT.olive, 2, "lz", 0.35),
-        { ing: iSPC.herbes_de_provence },
-        { ing: iSPC.wild_garlic },
+        { ing: iHRB.herbes_de_provence },
+        { ing: iHRB.wild_garlic },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

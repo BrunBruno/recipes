@@ -1,9 +1,10 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
-import { iSPC } from "../../ingredients/ingSpice";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
@@ -30,7 +31,7 @@ const skladaki: Recipe = {
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-        { ing: iSPC.oregano },
+        { ing: iHRB.oregano },
       ],
     },
     {
@@ -38,9 +39,9 @@ const skladaki: Recipe = {
       items: [
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iJAR.tomato_paste, amount: 3, unit: "lzi" },
-        { ing: iJAR.ketchup, amount: 1, unit: "lzi" },
+        { ing: iSAU.ketchup, amount: 1, unit: "lzi" },
         { ing: iFAT.oil, amount: 0.5, unit: "lzi" },
-        { ing: iSPC.basil },
+        { ing: iHRB.basil },
       ],
     },
   ],

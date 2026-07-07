@@ -11,14 +11,18 @@ export type MealType =
   | "other";
 
 export type IngredientType =
-  | "met" // meats / fishes / eggs
+  | "met" // meats / eggs
+  | "fsh" // fishes
   | "dir" // diary / cheese
   | "fat" // fats / butter
-  | "veg" // vegetables / greens / fresh herbs / mushrooms
+  | "veg" // vegetables / greens  / mushrooms
   | "frt" // fruits / nuts
   | "grn" // grains / bakery
+  | "sau" // sauces
+  | "jar" // preserves / juices /
+  | "snk" // snacks
+  | "hrb" // herbs
   | "spc" // spices
-  | "jar" // preserves / juices / sauces
   | "oth"; // other / sugars / water
 
 export type UnitType =
@@ -114,6 +118,7 @@ export type RecipeStepGroup = {
 export type NonEmptyArray<T> = [T, ...T[]];
 export type Recipe = {
   name: string;
+  fileName?: string;
   description: string;
   type: MealType;
   images: NonEmptyArray<string>;

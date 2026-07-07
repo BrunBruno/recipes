@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
@@ -59,9 +60,9 @@ const kottuRoti: Recipe = {
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iVEG.ginger, amount: 20 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
-        { ing: iVEG.spring_onion },
-        { ing: iVEG.lemongrass },
-        { ing: iVEG.fresh_coriander },
+        { ing: iHRB.spring_onion },
+        { ing: iHRB.lemongrass },
+        { ing: iHRB.fresh_coriander },
       ],
     },
     {

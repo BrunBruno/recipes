@@ -1,6 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -24,9 +25,9 @@ const kotletyZKurczaka: Recipe = {
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         ...fryingFat(iFAT.oil, 6, "lz", 0.45),
-        { ing: iSPC.wild_garlic },
-        { ing: iSPC.herbes_de_provence },
-        { ing: iSPC.marjoram },
+        { ing: iHRB.wild_garlic },
+        { ing: iHRB.herbes_de_provence },
+        { ing: iHRB.marjoram },
         { ing: iSPC.black_pepper },
         { ing: iSPC.granulated_garlic },
         { ing: iSPC.sweet_paprika },

@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -27,8 +28,8 @@ const lazanki: Recipe = {
         { ing: iVEG.onion, amount: 280 },
         { ing: iVEG.mushrooms, amount: 150 },
         ...fryingFat(iFAT.oil, 10, "lz", 0.7),
-        { ing: iSPC.bay_leaf },
-        { ing: iSPC.caraway },
+        { ing: iHRB.bay_leaf },
+        { ing: iHRB.caraway },
         { ing: iSPC.allspice },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

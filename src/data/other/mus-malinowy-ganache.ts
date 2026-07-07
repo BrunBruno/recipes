@@ -1,8 +1,8 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFRT } from "../../ingredients/ingFruit";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iOTH } from "../../ingredients/ingOther";
+import { iSNK } from "../../ingredients/ingSnack";
 import type { Recipe } from "../../types";
 
 const musMalinowyGanache: Recipe = {
@@ -21,7 +21,7 @@ const musMalinowyGanache: Recipe = {
         { ing: iDIR.cream_36, amount: 170 },
         { ing: iFRT.raspberries, amount: 200 },
         { ing: iJAR.lemon_juice, amount: 5, unit: "ml" },
-        { ing: iGRN.white_chocolate, amount: 100 },
+        { ing: iSNK.white_chocolate, amount: 100 },
         { ing: iOTH.gelatin, amount: 6 },
         { ing: iOTH.water, amount: 30, unit: "ml" },
       ],

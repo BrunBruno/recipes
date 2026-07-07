@@ -1,9 +1,9 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const pomidorowa: Recipe = {
@@ -23,9 +23,9 @@ const pomidorowa: Recipe = {
         { ing: iJAR.tomato_puree, amount: 200 },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 80 },
-        { ing: iVEG.parsley, amount: 10 },
-        { ing: iSPC.dill },
-        { ing: iSPC.basil },
+        { ing: iHRB.parsley, amount: 10 },
+        { ing: iHRB.dill },
+        { ing: iHRB.basil },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

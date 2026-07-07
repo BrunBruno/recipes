@@ -1,5 +1,6 @@
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -30,8 +31,8 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
           selected: 0,
         },
         { ing: iJAR.frozen_fries, amount: 150 * portions },
-        { ing: iJAR.mayonnaise, amount: 2, unit: "lzi" },
-        { ing: iJAR.sriracha, amount: 1, unit: "lzi" },
+        { ing: iSAU.mayonnaise, amount: 2, unit: "lzi" },
+        { ing: iSAU.sriracha, amount: 1, unit: "lzi" },
         { ing: iSPC.salt },
       ],
     },

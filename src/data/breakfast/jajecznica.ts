@@ -1,4 +1,5 @@
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -37,7 +38,7 @@ const jajecznica: Recipe = {
         { ing: iMET.bacon_block, amount: 100, exclude: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
-        { ing: iVEG.chives },
+        { ing: iHRB.chives },
       ],
     },
   ],

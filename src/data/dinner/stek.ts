@@ -1,5 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -24,7 +25,7 @@ const stek: Recipe = {
         { ing: iVEG.garlic, amount: portions, unit: "zbk" },
         ...fryingFat(iFAT.oil, portions, "lzi", 0.55),
         ...fryingFat(iFAT.butter, 1, "lz", 0.5),
-        { ing: iSPC.thyme },
+        { ing: iHRB.thyme },
         { ing: iSPC.salt },
       ],
     },

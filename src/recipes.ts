@@ -4,18 +4,18 @@ const modules = import.meta.glob("./data/**/*.ts", {
   eager: true,
 });
 
-const loadedRecipes: Recipe[] = Object.values(modules).map(
-  (mod: any) => mod.default as Recipe,
+const loadedRecipes: Recipe[] = Object.entries(modules).map(
+  ([path, mod]: [string, any]) => ({
+    ...(mod.default as Recipe),
+    fileName: path.split("/").pop()!.replace(".ts", ""),
+  }),
 );
 
-export const recipes: Recipe[] = loadedRecipes
-  // .filter((r) => r.steps.length > 0 && r.ingredients.length > 0)
-  // .filter((r) => r.steps.length === 0 || r.ingredients.length === 0)
-  .sort((a, b) => {
-    const aDone = a.images.some((img) => img.trim() !== "");
-    const bDone = b.images.some((img) => img.trim() !== "");
+export const recipes: Recipe[] = loadedRecipes.sort((a, b) => {
+  const aDone = a.images.some((img) => img.trim() !== "");
+  const bDone = b.images.some((img) => img.trim() !== "");
 
-    if (aDone !== bDone) return bDone ? 1 : -1;
+  if (aDone !== bDone) return bDone ? 1 : -1;
 
-    return a.name.localeCompare(b.name);
-  });
+  return a.name.localeCompare(b.name);
+});

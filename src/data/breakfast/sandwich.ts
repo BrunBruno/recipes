@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
 
 const sandwich: Recipe = {
@@ -33,8 +34,8 @@ const sandwich: Recipe = {
         },
         { ing: iDIR.yellow_cheese, amount: 2, unit: "plas" },
         { ing: iJAR.pickled_cucumber, amount: 0.5, unit: "szt" },
-        { ing: iJAR.ketchup },
-        { ing: iJAR.garlic_sauce },
+        { ing: iSAU.ketchup },
+        { ing: iSAU.garlic_sauce },
       ],
     },
   ],

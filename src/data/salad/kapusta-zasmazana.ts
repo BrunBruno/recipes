@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -26,7 +27,7 @@ const kapustaZasmazana: Recipe = {
         { ing: iFAT.oil, amount: 70 },
         { ing: iGRN.flour, amount: 30 },
         { ing: iOTH.sugar, amount: 1, unit: "lz" },
-        { ing: iSPC.bay_leaf, amount: 1, unit: "lst" },
+        { ing: iHRB.bay_leaf, amount: 1, unit: "lst" },
         { ing: iSPC.allspice, amount: 4, unit: "ziar" },
         { ing: iSPC.black_pepper, amount: 0.33, unit: "lzi" },
       ],

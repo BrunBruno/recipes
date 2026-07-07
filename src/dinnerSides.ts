@@ -1,6 +1,7 @@
 import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
 import { iGRN } from "./ingredients/ingGrain";
+import { iHRB } from "./ingredients/ingHerb";
 import { iJAR } from "./ingredients/ingJar";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
@@ -54,8 +55,8 @@ export const dinnerSides = (
           { ing: iVEG.potato, amount: portions * 250 },
           { ing: iFAT.oil, amount: portions * 0.8, unit: "lz" },
           { ing: iVEG.garlic, amount: portions * 0.5, unit: "zbk" },
-          { ing: iSPC.caraway, amount: portions * 0.25, unit: "lzi" },
-          { ing: iSPC.thyme, amount: portions * 0.25, unit: "lzi" },
+          { ing: iHRB.caraway, amount: portions * 0.25, unit: "lzi" },
+          { ing: iHRB.thyme, amount: portions * 0.25, unit: "lzi" },
           { ing: iSPC.potato_seasoning, amount: portions * 0.25, unit: "lz" },
           { ing: iSPC.sweet_paprika, amount: portions * 0.5, unit: "lzi" },
           { ing: iSPC.hot_paprika, amount: portions * 0.25, unit: "lzi" },
@@ -69,7 +70,7 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iVEG.potato, amount: portions * 200 },
-          { ing: iSPC.dill },
+          { ing: iHRB.dill },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
         ],
@@ -243,7 +244,7 @@ export const dinnerSides = (
         items: [
           { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
           { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
-          { ing: iVEG.spring_onion },
+          { ing: iHRB.spring_onion },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
         ],

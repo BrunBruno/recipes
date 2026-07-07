@@ -1,10 +1,10 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iMET } from "../../ingredients/ingMeat";
 import { iVEG } from "../../ingredients/ingVegetable";
-import { iJAR } from "../../ingredients/ingJar";
 import type { Recipe } from "../../types";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iDIR } from "../../ingredients/ingDairy";
+import { iSAU } from "../../ingredients/ingSauce";
 
 const portions = 4;
 const wrapWieprzowyJajecznica: Recipe = {
@@ -29,9 +29,9 @@ const wrapWieprzowyJajecznica: Recipe = {
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: portions, unit: "szt" },
-        { ing: iJAR.mustard_dessert, amount: 30 },
-        { ing: iJAR.mayonnaise, amount: 30 },
-        { ing: iJAR.horseradish_sauce, amount: 10 },
+        { ing: iSAU.mustard_dessert, amount: 30 },
+        { ing: iSAU.mayonnaise, amount: 30 },
+        { ing: iSAU.horseradish_sauce, amount: 10 },
         { ing: iFAT.butter, amount: 5 },
       ],
     },

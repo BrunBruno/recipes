@@ -4,6 +4,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import { iMET } from "../../ingredients/ingMeat";
 import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
+import { iHRB } from "../../ingredients/ingHerb";
 
 const laneCiasto: Recipe = {
   name: "Rosół z Lanym Ciastem",
@@ -24,7 +25,7 @@ const laneCiasto: Recipe = {
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
         { ing: iOTH.maggi },
-        { ing: iSPC.dill },
+        { ing: iHRB.dill },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

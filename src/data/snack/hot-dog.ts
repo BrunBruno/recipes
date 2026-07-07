@@ -1,6 +1,7 @@
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
 
 const hotHog: Recipe = {
@@ -21,9 +22,9 @@ const hotHog: Recipe = {
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.sauerkraut, amount: 160 },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
-        { ing: iJAR.ketchup, amount: 20 },
-        { ing: iJAR.mustard_dessert, amount: 20 },
-        { ing: iJAR.garlic_sauce, amount: 20 },
+        { ing: iSAU.ketchup, amount: 20 },
+        { ing: iSAU.mustard_dessert, amount: 20 },
+        { ing: iSAU.garlic_sauce, amount: 20 },
       ],
     },
   ],
