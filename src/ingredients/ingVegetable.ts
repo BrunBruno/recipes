@@ -112,6 +112,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 170,
     },
     nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 8,
   },
 
   cherry_tomato: {
@@ -155,7 +156,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 6, 1],
-    price: 19,
+    price: 13,
   },
 
   chili_pepper: {
@@ -190,6 +191,10 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#D32F2F",
     kcalPer100g: 31,
     nutrientsPer100g: [1.0, 0.3, 6.0],
+    unitWeights: {
+      szt: 150,
+    },
+    price: 13,
   },
 
   yellow_bell_pepper: {
@@ -465,6 +470,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 500,
     },
     nutrientsPer100g: [0.4, 7, 2.8],
+    price: 12,
   },
 
   //// BEANS ////

@@ -29,12 +29,14 @@ type IngId =
 
   //// FROZEN ////
   | "frozen_fries"
+  | "frozen_thin_fries"
   | "frozen_spinach"
   | "frozen_vegetable_mix"
   | "frozen_stir_fry"
   | "frozen_stir_fry_oriental"
   | "frozen_green_beans"
   | "strawberry_frozen"
+  | "frozen_broccoli"
 
   //// SALADS ////
   | "coleslaw"
@@ -287,11 +289,27 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#FBC02D",
-    kcalPer100g: 150,
+    kcalPer100g: 165,
     unitWeights: {
       opak: 1000,
     },
-    nutrientsPer100g: [5, 25, 3],
+    nutrientsPer100g: [5.5, 25, 2.5],
+    price: 9.3,
+    verified: true,
+  },
+
+  frozen_thin_fries: {
+    name: "Frytki długie cienkie",
+    type: "jar",
+    subType: "fro",
+    color: "#FBC02D",
+    kcalPer100g: 165,
+    unitWeights: {
+      opak: 1000,
+    },
+    nutrientsPer100g: [5.5, 25, 2.5],
+    price: 9.3,
+    verified: true, 
   },
 
   frozen_vegetable_mix: {
@@ -354,6 +372,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 450,
     },
     nutrientsPer100g: [0.3, 7.7, 0.7],
+  },
+
+  frozen_broccoli: {
+    name: "Mrożone brokuły",
+    type: "jar",
+    subType: "fro",
+    color: "#2E7D32",
+    kcalPer100g: 34,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [0.4, 3.2, 2.9],
   },
 
   //// SALADS ////

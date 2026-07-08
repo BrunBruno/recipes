@@ -1,5 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
+import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iJAR } from "../../ingredients/ingJar";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -10,9 +12,9 @@ const spaghettiCzterySery: Recipe = {
   description:
     "Spaghetti w kremowym sosie cztery sery z dodatkiem brokułów. Szybki obiad na bazie sosu w proszku.",
   type: "dinner",
-  images: [""],
-  time: 20,
-  portions: 2,
+  images: ["spaghetti-cztery-sery.jpg"],
+  time: 35,
+  portions: 3,
   executionDifficulty: 1,
   ingredients: [
     {
@@ -20,8 +22,16 @@ const spaghettiCzterySery: Recipe = {
       items: [
         { ing: iGRN.spaghetti_pasta, amount: 300 },
         { ing: iDIR.cream_18, amount: 50, unit: "ml" },
-        { ing: iVEG.broccoli, amount: 150 },
+        {
+          type: "choice",
+          options: [
+            { ing: iVEG.broccoli, amount: 250 },
+            { ing: iJAR.frozen_broccoli, amount: 250 },
+          ],
+          selected: 0,
+        },
         { ing: iDIR.parmesan, amount: 50 },
+        { ing: iFRT.peanuts, amount: 20 },
         { ing: iOTH.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_four_cheese_spaghetti_fix, amount: 1, unit: "opak" },
       ],
@@ -38,7 +48,7 @@ const spaghettiCzterySery: Recipe = {
         "Wodę możesz zastąpić w całości śmietaną, aby uzyskać bardziej kremowy sos.",
         "Ugotowane brokuły pokrój na mniejsze kawałki i dodaj do sosu.",
         "Połącz sos z ugotowanym makaronem i dokładnie wymieszaj.",
-        "Podawaj od razu po przygotowaniu ze startym parmezanem.",
+        "Podawaj od razu po przygotowaniu ze startym parmezanem lub z dodatkiem orzeszków ziemnych.",
       ],
     },
   ],

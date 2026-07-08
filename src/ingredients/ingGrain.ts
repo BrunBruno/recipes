@@ -42,6 +42,7 @@ type IngId =
   | "chicken_buns"
   | "hotdog_buns"
   | "french_hotdog_buns"
+  | "frusta_prosciutto"
 
   //// SEEDS ////
   | "cocoa"
@@ -303,7 +304,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 350,
     },
     nutrientsPer100g: [3, 54, 8.5],
-    price: 4.2,
+    price: 6.2,
   },
 
   multigrain_kaiser_roll: {
@@ -433,6 +434,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       krom: 22,
     },
     nutrientsPer100g: [3.2, 50, 8.6],
+    price: 8,
     verified: true,
   },
 
@@ -484,6 +486,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szt: 85,
     },
     nutrientsPer100g: [8.3, 51, 7.7],
+  },
+
+  frusta_prosciutto: {
+    name: "Frusta Prosciutto",
+    type: "grn",
+    subType: "bun",
+    kcalPer100g: 207,
+    unitWeights: {
+      szt: 190,
+    },
+    nutrientsPer100g: [4.4, 30.8, 9.7],
+    price: 39,
+    verified: true,
   },
 
   //// SEEDS ////

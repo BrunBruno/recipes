@@ -12,6 +12,7 @@ type IngId =
   | "greek_yogurt"
   | "strawberry_yogurt"
   | "vanilla_skyr"
+  | "drinkable_skyr_strawberry_and_kiwi"
   | "kefir"
   | "cream_12"
   | "cream_18"
@@ -159,6 +160,19 @@ export const iDIR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 11, 9.6],
     price: 22.6,
+    verified: true,
+  },
+
+  drinkable_skyr_strawberry_and_kiwi: {
+    name: "Skyr pitny truskawka i kiwi",
+    type: "dir",
+    color: "#F8BBD0",
+    kcalPer100g: 70,
+    unitWeights: {
+      opak: 350,
+    },
+    nutrientsPer100g: [1.1, 10, 6.5],
+    price: 17,
     verified: true,
   },
 
@@ -468,6 +482,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [29, 4, 36],
+    price: 53,
   },
 
   cheddar_cheese: {

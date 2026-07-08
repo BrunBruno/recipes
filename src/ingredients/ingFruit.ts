@@ -369,6 +369,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szk: 125,
     },
     nutrientsPer100g: [0.3, 12, 1.1],
+    price: 80,
   },
 
   blackberry: {

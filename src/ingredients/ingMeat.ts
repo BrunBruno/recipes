@@ -237,11 +237,13 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "pou",
     color: "#F4C27A",
-    kcalPer100g: 212,
+    kcalPer100g: 241,
     unitWeights: {
-      opak: 300,
+      opak: 350,
     },
-    nutrientsPer100g: [12, 14, 13],
+    nutrientsPer100g: [12, 18, 14],
+    price: 32,
+    verified: true,
   },
 
   //// MEAT ////
