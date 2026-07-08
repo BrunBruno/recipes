@@ -10,6 +10,7 @@ type IngId =
   | "herring_in_oil"
   | "herring_in_tomato_sauce"
   | "herring_in_vinegar"
+  | "mackerel_in_tomato_sauce"
   | "pollock"
   | "hake"
   | "halibut"
@@ -192,6 +193,19 @@ export const iFSH: Record<IngId, IngredientItem> = {
       opak: 150,
     },
     nutrientsPer100g: [13, 2, 10],
+  },
+
+  mackerel_in_tomato_sauce: {
+    name: "Makrela w sosie pomidorowym",
+    type: "fsh",
+    subType: "can",
+    color: "#D84315",
+    kcalPer100g: 180,
+    unitWeights: {
+      opak: 175,
+    },
+    nutrientsPer100g: [12, 5.1, 13],
+    verified: true,
   },
 
   //// SEAFOOD ////

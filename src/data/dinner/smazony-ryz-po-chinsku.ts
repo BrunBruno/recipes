@@ -8,12 +8,13 @@ import type { Recipe } from "../../types";
 
 const smazonyRyzPoChinsku: Recipe = {
   name: "Smażony Ryż po Chińsku",
-  description: "",
+  description:
+    "Smażony ryż po chińsku z kurczakiem, warzywami i jajkiem w aromatycznym sosie.",
   type: "dinner",
   images: [""],
-  time: 0,
-  portions: 0,
-  executionDifficulty: null,
+  time: 30,
+  portions: 3,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",
@@ -28,7 +29,23 @@ const smazonyRyzPoChinsku: Recipe = {
       ],
     },
   ],
-  steps: [],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Ryż ugotuj z odrobiną soli zgodnie z instrukcją na opakowaniu.",
+        "Kurczaka oraz warzywa pokrój w paseczki.",
+        "Na rozgrzanym oleju podsmaż kurczaka i warzywa.",
+        "Przesuń składniki na brzeg patelni, zostawiając wolne miejsce na środku.",
+        "Wbij jajko w wolne miejsce i smaż, mieszając, aż się zetnie.",
+        "Połącz jajko z pozostałymi składnikami i dokładnie wymieszaj.",
+        "Dodaj ugotowany ryż i wymieszaj całość.",
+        "Fix wymieszaj z zimną wodą, dodaj do dania i dokładnie połącz składniki.",
+        "Gotuj jeszcze około 5 minut, od czasu do czasu mieszając.",
+      ],
+    },
+  ],
+  keyWords: ["kurczak", "ryż", "warzywa"],
 };
 
 export default smazonyRyzPoChinsku;

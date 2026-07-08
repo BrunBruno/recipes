@@ -20,6 +20,12 @@ type IngId =
   | "lazanki_pasta"
   | "penne_pasta"
   | "macaroni_pasta"
+  | "lasagne_pasta"
+
+  //// PROCESSED ////
+  | "cupcake_mix"
+  | "oat_flakes"
+  | "cornflakes"
 
   //// READY ////
   | "kopytka"
@@ -47,12 +53,7 @@ type IngId =
   //// SEEDS ////
   | "cocoa"
   | "coffee"
-  | "grain_coffee"
-
-  //// PROCESSED ////
-  | "cupcake_mix"
-  | "oat_flakes"
-  | "cornflakes";
+  | "grain_coffee";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   //// GRAINS ////
@@ -130,24 +131,26 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Kasza bulgur",
     type: "grn",
     color: "#DDBB72",
-    kcalPer100g: 342,
+    kcalPer100g: 329,
     unitWeights: {
       szk: 200,
       opak: 400,
     },
-    nutrientsPer100g: [1.3, 76, 12],
+    nutrientsPer100g: [1.4, 62, 10],
+    verified: true,
   },
 
   buckwheat: {
     name: "Kasza gryczana",
     type: "grn",
     color: "#8D6E63",
-    kcalPer100g: 343,
+    kcalPer100g: 347,
     unitWeights: {
       szk: 180,
       opak: 100,
     },
-    nutrientsPer100g: [3.4, 72, 13],
+    nutrientsPer100g: [3.1, 63.4, 13.5],
+    verified: true,
   },
 
   millet_groats: {
@@ -231,27 +234,78 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Makaron penne",
     type: "grn",
     color: "#E6C15A",
-    kcalPer100g: 352,
+    kcalPer100g: 375,
     unitWeights: {
       opak: 500,
       szk: 250,
     },
-    nutrientsPer100g: [1.5, 70, 12],
+    nutrientsPer100g: [2.1, 74, 13],
+    verified: true,
   },
 
   macaroni_pasta: {
     name: "Makaron macaroni",
     type: "grn",
-    color: "#E4BE63",
-    kcalPer100g: 360,
+    color: "#F7DC6F",
+    kcalPer100g: 353,
     unitWeights: {
-      opak: 400,
+      opak: 500,
       szk: 250,
     },
-    nutrientsPer100g: [1.8, 72, 12],
+    nutrientsPer100g: [1.6, 71, 12],
+    verified: true,
   },
 
-  ////
+  lasagne_pasta: {
+    name: "Makaron lasagna",
+    type: "grn",
+    color: "#E4BE63",
+    kcalPer100g: 348,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [1.1, 71, 12],
+    verified: true,
+  },
+
+  //// PROCESSED ////
+
+  oat_flakes: {
+    name: "Płatki owsiane",
+    type: "grn",
+    color: "#D8B589",
+    kcalPer100g: 364,
+    nutrientsPer100g: [6.9, 55.1, 14.2],
+    unitWeights: {
+      szk: 120,
+      opak: 500,
+    },
+    verified: true,
+  },
+
+  cornflakes: {
+    name: "Płatki kukurydziane",
+    type: "grn",
+    subType: "bag",
+    color: "#FDD835",
+    kcalPer100g: 382,
+    unitWeights: {
+      opak: 250,
+    },
+    nutrientsPer100g: [1.4, 82.9, 7.4],
+    verified: true,
+  },
+
+  cupcake_mix: {
+    name: "Mieszanka w proszku do babeczek",
+    type: "grn",
+    color: "#eaeaea",
+    kcalPer100g: 354,
+    nutrientsPer100g: [19, 40, 4.9],
+    unitWeights: {
+      opak: 300,
+    },
+  },
 
   kopytka: {
     name: "Kopytka",
@@ -301,7 +355,6 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 275,
     unitWeights: {
       szt: 70,
-      opak: 350,
     },
     nutrientsPer100g: [3, 54, 8.5],
     price: 6.2,
@@ -315,7 +368,6 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 265,
     unitWeights: {
       szt: 75,
-      opak: 375,
     },
     nutrientsPer100g: [4.5, 46, 10],
     price: 6.9,
@@ -540,43 +592,5 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0, 86, 0],
-  },
-
-  //// PROCESSED ////
-
-  oat_flakes: {
-    name: "Płatki owsiane",
-    type: "grn",
-    color: "#D8B589",
-    kcalPer100g: 364,
-    nutrientsPer100g: [6.9, 55.1, 14.2],
-    unitWeights: {
-      szk: 120,
-      opak: 500,
-    },
-    verified: true,
-  },
-
-  cornflakes: {
-    name: "Płatki kukurydziane",
-    type: "grn",
-    subType: "bag",
-    color: "#FDD835",
-    kcalPer100g: 383,
-    unitWeights: {
-      opak: 500,
-    },
-    nutrientsPer100g: [1.4, 83, 7.5],
-  },
-
-  cupcake_mix: {
-    name: "Mieszanka w proszku do babeczek",
-    type: "grn",
-    color: "#eaeaea",
-    kcalPer100g: 354,
-    nutrientsPer100g: [19, 40, 4.9],
-    unitWeights: {
-      opak: 300,
-    },
   },
 };

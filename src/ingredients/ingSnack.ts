@@ -6,16 +6,23 @@ type IngId =
   | "cheese_snacks"
 
   //// CHOCOLATE ////
-  | "white_chocolate"
-  | "dark_chocolate"
+  | "chocolate_white"
+  | "chocolate_dark"
   | "chocolate_cream"
   | "nutella"
-  | "pryncypalki"
 
   //// COOKIES ////
-  | "ladyfingers";
+  | "pryncypalki"
+  | "ladyfingers"
+  | "wafers_cream"
+
+  //// ICE-CREAM ////
+  | "cone_strawberry"
+  | "vanilla_ice_cream"
+  | "raspberry_sorbet";
 
 export const iSNK: Record<IngId, IngredientItem> = {
+  //// CHIPS ////
   snack_day_paprika: {
     name: "Snack Day Papryka",
     type: "snk",
@@ -43,9 +50,9 @@ export const iSNK: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  ////
+  //// CHOCOLATE ////
 
-  white_chocolate: {
+  chocolate_white: {
     name: "Biała czekolada",
     type: "snk",
     subType: "cho",
@@ -57,7 +64,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [30, 59, 7],
   },
 
-  dark_chocolate: {
+  chocolate_dark: {
     name: "Gorzka czekolada",
     type: "snk",
     subType: "cho",
@@ -97,7 +104,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [31, 57, 6],
   },
 
-  ////
+  //// BISCUITS ////
 
   pryncypalki: {
     name: "Pryncypałki",
@@ -123,5 +130,61 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [6, 72, 8],
+  },
+
+  wafers_cream: {
+    name: "Wafelki z kremem",
+    type: "snk",
+    subType: "bis",
+    color: "#84563c",
+    kcalPer100g: 533,
+    unitWeights: {
+      szt: 25,
+      opak: 250,
+    },
+    nutrientsPer100g: [31.2, 52.3, 8.1],
+    price: 30,
+    verified: true,
+  },
+
+  //// ICE-CREAM ////
+
+  cone_strawberry: {
+    name: "Rożek truskawkowy",
+    type: "snk",
+    subType: "ice",
+    color: "#dfb2b2",
+    kcalPer100g: 133,
+    unitWeights: {
+      ml: 0.9,
+    },
+    nutrientsPer100g: [4, 21, 2],
+    price: 12.4,
+  },
+
+  vanilla_ice_cream: {
+    name: "Lody waniliowe",
+    type: "snk",
+    subType: "ice",
+    color: "#FFF8DC",
+    kcalPer100g: 172,
+    unitWeights: {
+      ml: 0.65,
+      opak: 475,
+    },
+    nutrientsPer100g: [9, 20, 2.5],
+  },
+
+  raspberry_sorbet: {
+    name: "Sorbet malinowy",
+    type: "snk",
+    subType: "ice",
+    color: "#E57373",
+    kcalPer100g: 104,
+    unitWeights: {
+      ml: 0.9,
+      opak: 600,
+    },
+    nutrientsPer100g: [0.1, 25, 0.4],
   },
 };

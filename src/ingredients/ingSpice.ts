@@ -272,12 +272,13 @@ export const iSPC: Record<IngId, IngredientItem> = {
     name: "Kostka rosołowa Knorr",
     type: "spc",
     color: "#FFEB3B",
-    kcalPer100g: 6,
+    kcalPer100g: 30,
     unitWeights: {
       opak: 120,
       szt: 10,
     },
-    nutrientsPer100g: [0.5, 0.5, 0.5],
+    nutrientsPer100g: [2.5, 2.5, 2.5],
+    verified: true,
   },
 
   //// SACHETS ////

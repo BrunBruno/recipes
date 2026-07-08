@@ -5,6 +5,7 @@ type IngId =
   | "water"
   | "warm_water"
   | "spirit"
+  | "vodka"
   | "maple_syrup"
   | "food_coloring"
   | "vanilla_extract"
@@ -58,7 +59,20 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     name: "Spirytus",
     type: "liq",
     color: "#BBDEFB",
-    kcalPer100g: 0,
+    kcalPer100g: 657,
+    unitWeights: {
+      ml: 1,
+      lzi: 5,
+      lz: 15,
+    },
+    nutrientsPer100g: [0, 0, 0],
+  },
+
+  vodka: {
+    name: "Wódka",
+    type: "liq",
+    color: "#E3F2FD",
+    kcalPer100g: 231,
     unitWeights: {
       ml: 1,
       lzi: 5,

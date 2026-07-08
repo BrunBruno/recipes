@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
@@ -8,13 +9,14 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const kurczakSlodkoKwasny: Recipe = {
-  name: "Kurczak Slodko-Kwaśny",
-  description: "",
+  name: "Kurczak Słodko-Kwaśny",
+  description:
+    "Kurczak w sosie słodko-kwaśnym z papryką, cebulą i ananasem, podawany z ryżem.",
   type: "dinner",
   images: [""],
-  time: 0,
-  portions: 0,
-  executionDifficulty: null,
+  time: 25,
+  portions: 3,
+  executionDifficulty: 1,
   ingredients: [
     {
       title: "",
@@ -30,7 +32,25 @@ const kurczakSlodkoKwasny: Recipe = {
       ],
     },
   ],
-  steps: [],
+  extrasMain: {
+    options: [dinnerSides("rice", 3)],
+    selected: 0,
+  },
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Kurczaka pokrój w paski.",
+        "Cebulę, paprykę oraz ananasa pokrój na większe kawałki.",
+        "Kurczaka oprósz mąką ziemniaczaną i podsmaż na rozgrzanym oleju na złoty kolor.",
+        "Dodaj warzywa oraz ananasa i smaż na dużym ogniu przez około 3 minuty, aż warzywa zmiękną.",
+        "Fix wymieszaj z 250 ml wody i dodaj do pozostałych składników.",
+        "Całość gotuj jeszcze około 3 minuty, dokładnie mieszając.",
+        "Podawaj z ryżem.",
+      ],
+    },
+  ],
+  keyWords: ["kurczak"],
 };
 
 export default kurczakSlodkoKwasny;

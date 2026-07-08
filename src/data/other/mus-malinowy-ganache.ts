@@ -21,7 +21,7 @@ const musMalinowyGanache: Recipe = {
         { ing: iDIR.cream_36, amount: 170 },
         { ing: iFRT.raspberries, amount: 200 },
         { ing: iLIQ.lemon_juice, amount: 5, unit: "ml" },
-        { ing: iSNK.white_chocolate, amount: 100 },
+        { ing: iSNK.chocolate_white, amount: 100 },
         { ing: iOTH.gelatin, amount: 6 },
         { ing: iLIQ.water, amount: 30, unit: "ml" },
       ],

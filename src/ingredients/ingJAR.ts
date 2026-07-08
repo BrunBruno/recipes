@@ -271,11 +271,12 @@ export const iJAR: Record<IngId, IngredientItem> = {
     name: "Ananas w puszce",
     type: "jar",
     color: "#FFD54F",
-    kcalPer100g: 82,
+    kcalPer100g: 63,
     unitWeights: {
       opak: 565,
     },
-    nutrientsPer100g: [0.2, 21, 0.5],
+    nutrientsPer100g: [0, 15, 0.4],
+    verified: true,
   },
 
   //// FROZEN ////
@@ -313,8 +314,12 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#81C784",
-    kcalPer100g: 40,
-    nutrientsPer100g: [0.5, 7, 2.5],
+    kcalPer100g: 29,
+    nutrientsPer100g: [0.5, 3.4, 2],
+    unitWeights: {
+      opak: 750,
+    },
+    verified: true,
   },
 
   frozen_stir_fry: {
@@ -338,12 +343,16 @@ export const iJAR: Record<IngId, IngredientItem> = {
   },
 
   frozen_green_beans: {
-    name: "Fasolka szparagowa",
+    name: "Mrożona fasolka szparagowa",
     type: "jar",
     subType: "fro",
     color: "#66BB6A",
-    kcalPer100g: 35,
-    nutrientsPer100g: [0.2, 6.5, 2.3],
+    kcalPer100g: 42,
+    nutrientsPer100g: [0.2, 6.8, 2.2],
+    unitWeights: {
+      opak: 450,
+    },
+    verified: true,
   },
 
   frozen_spinach: {
@@ -351,11 +360,12 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#2E7D32",
-    kcalPer100g: 23,
+    kcalPer100g: 19,
     unitWeights: {
       opak: 450,
     },
-    nutrientsPer100g: [0.4, 3.6, 2.9],
+    nutrientsPer100g: [0.4, 0.4, 2.3],
+    verified: true,
   },
 
   strawberry_frozen: {
@@ -363,11 +373,12 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#EF5350",
-    kcalPer100g: 32,
+    kcalPer100g: 35,
     unitWeights: {
       opak: 450,
     },
-    nutrientsPer100g: [0.3, 7.7, 0.7],
+    nutrientsPer100g: [0.1, 7, 0.4],
+    verified: true,
   },
 
   frozen_broccoli: {

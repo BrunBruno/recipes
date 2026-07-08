@@ -20,7 +20,6 @@ export const iFAT: Record<IngId, IngredientItem> = {
   oil: {
     name: "Olej",
     type: "fat",
-    subType: "liq",
     color: "#E6C65B",
     kcalPer100g: 884,
     unitWeights: {
@@ -35,7 +34,6 @@ export const iFAT: Record<IngId, IngredientItem> = {
   rapeseed_oil: {
     name: "Olej rzepakowy",
     type: "fat",
-    subType: "liq",
     color: "#F2D16B",
     kcalPer100g: 884,
     unitWeights: {
@@ -48,7 +46,6 @@ export const iFAT: Record<IngId, IngredientItem> = {
   sunflower_oil: {
     name: "Olej słonecznikowy",
     type: "fat",
-    subType: "liq",
     color: "#F5C542",
     kcalPer100g: 884,
     unitWeights: {
@@ -61,7 +58,6 @@ export const iFAT: Record<IngId, IngredientItem> = {
   olive: {
     name: "Oliwa",
     type: "fat",
-    subType: "liq",
     color: "#556B2F",
     kcalPer100g: 884,
     unitWeights: {
@@ -76,7 +72,6 @@ export const iFAT: Record<IngId, IngredientItem> = {
   olive_oil_extra_virgin: {
     name: "Oliwa z oliwek extra virgin",
     type: "fat",
-    subType: "liq",
     color: "#C9B458",
     kcalPer100g: 884,
     unitWeights: {
@@ -98,6 +93,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
       lz: 14,
     },
     nutrientsPer100g: [82, 0.7, 0.7],
+    verified:true
   },
 
   clarified_butter: {
@@ -189,11 +185,13 @@ export const iFAT: Record<IngId, IngredientItem> = {
     type: "fat",
     subType: "but",
     color: "#C68642",
-    kcalPer100g: 588,
+    kcalPer100g: 603,
     unitWeights: {
       lz: 16,
       szk: 250,
+      opak: 450,
     },
-    nutrientsPer100g: [50, 20, 25],
+    nutrientsPer100g: [48, 13, 26],
+    verified: true,
   },
 };
