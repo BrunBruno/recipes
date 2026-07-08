@@ -3,8 +3,8 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -25,7 +25,7 @@ const jajkaWSosieKoperkowym: Recipe = {
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
-        { ing: iOTH.water, amount: 0.5, unit: "szk" },
+        { ing: iLIQ.water, amount: 0.5, unit: "szk" },
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
         { ing: iHRB.dill },
         { ing: iSPC.salt },

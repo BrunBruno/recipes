@@ -8,18 +8,11 @@ import type {
 import "./user-page.css";
 import MealPanelIcon from "../../assets/mealPanelIcon";
 import UtilsIcon from "../../assets/utilsIcon";
-import { DAILY_NUTRIENTS, ingredientCollections } from "../../utils";
+import { allIngredients, DAILY_NUTRIENTS, ingredientLookup } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
 import { STORAGE_KEY, type DayRecord } from "./user-page-data";
 import { AnimatePresence, motion } from "framer-motion";
-
-const ingredientLookup: Record<string, IngredientItem> = {};
-ingredientCollections.forEach((collection) => {
-  Object.values(collection).forEach((ing) => {
-    ingredientLookup[ing.name] = ing;
-  });
-});
-const allIngredients = Object.values(ingredientLookup);
+import MacroIcon from "../../assets/macroIcon";
 
 type Macros = {
   kcal: number;
@@ -48,6 +41,14 @@ export default function UserPage({
     new Date().toISOString().split("T")[0],
   );
   const [search, setSearch] = useState("");
+  const [showSavedInfo, setShowSavedInfo] = useState(false);
+  const [saveDialog, setSaveDialog] = useState<{
+    open: boolean;
+    newRecord: DayRecord | null;
+  }>({
+    open: false,
+    newRecord: null,
+  });
 
   function calculateMacros(day: DayIngredients): Macros {
     let kcal = 0;
@@ -109,14 +110,83 @@ export default function UserPage({
 
     const existing = loadDayRecords();
 
-    const updated = [
-      ...existing.filter((d) => d.date !== selectedDate),
+    const alreadyExists = existing.some((d) => d.date === selectedDate);
+
+    if (!alreadyExists) {
+      const updated = [...existing, newRecord];
+
+      saveDayRecords(updated);
+      setHistory(updated);
+
+      clearDay();
+
+      setShowSavedInfo(true);
+      setTimeout(() => setShowSavedInfo(false), 2000);
+
+      clearDay();
+      return;
+    }
+
+    setSaveDialog({
+      open: true,
       newRecord,
+    });
+  }
+
+  const overwriteDay = () => {
+    if (!saveDialog.newRecord) return;
+
+    const updated = [
+      ...loadDayRecords().filter((d) => d.date !== saveDialog.newRecord!.date),
+      saveDialog.newRecord,
     ];
 
     saveDayRecords(updated);
     setHistory(updated);
-  }
+
+    clearDay();
+
+    setSaveDialog({
+      open: false,
+      newRecord: null,
+    });
+
+    setShowSavedInfo(true);
+    setTimeout(() => setShowSavedInfo(false), 2000);
+
+    clearDay();
+  };
+
+  const addToExistingDay = () => {
+    if (!saveDialog.newRecord) return;
+
+    const updated = loadDayRecords().map((d) => {
+      if (d.date !== saveDialog.newRecord!.date) return d;
+
+      return {
+        ...d,
+        kcal: d.kcal + saveDialog.newRecord!.kcal,
+        protein: d.protein + saveDialog.newRecord!.protein,
+        carbs: d.carbs + saveDialog.newRecord!.carbs,
+        fat: d.fat + saveDialog.newRecord!.fat,
+      };
+    });
+
+    saveDayRecords(updated);
+    setHistory(updated);
+
+    clearDay();
+
+    setSaveDialog({
+      open: false,
+      newRecord: null,
+    });
+
+    setShowSavedInfo(true);
+    setTimeout(() => setShowSavedInfo(false), 2000);
+
+    clearDay();
+  };
 
   const getKey = (meal: DayMealType, index: number) => `${meal}-${index}`;
 
@@ -157,6 +227,24 @@ export default function UserPage({
     }
   };
 
+  const onRemoveIngredient = (type: DayMealType, index: number) => {
+    let state = structuredClone(dayIngredients);
+
+    switch (type) {
+      case "breakfast":
+        state.breakfast.splice(index, 1);
+        break;
+      case "lunch":
+        state.lunch.splice(index, 1);
+        break;
+      case "dinner":
+        state.dinner.splice(index, 1);
+        break;
+    }
+
+    setDayIngredients(structuredClone(state));
+  };
+
   const renderIngGroup = (group: DayIngredientPair[], meal: DayMealType) => {
     return (
       <div className={`meal-list ${group.length === 0 ? "empty" : ""}`}>
@@ -186,6 +274,13 @@ export default function UserPage({
                   />
                   <span>{grams.toFixed(1)} g</span>
                   <span>{ing!.name}</span>
+                  <p
+                    onClick={() => {
+                      onRemoveIngredient(meal, index);
+                    }}
+                  >
+                    <UtilsIcon name="close" color="#888" />
+                  </p>
                 </div>
               </motion.div>
             );
@@ -201,17 +296,17 @@ export default function UserPage({
     );
   }, [search]);
 
+  const existingRecord = saveDialog.newRecord
+    ? loadDayRecords().find((d) => d.date === saveDialog.newRecord?.date)
+    : undefined;
+
   return (
     <div className="user-page">
-      <h1>
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#eee">
-          <g>
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path d="M3 4.995C3 3.893 3.893 3 4.995 3h14.01C20.107 3 21 3.893 21 4.995v14.01A1.995 1.995 0 0 1 19.005 21H4.995A1.995 1.995 0 0 1 3 19.005V4.995zM6.357 18h11.49a6.992 6.992 0 0 0-5.745-3 6.992 6.992 0 0 0-5.745 3zM12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-          </g>
-        </svg>
-        <span>Moje posiłki</span>
-      </h1>
+      <div className="page-title">
+        <h1 className="page-title-h1">
+          <span className="h1-text">Moje Posiłki</span>
+        </h1>
+      </div>
 
       <div className="meal-panel">
         <div className="meal-card">
@@ -364,7 +459,6 @@ export default function UserPage({
           className="save-btn"
           onClick={() => {
             handleSaveDay();
-            clearDay();
           }}
         >
           Zapisz dzień
@@ -415,6 +509,63 @@ export default function UserPage({
             </button>
           </div>
         </div>
+      )}
+
+      {saveDialog.open && (
+        <div className="modal-backdrop">
+          <div className="save-dialog">
+            <h2>Dzień już istnieje</h2>
+            <p>
+              Dla <strong>{selectedDate}</strong> istnieje już zapis.
+            </p>
+
+            {existingRecord && saveDialog.newRecord && (
+              <div className="save-dialog-compare">
+                <div className="compare-header"></div>
+                <div className="compare-header"></div>
+                <div className="compare-header">Zapisany</div>
+                <div className="compare-header">Nowy</div>
+
+                <MacroIcon type="kcal" />
+                <span>Kalorie</span>
+                <strong>{existingRecord.kcal} kcal</strong>
+                <strong>{saveDialog.newRecord.kcal} kcal</strong>
+
+                <MacroIcon type="fats" />
+                <span>Tłuszcze</span>
+                <strong>{existingRecord.fat} g</strong>
+                <strong>{saveDialog.newRecord.fat} g</strong>
+
+                <MacroIcon type="carb" />
+                <span>Węglowodany</span>
+                <strong>{existingRecord.carbs} g</strong>
+                <strong>{saveDialog.newRecord.carbs} g</strong>
+
+                <MacroIcon type="prot" />
+                <span>Białko</span>
+                <strong>{existingRecord.protein} g</strong>
+                <strong>{saveDialog.newRecord.protein} g</strong>
+              </div>
+            )}
+
+            <button onClick={overwriteDay}>Nadpisz dzień</button>
+            <button onClick={addToExistingDay}>Dodaj do istniejącego</button>
+            <button
+              onClick={() =>
+                setSaveDialog({
+                  open: false,
+                  newRecord: null,
+                })
+              }
+            >
+              Anuluj
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showSavedInfo && (
+        <div className="saved-info">✓ Dzień został zapisany</div>
       )}
     </div>
   );

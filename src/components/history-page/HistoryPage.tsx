@@ -2,6 +2,7 @@ import { Bar } from "react-chartjs-2";
 import type { DayRecord } from "../user-page/user-page-data";
 import "./history-page.css";
 import { DAILY_NUTRIENTS } from "../../utils";
+import MacroIcon from "../../assets/macroIcon";
 
 type HistoryPageProps = {
   history: DayRecord[];
@@ -122,7 +123,11 @@ export default function HistoryPage({ history }: HistoryPageProps) {
 
   return (
     <div className="history-page">
-      <h1>Historia dni</h1>
+      <div className="page-title">
+        <h1 className="page-title-h1">
+          <span className="h1-text">Historia Dni</span>
+        </h1>
+      </div>
 
       {history.length === 0 ? (
         <p>Brak zapisanych dni</p>
@@ -133,13 +138,39 @@ export default function HistoryPage({ history }: HistoryPageProps) {
             .sort((a, b) => b.date.localeCompare(a.date))
             .map((day) => (
               <div key={day.date} className="history-card">
-                <h3>{day.date}</h3>
+                <p
+                  className="hist-card-ind"
+                  style={{
+                    background: `conic-gradient(
+                      from 0deg at 50% 50%,
+                      #ffffff ${Math.max(0, 2 * ((100 * (DAILY_NUTRIENTS[0] / 2 + day.kcal)) / DAILY_NUTRIENTS[0] - 50)) / 2}%,
+                      #666666 ${Math.max(0, 2 * ((100 * (DAILY_NUTRIENTS[0] / 2 + day.kcal)) / DAILY_NUTRIENTS[0] - 50)) / 2}%,
+                      #666666 ${Math.min(100, (2 * (100 * (DAILY_NUTRIENTS[0] / 2 + day.kcal))) / DAILY_NUTRIENTS[0])}%
+
+                    )`,
+                  }}
+                />
+                <h3>
+                  <span>{day.date}</span>
+                  <span>
+                    {((100 * day.kcal) / DAILY_NUTRIENTS[0]).toFixed(2)}%
+                  </span>
+                </h3>
 
                 <div className="history-macros">
-                  <span>🔥 {day.kcal} kcal</span>
-                  <span>🥩 {day.protein} g</span>
-                  <span>🍞 {day.carbs} g</span>
-                  <span>🧈 {day.fat} g</span>
+                  {/* // backgroundColor: ["#099268", "#f59f00", "#1098ad", "#f03e3e"], */}
+                  <span style={{ color: "#63e6be" }}>
+                    <MacroIcon type="kcal" /> {day.kcal} kcal
+                  </span>
+                  <span style={{ color: "#ffa94d" }}>
+                    <MacroIcon type="fats" /> {day.fat} g
+                  </span>
+                  <span style={{ color: "#99e9f2" }}>
+                    <MacroIcon type="carb" /> {day.carbs} g
+                  </span>
+                  <span style={{ color: "#ff8787" }}>
+                    <MacroIcon type="prot" /> {day.protein} g
+                  </span>
                 </div>
               </div>
             ))}

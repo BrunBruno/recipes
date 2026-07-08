@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -19,7 +20,7 @@ const ciastoNaPizze: Recipe = {
       items: [
         { ing: iGRN.flour, amount: 250 },
         { ing: iFAT.olive, amount: 2, unit: "lz" },
-        { ing: iOTH.water, amount: 150, unit: "ml" },
+        { ing: iLIQ.water, amount: 150, unit: "ml" },
         { ing: iOTH.instant_yeast, amount: 6 },
         { ing: iSPC.salt },
       ],

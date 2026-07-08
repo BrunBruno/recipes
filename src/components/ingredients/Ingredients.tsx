@@ -11,8 +11,8 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { recipes } from "../../recipes";
 import {
+  allIngredients,
   countIngredientUsage,
-  ingredientCollections,
   IngredientTypeData,
 } from "../../utils";
 import type { IngredientItem } from "../../types";
@@ -22,6 +22,8 @@ import { iSNK } from "../../ingredients/ingSnack";
 import { iFSH } from "../../ingredients/ingFish";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iSAU } from "../../ingredients/ingSauce";
+import { iLIQ } from "../../ingredients/ingLiquid";
+import { iNUT } from "../../ingredients/ingNut";
 
 type IngredientsProps = {};
 
@@ -34,8 +36,10 @@ const allGroups = [
   { label: "Tłuszcze", data: iFAT },
   { label: "Warzywa", data: iVEG },
   { label: "Owoce", data: iFRT },
+  { label: "Orzechy", data: iNUT },
   { label: "Sosy", data: iSAU },
   { label: "Przetwory", data: iJAR },
+  { label: "Ciecze", data: iLIQ },
   { label: "Przekąski", data: iSNK },
   { label: "Zioła", data: iHRB },
   { label: "Przyprawy", data: iSPC },
@@ -47,14 +51,6 @@ const groupedTypes = allGroups.flatMap((group) =>
 const initialOpenTypes = Object.fromEntries(
   groupedTypes.map((type) => [type, true]),
 );
-
-const ingredientLookup: Record<string, IngredientItem> = {};
-ingredientCollections.forEach((collection) => {
-  Object.values(collection).forEach((ing) => {
-    ingredientLookup[ing.name] = ing;
-  });
-});
-const allIngredients = Object.values(ingredientLookup);
 
 function Ingredients({}: IngredientsProps) {
   const getColumnCount = () => {
@@ -72,6 +68,7 @@ function Ingredients({}: IngredientsProps) {
   const [openTypes, setOpenTypes] =
     useState<Record<string, boolean>>(initialOpenTypes);
   const [columns, setColumns] = useState(getColumnCount());
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const handleResize = () => setColumns(getColumnCount());
@@ -122,12 +119,24 @@ function Ingredients({}: IngredientsProps) {
 
   return (
     <div className="all-ingredients">
-      <h1>
-        <svg fill="#eee" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-          <path d="M29 0C27.894531 0 27 0.898438 27 2L27 4C27 5.101563 27.894531 6 29 6L39 6C40.105469 6 41 5.101563 41 4L41 2C41 0.898438 40.105469 0 39 0 Z M 28.09375 7.875C27.164063 9.613281 26.363281 11.855469 25.78125 13.65625L40.53125 22L44 22L44 21.8125C44 19.492188 42.09375 12.074219 39.84375 7.90625C39.574219 7.964844 39.285156 8 39 8L29 8C28.6875 8 28.382813 7.941406 28.09375 7.875 Z M 14.625 13.78125C9.632813 13.78125 5.6875 17.167969 4.65625 22L12.25 22L19.59375 15.0625C18.089844 14.222656 16.398438 13.78125 14.625 13.78125 Z M 23.1875 14.6875C22.980469 14.710938 22.785156 14.816406 22.625 14.96875L15.15625 22L36.46875 22L23.8125 14.8125C23.621094 14.703125 23.394531 14.664063 23.1875 14.6875 Z M 2.84375 24C1.273438 24 0 25.273438 0 26.84375L0 30.15625C0 31.726563 1.273438 33 2.84375 33L47.15625 33C48.726563 33 50 31.726563 50 30.15625L50 26.84375C50 25.273438 48.726563 24 47.15625 24 Z M 3 35L3 36C3 36.195313 3.007813 36.304688 6.4375 47.4375C6.457031 47.503906 6.527344 47.65625 6.5625 47.71875C7.160156 48.789063 7.816406 50 9.21875 50L40.78125 50C42.519531 50 43.117188 48.507813 43.5625 47.4375C46.988281 36.304688 47 36.195313 47 36L47 35L37 35L37 45L34 45L34 35L30 35L30 45L27 45L27 35L23 35L23 45L20 45L20 35L16 35L16 45L13 45L13 35Z" />
-        </svg>
-        <span>Wszystkie składniki</span>
-      </h1>
+      <div className="page-title">
+        <h1 className="page-title-h1">
+          <span className="h1-text">Wszystkie Składniki</span>
+        </h1>
+
+        <div className={`ingredient-search`}>
+          <label className="ingredient-search-label">
+            <UtilsIcon name="search" color="#999999" />
+            <input
+              type="text"
+              placeholder="Szukaj składnika..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="ingredient-search-input"
+            />
+          </label>
+        </div>
+      </div>
 
       <div className="ingredient-stats">
         <div className="ingredient-stat">
@@ -162,24 +171,27 @@ function Ingredients({}: IngredientsProps) {
         return (
           <section key={group.label} className="ing-group">
             {Object.entries(grouped).map(([type, items]) => {
-              const sortedItems = items;
-              const rows = Math.ceil(sortedItems.length / columns);
+              const filteredItems = items.filter(([_, item]) => {
+                if (!displayUnused && !ingredientUsage[item.name]) return false;
+                if (!search) return true;
+
+                return item.name.toLowerCase().includes(search.toLowerCase());
+              });
+
+              const rows = Math.ceil(filteredItems.length / columns);
+
+              if (filteredItems.length === 0) return null;
 
               return (
                 <div key={type} className="ingredient-subgroup">
                   <h2
-                    className={`ing-group-title ${openTypes[type] ? "open" : ""}`}
-                    onClick={() => toggleType(type)}
+                    className={`ing-group-title ${openTypes[type] ? "open" : ""} `}
+                    onClick={() => {
+                      toggleType(type);
+                    }}
                   >
                     <UtilsIcon name={"arrow"} color={"#fff"} />
-                    {group.label} ({" "}
-                    {
-                      items.filter(
-                        ([_, item]) =>
-                          displayUnused || ingredientUsage[item.name],
-                      ).length
-                    }{" "}
-                    )
+                    {group.label} ({filteredItems.length})
                   </h2>
 
                   <ul
@@ -188,7 +200,7 @@ function Ingredients({}: IngredientsProps) {
                       maxHeight: openTypes[type] ? `${rows * 250}px` : "0px",
                     }}
                   >
-                    {sortedItems.map(([id, item]) => {
+                    {filteredItems.map(([id, item]) => {
                       if (!ingredientUsage[item.name] && !displayUnused) return;
 
                       return (
@@ -233,10 +245,12 @@ function Ingredients({}: IngredientsProps) {
                               </div>
                             )}
 
-                            {item.price && (
+                            {item.price ? (
                               <div className="ing-price">
                                 <strong>{item.price.toFixed(2)}</strong> zł/kg
                               </div>
+                            ) : (
+                              ""
                             )}
 
                             <div className="ingredient-usage">

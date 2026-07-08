@@ -1,7 +1,7 @@
 import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -30,8 +30,8 @@ const fasolkaPoBretonsku: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iOTH.water, amount: 2000, unit: "ml", exclude: true },
-        { ing: iOTH.meat_stock, amount: 2000, unit: "ml", invisible: true },
+        { ing: iLIQ.water, amount: 2000, unit: "ml", exclude: true },
+        { ing: iLIQ.meat_stock, amount: 2000, unit: "ml", invisible: true },
         { ing: iVEG.onion, amount: 120 },
         { ing: iVEG.carrot, amount: 150 },
         { ing: iVEG.parsley_root, amount: 100 },

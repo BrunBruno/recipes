@@ -1,8 +1,8 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -25,7 +25,7 @@ const schabAlaStroganoff: Recipe = {
         { ing: iVEG.mushrooms, amount: 150 },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_pork_ala_stroganoff_fix, amount: 1, unit: "opak" },
         { ing: iHRB.parsley },
       ],

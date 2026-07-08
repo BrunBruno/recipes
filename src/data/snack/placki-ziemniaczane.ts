@@ -1,8 +1,8 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -29,7 +29,7 @@ const plackiZiemniaczane: Recipe = {
         { ing: iHRB.savory },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
-        { ing: iOTH.water, amount: -350, invisible: true },
+        { ing: iLIQ.water, amount: -350, invisible: true },
       ],
     },
   ],

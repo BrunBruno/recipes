@@ -1,6 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -19,7 +19,7 @@ const ciastoNaPierogi: Recipe = {
       items: [
         { ing: iGRN.flour, amount: 500 },
         { ing: iFAT.oil, amount: 50, unit: "ml" },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.salt, amount: 0.5, unit: "lzi" },
       ],
     },

@@ -3,6 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -26,8 +27,8 @@ const ciastoMarchewkowe: Recipe = {
         { ing: iFAT.oil, amount: 150, unit: "ml" },
         { ing: iVEG.carrot, amount: 200 },
         { ing: iFRT.pineapple, amount: 75 },
-        { ing: iFRT.walnuts, amount: 50 },
-        { ing: iFRT.coconut_flakes, amount: 50 },
+        { ing: iNUT.walnuts, amount: 50 },
+        { ing: iNUT.coconut_flakes, amount: 50 },
         { ing: iOTH.sugar, amount: 200 },
         { ing: iOTH.baking_powder, amount: 0.5, unit: "lzi" },
         { ing: iOTH.baking_soda, amount: 1, unit: "lzi" },

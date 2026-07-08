@@ -5,7 +5,9 @@ import { iFRT } from "./ingredients/ingFruit";
 import { iGRN } from "./ingredients/ingGrain";
 import { iHRB } from "./ingredients/ingHerb";
 import { iJAR } from "./ingredients/ingJar";
+import { iLIQ } from "./ingredients/ingLiquid";
 import { iMET } from "./ingredients/ingMeat";
+import { iNUT } from "./ingredients/ingNut";
 import { iOTH } from "./ingredients/ingOther";
 import { iSAU } from "./ingredients/ingSauce";
 import { iSNK } from "./ingredients/ingSnack";
@@ -28,6 +30,7 @@ export const ingredientCollections = [
   iDIR,
   iFAT,
   iFRT,
+  iNUT,
   iGRN,
   iMET,
   iFSH,
@@ -36,6 +39,7 @@ export const ingredientCollections = [
   iVEG,
   iSAU,
   iJAR,
+  iLIQ,
   iSNK,
   iOTH,
 ];
@@ -55,19 +59,21 @@ export const MealTypesData: Record<MealType, DictRecord> = {
   other: { label: "Inne", color: "#f76707" },
 };
 export const IngredientTypeData: Record<IngredientType, DictRecord> = {
-  met: { label: "Mięso", color: "#f03e3e" },
-  fsh: { label: "Ryby", color: "#1c7ed6" },
-  dir: { label: "Nabiał", color: "#ffffff" },
-  fat: { label: "Tłuszcze", color: "#fcc419" },
-  veg: { label: "Warzywa", color: "#40c057" },
-  frt: { label: "Owoce", color: "#74b816" },
-  grn: { label: "Zboża", color: "#f76707" },
-  hrb: { label: "Zioła", color: "#40c057" },
-  spc: { label: "Przyprawy", color: "#495057" },
-  sau: { label: "Sosy", color: "#f03e3e" },
-  jar: { label: "Przetwory", color: "#ae3ec9" },
-  snk: { label: "Przekąski", color: "#66d9e8" },
-  oth: { label: "Inne", color: "#dee2e6" },
+  met: { label: "Mięso", color: "#C92A2A" },
+  fsh: { label: "Ryby", color: "#1971C2" },
+  dir: { label: "Nabiał", color: "#F8F9FA" },
+  fat: { label: "Tłuszcze", color: "#F59F00" },
+  veg: { label: "Warzywa", color: "#2F9E44" },
+  frt: { label: "Owoce", color: "#E8590C" },
+  nut: { label: "Owoce", color: "#8D6E63" },
+  grn: { label: "Zboża", color: "#C77D1A" },
+  hrb: { label: "Zioła", color: "#0CA678" },
+  spc: { label: "Przyprawy", color: "#6F42C1" },
+  sau: { label: "Sosy", color: "#D9480F" },
+  jar: { label: "Przetwory", color: "#A61E4D" },
+  liq: { label: "Ciecze", color: "#1098AD" },
+  snk: { label: "Przekąski", color: "#FAB005" },
+  oth: { label: "Inne", color: "#868E96" },
 };
 
 export const kcalTopColors = [
@@ -452,8 +458,10 @@ export const countIngredientTypes = () => {
     grn: 0,
     veg: 0,
     frt: 0,
+    nut: 0,
     sau: 0,
     jar: 0,
+    liq: 0,
     hrb: 0,
     spc: 0,
     snk: 0,
@@ -619,3 +627,50 @@ export const fryingFat = (
     invisible: true,
   },
 ];
+
+export const calculateRecipePrice = (recipe: Recipe): number => {
+  const DEFAULT_FAT_GRAMS = 12;
+
+  let totalPrice = 0;
+
+  for (const ingredientItem of getAllIngredientItems(recipe)) {
+    if (!ingredientItem) continue;
+
+    if (ingredientItem.exclude) continue;
+
+    const { ing, amount, unit } = ingredientItem;
+    if (!ing.price) continue;
+
+    let grams = 0;
+    let value = amount;
+
+    if (!value || typeof value === "string") {
+      if (ing.type === "fat") grams = DEFAULT_FAT_GRAMS * recipe.portions;
+      else continue;
+    } else {
+      if (!unit) {
+        grams = value;
+      } else if (ing.unitWeights?.[unit]) {
+        grams = value * ing.unitWeights[unit];
+      } else {
+        if (unit !== "g") {
+          console.warn(`No unit ${unit} for ${ing.name}`);
+        }
+        grams = value;
+      }
+    }
+
+    totalPrice += (grams * ing.price) / 1000;
+  }
+
+  return totalPrice / recipe.portions;
+  // return Math.round() / 100;
+};
+
+export const ingredientLookup: Record<string, IngredientItem> = {};
+ingredientCollections.forEach((collection) => {
+  Object.values(collection).forEach((ing) => {
+    ingredientLookup[ing.name] = ing;
+  });
+});
+export const allIngredients = Object.values(ingredientLookup);

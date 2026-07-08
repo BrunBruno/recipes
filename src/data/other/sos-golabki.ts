@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -20,9 +20,9 @@ const sosDoGolabkow: Recipe = {
       items: [
         { ing: iGRN.flour, amount: 2, unit: "lz" },
         { ing: iJAR.tomato_puree, amount: 250, unit: "ml" },
-        { ing: iOTH.water, amount: 0.5, unit: "szk" },
+        { ing: iLIQ.water, amount: 0.5, unit: "szk" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
-        { ing: iOTH.maggi },
+        { ing: iLIQ.maggi },
         { ing: iSPC.vegetable_seasoning },
         { ing: iSPC.salt },
       ],

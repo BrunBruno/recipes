@@ -13,13 +13,15 @@ export type MealType =
 export type IngredientType =
   | "met" // meats / eggs
   | "fsh" // fishes
-  | "dir" // diary / cheese
-  | "fat" // fats / butter
+  | "dir" // diary
+  | "fat" // fats
   | "veg" // vegetables / greens  / mushrooms
   | "frt" // fruits / nuts
+  | "nut" // nuts
   | "grn" // grains / bakery
   | "sau" // sauces
-  | "jar" // preserves / juices /
+  | "jar" // preserves
+  | "liq" // liquids
   | "snk" // snacks
   | "hrb" // herbs
   | "spc" // spices
@@ -78,7 +80,6 @@ export type IngredientItem = {
 
 export type Ingredient = {
   ing: IngredientItem;
-  // amount?: number | string;
   amount?: number;
   unit?: UnitType;
   exclude?: boolean;

@@ -1,8 +1,8 @@
 import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -27,7 +27,7 @@ const salatkaKuskus: Recipe = {
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "opak" },
-        { ing: iOTH.water, amount: 1, unit: "szk" },
+        { ing: iLIQ.water, amount: 1, unit: "szk" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

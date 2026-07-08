@@ -2,38 +2,59 @@
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
-}
-
-.history-page h1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  background-color: #111;
-  margin: 0;
-  width: 100%;
-  padding: 1rem 3rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 2rem;
-  font-weight: 600;
+  height: calc(100vh - 6rem);
+  overflow: hidden;
 }
 
 .history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  height: calc(100% - 2rem);
+  overflow: scroll;
+  padding: 1rem;
+}
+
+.history-list::-webkit-scrollbar {
+  display: none;
 }
 
 .history-card {
-  background: #222;
+  margin: 1.5rem 0;
+  position: relative;
+  /* background: #202020; */
+  /* background-color: red; */
   padding: 12px;
   border-radius: 10px;
+  height: 4.6rem;
+  /* border-bottom: solid 2px #000; */
+  overflow: hidden;
+}
+
+.history-card::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background-color: #202020;
+  z-index: -1;
 }
 
 .history-card h3 {
-  margin-bottom: 8px;
+  margin: 0.4rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hist-card-ind {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -16px;
+  left: 0;
+  z-index: -2;
+  opacity: 0.5;
 }
 
 .history-macros {
@@ -41,10 +62,21 @@
   gap: 12px;
   font-size: 14px;
   opacity: 0.9;
+  height: 2rem;
+}
+
+.history-macros span {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.history-macros svg {
+  height: 1rem;
 }
 
 .history-chart {
-  height: 520px;
+  height: 560px;
   margin-top: 2rem;
   padding-right: 2rem;
 }

@@ -1,9 +1,9 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 import { iMET } from "../../ingredients/ingMeat";
+import { iLIQ } from "../../ingredients/ingLiquid";
 
 const portions = 2;
 
@@ -23,7 +23,7 @@ const spaghettiCarbonaraFix: Recipe = {
         { ing: iGRN.spaghetti_pasta, amount: portions * 200 },
         { ing: iMET.bacon_block, amount: 150 },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
-        { ing: iOTH.water, amount: 200, unit: "ml" },
+        { ing: iLIQ.water, amount: 200, unit: "ml" },
         { ing: iSPC.knorr_carbonara_fix, amount: 1, unit: "opak" },
         { ing: iSPC.salt },
       ],

@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSNK } from "../../ingredients/ingSnack";
@@ -30,7 +31,7 @@ const nalesniki: Recipe = {
         { ing: iGRN.flour, amount: 200 },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iDIR.milk, amount: 300, unit: "ml" },
-        { ing: iOTH.water, amount: 100, unit: "ml" },
+        { ing: iLIQ.water, amount: 100, unit: "ml" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iOTH.sugar, amount: 1, unit: "lz" },
         {
@@ -45,7 +46,7 @@ const nalesniki: Recipe = {
               amount: portions * 30,
             },
             {
-              ing: iOTH.maple_syrup,
+              ing: iLIQ.maple_syrup,
               amount: portions * 20,
             },
             {
@@ -72,7 +73,7 @@ const nalesniki: Recipe = {
       items: [
         { ing: iSNK.chocolate_cream, exclude: true },
         { ing: iSNK.nutella, exclude: true },
-        { ing: iOTH.maple_syrup, exclude: true },
+        { ing: iLIQ.maple_syrup, exclude: true },
         { ing: iDIR.whipped_cream, exclude: true },
         { ing: iJAR.jam_strawberry, exclude: true },
         { ing: iFAT.peanut_butter, exclude: true },

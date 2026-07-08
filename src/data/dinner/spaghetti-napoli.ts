@@ -2,10 +2,10 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iSPC } from "../../ingredients/ingSpice";
-import { iOTH } from "../../ingredients/ingOther";
 import { iJAR } from "../../ingredients/ingJar";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
+import { iLIQ } from "../../ingredients/ingLiquid";
 
 const portions = 2;
 const spaghettiNapoli: Recipe = {
@@ -25,7 +25,7 @@ const spaghettiNapoli: Recipe = {
         { ing: iDIR.edam_cheese, amount: portions * 40 },
         ...fryingFat(iFAT.oil, 1, "lz", 0.55),
         { ing: iJAR.tomato_paste, amount: 2, unit: "lzi" },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_napoli_fix, amount: 1, unit: "opak" },
         { ing: iSPC.salt },
       ],

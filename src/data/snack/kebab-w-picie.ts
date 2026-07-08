@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -47,7 +48,7 @@ const kebab: Recipe = {
       items: [
         { ing: iGRN.flour, amount: 500 },
         { ing: iFAT.olive, amount: 30, unit: "ml" },
-        { ing: iOTH.water, amount: 260, unit: "ml" },
+        { ing: iLIQ.water, amount: 260, unit: "ml" },
         { ing: iOTH.yeast, amount: 5 },
         { ing: iSPC.salt, amount: 10 },
       ],

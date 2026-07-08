@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -35,7 +36,7 @@ const cynamonki: Recipe = {
       title: "Lukier",
       items: [
         { ing: iOTH.powdered_sugar, amount: 1, unit: "szk" },
-        { ing: iOTH.water, amount: 2.5, unit: "lz" },
+        { ing: iLIQ.water, amount: 2.5, unit: "lz" },
       ],
     },
   ],

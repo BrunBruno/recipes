@@ -2,9 +2,8 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
-import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -23,7 +22,7 @@ const kottuRoti: Recipe = {
       title: "Placki Roti",
       items: [
         { ing: iGRN.flour, amount: 2, unit: "szk" },
-        { ing: iOTH.warm_water, amount: 0.75, unit: "szk" },
+        { ing: iLIQ.warm_water, amount: 0.75, unit: "szk" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.salt, amount: 0.5, unit: "lzi" },
       ],
@@ -42,7 +41,7 @@ const kottuRoti: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iJAR.lemon_juice, amount: 2, unit: "lzi" },
+        { ing: iLIQ.lemon_juice, amount: 2, unit: "lzi" },
         { ing: iSPC.cumin, amount: 1, unit: "lzi" },
         { ing: iSPC.curry, amount: 1, unit: "lzi" },
         { ing: iSPC.sweet_paprika, amount: 1, unit: "lzi" },
@@ -68,7 +67,7 @@ const kottuRoti: Recipe = {
     {
       title: "Przyprawy i sosy",
       items: [
-        { ing: iOTH.soy_sauce, amount: 30, unit: "ml" },
+        { ing: iLIQ.soy_sauce, amount: 30, unit: "ml" },
         { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
         { ing: iSPC.garam_masala, amount: 0.5, unit: "lzi" },
         { ing: iSPC.black_pepper },

@@ -1,6 +1,6 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import type { Recipe } from "../../types";
 
 const kremMaslany: Recipe = {
@@ -18,8 +18,8 @@ const kremMaslany: Recipe = {
       items: [
         { ing: iFAT.butter, amount: 200 },
         { ing: iDIR.condensed_milk, amount: 200 },
-        { ing: iOTH.vanilla_extract, amount: 2, unit: "lzi" },
-        { ing: iOTH.food_coloring },
+        { ing: iLIQ.vanilla_extract, amount: 2, unit: "lzi" },
+        { ing: iLIQ.food_coloring },
       ],
     },
   ],

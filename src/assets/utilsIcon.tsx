@@ -284,13 +284,6 @@ const UtilsIcon = ({ name, color }: UtilsIconProps) => {
       );
     case "kcal":
       return (
-        // <svg
-        //   fill={color}
-        //   viewBox="0 0 24 24"
-        //   xmlns="http://www.w3.org/2000/svg"
-        // >
-        //   <path d="M13,9h6L8,22l3-10H5L10,2h7Z" />
-        // </svg>
         <svg
           fill={color}
           viewBox="0 0 16 16"

@@ -3,8 +3,8 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -37,7 +37,7 @@ const gulaszWieprzowy: Recipe = {
         { ing: iFAT.butter, amount: 0.5, unit: "lz", invisible: true },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iHRB.chives },
         { ing: iSPC.sweet_paprika },

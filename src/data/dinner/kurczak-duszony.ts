@@ -3,8 +3,8 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
@@ -27,8 +27,8 @@ const gotowanyKurczak: Recipe = {
         ...fryingFat(iFAT.oil, 3, "lz", 0.3),
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
-        { ing: iOTH.maggi },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.maggi },
         { ing: iHRB.chives },
         { ing: iHRB.wild_garlic },
         { ing: iSPC.curry },

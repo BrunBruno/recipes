@@ -2,7 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -19,7 +19,7 @@ const pomidorowa: Recipe = {
     {
       title: "",
       items: [
-        { ing: iOTH.rosol, amount: 700 },
+        { ing: iLIQ.rosol, amount: 700 },
         { ing: iJAR.tomato_puree, amount: 200 },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 80 },

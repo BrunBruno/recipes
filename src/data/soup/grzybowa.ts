@@ -2,9 +2,9 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import { iFAT } from "../../ingredients/ingFat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iDIR } from "../../ingredients/ingDairy";
-import type { Recipe } from "../../types";
-import { iOTH } from "../../ingredients/ingOther";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
+import type { Recipe } from "../../types";
 
 const portions = 4;
 const grzybowa: Recipe = {
@@ -27,7 +27,7 @@ const grzybowa: Recipe = {
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 100, unit: "ml" },
-        { ing: iOTH.water, amount: 1500, unit: "ml" },
+        { ing: iLIQ.water, amount: 1500, unit: "ml" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

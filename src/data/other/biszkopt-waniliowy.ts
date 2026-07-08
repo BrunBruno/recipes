@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -24,7 +25,7 @@ const biszkoptWaniliowy: Recipe = {
         { ing: iFAT.oil, amount: 30 },
         { ing: iDIR.milk, amount: 30 },
         { ing: iOTH.sugar, amount: 90 },
-        { ing: iOTH.vanilla_extract, amount: 2, unit: "ml" },
+        { ing: iLIQ.vanilla_extract, amount: 2, unit: "ml" },
         { ing: iSPC.salt },
       ],
     },

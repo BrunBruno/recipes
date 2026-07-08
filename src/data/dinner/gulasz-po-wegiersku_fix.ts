@@ -1,7 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
@@ -22,7 +22,7 @@ const gulaszPoWegierskuFix: Recipe = {
       items: [
         { ing: iMET.stew_beef, amount: 500 },
         ...fryingFat(iFAT.oil, 5, "lz", 0.3),
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
       ],
     },

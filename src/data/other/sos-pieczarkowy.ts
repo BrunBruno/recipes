@@ -1,7 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -23,9 +23,9 @@ const sosPieczarkowy: Recipe = {
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
-        { ing: iOTH.water, amount: 0.5, unit: "szk" },
+        { ing: iLIQ.water, amount: 0.5, unit: "szk" },
         { ing: iFAT.butter },
-        { ing: iOTH.maggi },
+        { ing: iLIQ.maggi },
         { ing: iSPC.vegetable_seasoning },
       ],
     },

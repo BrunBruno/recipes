@@ -1,5 +1,5 @@
 import { iGRN } from "../../ingredients/ingGrain";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -8,7 +8,7 @@ const grysikowa: Recipe = {
   description:
     "Szybka i prosta zupa grysikowa na rosole, idealna na lekkie śniadanie lub obiad dla dzieci i dorosłych.",
   type: "soup",
-  images: ["grysinkowa.jpg"],
+  images: ["grysikowa.jpg"],
   time: 10,
   portions: 2,
   executionDifficulty: 1,
@@ -16,7 +16,7 @@ const grysikowa: Recipe = {
     {
       title: "",
       items: [
-        { ing: iOTH.rosol, amount: 1000, unit: "ml" },
+        { ing: iLIQ.rosol, amount: 1000, unit: "ml" },
         { ing: iGRN.semolina, amount: 1.5, unit: "lz" },
         { ing: iSPC.salt },
       ],

@@ -1,3 +1,4 @@
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -17,10 +18,10 @@ const barszczCzerwony: Recipe = {
       title: "",
       items: [
         { ing: iVEG.beetroot, amount: 2, unit: "szt" },
-        { ing: iOTH.water, amount: 700, unit: "ml" },
-        { ing: iOTH.rosol, amount: 300, unit: "ml" },
+        { ing: iLIQ.water, amount: 700, unit: "ml" },
+        { ing: iLIQ.rosol, amount: 300, unit: "ml" },
         { ing: iOTH.citric_acid, amount: 0.5, unit: "lzi" },
-        { ing: iOTH.maggi },
+        { ing: iLIQ.maggi },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

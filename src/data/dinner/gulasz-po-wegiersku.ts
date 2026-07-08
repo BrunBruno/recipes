@@ -1,7 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -25,7 +25,7 @@ const gulaszWegrerski: Recipe = {
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         ...fryingFat(iFAT.oil, 3, "lz", 0.5),
-        { ing: iOTH.water, amount: 2, unit: "szk" },
+        { ing: iLIQ.water, amount: 2, unit: "szk" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
         { ing: iSPC.meat_seasoning },
       ],

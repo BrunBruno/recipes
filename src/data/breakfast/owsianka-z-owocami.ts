@@ -1,7 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import type { Recipe } from "../../types";
 
 const owsianaZOwocami: Recipe = {
@@ -22,7 +22,7 @@ const owsianaZOwocami: Recipe = {
           type: "choice",
           options: [
             { ing: iDIR.milk, amount: 250, unit: "ml" },
-            { ing: iOTH.water, amount: 250, unit: "ml" },
+            { ing: iLIQ.water, amount: 250, unit: "ml" },
           ],
           selected: 0,
         },

@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -39,7 +40,7 @@ const faworki: Recipe = {
           invisible: true,
         },
         { ing: iOTH.powdered_sugar, amount: 1, unit: "lz" },
-        { ing: iOTH.spirit, amount: 2, unit: "lzi" },
+        { ing: iLIQ.spirit, amount: 2, unit: "lzi" },
         { ing: iSPC.salt },
       ],
     },

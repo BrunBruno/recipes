@@ -42,11 +42,7 @@ type IngId =
   | "coleslaw"
   | "cucumber_salad"
   | "corn_salad"
-  | "red_cabbage"
-
-  //// JUICES ////
-  | "lemon_juice"
-  | "lime_juice";
+  | "red_cabbage";
 
 export const iJAR: Record<IngId, IngredientItem> = {
   //// PRESERVES ////
@@ -309,7 +305,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5.5, 25, 2.5],
     price: 9.3,
-    verified: true, 
+    verified: true,
   },
 
   frozen_vegetable_mix: {
@@ -434,35 +430,5 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.4, 4.8, 8.9],
-  },
-
-  //// JUICES ////
-  lemon_juice: {
-    name: "Sok z cytryny",
-    type: "jar",
-    subType: "jui",
-    color: "#FFF176",
-    kcalPer100g: 21,
-    unitWeights: {
-      ml: 1,
-      lz: 10,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 0.4, 0.1],
-    verified: true,
-  },
-
-  lime_juice: {
-    name: "Sok z limonki",
-    type: "jar",
-    subType: "jui",
-    color: "#B2FF59",
-    kcalPer100g: 25,
-    unitWeights: {
-      ml: 1,
-      lz: 10,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0.1, 8, 0.4],
   },
 };

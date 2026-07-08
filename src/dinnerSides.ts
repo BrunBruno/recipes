@@ -3,6 +3,7 @@ import { iFAT } from "./ingredients/ingFat";
 import { iGRN } from "./ingredients/ingGrain";
 import { iHRB } from "./ingredients/ingHerb";
 import { iJAR } from "./ingredients/ingJar";
+import { iLIQ } from "./ingredients/ingLiquid";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
@@ -232,7 +233,7 @@ export const dinnerSides = (
           { ing: iJAR.sauerkraut, amount: portions * 100 },
           { ing: iVEG.carrot, amount: portions * 50 },
           { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
-          { ing: iJAR.lemon_juice, amount: portions * 0.25, unit: "lz" },
+          { ing: iLIQ.lemon_juice, amount: portions * 0.25, unit: "lz" },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
         ],

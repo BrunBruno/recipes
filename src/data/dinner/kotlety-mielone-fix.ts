@@ -1,8 +1,8 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
@@ -27,7 +27,7 @@ const kotletyMieloneFix: Recipe = {
       items: [
         { ing: iMET.ground_pork, amount: 500 },
         { ing: iGRN.breadcrumbs, amount: 20 },
-        { ing: iOTH.water, amount: 175, unit: "ml" },
+        { ing: iLIQ.water, amount: 175, unit: "ml" },
         ...fryingFat(iFAT.oil, 80, "g", 0.5),
         { ing: iSPC.knorr_meatballs_fix, amount: 1, unit: "opak" },
       ],

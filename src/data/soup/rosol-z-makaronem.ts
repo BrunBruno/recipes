@@ -1,10 +1,10 @@
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import { iMET } from "../../ingredients/ingMeat";
 import { iGRN } from "../../ingredients/ingGrain";
-import type { Recipe } from "../../types";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
+import type { Recipe } from "../../types";
 
 const rosolZMakaronem: Recipe = {
   name: "Rosół z Makaronem",
@@ -19,11 +19,11 @@ const rosolZMakaronem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iOTH.rosol, amount: 1000 },
+        { ing: iLIQ.rosol, amount: 1000 },
         { ing: iGRN.thin_pasta, amount: 100 },
         { ing: iVEG.carrot, amount: 2, unit: "szt" },
         { ing: iMET.chicken_soup_portion, amount: 100 },
-        { ing: iOTH.maggi },
+        { ing: iLIQ.maggi },
         { ing: iHRB.dill },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

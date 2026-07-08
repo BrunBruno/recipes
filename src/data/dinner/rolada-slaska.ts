@@ -3,8 +3,8 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -42,7 +42,7 @@ const roladaSlaska: Recipe = {
         { ing: iSAU.mustard_sarepska, amount: 25 },
         ...fryingFat(iFAT.margarine, 10, "g", 0.5),
         ...fryingFat(iFAT.butter, 10, "g", 0.5),
-        { ing: iOTH.water, amount: 400, unit: "ml" },
+        { ing: iLIQ.water, amount: 400, unit: "ml" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

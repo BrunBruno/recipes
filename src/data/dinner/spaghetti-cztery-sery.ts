@@ -1,8 +1,8 @@
 import { iDIR } from "../../ingredients/ingDairy";
-import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
-import { iOTH } from "../../ingredients/ingOther";
+import { iLIQ } from "../../ingredients/ingLiquid";
+import { iNUT } from "../../ingredients/ingNut";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -31,8 +31,8 @@ const spaghettiCzterySery: Recipe = {
           selected: 0,
         },
         { ing: iDIR.parmesan, amount: 50 },
-        { ing: iFRT.peanuts, amount: 20 },
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iNUT.peanuts, amount: 20 },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_four_cheese_spaghetti_fix, amount: 1, unit: "opak" },
       ],
     },

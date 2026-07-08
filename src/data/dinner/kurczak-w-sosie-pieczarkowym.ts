@@ -2,8 +2,8 @@ import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -33,7 +33,7 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
         { ing: iVEG.mushrooms, amount: 400 },
         { ing: iVEG.onion, amount: 120 },
         ...fryingFat(iFAT.oil, 5, "lz", 0.35),
-        { ing: iOTH.water, amount: 250, unit: "ml" },
+        { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iDIR.cream_18, amount: 100 },
         { ing: iSPC.knorr_mushroom_sauce_fix, amount: 1, unit: "opak" },
         { ing: iSPC.black_pepper },

@@ -3,7 +3,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
-import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -61,7 +61,7 @@ const tacos: Recipe = {
           type: "choice",
           options: [
             { ing: iFRT.lime, amount: 1, unit: "szt" },
-            { ing: iJAR.lime_juice, amount: 50, unit: "ml" },
+            { ing: iLIQ.lime_juice, amount: 50, unit: "ml" },
           ],
           selected: 0,
         },

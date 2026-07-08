@@ -1,23 +1,10 @@
 import type { IngredientItem } from "../types";
 
 type IngId =
-  //// LIQUIDS ////
-  | "water"
-  | "warm_water"
-  | "spirit"
-  | "food_coloring"
-  | "vanilla_extract"
-  | "maple_syrup"
-  | "rosol"
-  | "maggi"
-  | "soy_sauce"
-  | "meat_stock"
-
   //// SUGARS ////
   | "sugar"
   | "powdered_sugar"
   | "vanilla_sugar"
-  | "honey"
 
   //// OTHER ////
   | "citric_acid"
@@ -29,155 +16,7 @@ type IngId =
   | "none";
 
 export const iOTH: Record<IngId, IngredientItem> = {
-  //// LIQUIDS ////
-  water: {
-    name: "Woda",
-    type: "oth",
-    subType: "liq",
-    color: "#64B5F6",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-      szk: 250,
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 0, 0],
-    verified: true,
-  },
-
-  warm_water: {
-    name: "Ciepła woda",
-    type: "oth",
-    subType: "liq",
-    color: "#64B5F6",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-      szk: 250,
-      lz: 15,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 0, 0],
-    verified: true,
-  },
-
-  spirit: {
-    name: "Spirytus",
-    type: "oth",
-    subType: "liq",
-    color: "#BBDEFB",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-      lzi: 5,
-      lz: 15,
-    },
-    nutrientsPer100g: [0, 0, 0],
-  },
-
-  vanilla_extract: {
-    name: "Ekstrakt waniliowy",
-    type: "oth",
-    subType: "liq",
-    color: "#6D4C41",
-    kcalPer100g: 288,
-    unitWeights: {
-      ml: 1,
-      lzi: 5,
-    },
-    nutrientsPer100g: [0, 12, 0],
-  },
-
-  maple_syrup: {
-    name: "Syrop klonowy",
-    type: "oth",
-    subType: "liq",
-    color: "#D9A066",
-    kcalPer100g: 260,
-    unitWeights: {
-      lz: 20,
-      szk: 320,
-    },
-    nutrientsPer100g: [0, 67, 0],
-  },
-
-  food_coloring: {
-    name: "Barwnik spożywczy",
-    type: "oth",
-    subType: "liq",
-    color: "#d6336c",
-    kcalPer100g: 0,
-    unitWeights: {
-      ml: 1,
-    },
-    nutrientsPer100g: [0, 0, 0],
-  },
-
-  rosol: {
-    name: "Rosół",
-    type: "oth",
-    subType: "liq",
-    color: "#FFD54F",
-    kcalPer100g: 35,
-    unitWeights: {
-      ml: 1,
-    },
-    nutrientsPer100g: [5, 1.5, 1],
-  },
-
-  maggi: {
-    name: "Maggi",
-    type: "oth",
-    subType: "liq",
-    color: "#4F3834",
-    kcalPer100g: 16,
-    unitWeights: {
-      ml: 1,
-      lz: 15,
-    },
-    nutrientsPer100g: [0, 3, 1],
-  },
-
-  soy_sauce: {
-    name: "Sos sojowy",
-    type: "oth",
-    subType: "liq",
-    color: "#5D4037",
-    kcalPer100g: 53,
-    unitWeights: {
-      ml: 1,
-    },
-    nutrientsPer100g: [0.6, 4.9, 8],
-  },
-
-  meat_stock: {
-    name: "Wywar mięsny",
-    type: "oth",
-    subType: "liq",
-    color: "#BCAAA4",
-    kcalPer100g: 45,
-    unitWeights: {
-      ml: 1,
-      szk: 250,
-    },
-    nutrientsPer100g: [1.2, 0.6, 0.2],
-  },
-
-  honey: {
-    name: "Miód",
-    type: "oth",
-    subType: "liq",
-    color: "#F9A825",
-    kcalPer100g: 304,
-    unitWeights: {
-      lzi: 7,
-    },
-    nutrientsPer100g: [0, 82, 0.3],
-  },
-
   //// SUGARS ////
-
   sugar: {
     name: "Cukier",
     type: "oth",
@@ -222,7 +61,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
   },
 
   //// OTHER ////
-
   citric_acid: {
     name: "Kwasek cytrynowy",
     type: "oth",
@@ -297,6 +135,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
     subType: "non",
     kcalPer100g: 0,
     nutrientsPer100g: [0, 0, 0],
+    price: 0,
     verified: true,
   },
+
 };

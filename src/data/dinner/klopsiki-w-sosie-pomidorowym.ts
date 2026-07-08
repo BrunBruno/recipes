@@ -1,8 +1,8 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
@@ -32,7 +32,7 @@ const klopsikiWSosiePomidorowym: Recipe = {
         { ing: iMET.ground_pork, amount: 500 },
         { ing: iGRN.breadcrumbs, amount: 4, unit: "lz" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),
-        { ing: iOTH.water, amount: 300, unit: "ml" },
+        { ing: iLIQ.water, amount: 300, unit: "ml" },
         { ing: iSPC.winiary_tomato_sauce_fix, amount: 1, unit: "opak" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

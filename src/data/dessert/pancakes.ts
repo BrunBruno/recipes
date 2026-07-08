@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSNK } from "../../ingredients/ingSnack";
@@ -46,7 +47,7 @@ const pancakes: Recipe = {
               amount: portions * 30,
             },
             {
-              ing: iOTH.maple_syrup,
+              ing: iLIQ.maple_syrup,
               amount: portions * 20,
             },
             {
@@ -73,7 +74,7 @@ const pancakes: Recipe = {
       items: [
         { ing: iSNK.chocolate_cream, exclude: true },
         { ing: iSNK.nutella, exclude: true },
-        { ing: iOTH.maple_syrup, exclude: true },
+        { ing: iLIQ.maple_syrup, exclude: true },
         { ing: iDIR.whipped_cream, exclude: true },
         { ing: iJAR.jam_strawberry, exclude: true },
         { ing: iFAT.peanut_butter, exclude: true },

@@ -1,8 +1,8 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -29,7 +29,7 @@ const kotletyMielone: Recipe = {
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 100 },
         ...fryingFat(iFAT.oil, 8, "lz", 0.5),
-        { ing: iOTH.maggi },
+        { ing: iLIQ.maggi },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

@@ -1,6 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -31,7 +32,7 @@ const meksykanska: Recipe = {
         { ing: iJAR.canned_tomatoes, amount: 1, unit: "opak" },
         { ing: iJAR.tomato_paste, amount: 2, unit: "lz" },
         { ing: iFAT.olive, amount: 5, unit: "lz" },
-        { ing: iOTH.water, amount: 4, unit: "szk" },
+        { ing: iLIQ.water, amount: 4, unit: "szk" },
         { ing: iOTH.sugar, amount: 1, unit: "lzi" },
         { ing: iHRB.oregano },
         { ing: iHRB.coriander },

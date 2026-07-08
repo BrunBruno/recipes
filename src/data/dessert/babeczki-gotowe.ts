@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 
 const babeczkiGotowe: Recipe = {
@@ -24,7 +24,7 @@ const babeczkiGotowe: Recipe = {
         { ing: iGRN.cupcake_mix, amount: 1, unit: "opak" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: 100, unit: "ml" },
-        { ing: iOTH.water, amount: 100, unit: "ml" },
+        { ing: iLIQ.water, amount: 100, unit: "ml" },
       ],
     },
   ],

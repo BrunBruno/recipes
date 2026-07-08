@@ -14,26 +14,6 @@
   display: none;
 }
 
-.statistics h1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  background-color: #111;
-  margin: 0;
-  width: 100%;
-  padding: 1rem 3rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.statistics h1 svg {
-  height: 2.4rem;
-}
-
 .statistics-element {
   display: flex;
   flex-direction: column;

@@ -1,7 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -39,7 +39,7 @@ const chicker: Recipe = {
         },
         { ing: iSAU.mustard_dessert, amount: 2, unit: "lzi" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "lzi" },
-        { ing: iOTH.honey, amount: 0.5, unit: "lzi" },
+        { ing: iLIQ.honey, amount: 0.5, unit: "lzi" },
       ],
     },
   ],

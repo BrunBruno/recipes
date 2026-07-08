@@ -2,11 +2,11 @@ import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
-import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
+import type { Recipe } from "../../types";
 
 const portions = 2;
 const smazonaRyba: Recipe = {
@@ -35,7 +35,7 @@ const smazonaRyba: Recipe = {
         { ing: iGRN.flour, amount: 80 },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 120 },
-        { ing: iJAR.lemon_juice },
+        { ing: iLIQ.lemon_juice },
         { ing: iSPC.salt },
       ],
     },

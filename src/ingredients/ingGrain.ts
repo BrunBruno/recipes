@@ -75,7 +75,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     color: "#F5F5A1",
     kcalPer100g: 348,
-    nutrientsPer100g: [0.3, 0.1, 86.0],
+    nutrientsPer100g: [0.3, 86.0, 0.1],
   },
 
   breadcrumbs: {
@@ -87,7 +87,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lz: 10,
       lzi: 3,
     },
-    nutrientsPer100g: [1.5, 4.4, 12],
+    nutrientsPer100g: [2, 76, 10],
     verified: true,
   },
 
@@ -492,6 +492,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Frusta Prosciutto",
     type: "grn",
     subType: "bun",
+    color: "#E8B97A",
     kcalPer100g: 207,
     unitWeights: {
       szt: 190,

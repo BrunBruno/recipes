@@ -1,6 +1,6 @@
 import { iHRB } from "../../ingredients/ingHerb";
+import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
-import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -22,8 +22,8 @@ const rosol: Recipe = {
         { ing: iMET.turkey_neck, amount: 200, exclude: true },
         { ing: iMET.chicken_soup_portion, amount: 400, exclude: true },
         { ing: iMET.pork_rib, amount: 200, exclude: true },
-        { ing: iOTH.water, amount: 3000, unit: "ml", exclude: true },
-        { ing: iOTH.rosol, amount: 3000, invisible: true },
+        { ing: iLIQ.water, amount: 3000, unit: "ml", exclude: true },
+        { ing: iLIQ.rosol, amount: 3000, invisible: true },
         { ing: iVEG.carrot, amount: 2, unit: "szt", exclude: true },
         { ing: iVEG.parsley_root, amount: 1, unit: "szt", exclude: true },
         { ing: iVEG.celery_root, amount: 120, exclude: true },
