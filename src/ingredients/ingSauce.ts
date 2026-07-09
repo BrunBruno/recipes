@@ -9,6 +9,7 @@ type IngId = //// SAUCES ////
   | "mustard_russian"
   | "mustard_bbq"
   | "mustard_sun"
+  | "mustard_dijon"
   | "mayonnaise"
   | "garlic_sauce"
   | "sriracha"
@@ -121,6 +122,18 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [5, 8, 10],
+  },
+
+  mustard_dijon: {
+    name: "Musztarda Dijon",
+    type: "sau",
+    color: "#E2CA73",
+    kcalPer100g: 123,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [6.5, 7.5, 6],
   },
 
   mayonnaise: {

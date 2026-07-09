@@ -11,6 +11,7 @@ type IngId =
   | "peach"
   | "nectarine"
   | "plum"
+  | "dried_plum"
   | "apricot"
   | "mango"
   | "papaya"
@@ -148,6 +149,19 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 55,
     },
     nutrientsPer100g: [0.3, 11, 0.7],
+  },
+
+  dried_plum: {
+    name: "Śliwki suszone",
+    type: "frt",
+    subType: "plu",
+    color: "#5C2A3A",
+    kcalPer100g: 240,
+    unitWeights: {
+      lz: 15,
+      szk: 150,
+    },
+    nutrientsPer100g: [0.4, 64, 2.2],
   },
 
   apricot: {
@@ -469,6 +483,4 @@ export const iFRT: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.7, 72, 3],
   },
-
- 
 };

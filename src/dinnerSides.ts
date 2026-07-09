@@ -23,6 +23,7 @@ export type DinnerSidesNames =
   | "kopytka-ready"
   | "silesian-dumplings-ready"
   ////
+  | "peas-with-cranberries"
   | "carrot-and-peas"
   | "steamed-vegetables"
   | "stir-fry-vegetables"
@@ -171,6 +172,15 @@ export const dinnerSides = (
 
     //// ////
 
+    case "peas-with-cranberries":
+      return {
+        title: "Groszek i żurawina",
+        sideName: name,
+        items: [
+          { ing: iJAR.canned_peas, amount: 100 * portions },
+          { ing: iJAR.jam_cranberry, amount: 50 * portions },
+        ],
+      };
     case "carrot-and-peas":
       return {
         title: "Marchewka z groszkiem",
@@ -409,6 +419,12 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
       ];
     ////
 
+    case "peas-with-cranberries":
+      return [
+        "Groszek odsącz z zalewy.",
+        "Dodaj dżem żurawinowy.",
+        "Podawaj razem jako dodatek do obiadu.",
+      ];
     case "carrot-and-peas":
       return [
         "Marchewkę obierz, umyj i pokrój w kostkę.",

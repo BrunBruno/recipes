@@ -7,6 +7,7 @@ type IngId =
   | "tomato"
   | "cherry_tomato"
   | "roma_tomato"
+  | "sun_dried_tomatoes"
   | "cucumber"
   | "bell_pepper"
   | "chili_pepper"
@@ -26,6 +27,9 @@ type IngId =
   | "beetroot"
   | "kohlrabi"
   | "corn"
+
+  //// PROCESSED ////
+  | "boiled_beets"
 
   //// GREENS ////
   | "lettuce"
@@ -131,6 +135,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#EF5350",
     kcalPer100g: 19,
     nutrientsPer100g: [0.9, 0.2, 4.1],
+  },
+
+  sun_dried_tomatoes: {
+    name: "Suszone pomidory",
+    type: "veg",
+    subType: "tom",
+    color: "#B71C1C",
+    kcalPer100g: 258,
+    unitWeights: {
+      szt: 5,
+    },
+    nutrientsPer100g: [3, 56, 14],
   },
 
   cucumber: {
@@ -307,6 +323,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "bet",
     color: "#8E244D",
     kcalPer100g: 43,
+    unitWeights: {
+      szt: 150,
+    },
+    nutrientsPer100g: [0.2, 10, 1.6],
+  },
+
+  boiled_beets: {
+    name: "Buraki gotowane",
+    type: "veg",
+    subType: "bet",
+    color: "#8B0000",
+    kcalPer100g: 44,
     unitWeights: {
       szt: 150,
     },

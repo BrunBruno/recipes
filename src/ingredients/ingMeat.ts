@@ -33,9 +33,11 @@ type IngId =
   | "ground_beef"
   | "beef_steak"
   | "beef_round"
+  | "beef_shoulder"
   | "mutton"
 
   //// PROCESSED ////
+  | "mortadella"
   | "ham_slices"
   | "ham_cooked"
   | "polendwica"
@@ -45,6 +47,8 @@ type IngId =
   | "salami"
   | "bacon_slices"
   | "bacon_block"
+  | "smoked_bacon"
+  | "brewed_bacon"
   | "sausage"
   | "white_sausage"
   | "sausages"
@@ -249,7 +253,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   //// MEAT ////
 
   pork_loin: {
-    name: "Schab",
+    name: "Schab wieprzowy",
     type: "met",
     color: "#F2A7A0",
     kcalPer100g: 190,
@@ -382,6 +386,14 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [21.0, 7.0, 0],
   },
 
+  beef_shoulder: {
+    name: "Łopatka wołowa",
+    type: "met",
+    color: "#8D4E3D",
+    kcalPer100g: 180,
+    nutrientsPer100g: [12, 0, 20],
+  },
+
   //////////////////////////////
 
   mutton: {
@@ -421,6 +433,20 @@ export const iMET: Record<IngId, IngredientItem> = {
   },
 
   //// PROCESSED ////
+
+  mortadella: {
+    name: "Mortadela",
+    type: "met",
+    subType: "ham",
+    color: "#F4A6A6",
+    kcalPer100g: 280,
+    unitWeights: {
+      plas: 40,
+      szt: 500,
+      opak: 500,
+    },
+    nutrientsPer100g: [23, 3, 12],
+  },
 
   ham_slices: {
     name: "Szynka",
@@ -541,6 +567,24 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [53, 1, 37],
+  },
+
+  smoked_bacon: {
+    name: "Boczek wędzony",
+    type: "met",
+    subType: "ham",
+    color: "#D98C6B",
+    kcalPer100g: 450,
+    nutrientsPer100g: [45, 0, 12],
+  },
+
+  brewed_bacon: {
+    name: "Boczek parzony",
+    type: "met",
+    subType: "ham",
+    color: "#E7A07A",
+    kcalPer100g: 400,
+    nutrientsPer100g: [38, 0, 14],
   },
 
   sausage: {

@@ -6,6 +6,7 @@ type IngId =
   | "warm_water"
   | "spirit"
   | "vodka"
+  | "dry_red_wine"
   | "maple_syrup"
   | "food_coloring"
   | "vanilla_extract"
@@ -79,6 +80,18 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [0, 0, 0],
+  },
+
+  dry_red_wine: {
+    name: "Czerwone wino wytrawne",
+    type: "liq",
+    color: "#8B0000",
+    kcalPer100g: 82,
+    unitWeights: {
+      ml: 1,
+      szk: 150,
+    },
+    nutrientsPer100g: [0, 2.5, 0],
   },
 
   vanilla_extract: {

@@ -15,9 +15,7 @@ type IngId =
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
   | "jam_strawberry"
-
-  //// DRIED ////
-  | "sun_dried_tomatoes"
+  | "jam_cranberry"
 
   //// CANNED ////
   | "canned_tomatoes"
@@ -193,21 +191,21 @@ export const iJAR: Record<IngId, IngredientItem> = {
     unitWeights: {
       lz: 20,
       szk: 320,
+      opak: 400,
     },
     nutrientsPer100g: [0.1, 60, 0.3],
   },
 
-  //// DRIED ////
-
-  sun_dried_tomatoes: {
-    name: "Suszone pomidory",
+  jam_cranberry: {
+    name: "Dżem żurawinowy",
     type: "jar",
     color: "#B71C1C",
-    kcalPer100g: 258,
+    kcalPer100g: 260,
     unitWeights: {
-      szt: 5,
+      lz: 20,
+      szk: 300,
     },
-    nutrientsPer100g: [3, 56, 14],
+    nutrientsPer100g: [0.2, 65, 0.5],
   },
 
   //// CANNED ////

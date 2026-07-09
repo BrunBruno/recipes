@@ -17,6 +17,8 @@ type IngId =
   | "black_sesame"
   | "cumin"
   | "garam_masala"
+  | "clove"
+  | "juniper_berries"
 
   //// SEASONINGS ////
   | "vegetable_seasoning"
@@ -218,6 +220,28 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [13, 45, 12],
+  },
+
+  clove: {
+    name: "Goździk",
+    type: "spc",
+    color: "#795548",
+    kcalPer100g: 274,
+    unitWeights: {
+      ziar: 0.1,
+    },
+    nutrientsPer100g: [13, 31, 6],
+  },
+
+  juniper_berries: {
+    name: "Ziarna jałowca",
+    type: "spc",
+    color: "#37474F",
+    kcalPer100g: 280,
+    unitWeights: {
+      ziar: 0.2,
+    },
+    nutrientsPer100g: [15, 34, 6],
   },
 
   //// SEASONINGS ////
