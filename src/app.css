@@ -81,8 +81,30 @@ nav:hover > .nav-bg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: #000000;
   border-bottom: solid 2px #333333;
+}
+
+.page-title-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page-title-background::after {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  left: -5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #161616;
 }
 
 .page-title-h1 {
@@ -93,6 +115,7 @@ nav:hover > .nav-bg {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
+  text-shadow: 2px 2px #333333;
 }
 
 @media (max-width: 960px) {

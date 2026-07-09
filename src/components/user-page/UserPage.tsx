@@ -10,7 +10,7 @@ import MealPanelIcon from "../../assets/mealPanelIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { allIngredients, DAILY_NUTRIENTS, ingredientLookup } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
-import { STORAGE_KEY, type DayRecord } from "./user-page-data";
+import { DUMMY_RECORDS, STORAGE_KEY, type DayRecord } from "./user-page-data";
 import { AnimatePresence, motion } from "framer-motion";
 import MacroIcon from "../../assets/macroIcon";
 
@@ -245,46 +245,60 @@ export default function UserPage({
     setDayIngredients(structuredClone(state));
   };
 
+  const renderDummyRecords = (meal: DayMealType) => {
+    return DUMMY_RECORDS[meal].map((item, index) => (
+      <div key={`dummy-${index}`} className="meal-ing dummy-record">
+        <div className="meal-ing-grid">
+          <IngredientIcon
+            ingType={ingredientLookup[item[0]].type}
+            subType={ingredientLookup[item[0]].subType}
+            color={ingredientLookup[item[0]].color}
+          />
+          <span className="dummy-grams">{item[1]}g</span>
+          <span className="dummy-name">{item[0]}</span>
+        </div>
+      </div>
+    ));
+  };
+
   const renderIngGroup = (group: DayIngredientPair[], meal: DayMealType) => {
     return (
       <div className={`meal-list ${group.length === 0 ? "empty" : ""}`}>
         <AnimatePresence initial={false}>
-          {group.map(([name, grams], index) => {
-            const ing = ingredientLookup[name];
-            const key = getKey(meal, index);
+          {group.length === 0
+            ? renderDummyRecords(meal)
+            : group.map(([name, grams], index) => {
+                const ing = ingredientLookup[name];
+                const key = getKey(meal, index);
 
-            return (
-              <motion.div
-                key={key}
-                layout
-                initial={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -30, scale: 0.8 }}
-                transition={{
-                  layout: { duration: 0.2 },
-                  opacity: { duration: 0.1 },
-                }}
-                className="meal-ing"
-                style={{ color: ing?.color }}
-              >
-                <div className="meal-ing-grid">
-                  <IngredientIcon
-                    ingType={ing!.type}
-                    subType={ing!.subType}
-                    color={ing!.color}
-                  />
-                  <span>{grams.toFixed(1)} g</span>
-                  <span>{ing!.name}</span>
-                  <p
-                    onClick={() => {
-                      onRemoveIngredient(meal, index);
+                return (
+                  <motion.div
+                    key={key}
+                    layout
+                    initial={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: -30, scale: 0.8 }}
+                    transition={{
+                      layout: { duration: 0.2 },
+                      opacity: { duration: 0.1 },
                     }}
+                    className="meal-ing"
+                    style={{ color: ing?.color }}
                   >
-                    <UtilsIcon name="close" color="#888" />
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+                    <div className="meal-ing-grid">
+                      <IngredientIcon
+                        ingType={ing!.type}
+                        subType={ing!.subType}
+                        color={ing!.color}
+                      />
+                      <span>{grams.toFixed(1)} g</span>
+                      <span>{ing!.name}</span>
+                      <p onClick={() => onRemoveIngredient(meal, index)}>
+                        <UtilsIcon name="close" color="#888" />
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
         </AnimatePresence>
       </div>
     );
@@ -303,6 +317,8 @@ export default function UserPage({
   return (
     <div className="user-page">
       <div className="page-title">
+        <div className="page-title-background"></div>
+
         <h1 className="page-title-h1">
           <span className="h1-text">Moje Posiłki</span>
         </h1>

@@ -120,6 +120,8 @@ function Ingredients({}: IngredientsProps) {
   return (
     <div className="all-ingredients">
       <div className="page-title">
+        <div className="page-title-background"></div>
+
         <h1 className="page-title-h1">
           <span className="h1-text">Wszystkie Składniki</span>
         </h1>

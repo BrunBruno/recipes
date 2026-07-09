@@ -110,6 +110,8 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
   return (
     <div className="recipes-page">
       <div className="page-title">
+        <div className="page-title-background"></div>
+
         <h1 className="page-title-h1">
           <span className="h1-text">Przepisy ({filteredRecipes.length})</span>
         </h1>

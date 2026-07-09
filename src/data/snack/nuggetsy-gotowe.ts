@@ -9,7 +9,7 @@ const nuggetsyGotowe: Recipe = {
   description:
     "Gotowe nuggetsy z piekarnika podane z frytkami oraz mieszanką warzyw na patelnię.",
   type: "snack",
-  images: ["nuggetsy-gotowe.jpg"],
+  images: ["nuggetsy-gotowe.jpg", "nuggetsy-gotowe-2.jpg"],
   time: 30,
   portions: 1,
   executionDifficulty: 1,
@@ -19,7 +19,7 @@ const nuggetsyGotowe: Recipe = {
       items: [
         { ing: iMET.chicken_nuggets, amount: 1, unit: "opak" },
         { ing: iJAR.frozen_fries, amount: 150 },
-        { ing: iJAR.frozen_vegetable_mix, amount: 200 }, //???
+        { ing: iJAR.frozen_vegetable_mix, amount: 200 },
         { ing: iFAT.oil, amount: 2, unit: "lzi" },
         { ing: iSPC.salt },
       ],

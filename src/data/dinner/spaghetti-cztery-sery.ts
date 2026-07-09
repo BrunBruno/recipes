@@ -12,7 +12,11 @@ const spaghettiCzterySery: Recipe = {
   description:
     "Spaghetti w kremowym sosie cztery sery z dodatkiem brokułów. Szybki obiad na bazie sosu w proszku.",
   type: "dinner",
-  images: ["spaghetti-cztery-sery.jpg"],
+  images: [
+    "spaghetti-cztery-sery.jpg",
+    "spaghetti-cztery-sery-2.jpg",
+    "spaghetti-cztery-sery-3.jpg",
+  ],
   time: 35,
   portions: 3,
   executionDifficulty: 1,

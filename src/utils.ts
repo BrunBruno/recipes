@@ -112,7 +112,7 @@ export const rgbToHex = ([r, g, b]: number[]) => {
   return "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("");
 };
 
-export const interpolateColor = (
+export const interpolateKcalColor = (
   kcal: number,
   min: number,
   max: number,
@@ -142,6 +142,26 @@ export const interpolateColor = (
   const rgb = start.map((s, i) => Math.round(s + t * (end[i] - s)));
   return rgbToHex(rgb);
 };
+
+export const interpolateColor = (
+  value: number,
+  max: number,
+  startColor: string,
+  endColor: string,
+) => {
+  const t = Math.max(0, Math.min(1, value / max));
+
+  const start = hexToRgb(startColor);
+  const end = hexToRgb(endColor);
+
+  const rgb = start.map((s, i) =>
+    Math.round(s + t * (end[i] - s))
+  );
+
+  return rgbToHex(rgb);
+};
+
+
 
 export const getActiveIngredient = (
   item: Ingredient | IngredientChoice,

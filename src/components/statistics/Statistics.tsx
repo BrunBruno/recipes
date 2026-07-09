@@ -2,7 +2,7 @@ import "./statistics.css";
 import { useEffect, useRef } from "react";
 import type { IngredientType, MealType } from "../../types";
 import {
-  interpolateColor,
+  interpolateKcalColor,
   kcalTopColors,
   kcalLowColors,
   MealTypesData,
@@ -188,7 +188,7 @@ function Statistics({}: StatisticsProps) {
     const maxKcal = Math.max(...allKcal.map(([, v]) => v));
 
     const allKcalColors = allKcal.map(([, v]) =>
-      interpolateColor(v, minKcal, maxKcal),
+      interpolateKcalColor(v, minKcal, maxKcal),
     );
     createChart(
       canvasRefs.calories.current,
@@ -204,7 +204,7 @@ function Statistics({}: StatisticsProps) {
     const minKcalDen = Math.min(...allKcalDensity.map(([, v]) => v));
     const maxKcalDen = Math.max(...allKcalDensity.map(([, v]) => v));
     const allKcalDenColors = allKcalDensity.map(([, v]) =>
-      interpolateColor(v, minKcalDen, maxKcalDen),
+      interpolateKcalColor(v, minKcalDen, maxKcalDen),
     );
     createChart(
       canvasRefs.kcalDensity.current,
@@ -331,7 +331,7 @@ function Statistics({}: StatisticsProps) {
     const minWeight = Math.min(...allWeights.map(([, v]) => v));
     const maxWeight = Math.max(...allWeights.map(([, v]) => v));
     const allWeightColors = allWeights.map(([, v]) =>
-      interpolateColor(v, minWeight, maxWeight, "#3b5bdb", "#f76707"),
+      interpolateKcalColor(v, minWeight, maxWeight, "#3b5bdb", "#f76707"),
     );
     createChart(
       canvasRefs.weights.current,
@@ -351,7 +351,7 @@ function Statistics({}: StatisticsProps) {
       ...allWeightsPerPortion.map(([, v]) => v),
     );
     const allWeightsPerPortionColors = allWeightsPerPortion.map(([, v]) =>
-      interpolateColor(
+      interpolateKcalColor(
         v,
         minWeightsPerPortion,
         maxWeightsPerPortion,
@@ -373,7 +373,7 @@ function Statistics({}: StatisticsProps) {
     const minPrepTime = Math.min(...allPrepTime.map(([, v]) => v));
     const maxPrepTime = Math.max(...allPrepTime.map(([, v]) => v));
     const allPrepTimeColors = allPrepTime.map(([, v]) =>
-      interpolateColor(v, minPrepTime, maxPrepTime, "#ae3ec9", "#f59f00"),
+      interpolateKcalColor(v, minPrepTime, maxPrepTime, "#ae3ec9", "#f59f00"),
     );
     createChart(
       canvasRefs.preparationTime.current,
@@ -394,6 +394,8 @@ function Statistics({}: StatisticsProps) {
   return (
     <div className="statistics">
       <div className="page-title">
+        <div className="page-title-background"></div>
+
         <h1 className="page-title-h1">
           <span className="h1-text">Statystki Przepisów</span>
         </h1>
