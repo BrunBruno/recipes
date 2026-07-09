@@ -125,6 +125,12 @@
   border: 3px solid #444444;
   overflow: hidden;
   color: #aaaaaa;
+  transition: transform 0.2s;
+}
+
+.ingredient-card:hover {
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
 .ingredient-card strong {
@@ -151,12 +157,17 @@
   max-width: calc(100% - 2rem);
 }
 
-.ing-card-header svg {
+.header-icons {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
   top: 0.2rem;
   right: 2.2rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.ing-card-header svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .ingredient-card-content {
@@ -242,6 +253,17 @@
   bottom: 0.3rem;
   font-size: 0.6rem;
   color: #666;
+}
+
+.ing-card-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 @media (max-width: 1200px) {

@@ -9,6 +9,7 @@ export interface DayRecord {
 }
 
 export const STORAGE_KEY = "day_records";
+export const DAY_INGREDIENTS_KEY = "day_ingredients";
 
 export const DUMMY_RECORDS: Record<DayMealType, DayIngredientPair[]> = {
   breakfast: [

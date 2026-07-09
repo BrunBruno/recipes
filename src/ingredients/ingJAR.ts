@@ -48,6 +48,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   tomato_puree: {
     name: "Przecier pomidorowy",
     type: "jar",
+    isVeg: true,
     color: "#C62828",
     kcalPer100g: 38,
     unitWeights: {
@@ -59,6 +60,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   tomato_paste: {
     name: "Koncentrat pomidorowy",
     type: "jar",
+    isVeg: true,
     color: "#B71C1C",
     kcalPer100g: 82,
     unitWeights: {
@@ -71,6 +73,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   tomato_passata: {
     name: "Passata pomidorowa",
     type: "jar",
+    isVeg: true,
     color: "#D94C3A",
     kcalPer100g: 33,
     unitWeights: {
@@ -82,6 +85,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   pickled_cucumber: {
     name: "Ogórek kiszony",
     type: "jar",
+    isVeg: true,
     color: "#6FAF3A",
     kcalPer100g: 8,
     unitWeights: {
@@ -94,6 +98,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   pickled_cucumber_vinegar: {
     name: "Ogórek konserwowy",
     type: "jar",
+    isVeg: true,
     color: "#9CCC65",
     kcalPer100g: 15,
     unitWeights: {
@@ -106,6 +111,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   sauerkraut: {
     name: "Kapusta kiszona",
     type: "jar",
+    isVeg: true,
     color: "#E6D690",
     kcalPer100g: 19,
     unitWeights: {
@@ -129,6 +135,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   fried_beets: {
     name: "Buraczki zasmażane",
     type: "jar",
+    isVeg: true,
     color: "#8E244D",
     kcalPer100g: 64,
     unitWeights: {
@@ -141,6 +148,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   beets_shredded: {
     name: "Buraczki wiórki",
     type: "jar",
+    isVeg: true,
     color: "#A8324A",
     kcalPer100g: 43,
     unitWeights: {
@@ -152,6 +160,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   beets_whole_vinegar: {
     name: "Buraczki całe z octu",
     type: "jar",
+    isVeg: true,
     color: "#7B1E3A",
     kcalPer100g: 25,
     unitWeights: {
@@ -213,6 +222,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_tomatoes: {
     name: "Pomidory z puszki",
     type: "jar",
+    isVeg: true,
     color: "#D84315",
     kcalPer100g: 21,
     unitWeights: {
@@ -224,17 +234,21 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_corn: {
     name: "Kukurydza konserwowa",
     type: "jar",
+    isVeg: true,
     color: "#FDD835",
-    kcalPer100g: 86,
+    kcalPer100g: 69,
     unitWeights: {
-      opak: 200,
+      opak: 285,
     },
-    nutrientsPer100g: [1.4, 19, 3.2],
+    nutrientsPer100g: [0.6, 11, 3.2],
+    price: 14,
+    verified: true,
   },
 
   canned_peas: {
     name: "Groszek konserwowy",
     type: "jar",
+    isVeg: true,
     color: "#66BB6A",
     kcalPer100g: 81,
     unitWeights: {
@@ -246,6 +260,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_red_beans: {
     name: "Fasola czerwona z puszki",
     type: "jar",
+    isVeg: true,
     color: "#672422 ",
     kcalPer100g: 110,
     unitWeights: {
@@ -257,6 +272,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_peach: {
     name: "Brzoskwinia w puszce",
     type: "jar",
+    isVeg: true,
     color: "#FFB74D",
     kcalPer100g: 68,
     unitWeights: {
@@ -268,9 +284,11 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_pineapple: {
     name: "Ananas w puszce",
     type: "jar",
+    isVeg: true,
     color: "#FFD54F",
     kcalPer100g: 63,
     unitWeights: {
+      plas: 30,
       opak: 565,
     },
     nutrientsPer100g: [0, 15, 0.4],
@@ -310,6 +328,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_vegetable_mix: {
     name: "Mrożona mieszanka warzyw",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#81C784",
     kcalPer100g: 29,
@@ -323,6 +342,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_stir_fry: {
     name: "Warzywa na patelnię",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#66BB6A",
     kcalPer100g: 50,
@@ -332,6 +352,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_stir_fry_oriental: {
     name: "Warzywa na patelnię orientalne",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#66BB6A",
     kcalPer100g: 33,
@@ -343,6 +364,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_green_beans: {
     name: "Mrożona fasolka szparagowa",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#66BB6A",
     kcalPer100g: 42,
@@ -356,6 +378,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_spinach: {
     name: "Mrożony szpinak",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#2E7D32",
     kcalPer100g: 19,
@@ -369,6 +392,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   strawberry_frozen: {
     name: "Truskawki mrożone",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#EF5350",
     kcalPer100g: 35,
@@ -382,6 +406,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_broccoli: {
     name: "Mrożone brokuły",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#2E7D32",
     kcalPer100g: 34,

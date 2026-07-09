@@ -46,6 +46,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
     name: "Jabłko",
     type: "frt",
+    isVeg: true,
     color: "#D32F2F",
     kcalPer100g: 52,
     unitWeights: {
@@ -57,6 +58,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   pear: {
     name: "Gruszka",
     type: "frt",
+    isVeg: true,
     subType: "per",
     color: "#A3C853",
     kcalPer100g: 57,
@@ -69,6 +71,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   fig: {
     name: "Figa",
     type: "frt",
+    isVeg: true,
     subType: "per",
     color: "#8B5E3C",
     kcalPer100g: 74,
@@ -81,6 +84,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   pineapple: {
     name: "Ananas",
     type: "frt",
+    isVeg: true,
     subType: "ana",
     color: "#F4C542",
     kcalPer100g: 50,
@@ -93,6 +97,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   kiwi: {
     name: "Kiwi",
     type: "frt",
+    isVeg: true,
     subType: "kwi",
     color: "#6D9F3A",
     kcalPer100g: 61,
@@ -105,6 +110,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   passion_fruit: {
     name: "Marakuja",
     type: "frt",
+    isVeg: true,
     subType: "kwi",
     color: "#6A0DAD",
     kcalPer100g: 97,
@@ -117,6 +123,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   peach: {
     name: "Brzoskwinia",
     type: "frt",
+    isVeg: true,
     subType: "pea",
     color: "#FFB07C",
     kcalPer100g: 39,
@@ -129,6 +136,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   nectarine: {
     name: "Nektarynka",
     type: "frt",
+    isVeg: true,
     subType: "pea",
     color: "#FF8C42",
     kcalPer100g: 44,
@@ -142,6 +150,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   plum: {
     name: "Śliwka",
     type: "frt",
+    isVeg: true,
     subType: "plu",
     color: "#7B3F8C",
     kcalPer100g: 46,
@@ -154,6 +163,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   dried_plum: {
     name: "Śliwki suszone",
     type: "frt",
+    isVeg: true,
     subType: "plu",
     color: "#5C2A3A",
     kcalPer100g: 240,
@@ -167,6 +177,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   apricot: {
     name: "Morela",
     type: "frt",
+    isVeg: true,
     subType: "plu",
     color: "#F4A460",
     kcalPer100g: 48,
@@ -179,6 +190,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   mango: {
     name: "Mango",
     type: "frt",
+    isVeg: true,
     subType: "man",
     color: "#FFB347",
     kcalPer100g: 60,
@@ -191,6 +203,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   papaya: {
     name: "Papaja",
     type: "frt",
+    isVeg: true,
     subType: "man",
     color: "#FFA07A",
     kcalPer100g: 43,
@@ -203,6 +216,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   melon: {
     name: "Melon",
     type: "frt",
+    isVeg: true,
     subType: "mel",
     color: "#E6D690",
     kcalPer100g: 34,
@@ -215,6 +229,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   watermelon: {
     name: "Arbuz",
     type: "frt",
+    isVeg: true,
     subType: "mel",
     color: "#FC6C6C",
     kcalPer100g: 30,
@@ -227,6 +242,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   pomegranate: {
     name: "Granat",
     type: "frt",
+    isVeg: true,
     subType: "gra",
     color: "#C72C48",
     kcalPer100g: 83,
@@ -239,6 +255,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   banana: {
     name: "Banan",
     type: "frt",
+    isVeg: true,
     subType: "ban",
     color: "#F7E26B",
     kcalPer100g: 89,
@@ -246,11 +263,13 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 120,
     },
     nutrientsPer100g: [0.3, 23, 1.1],
+    price: 7,
   },
 
   lime: {
     name: "Limonka",
     type: "frt",
+    isVeg: true,
     subType: "cit",
     color: "#7ED957",
     kcalPer100g: 30,
@@ -263,6 +282,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   lemon: {
     name: "Cytryna",
     type: "frt",
+    isVeg: true,
     subType: "cit",
     color: "#FFD84D",
     kcalPer100g: 29,
@@ -276,6 +296,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   orange: {
     name: "Pomarańcza",
     type: "frt",
+    isVeg: true,
     subType: "ora",
     color: "#FF9800",
     kcalPer100g: 47,
@@ -288,6 +309,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   mandarin: {
     name: "Mandarynka",
     type: "frt",
+    isVeg: true,
     subType: "ora",
     color: "#FFB347",
     kcalPer100g: 53,
@@ -300,6 +322,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   grapefruit: {
     name: "Grejpfrut",
     type: "frt",
+    isVeg: true,
     subType: "ora",
     color: "#FF6F61",
     kcalPer100g: 42,
@@ -312,6 +335,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   grapes_red: {
     name: "Winogrona czerwone",
     type: "frt",
+    isVeg: true,
     subType: "grp",
     color: "#8E44AD",
     kcalPer100g: 69,
@@ -321,6 +345,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   grapes_white: {
     name: "Winogrona białe",
     type: "frt",
+    isVeg: true,
     subType: "grp",
     color: "#D4E157",
     kcalPer100g: 67,
@@ -330,6 +355,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   cherries_sour: {
     name: "Wiśnie",
     type: "frt",
+    isVeg: true,
     subType: "che",
     color: "#C21833",
     kcalPer100g: 50,
@@ -339,6 +365,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   cherries_sweet: {
     name: "Czereśnie",
     type: "frt",
+    isVeg: true,
     subType: "che",
     color: "#8B0000",
     kcalPer100g: 63,
@@ -348,6 +375,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   strawberry: {
     name: "Truskawki",
     type: "frt",
+    isVeg: true,
     subType: "str",
     color: "#E53935",
     kcalPer100g: 32,
@@ -357,6 +385,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   wild_strawberry: {
     name: "Poziomka",
     type: "frt",
+    isVeg: true,
     subType: "str",
     color: "#C62828",
     kcalPer100g: 41,
@@ -366,6 +395,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   raspberries: {
     name: "Maliny",
     type: "frt",
+    isVeg: true,
     subType: "rbr",
     color: "#D81B60",
     kcalPer100g: 52,
@@ -379,6 +409,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   blackberry: {
     name: "Jeżyny",
     type: "frt",
+    isVeg: true,
     subType: "rbr",
     color: "#4A235A",
     kcalPer100g: 43,
@@ -388,6 +419,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   blueberry: {
     name: "Borówki",
     type: "frt",
+    isVeg: true,
     subType: "brr",
     color: "#4B5CC4",
     kcalPer100g: 57,
@@ -401,6 +433,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   cranberry: {
     name: "Żurawina",
     type: "frt",
+    isVeg: true,
     subType: "brr",
     color: "#B22222",
     kcalPer100g: 46,
@@ -413,6 +446,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   blackcurrant: {
     name: "Czarna porzeczka",
     type: "frt",
+    isVeg: true,
     subType: "brr",
     color: "#2E003E",
     kcalPer100g: 63,
@@ -425,6 +459,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   redcurrant: {
     name: "Czerwona porzeczka",
     type: "frt",
+    isVeg: true,
     subType: "brr",
     color: "#D7263D",
     kcalPer100g: 56,
@@ -437,6 +472,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   gooseberry: {
     name: "Agrest",
     type: "frt",
+    isVeg: true,
     subType: "brr",
     color: "#A3C585",
     kcalPer100g: 44,
@@ -449,6 +485,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   olives: {
     name: "Oliwki",
     type: "frt",
+    isVeg: true,
     subType: "oli",
     color: "#556B2F",
     kcalPer100g: 115,
@@ -461,6 +498,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   avocado: {
     name: "Awokado",
     type: "frt",
+    isVeg: true,
     subType: "avc",
     color: "#7CB342",
     kcalPer100g: 160,
@@ -475,6 +513,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   raisins: {
     name: "Rodzynki",
     type: "frt",
+    isVeg: true,
     subType: "alm",
     color: "#755562",
     kcalPer100g: 314,

@@ -12,6 +12,7 @@ type IngId =
   | "greek_yogurt"
   | "strawberry_yogurt"
   | "vanilla_skyr"
+  | "strawberry_skyr"
   | "drinkable_skyr_strawberry_and_kiwi"
   | "kefir"
   | "cream_12"
@@ -51,6 +52,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 60,
     unitWeights: {
       ml: 1,
+      lzi: 5,
+      lz: 15,
       szk: 250,
     },
     nutrientsPer100g: [3.2, 4.7, 3.2],
@@ -119,12 +122,14 @@ export const iDIR: Record<IngId, IngredientItem> = {
     name: "Jogurt naturalny",
     type: "dir",
     color: "#F5F5F5",
-    kcalPer100g: 61,
+    kcalPer100g: 67,
     unitWeights: {
       ml: 1,
       opak: 180,
     },
-    nutrientsPer100g: [3.5, 4.7, 10],
+    nutrientsPer100g: [3.1, 4, 4.8],
+    price: 12,
+    verified: true,
   },
 
   greek_yogurt: {
@@ -151,6 +156,19 @@ export const iDIR: Record<IngId, IngredientItem> = {
   },
 
   vanilla_skyr: {
+    name: "Skyr truskawkowy",
+    type: "dir",
+    color: "#F8BBD0",
+    kcalPer100g: 78,
+    unitWeights: {
+      szt: 150,
+    },
+    nutrientsPer100g: [0, 11, 9.6],
+    price: 24.6,
+    verified: true,
+  },
+
+  strawberry_skyr: {
     name: "Skyr waniliowy",
     type: "dir",
     color: "#F0F4C3",
@@ -158,8 +176,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
-    nutrientsPer100g: [0, 11, 9.6],
-    price: 22.6,
+    nutrientsPer100g: [0, 10, 9.6],
+    price: 24.6,
     verified: true,
   },
 
@@ -369,7 +387,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     color: "#FFFDFC",
     kcalPer100g: 264,
     unitWeights: {
-      g: 1,
       kst: 200,
     },
     nutrientsPer100g: [21, 4, 14],
@@ -516,9 +533,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     subType: "che",
     color: "#E0E0E0",
     kcalPer100g: 144,
-    unitWeights: {
-      g: 180,
-    },
     nutrientsPer100g: [8, 2, 15],
   },
 };

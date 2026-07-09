@@ -4,6 +4,7 @@ type IngId =
   //// LIQUIDS ////
   | "water"
   | "warm_water"
+  | "vinegar"
   | "spirit"
   | "vodka"
   | "dry_red_wine"
@@ -54,6 +55,14 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 0, 0],
     price: 0.01,
     verified: true,
+  },
+
+  vinegar: {
+    name: "Ocet",
+    type: "liq",
+    color: "#BBDEFB",
+    kcalPer100g: 20,
+    nutrientsPer100g: [0, 0.5, 0],
   },
 
   spirit: {
@@ -148,6 +157,8 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 53,
     unitWeights: {
       ml: 1,
+      lzi: 5,
+      lz: 15,
     },
     nutrientsPer100g: [0.6, 4.9, 8],
   },

@@ -29,6 +29,8 @@ export const iFAT: Record<IngId, IngredientItem> = {
       szk: 220,
     },
     nutrientsPer100g: [100, 0, 0],
+    price: 6,
+    verified: true,
   },
 
   rapeseed_oil: {
@@ -38,9 +40,13 @@ export const iFAT: Record<IngId, IngredientItem> = {
     kcalPer100g: 884,
     unitWeights: {
       lz: 10,
+      lzi: 4,
+      ml: 0.9,
       szk: 220,
     },
     nutrientsPer100g: [100, 0, 0],
+    price: 6,
+    verified: true,
   },
 
   sunflower_oil: {
@@ -50,6 +56,8 @@ export const iFAT: Record<IngId, IngredientItem> = {
     kcalPer100g: 884,
     unitWeights: {
       lz: 10,
+      lzi: 4,
+      ml: 0.9,
       szk: 220,
     },
     nutrientsPer100g: [100, 0, 0],
@@ -93,7 +101,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
       lz: 14,
     },
     nutrientsPer100g: [82, 0.7, 0.7],
-    verified:true
+    verified: true,
   },
 
   clarified_butter: {

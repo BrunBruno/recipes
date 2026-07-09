@@ -76,6 +76,10 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     color: "#F5F5A1",
     kcalPer100g: 348,
+    unitWeights: {
+      lzi: 4,
+      lz: 12,
+    },
     nutrientsPer100g: [0.3, 86.0, 0.1],
   },
 
@@ -240,6 +244,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [2.1, 74, 13],
+    price: 6.8,
     verified: true,
   },
 
@@ -393,10 +398,10 @@ export const iGRN: Record<IngId, IngredientItem> = {
     color: "#D9A066",
     kcalPer100g: 270,
     unitWeights: {
-      szt: 75,
-      opak: 375,
+      szt: 62,
     },
     nutrientsPer100g: [3.5, 52, 8],
+    price: 12.8,
   },
 
   rye_bread: {
@@ -443,11 +448,13 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     subType: "bun",
     color: "#F3D7A3",
-    kcalPer100g: 300,
+    kcalPer100g: 312,
     unitWeights: {
       szt: 60,
     },
-    nutrientsPer100g: [6.7, 49, 8.8],
+    nutrientsPer100g: [6.9, 52, 9],
+    price: 13,
+    verified: true,
   },
 
   tortilla_mini: {
@@ -508,11 +515,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     subType: "bun",
     color: "#E8B97A",
-    kcalPer100g: 282,
+    kcalPer100g: 280,
     unitWeights: {
-      szt: 80,
+      szt: 57,
+      opak: 228,
     },
-    nutrientsPer100g: [9.2, 49, 4.8],
+    nutrientsPer100g: [4.8, 49, 9.2],
+    price: 22.8,
+    verified: true,
   },
 
   hotdog_buns: {

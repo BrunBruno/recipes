@@ -24,6 +24,8 @@ import { iHRB } from "../../ingredients/ingHerb";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iNUT } from "../../ingredients/ingNut";
+import IngredientCard from "../ingredeint-card/IngredientCard";
+import UnitIcon from "../../assets/unitIcon";
 
 type IngredientsProps = {};
 
@@ -69,6 +71,8 @@ function Ingredients({}: IngredientsProps) {
     useState<Record<string, boolean>>(initialOpenTypes);
   const [columns, setColumns] = useState(getColumnCount());
   const [search, setSearch] = useState("");
+  const [selectedIngredient, setSelectedIngredient] =
+    useState<IngredientItem | null>(null);
 
   useEffect(() => {
     const handleResize = () => setColumns(getColumnCount());
@@ -206,12 +210,21 @@ function Ingredients({}: IngredientsProps) {
                       if (!ingredientUsage[item.name] && !displayUnused) return;
 
                       return (
-                        <li key={id} className="ingredient-card">
+                        <li
+                          key={id}
+                          className="ingredient-card"
+                          onClick={() => setSelectedIngredient(item)}
+                        >
                           <div className="ing-card-header">
                             <span className="ingredient-name">{item.name}</span>
-                            {item.verified && (
-                              <UtilsIcon name="check" color="#fff" />
-                            )}
+                            <div className="header-icons">
+                              {item.isVeg && (
+                                <UnitIcon type="lst" color="#fff" />
+                              )}
+                              {item.verified && (
+                                <UtilsIcon name="check" color="#fff" />
+                              )}
+                            </div>
                           </div>
 
                           <div className="ingredient-card-content">
@@ -303,6 +316,15 @@ function Ingredients({}: IngredientsProps) {
           </section>
         );
       })}
+
+      {selectedIngredient && (
+        <div className="ing-card-backdrop">
+          <IngredientCard
+            ingredient={selectedIngredient}
+            onClose={() => setSelectedIngredient(null)}
+          />
+        </div>
+      )}
     </div>
   );
 }

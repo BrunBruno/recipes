@@ -10,7 +10,12 @@ import MealPanelIcon from "../../assets/mealPanelIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { allIngredients, DAILY_NUTRIENTS, ingredientLookup } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
-import { DUMMY_RECORDS, STORAGE_KEY, type DayRecord } from "./user-page-data";
+import {
+  DAY_INGREDIENTS_KEY,
+  DUMMY_RECORDS,
+  STORAGE_KEY,
+  type DayRecord,
+} from "./user-page-data";
 import { AnimatePresence, motion } from "framer-motion";
 import MacroIcon from "../../assets/macroIcon";
 
@@ -194,6 +199,8 @@ export default function UserPage({
     new Promise((resolve) => setTimeout(resolve, ms));
 
   const clearDay = async () => {
+    localStorage.removeItem(DAY_INGREDIENTS_KEY);
+
     const delay = 110;
 
     const meals: DayMealType[] = ["breakfast", "lunch", "dinner"];
@@ -471,6 +478,14 @@ export default function UserPage({
           </label>
         </div>
 
+        <button
+          className="save-btn"
+          onClick={() => {
+            clearDay();
+          }}
+        >
+          Wyczyść dzień
+        </button>
         <button
           className="save-btn"
           onClick={() => {

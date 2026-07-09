@@ -6,6 +6,7 @@ import Ingredients from "./components/ingredients/Ingredients";
 import Statistics from "./components/statistics/Statistics";
 import type { DayIngredients } from "./types";
 import {
+  DAY_INGREDIENTS_KEY,
   STORAGE_KEY,
   type DayRecord,
 } from "./components/user-page/user-page-data";
@@ -14,11 +15,22 @@ import HistoryPage from "./components/history-page/HistoryPage";
 type Page = "user" | "recipes" | "ingredients" | "history" | "stats";
 
 function App() {
-  const [dayIngredients, setDayIngredients] = useState<DayIngredients>({
-    breakfast: [],
-    lunch: [],
-    dinner: [],
-  });
+  const loadDayIngredients = (): DayIngredients => {
+    const raw = localStorage.getItem(DAY_INGREDIENTS_KEY);
+
+    if (!raw) {
+      return {
+        breakfast: [],
+        lunch: [],
+        dinner: [],
+      };
+    }
+
+    return JSON.parse(raw);
+  };
+
+  const [dayIngredients, setDayIngredients] =
+    useState<DayIngredients>(loadDayIngredients);
   const [page, setPage] = useState<Page>("recipes");
   const [history, setHistory] = useState<DayRecord[]>(() => loadDayRecords());
 
@@ -45,6 +57,10 @@ function App() {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : [];
   }
+
+  useEffect(() => {
+    localStorage.setItem(DAY_INGREDIENTS_KEY, JSON.stringify(dayIngredients));
+  }, [dayIngredients]);
 
   return (
     <main>

@@ -71,7 +71,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.5, 0, 23.1],
-    price: 22,
+    price: 25,
   },
 
   chicken_tenderloin: {
@@ -217,11 +217,13 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "pou",
     color: "#F76707",
-    kcalPer100g: 178,
+    kcalPer100g: 162,
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [8, 3, 24],
+    nutrientsPer100g: [6.5, 6.4, 19],
+    price: 37.5,
+    verified: true,
   },
 
   spicy_wings: {
