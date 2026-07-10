@@ -6,8 +6,6 @@ import type { Recipe } from "../../types";
 
 const babeczkiGotowe: Recipe = {
   name: "Babeczki Gotowe",
-  description:
-    "Szybkie i proste babeczki przygotowane z gotowej mieszanki do wypieku. Delikatne, puszyste i gotowe w niespełna pół godziny – idealne na deser lub słodką przekąskę.",
   type: "dessert",
   images: [
     "babeczki-gotowe.jpg",
@@ -16,7 +14,8 @@ const babeczkiGotowe: Recipe = {
   ],
   time: 25,
   portions: 6,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

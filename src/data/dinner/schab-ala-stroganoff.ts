@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const schabAlaStroganoff: Recipe = {
   name: "Schab a'la Stroganoff",
-  description:
-    "Kawałki schabu z pieczarkami i cebulą w kremowym sosie a'la stroganoff na bazie Fix Knorr.",
   type: "dinner",
   images: ["schab-ala-stroganoff.jpg", "schab-ala-stroganoff-2.jpg"],
   time: 25,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 2,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

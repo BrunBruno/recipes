@@ -10,8 +10,6 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
-  description:
-    "Delikatna karkówka duszona z musztardą i cebulą, podawana z ziemniakami i surówką colesław, idealna na sycący obiad.",
   type: "dinner",
   images: [
     "karkowka-duszona.jpg",
@@ -20,7 +18,8 @@ const karkowkaDuszona: Recipe = {
   ],
   time: 60,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

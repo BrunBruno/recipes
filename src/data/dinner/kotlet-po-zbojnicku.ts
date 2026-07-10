@@ -11,13 +11,12 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const kotletPoZbojnicku: Recipe = {
   name: "Kotlety po Zbójnicku",
-  description:
-    "Soczyste kotlety schabowe zapiekane z pieczarkami, cebulą i żółtym serem. Syte danie obiadowe o wyrazistym smaku.",
   type: "dinner",
   images: ["kotlet-po-zbojnicku.jpg", "kotlet-po-zbojnicku-2.jpg"],
   time: 90,
   portions: portions,
-  executionDifficulty: 4,
+  taste: 4,
+  difficulty: 4,
   ingredients: [
     {
       title: "",

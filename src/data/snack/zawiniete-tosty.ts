@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const zawinieteTosty: Recipe = {
   name: "Zawinięte Tosty",
-  description:
-    "Chrupiące roladki z tostów wypełnione serem i boczkiem, z delikatnym akcentem ketchupu i majonezu - szybka i smakowita przekąska.",
   type: "snack",
   images: ["zawiniete-tosty.jpg"],
   time: 25,
   portions: 2,
-  executionDifficulty: 2,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

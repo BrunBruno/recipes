@@ -203,7 +203,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     isVeg: true,
     subType: "pep",
-    color: "#66BB6A",
+    color: "#AA4400",
     kcalPer100g: 31,
     unitWeights: {
       szt: 25,
@@ -296,20 +296,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.3, 14.2, 1.5],
   },
 
-  celery_root: {
-    name: "Seler",
-    type: "veg",
-    isVeg: true,
-    subType: "bet",
-    color: "#DCE3C8",
-    kcalPer100g: 42,
-    unitWeights: {
-      szt: 200,
-    },
-    nutrientsPer100g: [0.3, 9.2, 1.5],
-    price: 4.8,
-  },
-
   ginger: {
     name: "Imbir",
     type: "veg",
@@ -323,6 +309,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.8, 17.8, 1.8],
     price: 19,
+  },
+
+  celery_root: {
+    name: "Seler",
+    type: "veg",
+    isVeg: true,
+    subType: "bet",
+    color: "#DCE3C8",
+    kcalPer100g: 42,
+    unitWeights: {
+      szt: 200,
+    },
+    nutrientsPer100g: [0.3, 9.2, 1.5],
+    price: 4.8,
   },
 
   radish: {

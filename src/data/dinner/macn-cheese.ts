@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const macAndCheeseFix: Recipe = {
   name: "Mac'n Cheese",
-  description:
-    "Kremowy mac'n cheese na bazie Fix Knorr z dodatkiem ciągnącego się sera cheddar - szybki i sycący obiad dla miłośników serowych smaków.",
   type: "dinner",
   images: ["macncheese.jpg"],
   time: 25,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 1,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

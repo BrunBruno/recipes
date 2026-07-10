@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
-  description:
-    "Aromatyczny sos do gołąbków na bazie masła, mąki i przecieru pomidorowego, doprawiony Maggi i przyprawami warzywnymi - idealny do polskich klasyków.",
   type: "other",
   images: [""],
   time: 15,
   portions: 2,
-  executionDifficulty: null,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

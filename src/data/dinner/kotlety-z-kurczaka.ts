@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
-  description:
-    "Delikatne kotleciki z piersi kurczaka obtoczone w jajku, mące i aromatycznych przyprawach, smażone na złoty kolor. Podawane z ziemniakami i buraczkami w occie.",
   type: "dinner",
   images: ["kotlety-z-kurczaka.jpg", "kotlety-z-kurczaka-2.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

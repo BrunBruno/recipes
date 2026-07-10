@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const salatkaJarzynowa: Recipe = {
   name: "Sałatka Jarzynowa",
-  description:
-    "Klasyczna sałatka jarzynowa z gotowanych warzyw, jajek i groszku, połączona kremowym majonezem - idealna na święta lub jako dodatek do obiadu.",
   type: "salad",
   images: ["salatka-jarzynowa.jpg"],
   time: 40,
   portions: 8,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

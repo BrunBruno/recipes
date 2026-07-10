@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const serdelki: Recipe = {
   name: "Serdelki",
-  description:
-    "Prosta przekąska z gotowanych lub podgrzanych w mikrofalówce serdelków, podawana z kajzerkami posmarowanymi masłem i musztardą.",
   type: "breakfast",
   images: ["serdelki.jpg", "serdelki-2.jpg"],
   time: 10,
   portions: 2,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

@@ -250,6 +250,9 @@ export default function HistoryPage({ history }: HistoryPageProps) {
                   <span style={{ color: "#ff8787" }}>
                     <MacroIcon type="prot" /> {day.protein} g
                   </span>
+                  <span style={{ color: "#c0eb75" }}>
+                    <MacroIcon type="veg" /> {day.veg} g
+                  </span>
                 </div>
               </div>
             ))}

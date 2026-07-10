@@ -9,8 +9,6 @@ import { iSAU } from "../../ingredients/ingSauce";
 const portions = 4;
 const wrapWieprzowyJajecznica: Recipe = {
   name: "Wrap Wieprzowy z Jajecznicą",
-  description:
-    "Soczysta wieprzowina, jajecznica, ser cheddar, pomidor i sałata, podane w tortilli z sosem musztardowo-chrzanowym.",
   type: "snack",
   images: [
     "wrap-wieprzowina-z-jajecznica.jpg",
@@ -18,7 +16,8 @@ const wrapWieprzowyJajecznica: Recipe = {
   ],
   time: 15,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

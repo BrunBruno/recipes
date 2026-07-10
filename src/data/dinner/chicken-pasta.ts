@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const chickenPasta: Recipe = {
   name: "Chicken Pasta",
-  description:
-    "Makaron penne z kurczakiem w kremowym sosie z suszonymi pomidorami i bazylią.",
   type: "dinner",
   images: [""],
   time: 20,
   portions: 2,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

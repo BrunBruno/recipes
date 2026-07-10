@@ -11,13 +11,12 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const kotletPoGoralsku: Recipe = {
   name: "Kotlety po Góralsku",
-  description:
-    "Kotlety po Góralsku - schabowe panierowane z boczkiem i żółtym serem, podawane z ziemniakami i podsmażaną kapustą kiszoną, aromatyzowane tymiankiem i papryką.",
   type: "dinner",
   images: ["kotlet-po-goralsku.jpg", "kotlet-po-goralsku-2.jpg"],
   time: 70,
   portions: portions,
-  executionDifficulty: 4,
+  taste: 5,
+  difficulty: 4,
   ingredients: [
     {
       title: "",

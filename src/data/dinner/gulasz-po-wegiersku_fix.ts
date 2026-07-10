@@ -9,13 +9,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const gulaszPoWegierskuFix: Recipe = {
   name: "Gulasz po Węgiersku",
-  description:
-    "Klasyczny gulasz po węgiersku z wołowiną, podawany z kopytkami i buraczkami, idealny na sycący obiad.",
   type: "dinner",
   images: ["gulasz-po-wegiersku-fix.jpg"],
   time: 90,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

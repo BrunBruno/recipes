@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const chicker: Recipe = {
   name: "Chickery",
-  description:
-    "Szybkie kanapki z kurczakiem w chrupiącej panierce, podawane z dwoma wyrazistymi sosami - ostrym i miodowo-musztardowym.",
   type: "snack",
   images: ["chickery.jpg"],
   time: 25,
   portions: 2,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "Kanapki",

@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const cynamonki: Recipe = {
   name: "Cynamonki",
-  description:
-    "Miękkie i puszyste cynamonki z delikatnym cynamonowym nadzieniem i słodkim lukrem na wierzchu, idealne na deser lub śniadanie.",
   type: "dessert",
   images: ["cynamonki.jpg"],
   time: 150,
   portions: 12,
-  executionDifficulty: null,
+  taste: 3,
+  difficulty: null,
   ingredients: [
     {
       title: "Ciasto",

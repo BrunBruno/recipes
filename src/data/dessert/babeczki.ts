@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const babeczki: Recipe = {
   name: "Babeczki",
-  description:
-    "Proste i szybkie babeczki, które możesz udekorować owocami, orzechami lub czekoladą. Idealne na deser dla całej rodziny.",
   type: "dessert",
   images: [""],
   time: 30,
   portions: 12,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

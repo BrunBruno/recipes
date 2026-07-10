@@ -9,13 +9,12 @@ import type { Recipe } from "../../types";
 
 const biszkoptWaniliowy: Recipe = {
   name: "Biszkopt Waniliowy",
-  description:
-    "Delikatny i puszysty biszkopt waniliowy o lekkiej strukturze, idealny jako baza do tortów, ciast przekładanych i deserów.",
   type: "other",
   images: [""],
   time: 50,
   portions: 1,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

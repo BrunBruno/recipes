@@ -9,13 +9,12 @@ import type { Recipe } from "../../types";
 
 const gotowyBurger: Recipe = {
   name: "Burger Gotowiec",
-  description:
-    "Szybki burger z gotowych składników, który możesz przygotować na różne sposoby - z boczkiem i jajkiem lub w wersji z warzywami.",
   type: "snack",
   images: ["burger-gotowiec.jpg"],
   time: 30,
   portions: 2,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "Podstawowe",

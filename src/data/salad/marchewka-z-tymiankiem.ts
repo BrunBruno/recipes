@@ -6,13 +6,12 @@ import { iHRB } from "../../ingredients/ingHerb";
 
 const marchewkaZTymiankiem: Recipe = {
   name: "Marchewka z Tymiankiem",
-  description:
-    "Pieczona marchewka z oliwą i mieszanką przypraw: tymiankiem, curry i ziołami prowansalskimi. Idealny dodatek do obiadu lub jako samodzielna przekąska.",
   type: "salad",
   images: [""],
   time: 40,
   portions: 4,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

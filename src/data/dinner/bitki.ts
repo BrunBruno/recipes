@@ -13,13 +13,12 @@ import { fryingFat } from "../../utils";
 const portions = 4;
 const bitki: Recipe = {
   name: "Bitki",
-  description:
-    "Soczyste bitki wieprzowe duszone w aromatycznym sosie z przyprawami i cebulą, idealne na tradycyjny obiad z ziemniakami i buraczkami.",
   type: "dinner",
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

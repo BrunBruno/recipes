@@ -7,13 +7,12 @@ import { fryingFat } from "../../utils";
 const portions = 1;
 const paluszkiRybne: Recipe = {
   name: "Paluszki Rybne",
-  description:
-    "Chrupiące paluszki rybne smażone na niewielkiej ilości oleju, podawane z pieczonymi frytkami i burakami jako szybki obiad.",
   type: "dinner",
   images: ["paluszki-rybne.jpg", "paluszki-rybne-2.jpg"],
   time: 20,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

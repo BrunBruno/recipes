@@ -6,13 +6,12 @@ import { iSAU } from "../../ingredients/ingSauce";
 
 const parowki: Recipe = {
   name: "Parówki",
-  description:
-    "Prosta przekąska z podgrzanych parówek podawanych w pieczywie z ketchupem.",
   type: "breakfast",
   images: ["parowki.jpg", "parowki-2.jpg"],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

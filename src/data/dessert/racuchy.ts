@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const racuchy: Recipe = {
   name: "Racuchy",
-  description:
-    "Puszyste racuchy z jabłkami, smażone na maśle klarowanym, słodkie i aromatyczne, idealne na deser lub słodkie śniadanie.",
   type: "dessert",
   images: ["racuchy.jpg"],
   time: 25,
   portions: 2,
-  executionDifficulty: 2,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

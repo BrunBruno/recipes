@@ -9,8 +9,6 @@ import type { Recipe } from "../../types";
 
 const spaghettiCzterySery: Recipe = {
   name: "Spaghetti Cztery Sery",
-  description:
-    "Spaghetti w kremowym sosie cztery sery z dodatkiem brokułów. Szybki obiad na bazie sosu w proszku.",
   type: "dinner",
   images: [
     "spaghetti-cztery-sery.jpg",
@@ -19,7 +17,8 @@ const spaghettiCzterySery: Recipe = {
   ],
   time: 35,
   portions: 3,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

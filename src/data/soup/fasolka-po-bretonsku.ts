@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka po Bretońsku",
-  description:
-    "Tradycyjna fasolka po bretońsku na wywarze mięsnym z kiełbasą, boczkiem i majerankiem. Sycące danie obiadowe.",
   type: "soup",
   images: ["fasolka-po-bretonsku.jpg"],
   time: 120,
   portions: 5,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: null,
   ingredients: [
     {
       title: "",

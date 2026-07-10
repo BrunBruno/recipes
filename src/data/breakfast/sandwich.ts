@@ -7,8 +7,6 @@ import type { Recipe } from "../../types";
 
 const sandwich: Recipe = {
   name: "Sandwiche",
-  description:
-    "Szybkie i chrupiące sandwiche z szynką, żółtym serem i ogórkiem, podawane z ketchupem i sosem czosnkowym - idealna przekąska na każdą porę dnia.",
   type: "breakfast",
   images: [
     "sandwiche.jpg",
@@ -19,7 +17,8 @@ const sandwich: Recipe = {
   ],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

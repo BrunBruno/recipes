@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const laneCiasto: Recipe = {
   name: "Rosół z Lanym Ciastem",
-  description:
-    "Rosół z delikatnym lanym ciastem, podany z marchewką, mięsem i koperkiem, doprawiony pieprzem oraz maggi.",
   type: "soup",
   images: ["lane-ciasto.jpg"],
   time: 20,
   portions: 2,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

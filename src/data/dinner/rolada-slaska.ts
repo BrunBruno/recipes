@@ -14,13 +14,12 @@ import { fryingFat } from "../../utils";
 const portions = 4;
 const roladaSlaska: Recipe = {
   name: "Rolada Śląska",
-  description:
-    "Soczysta rolada wieprzowa z boczkiem, kiełbasą i ogórkiem konserwowym, duszona w aromatycznym sosie śmietanowo-musztardowym, podawana z kluskami śląskimi i modrą kapustą.",
   type: "dinner",
   images: ["rolada-wieprzowa.jpg"],
   time: 90,
   portions: portions,
-  executionDifficulty: 5,
+  taste: 5,
+  difficulty: 5,
   ingredients: [
     {
       title: "",

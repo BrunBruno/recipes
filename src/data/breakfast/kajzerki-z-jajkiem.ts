@@ -8,13 +8,12 @@ import { iSAU } from "../../ingredients/ingSauce";
 
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
-  description:
-    "Kajzerki z jajkiem na twardo, szynką, serem żółtym, sałatą i majonezem, szybka i prosta kanapka.",
   type: "breakfast",
   images: ["kajzerki-z-jajkiem.jpg"],
   time: 20,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

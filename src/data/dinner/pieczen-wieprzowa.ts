@@ -10,8 +10,6 @@ import { fryingFat } from "../../utils";
 const portions = 4;
 const pieczenWieprzowa: Recipe = {
   name: "Pieczeń Wieprzowa",
-  description:
-    "Soczysta pieczeń wieprzowa pieczona w rękawie, doprawiona musztardą i przyprawami, podawana z kaszą gryczaną oraz ogórkiem konserwowym.",
   type: "dinner",
   images: [
     "pieczen-wieprzowa.jpg",
@@ -20,7 +18,8 @@ const pieczenWieprzowa: Recipe = {
   ],
   time: 100,
   portions: portions,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

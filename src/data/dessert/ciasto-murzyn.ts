@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const ciastoMurzyn: Recipe = {
   name: "Ciasto Murzyn",
-  description:
-    "Proste i wilgotne ciasto czekoladowe o intensywnym smaku kakao, polane słodką polewą, idealne na szybki deser.",
   type: "dessert",
   images: ["ciasto-murzyn.jpg"],
   time: 45,
   portions: 10,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

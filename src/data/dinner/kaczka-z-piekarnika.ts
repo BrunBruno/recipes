@@ -2,12 +2,12 @@ import type { Recipe } from "../../types";
 
 const pieczonaPaczka: Recipe = {
   name: "Pieczona Kaczka",
-  description: "",
   type: "dinner",
   images: [""],
   time: 0,
   portions: 0,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [],
   steps: [],
 };

@@ -12,13 +12,12 @@ import type { Recipe } from "../../types";
 
 const kebab: Recipe = {
   name: "Kebab w Picie",
-  description:
-    "Domowy kebab w picie z mieloną wołowiną, świeżymi warzywami i aromatycznym sosem jogurtowo-majonezowym - idealny na sycący posiłek dla całej rodziny.",
   type: "snack",
   images: ["kebab-w-picie.jpg"],
   time: 90,
   portions: 4,
-  executionDifficulty: 5,
+  taste: 3,
+  difficulty: 5,
   ingredients: [
     {
       title: "Mięso",

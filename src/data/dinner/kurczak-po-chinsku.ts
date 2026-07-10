@@ -10,8 +10,6 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
-  description:
-    "Szybki kurczak po chińsku z warzywami w aromatycznym sosie, podawany z ryżem. Idealny na lekki i kolorowy obiad.",
   type: "dinner",
   images: [
     "kurczak-po-chinsku.jpg",
@@ -20,7 +18,8 @@ const kurczakPoChinsku: Recipe = {
   ],
   time: 30,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

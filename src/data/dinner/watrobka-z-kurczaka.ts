@@ -8,13 +8,12 @@ import { fryingFat } from "../../utils";
 
 const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
-  description:
-    "Szybka i aromatyczna wątróbka z kurczaka podsmażana z cebulą na maśle klarowanym - idealny prosty obiad bogaty w białko.",
   type: "dinner",
   images: ["watrobka-z-kurczaka.jpg"],
   time: 20,
   portions: 2,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

@@ -10,8 +10,6 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
   name: "Kotlety w Płatkach",
-  description:
-    "Kotlety schabowe w płatkach kukurydzianych - panierowane w jajku i chrupiących płatkach, smażone na złoty kolor, podawane z frytkami i buraczkami w occie.",
   type: "dinner",
   images: [
     "kotlet-schabowy-w-platkach.jpg",
@@ -19,7 +17,8 @@ const kotletySchaboweWPlatkach: Recipe = {
   ],
   time: 50,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const kottuRoti: Recipe = {
   name: "Kottu Roti",
-  description:
-    "Klasyczne lankijskie danie uliczne z porwanymi plackami roti, smażonymi z warzywami, jajkami oraz aromatycznymi przyprawami curry.",
   type: "dinner",
   images: ["kottu-roti.jpg"],
   time: 70,
   portions: 3,
-  executionDifficulty: 4,
+  taste: 4,
+  difficulty: 4,
   ingredients: [
     {
       title: "Placki Roti",

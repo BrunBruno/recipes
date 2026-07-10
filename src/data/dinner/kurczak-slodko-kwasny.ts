@@ -9,8 +9,6 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak w Sosie Słodko-Kwaśnym",
-  description:
-    "Kurczak w aromatycznym sosie słodko-kwaśnym, szybki do przygotowania i podawany z ryżem. Idealny na lekki obiad dla 3 osób.",
   type: "dinner",
   images: [
     "kurczak-slodko-kwasny.jpg",
@@ -19,7 +17,8 @@ const kurczakSlodkoKwasny: Recipe = {
   ],
   time: 30,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

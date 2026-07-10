@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const meksykanska: Recipe = {
   name: "Meksykańska",
-  description:
-    "Gęsta i sycąca zupa meksykańska z mieloną wołowiną, fasolą, kukurydzą i pomidorami, doprawiona aromatycznymi przyprawami.",
   type: "soup",
   images: [""],
   time: 60,
   portions: 6,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

@@ -12,13 +12,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
-  description:
-    "Pieczony kurczak z plasterkami pomidora, cebulą i ziołowym sosem majonezowo-śmietanowym, podawany z puree ziemniaczanym i burakami. Idealny obiad dla 3 osób.",
   type: "dinner",
   images: ["kurczak-z-pomidorem.jpg"],
   time: 70,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

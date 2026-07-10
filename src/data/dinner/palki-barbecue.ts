@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 const portions = 3;
 const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
-  description:
-    "Soczyste pałki z kurczaka pieczone w aromatycznych przyprawach i sosie barbecue. Podawane z frytkami i ogórkiem kiszonym jako klasyczne danie obiadowe.",
   type: "dinner",
   images: ["palki-barbecue.jpg"],
   time: 60,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

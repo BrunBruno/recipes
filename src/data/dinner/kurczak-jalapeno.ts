@@ -8,8 +8,6 @@ import { fryingFat } from "../../utils";
 const portions = 2;
 const kurczakJalapeno: Recipe = {
   name: "Kurczak Jalapeno",
-  description:
-    "Pikantne kawałki kurczaka w chrupiącej panierce jalapeno, pieczone w piekarniku lub airfryerze. Prosty i szybki obiad.",
   type: "dinner",
   images: [
     "kurczak-jalapeno.jpg",
@@ -18,7 +16,8 @@ const kurczakJalapeno: Recipe = {
   ],
   time: 25,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

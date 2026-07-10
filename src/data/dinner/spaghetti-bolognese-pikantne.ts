@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const spaghettiBolognesePikantne: Recipe = {
   name: "Spaghetti Bolognese Pikantne",
-  description:
-    "Pikantne spaghetti bolognese z mięsem mielonym, cebulą i selerem w aromatycznym sosie.",
   type: "dinner",
   images: [""],
   time: 25,
   portions: 3,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

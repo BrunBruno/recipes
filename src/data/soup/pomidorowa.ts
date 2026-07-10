@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const pomidorowa: Recipe = {
   name: "Pomidorowa",
-  description:
-    "Delikatna i aromatyczna zupa pomidorowa na rosole, wzbogacona masłem i śmietaną, idealna na szybki obiad dla całej rodziny.",
   type: "soup",
   images: ["pomidorowa.jpg", "pomidorowa-2.jpg"],
   time: 15,
   portions: 4,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

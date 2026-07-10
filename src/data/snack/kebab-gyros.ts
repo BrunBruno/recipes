@@ -11,20 +11,19 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const kebabGyros: Recipe = {
   name: "Kebab Gyros",
-  description:
-    "Domowy kebab gyros z kurczakiem, świeżymi warzywami i sosem czosnkowym w chrupiącej tortilli - szybka przekąska dla całej rodziny.",
   type: "snack",
   images: [""],
   time: 30,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "Podstawowe",
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
-        { ing: iGRN.tortilla, amount: 5, unit: "szt" },
+        { ing: iGRN.tortilla, amount: 4, unit: "szt" },
         { ing: iSPC.gyros_spice, amount: 2, unit: "lz" },
       ],
     },

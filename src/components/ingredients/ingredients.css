@@ -51,8 +51,6 @@
 .ingredient-stats {
   display: grid;
   grid-template-columns: repeat(5, 8rem);
-  /* display: flex;
-  justify-content: center; */
   gap: 2rem;
   padding: 1rem 2rem;
 }
@@ -295,6 +293,10 @@
 @media (max-width: 720px) {
   .ingredient-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .ingredient-stats {
+    display: none;
   }
 }
 

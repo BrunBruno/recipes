@@ -6,13 +6,12 @@ import { iJAR } from "../../ingredients/ingJar";
 
 const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",
-  description:
-    "Gotowe nuggetsy z piekarnika podane z frytkami oraz mieszanką warzyw na patelnię.",
   type: "snack",
   images: ["nuggetsy-gotowe.jpg", "nuggetsy-gotowe-2.jpg"],
   time: 30,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

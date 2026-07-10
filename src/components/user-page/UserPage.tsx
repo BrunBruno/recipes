@@ -15,16 +15,10 @@ import {
   DUMMY_RECORDS,
   STORAGE_KEY,
   type DayRecord,
+  type Macros,
 } from "./user-page-data";
 import { AnimatePresence, motion } from "framer-motion";
 import MacroIcon from "../../assets/macroIcon";
-
-type Macros = {
-  kcal: number;
-  protein: number;
-  carbs: number;
-  fat: number;
-};
 
 type UserPageProps = {
   dayIngredients: DayIngredients;
@@ -60,6 +54,7 @@ export default function UserPage({
     let protein = 0;
     let carbs = 0;
     let fat = 0;
+    let veg = 0;
 
     const allIngredients = [...day.breakfast, ...day.lunch, ...day.dinner];
 
@@ -74,6 +69,7 @@ export default function UserPage({
       fat += ing.nutrientsPer100g[0] * factor;
       carbs += ing.nutrientsPer100g[1] * factor;
       protein += ing.nutrientsPer100g[2] * factor;
+      veg += ing.isVeg ? grams : 0;
     });
 
     return {
@@ -81,6 +77,7 @@ export default function UserPage({
       protein,
       carbs,
       fat,
+      veg,
     };
   }
 
@@ -111,6 +108,7 @@ export default function UserPage({
       protein: Math.round(macros.protein),
       fat: Math.round(macros.fat),
       carbs: Math.round(macros.carbs),
+      veg: Math.round(macros.veg),
     };
 
     const existing = loadDayRecords();
@@ -354,42 +352,42 @@ export default function UserPage({
         </div>
 
         <div className="meal-card">
-          <div className="meal-card-header">
+          <div
+            className="meal-card-header"
+            onClick={() => {
+              setSelectedMealType("lunch");
+              setIsModalOpen(true);
+            }}
+          >
             <h3>
               <MealPanelIcon type="lunch" />
               <span className="meal-name">Obiad</span>
             </h3>
-            <button
-              className="add-ingredient"
-              onClick={() => {
-                setSelectedMealType("lunch");
-                setIsModalOpen(true);
-              }}
-            >
+            <div className="add-ingredient">
               <UtilsIcon name="plus" color="#ffffff" />
               <span>Dodaj</span>
-            </button>
+            </div>
           </div>
 
           {renderIngGroup(dayIngredients.lunch, "lunch")}
         </div>
 
-        <div className="meal-card">
+        <div
+          className="meal-card"
+          onClick={() => {
+            setSelectedMealType("dinner");
+            setIsModalOpen(true);
+          }}
+        >
           <div className="meal-card-header">
             <h3>
               <MealPanelIcon type="dinner" />
               <span className="meal-name">Kolacja</span>
             </h3>
-            <button
-              className="add-ingredient"
-              onClick={() => {
-                setSelectedMealType("dinner");
-                setIsModalOpen(true);
-              }}
-            >
+            <div className="add-ingredient">
               <UtilsIcon name="plus" color="#ffffff" />
               <span>Dodaj</span>
-            </button>
+            </div>
           </div>
 
           {renderIngGroup(dayIngredients.dinner, "dinner")}
@@ -462,6 +460,23 @@ export default function UserPage({
               style={{
                 width: `${(100 * (macros ? macros.protein : 0)) / DAILY_NUTRIENTS[3]}%`,
                 backgroundColor: "#f03e3e",
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="macro-row">
+          <span>Owoce i Warzywa</span>
+          <strong>
+            {macros ? Math.round(macros.veg) : 0} / {DAILY_NUTRIENTS[4]} g
+          </strong>
+        </div>
+        <div className="macro-row">
+          <div className="macro-indicator">
+            <p
+              style={{
+                width: `${(100 * (macros ? macros.veg : 0)) / DAILY_NUTRIENTS[4]}%`,
+                backgroundColor: "#94d82d",
               }}
             />
           </div>

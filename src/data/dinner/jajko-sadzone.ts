@@ -8,13 +8,12 @@ import { fryingFat } from "../../utils";
 const portions = 1;
 const jajkoSadzone: Recipe = {
   name: "Jajka Sadzone",
-  description:
-    "Proste jajka sadzone smażone na maśle klarowanym, podawane z ziemniakami i groszkiem konserwowym, doprawione solą, pieprzem i koperkiem.",
   type: "dinner",
   images: ["jajko-sadzone.jpg"],
   time: 10,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

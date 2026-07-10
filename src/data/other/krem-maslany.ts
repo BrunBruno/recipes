@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const kremMaslany: Recipe = {
   name: "Krem Maślany",
-  description:
-    "Puszysty krem maślany przygotowany z miękkiego masła i mleka skondensowanego, aromatyzowany wanilią i opcjonalnie barwiony. Idealny do tortów i dekoracji ciast.",
   type: "other",
   images: [""],
   time: 30,
   portions: 1,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

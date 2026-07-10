@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 
 const lazanki: Recipe = {
   name: "Łazanki",
-  description:
-    "Tradycyjne polskie łazanki z kiszoną kapustą, kiełbasą, boczkiem, pieczarkami i cebulą, podawane z makaronem. Idealny obiad dla 5 osób.",
   type: "dinner",
   images: ["lazanki.jpg"],
   time: 50,
   portions: 5,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

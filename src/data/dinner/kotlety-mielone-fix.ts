@@ -10,8 +10,6 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kotletyMieloneFix: Recipe = {
   name: "Kotlety Mielone",
-  description:
-    "Soczyste kotlety mielone przygotowane z pomocą Knorr Fix Soczyste Kotlety Mielone - prosty i klasyczny obiad dla całej rodziny.",
   type: "dinner",
   images: [
     "kotlety-mielone-fix.jpg",
@@ -19,8 +17,9 @@ const kotletyMieloneFix: Recipe = {
     "kotlety-mielone-fix-3.jpg",
   ],
   time: 35,
-  portions: portions,
-  executionDifficulty: 1,
+  portions: 4,
+  taste: null,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

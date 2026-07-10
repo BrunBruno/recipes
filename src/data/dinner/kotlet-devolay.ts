@@ -11,8 +11,6 @@ import { fryingFat } from "../../utils";
 const portions = 4;
 const kotletDevolay: Recipe = {
   name: "Kotlet Devolay",
-  description:
-    "Klasyczny kotlet Devolay z kurczaka z masłem czosnkowo-ziołowym w środku, panierowany i delikatnie smażony, podawany z puree ziemniaczanym i warzywami na parze.",
   type: "dinner",
   images: [
     "kotlet-devolay.jpg",
@@ -21,7 +19,8 @@ const kotletDevolay: Recipe = {
   ],
   time: 60,
   portions: portions,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: null,
   ingredients: [
     {
       title: "Mięso",

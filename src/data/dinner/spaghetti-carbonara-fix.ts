@@ -9,13 +9,12 @@ const portions = 2;
 
 const spaghettiCarbonaraFix: Recipe = {
   name: "Spaghetti Carbonara",
-  description:
-    "Szybka carbonara z użyciem fixa Knorr, boczkiem i śmietaną - prosty i sycący obiad.",
   type: "dinner",
   images: ["spaghetti-carbonara-fix.jpg"],
   time: 20,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 2,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

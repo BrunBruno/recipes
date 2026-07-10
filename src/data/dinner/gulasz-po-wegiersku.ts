@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const gulaszWegrerski: Recipe = {
   name: "Gulasz po Węgiersku",
-  description:
-    "Aromatyczny gulasz wieprzowy z papryką i cebulą, duszony w intensywnym sosie przyprawowym.",
   type: "dinner",
   images: ["gulasz-po-wegiersku.jpg", "gulasz-po-wegiersku-2.jpg"],
   time: 50,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 5,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

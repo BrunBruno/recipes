@@ -7,8 +7,6 @@ import type { Recipe } from "../../types";
 
 const jajecznica: Recipe = {
   name: "Jajecznica",
-  description:
-    "Prosta i szybka jajecznica na maśle klarowanym z możliwością dodania kiełbasy, cebuli, pomidora i szczypiorku - gotowa w 15 minut dla 1 osoby.",
   type: "breakfast",
   images: [
     "jajecznica.jpg",
@@ -20,7 +18,8 @@ const jajecznica: Recipe = {
   ],
   time: 15,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

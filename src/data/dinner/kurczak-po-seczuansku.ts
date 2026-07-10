@@ -9,13 +9,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
-  description:
-    "Pikantny kurczak w stylu seczuańskim z gotowym sosem Ben's Original Chili Fusion. Szybki i aromatyczny obiad podawany z ryżem.",
   type: "dinner",
   images: ["kurczak-po-seczuansku.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

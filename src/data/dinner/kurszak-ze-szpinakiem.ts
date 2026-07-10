@@ -11,13 +11,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kurczakZeSzpinakiem: Recipe = {
   name: "Kurczak ze Szpinakiem",
-  description:
-    "Soczysty kurczak nadziewany szpinakiem i serem, zapiekany w piekarniku i podawany z puree ziemniaczanym i burakami. Idealny obiad dla 3 osób.",
   type: "dinner",
   images: ["kurczak-ze-szpinakiem.jpg", "kurczak-ze-szpinakiem-2.jpg"],
   time: 40,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

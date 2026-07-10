@@ -11,13 +11,12 @@ import type { Recipe } from "../../types";
 const portions = 1;
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
-  description:
-    "Klasyczne jajka w sosie koperkowym - jajka na twardo w kremowym sosie z masła, mąki, śmietany i koperku, podawane z ziemniakami i ogórkiem kiszonym.",
   type: "dinner",
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

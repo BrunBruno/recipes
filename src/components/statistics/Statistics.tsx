@@ -18,6 +18,7 @@ import {
   countRecipeWeight,
   countRecipeWeightPerPortion,
   countRecipePreparationTime,
+  allIngredients,
 } from "../../utils";
 import {
   ArcElement,
@@ -73,6 +74,9 @@ function Statistics({}: StatisticsProps) {
     weights: useRef<HTMLCanvasElement | null>(null),
     weightsPerPortion: useRef<HTMLCanvasElement | null>(null),
     preparationTime: useRef<HTMLCanvasElement | null>(null),
+    priceChartRef: useRef<HTMLCanvasElement | null>(null),
+    kcalDistributionRef: useRef<HTMLCanvasElement | null>(null),
+    unitChartRef: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
     calories: useRef<Chart | null>(null),
@@ -89,6 +93,9 @@ function Statistics({}: StatisticsProps) {
     weights: useRef<Chart | null>(null),
     weightsPerPortion: useRef<Chart | null>(null),
     preparationTime: useRef<Chart | null>(null),
+    priceChartRef: useRef<Chart | null>(null),
+    kcalDistributionRef: useRef<Chart | null>(null),
+    unitChartRef: useRef<Chart | null>(null),
   };
 
   const createChart = (
@@ -152,14 +159,14 @@ function Statistics({}: StatisticsProps) {
             },
             grid: {
               display: true,
-              color: "#222",
+              color: "#333",
               lineWidth: 1,
             },
           },
           y: {
             grid: {
               display: true,
-              color: "#222",
+              color: "#333",
               lineWidth: 1,
             },
           },
@@ -383,6 +390,87 @@ function Statistics({}: StatisticsProps) {
       allPrepTimeColors,
       "min",
     );
+
+    //// CHART ////
+    const priceRanges = Array(11).fill(0);
+    Object.values(allIngredients).forEach((ing) => {
+      if (ing.price == null) return;
+      const bucket = Math.min(Math.floor(ing.price / 10), 10);
+      priceRanges[bucket]++;
+    });
+    const ingredientsPriceColor = priceRanges.map((_, i) =>
+      interpolateKcalColor(i, 0, 11, "#2ecc71", "#ff6b6b"),
+    );
+
+    createChart(
+      canvasRefs.priceChartRef.current,
+      chartRefs.priceChartRef,
+      [
+        "0-10",
+        "10-20",
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80",
+        "80-90",
+        "90-100",
+        "100+",
+      ],
+      priceRanges,
+      ingredientsPriceColor,
+      "składników",
+    );
+
+    //// CHART ////
+    const kcalRanges = Array(9).fill(0);
+    Object.values(allIngredients).forEach((ing) => {
+      const bucket = Math.min(Math.floor(ing.kcalPer100g / 100), 8);
+      kcalRanges[bucket]++;
+    });
+    const ingredientsKcalDensColor = kcalRanges.map((_, i) =>
+      interpolateKcalColor(i, 0, 8, "#2ecc71", "#ff6b6b"),
+    );
+    createChart(
+      canvasRefs.kcalDistributionRef.current,
+      chartRefs.kcalDistributionRef,
+      [
+        "0-100",
+        "100-200",
+        "200-300",
+        "300-400",
+        "400-500",
+        "500-600",
+        "600-700",
+        "700-800",
+        "800+",
+      ],
+      kcalRanges,
+      ingredientsKcalDensColor,
+      "składników",
+    );
+
+    //// CHART ////
+    const unitUsage: Record<string, number> = {};
+    Object.values(allIngredients).forEach((ing) => {
+      if (!ing.unitWeights) return;
+
+      Object.keys(ing.unitWeights).forEach((unit) => {
+        unitUsage[unit] = (unitUsage[unit] ?? 0) + 1;
+      });
+    });
+
+    const labels = Object.keys(unitUsage).sort();
+    const data = labels.map((l) => unitUsage[l]);
+    createChart(
+      canvasRefs.unitChartRef.current,
+      chartRefs.unitChartRef,
+      labels,
+      data,
+      ["#888888"],
+      "składników",
+    );
   };
 
   useEffect(() => {
@@ -399,6 +487,48 @@ function Statistics({}: StatisticsProps) {
         <h1 className="page-title-h1">
           <span className="h1-text">Statystki Przepisów</span>
         </h1>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Rodzaje przepisów</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.recipeTypes}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Rodzaje składników</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.ingredientTypes}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Najczęściej używane składniki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.ingredientUsage}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Składniki w przedziałach cenowych</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.priceChartRef} />
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Składniki w przedziałach kalorii</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.kcalDistributionRef} />
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Użycia jednostek</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.unitChartRef} />
+        </div>
       </div>
 
       <div className="statistics-element">
@@ -426,27 +556,6 @@ function Statistics({}: StatisticsProps) {
         <h2>Dziesięć najmniej kalorycznych przepisów na porcję</h2>
         <div className="chart-wrapper">
           <canvas ref={canvasRefs.bottomCalories}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Najczęściej używane składniki</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.ingredientUsage}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Rodzaje przepisów</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.recipeTypes}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Rodzaje składników</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.ingredientTypes}></canvas>
         </div>
       </div>
 

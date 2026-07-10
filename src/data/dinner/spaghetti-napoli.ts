@@ -10,13 +10,12 @@ import { iLIQ } from "../../ingredients/ingLiquid";
 const portions = 2;
 const spaghettiNapoli: Recipe = {
   name: "Spaghetti Napoli",
-  description:
-    "Proste spaghetti Napoli z sosem pomidorowym, serem Edam i przyprawą fix - szybki i tani obiad.",
   type: "dinner",
   images: ["spaghetti-napoli.jpg"],
   time: 20,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 2,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

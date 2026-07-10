@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const kapustaZasmazana: Recipe = {
   name: "Kapusta Zasmażana",
-  description:
-    "Tradycyjna kapusta zasmażana z kiszonej kapusty z marchewką, cebulą i przyprawami, z delikatną zasmażką z mąki i oleju.",
   type: "salad",
   images: [""],
   time: 80,
   portions: 10,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

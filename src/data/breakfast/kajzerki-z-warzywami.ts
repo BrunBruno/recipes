@@ -8,13 +8,12 @@ import { iHRB } from "../../ingredients/ingHerb";
 
 const kajzerkiZWarzywami: Recipe = {
   name: "Kajzerki z Warzywami",
-  description:
-    "Proste śniadanie z kajzerkami, masłem, szynką i świeżymi warzywami do wyboru.",
   type: "breakfast",
   images: ["kajzerki-z-warzywami.jpg"],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "Podstawa",

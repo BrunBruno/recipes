@@ -7,8 +7,6 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const gotoweSkrzydelkaPoledwiczki: Recipe = {
   name: "Gotowe Skrzydełka / Polędwiczki",
-  description:
-    "Gotowe panierowane polędwiczki z kurczaka pieczone razem z frytkami, podawane z prostym sosem sriracha majo.",
   type: "snack",
   images: [
     "gotowe-skrzydelka-poledwiczki.jpg",
@@ -17,7 +15,8 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
   ],
   time: 25,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

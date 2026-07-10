@@ -9,13 +9,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kotletyZIndyka: Recipe = {
   name: "Kotlety z Indyka",
-  description:
-    "Soczyste kotlety z piersi indyka, panierowane w mące, jajku i bułce tartej, smażone na złoty kolor. Podawane z ziemniakami i świeżą surówką z ogórka z koperkiem.",
   type: "dinner",
   images: ["kotlety-z-indyka.jpg", "kotlety-z-indyka-2.jpg"],
   time: 40,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

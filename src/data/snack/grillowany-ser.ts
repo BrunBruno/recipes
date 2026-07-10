@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const grillowanySer: Recipe = {
   name: "Grillowany Ser",
-  description:
-    "Chrupiące tosty z roztopionym serem cheddar, smażone na maśle na złocisty kolor. Prosta i sycąca przekąska gotowa w kilka minut.",
   type: "snack",
   images: ["grillowany-ser.jpg"],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

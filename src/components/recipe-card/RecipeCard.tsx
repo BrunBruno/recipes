@@ -7,6 +7,7 @@ import {
   calculateRecipeKcalPer100g,
   calculateRecipeNutrients,
   calculateRecipePrice,
+  calculateRecipeVegMass,
   calculateRecipeWeight,
   DAILY_NUTRIENTS,
   formatUnit,
@@ -400,23 +401,32 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   const recipeDailyCharts = (
     kcal: number,
     nutrients: [string, string, string],
+    vegMass: number,
   ) => {
     const values = [kcal];
     for (let nut in nutrients) {
       values.push(parseFloat(nutrients[nut]));
     }
+    values.push(vegMass);
+
     const data = values.map((val, i) => (val / DAILY_NUTRIENTS[i]) * 100);
     const maxRange = Math.round(
       Math.max(...data) + 10 * (portions > 0 ? portions : 1),
     );
 
     const barData = {
-      labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko"],
+      labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko", "Owoce i Warzywa"],
       datasets: [
         {
           label: "Pokrycie (%)",
           data: data,
-          backgroundColor: ["#099268", "#f59f00", "#1098ad", "#f03e3e"],
+          backgroundColor: [
+            "#099268",
+            "#f59f00",
+            "#1098ad",
+            "#f03e3e",
+            "#82c91e",
+          ],
         },
       ],
     };
@@ -432,7 +442,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 beginAtZero: true,
                 max: maxRange,
                 ticks: {
-                  display: true,
+                  display: window.innerWidth > 640,
                   callback: (val) => val + "%",
                 },
                 grid: {
@@ -594,28 +604,58 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
       ) : (
         <div className="recipe-details-content">
           <section className="description-section">
-            {selectedRecipe.description}
-            <br /> <br />
-            {selectedRecipe.executionDifficulty && (
+            {/* {selectedRecipe.description} */}
+            {/* <br /> <br /> */}
+            {selectedRecipe.difficulty && (
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>
-                {Array.from({ length: selectedRecipe.executionDifficulty }).map(
-                  (_, i) => (
+                <div className="stars">
+                  {Array.from({
+                    length: selectedRecipe.difficulty,
+                  }).map((_, i) => (
                     <UtilsIcon
                       key={`fs${i}`}
                       name="star-full"
                       color="#0ca678"
                     />
-                  ),
-                )}
-                {Array.from({
-                  length: 5 - selectedRecipe.executionDifficulty,
-                }).map((_, i) => (
-                  <UtilsIcon key={`es${i}`} name="star-empty" color="#0ca678" />
-                ))}
+                  ))}
+                  {Array.from({
+                    length: 5 - selectedRecipe.difficulty,
+                  }).map((_, i) => (
+                    <UtilsIcon
+                      key={`es${i}`}
+                      name="star-empty"
+                      color="#0ca678"
+                    />
+                  ))}
+                </div>
               </div>
             )}
-            <br />
+            {selectedRecipe.taste && (
+              <div className="diff-rating">
+                <span>Smakowitość posiłku:</span>
+                <div className="stars">
+                  {Array.from({
+                    length: selectedRecipe.taste,
+                  }).map((_, i) => (
+                    <UtilsIcon
+                      key={`fs${i}`}
+                      name="star-full"
+                      color="#0ca678"
+                    />
+                  ))}
+                  {Array.from({
+                    length: 5 - selectedRecipe.taste,
+                  }).map((_, i) => (
+                    <UtilsIcon
+                      key={`es${i}`}
+                      name="star-empty"
+                      color="#0ca678"
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
             Cena ze jedną porcję:{" "}
             <span style={{ color: "#20c997", fontWeight: "bold" }}>
               {calculateRecipePrice(recipeState).toFixed(2)} zł
@@ -632,7 +672,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
             </span>
             <br />
             <div className="format-ingredients">
-              Wyświetl format:{" "}
+              <span>Wyświetl format: </span>
               <button
                 onClick={() => setUniFormat("u")}
                 className={`${unitFormat === "u" ? "active" : ""}`}
@@ -967,6 +1007,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
               {recipeDailyCharts(
                 calculateRecipeKcal(recipeState, portions),
                 calculateRecipeNutrients(recipeState, portions),
+                calculateRecipeVegMass(recipeState, portions),
               )}
             </div>
           </section>

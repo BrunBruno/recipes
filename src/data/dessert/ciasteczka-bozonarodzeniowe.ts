@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const ciasteczkaBozonarodzeniowe: Recipe = {
   name: "Ciasteczka Bożonarodzeniowe",
-  description:
-    "Kruche ciasteczka bożonarodzeniowe idealne do wykrawania i dekorowania, doskonałe na świąteczny stół i wspólne pieczenie.",
   type: "dessert",
   images: [""],
   time: 85,
   portions: 24,
-  executionDifficulty: null,
+  taste: 3,
+  difficulty: null,
   ingredients: [
     {
       title: "",

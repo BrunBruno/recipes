@@ -9,13 +9,12 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const grzybowa: Recipe = {
   name: "Grzybowa",
-  description:
-    "Aromatyczna zupa grzybowa na bazie suszonych grzybów z dodatkiem warzyw, śmietany i kaszy lub lanego ciasta.",
   type: "soup",
   images: [""],
   time: 60,
   portions: portions,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

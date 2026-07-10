@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const biszkoptCzekoladowy: Recipe = {
   name: "Biszkopt Czekoladowy",
-  description:
-    "Lekki i puszysty biszkopt czekoladowy o intensywnym smaku kakao, idealny jako baza do tortów i ciast przekładanych kremem.",
   type: "other",
   images: [""],
   time: 50,
   portions: 1,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

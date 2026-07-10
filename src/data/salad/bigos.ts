@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const bigos: Recipe = {
   name: "Bigos",
-  description:
-    "Tradycyjny bigos z kapusty kiszonej i świeżej, z różnymi rodzajami mięsa, grzybami, wędzonką i aromatycznymi przyprawami.",
   type: "salad",
   images: [""],
   time: 480,
   portions: 15,
-  executionDifficulty: 4,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

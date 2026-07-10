@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const kurczakZRozna: Recipe = {
   name: "Kurczak z Rożna",
-  description:
-    "Pieczony kurczak z rożna przyprawiony mieszanką papryk, czosnku i ziół, z chrupiącą skórką i soczystym mięsem. Idealny obiad dla 4 osób.",
   type: "dinner",
   images: ["kurczak-z-rozna.jpg"],
   time: 90,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 5,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

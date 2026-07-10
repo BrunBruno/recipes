@@ -75,8 +75,16 @@
 }
 
 .diff-rating {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 13rem auto;
+  /* gap: 0.5rem; */
+  margin-bottom: 0.6rem;
+}
+
+.stars {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .diff-rating svg {
@@ -896,5 +904,14 @@ input::-webkit-inner-spin-button {
 
   .recipe-ingredient-group.main-group {
     grid-column: span 4;
+  }
+
+  .format-ingredients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .format-ingredients span {
+    grid-column: 1/-1;
   }
 }

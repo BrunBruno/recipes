@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 const portions = 5;
 const spaghettiCarbonara: Recipe = {
   name: "Spaghetti Carbonara",
-  description:
-    "Kremowe spaghetti Carbonara z boczkiem, żółtkami i parmezanem Parmigiano Reggiano, idealnie al dente - szybki i elegancki obiad.",
   type: "dinner",
   images: ["spaghetti-carbonara.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: 4,
+  taste: 4,
+  difficulty: 4,
   ingredients: [
     {
       title: "",

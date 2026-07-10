@@ -10,8 +10,6 @@ import type { Recipe } from "../../types";
 
 const skladaki: Recipe = {
   name: "Składaki",
-  description:
-    "Chrupiące składaki z tortilli wypełnione salami, serem, warzywami i aromatycznym sosem pomidorowym - szybka i smaczna przekąska na ciepło.",
   type: "snack",
   images: [
     "skladaki.jpg",
@@ -21,7 +19,8 @@ const skladaki: Recipe = {
   ],
   time: 15,
   portions: 2,
-  executionDifficulty: 1,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "Składaki",

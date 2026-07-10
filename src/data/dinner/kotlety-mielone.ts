@@ -11,13 +11,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const kotletyMielone: Recipe = {
   name: "Kotlety Mielone",
-  description:
-    "Klasyczne kotlety mielone z wieprzowiny z dodatkiem namoczonej bułki, cebuli i czosnku. Soczyste w środku, chrupiące na zewnątrz.",
   type: "dinner",
   images: ["kotlety-mielone.jpg", "kotlety-mielone-2.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

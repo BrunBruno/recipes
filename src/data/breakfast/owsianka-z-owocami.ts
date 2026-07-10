@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const owsianaZOwocami: Recipe = {
   name: "Owsianka z Owocami",
-  description:
-    "Klasyczna owsianka na mleku z dodatkiem świeżych borówek. Szybkie i pożywne śniadanie na dobry początek dnia.",
   type: "breakfast",
   images: ["owsianka-z-owocami.jpg"],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

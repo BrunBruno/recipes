@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
-  description:
-    "Pożywna sałatka z kuskusem, jajkami, tuńczykiem i kukurydzą, połączona majonezem i doprawiona solą oraz pieprzem - szybka i smaczna propozycja na lunch lub kolację.",
   type: "salad",
   images: ["salatka-kuskus.jpg", "salatka-kuskus-2.jpg"],
   time: 40,
   portions: 8,
-  executionDifficulty: 3,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

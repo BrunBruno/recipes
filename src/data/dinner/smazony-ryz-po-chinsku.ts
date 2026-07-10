@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const smazonyRyzPoChinsku: Recipe = {
   name: "Smażony Ryż po Chińsku",
-  description:
-    "Smażony ryż po chińsku z kurczakiem, warzywami i jajkiem w aromatycznym sosie.",
   type: "dinner",
   images: [""],
   time: 30,
   portions: 3,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

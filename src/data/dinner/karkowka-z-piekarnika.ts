@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const karkowkaZPiekarnika: Recipe = {
   name: "Karkowka z Piekarnika",
-  description:
-    "Smaczny obiad, złożony z trzech elementów pełnowartościowego posiłku, które piecze się razem w jednym woreczku. Dzięki temu mięso jest soczyste, warzywa idealnie upieczone, a całość doskonale doprawiona mieszanką przypraw.",
   type: "dinner",
   images: ["karkowka-z-piekarnika.jpg", "karkowka-z-piekarnika-2.jpg"],
   time: 70,
   portions: portions,
-  executionDifficulty: null,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

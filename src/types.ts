@@ -121,12 +121,12 @@ export type NonEmptyArray<T> = [T, ...T[]];
 export type Recipe = {
   name: string;
   fileName?: string;
-  description: string;
   type: MealType;
   images: NonEmptyArray<string>;
   portions: number;
   time: number;
-  executionDifficulty: number | null;
+  taste: number | null;
+  difficulty: number | null;
   ingredients: RecipeIngredientGroup[];
   extrasMain?: ExtrasIngredientOptions;
   extrasVeg?: ExtrasIngredientOptions;

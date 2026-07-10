@@ -11,13 +11,12 @@ import type { Recipe } from "../../types";
 
 const tacos: Recipe = {
   name: "Tacos",
-  description:
-    "Klasyczne tacos z aromatycznym mięsem wołowym, świeżymi warzywami i dodatkiem limonki oraz śmietany - szybkie i pełne smaku danie.",
   type: "snack",
   images: [""],
   time: 35,
   portions: 4,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "Farsz",

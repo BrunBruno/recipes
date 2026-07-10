@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const omlet: Recipe = {
   name: "Omlet",
-  description:
-    "Prosty omlet z jajek z dodatkiem podsmażonej cebuli i papryki. Szybkie śniadanie lub przekąska, delikatne i puszyste, doprawione solą i pieprzem.",
   type: "breakfast",
   images: ["omlet.jpg"],
   time: 15,
   portions: 1,
-  executionDifficulty: 2,
+  taste: 2,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

@@ -8,13 +8,12 @@ import { fryingFat } from "../../utils";
 
 const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
-  description:
-    "Sycący chłopski garnek z kiełbasą, ziemniakami, papryką i kapustą w aromatycznym sosie.",
   type: "dinner",
   images: [""],
   time: 35,
   portions: 4,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const musMalinowyGanache: Recipe = {
   name: "Mus Malinowy Ganache",
-  description:
-    "Delikatny mus malinowy z białą czekoladą na bazie śmietanki 36%, idealny do tortów i deserów. Połączenie owoców i kremowej ganache tworzy elegancki, owocowy krem.",
   type: "other",
   images: [""],
   time: 25,
   portions: 1,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

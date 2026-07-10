@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const kajzerkiZPasztetem: Recipe = {
   name: "Kajzerki z Pasztetem",
-  description:
-    "Proste kanapki z kajzerki posmarowane pasztetem z dodatkiem ogórka kiszonego, doprawione pieprzem.",
   type: "breakfast",
   images: ["kajzerki-z-pasztetem.jpg"],
   time: 5,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

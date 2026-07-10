@@ -14,13 +14,12 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const klopsikiZIkei: Recipe = {
   name: "Klopsiki z IKEI",
-  description:
-    "Szwedzkie klopsiki z mięsa wołowego i wieprzowego w kremowym sosie śmietanowym z dodatkiem sosu sojowego i musztardy.",
   type: "dinner",
   images: [""],
   time: 150,
   portions: portions,
-  executionDifficulty: 2,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "Klopsiki",

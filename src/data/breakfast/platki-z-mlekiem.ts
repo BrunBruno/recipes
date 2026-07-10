@@ -4,13 +4,12 @@ import type { Recipe } from "../../types";
 
 const platkiZMlekiem: Recipe = {
   name: "Płatki z Mlekiem",
-  description:
-    "Ciepłe płatki kukurydziane z mlekiem podgrzanym w mikrofalówce. Błyskawiczne śniadanie gotowe w kilka minut.",
   type: "breakfast",
   images: [""],
   time: 3,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

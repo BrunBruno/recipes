@@ -10,8 +10,6 @@ import type { Recipe } from "../../types";
 
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
-  description:
-    "Aromatyczna zapiekanka Bolognese z makaronem, mięsem mielonym, warzywami i roztopionym serem - idealny obiad dla całej rodziny.",
   type: "dinner",
   images: [
     "zapiekanka-bolognese.jpg",
@@ -20,7 +18,8 @@ const zapiekankaBolognese: Recipe = {
   ],
   time: 70,
   portions: 4,
-  executionDifficulty: 3,
+  taste: 5,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

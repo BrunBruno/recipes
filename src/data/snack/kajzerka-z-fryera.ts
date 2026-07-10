@@ -2,12 +2,12 @@ import type { Recipe } from "../../types";
 
 const kajzerkaZFryera: Recipe = {
   name: "Kajzerki z Fryera",
-  description: "",
   type: "snack",
   images: [""],
   time: 0,
   portions: 0,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [],
   steps: [],
 };

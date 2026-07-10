@@ -12,8 +12,6 @@ import type { Recipe } from "../../types";
 const portions = 3;
 const pancakes: Recipe = {
   name: "Pancakes",
-  description:
-    "Puszyste pancakes z maślanką i jajkiem, smażone na patelni, idealne na deser lub słodkie śniadanie, podawane z syropem lub cukrem pudrem.",
   type: "dessert",
   images: [
     "pancakes.jpg",
@@ -23,7 +21,8 @@ const pancakes: Recipe = {
   ],
   time: 30,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

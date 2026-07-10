@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const hotHog: Recipe = {
   name: "Hot Dog",
-  description:
-    "Klasyczny Hot Dog z chrupiącymi bułkami, gorącymi parówkami, ogórkami kiszonymi, kapustą kiszoną, prażoną cebulką i mieszanką sosów: ketchup, musztarda i sos czosnkowy - gotowy w 10 minut dla 2 osób.",
   type: "snack",
   images: ["hot-dog.jpg"],
   time: 10,
   portions: 2,
-  executionDifficulty: 1,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

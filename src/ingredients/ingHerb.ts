@@ -205,9 +205,6 @@ export const iHRB: Record<IngId, IngredientItem> = {
     subType: "fhr",
     color: "#66BB6A",
     kcalPer100g: 32,
-    unitWeights: {
-      g: 10,
-    },
     nutrientsPer100g: [0.7, 5.5, 2.6],
   },
 

@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const lasagna: Recipe = {
   name: "Lasagna",
-  description:
-    "Domowa lazania z mięsnym farszem pomidorowym, pieczarkami, mozzarellą i serem żółtym, zapiekana do uzyskania kremowej konsystencji.",
   type: "dinner",
   images: [""],
   time: 90,
   portions: 8,
-  executionDifficulty: 3,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "Sos z mięsem",

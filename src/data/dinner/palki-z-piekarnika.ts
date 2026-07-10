@@ -7,8 +7,6 @@ const portions = 3;
 
 const palkiZPiekarnika: Recipe = {
   name: "Pałki z Piekarnika",
-  description:
-    "Proste i soczyste pałki z kurczaka pieczone w rękawie do pieczenia z mieszanką przypraw. Podawane z ziemniakami i buraczkami zasmażanymi.",
   type: "dinner",
   images: [
     "palki-z-piekarnika.jpg",
@@ -18,7 +16,8 @@ const palkiZPiekarnika: Recipe = {
   ],
   time: 75,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const tost: Recipe = {
   name: "Tosty",
-  description:
-    "Proste i szybkie tosty z tostera wyskakującego z szynką i roztopionym serem, podawane z ketchupem.",
   type: "breakfast",
   images: ["tosty.jpg"],
   time: 5,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

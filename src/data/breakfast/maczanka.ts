@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const maczanka: Recipe = {
   name: "Maczanka",
-  description:
-    "Prosta i szybka maczanka - kiełbasa podsmażana na maśle i podawana w bułce kajzerce. Idealna przekąska na jeden posiłek.",
   type: "breakfast",
   images: ["maczanka.jpg"],
   time: 15,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

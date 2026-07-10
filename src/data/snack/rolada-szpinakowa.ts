@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const roladaSzpinakowa: Recipe = {
   name: "Rolada Szpinakowa",
-  description:
-    "Lekka i efektowna rolada szpinakowa z kremowym serkiem chrzanowym i wędzonym łososiem, idealna jako przekąska lub na przyjęcie.",
   type: "snack",
   images: [""],
   time: 60,
   portions: 6,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

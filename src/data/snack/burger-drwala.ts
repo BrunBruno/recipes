@@ -12,13 +12,12 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
-  description:
-    "Domowy burger drwala z soczystą wołowiną, chrupiącym boczkiem i panierowanym serem, podany z warzywami i wyrazistym sosem.",
   type: "snack",
   images: ["burger-drwala.jpg"],
   time: 50,
   portions: portions,
-  executionDifficulty: 4,
+  taste: 5,
+  difficulty: 4,
   ingredients: [
     {
       title: "Mięso",

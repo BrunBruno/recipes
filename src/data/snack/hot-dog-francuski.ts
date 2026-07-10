@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const frenchHotDog: Recipe = {
   name: "Hot Dog Francuski",
-  description:
-    "Szybki i prosty Hot Dog Francuski z parówką w chrupiącej bułce i mieszanką sosów: ketchup, musztarda, sos czosnkowy i sriracha - idealna przekąska w 10 minut.",
   type: "snack",
   images: ["hot-dog-francuski.jpg"],
   time: 10,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

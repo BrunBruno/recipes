@@ -12,8 +12,6 @@ import type { Recipe } from "../../types";
 const portions = 3;
 const nalesniki: Recipe = {
   name: "Naleśniki",
-  description:
-    "Klasyczne naleśniki przygotowane z mąki, jajek, mleka i odrobiny oleju. Ciasto jest gładkie i elastyczne, idealne do nadziewania ulubionymi farszami słodkimi lub wytrawnymi.",
   type: "dessert",
   images: [
     "nalesniki.jpg",
@@ -23,7 +21,8 @@ const nalesniki: Recipe = {
   ],
   time: 20,
   portions: portions,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const rosol: Recipe = {
   name: "Rosół",
-  description:
-    "Tradycyjny, aromatyczny rosół z indyka, kurczaka i wieprzowiny, gotowany z warzywami i przyprawami przez kilka godzin, idealny jako baza do zup lub na niedzielny obiad.",
   type: "soup",
   images: ["rosol.jpg"],
   time: 240,
   portions: 6,
-  executionDifficulty: 4,
+  taste: 4,
+  difficulty: 4,
   ingredients: [
     {
       title: "",

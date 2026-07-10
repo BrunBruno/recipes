@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
-  description:
-    "Spaghetti w aromatycznym sosie pomidorowym z czosnkiem i ziołami, podawane ze startym żółtym serem - szybki i lekki obiad dla każdego.",
   type: "dinner",
   images: ["spaghetti-pomidorowe.jpg", "spaghetti-pomidorowe-2.jpg"],
   time: 40,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

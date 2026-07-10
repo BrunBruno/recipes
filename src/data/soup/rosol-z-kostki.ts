@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const rosolZKostki: Recipe = {
   name: "Rosół z Kostki",
-  description:
-    "Szybki rosół przygotowany na bazie kostki rosołowej, podawany z makaronem.",
   type: "soup",
   images: [""],
   time: 15,
   portions: 4,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

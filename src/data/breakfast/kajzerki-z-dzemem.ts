@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const kajzerkiZDzemem: Recipe = {
   name: "Kajzerki z Dżemem",
-  description:
-    "Proste kajzerki posmarowane masłem i dżemem. Szybka słodka przekąska lub śniadanie.",
   type: "breakfast",
   images: ["kajzerki-z-dzemem.jpg"],
   time: 5,
   portions: 1,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

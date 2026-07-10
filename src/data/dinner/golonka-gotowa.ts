@@ -5,13 +5,12 @@ import { dinnerSides } from "../../dinnerSides";
 const portions = 2;
 const golonkaGotowa: Recipe = {
   name: "Golonka Gotowa",
-  description:
-    "Gotowa golonka pieczona w piekarniku, podawana z kluskami śląskimi polanymi sosem z pieczenia oraz buraczkami zasmażanymi.",
   type: "dinner",
   images: ["golonka-gotowa.jpg"],
   time: 60,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

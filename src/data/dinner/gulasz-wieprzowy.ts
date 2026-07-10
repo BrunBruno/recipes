@@ -12,13 +12,12 @@ import type { Recipe } from "../../types";
 const portions = 3;
 const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
-  description:
-    "Gulasz wieprzowy w kremowym sosie z papryką i czosnkiem, podawany z kopytkami i buraczkami - sycący i aromatyczny obiad dla całej rodziny.",
   type: "dinner",
   images: ["gulasz-wieprzowy.jpg"],
   time: 80,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

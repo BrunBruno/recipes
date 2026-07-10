@@ -6,13 +6,12 @@ import type { Recipe } from "../../types";
 
 const penneWSosiePomidorowym: Recipe = {
   name: "Penne w Sosie Pomidorowym",
-  description:
-    "Makaron penne w kremowym sosie pomidorowym z mozzarellą, przygotowany na bazie Fix Kamis.",
   type: "dinner",
   images: [""],
   time: 20,
   portions: 2,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

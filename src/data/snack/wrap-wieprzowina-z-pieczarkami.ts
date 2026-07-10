@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const wrapWieprzowinaZPieczarkami: Recipe = {
   name: "Wrap Wieprzowina z Pieczarkami",
-  description:
-    "Tortilla z kotletem wieprzowym, pieczarkami, chrupiącym plackiem ziemniaczanym, cheddarem i sosem chrzanowym.",
   type: "snack",
   images: [""],
   time: 25,
   portions: portions,
-  executionDifficulty: 2,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

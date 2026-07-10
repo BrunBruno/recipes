@@ -24,7 +24,7 @@ import type {
   UnitType,
 } from "./types";
 
-export const DAILY_NUTRIENTS = [3213, 98, 441, 140]; // [kcal, fat, carbs, protein]
+export const DAILY_NUTRIENTS = [3213, 98, 441, 140, 500]; // [kcal, fat, carbs, protein, veg-mass]
 
 export const ingredientCollections = [
   iDIR,
@@ -64,11 +64,11 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   dir: { label: "Nabiał", color: "#F8F9FA" },
   fat: { label: "Tłuszcze", color: "#F59F00" },
   veg: { label: "Warzywa", color: "#2F9E44" },
-  frt: { label: "Owoce", color: "#E8590C" },
+  frt: { label: "Owoce", color: "#6F42C1" },
   nut: { label: "Owoce", color: "#8D6E63" },
   grn: { label: "Zboża", color: "#C77D1A" },
   hrb: { label: "Zioła", color: "#0CA678" },
-  spc: { label: "Przyprawy", color: "#6F42C1" },
+  spc: { label: "Przyprawy", color: "#E8590C" },
   sau: { label: "Sosy", color: "#D9480F" },
   jar: { label: "Przetwory", color: "#A61E4D" },
   liq: { label: "Ciecze", color: "#1098AD" },
@@ -154,14 +154,10 @@ export const interpolateColor = (
   const start = hexToRgb(startColor);
   const end = hexToRgb(endColor);
 
-  const rgb = start.map((s, i) =>
-    Math.round(s + t * (end[i] - s))
-  );
+  const rgb = start.map((s, i) => Math.round(s + t * (end[i] - s)));
 
   return rgbToHex(rgb);
 };
-
-
 
 export const getActiveIngredient = (
   item: Ingredient | IngredientChoice,
@@ -361,6 +357,47 @@ export const calculateRecipeNutrients = (
     Math.round(portMul * totalCarb).toFixed(1),
     Math.round(portMul * totalProt).toFixed(1),
   ];
+};
+
+export const calculateRecipeVegMass = (
+  recipe: Recipe,
+  portions?: number,
+): number => {
+  let totalMass = 0;
+
+  for (const ingredientItem of getAllIngredientItems(recipe)) {
+    if (!ingredientItem) continue;
+
+    if (ingredientItem.exclude) continue;
+
+    const { ing, amount, unit } = ingredientItem;
+
+    if (!ing.nutrientsPer100g) continue;
+
+    let grams = 0;
+    let value = amount;
+    if (!value) continue;
+
+    if (!unit) {
+      grams = value;
+    } else if (ing.unitWeights?.[unit]) {
+      grams = value * ing.unitWeights[unit];
+    } else {
+      if (unit !== "g") {
+        console.warn(`No unit ${unit} for ${ing.name}`);
+      }
+      grams = value;
+    }
+
+    totalMass += ing.isVeg ? grams : 0;
+  }
+
+  const portMul = portions ? portions : 1;
+  return Math.round(
+    recipe.portions
+      ? (portMul * totalMass) / recipe.portions
+      : portMul * totalMass,
+  );
 };
 
 export const calculateRecipeWeight = (recipe: Recipe) => {

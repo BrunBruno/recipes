@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const rosolZMakaronem: Recipe = {
   name: "Rosół z Makaronem",
-  description:
-    "Klasyczny rosół podawany z makaronem, gotowaną marchewką i kawałkami mięsa, doprawiony pieprzem i odrobiną maggi.",
   type: "soup",
   images: ["rosol-z-makaronem.jpg"],
   time: 25,
   portions: 2,
-  executionDifficulty: 1,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

@@ -728,7 +728,7 @@ const IngredientIcon = ({ ingType, subType, color }: IngredientIconProps) => {
         );
       }
 
-      //  fill={color ? color : IngredientTypeData.frt.color}
+
       return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <g>

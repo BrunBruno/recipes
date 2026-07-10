@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 const portions = 4;
 const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
-  description:
-    "Soczysty kurczak pieczony w piekarniku z aromatycznymi przyprawami, podawany z ziemniakami i burakami. Idealny obiad dla 4 osób.",
   type: "dinner",
   images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
   time: 60,
   portions: portions,
-  executionDifficulty: 1,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

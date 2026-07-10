@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 const portions = 2;
 const kurczakChrupiacy: Recipe = {
   name: "Kurczak Chrupiący",
-  description:
-    "Soczyste kawałki kurczaka w chrupiącej panierce, smażone na złoty kolor. Idealne z frytkami i świeżą surówką.",
   type: "dinner",
   images: ["kurczak-chrupiacy.jpg"],
   time: 30,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

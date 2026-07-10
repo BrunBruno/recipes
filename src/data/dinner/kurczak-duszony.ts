@@ -12,13 +12,12 @@ import { fryingFat } from "../../utils";
 const portions = 3;
 const gotowanyKurczak: Recipe = {
   name: "Kurczak Duszony",
-  description:
-    "Delikatny kurczak duszony w aromatycznym sosie śmietanowo-przyprawowym, podawany z ziemniakami i buraczkami. Idealny na rodzinny obiad.",
   type: "dinner",
   images: ["kurczak-duszony.jpg"],
   time: 45,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

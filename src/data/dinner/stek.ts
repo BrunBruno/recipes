@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 const portions = 1;
 const stek: Recipe = {
   name: "Stek",
-  description:
-    "Soczysty stek z aromatycznym masłem, czosnkiem i tymiankiem - szybkie i eleganckie danie dla miłośników wołowiny.",
   type: "dinner",
   images: ["stek.jpg", "stek-2.jpg"],
   time: 20,
   portions: portions,
-  executionDifficulty: 2,
+  taste: 5,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

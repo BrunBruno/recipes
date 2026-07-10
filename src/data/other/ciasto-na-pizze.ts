@@ -7,13 +7,12 @@ import type { Recipe } from "../../types";
 
 const ciastoNaPizze: Recipe = {
   name: "Ciasto na Pizze",
-  description:
-    "Sprężyste i aromatyczne ciasto na pizzę, łatwe do formowania i idealne jako baza pod ulubione dodatki.",
   type: "other",
   images: [""],
   time: 60,
   portions: 1,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

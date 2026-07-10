@@ -10,13 +10,12 @@ import type { Recipe } from "../../types";
 
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak Słodko-Kwaśny",
-  description:
-    "Kurczak w sosie słodko-kwaśnym z papryką, cebulą i ananasem, podawany z ryżem.",
   type: "dinner",
   images: [""],
   time: 25,
   portions: 3,
-  executionDifficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

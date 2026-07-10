@@ -11,12 +11,12 @@ import type { Recipe } from "../../types";
 const portions = 2;
 const smazonaRyba: Recipe = {
   name: "Smażona Ryba",
-  description: "",
   type: "dinner",
   images: [""],
   time: 0,
   portions: portions,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

@@ -403,9 +403,6 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     color: "#B71C1C",
     kcalPer100g: 294,
-    unitWeights: {
-      g: 500,
-    },
     nutrientsPer100g: [21, 0, 25],
   },
 

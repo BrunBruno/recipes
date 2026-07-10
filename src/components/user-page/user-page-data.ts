@@ -1,11 +1,20 @@
 import type { DayIngredientPair, DayMealType } from "../../types";
 
+export type Macros = {
+  kcal: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+  veg: number;
+};
+
 export interface DayRecord {
   date: string;
   kcal: number;
   protein: number;
   fat: number;
   carbs: number;
+  veg: number;
 }
 
 export const STORAGE_KEY = "day_records";

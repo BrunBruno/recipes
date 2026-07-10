@@ -11,13 +11,12 @@ import type { Recipe } from "../../types";
 
 const ciastoMarchewkowe: Recipe = {
   name: "Ciasto Marchewkowe",
-  description:
-    "Wilgotne i aromatyczne ciasto marchewkowe z dodatkiem ananasa, orzechów i cynamonu, przełożone kremową polewą serową.",
   type: "dessert",
   images: [""],
   time: 95,
   portions: 10,
-  executionDifficulty: null,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "Ciasto",

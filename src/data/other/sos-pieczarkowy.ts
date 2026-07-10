@@ -8,13 +8,12 @@ import type { Recipe } from "../../types";
 
 const sosPieczarkowy: Recipe = {
   name: "Sos Pieczarkowy",
-  description:
-    "Kremowy sos pieczarkowy na bazie śmietany, masła i przypraw, idealny do mięs, makaronów i ziemniaków.",
   type: "other",
   images: [""],
   time: 15,
   portions: 2,
-  executionDifficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

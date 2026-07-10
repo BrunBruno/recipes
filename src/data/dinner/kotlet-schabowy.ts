@@ -10,13 +10,12 @@ import { fryingFat } from "../../utils";
 const portions = 5;
 const kotletSchabowy: Recipe = {
   name: "Kotlety Schabowe",
-  description:
-    "Klasyczne kotlety schabowe - cienko rozbite plastry schabu panierowane w mące, jajku i bułce tartej, smażone na złoty kolor. Podawane z ziemniakami i mizerią ze świeżego ogórka, cebuli i śmietany.",
   type: "dinner",
   images: ["kotlet-schabowy.jpg", "kotlet-schabowy-2.jpg"],
   time: 50,
   portions: portions,
-  executionDifficulty: 3,
+  taste: 5,
+  difficulty: 3,
   ingredients: [
     {
       title: "",

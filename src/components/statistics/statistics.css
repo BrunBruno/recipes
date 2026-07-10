@@ -1,14 +1,12 @@
 .statistics {
   width: calc(100% - 2rem);
   height: calc(100vh - 8rem);
-  /* background-color: rgba(0, 0, 0, 0.85); */
   overflow-y: scroll;
   padding: 1rem;
   padding-top: 6rem;
   gap: 1rem;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .statistics::-webkit-scrollbar {
@@ -18,13 +16,13 @@
 .statistics-element {
   display: flex;
   flex-direction: column;
-  /* height: 500px; */
   height: 360px;
   padding: 2rem;
-  background-color: #111;
+  background-color: #202020;
   border-radius: 1rem;
   border: solid #222 0.1rem;
-  box-shadow: 0 0 1rem 0 #333;
+  border-bottom: solid 2px #000;
+  border-right: solid 2px #000;
 }
 
 .statistics-element h2 {

@@ -5,13 +5,12 @@ import type { Recipe } from "../../types";
 
 const kajzerkiZMakrela: Recipe = {
   name: "Kajzerki z Makrelą",
-  description:
-    "Kajzerki z pastą z makreli, majonezem i warzywami - szybka i pożywna kanapka.",
   type: "breakfast",
   images: ["kajzerki-z-makrela.jpg"],
   time: 15,
   portions: 1,
-  executionDifficulty: 3,
+  taste: 3,
+  difficulty: 3,
   ingredients: [
     {
       title: "",
