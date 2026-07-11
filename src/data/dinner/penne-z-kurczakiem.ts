@@ -8,8 +8,8 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const chickenPasta: Recipe = {
-  name: "Chicken Pasta",
+const penneZKurczakiem: Recipe = {
+  name: "Penne z Kurczakiem",
   type: "dinner",
   images: [""],
   time: 20,
@@ -39,7 +39,7 @@ const chickenPasta: Recipe = {
         "Makaron ugotuj al dente zgodnie z instrukcją na opakowaniu.",
         "Rozgrzej oliwę i usmaż kurczaka.",
         "Dodaj śmietanę, wodę, suszone pomidory oraz zawartość saszetki Knorr Chicken Pasta Fix.",
-        "Dokładnie wymieszaj do rozpuszczenia i gotuj 2–3 minuty, aż sos zgęstnieje.",
+        "Dokładnie wymieszaj do rozpuszczenia i gotuj 2-3 minuty, aż sos zgęstnieje.",
         "Dodaj ugotowany makaron i dokładnie wymieszaj z sosem.",
         "Przed podaniem posyp posiekaną świeżą bazylią.",
       ],
@@ -47,4 +47,4 @@ const chickenPasta: Recipe = {
   ],
 };
 
-export default chickenPasta;
+export default penneZKurczakiem;

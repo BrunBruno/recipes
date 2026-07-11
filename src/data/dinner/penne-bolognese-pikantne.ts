@@ -6,10 +6,10 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const spaghettiBolognesePikantne: Recipe = {
-  name: "Spaghetti Bolognese Pikantne",
+const penneBolognesePikantne: Recipe = {
+  name: "Penne Bolognese Pikantne",
   type: "dinner",
-  images: [""],
+  images: ["penne-bolognese-pikantne.jpg", "penne-bolognese-pikantne-2.jpg"],
   time: 25,
   portions: 3,
   taste: null,
@@ -22,6 +22,7 @@ const spaghettiBolognesePikantne: Recipe = {
         { ing: iGRN.penne_pasta, amount: 300 },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.celery_root, amount: 100 },
+        { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_bolognese_chili_fix, amount: 1, unit: "opak" },
@@ -33,7 +34,7 @@ const spaghettiBolognesePikantne: Recipe = {
       title: "",
       steps: [
         "Mięso mielone podsmaż przez około 8 minut na rozgrzanym oleju.",
-        "Dodaj posiekaną cebulę oraz starty seler i smaż razem z mięsem.",
+        "Dodaj posiekaną cebulę i papryczkę oraz starty seler i smaż razem z mięsem.",
         "Fix wymieszaj z 250 ml wody i dodaj do mięsa.",
         "Całość doprowadź do wrzenia, a następnie duś na małym ogniu przez około 10 minut, mieszając od czasu do czasu.",
         "Ugotuj makaron al dente zgodnie z instrukcją na opakowaniu.",
@@ -44,4 +45,4 @@ const spaghettiBolognesePikantne: Recipe = {
   keyWords: ["makaron", "sos"],
 };
 
-export default spaghettiBolognesePikantne;
+export default penneBolognesePikantne;

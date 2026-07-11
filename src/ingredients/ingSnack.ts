@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// CHIPS ////
   | "snack_day_paprika"
+  | "snack_day_cream"
   | "cheese_snacks"
 
   //// CHOCOLATE ////
@@ -15,6 +16,8 @@ type IngId =
   | "pryncypalki"
   | "ladyfingers"
   | "wafers_cream"
+  | "delicje"
+  | "milka_choco_cookies"
 
   //// ICE-CREAM ////
   | "cone_strawberry"
@@ -33,6 +36,20 @@ export const iSNK: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 175,
     },
+    price: 40,
+    verified: true,
+  },
+
+  snack_day_cream: {
+    name: "Snack Day Śmietana i Cebula",
+    type: "snk",
+    subType: "bag",
+    color: "#F5E6B3",
+    kcalPer100g: 556,
+    unitWeights: {
+      opak: 175,
+    },
+    nutrientsPer100g: [35, 55, 3.6],
     price: 40,
     verified: true,
   },
@@ -144,6 +161,34 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [31.2, 52.3, 8.1],
     price: 30,
+    verified: true,
+  },
+
+  delicje: {
+    name: "Delicje",
+    type: "snk",
+    subType: "bis",
+    color: "#8B5A2B",
+    kcalPer100g: 389,
+    unitWeights: {
+      szt: 13,
+      opak: 147,
+    },
+    nutrientsPer100g: [7.3, 74.2, 4.4],
+  },
+
+  milka_choco_cookies: {
+    name: "Milka Choco Cookies",
+    type: "snk",
+    subType: "bis",
+    color: "#6B3F99",
+    kcalPer100g: 499,
+    unitWeights: {
+      szt: 13,
+      opak: 135,
+    },
+    nutrientsPer100g: [25, 62, 6.3],
+    price: 52,
     verified: true,
   },
 
