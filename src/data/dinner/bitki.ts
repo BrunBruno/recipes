@@ -68,7 +68,7 @@ const bitki: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "sos"],
+  keyWords: ["mięso", "wieprzowina", "sos"],
 };
 
 export default bitki;

@@ -40,7 +40,7 @@ const hotHog: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "parówka", "sos", "warzywa"],
 };
 
 export default hotHog;

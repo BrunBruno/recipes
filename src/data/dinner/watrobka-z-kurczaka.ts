@@ -39,7 +39,7 @@ const watrobkaZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["mięso", "kurczak"],
 };
 
 export default watrobkaZKurczaka;

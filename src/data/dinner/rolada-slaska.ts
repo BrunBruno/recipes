@@ -73,7 +73,7 @@ const roladaSlaska: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina"],
+  keyWords: ["mięso", "wołowina", "wieprzowina", "sos"],
 };
 
 export default roladaSlaska;

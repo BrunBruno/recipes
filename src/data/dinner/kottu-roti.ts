@@ -125,7 +125,7 @@ const kottuRoti: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["mięso", "kurczak", "warzywa", "pieczywo"],
 };
 
 export default kottuRoti;

@@ -61,7 +61,7 @@ const chicker: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "kurczak"],
+  keyWords: ["mięso", "pieczywo", "kurczak"],
 };
 
 export default chicker;

@@ -59,7 +59,7 @@ const skladaki: Recipe = {
       ],
     },
   ],
-  keyWords: ["naleśnik"],
+  keyWords: ["tortilla", "ser", "sos"],
 };
 
 export default skladaki;

@@ -12,7 +12,7 @@ const portions = 4;
 const kebabGyros: Recipe = {
   name: "Kebab Gyros",
   type: "snack",
-  images: [""],
+  images: ["kebab-gyros.jpg", "kebab-gyros-2.jpg"],
   time: 30,
   portions: portions,
   taste: 4,
@@ -62,7 +62,7 @@ const kebabGyros: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "naleśnik"],
+  keyWords: ["mięso", "kurczak", "tortilla", "sos", "warzywa"],
 };
 
 export default kebabGyros;

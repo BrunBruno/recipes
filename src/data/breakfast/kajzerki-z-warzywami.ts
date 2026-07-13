@@ -60,7 +60,7 @@ const kajzerkiZWarzywami: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["warzywa", "szynka", "pieczywo"],
 };
 
 export default kajzerkiZWarzywami;

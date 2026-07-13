@@ -33,7 +33,7 @@ const serdelki: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "wieprzowina"],
+  keyWords: ["pieczywo", "parówka", "mięso"],
 };
 
 export default serdelki;

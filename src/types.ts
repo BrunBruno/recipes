@@ -44,24 +44,34 @@ export type UnitType =
   | "peto";
 
 export type KeyWord =
-  | "ciasto"
-  | "deser"
-  | "biszkopt"
+  // MEAT
+  | "mięso"
   | "wołowina"
   | "wieprzowina"
   | "kurczak"
+  | "indyk"
+  | "kiełbasa"
+  | "boczek"
+  | "parówka"
+  | "szynka"
+
+  //
+  | "ciasto"
+  | "deser"
+  | "biszkopt"
   | "makaron"
   | "ryż"
+  | "kasza"
   | "ziemniak"
   | "jajko"
   | "naleśnik"
+  | "tortilla"
   | "owoce"
   | "warzywa"
   | "sos"
   | "krem"
   | "ser"
   | "sałatka"
-  | "indyk"
   | "pieczywo"
   | "ryba"
   | "zupa";

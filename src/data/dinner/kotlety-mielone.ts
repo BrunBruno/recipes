@@ -63,6 +63,7 @@ const kotletyMielone: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "wieprzowina"],
 };
 
 export default kotletyMielone;

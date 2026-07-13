@@ -35,7 +35,7 @@ const maczanka: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "kiełbasa", "mięso"],
 };
 
 export default maczanka;

@@ -74,7 +74,7 @@ const burgerDomowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "ser", "pieczywo"],
+  keyWords: ["mięso", "wołowina", "pieczywo", "ser", "warzywa", "sos"],
 };
 
 export default burgerDomowy;

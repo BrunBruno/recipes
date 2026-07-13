@@ -5,7 +5,7 @@ import type { Recipe } from "../../types";
 const platkiZMlekiem: Recipe = {
   name: "Płatki z Mlekiem",
   type: "breakfast",
-  images: [""],
+  images: ["platki-z-mlekiem.jpg"],
   time: 3,
   portions: 1,
   taste: 3,

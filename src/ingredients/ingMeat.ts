@@ -440,7 +440,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#F4A6A6",
     kcalPer100g: 280,
     unitWeights: {
-      plas: 40,
+      plas: 30,
       szt: 500,
       opak: 500,
     },

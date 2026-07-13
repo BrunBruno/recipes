@@ -70,7 +70,7 @@ const klopsikiWSosiePomidorowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["sos", "wieprzowina"],
+  keyWords: ["mięso", "sos", "wieprzowina"],
 };
 
 export default klopsikiWSosiePomidorowym;

@@ -63,7 +63,7 @@ const pieczenWieprzowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "kasza"],
 };
 
 export default pieczenWieprzowa;

@@ -60,6 +60,7 @@ const smazonaRyba: Recipe = {
       ],
     },
   ],
+  keyWords: ["ryba"],
 };
 
 export default smazonaRyba;

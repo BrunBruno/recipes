@@ -33,7 +33,7 @@ const grysikowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa"],
+  keyWords: ["zupa", "kasza"],
 };
 
 export default grysikowa;

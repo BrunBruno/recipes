@@ -42,6 +42,7 @@ const babeczkiGotowe: Recipe = {
       ],
     },
   ],
+  keyWords: ["ciasto"],
 };
 
 export default babeczkiGotowe;

@@ -40,7 +40,7 @@ const spaghettiBologneseFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "wołowina"],
+  keyWords: ["mięso", "makaron", "wołowina", "sos"],
 };
 
 export default spaghettiBologneseFix;

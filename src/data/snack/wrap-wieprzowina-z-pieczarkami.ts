@@ -54,7 +54,7 @@ const wrapWieprzowinaZPieczarkami: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["mięso", "tortilla", "wieprzowina", "sos"],
 };
 
 export default wrapWieprzowinaZPieczarkami;

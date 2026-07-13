@@ -47,7 +47,7 @@ const palkiBarbecue: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["mięso", "kurczak", "sos"],
 };
 
 export default palkiBarbecue;

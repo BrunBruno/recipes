@@ -42,7 +42,7 @@ const penneBolognesePikantne: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos"],
+  keyWords: ["mięso", "makaron", "sos", "wieprzowina"],
 };
 
 export default penneBolognesePikantne;

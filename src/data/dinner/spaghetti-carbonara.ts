@@ -41,7 +41,7 @@ const spaghettiCarbonara: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: ["makaron", "boczek", "jajko", "mięso"],
 };
 
 export default spaghettiCarbonara;

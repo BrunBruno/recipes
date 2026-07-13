@@ -47,7 +47,7 @@ const salatkaKuskus: Recipe = {
       ],
     },
   ],
-  keyWords: ["sałatka", "warzywa"],
+  keyWords: ["sałatka", "kasza", "ryba"],
 };
 
 export default salatkaKuskus;

@@ -42,7 +42,7 @@ const kurczakPoSeczuansku: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["mięso", "kurczak", "sos", "kasza"],
 };
 
 export default kurczakPoSeczuansku;

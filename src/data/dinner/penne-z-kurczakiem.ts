@@ -45,6 +45,7 @@ const penneZKurczakiem: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "makaron", "kurczak"],
 };
 
 export default penneZKurczakiem;

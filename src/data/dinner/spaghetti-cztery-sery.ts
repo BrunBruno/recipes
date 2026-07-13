@@ -55,7 +55,7 @@ const spaghettiCzterySery: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: ["makaron", "ser", "sos", "warzywa"],
 };
 
 export default spaghettiCzterySery;

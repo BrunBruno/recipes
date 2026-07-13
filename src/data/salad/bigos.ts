@@ -66,7 +66,7 @@ const bigos: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["kiełbasa", "boczek", "mięso"],
 };
 
 export default bigos;

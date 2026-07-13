@@ -56,7 +56,7 @@ const kurczakChrupiacy: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["mięso", "kurczak"],
 };
 
 export default kurczakChrupiacy;

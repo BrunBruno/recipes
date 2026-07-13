@@ -57,7 +57,7 @@ const schabAlaStroganoff: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "sos"],
 };
 
 export default schabAlaStroganoff;

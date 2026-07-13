@@ -34,7 +34,7 @@ const parowki: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["parówka", "pieczywo", "mięso"],
 };
 
 export default parowki;

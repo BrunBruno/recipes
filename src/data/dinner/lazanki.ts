@@ -51,7 +51,7 @@ const lazanki: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: ["makaron", "kiełbasa", "boczek", "mięso"],
 };
 
 export default lazanki;

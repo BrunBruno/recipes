@@ -84,7 +84,7 @@ const tacos: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina"],
+  keyWords: ["mięso", "wołowina", "tortilla"],
 };
 
 export default tacos;

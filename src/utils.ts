@@ -435,29 +435,133 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
 };
 
 export const keywordAliases: Record<KeyWord, string[]> = {
-  ciasto: ["ciasto", "ciasta", "wypiek", "wypieki", "placek", "placki"],
-  deser: ["deser", "desery", "słodkie", "słodko"],
-  biszkopt: ["biszkopt", "biszkopty", "biszkoptowy", "biszkoptowa"],
-  wołowina: ["wołowina", "wolowina", "wołowe", "wolowe", "wołowiny"],
-  wieprzowina: ["wieprzowina", "wieprzowe", "wieprzowa"],
-  kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczaczek", "drób"],
-  indyk: ["indyk", "indyka", "indycze"],
-  makaron: ["makaron", "makarony", "pasta"],
-  ryż: ["ryż", "ryz", "ryżu", "ryżowy", "ryżowa"],
-  ziemniak: ["ziemniak", "ziemniaki", "ziemniacz"],
-  jajko: ["jajko", "jajka", "jaja", "jajeczne"],
-  naleśnik: ["naleśnik", "nalesnik", "naleśniki", "nalesniki"],
-  owoce: ["owoce", "owoc", "owocowe"],
-  warzywa: ["warzywa", "warzywo", "warzywny", "warzywna"],
-  sos: ["sos", "sosy", "sosik", "polewa", "dressing"],
-  krem: ["krem", "kremowy", "kremowa", "masa", "mus"],
-  ser: ["ser", "sery", "serowy", "serowa"],
-  sałatka: ["sałatka", "sałatki", "salatka", "salatki"],
-  pieczywo: ["pieczywo", "pieczywa", "chleb", "chleby", "bułka", "bułki"],
-  ryba: ["ryba", "ryby"],
-  zupa: ["zupa", "zupy", "zupka", "zupki"],
-};
+  // MEAT
+  mięso: ["mięso", "mięsa", "mięsem", "mięsie", "mięs", "miesa"],
+  wołowina: [
+    "wołowina",
+    "wołowiny",
+    "wołowiną",
+    "wołowinie",
+    "wołowinę",
+    "wolowina",
+    "wolowiny",
+  ],
+  wieprzowina: [
+    "wieprzowina",
+    "wieprzowiny",
+    "wieprzowiną",
+    "wieprzowinie",
+    "wieprzowinę",
+  ],
+  kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczakiem", "kurczaku"],
+  indyk: ["indyk", "indyka", "indykiem", "indyki", "indyku"],
+  kiełbasa: [
+    "kiełbasa",
+    "kiełbasy",
+    "kiełbasę",
+    "kiełbasą",
+    "kiełbasie",
+    "kiełbas",
+    "kielbasa",
+    "kielbasy",
+  ],
+  boczek: ["boczek", "boczku", "boczkiem", "boczki", "boczka"],
+  parówka: [
+    "parówka",
+    "parówki",
+    "parówkę",
+    "parówką",
+    "parówce",
+    "parówek",
+    "parowka",
+    "parowki",
+  ],
+  szynka: ["szynka", "szynki", "szynkę", "szynką", "szynce", "szynek"],
+  ryba: ["ryba", "ryby", "rybę", "rybą", "rybie", "rybami", "rybne", "rybi"],
+  jajko: ["jajko", "jajka", "jajek", "jajkiem", "jajku", "jajkami"],
 
+  // CAKES
+  ciasto: [
+    "ciasto",
+    "ciasta",
+    "cieście",
+    "ciastem",
+    "ciast",
+    "ciastami",
+    "ciastach",
+  ],
+  deser: ["deser", "desery", "deseru", "deserem", "deserach", "deserami"],
+  biszkopt: [
+    "biszkopt",
+    "biszkopty",
+    "biszkoptu",
+    "biszkoptem",
+    "biszkoptowy",
+    "biszkoptowa",
+    "biszkoptowe",
+  ],
+  krem: ["krem", "kremu", "kremem", "kremy", "kremami", "kremach"],
+
+  // MAIN
+  makaron: [
+    "makaron",
+    "makarony",
+    "makaronu",
+    "makaronem",
+    "makaronach",
+    "makaronami",
+  ],
+  ryż: ["ryż", "ryżu", "ryżem", "ryże", "ryz"],
+  kasza: ["kasza", "kasze", "kaszy", "kaszą"],
+  ziemniak: [
+    "ziemniak",
+    "ziemniaki",
+    "ziemniaka",
+    "ziemniakiem",
+    "ziemniaków",
+    "ziemniakom",
+  ],
+
+  // BAKERY
+  pieczywo: ["pieczywo", "pieczywa", "pieczywem", "pieczywie"],
+  naleśnik: [
+    "naleśnik",
+    "naleśniki",
+    "naleśnika",
+    "naleśnikiem",
+    "naleśnikach",
+    "nalesnik",
+    "nalesniki",
+  ],
+  tortilla: ["tortilla", "tortille", "tortilli", "tortillę", "tortillami"],
+
+  // VEG
+  owoce: ["owoc", "owoce", "owocu", "owocem", "owocami", "owocach"],
+  warzywa: ["warzywo", "warzywa", "warzywem", "warzywami", "warzywach"],
+  sałatka: [
+    "sałatka",
+    "sałatki",
+    "sałatkę",
+    "sałatką",
+    "sałatkach",
+    "salatka",
+    "salatki",
+  ],
+
+  // OTHER
+  ser: [
+    "ser",
+    "sery",
+    "sera",
+    "serem",
+    "serów",
+    "serami",
+    "serowy",
+    "serowych",
+  ],
+  sos: ["sos", "sosy", "sosu", "sosem", "sosami", "sosach"],
+  zupa: ["zupa", "zupy", "zupę", "zupą", "zupie", "zupami"],
+};
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 

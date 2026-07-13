@@ -56,7 +56,7 @@ const macAndCheeseFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "ser"],
+  keyWords: ["makaron", "ser", "szynka"],
 };
 
 export default macAndCheeseFix;

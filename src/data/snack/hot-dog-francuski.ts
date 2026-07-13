@@ -125,7 +125,7 @@ const frenchHotDog: Recipe = {
     },
   ],
 
-  keyWords: ["pieczywo"],
+  keyWords: ["mięso", "pieczywo", "parówka", "sos"],
 };
 
 export default frenchHotDog;

@@ -104,12 +104,13 @@ export const iSAU: Record<IngId, IngredientItem> = {
     name: "Musztarda barbecue",
     type: "sau",
     color: "#CD7A00",
-    kcalPer100g: 140,
+    kcalPer100g: 123,
     unitWeights: {
       lz: 15,
       lzi: 5,
     },
-    nutrientsPer100g: [3.5, 2.5, 20.0],
+    nutrientsPer100g: [1.8, 24.5, 1.8],
+    verified: true,
   },
 
   mustard_sun: {
@@ -254,11 +255,12 @@ export const iSAU: Record<IngId, IngredientItem> = {
     name: "Sos chrzanowy",
     type: "sau",
     color: "#F8F9FA",
-    kcalPer100g: 210,
+    kcalPer100g: 148,
     unitWeights: {
       lzi: 15,
       opak: 200,
     },
-    nutrientsPer100g: [1, 20, 3],
+    nutrientsPer100g: [9.4, 11, 2.7],
+    verified: true,
   },
 };

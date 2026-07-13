@@ -61,7 +61,7 @@ const fasolkaPoBretonsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa"],
+  keyWords: ["zupa", "boczek", "kiełbasa", "mięso"],
 };
 
 export default fasolkaPoBretonsku;

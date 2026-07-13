@@ -436,7 +436,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
   },
 
   knorr_bolognese_chili_fix: {
-    name: "Fix Spaghetti Bolognese Chili",
+    name: "Fix Bolognese Chili",
     type: "spc",
     subType: "sah",
     color: "#8D6E63",

@@ -41,6 +41,7 @@ const karkowkaZPiekarnika: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "ziemniak", "wieprzowina"],
 };
 
 export default karkowkaZPiekarnika;

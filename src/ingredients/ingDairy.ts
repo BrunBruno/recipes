@@ -126,6 +126,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       ml: 1,
       opak: 180,
+      lz: 25,
+      lzi: 12,
     },
     nutrientsPer100g: [3.1, 4, 4.8],
     price: 12,

@@ -44,7 +44,7 @@ const spaghettiNapoli: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: ["makaron", "sos"],
 };
 
 export default spaghettiNapoli;

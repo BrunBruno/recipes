@@ -33,7 +33,7 @@ const tost: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "szynka", "ser"],
 };
 
 export default tost;

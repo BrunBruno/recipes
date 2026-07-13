@@ -58,7 +58,7 @@ const palkiZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak"],
+  keyWords: ["kurczak", "mięso"],
 };
 
 export default palkiZPiekarnika;

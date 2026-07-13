@@ -44,7 +44,7 @@ const pomidorowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa"],
+  keyWords: ["zupa", "makaron"],
 };
 
 export default pomidorowa;

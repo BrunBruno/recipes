@@ -49,7 +49,7 @@ const wrapWieprzowyJajecznica: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina"],
+  keyWords: ["mięso", "tortilla", "wieprzowina", "jajko", "sos"],
 };
 
 export default wrapWieprzowyJajecznica;

@@ -44,7 +44,7 @@ const smazonyRyzPoChinsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "ryż", "warzywa"],
+  keyWords: ["mięso", "kurczak", "ryż", "warzywa"],
 };
 
 export default smazonyRyzPoChinsku;
