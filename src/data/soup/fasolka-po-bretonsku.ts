@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka po Bretońsku",
   type: "soup",
-  cookingMethods: ["boiled", "fried"],
+  cookingMethods: [["boiled", 120], ["fried", 8]],
   images: ["fasolka-po-bretonsku.jpg"],
   time: 120,
   portions: 5,

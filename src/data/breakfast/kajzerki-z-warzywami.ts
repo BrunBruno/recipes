@@ -9,7 +9,7 @@ import { iHRB } from "../../ingredients/ingHerb";
 const kajzerkiZWarzywami: Recipe = {
   name: "Kajzerki z Warzywami",
   type: "breakfast",
-  cookingMethods: [],
+  cookingMethods: [["raw", 0]],
   images: ["kajzerki-z-warzywami.jpg"],
   time: 10,
   portions: 1,

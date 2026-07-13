@@ -9,7 +9,7 @@ const portions = 3;
 const mizeria: Recipe = {
   name: "Mizeria",
   type: "salad",
-  cookingMethods: ["raw"],
+  cookingMethods: [["raw", 0]],
   images: [""],
   time: 10,
   portions: portions,

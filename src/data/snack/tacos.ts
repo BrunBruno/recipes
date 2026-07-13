@@ -12,7 +12,7 @@ import type { Recipe } from "../../types";
 const tacos: Recipe = {
   name: "Tacos",
   type: "snack",
-  cookingMethods: ["fried", "microwaved"],
+  cookingMethods: [["fried", 8], ["microwaved", 3]],
   images: [""],
   time: 35,
   portions: 4,

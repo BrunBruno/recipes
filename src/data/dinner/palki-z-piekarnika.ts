@@ -8,7 +8,7 @@ const portions = 3;
 const palkiZPiekarnika: Recipe = {
   name: "Pałki z Piekarnika",
   type: "dinner",
-  cookingMethods: ["roasted"],
+  cookingMethods: [["roasted", 75]],
   images: [
     "palki-z-piekarnika.jpg",
     "palki-z-piekarnika-2.jpg",

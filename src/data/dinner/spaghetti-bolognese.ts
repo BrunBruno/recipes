@@ -11,7 +11,7 @@ const portions = 3;
 const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 60]],
   images: [
     "spaghetti-bolognese.jpg",
     "spaghetti-bolognese-2.jpg",

@@ -7,7 +7,7 @@ import { iHRB } from "../../ingredients/ingHerb";
 const marchewkaZTymiankiem: Recipe = {
   name: "Marchewka z Tymiankiem",
   type: "salad",
-  cookingMethods: ["roasted"],
+  cookingMethods: [["roasted", 40]],
   images: [""],
   time: 40,
   portions: 4,

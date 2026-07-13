@@ -11,7 +11,7 @@ const portions = 4;
 const pieczenWieprzowa: Recipe = {
   name: "Pieczeń Wieprzowa",
   type: "dinner",
-  cookingMethods: ["roasted"],
+  cookingMethods: [["roasted", 100]],
   images: [
     "pieczen-wieprzowa.jpg",
     "pieczen-wieprzowa-2.jpg",

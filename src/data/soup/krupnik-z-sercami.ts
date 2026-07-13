@@ -3,7 +3,7 @@ import type { Recipe } from "../../types";
 const krupnikZSercami: Recipe = {
   name: "Krupnik z Sercami",
   type: "soup",
-  cookingMethods: ["boiled"],
+  cookingMethods: [["boiled", 30]],
   images: [""],
   time: 0,
   portions: 0,

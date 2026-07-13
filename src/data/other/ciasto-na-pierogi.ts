@@ -7,7 +7,7 @@ import type { Recipe } from "../../types";
 const ciastoNaPierogi: Recipe = {
   name: "Ciasto na Pierogi",
   type: "other",
-  cookingMethods: ["boiled"],
+  cookingMethods: [["boiled", 60]],
   images: [""],
   time: 60,
   portions: 6,

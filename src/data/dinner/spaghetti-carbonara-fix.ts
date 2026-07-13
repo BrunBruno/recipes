@@ -10,7 +10,7 @@ const portions = 2;
 const spaghettiCarbonaraFix: Recipe = {
   name: "Spaghetti Carbonara",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 20]],
   images: ["spaghetti-carbonara-fix.jpg"],
   time: 20,
   portions: portions,

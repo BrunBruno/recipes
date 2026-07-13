@@ -7,7 +7,7 @@ import { iJAR } from "../../ingredients/ingJar";
 const nuggetsyGotowe: Recipe = {
   name: "Nuggetsy Gotowe",
   type: "snack",
-  cookingMethods: ["fried"],
+  cookingMethods: [["fried", 8]],
   images: ["nuggetsy-gotowe.jpg", "nuggetsy-gotowe-2.jpg"],
   time: 30,
   portions: 1,

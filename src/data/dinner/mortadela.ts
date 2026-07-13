@@ -10,7 +10,7 @@ const portions = 3;
 const mortadela: Recipe = {
   name: "Mortadela",
   type: "dinner",
-  cookingMethods: ["fried"],
+  cookingMethods: [["fried", 8]],
   images: ["mortadela.jpg", "mortadela-2.jpg"],
   time: 25,
   portions: portions,

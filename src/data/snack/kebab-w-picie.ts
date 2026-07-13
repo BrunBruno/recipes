@@ -13,7 +13,7 @@ import type { Recipe } from "../../types";
 const kebab: Recipe = {
   name: "Kebab w Picie",
   type: "snack",
-  cookingMethods: ["baked", "roasted"],
+  cookingMethods: [["baked", 90], ["roasted", 90]],
   images: ["kebab-w-picie.jpg"],
   time: 90,
   portions: 4,

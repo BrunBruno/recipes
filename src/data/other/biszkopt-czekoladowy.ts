@@ -8,7 +8,7 @@ import type { Recipe } from "../../types";
 const biszkoptCzekoladowy: Recipe = {
   name: "Biszkopt Czekoladowy",
   type: "other",
-  cookingMethods: ["baked"],
+  cookingMethods: [["baked", 50]],
   images: [""],
   time: 50,
   portions: 1,

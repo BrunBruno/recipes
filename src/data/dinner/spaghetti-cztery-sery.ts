@@ -10,7 +10,7 @@ import type { Recipe } from "../../types";
 const spaghettiCzterySery: Recipe = {
   name: "Spaghetti Cztery Sery",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 35]],
   images: [
     "spaghetti-cztery-sery.jpg",
     "spaghetti-cztery-sery-2.jpg",

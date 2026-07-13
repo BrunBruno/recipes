@@ -8,7 +8,7 @@ import type { Recipe } from "../../types";
 const salatkaJarzynowa: Recipe = {
   name: "Sałatka Jarzynowa",
   type: "salad",
-  cookingMethods: ["boiled"],
+  cookingMethods: [["boiled", 40]],
   images: ["salatka-jarzynowa.jpg"],
   time: 40,
   portions: 8,

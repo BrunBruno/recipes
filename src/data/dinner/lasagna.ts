@@ -11,7 +11,7 @@ import type { Recipe } from "../../types";
 const lasagna: Recipe = {
   name: "Lasagna",
   type: "dinner",
-  cookingMethods: ["fried", "roasted"],
+  cookingMethods: [["fried", 8], ["roasted", 90]],
   images: [""],
   time: 90,
   portions: 8,

@@ -10,7 +10,7 @@ const portions = 3;
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak w Sosie Słodko-Kwaśnym",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 30]],
   images: [
     "kurczak-slodko-kwasny.jpg",
     "kurczak-slodko-kwasny-2.jpg",

@@ -11,7 +11,7 @@ import type { Recipe } from "../../types";
 const penneZKurczakiem: Recipe = {
   name: "Penne z Kurczakiem",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 20]],
   images: [""],
   time: 20,
   portions: 2,

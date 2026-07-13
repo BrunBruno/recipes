@@ -11,7 +11,7 @@ const portions = 2;
 const schabAlaStroganoff: Recipe = {
   name: "Schab a'la Stroganoff",
   type: "dinner",
-  cookingMethods: ["fried", "stewed"],
+  cookingMethods: [["fried", 8], ["stewed", 25]],
   images: ["schab-ala-stroganoff.jpg", "schab-ala-stroganoff-2.jpg"],
   time: 25,
   portions: portions,

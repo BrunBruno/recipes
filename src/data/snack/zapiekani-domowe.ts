@@ -3,7 +3,7 @@ import type { Recipe } from "../../types";
 const zapiekankiDomowe: Recipe = {
   name: "Zapiekanki Domowe",
   type: "snack",
-  cookingMethods: ["roasted"],
+  cookingMethods: [["roasted", 45]],
   images: [""],
   time: 0,
   portions: 0,

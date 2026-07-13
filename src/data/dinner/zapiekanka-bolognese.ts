@@ -11,7 +11,7 @@ import type { Recipe } from "../../types";
 const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
-  cookingMethods: ["fried", "roasted"],
+  cookingMethods: [["fried", 8], ["roasted", 70]],
   images: [
     "zapiekanka-bolognese.jpg",
     "zapiekanka-bolognese-2.jpg",
