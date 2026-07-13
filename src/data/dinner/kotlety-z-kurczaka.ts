@@ -11,6 +11,7 @@ const portions = 3;
 const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
+  cookingMethods: [["fried", "6-8"]],
   images: ["kotlety-z-kurczaka.jpg", "kotlety-z-kurczaka-2.jpg"],
   time: 30,
   portions: portions,

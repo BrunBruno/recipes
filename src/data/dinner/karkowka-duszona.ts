@@ -11,6 +11,10 @@ const portions = 5;
 const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "5-10"],
+    ["stewed", "50-60"],
+  ],
   images: [
     "karkowka-duszona.jpg",
     "karkowka-duszona-2.jpg",

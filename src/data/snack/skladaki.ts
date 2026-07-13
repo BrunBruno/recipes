@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const skladaki: Recipe = {
   name: "Składaki",
   type: "snack",
+  cookingMethods: ["toasted"],
   images: [
     "skladaki.jpg",
     "skladaki-2.jpg",

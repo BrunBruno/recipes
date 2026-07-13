@@ -6,6 +6,7 @@ import type { Recipe } from "../../types";
 const rosolZKostki: Recipe = {
   name: "Rosół z Kostki",
   type: "soup",
+  cookingMethods: ["boiled"],
   images: [""],
   time: 15,
   portions: 4,

@@ -11,6 +11,7 @@ const portions = 2;
 const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
+  cookingMethods: ["boiled", "stewed"],
   images: ["spaghetti-pomidorowe.jpg", "spaghetti-pomidorowe-2.jpg"],
   time: 40,
   portions: portions,

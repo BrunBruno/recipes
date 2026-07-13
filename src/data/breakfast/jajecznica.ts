@@ -8,6 +8,7 @@ import type { Recipe } from "../../types";
 const jajecznica: Recipe = {
   name: "Jajecznica",
   type: "breakfast",
+  cookingMethods: [["fried", 15]],
   images: [
     "jajecznica.jpg",
     "jajecznica-2.jpg",

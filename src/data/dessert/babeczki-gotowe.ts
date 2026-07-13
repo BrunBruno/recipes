@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const babeczkiGotowe: Recipe = {
   name: "Babeczki Gotowe",
   type: "dessert",
+  cookingMethods: [["baked", "17-20"]],
   images: [
     "babeczki-gotowe.jpg",
     "babeczki-gotowe-2.jpg",

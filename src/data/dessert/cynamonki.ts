@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
+  cookingMethods: [["baked", "15-17"]],
   images: ["cynamonki.jpg"],
   time: 150,
   portions: 12,
@@ -46,7 +47,7 @@ const cynamonki: Recipe = {
         "Mąkę wymieszaj z suchymi drożdżami (jeśli używasz świeżych, przygotuj wcześniej rozczyn).",
         "Dodaj mleko, jajka, cukier i sól, a następnie wyrób ciasto.",
         "Pod koniec wyrabiania dodaj roztopione masło i wyrabiaj do uzyskania miękkiego, elastycznego ciasta.",
-        "Uformuj kulę, przełóż do oprószonej mąką miski, przykryj i odstaw w ciepłe miejsce na około 1,5 godziny do podwojenia objętości.",
+        "Uformuj kulę, przełóż do oprószonej mąką miski, przykryj i odstaw w ciepłe miejsce na około 1.5 godziny do podwojenia objętości.",
         "Wyrośnięte ciasto wyłóż na stolnicę, krótko zagnieć i podziel na dwie części.",
         "Każdą część rozwałkuj na prostokąt o wymiarach około 35 × 30 cm.",
         "Posmaruj roztopionym masłem, posyp cukrem i cynamonem, opcjonalnie dodaj rodzynki.",

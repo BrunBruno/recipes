@@ -9,6 +9,7 @@ import type { Recipe } from "../../types";
 const sosPieczarkowy: Recipe = {
   name: "Sos Pieczarkowy",
   type: "other",
+  cookingMethods: ["stewed"],
   images: [""],
   time: 15,
   portions: 2,

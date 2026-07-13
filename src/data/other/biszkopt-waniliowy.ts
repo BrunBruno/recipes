@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const biszkoptWaniliowy: Recipe = {
   name: "Biszkopt Waniliowy",
   type: "other",
+  cookingMethods: ["baked"],
   images: [""],
   time: 50,
   portions: 1,

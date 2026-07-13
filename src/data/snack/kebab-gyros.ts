@@ -12,6 +12,7 @@ const portions = 4;
 const kebabGyros: Recipe = {
   name: "Kebab Gyros",
   type: "snack",
+  cookingMethods: ["fried", "toasted"],
   images: ["kebab-gyros.jpg", "kebab-gyros-2.jpg"],
   time: 30,
   portions: portions,

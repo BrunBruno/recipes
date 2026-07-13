@@ -9,6 +9,7 @@ const portions = 2;
 const macAndCheeseFix: Recipe = {
   name: "Mac'n Cheese",
   type: "dinner",
+  cookingMethods: ["boiled", "stewed"],
   images: ["macncheese.jpg"],
   time: 25,
   portions: portions,

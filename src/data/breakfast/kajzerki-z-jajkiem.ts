@@ -9,6 +9,7 @@ import { iSAU } from "../../ingredients/ingSauce";
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
   type: "breakfast",
+  cookingMethods: [["boiled", "8-10"]],
   images: ["kajzerki-z-jajkiem.jpg"],
   time: 20,
   portions: 1,

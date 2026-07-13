@@ -11,6 +11,7 @@ const portions = 5;
 const kotletSchabowy: Recipe = {
   name: "Kotlety Schabowe",
   type: "dinner",
+  cookingMethods: [["fried", "6-8"]],
   images: ["kotlet-schabowy.jpg", "kotlet-schabowy-2.jpg"],
   time: 50,
   portions: portions,

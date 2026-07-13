@@ -13,6 +13,7 @@ const portions = 3;
 const nalesniki: Recipe = {
   name: "Naleśniki",
   type: "dessert",
+  cookingMethods: [["fried", 1]],
   images: [
     "nalesniki.jpg",
     "nalesniki-2.jpg",

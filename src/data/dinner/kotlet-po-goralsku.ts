@@ -12,6 +12,7 @@ const portions = 5;
 const kotletPoGoralsku: Recipe = {
   name: "Kotlety po Góralsku",
   type: "dinner",
+  cookingMethods: [["fried", "6-8"]],
   images: ["kotlet-po-goralsku.jpg", "kotlet-po-goralsku-2.jpg"],
   time: 70,
   portions: portions,

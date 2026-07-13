@@ -6,6 +6,7 @@ import type { Recipe } from "../../types";
 const kremMaslany: Recipe = {
   name: "Krem Maślany",
   type: "other",
+  cookingMethods: ["raw"],
   images: [""],
   time: 30,
   portions: 1,

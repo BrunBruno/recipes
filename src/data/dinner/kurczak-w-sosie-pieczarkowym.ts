@@ -13,6 +13,7 @@ const portions = 4;
 const kurczakWSosiePieczarkowymFix: Recipe = {
   name: "Kurczak w Sosie Pieczarkowym",
   type: "dinner",
+  cookingMethods: ["fried", "stewed"],
   images: [
     "kurczak-w-sosie-pieczarkowym.jpg",
     "kurczak-w-sosie-pieczarkowym-2.jpg",

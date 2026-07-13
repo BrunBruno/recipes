@@ -8,7 +8,13 @@ import type {
 import "./user-page.css";
 import MealPanelIcon from "../../assets/mealPanelIcon";
 import UtilsIcon from "../../assets/utilsIcon";
-import { allIngredients, DAILY_NUTRIENTS, ingredientLookup } from "../../utils";
+import {
+  allIngredients,
+  DAILY_NUTRIENTS,
+  formatUnit,
+  ingredientLookup,
+  unitList,
+} from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
 import {
   DAY_INGREDIENTS_KEY,
@@ -19,6 +25,7 @@ import {
 } from "./user-page-data";
 import { AnimatePresence, motion } from "framer-motion";
 import MacroIcon from "../../assets/macroIcon";
+import { iOTH } from "../../ingredients/ingOther";
 
 type UserPageProps = {
   dayIngredients: DayIngredients;
@@ -33,14 +40,14 @@ export default function UserPage({
   loadDayRecords,
   setHistory,
 }: UserPageProps) {
-  const [gramsInput, setGramsInput] = useState(100);
+  const [gramsInput, setGramsInput] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMealType, setSelectedMealType] = useState<DayMealType>();
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().split("T")[0],
   );
   const [search, setSearch] = useState("");
-  const [showSavedInfo, setShowSavedInfo] = useState(false);
+  const [showSavedInfo, setShowSavedInfo] = useState<string>("");
   const [saveDialog, setSaveDialog] = useState<{
     open: boolean;
     newRecord: DayRecord | null;
@@ -88,11 +95,15 @@ export default function UserPage({
 
   function addIngredientToDay(ing: IngredientItem) {
     if (!selectedMealType) return;
+    if (gramsInput === 0) return;
 
     setDayIngredients((prev) => ({
       ...prev,
       [selectedMealType]: [...prev[selectedMealType], [ing.name, gramsInput]],
     }));
+
+    setShowSavedInfo("✓ Dodano");
+    setTimeout(() => setShowSavedInfo(""), 2000);
   }
 
   function saveDayRecords(records: DayRecord[]) {
@@ -123,8 +134,8 @@ export default function UserPage({
 
       clearDay();
 
-      setShowSavedInfo(true);
-      setTimeout(() => setShowSavedInfo(false), 2000);
+      setShowSavedInfo("✓ Dzień został zapisany");
+      setTimeout(() => setShowSavedInfo(""), 2000);
 
       clearDay();
       return;
@@ -154,8 +165,8 @@ export default function UserPage({
       newRecord: null,
     });
 
-    setShowSavedInfo(true);
-    setTimeout(() => setShowSavedInfo(false), 2000);
+    setShowSavedInfo("✓ Dzień został nadpisany");
+    setTimeout(() => setShowSavedInfo(""), 2000);
 
     clearDay();
   };
@@ -185,8 +196,8 @@ export default function UserPage({
       newRecord: null,
     });
 
-    setShowSavedInfo(true);
-    setTimeout(() => setShowSavedInfo(false), 2000);
+    setShowSavedInfo("✓ Dzień został nadpisany");
+    setTimeout(() => setShowSavedInfo(""), 2000);
 
     clearDay();
   };
@@ -310,9 +321,9 @@ export default function UserPage({
   };
 
   const filteredIngredients = useMemo(() => {
-    return allIngredients.filter((ing) =>
-      ing.name.toLowerCase().includes(search.toLowerCase()),
-    );
+    return allIngredients
+      .filter((ing) => ing.name.toLowerCase().includes(search.toLowerCase()))
+      .sort((a, b) => a.name.localeCompare(b.name));
   }, [search]);
 
   const existingRecord = saveDialog.newRecord
@@ -372,14 +383,14 @@ export default function UserPage({
           {renderIngGroup(dayIngredients.lunch, "lunch")}
         </div>
 
-        <div
-          className="meal-card"
-          onClick={() => {
-            setSelectedMealType("dinner");
-            setIsModalOpen(true);
-          }}
-        >
-          <div className="meal-card-header">
+        <div className="meal-card">
+          <div
+            className="meal-card-header"
+            onClick={() => {
+              setSelectedMealType("dinner");
+              setIsModalOpen(true);
+            }}
+          >
             <h3>
               <MealPanelIcon type="dinner" />
               <span className="meal-name">Kolacja</span>
@@ -518,14 +529,28 @@ export default function UserPage({
 
             <div className="modal-inputs">
               <label className="modal-input">
-                Gramatura:
+                <span>Gramatura:</span>
                 <input
                   type="number"
                   min={1}
                   value={gramsInput}
-                  onChange={(e) => setGramsInput(Number(e.target.value))}
+                  onChange={(e) => {
+                    if (e.target.value[0] === "0")
+                      e.target.value = e.target.value.slice(1);
+                    setGramsInput(Number(e.target.value));
+                  }}
                 />
-                {" g"}
+                <select>
+                  {unitList.map((u) => (
+                    <option key={u} value={u}>
+                      {formatUnit({
+                        ing: iOTH.none,
+                        amount: gramsInput,
+                        unit: u,
+                      })}
+                    </option>
+                  ))}
+                </select>
               </label>
 
               <input
@@ -542,6 +567,11 @@ export default function UserPage({
                   className="ingredient-item-button"
                   onClick={() => addIngredientToDay(ing)}
                 >
+                  <IngredientIcon
+                    ingType={ing.type}
+                    subType={ing.subType}
+                    color={ing.color}
+                  />{" "}
                   {ing.name}
                 </button>
               ))}
@@ -610,8 +640,8 @@ export default function UserPage({
         </div>
       )}
 
-      {showSavedInfo && (
-        <div className="saved-info">✓ Dzień został zapisany</div>
+      {showSavedInfo !== "" && (
+        <div className="saved-info">{showSavedInfo}</div>
       )}
     </div>
   );

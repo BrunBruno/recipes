@@ -11,6 +11,7 @@ const portions = 1;
 const stek: Recipe = {
   name: "Stek",
   type: "dinner",
+  cookingMethods: ["fried"],
   images: ["stek.jpg", "stek-2.jpg"],
   time: 20,
   portions: portions,

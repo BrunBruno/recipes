@@ -14,6 +14,10 @@ const portions = 4;
 const bitki: Recipe = {
   name: "Bitki",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "5-10"],
+    ["stewed", "50"],
+  ],
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
   portions: portions,

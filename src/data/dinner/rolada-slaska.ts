@@ -15,6 +15,7 @@ const portions = 4;
 const roladaSlaska: Recipe = {
   name: "Rolada Śląska",
   type: "dinner",
+  cookingMethods: ["fried", "stewed"],
   images: ["rolada-wieprzowa.jpg"],
   time: 90,
   portions: portions,

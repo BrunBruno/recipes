@@ -9,6 +9,10 @@ import { fryingFat } from "../../utils";
 const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "5-10"],
+    ["stewed", "20-25"],
+  ],
   images: [""],
   time: 35,
   portions: 4,

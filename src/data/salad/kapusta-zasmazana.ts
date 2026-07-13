@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const kapustaZasmazana: Recipe = {
   name: "Kapusta Zasmażana",
   type: "salad",
+  cookingMethods: ["fried"],
   images: [""],
   time: 80,
   portions: 10,

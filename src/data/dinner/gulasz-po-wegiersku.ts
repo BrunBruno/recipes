@@ -11,8 +11,12 @@ const portions = 3;
 const gulaszWegrerski: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "15-20"],
+    ["stewed", "60-80"],
+  ],
   images: ["gulasz-po-wegiersku.jpg", "gulasz-po-wegiersku-2.jpg"],
-  time: 50,
+  time: 95,
   portions: portions,
   taste: 5,
   difficulty: 3,

@@ -8,6 +8,7 @@ import type { Recipe } from "../../types";
 const ciastoMurzyn: Recipe = {
   name: "Ciasto Murzyn",
   type: "dessert",
+  cookingMethods: [["baked", "30-40"]],
   images: ["ciasto-murzyn.jpg"],
   time: 45,
   portions: 10,

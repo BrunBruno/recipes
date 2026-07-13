@@ -11,6 +11,7 @@ import {
   calculateRecipeWeight,
   DAILY_NUTRIENTS,
   formatUnit,
+  getCookingMethodLabel,
 } from "../../utils";
 import type {
   DayIngredientPair,
@@ -33,6 +34,7 @@ import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
+import PreparationIcon from "../../assets/preparationIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -605,7 +607,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
         <div className="recipe-details-content">
           <section className="description-section">
             {/* {selectedRecipe.description} */}
-            {/* <br /> <br /> */}
             {selectedRecipe.difficulty && (
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>
@@ -656,6 +657,14 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 </div>
               </div>
             )}
+            {/* <div className="cooking-methods">
+              {selectedRecipe.cookingMethods.map((m) => (
+                <div key={m}>
+                  {getCookingMethodLabel(m)}{" "}
+                  <PreparationIcon type={m} color={"#fff"} />
+                </div>
+              ))}
+            </div> */}
             Cena ze jedną porcję:{" "}
             <span style={{ color: "#20c997", fontWeight: "bold" }}>
               {calculateRecipePrice(recipeState).toFixed(2)} zł

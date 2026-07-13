@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const frenchHotDog: Recipe = {
   name: "Hot Dog Francuski",
   type: "snack",
+  cookingMethods: ["toasted"],
   images: ["hot-dog-francuski.jpg"],
   time: 10,
   portions: 1,

@@ -3,6 +3,7 @@ import type { Recipe } from "../../types";
 const zur: Recipe = {
   name: "Żur",
   type: "soup",
+  cookingMethods: ["boiled"],
   images: ["zur.jpg"],
   time: 0,
   portions: 0,

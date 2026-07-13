@@ -11,6 +11,7 @@ const portions = 3;
 const marchewkaZGroszkiem: Recipe = {
   name: "Marchewka z Groszkiem",
   type: "salad",
+  cookingMethods: ["fried"],
   images: [""],
   time: 25,
   portions: portions,

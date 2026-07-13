@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const barszczCzerwony: Recipe = {
   name: "Barszcz Czerwony",
   type: "soup",
+  cookingMethods: ["boiled"],
   images: [""],
   time: 45,
   portions: 2,

@@ -8,6 +8,7 @@ import type { Recipe } from "../../types";
 const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
   type: "other",
+  cookingMethods: ["stewed"],
   images: [""],
   time: 15,
   portions: 2,

@@ -11,6 +11,10 @@ import type { Recipe } from "../../types";
 const kottuRoti: Recipe = {
   name: "Kottu Roti",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "30-40"],
+    ["fried", "1-2"],
+  ],
   images: ["kottu-roti.jpg"],
   time: 70,
   portions: 3,

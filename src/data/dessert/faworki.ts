@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const faworki: Recipe = {
   name: "Faworki",
   type: "dessert",
+  cookingMethods: [["deep-fried", "0.5-1"]],
   // images: ["faworki.jpg", "faworki-2.jpg"],
   images: [""],
   time: 90,

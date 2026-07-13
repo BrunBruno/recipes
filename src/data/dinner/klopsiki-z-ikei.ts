@@ -15,6 +15,10 @@ const portions = 5;
 const klopsikiZIkei: Recipe = {
   name: "Klopsiki z IKEI",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "10-15"],
+    ["stewed", "???"],
+  ],
   images: [""],
   time: 150,
   portions: portions,

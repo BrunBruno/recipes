@@ -15,8 +15,8 @@ export type IngredientType =
   | "fsh" // fishes
   | "dir" // diary
   | "fat" // fats
-  | "veg" // vegetables / greens  / mushrooms
-  | "frt" // fruits / nuts
+  | "veg" // vegetables / greens / mushrooms
+  | "frt" // fruits
   | "nut" // nuts
   | "grn" // grains / bakery
   | "sau" // sauces
@@ -25,23 +25,37 @@ export type IngredientType =
   | "snk" // snacks
   | "hrb" // herbs
   | "spc" // spices
-  | "oth"; // other / sugars / water
+  | "oth"; // other / sugars
 
 export type UnitType =
-  | "g"
-  | "ml"
-  | "szt"
-  | "lz"
-  | "lzi"
-  | "szk"
-  | "opak"
-  | "kst"
-  | "plas"
-  | "krom"
-  | "zbk"
-  | "lst"
-  | "ziar"
-  | "peto";
+  | "g" // gram
+  | "ml" // mililitr
+  | "szt" // sztuka
+  | "lz" // łyżka
+  | "lzi" // łyżeczka
+  | "szk" // szklanka
+  | "opak" // opakowanie
+  | "kst" // kostka
+  | "plas" // plaster
+  | "krom" // kromka
+  | "zbk" // ząbek
+  | "lst" // listel
+  | "ziar" // ziarno
+  | "peto"; // pęto
+
+export type CookingMethod =
+  | "raw" // bez obróbki
+  | "boiled" // gotowanie
+  | "steamed" // gotowanie na parze
+  | "fried" // smażenie
+  | "deep-fried" // smażenie w głębokim tłuszczu
+  | "baked" // pieczenie
+  | "grilled" // grillowanie
+  | "stewed" // duszenie
+  | "roasted" // pieczenie mięsa/warzyw
+  | "microwaved" // mikrofalówka
+  | "toasted"
+  | "air-fried";
 
 export type KeyWord =
   // MEAT
@@ -132,6 +146,7 @@ export type Recipe = {
   name: string;
   fileName?: string;
   type: MealType;
+  cookingMethods: [CookingMethod, string | number][];
   images: NonEmptyArray<string>;
   portions: number;
   time: number;

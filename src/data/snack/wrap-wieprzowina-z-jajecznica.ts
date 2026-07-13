@@ -10,6 +10,7 @@ const portions = 4;
 const wrapWieprzowyJajecznica: Recipe = {
   name: "Wrap Wieprzowy z Jajecznicą",
   type: "snack",
+  cookingMethods: ["fried", "toasted"],
   images: [
     "wrap-wieprzowina-z-jajecznica.jpg",
     "wrap-wieprzowina-z-jajecznica-2.jpg",

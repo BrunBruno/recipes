@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const kopytkaZCukrem: Recipe = {
   name: "Kopytka z Cukrem",
   type: "dessert",
+  cookingMethods: [["boiled", "25-30"]],
   images: ["kopytka-z-cukrem.jpg"],
   time: 15,
   portions: 2,

@@ -11,6 +11,10 @@ const portions = 3;
 const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
   type: "dinner",
+  cookingMethods: [
+    ["fried", "8-10"],
+    ["stewed", 10],
+  ],
   images: [
     "kurczak-po-chinsku.jpg",
     "kurczak-po-chinsku-2.jpg",

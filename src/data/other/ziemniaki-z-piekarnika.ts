@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const ziemniakiZPiekarnika: Recipe = {
   name: "Ziemniaki z Piekarnika",
   type: "other",
+  cookingMethods: ["roasted"],
   images: ["ziemniaki-z-piekarnika.jpg"],
   time: 40,
   portions: 4,

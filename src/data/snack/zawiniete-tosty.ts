@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const zawinieteTosty: Recipe = {
   name: "Zawinięte Tosty",
   type: "snack",
+  cookingMethods: ["roasted"],
   images: ["zawiniete-tosty.jpg"],
   time: 25,
   portions: 2,

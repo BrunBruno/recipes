@@ -7,8 +7,12 @@ import type { Recipe } from "../../types";
 const owsianaZOwocami: Recipe = {
   name: "Owsianka z Owocami",
   type: "breakfast",
+  cookingMethods: [
+    ["boiled", 20],
+    ["microwaved", 1.5],
+  ],
   images: ["owsianka-z-owocami.jpg", "owsianka-z-owocami-2.jpg"],
-  time: 10,
+  time: 20,
   portions: 1,
   taste: 4,
   difficulty: 1,

@@ -7,6 +7,10 @@ import { iSAU } from "../../ingredients/ingSauce";
 const parowki: Recipe = {
   name: "Parówki",
   type: "breakfast",
+  cookingMethods: [
+    ["boiled", 20],
+    ["microwaved", 1],
+  ],
   images: ["parowki.jpg", "parowki-2.jpg"],
   time: 10,
   portions: 1,

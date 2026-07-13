@@ -13,6 +13,7 @@ const portions = 3;
 const kurczakZPomidorem: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
+  cookingMethods: ["roasted"],
   images: ["kurczak-z-pomidorem.jpg"],
   time: 70,
   portions: portions,

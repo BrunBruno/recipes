@@ -14,6 +14,7 @@ import { iSNK } from "./ingredients/ingSnack";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type {
+  CookingMethod,
   Ingredient,
   IngredientChoice,
   IngredientItem,
@@ -42,6 +43,23 @@ export const ingredientCollections = [
   iLIQ,
   iSNK,
   iOTH,
+];
+
+export const unitList: UnitType[] = [
+  "g",
+  "ml",
+  "szt",
+  "lz",
+  "lzi",
+  "szk",
+  "opak",
+  "kst",
+  "plas",
+  "krom",
+  "zbk",
+  "lst",
+  "ziar",
+  "peto",
 ];
 
 type DictRecord = {
@@ -835,3 +853,22 @@ ingredientCollections.forEach((collection) => {
   });
 });
 export const allIngredients = Object.values(ingredientLookup);
+
+export const cookingMethodLabels: Record<CookingMethod, string> = {
+  raw: "Surowe",
+  boiled: "Gotowane",
+  steamed: "Gotowane na parze",
+  fried: "Smażone",
+  "deep-fried": "Smażone w głębokim tłuszczu",
+  baked: "Pieczone",
+  grilled: "Grillowane",
+  stewed: "Duszone",
+  roasted: "Pieczone",
+  microwaved: "Podgrzewane w mikrofalówce",
+  toasted: "Przypieczone w tosterze",
+  "air-fried": "Smażone beztłuszczowo",
+};
+
+export function getCookingMethodLabel(method: CookingMethod): string {
+  return cookingMethodLabels[method];
+}

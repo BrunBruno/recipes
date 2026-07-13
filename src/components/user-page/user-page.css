@@ -11,7 +11,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: calc(100vh - 5rem - 1rem);
-  /* background-color: #161616; */
   padding-bottom: 1rem;
 }
 
@@ -167,6 +166,8 @@
   background-color: #0000;
   transition: all 0.2s;
   font-weight: bold;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .add-ingredient svg {
@@ -181,6 +182,7 @@
   top: 50%;
   transform: translateY(-50%);
   opacity: 1;
+  pointer-events: all;
 }
 
 .summary-card {
@@ -324,11 +326,22 @@
   font-size: 1rem;
 }
 
-.modal-input input {
+.modal-input input,
+select {
   margin-left: 1rem;
-  font-size: 1.2rem;
-  width: 5rem;
+  font-size: 1rem;
+
   text-align: center;
+  background-color: #161616;
+  border: none;
+  padding: 0.25rem;
+}
+
+.modal-input input {
+  width: 4rem;
+}
+.modal-input select {
+  width: 7rem;
 }
 
 .modal button {
@@ -349,9 +362,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
-
   overflow-y: auto;
-  /* height: 300px; */
+  height: 40vh;
   padding-right: 4px;
 }
 
@@ -369,11 +381,17 @@
   padding: 0.5rem !important;
   font-size: 1.2rem !important;
   border: none !important;
+  display: flex;
+  gap: 0.6rem;
 }
 
 .ingredient-item-button:hover {
   color: #fff;
   background: #333;
+}
+
+.ingredient-item-button svg {
+  height: 1rem;
 }
 
 .modal-close {
@@ -551,7 +569,6 @@
 
   .modal {
     width: 90%;
-    height: 100vh;
     margin-top: 4rem;
   }
 
@@ -559,13 +576,29 @@
     font-size: 1.4rem;
   }
 
+  .modal-input {
+    display: flex;
+  }
+
+  .modal-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-input span {
+    display: none;
+  }
+
   .modal button,
-  .modal select,
   .portions-input input {
     font-size: 1.2rem;
   }
 
-  .modal-ingredient-list {
+  .modal-input input,
+  select {
+    width: auto;
+  }
+
+  .modal-input .modal-ingredient-list {
     grid-template-columns: 1fr;
   }
 }

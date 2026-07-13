@@ -10,6 +10,7 @@ const portions = 4;
 const grzybowa: Recipe = {
   name: "Grzybowa",
   type: "soup",
+  cookingMethods: ["boiled"],
   images: [""],
   time: 60,
   portions: portions,

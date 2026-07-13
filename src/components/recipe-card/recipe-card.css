@@ -91,6 +91,14 @@
   height: 1.6rem;
 }
 
+.cooking-methods {
+  display: flex;
+}
+
+.cooking-methods svg {
+  height: 1.2rem;
+}
+
 .format-ingredients {
   display: flex;
   gap: 1rem;
