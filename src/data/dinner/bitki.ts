@@ -16,7 +16,7 @@ const bitki: Recipe = {
   type: "dinner",
   cookingMethods: [
     ["fried", "5-10"],
-    ["stewed", "50"],
+    ["stewed", 50],
   ],
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,

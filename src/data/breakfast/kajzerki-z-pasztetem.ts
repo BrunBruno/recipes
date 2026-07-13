@@ -16,7 +16,15 @@ const kajzerkiZPasztetem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iMET.meat_spread, amount: 80 },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],

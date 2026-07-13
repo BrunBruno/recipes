@@ -16,7 +16,15 @@ const kajzerkiZDzemem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.butter, amount: 20 },
         { ing: iJAR.jam_strawberry, amount: 40 },
       ],

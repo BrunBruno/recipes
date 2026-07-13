@@ -19,7 +19,15 @@ const kajzerkiZWarzywami: Recipe = {
     {
       title: "Podstawa",
       items: [
-        { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.butter, amount: 20, unit: "g" },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },

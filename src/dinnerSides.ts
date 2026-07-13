@@ -7,7 +7,7 @@ import { iLIQ } from "./ingredients/ingLiquid";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
-import type { ExtrasIngredientGroup } from "./types";
+import type { CookingMethod, ExtrasIngredientGroup } from "./types";
 
 export type DinnerSidesNames =
   | "oven-potatoes"
@@ -169,9 +169,7 @@ export const dinnerSides = (
           { ing: iSPC.salt },
         ],
       };
-
-    //// ////
-
+    ////////
     case "peas-with-cranberries":
       return {
         title: "Groszek i żurawina",
@@ -418,7 +416,6 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
     ////
-
     case "peas-with-cranberries":
       return [
         "Groszek odsącz z zalewy.",
@@ -503,5 +500,80 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
       return ["Podaj surówkę z ogórka jako dodatek."];
     case "red-cabbage-ready":
       return ["Podaj modrą kapustę jako dodatek."];
+  }
+};
+
+export const dinnerSidesCookingMethods = (
+  name: DinnerSidesNames,
+): [CookingMethod, number][] => {
+  switch (name) {
+    case "oven-potatoes":
+      return [["baked", 30]];
+    case "boiled-potatoes":
+      return [["boiled", 30]];
+    case "boiled-potatoes-dry":
+      return [["boiled", 30]];
+    case "mashed-potatoes":
+      return [["boiled", 30]];
+    case "oven-fries":
+      return [["baked", 20]];
+    case "rice":
+      return [["boiled", 25]];
+    case "buckwheat":
+      return [["boiled", 25]];
+    case "bulgur":
+      return [["boiled", 25]];
+    case "penne-pasta":
+      return [["boiled", 30]];
+    case "spaghetti-pasta":
+      return [["boiled", 30]];
+    case "kopytka-ready":
+      return [["boiled", 25]];
+    case "silesian-dumplings-ready":
+      return [["boiled", 25]];
+    ////
+    case "peas-with-cranberries":
+      return [["raw", 0]];
+    case "carrot-and-peas":
+      return [
+        ["boiled", 15],
+        ["fried", 3],
+      ];
+    case "steamed-vegetables":
+      return [["steamed", 18]];
+    case "stir-fry-vegetables":
+      return [["fried", 10]];
+    case "green-beans-boiled":
+      return [["boiled", 8]];
+    case "sauteed-cabbage":
+      return [["fried", 10]];
+    case "sauerkraut-salad":
+      return [["raw", 0]];
+    case "cream-cucumber-salad":
+      return [["raw", 0]];
+    case "peas-and-beets":
+      return [["raw", 0]];
+    case "beets-shredded-ready":
+      return [["raw", 0]];
+    case "beets-fried-ready":
+      return [["raw", 0]];
+    case "beets-whole-vinegar":
+      return [["raw", 0]];
+    case "sauerkraut":
+      return [["raw", 0]];
+    case "pickled-cucumber":
+      return [["raw", 0]];
+    case "pickled-cucumber-vinegar":
+      return [["raw", 0]];
+    case "canned-peas":
+      return [["raw", 0]];
+    case "coleslaw-ready":
+      return [["raw", 0]];
+    case "corn-salad-ready":
+      return [["raw", 0]];
+    case "cucumber-salad-ready":
+      return [["raw", 0]];
+    case "red-cabbage-ready":
+      return [["raw", 0]];
   }
 };

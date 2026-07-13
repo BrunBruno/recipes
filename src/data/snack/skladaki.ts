@@ -30,7 +30,14 @@ const skladaki: Recipe = {
         { ing: iMET.salami, amount: 12, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
-        { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+            { ing: iVEG.sweet_pepper, amount: 0.5, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iHRB.oregano },
       ],
     },

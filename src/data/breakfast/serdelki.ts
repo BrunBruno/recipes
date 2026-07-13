@@ -21,7 +21,15 @@ const serdelki: Recipe = {
       title: "",
       items: [
         { ing: iMET.serdelki, amount: 6, unit: "szt" },
-        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.butter, amount: 5 },
         { ing: iSAU.mustard, amount: 2, unit: "lzi" },
       ],

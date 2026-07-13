@@ -21,7 +21,15 @@ const parowki: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 3, unit: "szt" },
-        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iFAT.butter, amount: 5 },
         { ing: iSAU.ketchup, amount: 20 },
       ],

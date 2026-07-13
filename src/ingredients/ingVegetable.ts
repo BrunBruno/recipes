@@ -10,6 +10,7 @@ type IngId =
   | "sun_dried_tomatoes"
   | "cucumber"
   | "bell_pepper"
+  | "sweet_pepper"
   | "chili_pepper"
   | "peperoni_pepper"
   | "red_bell_pepper"
@@ -182,6 +183,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.3, 6, 1],
     price: 13,
+  },
+
+  sweet_pepper: {
+    name: "Papryka słodka",
+    type: "veg",
+    isVeg: true,
+    subType: "pep",
+    color: "#D7261E",
+    kcalPer100g: 27,
+    unitWeights: {
+      szt: 180,
+    },
+    nutrientsPer100g: [1.0, 6.3, 1.3],
   },
 
   chili_pepper: {

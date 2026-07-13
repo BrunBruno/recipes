@@ -350,6 +350,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     color: "#D4E157",
     kcalPer100g: 67,
     nutrientsPer100g: [0.2, 17, 0.6],
+    price: 17,
   },
 
   cherries_sour: {

@@ -681,16 +681,83 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
   return usage;
 };
 
+export const countCookingMethodUsages = (recipes: Recipe[]) => {
+  const usages: Record<CookingMethod, number> = {
+    raw: 0,
+    boiled: 0,
+    steamed: 0,
+    fried: 0,
+    "deep-fried": 0,
+    baked: 0,
+    grilled: 0,
+    stewed: 0,
+    roasted: 0,
+    microwaved: 0,
+    toasted: 0,
+    "air-fried": 0,
+  };
+
+  recipes.forEach((recipe) => {
+    recipe.cookingMethods.forEach(([method, _]) => {
+      usages[method] = (usages[method] ?? 0) + 1;
+    });
+  });
+
+  return usages;
+};
+
+// export const countUsedIngredients = (usages: Record<string, number>) => {
+//   const usage = { yes: 0, no: 0 };
+
+//   for (const collection of ingredientCollections) {
+//     for (const ingredient of Object.values(collection)) {
+//       usages[ingredient.name] > 0 ? usage.yes++ : usage.no++;
+//     }
+//   }
+
+//   return usage;
+// };
 export const countUsedIngredients = (usages: Record<string, number>) => {
-  const usage = { yes: 0, no: 0 };
+  let all = 0;
+  let used = 0;
+  let mult = 0;
+  let verified = 0;
+  let priced = 0;
 
   for (const collection of ingredientCollections) {
     for (const ingredient of Object.values(collection)) {
-      usages[ingredient.name] > 0 ? usage.yes++ : usage.no++;
+      all++;
+
+      const count = usages[ingredient.name] ?? 0;
+
+      if (count > 0) {
+        used++;
+      } else {
+        continue;
+      }
+
+      if (count > 3) {
+        mult++;
+      }
+
+      if (ingredient.verified) {
+        verified++;
+      }
+
+      if (ingredient.price !== undefined) {
+        priced++;
+      }
     }
   }
 
-  return usage;
+  return {
+    all,
+    used,
+    mult,
+    verified,
+    priced,
+    unused: all - used,
+  };
 };
 
 export const countRecipeKcalPer100g = (recipes: Recipe[]) => {
@@ -856,17 +923,17 @@ export const allIngredients = Object.values(ingredientLookup);
 
 export const cookingMethodLabels: Record<CookingMethod, string> = {
   raw: "Surowe",
-  boiled: "Gotowane",
-  steamed: "Gotowane na parze",
-  fried: "Smażone",
-  "deep-fried": "Smażone w głębokim tłuszczu",
-  baked: "Pieczone",
-  grilled: "Grillowane",
-  stewed: "Duszone",
-  roasted: "Pieczone",
-  microwaved: "Podgrzewane w mikrofalówce",
-  toasted: "Przypieczone w tosterze",
-  "air-fried": "Smażone beztłuszczowo",
+  boiled: "Gotowanie",
+  steamed: "Gotowanie na parze",
+  fried: "Smażenie",
+  "deep-fried": "Smażenie w głębokim tłuszczu",
+  baked: "Pieczenie",
+  grilled: "Grillowanie",
+  stewed: "Duszenie",
+  roasted: "Pieczenie",
+  microwaved: "Podgrzewanie w mikrofalówce",
+  toasted: "Przypiekanie w tosterze",
+  "air-fried": "Smażenie beztłuszczowo",
 };
 
 export function getCookingMethodLabel(method: CookingMethod): string {

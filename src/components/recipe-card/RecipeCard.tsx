@@ -32,7 +32,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { dinnerSidesSteps } from "../../dinnerSides";
+import { dinnerSidesCookingMethods, dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
 import PreparationIcon from "../../assets/preparationIcon";
 
@@ -417,7 +417,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     );
 
     const barData = {
-      labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko", "Owoce i Warzywa"],
+      labels: ["Kcal", "Tłuszcze", "Węglowodany", "Białko", "Warzywa"],
       datasets: [
         {
           label: "Pokrycie (%)",
@@ -509,6 +509,31 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
         </span>
       );
     }
+  };
+
+  const getPreparationMethods = () => {
+    const sideMain = recipeState.extrasMain
+      ? dinnerSidesCookingMethods(
+          recipeState.extrasMain?.options[recipeState.extrasMain.selected]
+            .sideName,
+        )
+      : [];
+    const sideVeg = recipeState.extrasVeg
+      ? dinnerSidesCookingMethods(
+          recipeState.extrasVeg?.options[recipeState.extrasVeg.selected]
+            .sideName,
+        )
+      : [];
+
+    return [...selectedRecipe.cookingMethods, ...sideMain, ...sideVeg];
+  };
+
+  const getMinuteLabel = (time: number | string) => {
+    const value = typeof time === "number" ? time : Number(time.split("-")[1]);
+
+    if (value === 1) return "minuta";
+    if (value >= 2 && value <= 4) return "minuty";
+    return "minut";
   };
 
   return (
@@ -607,6 +632,27 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
         <div className="recipe-details-content">
           <section className="description-section">
             {/* {selectedRecipe.description} */}
+            {getPreparationMethods().length > 0 && (
+              <div className="cooking-methods">
+                {getPreparationMethods().map((m) => {
+                  if (m[0] === "raw") return null;
+
+                  return (
+                    <div key={m[0]} className="cooking-methods-element">
+                      <div className="cooking-methods-icon">
+                        <PreparationIcon type={m[0]} color={"#eaeaea"} />{" "}
+                      </div>
+                      <div className="cooking-methods-text">
+                        <span>{getCookingMethodLabel(m[0])} </span>
+                        <span>
+                          <strong>{m[1]}</strong> {getMinuteLabel(m[1])}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
             {selectedRecipe.difficulty && (
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>
@@ -657,29 +703,30 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 </div>
               </div>
             )}
-            {/* <div className="cooking-methods">
-              {selectedRecipe.cookingMethods.map((m) => (
-                <div key={m}>
-                  {getCookingMethodLabel(m)}{" "}
-                  <PreparationIcon type={m} color={"#fff"} />
-                </div>
-              ))}
-            </div> */}
             Cena ze jedną porcję:{" "}
-            <span style={{ color: "#20c997", fontWeight: "bold" }}>
+            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
               {calculateRecipePrice(recipeState).toFixed(2)} zł
-            </span>
+            </strong>
             <br />
             Lista składników przeliczona na:{" "}
-            <span style={{ color: "#20c997", fontWeight: "bold" }}>
+            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
               {selectedRecipe.portions}{" "}
               {selectedRecipe.portions === 1
                 ? "porcję."
                 : selectedRecipe.portions < 5
                   ? "porcje."
                   : "porcji."}
-            </span>
+            </strong>
             <br />
+            Łączny czas przygotowania:{" "}
+            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
+              {selectedRecipe.time}{" "}
+              {selectedRecipe.time === 1
+                ? "minuta."
+                : selectedRecipe.time < 5
+                  ? "minuty."
+                  : "minut."}
+            </strong>
             <div className="format-ingredients">
               <span>Wyświetl format: </span>
               <button
@@ -961,53 +1008,66 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 <div className="params-items">
                   <div
                     className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcal(recipeState, portions))} 
-                ${getStatusClass("kcal", calculateRecipeKcal(recipeState, portions))}
-              `}
+                                ${getFontSizeClass(calculateRecipeKcal(recipeState, portions))} 
+                                ${getStatusClass("kcal", calculateRecipeKcal(recipeState, portions))}
+                              `}
                   >
                     <span>{calculateRecipeKcal(recipeState, portions)}</span>
                   </div>
                   <div
                     className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
-                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
-              `}
+                                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
+                                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
+                              `}
                   >
                     <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
                   </div>
-                  <div
+                  {/* <div
                     className={`recipe-param 
-                ${getFontSizeClass(selectedRecipe.time)} 
-                ${getStatusClass("time", selectedRecipe.time)}
-              `}
+                                ${getFontSizeClass(selectedRecipe.time)} 
+                                ${getStatusClass("time", selectedRecipe.time)}
+                              `}
                   >
                     <span>{selectedRecipe.time}</span>
-                  </div>
+                  </div> */}
                   <div
                     className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[0])}
-              `}
+                                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[0])}
+                              `}
                   >
                     <span>
                       {calculateRecipeNutrients(recipeState, portions)[0]}
+                      <span className="g">g</span>
                     </span>
                   </div>
                   <div
                     className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[1])}
-              `}
+                                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[1])}
+                              `}
                   >
                     <span>
                       {calculateRecipeNutrients(recipeState, portions)[1]}
+                      <span className="g">g</span>
                     </span>
                   </div>
                   <div
                     className={`recipe-param 
-                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[2])}
-              `}
+                                ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[2])}
+                              `}
                   >
                     <span>
                       {calculateRecipeNutrients(recipeState, portions)[2]}
+                      <span className="g">g</span>
+                    </span>
+                  </div>
+                  <div
+                    className={`recipe-param 
+                                ${getFontSizeClass(calculateRecipeVegMass(recipeState, portions).toFixed(1))}
+                              `}
+                  >
+                    <span>
+                      {calculateRecipeVegMass(recipeState, portions).toFixed(1)}
+                      <span className="g">g</span>
                     </span>
                   </div>
                 </div>
