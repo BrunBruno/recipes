@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-type KeywordsIconProps = {
+type MacroIconProps = {
   type: string;
 };
 
@@ -76,7 +76,7 @@ const iconMap: Record<string, JSX.Element> = {
   ),
 };
 
-const MacroIcon = ({ type }: KeywordsIconProps) => {
+const MacroIcon = ({ type }: MacroIconProps) => {
   const icon = iconMap[type];
 
   return <span>{icon}</span>;

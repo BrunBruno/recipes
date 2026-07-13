@@ -1,11 +1,11 @@
 import type { DayMealType } from "../types";
 
-type KeywordsIconProps = {
+type ServingTimeIconProps = {
   type: DayMealType;
   color: string;
 };
 
-const ServingTimeIcon = ({ type, color }: KeywordsIconProps) => {
+const ServingTimeIcon = ({ type, color }: ServingTimeIconProps) => {
   switch (type) {
     case "breakfast":
       return (
