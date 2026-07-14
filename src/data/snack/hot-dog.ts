@@ -8,7 +8,7 @@ const hotHog: Recipe = {
   name: "Hot Dog",
   type: "snack",
   cookingMethods: [["microwaved", 3]],
-  images: ["hot-dog.jpg"],
+  images: ["hot-dog.jpg", "hot-dog-2.jpg"],
   time: 10,
   portions: 2,
   taste: 5,
@@ -18,7 +18,14 @@ const hotHog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 4, unit: "szt" },
-        { ing: iGRN.hotdog_buns, amount: 4, unit: "szt" },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.hotdog_buns, amount: 4, unit: "szt" },
+            { ing: iGRN.chicken_buns, amount: 4, unit: "szt" },
+          ],
+          selected: 0,
+        },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.sauerkraut, amount: 160 },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },

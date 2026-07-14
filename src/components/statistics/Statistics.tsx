@@ -4,7 +4,6 @@ import type { CookingMethod, IngredientType, MealType } from "../../types";
 import {
   interpolateKcalColor,
   kcalTopColors,
-  kcalLowColors,
   MealTypesData,
   countDoneRecipes,
   countIngredientTypes,
@@ -20,6 +19,10 @@ import {
   allIngredients,
   countCookingMethodUsages,
   getCookingMethodLabel,
+  countRecipePricePerPortion,
+  kcalLowColors,
+  othTopColors,
+  othLowColors,
 } from "../../utils";
 import {
   ArcElement,
@@ -58,41 +61,72 @@ const usedIngredients = countUsedIngredients(ingredientUsage);
 const recipeWeightsPerPortion = countRecipeWeightPerPortion(okRecipes);
 const recipesPrepTimes = countRecipePreparationTime(okRecipes);
 const cookingMethodUsages = countCookingMethodUsages(okRecipes);
+const recipePrices = countRecipePricePerPortion(okRecipes);
 
 function Statistics({}: StatisticsProps) {
   const canvasRefs = {
     recipeTypes: useRef<HTMLCanvasElement | null>(null),
-    ingredientTypes: useRef<HTMLCanvasElement | null>(null),
     doneRecipes: useRef<HTMLCanvasElement | null>(null),
+
+    ingredientTypes: useRef<HTMLCanvasElement | null>(null),
     ingredientUsage: useRef<HTMLCanvasElement | null>(null),
-    topCalories: useRef<HTMLCanvasElement | null>(null),
-    bottomCalories: useRef<HTMLCanvasElement | null>(null),
-    topKcalDensity: useRef<HTMLCanvasElement | null>(null),
-    bottomKcalDensity: useRef<HTMLCanvasElement | null>(null),
     usedIngredients: useRef<HTMLCanvasElement | null>(null),
-    topWeightsPerPortion: useRef<HTMLCanvasElement | null>(null),
-    bottomWeightsPerPortion: useRef<HTMLCanvasElement | null>(null),
-    preparationTime: useRef<HTMLCanvasElement | null>(null),
-    priceChartRef: useRef<HTMLCanvasElement | null>(null),
+    ingredientPrice: useRef<HTMLCanvasElement | null>(null),
     kcalDistributionRef: useRef<HTMLCanvasElement | null>(null),
+
+    calories: useRef<HTMLCanvasElement | null>(null),
+    tCalories: useRef<HTMLCanvasElement | null>(null),
+    bCalories: useRef<HTMLCanvasElement | null>(null),
+
+    kcalDensity: useRef<HTMLCanvasElement | null>(null),
+    tKcalDensity: useRef<HTMLCanvasElement | null>(null),
+    bKcalDensity: useRef<HTMLCanvasElement | null>(null),
+
+    weightsPerPortion: useRef<HTMLCanvasElement | null>(null),
+    tWeightsPerPortion: useRef<HTMLCanvasElement | null>(null),
+    bWeightsPerPortion: useRef<HTMLCanvasElement | null>(null),
+
+    preparationTime: useRef<HTMLCanvasElement | null>(null),
+    tPreparationTime: useRef<HTMLCanvasElement | null>(null),
+    bPreparationTime: useRef<HTMLCanvasElement | null>(null),
+
+    recipePrice: useRef<HTMLCanvasElement | null>(null),
+    tRecipePrice: useRef<HTMLCanvasElement | null>(null),
+    bRecipePrice: useRef<HTMLCanvasElement | null>(null),
+
     unitChartRef: useRef<HTMLCanvasElement | null>(null),
     cookingMethods: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
     recipeTypes: useRef<Chart | null>(null),
-    ingredientTypes: useRef<Chart | null>(null),
     doneRecipes: useRef<Chart | null>(null),
+
+    ingredientTypes: useRef<Chart | null>(null),
     ingredientUsage: useRef<Chart | null>(null),
-    topCalories: useRef<Chart | null>(null),
-    bottomCalories: useRef<Chart | null>(null),
-    topKcalDensity: useRef<Chart | null>(null),
-    bottomKcalDensity: useRef<Chart | null>(null),
     usedIngredients: useRef<Chart | null>(null),
-    topWeightsPerPortion: useRef<Chart | null>(null),
-    bottomWeightsPerPortion: useRef<Chart | null>(null),
-    preparationTime: useRef<Chart | null>(null),
-    priceChartRef: useRef<Chart | null>(null),
+    ingredientPrice: useRef<Chart | null>(null),
     kcalDistributionRef: useRef<Chart | null>(null),
+
+    calories: useRef<Chart | null>(null),
+    tCalories: useRef<Chart | null>(null),
+    bCalories: useRef<Chart | null>(null),
+
+    kcalDensity: useRef<Chart | null>(null),
+    tKcalDensity: useRef<Chart | null>(null),
+    bKcalDensity: useRef<Chart | null>(null),
+
+    weightsPerPortion: useRef<Chart | null>(null),
+    tWeightsPerPortion: useRef<Chart | null>(null),
+    bWeightsPerPortion: useRef<Chart | null>(null),
+
+    preparationTime: useRef<Chart | null>(null),
+    tPreparationTime: useRef<Chart | null>(null),
+    bPreparationTime: useRef<Chart | null>(null),
+
+    recipePrice: useRef<Chart | null>(null),
+    tRecipePrice: useRef<Chart | null>(null),
+    bRecipePrice: useRef<Chart | null>(null),
+
     unitChartRef: useRef<Chart | null>(null),
     cookingMethods: useRef<Chart | null>(null),
   };
@@ -192,63 +226,79 @@ function Statistics({}: StatisticsProps) {
     let colors: string[];
     let min: number;
     let max: number;
-    let unit: string;
 
-    //// CHART TOP KCAL ////
+    //// CHART KCAL PER PORTION ////
+    data = sorted(recipeCalories);
+    // data = Object.entries(recipeCalories);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([, v]) =>
+      interpolateKcalColor(v, min, max, "#087f5b", "#c92a2a"),
+    );
+    createChart(
+      canvasRefs.calories.current,
+      chartRefs.calories,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      colors,
+      "kcal",
+    );
+
     data = topN(recipeCalories, 10);
-    colors = kcalTopColors;
-    unit = "kcal";
-
     createChart(
-      canvasRefs.topCalories.current,
-      chartRefs.topCalories,
+      canvasRefs.tCalories.current,
+      chartRefs.tCalories,
       data.map(([k]) => k),
       data.map(([, v]) => v),
-      colors,
-      unit,
+      kcalTopColors,
+      "kcal",
     );
 
-    //// CHART BOTTOM KCAL ////
     data = bottomN(recipeCalories, 10);
-    colors = kcalLowColors;
-    unit = "kcal";
-
     createChart(
-      canvasRefs.bottomCalories.current,
-      chartRefs.bottomCalories,
+      canvasRefs.bCalories.current,
+      chartRefs.bCalories,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      kcalLowColors,
+      "kcal",
+    );
+
+    //// CHART KCAL DENSITY ////
+    // data = Object.entries(recipeKcalPer100g);
+    data = sorted(recipeKcalPer100g);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([, v]) =>
+      interpolateKcalColor(v, min, max, "#087f5b", "#c92a2a"),
+    );
+    createChart(
+      canvasRefs.kcalDensity.current,
+      chartRefs.kcalDensity,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "kcal / 100g",
     );
 
-    //// CHART TOP KCAL DENS ////
     data = topN(recipeKcalPer100g, 10);
-    colors = kcalTopColors;
-    unit = "kcal / 100g";
-
     createChart(
-      canvasRefs.topKcalDensity.current,
-      chartRefs.topKcalDensity,
+      canvasRefs.tKcalDensity.current,
+      chartRefs.tKcalDensity,
       data.map(([k]) => k),
       data.map(([, v]) => v),
-      colors,
-      unit,
+      kcalTopColors,
+      "kcal / 100g",
     );
-
-    //// CHART BOTTOM KCAL DENS ////
 
     data = bottomN(recipeKcalPer100g, 10);
-    colors = kcalLowColors;
-    unit = "kcal / 100g";
-
     createChart(
-      canvasRefs.bottomKcalDensity.current,
-      chartRefs.bottomKcalDensity,
+      canvasRefs.bKcalDensity.current,
+      chartRefs.bKcalDensity,
       data.map(([k]) => k),
       data.map(([, v]) => v),
-      colors,
-      unit,
+      kcalLowColors,
+      "kcal / 100g",
     );
 
     //// CHART ING USAGES ////
@@ -264,51 +314,40 @@ function Statistics({}: StatisticsProps) {
 
     data = topN(ingredientUsage, 10);
     colors = data.map(([k]) => ingredientColorMap[k]);
-    unit = "razy";
-
     createChart(
       canvasRefs.ingredientUsage.current,
       chartRefs.ingredientUsage,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "razy",
     );
 
     //// CHART RECIPE TYPES ////
-
     const recipeTypesData = Object.entries(recipeTypeCount);
     data = recipeTypesData.map(([k, v]) => [
       MealTypesData[k as MealType].label,
       v,
     ]);
-
     colors = recipeTypesData.map(([k]) => MealTypesData[k as MealType].color);
-    unit = "przepisów";
-
     createChart(
       canvasRefs.recipeTypes.current,
       chartRefs.recipeTypes,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "przepisów",
     );
 
     //// CHART ING TYPES ////
-
     const ingredientTypesData = Object.entries(ingredientTypeCount);
-
     data = ingredientTypesData.map(([k, v]) => [
       IngredientTypeData[k as IngredientType].label,
       v,
     ]);
-
     colors = ingredientTypesData.map(
       ([k]) => IngredientTypeData[k as IngredientType].color,
     );
-
-    unit = "składników";
 
     createChart(
       canvasRefs.ingredientTypes.current,
@@ -316,29 +355,24 @@ function Statistics({}: StatisticsProps) {
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "składników",
     );
 
     //// CHART DONE RECIPES ////
-
     data = [
       ["Zrobione", doneRecipeCount.yes],
       ["Nie zrobione", doneRecipeCount.no],
     ];
-    colors = ["#0ca678", "#f03e3e"];
-    unit = "";
-
     createChart(
       canvasRefs.doneRecipes.current,
       chartRefs.doneRecipes,
       data.map(([k]) => k),
       data.map(([, v]) => v),
-      colors,
-      unit,
+      ["#0ca678", "#f03e3e"],
+      "przepisów",
     );
 
-    //// CHART  USED INGREDIENTS ////
-
+    //// CHART USED INGREDIENTS ////
     data = [
       ["Wszystkie", usedIngredients.all],
       ["Użyte", usedIngredients.used],
@@ -346,65 +380,100 @@ function Statistics({}: StatisticsProps) {
       ["Zweryfikowane", usedIngredients.verified],
       ["Z ceną", usedIngredients.priced],
     ];
-
     colors = ["#666666", "#0ca678", "#3b5bdb", "#f59f00", "#ae3ec9"];
-    unit = "";
-
     createChart(
       canvasRefs.usedIngredients.current,
       chartRefs.usedIngredients,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "składników",
     );
 
-    //// CHART TOP WEIGHT PER PORTION ////
-
-    data = topN(recipeWeightsPerPortion, 10);
+    //// CHART WEIGHT PER PORTION ////
+    // data = Object.entries(recipeWeightsPerPortion);
+    data = sorted(recipeWeightsPerPortion);
     min = Math.min(...data.map(([, v]) => v));
     max = Math.max(...data.map(([, v]) => v));
     colors = data.map(([, v]) =>
       interpolateKcalColor(v, min, max, "#3b5bdb", "#f76707"),
     );
-    unit = "g / porc.";
 
     createChart(
-      canvasRefs.topWeightsPerPortion.current,
-      chartRefs.topWeightsPerPortion,
+      canvasRefs.weightsPerPortion.current,
+      chartRefs.weightsPerPortion,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "g / porc.",
     );
 
-    //// CHART BOTTOM WEIGHTS PER PORTION ////
+    data = topN(recipeWeightsPerPortion, 10);
+    createChart(
+      canvasRefs.tWeightsPerPortion.current,
+      chartRefs.tWeightsPerPortion,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      othTopColors,
+      "g / porc.",
+    );
 
     data = bottomN(recipeWeightsPerPortion, 10);
+    createChart(
+      canvasRefs.bWeightsPerPortion.current,
+      chartRefs.bWeightsPerPortion,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      othLowColors,
+      "g / porc.",
+    );
+
+    //// CHART PRICE PER PORTION ////
+    // data = Object.entries(recipePrices);
+    data = sorted(recipePrices);
     min = Math.min(...data.map(([, v]) => v));
     max = Math.max(...data.map(([, v]) => v));
-    colors = [...data].map(([, v]) =>
-      interpolateKcalColor(v, min, max, "#3b5bdb", "#f76707"),
+    colors = data.map(([, v]) =>
+      interpolateKcalColor(v, min, max, "#087f5b", "#c92a2a"),
     );
-    unit = "g / porc.";
 
     createChart(
-      canvasRefs.bottomWeightsPerPortion.current,
-      chartRefs.bottomWeightsPerPortion,
+      canvasRefs.recipePrice.current,
+      chartRefs.recipePrice,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "zł / porcję",
+    );
+
+    data = topN(recipePrices, 10);
+    createChart(
+      canvasRefs.tRecipePrice.current,
+      chartRefs.tRecipePrice,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      kcalTopColors,
+      "zł / porcję",
+    );
+
+    data = bottomN(recipePrices, 10);
+    createChart(
+      canvasRefs.bRecipePrice.current,
+      chartRefs.bRecipePrice,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      kcalLowColors,
+      "zł / porcję",
     );
 
     //// CHART PREPARATION TIME ////
     data = sorted(recipesPrepTimes);
+    // data = Object.entries(recipesPrepTimes);
     min = Math.min(...data.map(([, v]) => v));
     max = Math.max(...data.map(([, v]) => v));
     colors = data.map(([, v]) =>
-      interpolateKcalColor(v, min, max, "#ae3ec9", "#f59f00"),
+      interpolateKcalColor(v, min, max, "#3b5bdb", "#f76707"),
     );
-    unit = "min";
 
     createChart(
       canvasRefs.preparationTime.current,
@@ -412,7 +481,27 @@ function Statistics({}: StatisticsProps) {
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "min",
+    );
+
+    data = topN(recipesPrepTimes, 10);
+    createChart(
+      canvasRefs.tPreparationTime.current,
+      chartRefs.tPreparationTime,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      othTopColors,
+      "min",
+    );
+
+    data = bottomN(recipesPrepTimes, 10);
+    createChart(
+      canvasRefs.bPreparationTime.current,
+      chartRefs.bPreparationTime,
+      data.map(([k]) => k),
+      data.map(([, v]) => v),
+      othLowColors,
+      "min",
     );
 
     //// CHART PRICE DISTRIBUTION ////
@@ -438,15 +527,14 @@ function Statistics({}: StatisticsProps) {
     colors = priceRanges.map((_, i) =>
       interpolateKcalColor(i, 0, 11, "#2ecc71", "#ff6b6b"),
     );
-    unit = "składników";
 
     createChart(
-      canvasRefs.priceChartRef.current,
-      chartRefs.priceChartRef,
+      canvasRefs.ingredientPrice.current,
+      chartRefs.ingredientPrice,
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "składników",
     );
 
     //// CHART KCAL DISTRIBUTION ////
@@ -470,7 +558,6 @@ function Statistics({}: StatisticsProps) {
     colors = kcalRanges.map((_, i) =>
       interpolateKcalColor(i, 0, 8, "#2ecc71", "#ff6b6b"),
     );
-    unit = "składników";
 
     createChart(
       canvasRefs.kcalDistributionRef.current,
@@ -478,7 +565,7 @@ function Statistics({}: StatisticsProps) {
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "składników",
     );
 
     //// CHART UNIT USAGE ////
@@ -497,7 +584,6 @@ function Statistics({}: StatisticsProps) {
     colors = data.map(([_, v]) =>
       interpolateKcalColor(v, min, max, "#666666", "#ffffff"),
     );
-    unit = "składników";
 
     createChart(
       canvasRefs.unitChartRef.current,
@@ -505,7 +591,7 @@ function Statistics({}: StatisticsProps) {
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "składników",
     );
 
     //// CHART COOKING METHODS ////
@@ -519,7 +605,6 @@ function Statistics({}: StatisticsProps) {
     colors = data.map(([_, v]) =>
       interpolateKcalColor(v, min, max, "#666666", "#ffffff"),
     );
-    unit = "";
 
     createChart(
       canvasRefs.cookingMethods.current,
@@ -527,7 +612,7 @@ function Statistics({}: StatisticsProps) {
       data.map(([k]) => k),
       data.map(([, v]) => v),
       colors,
-      unit,
+      "razy",
     );
   };
 
@@ -578,7 +663,7 @@ function Statistics({}: StatisticsProps) {
       <div className="statistics-element">
         <h2>Składniki w przedziałach cenowych</h2>
         <div className="chart-wrapper">
-          <canvas ref={canvasRefs.priceChartRef} />
+          <canvas ref={canvasRefs.ingredientPrice} />
         </div>
       </div>
 
@@ -604,48 +689,6 @@ function Statistics({}: StatisticsProps) {
       </div>
 
       <div className="statistics-element">
-        <h2>Dziesięć najbardziej kalorycznych przepisów na 100g</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.topKcalDensity}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Dziesięć najmniej kalorycznych przepisów na 100g</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.bottomKcalDensity}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Dziesięć najbardziej kalorycznych przepisów na porcję</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.topCalories}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Dziesięć najmniej kalorycznych przepisów na porcję</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.bottomCalories}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Największe masy posiłku w przeliczeniu na porcję</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.topWeightsPerPortion}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Najmniejsze masy posiłku w przeliczeniu na porcję</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.bottomWeightsPerPortion}></canvas>
-        </div>
-      </div>
-
-      <div className="statistics-element">
         <h2>
           Wykonane przepisy{" "}
           {((100 * doneRecipeCount.yes) / recipes.length).toFixed(1)}%
@@ -655,14 +698,102 @@ function Statistics({}: StatisticsProps) {
         </div>
       </div>
 
-      {/* <div className="statistics-element">
+      <div className="statistics-element">
+        <h2>Cena w przeliczniu na porcję</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.recipePrice}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najdroższe posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tRecipePrice}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najtańsze posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.bRecipePrice}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Kaloryczność w przeliczeniu na 100 g</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.kcalDensity}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najwyższa gęstość kaloryczna</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tKcalDensity}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najmniejsza gęstość kaloryczna</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.bKcalDensity}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Kaloryczność w przeliczeniu na porcję</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.calories}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najbardziej kaloryczne posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tCalories}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najmniej kaloryczne posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.bCalories}></canvas>
+        </div>
+      </div>
+
+      {/* time */}
+      <div className="statistics-element">
         <h2>Czas przygotowania posiłku</h2>
         <div className="chart-wrapper">
           <canvas ref={canvasRefs.preparationTime}></canvas>
         </div>
       </div>
+      <div className="statistics-element">
+        <h2>Najdłuższe posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tPreparationTime}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najszybsze posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.bPreparationTime}></canvas>
+        </div>
+      </div>
 
- */}
+      {/* weight */}
+      <div className="statistics-element">
+        <h2>Masy posiłków</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.weightsPerPortion}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najcięższe posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tWeightsPerPortion}></canvas>
+        </div>
+      </div>
+      <div className="statistics-element">
+        <h2>Najlżejsze posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.bWeightsPerPortion}></canvas>
+        </div>
+      </div>
     </div>
   );
 }

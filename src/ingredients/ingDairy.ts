@@ -30,6 +30,7 @@ type IngId =
   | "cream_cheese_horseradish"
   | "mascarpone"
   | "mozzarella"
+  | "mozzarella_mini"
   | "burrata"
   | "feta"
   | "camembert"
@@ -243,7 +244,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 293,
     unitWeights: {
       ml: 1,
+      lzi: 5,
       lz: 15,
+      opak: 200,
     },
     nutrientsPer100g: [30, 3.4, 2.3],
     verified: true,
@@ -363,11 +366,26 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#FDFDFD",
-    kcalPer100g: 280,
+    kcalPer100g: 220,
     unitWeights: {
       opak: 125,
     },
-    nutrientsPer100g: [17, 3, 18],
+    nutrientsPer100g: [16, 2, 17],
+    price: 24,
+    verified: true,
+  },
+
+  mozzarella_mini: {
+    name: "Mozzarella mini",
+    type: "dir",
+    subType: "che",
+    color: "#FDFDFD",
+    kcalPer100g: 220,
+    unitWeights: {
+      opak: 125,
+    },
+    nutrientsPer100g: [16, 2, 17],
+    price: 34.5,
   },
 
   burrata: {

@@ -131,6 +131,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
     kcalPer100g: 553,
     unitWeights: {
       szt: 33,
+      opak: 235,
     },
     nutrientsPer100g: [32, 60, 5.1],
     price: 29,

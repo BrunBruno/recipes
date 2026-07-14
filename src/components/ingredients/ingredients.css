@@ -62,9 +62,12 @@
 
 .ingredient-stat .stat-value {
   display: block;
+  color: #ffffff;
+}
+
+.ingredient-stat .stat-value strong {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
 }
 
 .ingredient-stat .stat-label {

@@ -25,6 +25,10 @@
   border-right: solid 2px #000;
 }
 
+.statistics-element.xl {
+  grid-column: span 2;
+}
+
 .statistics-element h2 {
   filter: drop-shadow(0 0 0.5rem #aaa);
   text-align: center;

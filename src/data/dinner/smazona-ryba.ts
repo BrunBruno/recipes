@@ -14,7 +14,7 @@ const smazonaRyba: Recipe = {
   type: "dinner",
   cookingMethods: [["fried", 8]],
   images: [""],
-  time: 0,
+  time: 30,
   portions: portions,
   taste: null,
   difficulty: null,

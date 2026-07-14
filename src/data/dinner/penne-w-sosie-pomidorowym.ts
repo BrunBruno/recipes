@@ -7,10 +7,13 @@ import type { Recipe } from "../../types";
 const penneWSosiePomidorowym: Recipe = {
   name: "Penne w Sosie Pomidorowym",
   type: "dinner",
-  cookingMethods: [["boiled", 20], ["stewed", 20]],
+  cookingMethods: [
+    ["boiled", 20],
+    ["stewed", 20],
+  ],
   images: [""],
   time: 20,
-  portions: 2,
+  portions: 3,
   taste: null,
   difficulty: null,
   ingredients: [
@@ -20,7 +23,14 @@ const penneWSosiePomidorowym: Recipe = {
         { ing: iGRN.penne_pasta, amount: 300 },
         { ing: iJAR.tomato_passata, amount: 500 },
         { ing: iDIR.cream_30, amount: 200, unit: "ml" },
-        { ing: iDIR.mozzarella, amount: 125 },
+        {
+          type: "choice",
+          options: [
+            { ing: iDIR.mozzarella, amount: 125 },
+            { ing: iDIR.mozzarella_mini, amount: 125 },
+          ],
+          selected: 0,
+        },
         { ing: iSPC.kamis_penne_fix, amount: 1, unit: "opak" },
       ],
     },

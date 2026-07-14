@@ -120,6 +120,32 @@ export const kcalLowColors = [
   "#e6fcf5",
 ];
 
+export const othTopColors = [
+  "#d9480f",
+  "#e8590c",
+  "#f76707",
+  "#fd7e14",
+  "#ff922b",
+  "#ffa94d",
+  "#ffc078",
+  "#ffd8a8",
+  "#ffe8cc",
+  "#fff4e6",
+];
+
+export const othLowColors = [
+  "#364fc7",
+  "#3b5bdb",
+  "#4263eb",
+  "#4c6ef5",
+  "#5c7cfa",
+  "#748ffc",
+  "#91a7ff",
+  "#bac8ff",
+  "#dbe4ff",
+  "#edf2ff",
+];
+
 export const hexToRgb = (hex: string) => {
   const m = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
   if (!m) throw new Error("Invalid hex");
@@ -706,17 +732,6 @@ export const countCookingMethodUsages = (recipes: Recipe[]) => {
   return usages;
 };
 
-// export const countUsedIngredients = (usages: Record<string, number>) => {
-//   const usage = { yes: 0, no: 0 };
-
-//   for (const collection of ingredientCollections) {
-//     for (const ingredient of Object.values(collection)) {
-//       usages[ingredient.name] > 0 ? usage.yes++ : usage.no++;
-//     }
-//   }
-
-//   return usage;
-// };
 export const countUsedIngredients = (usages: Record<string, number>) => {
   let all = 0;
   let used = 0;
@@ -797,6 +812,16 @@ export const countRecipePreparationTime = (recipes: Recipe[]) => {
 
   recipes.forEach((recipe) => {
     usage[recipe.name] = recipe.time;
+  });
+
+  return usage;
+};
+
+export const countRecipePricePerPortion = (recipes: Recipe[]) => {
+  const usage: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    usage[recipe.name] = Math.round(100 * calculateRecipePrice(recipe)) / 100;
   });
 
   return usage;

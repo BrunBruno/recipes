@@ -27,9 +27,6 @@ export default function IngredientCard({
 `;
 
   const unitWeights = ingredient.unitWeights;
-  const hasMultipleUnits = unitWeights && Object.keys(unitWeights).length > 1;
-
-  console.log(hasMultipleUnits);
 
   return (
     <div className="ingredient-card-backdrop" onClick={onClose}>
@@ -37,9 +34,10 @@ export default function IngredientCard({
         className="ingredient-card-modal"
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="ingredient-card-close" onClick={onClose}>
-          <UtilsIcon name="close" color="#888" />
-        </button>
+        <div
+          className="ingredient-card-background"
+          style={{ backgroundColor: ingredient.color }}
+        ></div>
 
         <header className="ingredient-card-title">
           <IngredientIcon
@@ -108,9 +106,7 @@ export default function IngredientCard({
           </div>
 
           {unitWeights && Object.keys(unitWeights).length > 0 && (
-            <div
-              className={`ingredient-units ${hasMultipleUnits ? "mult-rows" : ""}`}
-            >
+            <div className={`ingredient-units`}>
               <h3>Przeliczniki</h3>
 
               {Object.entries(unitWeights).map(([unit, weight]) => (

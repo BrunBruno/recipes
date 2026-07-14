@@ -146,27 +146,63 @@ function Ingredients({}: IngredientsProps) {
 
       <div className="ingredient-stats">
         <div className="ingredient-stat">
-          <span className="stat-value">{ingredientStats.all}</span>
+          <span className="stat-value">
+            <strong>{ingredientStats.all}</strong>
+          </span>
           <span className="stat-label">Wszystkich</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">{ingredientStats.used}</span>
+          <span className="stat-value">
+            <strong>{ingredientStats.used}</strong>
+            <span>
+              {" "}
+              ({((100 * ingredientStats.used) / ingredientStats.all).toFixed(1)}
+              %)
+            </span>
+          </span>
           <span className="stat-label">Wykorzystanych</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">{ingredientStats.mult}</span>
+          <span className="stat-value">
+            <strong>{ingredientStats.mult}</strong>
+            <span>
+              {" "}
+              ({((100 * ingredientStats.mult) / ingredientStats.all).toFixed(1)}
+              %)
+            </span>
+          </span>
           <span className="stat-label">Wielokrotnie</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">{ingredientStats.verified}</span>
+          <span className="stat-value">
+            <strong>{ingredientStats.verified}</strong>
+            <span>
+              {" "}
+              (
+              {((100 * ingredientStats.verified) / ingredientStats.all).toFixed(
+                1,
+              )}
+              %)
+            </span>
+          </span>
           <span className="stat-label">Zweryfikowanych</span>
         </div>
 
         <div className="ingredient-stat">
-          <span className="stat-value">{ingredientStats.priced}</span>
+          <span className="stat-value">
+            <strong>{ingredientStats.priced}</strong>
+            <span>
+              {" "}
+              (
+              {((100 * ingredientStats.priced) / ingredientStats.all).toFixed(
+                1,
+              )}
+              %)
+            </span>
+          </span>
           <span className="stat-label">Z ceną</span>
         </div>
       </div>

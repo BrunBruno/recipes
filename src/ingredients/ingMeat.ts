@@ -52,6 +52,7 @@ type IngId =
   | "sausage"
   | "white_sausage"
   | "sausages"
+  | "sausages_berlinki"
   | "serdelki"
   | "meat_spread"
   | "pork_knuckle_ready"
@@ -220,6 +221,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 162,
     unitWeights: {
       opak: 400,
+      szt: 60,
     },
     nutrientsPer100g: [6.5, 6.4, 19],
     price: 37.5,
@@ -234,6 +236,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 235,
     unitWeights: {
       opak: 500,
+      szt: 60,
     },
     nutrientsPer100g: [15, 8, 18],
   },
@@ -480,12 +483,14 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "ham",
     color: "#E9967A",
-    kcalPer100g: 118,
+    kcalPer100g: 99,
     unitWeights: {
       plas: 12,
-      opak: 120,
+      opak: 100,
     },
-    nutrientsPer100g: [2, 5, 19],
+    nutrientsPer100g: [2.6, 1, 18],
+    price: 50,
+    verified: true,
   },
 
   chicken_ham: {
@@ -540,6 +545,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 160,
     },
     nutrientsPer100g: [36, 1.5, 20],
+    price: 52.5,
     verified: true,
   },
 
@@ -620,6 +626,20 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 50,
     },
     nutrientsPer100g: [21, 2.7, 13],
+    verified: true,
+  },
+
+  sausages_berlinki: {
+    name: "Parówki Berlinki",
+    type: "met",
+    subType: "ham",
+    color: "#D68E56 ",
+    kcalPer100g: 207,
+    unitWeights: {
+      szt: 45,
+      opak: 225,
+    },
+    nutrientsPer100g: [16, 2.8, 13],
     verified: true,
   },
 

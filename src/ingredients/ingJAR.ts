@@ -62,12 +62,15 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     isVeg: true,
     color: "#B71C1C",
-    kcalPer100g: 82,
+    kcalPer100g: 99,
     unitWeights: {
-      lz: 15,
-      lzi: 5,
+      lz: 20,
+      lzi: 8,
+      opak: 190,
     },
-    nutrientsPer100g: [0.3, 18, 4],
+    nutrientsPer100g: [0.5, 17, 5.3],
+    price: 26.3,
+    verified: true,
   },
 
   tomato_passata: {
@@ -75,11 +78,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     isVeg: true,
     color: "#D94C3A",
-    kcalPer100g: 33,
+    kcalPer100g: 35,
     unitWeights: {
-      opak: 400,
+      opak: 500,
     },
-    nutrientsPer100g: [0.2, 5.6, 1.5],
+    nutrientsPer100g: [0.3, 4.9, 1.7],
+    price: 9,
+    verified: true,
   },
 
   pickled_cucumber: {
