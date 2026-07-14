@@ -66,6 +66,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 180,
     },
     nutrientsPer100g: [0.1, 15, 0.4],
+    price: 8,
   },
 
   fig: {

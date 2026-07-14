@@ -18,6 +18,7 @@ type IngId =
   //// JUICES ////
   | "lemon_juice"
   | "lime_juice"
+  | "multivitamin_juice_green"
 
   //// DECOCTION ////
   | "rosol"
@@ -182,7 +183,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 21,
     unitWeights: {
       ml: 1,
-      lz: 10,
+      lz: 15,
       lzi: 5,
     },
     nutrientsPer100g: [0, 0.4, 0.1],
@@ -196,10 +197,24 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 25,
     unitWeights: {
       ml: 1,
-      lz: 10,
+      lz: 15,
       lzi: 5,
     },
     nutrientsPer100g: [0.1, 8, 0.4],
+  },
+
+  multivitamin_juice_green: {
+    name: "Sok multiwitamina (zielony)",
+    type: "liq",
+    color: "#66BB6A",
+    kcalPer100g: 45,
+    unitWeights: {
+      ml: 1,
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0.3, 10, 0.6],
+    price: 4.3,
   },
 
   //// DECOCTION ////

@@ -828,9 +828,9 @@ export const countRecipePricePerPortion = (recipes: Recipe[]) => {
 };
 
 export const formatUnit = (ingredient: Ingredient): string => {
-  if (!ingredient.amount || !ingredient.unit) return " g";
+  if (!ingredient.unit) return " g";
 
-  const count = ingredient.amount;
+  const count = ingredient.amount ? ingredient.amount : 0;
   const unit = ingredient.unit;
 
   const pluralize = (

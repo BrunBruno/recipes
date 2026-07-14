@@ -23,6 +23,7 @@ export type DinnerSidesNames =
   | "kopytka-ready"
   | "silesian-dumplings-ready"
   ////
+  | "tomato-and-cucumber"
   | "peas-with-cranberries"
   | "carrot-and-peas"
   | "steamed-vegetables"
@@ -170,6 +171,20 @@ export const dinnerSides = (
         ],
       };
     ////////
+    case "tomato-and-cucumber":
+      return {
+        title: "Surówka z pomidora i ogórka",
+        sideName: name,
+        items: [
+          { ing: iVEG.tomato, amount: portions * 120 },
+          { ing: iVEG.cucumber, amount: portions * 100 },
+          { ing: iVEG.onion, amount: portions * 30 },
+          { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
+          { ing: iLIQ.lemon_juice, amount: portions * 0.5, unit: "lz" },
+          { ing: iSPC.black_pepper },
+          { ing: iSPC.salt },
+        ],
+      };
     case "peas-with-cranberries":
       return {
         title: "Groszek i żurawina",
@@ -416,6 +431,15 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
     ////
+    case "tomato-and-cucumber":
+      return [
+        "Pokrój pomidory i ogórki w kostkę.",
+        "Cebulę pokrój w cienkie piórka lub drobną kostkę.",
+        "Przełóż warzywa do miski.",
+        "Dodaj olej oraz sok z cytryny.",
+        "Dopraw solą i pieprzem.",
+        "Całość delikatnie wymieszaj i podawaj od razu.",
+      ];
     case "peas-with-cranberries":
       return [
         "Groszek odsącz z zalewy.",
@@ -532,6 +556,8 @@ export const dinnerSidesCookingMethods = (
     case "silesian-dumplings-ready":
       return [["boiled", 25]];
     ////
+    case "tomato-and-cucumber":
+      return [["raw", 0]];
     case "peas-with-cranberries":
       return [["raw", 0]];
     case "carrot-and-peas":

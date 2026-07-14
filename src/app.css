@@ -108,6 +108,7 @@ nav:hover > .nav-bg {
 }
 
 .page-title-h1 {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -116,6 +117,19 @@ nav:hover > .nav-bg {
   font-weight: 600;
   cursor: pointer;
   text-shadow: 2px 2px #333333;
+  padding-left: 5rem;
+}
+
+.page-title-h1-indicator {
+  position: absolute;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  left: 0;
+  background-color: #0ca678;
 }
 
 @media (max-width: 960px) {

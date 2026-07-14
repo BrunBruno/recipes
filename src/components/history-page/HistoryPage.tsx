@@ -180,6 +180,7 @@ export default function HistoryPage({ history }: HistoryPageProps) {
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
+          <div className="page-title-h1-indicator">{history.length}</div>
           <span className="h1-text">Historia Dni</span>
         </h1>
 

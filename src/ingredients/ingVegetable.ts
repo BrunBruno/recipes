@@ -196,6 +196,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 180,
     },
     nutrientsPer100g: [1.0, 6.3, 1.3],
+    price: 20,
   },
 
   chili_pepper: {

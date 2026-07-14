@@ -4,6 +4,7 @@ import type {
   DayIngredients,
   DayMealType,
   IngredientItem,
+  UnitType,
 } from "../../types";
 import "./user-page.css";
 import MealPanelIcon from "../../assets/mealPanelIcon";
@@ -13,7 +14,6 @@ import {
   DAILY_NUTRIENTS,
   formatUnit,
   ingredientLookup,
-  unitList,
 } from "../../utils";
 import IngredientIcon from "../../assets/ingredientsIcon";
 import {
@@ -41,6 +41,7 @@ export default function UserPage({
   setHistory,
 }: UserPageProps) {
   const [gramsInput, setGramsInput] = useState(0);
+  const [selectedUnit, setSelectedUnit] = useState<UnitType>("g");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMealType, setSelectedMealType] = useState<DayMealType>();
   const [selectedDate, setSelectedDate] = useState(
@@ -55,6 +56,7 @@ export default function UserPage({
     open: false,
     newRecord: null,
   });
+  const [selectedIng, setSelectedIng] = useState<IngredientItem | null>(null);
 
   function calculateMacros(day: DayIngredients): Macros {
     let kcal = 0;
@@ -93,13 +95,27 @@ export default function UserPage({
     [dayIngredients],
   );
 
-  function addIngredientToDay(ing: IngredientItem) {
-    if (!selectedMealType) return;
+  function addIngredientToDay() {
+    const ing = selectedIng;
+
+    if (!selectedMealType || !ing) return;
     if (gramsInput === 0) return;
+
+    let grams = gramsInput;
+    if (selectedUnit !== "g") {
+      const weight = ing.unitWeights?.[selectedUnit];
+
+      if (!weight) {
+        alert("Ten składnik nie obsługuje tej jednostki.");
+        return;
+      }
+
+      grams = gramsInput * weight;
+    }
 
     setDayIngredients((prev) => ({
       ...prev,
-      [selectedMealType]: [...prev[selectedMealType], [ing.name, gramsInput]],
+      [selectedMealType]: [...prev[selectedMealType], [ing.name, grams]],
     }));
 
     setShowSavedInfo("✓ Dodano");
@@ -330,12 +346,20 @@ export default function UserPage({
     ? loadDayRecords().find((d) => d.date === saveDialog.newRecord?.date)
     : undefined;
 
+  const grams =
+    selectedUnit === "g"
+      ? gramsInput
+      : gramsInput * (selectedIng?.unitWeights?.[selectedUnit] ?? 0);
+
+  const kcal = selectedIng ? (selectedIng.kcalPer100g * grams) / 100 : 0;
+
   return (
     <div className="user-page">
       <div className="page-title">
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
+          <div className="page-title-h1-indicator">{macros.kcal}</div>
           <span className="h1-text">Moje Posiłki</span>
         </h1>
       </div>
@@ -525,7 +549,16 @@ export default function UserPage({
       {isModalOpen && (
         <div className="modal-backdrop" onClick={() => setIsModalOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h2>Dodaj składnik</h2>
+            <h2 className="modal-title">
+              Dodaj składnik
+              {selectedIng && ": "}
+              {selectedIng && (
+                <span style={{ color: selectedIng.color }}>
+                  {selectedIng.name}{" "}
+                </span>
+              )}
+              {selectedIng && <span>{kcal.toFixed(0)} kcal</span>}
+            </h2>
 
             <div className="modal-inputs">
               <label className="modal-input">
@@ -540,24 +573,47 @@ export default function UserPage({
                     setGramsInput(Number(e.target.value));
                   }}
                 />
-                <select>
-                  {unitList.map((u) => (
+                <select
+                  value={selectedUnit}
+                  onChange={(e) => setSelectedUnit(e.target.value as UnitType)}
+                  className={`${!selectedIng ? "disabled" : ""}`}
+                >
+                  {(!selectedIng
+                    ? ["g"]
+                    : [
+                        "g",
+                        ...(Object.keys(
+                          selectedIng.unitWeights ?? {},
+                        ) as UnitType[]),
+                      ]
+                  ).map((u) => (
                     <option key={u} value={u}>
                       {formatUnit({
                         ing: iOTH.none,
                         amount: gramsInput,
-                        unit: u,
+                        unit: u as UnitType,
                       })}
                     </option>
                   ))}
                 </select>
               </label>
 
-              <input
+              {/* <input
                 className="modal-search"
                 placeholder="Szukaj składnika..."
                 onChange={(e) => setSearch(e.target.value)}
-              />
+              /> */}
+
+              <label className="modal-search-label">
+                <UtilsIcon name="search" color="#999999" />
+                <input
+                  type="text"
+                  placeholder="Szukaj składnika..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="modal-search"
+                />
+              </label>
             </div>
 
             <div className="modal-ingredient-list">
@@ -565,24 +621,52 @@ export default function UserPage({
                 <button
                   key={ing.name}
                   className="ingredient-item-button"
-                  onClick={() => addIngredientToDay(ing)}
+                  onClick={() => {
+                    setSelectedIng((prev) => {
+                      if (prev?.name === ing.name) return null;
+                      return ing;
+                    });
+                  }}
+                  style={{
+                    boxShadow:
+                      selectedIng?.name === ing.name
+                        ? "inset 0 0 0 0.2rem #099268"
+                        : "",
+                  }}
                 >
                   <IngredientIcon
                     ingType={ing.type}
                     subType={ing.subType}
                     color={ing.color}
-                  />{" "}
+                  />
                   {ing.name}
                 </button>
               ))}
             </div>
 
-            <button
-              className="modal-close"
-              onClick={() => setIsModalOpen(false)}
-            >
-              Zamknij
-            </button>
+            <div className="modal-buttons">
+              <button
+                className={`modal-close ${!selectedIng ? "disabled" : ""}`}
+                onClick={() => addIngredientToDay()}
+              >
+                Dodaj do{" "}
+                {selectedMealType === "breakfast"
+                  ? "Śniadania"
+                  : selectedMealType === "lunch"
+                    ? "Obiadu"
+                    : "Kolacji"}
+              </button>
+              <button
+                className="modal-close"
+                onClick={() => {
+                  setGramsInput(0);
+                  setSelectedIng(null);
+                  setIsModalOpen(false);
+                }}
+              >
+                Zamknij
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -121,12 +121,32 @@ function Ingredients({}: IngredientsProps) {
     return { all, used, mult, verified, priced };
   }, [ingredientUsage]);
 
+  const shownItems = useMemo(() => {
+    let count = 0;
+
+    allGroups.forEach((group) => {
+      const grouped = groupByType(group.data);
+
+      Object.values(grouped).forEach((items) => {
+        count += items.filter(([_, item]) => {
+          if (!displayUnused && !ingredientUsage[item.name]) return false;
+          if (!search) return true;
+
+          return item.name.toLowerCase().includes(search.toLowerCase());
+        }).length;
+      });
+    });
+
+    return count;
+  }, [search, ingredientUsage]);
+
   return (
     <div className="all-ingredients">
       <div className="page-title">
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
+          <div className="page-title-h1-indicator">{shownItems}</div>
           <span className="h1-text">Wszystkie Składniki</span>
         </h1>
 

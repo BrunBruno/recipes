@@ -10,7 +10,7 @@ const rosolZMakaronem: Recipe = {
   name: "Rosół z Makaronem",
   type: "soup",
   cookingMethods: [["boiled", 25]],
-  images: ["rosol-z-makaronem.jpg"],
+  images: ["rosol-z-makaronem.jpg", "rosol-z-makaronem-2.jpg"],
   time: 25,
   portions: 2,
   taste: 4,

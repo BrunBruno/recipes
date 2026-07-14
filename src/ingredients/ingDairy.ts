@@ -164,7 +164,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     color: "#F8BBD0",
     kcalPer100g: 78,
     unitWeights: {
-      szt: 150,
+      opak: 150,
     },
     nutrientsPer100g: [0, 11, 9.6],
     price: 24.6,
@@ -177,7 +177,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     color: "#F0F4C3",
     kcalPer100g: 82,
     unitWeights: {
-      szt: 150,
+      opak: 150,
     },
     nutrientsPer100g: [0, 10, 9.6],
     price: 24.6,
