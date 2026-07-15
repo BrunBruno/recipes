@@ -9,7 +9,7 @@ const portions = 2;
 const kurczakJalapeno: Recipe = {
   name: "Kurczak Jalapeno",
   type: "dinner",
-  cookingMethods: [["fried", "6-8"]],
+  cookingMethods: [["fried", 8]],
   images: [
     "kurczak-jalapeno.jpg",
     "kurczak-jalapeno-2.jpg",

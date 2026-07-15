@@ -12,8 +12,8 @@ const karkowkaDuszona: Recipe = {
   name: "Karkówka Duszona",
   type: "dinner",
   cookingMethods: [
-    ["fried", "5-10"],
-    ["stewed", "50-60"],
+    ["fried", 10],
+    ["stewed", 60],
   ],
   images: [
     "karkowka-duszona.jpg",

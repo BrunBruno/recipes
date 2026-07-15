@@ -10,8 +10,8 @@ const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
   type: "dinner",
   cookingMethods: [
-    ["fried", "5-10"],
-    ["stewed", "20-25"],
+    ["fried", 10],
+    ["stewed", 25],
   ],
   images: [""],
   time: 35,

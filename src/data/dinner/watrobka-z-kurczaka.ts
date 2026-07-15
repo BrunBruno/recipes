@@ -10,7 +10,7 @@ const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
   cookingMethods: [
-    ["fried", "8-10"],
+    ["fried", 10],
     ["fried", 6],
   ],
   images: ["watrobka-z-kurczaka.jpg"],

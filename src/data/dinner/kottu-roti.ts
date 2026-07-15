@@ -12,8 +12,8 @@ const kottuRoti: Recipe = {
   name: "Kottu Roti",
   type: "dinner",
   cookingMethods: [
-    ["fried", "30-40"],
-    ["fried", "1-2"],
+    ["fried", 40],
+    ["fried", 2],
   ],
   images: ["kottu-roti.jpg"],
   time: 70,

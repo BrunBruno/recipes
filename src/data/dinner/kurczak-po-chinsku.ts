@@ -12,7 +12,7 @@ const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
   type: "dinner",
   cookingMethods: [
-    ["fried", "8-10"],
+    ["fried", 10],
     ["stewed", 10],
   ],
   images: [

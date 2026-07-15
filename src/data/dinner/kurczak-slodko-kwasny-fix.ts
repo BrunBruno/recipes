@@ -12,7 +12,7 @@ const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak Słodko-Kwaśny",
   type: "dinner",
   cookingMethods: [
-    ["fried", "10-13"],
+    ["fried", 12],
     ["stewed", 3],
   ],
   images: [""],

@@ -13,8 +13,8 @@ const klopsikiWSosiePomidorowym: Recipe = {
   name: "Klopsiki w Sosie Pomidorowym",
   type: "dinner",
   cookingMethods: [
-    ["fried", "10-15"],
-    ["stewed", "15-20"],
+    ["fried", 15],
+    ["stewed", 20],
   ],
   images: [
     "klopsiki-w-sosie-pomidorowym.jpg",

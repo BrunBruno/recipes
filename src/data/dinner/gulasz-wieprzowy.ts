@@ -15,7 +15,7 @@ const gulaszWieprzowy: Recipe = {
   type: "dinner",
   cookingMethods: [
     ["fried", 30],
-    ["stewed", "50-60"],
+    ["stewed", 60],
   ],
   images: ["gulasz-wieprzowy.jpg"],
   time: 80,
