@@ -10,7 +10,7 @@ const ryzZJablkami: Recipe = {
   type: "dessert",
   cookingMethods: [
     ["fried", 20],
-    ["boiled", "22-27"],
+    ["boiled", 25],
   ],
   images: ["ryz-z-jablkami.jpg"],
   time: 30,

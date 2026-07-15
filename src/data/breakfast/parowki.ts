@@ -12,7 +12,7 @@ const parowki: Recipe = {
     ["microwaved", 1],
   ],
   images: ["parowki.jpg", "parowki-2.jpg"],
-  time: 10,
+  time: 20,
   portions: 1,
   taste: 3,
   difficulty: 1,

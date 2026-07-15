@@ -7,14 +7,14 @@ import type { Recipe } from "../../types";
 const babeczkiGotowe: Recipe = {
   name: "Babeczki Gotowe",
   type: "dessert",
-  cookingMethods: [["baked", "17-20"]],
+  cookingMethods: [["baked", 20, 175]],
   images: [
     "babeczki-gotowe.jpg",
     "babeczki-gotowe-2.jpg",
     "babeczki-gotowe-3.jpg",
   ],
-  time: 25,
-  portions: 6,
+  time: 30,
+  portions: 12,
   taste: 4,
   difficulty: 1,
   ingredients: [

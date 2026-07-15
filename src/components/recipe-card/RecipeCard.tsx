@@ -10,8 +10,10 @@ import {
   calculateRecipeVegMass,
   calculateRecipeWeight,
   DAILY_NUTRIENTS,
+  formatDuration,
   formatUnit,
   getCookingMethodLabel,
+  isPriceComplete,
 } from "../../utils";
 import type {
   DayIngredientPair,
@@ -631,7 +633,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
       ) : (
         <div className="recipe-details-content">
           <section className="description-section">
-            {/* {selectedRecipe.description} */}
             {getPreparationMethods().length > 0 && (
               <div className="cooking-methods">
                 {getPreparationMethods().map((m) => {
@@ -643,7 +644,9 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                         <PreparationIcon type={m[0]} color={"#eaeaea"} />{" "}
                       </div>
                       <div className="cooking-methods-text">
-                        <span>{getCookingMethodLabel(m[0])} </span>
+                        <span>
+                          {getCookingMethodLabel(m[0])} {m[2] && `(${m[2]}°C)`}
+                        </span>
                         <span>
                           <strong>{m[1]}</strong> {getMinuteLabel(m[1])}
                         </span>
@@ -703,30 +706,66 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 </div>
               </div>
             )}
-            Cena ze jedną porcję:{" "}
-            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
-              {calculateRecipePrice(recipeState).toFixed(2)} zł
-            </strong>
-            <br />
-            Lista składników przeliczona na:{" "}
-            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
-              {selectedRecipe.portions}{" "}
-              {selectedRecipe.portions === 1
-                ? "porcję."
-                : selectedRecipe.portions < 5
-                  ? "porcje."
-                  : "porcji."}
-            </strong>
-            <br />
-            Łączny czas przygotowania:{" "}
-            <strong style={{ color: "#20c997", fontWeight: "bold" }}>
-              {selectedRecipe.time}{" "}
-              {selectedRecipe.time === 1
-                ? "minuta."
-                : selectedRecipe.time < 5
-                  ? "minuty."
-                  : "minut."}
-            </strong>
+
+            <div className="description-grid">
+              <span>Przepis zawiera</span>
+              <strong>
+                {selectedRecipe.portions}{" "}
+                {selectedRecipe.portions === 1
+                  ? "porcję"
+                  : selectedRecipe.portions < 5
+                    ? "porcje"
+                    : "porcji"}
+              </strong>
+
+              <span>Waga jednej porcji</span>
+              <strong>
+                {(
+                  calculateRecipeWeight(recipeState) / selectedRecipe.portions
+                ).toFixed(1)}{" "}
+                g
+              </strong>
+
+              <span>Cena jednej porcji</span>
+              <strong
+                style={{
+                  color: isPriceComplete(recipeState) ? "#20c997" : "#fa5252",
+                }}
+              >
+                {calculateRecipePrice(recipeState).toFixed(2)} zł
+              </strong>
+
+              <span>Całkowity koszt posiłku</span>
+              <strong
+                style={{
+                  color: isPriceComplete(recipeState) ? "#20c997" : "#fa5252",
+                }}
+              >
+                {(
+                  selectedRecipe.portions * calculateRecipePrice(recipeState)
+                ).toFixed(2)}{" "}
+                zł
+              </strong>
+
+              <span>Łączny czas przygotowania</span>
+              <strong
+                style={{
+                  color: selectedRecipe.cookingMethods.some(
+                    ([_, t]) => t > selectedRecipe.time,
+                  )
+                    ? "#fa5252"
+                    : "#20c997",
+                }}
+              >
+                {formatDuration(selectedRecipe.time)}
+              </strong>
+
+              <span>Gęstość kaloryczna</span>
+              <strong>
+                {calculateRecipeKcalPer100g(selectedRecipe)} kcal/100g
+              </strong>
+            </div>
+
             <div className="format-ingredients">
               <span>Wyświetl format: </span>
               <button
@@ -1014,21 +1053,13 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                   >
                     <span>{calculateRecipeKcal(recipeState, portions)}</span>
                   </div>
-                  <div
+                  {/* <div
                     className={`recipe-param 
                                 ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
                                 ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
                               `}
                   >
                     <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
-                  </div>
-                  {/* <div
-                    className={`recipe-param 
-                                ${getFontSizeClass(selectedRecipe.time)} 
-                                ${getStatusClass("time", selectedRecipe.time)}
-                              `}
-                  >
-                    <span>{selectedRecipe.time}</span>
                   </div> */}
                   <div
                     className={`recipe-param 

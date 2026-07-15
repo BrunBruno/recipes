@@ -24,7 +24,7 @@ import { iHRB } from "../../ingredients/ingHerb";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iNUT } from "../../ingredients/ingNut";
-import IngredientCard from "../ingredeint-card/IngredientCard";
+import IngredientCard from "../ingredient-card/IngredientCard";
 import UnitIcon from "../../assets/unitIcon";
 
 type IngredientsProps = {};

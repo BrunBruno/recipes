@@ -935,7 +935,19 @@ export const calculateRecipePrice = (recipe: Recipe): number => {
   }
 
   return totalPrice / recipe.portions;
-  // return Math.round() / 100;
+};
+
+export const isPriceComplete = (recipe: Recipe): boolean => {
+  for (const ingredientItem of getAllIngredientItems(recipe)) {
+    if (!ingredientItem) continue;
+
+    if (ingredientItem.exclude) continue;
+
+    const { ing, amount } = ingredientItem;
+    if (!ing.price && amount !== 0) return false;
+  }
+
+  return true;
 };
 
 export const ingredientLookup: Record<string, IngredientItem> = {};
@@ -978,4 +990,21 @@ export const cookingMethodLabelsShort: Record<CookingMethod, string> = {
 
 export function getCookingMethodLabel(method: CookingMethod): string {
   return cookingMethodLabels[method];
+}
+
+export function formatDuration(minutes: number): string {
+  if (minutes < 60) {
+    return `${minutes} min.`;
+  }
+
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+
+  const hoursText = `${hours} h `;
+
+  if (mins === 0) {
+    return hoursText;
+  }
+
+  return `${hoursText} ${mins} min.`;
 }

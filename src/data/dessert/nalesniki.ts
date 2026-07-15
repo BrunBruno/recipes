@@ -20,7 +20,7 @@ const nalesniki: Recipe = {
     "nalesniki-3.jpg",
     "nalesniki-4.jpg",
   ],
-  time: 20,
+  time: 25,
   portions: portions,
   taste: 4,
   difficulty: 2,

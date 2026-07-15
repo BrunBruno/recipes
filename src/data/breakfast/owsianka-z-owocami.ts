@@ -12,7 +12,7 @@ const owsianaZOwocami: Recipe = {
     ["microwaved", 1.5],
   ],
   images: ["owsianka-z-owocami.jpg", "owsianka-z-owocami-2.jpg"],
-  time: 20,
+  time: 25,
   portions: 1,
   taste: 4,
   difficulty: 1,

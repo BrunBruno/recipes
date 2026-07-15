@@ -308,8 +308,9 @@ export const iGRN: Record<IngId, IngredientItem> = {
     kcalPer100g: 354,
     nutrientsPer100g: [19, 40, 4.9],
     unitWeights: {
-      opak: 300,
+      opak: 335,
     },
+    price: 19.1,
   },
 
   kopytka: {

@@ -262,25 +262,4 @@
   .history-chart {
     display: none;
   }
-
-  /* .history-chart {
-    padding: 0;
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-bottom: 0;
-    padding-top: 2rem;
-  }
-
-  .bar-chart {
-    padding: 2rem 0.5rem;
-    border-radius: 0;
-    background-color: #0000;
-    height: 240px;
-  }
-
-  .bar-chart > h3 {
-    padding: 0;
-    padding-left: 0.5rem;
-    font-size: 0.8rem;
-  } */
 }

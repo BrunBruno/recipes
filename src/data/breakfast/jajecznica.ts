@@ -1,6 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iMET } from "../../ingredients/ingMeat";
+import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -27,6 +28,30 @@ const jajecznica: Recipe = {
       items: [
         { ing: iMET.egg, amount: 5, unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.sausage, amount: 0.5, unit: "peto" },
+            { ing: iMET.bacon_block, amount: 100, exclude: true },
+            { ing: iVEG.onion, amount: 1, unit: "szt" },
+            { ing: iVEG.tomato, amount: 1, unit: "szt" },
+            { ing: iHRB.chives },
+            { ing: iOTH.none },
+          ],
+          selected: 0,
+        },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.sausage, amount: 0.5, unit: "peto" },
+            { ing: iMET.bacon_block, amount: 100, exclude: true },
+            { ing: iVEG.onion, amount: 1, unit: "szt" },
+            { ing: iVEG.tomato, amount: 1, unit: "szt" },
+            { ing: iHRB.chives },
+            { ing: iOTH.none },
+          ],
+          selected: 2,
+        },
         { ing: iSPC.salt },
       ],
     },
@@ -34,11 +59,11 @@ const jajecznica: Recipe = {
       title: "Proponowane dodatki",
       isAdd: true,
       items: [
-        { ing: iMET.sausage, amount: 0.5, unit: "peto" },
-        { ing: iMET.bacon_block, amount: 100, exclude: true },
-        { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.tomato, amount: 1, unit: "szt" },
-        { ing: iHRB.chives },
+        { ing: iMET.sausage, exclude: true },
+        { ing: iMET.bacon_block, exclude: true },
+        { ing: iVEG.onion, exclude: true },
+        { ing: iVEG.tomato, exclude: true },
+        { ing: iHRB.chives, exclude: true },
       ],
     },
   ],

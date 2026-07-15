@@ -13,14 +13,14 @@ const portions = 3;
 const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
-  cookingMethods: [["fried", "1-2"]],
+  cookingMethods: [["fried", 2]],
   images: [
     "pancakes.jpg",
     "pancakes-2.jpg",
     "pancakes-3.jpg",
     "pancakes-4.jpg",
   ],
-  time: 30,
+  time: 35,
   portions: portions,
   taste: 4,
   difficulty: 2,

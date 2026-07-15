@@ -12,7 +12,7 @@ const serdelki: Recipe = {
     ["microwaved", 1],
   ],
   images: ["serdelki.jpg", "serdelki-2.jpg"],
-  time: 10,
+  time: 20,
   portions: 2,
   taste: 3,
   difficulty: 1,

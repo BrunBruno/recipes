@@ -5,9 +5,12 @@ import type { Recipe } from "../../types";
 const kluskiNaParze: Recipe = {
   name: "Kluski na Parze",
   type: "dessert",
-  cookingMethods: [["steamed", "7-15"]],
+  cookingMethods: [
+    ["steamed", 15],
+    ["microwaved", 3],
+  ],
   images: ["kluski-na-parze.jpg"],
-  time: 10,
+  time: 15,
   portions: 2,
   taste: 3,
   difficulty: 1,

@@ -141,12 +141,16 @@ export type RecipeStepGroup = {
   steps: string[];
 };
 
+type CookingMethodEntry =
+  | [CookingMethod, number]
+  | [CookingMethod, number, number];
+
 export type NonEmptyArray<T> = [T, ...T[]];
 export type Recipe = {
   name: string;
   fileName?: string;
   type: MealType;
-  cookingMethods: [CookingMethod, string | number][];
+  cookingMethods: CookingMethodEntry[];
   images: NonEmptyArray<string>;
   portions: number;
   time: number;
