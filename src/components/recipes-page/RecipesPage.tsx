@@ -2,11 +2,22 @@ import { useRef, useState, useEffect } from "react";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
-import type { Recipe, MealType, KeyWord, DayIngredients } from "../../types";
-import { keywordAliases, MealTypesData } from "../../utils";
+import type {
+  Recipe,
+  MealType,
+  KeyWord,
+  DayIngredients,
+  CookingMethod,
+} from "../../types";
+import {
+  cookingMethodLabelsShort,
+  keywordAliases,
+  MealTypesData,
+} from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
+import PreparationIcon from "../../assets/preparationIcon";
 
 type RecipePageProps = {
   setDayIngredients: React.Dispatch<React.SetStateAction<DayIngredients>>;
@@ -17,6 +28,9 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<MealType[]>([]);
+  const [activeMethodTypes, setActiveMethodTypes] = useState<CookingMethod[]>(
+    [],
+  );
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -24,6 +38,11 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
+      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
+    );
+  };
+  const toggleMethodType = (type: CookingMethod) => {
+    setActiveMethodTypes((prev) =>
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
   };
@@ -40,6 +59,11 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
     .filter((r) => {
       const typeMatch =
         activeTypes.length === 0 || activeTypes.includes(r.type);
+      const methodMatch =
+        activeMethodTypes.length === 0 ||
+        r.cookingMethods.some(([method, _]) =>
+          activeMethodTypes.includes(method),
+        );
 
       const query = normalize(searchQuery);
 
@@ -56,6 +80,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
       return (
         typeMatch &&
+        methodMatch &&
         specialMatch &&
         (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
       );
@@ -115,6 +140,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
         <h1 className="page-title-h1">
           <div className="page-title-h1-indicator">
             {filteredRecipes.length}
+            <span>Przepisów</span>
           </div>
           <span className="h1-text">Przepisy</span>
         </h1>
@@ -161,27 +187,78 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
             </label>
           </div>
 
-          <div className={`filter-buttons ${showFilters ? "show" : ""}`}>
-            {Object.entries(MealTypesData).map(([key, { label, color }]) => (
-              <button
-                key={key}
-                className="filter-btn"
-                style={{
-                  borderColor: activeTypes.includes(key as MealType)
-                    ? color
-                    : "#666",
-                }}
-                onClick={() => toggleType(key as MealType)}
-              >
-                <div className="filter-svg">
-                  <RecipeTypeIcon
-                    type={key as MealType}
-                    color={activeTypes.includes(key as MealType) ? "" : "#666"}
-                  />
-                </div>
-                <span className="filter-text">{label}</span>
-              </button>
-            ))}
+          <div className="filter-togglers">
+            <button
+              className="toggler-btn"
+              style={{
+                borderColor: showFilters ? "#fff" : "#666",
+              }}
+              onClick={() => {
+                setShowFilters((prev) => !prev);
+              }}
+            >
+              <div className="filter-svg">
+                <UtilsIcon
+                  name="filter"
+                  color={showFilters ? "#fff" : "#666"}
+                />
+              </div>
+            </button>
+          </div>
+
+          <div className={`filters ${showFilters ? "show" : ""}`}>
+            <div className={`filter-buttons`}>
+              {Object.entries(MealTypesData).map(([key, { label, color }]) => (
+                <button
+                  key={key}
+                  className="filter-btn"
+                  style={{
+                    borderColor: activeTypes.includes(key as MealType)
+                      ? color
+                      : "#666",
+                  }}
+                  onClick={() => toggleType(key as MealType)}
+                >
+                  <div className="filter-svg">
+                    <RecipeTypeIcon
+                      type={key as MealType}
+                      color={
+                        activeTypes.includes(key as MealType) ? "" : "#666"
+                      }
+                    />
+                  </div>
+                  <span className="filter-text">{label}</span>
+                </button>
+              ))}
+            </div>
+            <div className={`filter-buttons sm-no`}>
+              {Object.entries(cookingMethodLabelsShort).map(([key, label]) => (
+                <button
+                  key={key}
+                  className="filter-btn"
+                  style={{
+                    borderColor: activeMethodTypes.includes(
+                      key as CookingMethod,
+                    )
+                      ? "#fff"
+                      : "#666",
+                  }}
+                  onClick={() => toggleMethodType(key as CookingMethod)}
+                >
+                  <div className="filter-svg">
+                    <PreparationIcon
+                      type={key as CookingMethod}
+                      color={
+                        activeMethodTypes.includes(key as CookingMethod)
+                          ? "#fff"
+                          : "#666"
+                      }
+                    />
+                  </div>
+                  <span className="filter-text">{label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

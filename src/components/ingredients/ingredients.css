@@ -9,45 +9,6 @@
   display: none;
 }
 
-.ingredient-search {
-  display: flex;
-}
-
-.ingredient-search-label {
-  display: flex;
-  align-items: center;
-  background-color: #222;
-  border: 2px solid #666;
-  border-radius: 8px;
-  padding: 0 0.5rem;
-  cursor: pointer;
-}
-
-.ingredient-search-label svg {
-  height: 1.6rem;
-}
-
-.ingredient-search-input {
-  padding: 0.5rem;
-  border: none;
-  outline: none;
-  background-color: #0000;
-  transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
-.ingredient-search-label:focus-within {
-  border: 2px solid #eee;
-}
-
-.ingredient-search input:focus {
-  border-color: #666;
-}
-
 .ingredient-stats {
   display: grid;
   grid-template-columns: repeat(5, 8rem);
@@ -275,7 +236,7 @@
 
 @media (max-width: 960px) {
   .ing-group {
-    padding: 1rem;
+    padding: 0 1rem;
   }
   .ingredient-list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -288,8 +249,8 @@
 
   .ing-group-title {
     margin: 0;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 }
 

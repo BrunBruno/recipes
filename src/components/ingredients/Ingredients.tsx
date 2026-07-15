@@ -16,7 +16,7 @@ import {
   IngredientTypeData,
 } from "../../utils";
 import type { IngredientItem } from "../../types";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { iJAR } from "../../ingredients/ingJar";
 import { iSNK } from "../../ingredients/ingSnack";
 import { iFSH } from "../../ingredients/ingFish";
@@ -55,6 +55,8 @@ const initialOpenTypes = Object.fromEntries(
 );
 
 function Ingredients({}: IngredientsProps) {
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   const getColumnCount = () => {
     const width = window.innerWidth;
 
@@ -73,6 +75,7 @@ function Ingredients({}: IngredientsProps) {
   const [search, setSearch] = useState("");
   const [selectedIngredient, setSelectedIngredient] =
     useState<IngredientItem | null>(null);
+  const [showSearch, setShowSearch] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => setColumns(getColumnCount());
@@ -146,19 +149,41 @@ function Ingredients({}: IngredientsProps) {
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
-          <div className="page-title-h1-indicator">{shownItems}</div>
-          <span className="h1-text">Wszystkie Składniki</span>
+          <div className="page-title-h1-indicator">
+            {shownItems}
+            <span>Skład.</span>
+          </div>
+          <span className="h1-text">Składniki</span>
         </h1>
 
-        <div className={`ingredient-search`}>
-          <label className="ingredient-search-label">
+        <div className="page-title-options">
+          <button
+            className="toggle-search-btn"
+            onClick={() => {
+              setShowSearch((prev) => !prev);
+            }}
+          >
+            <UtilsIcon name="search" color="#999999" />
+          </button>
+        </div>
+
+        <div
+          className={`filter-buttons-bg ${showSearch ? "show" : ""}`}
+          onClick={() => {
+            setShowSearch(false);
+          }}
+        ></div>
+
+        <div className={`recipe-search ${showSearch ? "show" : ""}`}>
+          <label className="recipe-search-label">
             <UtilsIcon name="search" color="#999999" />
             <input
+              ref={searchInputRef}
               type="text"
               placeholder="Szukaj składnika..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="ingredient-search-input"
+              className="recipe-search-input"
             />
           </label>
         </div>

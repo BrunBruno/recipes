@@ -628,8 +628,11 @@ function Statistics({}: StatisticsProps) {
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
-          <div className="page-title-h1-indicator">{8 * 3}</div>
-          <span className="h1-text">Statystki Przepisów</span>
+          <div className="page-title-h1-indicator">
+            {8 * 3}
+            <span>Wykresów</span>
+          </div>
+          <span className="h1-text">Statystki</span>
         </h1>
       </div>
 

@@ -151,11 +151,65 @@
 .history-chart {
   height: calc(100% - 2rem);
   padding: 1rem;
+  padding-bottom: 0;
   display: grid;
+  grid-template-rows: 2rem auto;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.history-chart-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-chart-title h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.swap-button {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+}
+.swap-button svg {
+  height: 1.2rem;
+}
+
+.swap-button:hover {
+  filter: brightness(70%);
+}
+
+.history-charts {
+  position: relative;
+}
+
+.history-chart-section {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0.5rem;
-  padding-bottom: 0;
+  transition: top 0.5s;
+}
+
+.history-chart-section.main {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.history-chart-section.open {
+  top: 0;
 }
 
 .bar-chart {
@@ -206,6 +260,10 @@
   }
 
   .history-chart {
+    display: none;
+  }
+
+  /* .history-chart {
     padding: 0;
     grid-template-columns: 1fr;
     gap: 0;
@@ -224,5 +282,5 @@
     padding: 0;
     padding-left: 0.5rem;
     font-size: 0.8rem;
-  }
+  } */
 }

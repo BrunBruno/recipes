@@ -13,7 +13,7 @@
 
 .page-title-options {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .toggle-filters-btn {
@@ -45,7 +45,6 @@
 }
 
 .filter-buttons-bg {
-  /* display: none; */
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -83,9 +82,53 @@
   border: 2px solid #eee;
 }
 
+.filter-togglers {
+  display: flex;
+}
+
+.toggler-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 2px solid #666;
+  border-radius: 8px;
+  background-color: #222;
+  cursor: pointer;
+}
+
+.toggler-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.filters {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 1rem;
+  background-color: #161616;
+  border-radius: 1rem;
+  display: flex;
+  height: 28.4rem;
+  padding: 0.4rem 1rem;
+  z-index: -2;
+
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.3s;
+}
+
+.filters.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .filter-buttons {
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 1.2rem;
 }
 
 .recipe-search {
@@ -94,34 +137,34 @@
 
 .filter-btn {
   position: relative;
-  padding: 0.5rem;
   border: 2px solid #666;
   border-radius: 8px;
   background-color: #222;
   cursor: pointer;
   transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
+
+  gap: 1rem;
+  padding: 0 1rem;
+  width: 10.8rem;
+  height: 3.2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 24px auto;
 }
 
 .filter-svg {
   width: 24px;
   height: 24px;
+  margin: auto;
 }
 
 .filter-text {
-  position: absolute;
-  bottom: -2.5rem;
-  left: 50%;
-  transform: translate(-50%);
-  border: 2px solid #666;
-  border-radius: 8px;
-  background-color: #222;
-  padding: 0.3rem 0.6rem;
-  display: none;
+  font-size: 1rem;
+  display: block;
+  text-align: start;
+  margin: auto 0;
+  color: #eaeaea;
 }
 
 .filter-btn:hover > span {
@@ -186,6 +229,10 @@
     display: inline-block;
   }
 
+  .toggler-btn {
+    display: none;
+  }
+
   .recipe-search {
     display: flex;
     position: absolute;
@@ -208,26 +255,13 @@
     transform: translateX(50%) scale(1);
   }
 
-  .filter-buttons {
-    display: flex;
-    position: absolute;
-    right: 0.5rem;
-    top: calc(100% + 0.5rem);
-    flex-direction: column;
-    background: linear-gradient(
-      60deg,
-      rgba(0, 0, 0, 0.2) 30%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    background-color: #333;
-    border-radius: 8px;
-    padding: 1rem;
-    transform: scale(0);
-    transition: transform 0.2s;
+  .filters {
+    padding: 0.5rem;
+    z-index: 1;
   }
 
-  .filter-buttons.show {
-    transform: scale(1);
+  .filter-buttons.sm-no {
+    display: none;
   }
 
   .filter-buttons-bg.show {
@@ -242,21 +276,6 @@
 
   .recipe-search-input {
     font-size: 1.4rem;
-  }
-
-  .filter-btn {
-    background-color: #222;
-    cursor: pointer;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 1rem;
-    padding: 0 1rem;
-    width: 10.8rem;
-    height: 3.2rem;
-    font-size: 1.2rem;
-    color: #fff;
   }
 
   .filter-btn.active {

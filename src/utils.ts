@@ -961,6 +961,21 @@ export const cookingMethodLabels: Record<CookingMethod, string> = {
   "air-fried": "Smażenie beztłuszczowo",
 };
 
+export const cookingMethodLabelsShort: Record<CookingMethod, string> = {
+  raw: "Surowe",
+  boiled: "Gotowane",
+  steamed: "Parowane",
+  fried: "Smażone",
+  "deep-fried": "Frytowane",
+  baked: "Wypieczone",
+  grilled: "Grillowane",
+  stewed: "Duszone",
+  roasted: "Pieczone",
+  microwaved: "Mikrofala",
+  toasted: "Opiekane",
+  "air-fried": "Airfryer",
+};
+
 export function getCookingMethodLabel(method: CookingMethod): string {
   return cookingMethodLabels[method];
 }

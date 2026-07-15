@@ -254,12 +254,15 @@
 }
 
 .save-btn {
+  position: relative;
   width: 100%;
   margin-top: 20px;
   padding: 12px;
   cursor: pointer;
   background-color: #222;
-  border: 2px solid #666;
+  /* border: 2px solid #666; */
+  border: none;
+  box-shadow: inset 0 0 0 2px #666;
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -268,6 +271,38 @@
 
 .save-btn:hover {
   background-color: #333;
+}
+
+.save-btn.sv:hover {
+  color: #0ca678;
+}
+.save-btn.rm:hover {
+  color: #f03e3e;
+}
+
+.save-btn.sv:hover > .btn-icon svg path {
+  stroke: #0ca678;
+}
+.save-btn.rm:hover > .btn-icon svg path {
+  stroke: #f03e3e;
+}
+
+.btn-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px #666;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  height: 1.6rem;
 }
 
 .modal-backdrop {
@@ -605,6 +640,7 @@ select {
   .summary-card {
     border: none;
     height: 100%;
+    padding-bottom: 2rem;
   }
 
   .modal {

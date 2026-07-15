@@ -11,7 +11,7 @@ const mortadela: Recipe = {
   name: "Mortadela",
   type: "dinner",
   cookingMethods: [["fried", 8]],
-  images: ["mortadela.jpg", "mortadela-2.jpg"],
+  images: ["mortadela.jpg", "mortadela-2.jpg", "mortadela-3.jpg"],
   time: 25,
   portions: portions,
   taste: null,
@@ -30,11 +30,18 @@ const mortadela: Recipe = {
     },
   ],
   extrasMain: {
-    options: [dinnerSides("mashed-potatoes", portions)],
+    options: [
+      dinnerSides("boiled-potatoes", portions),
+      dinnerSides("mashed-potatoes", portions),
+      dinnerSides("oven-fries", portions),
+    ],
     selected: 0,
   },
   extrasVeg: {
-    options: [dinnerSides("beets-fried-ready", portions)],
+    options: [
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("beets-fried-ready", portions),
+    ],
     selected: 0,
   },
   steps: [

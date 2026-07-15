@@ -4,14 +4,17 @@ import "./history-page.css";
 import { DAILY_NUTRIENTS, interpolateColor } from "../../utils";
 import MacroIcon from "../../assets/macroIcon";
 import UtilsIcon from "../../assets/utilsIcon";
+import { useState } from "react";
 
 type HistoryPageProps = {
   history: DayRecord[];
 };
 
 export default function HistoryPage({ history }: HistoryPageProps) {
+  const [isMainOpen, setIsMainOpen] = useState<boolean>(true);
+
   const createChartData = (
-    key: "kcal" | "fat" | "carbs" | "protein",
+    key: "kcal" | "fat" | "carbs" | "protein" | "veg",
     label: string,
     lightColor: string,
     darkColor: string,
@@ -74,7 +77,7 @@ export default function HistoryPage({ history }: HistoryPageProps) {
   const kcalData = createChartData(
     "kcal",
     "Calories",
-    "#e6fcf5",
+    "#c3fae8",
     "#087f5b",
     DAILY_NUTRIENTS[0],
   );
@@ -82,7 +85,7 @@ export default function HistoryPage({ history }: HistoryPageProps) {
   const fatData = createChartData(
     "fat",
     "Fat",
-    "#fff4e6",
+    "#ffe8cc",
     "#d9480f",
     DAILY_NUTRIENTS[1],
   );
@@ -90,7 +93,7 @@ export default function HistoryPage({ history }: HistoryPageProps) {
   const carbsData = createChartData(
     "carbs",
     "Carbs",
-    "#e3fafc",
+    "#c5f6fa",
     "#0b7285",
     DAILY_NUTRIENTS[2],
   );
@@ -98,15 +101,24 @@ export default function HistoryPage({ history }: HistoryPageProps) {
   const proteinData = createChartData(
     "protein",
     "Protein",
-    "#fff5f5",
+    "#ffe3e3",
     "#c92a2a",
     DAILY_NUTRIENTS[3],
+  );
+
+  const vegData = createChartData(
+    "veg",
+    "Veg",
+    "#e9fac8",
+    "#5c940d",
+    DAILY_NUTRIENTS[4],
   );
 
   const kcalPlugin = createTargetPlugin(DAILY_NUTRIENTS[0], "kcal");
   const fatPlugin = createTargetPlugin(DAILY_NUTRIENTS[1], "g");
   const carbsPlugin = createTargetPlugin(DAILY_NUTRIENTS[2], "g");
   const proteinPlugin = createTargetPlugin(DAILY_NUTRIENTS[3], "g");
+  const vegPlugin = createTargetPlugin(DAILY_NUTRIENTS[4], "g");
 
   const createOptions = (data: number[], target: number) => ({
     responsive: true,
@@ -174,14 +186,19 @@ export default function HistoryPage({ history }: HistoryPageProps) {
     DAILY_NUTRIENTS[3],
   );
 
+  const vegStats = getChartStats(vegData.datasets[0].data, DAILY_NUTRIENTS[4]);
+
   return (
     <div className="history-page">
       <div className="page-title">
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
-          <div className="page-title-h1-indicator">{history.length}</div>
-          <span className="h1-text">Historia Dni</span>
+          <div className="page-title-h1-indicator">
+            {history.length}
+            <span>Dni</span>
+          </div>
+          <span className="h1-text">Historia</span>
         </h1>
 
         <div className="history-summary">
@@ -261,72 +278,110 @@ export default function HistoryPage({ history }: HistoryPageProps) {
       )}
 
       <div className="history-chart">
-        <div className="bar-chart">
-          <h3>
-            Kalorie (30dni){" "}
-            <span>
-              średnia: {kcalStats.avg} kcal, wypełniono: {kcalStats.ok}/30
-            </span>
-          </h3>
-          <Bar
-            data={kcalData}
-            options={createOptions(
-              kcalData.datasets[0].data,
-              DAILY_NUTRIENTS[0],
-            )}
-            plugins={[kcalPlugin]}
-          />
+        <div className="history-chart-title">
+          <h2>Historia z ostanach 30 dni.</h2>
+          <button
+            className="swap-button"
+            onClick={() => setIsMainOpen((prev) => !prev)}
+          >
+            <UtilsIcon name="swap" color="#fff" />
+            <span>Zmień widok</span>
+          </button>
         </div>
 
-        <div className="bar-chart">
-          <h3>
-            Tłuszcze (30dni){" "}
-            <span>
-              średnia: {fatStats.avg} g, wypełniono: {fatStats.ok}/30
-            </span>
-          </h3>
-          <Bar
-            data={fatData}
-            options={createOptions(
-              fatData.datasets[0].data,
-              DAILY_NUTRIENTS[1],
-            )}
-            plugins={[fatPlugin]}
-          />
-        </div>
+        <div className="history-charts">
+          <div
+            className={`history-chart-section main ${isMainOpen ? "open" : ""}`}
+          >
+            <div className="bar-chart">
+              <h3>
+                Kalorie
+                <span>
+                  średnia: {kcalStats.avg} kcal, wypełniono: {kcalStats.ok}/30
+                </span>
+              </h3>
+              <Bar
+                data={kcalData}
+                options={createOptions(
+                  kcalData.datasets[0].data,
+                  DAILY_NUTRIENTS[0],
+                )}
+                plugins={[kcalPlugin]}
+              />
+            </div>
+          </div>
+          <div
+            className={`history-chart-section sec ${isMainOpen ? "" : "open"}`}
+          >
+            <div className="bar-chart">
+              <h3>
+                Tłuszcze
+                <span>
+                  średnia: {fatStats.avg} g, wypełniono: {fatStats.ok}/30
+                </span>
+              </h3>
+              <Bar
+                data={fatData}
+                options={createOptions(
+                  fatData.datasets[0].data,
+                  DAILY_NUTRIENTS[1],
+                )}
+                plugins={[fatPlugin]}
+              />
+            </div>
 
-        <div className="bar-chart">
-          <h3>
-            Węglowodany (30dni){" "}
-            <span>
-              średnia: {carbsStats.avg} g, wypełniono: {carbsStats.ok}/30
-            </span>
-          </h3>
-          <Bar
-            data={carbsData}
-            options={createOptions(
-              carbsData.datasets[0].data,
-              DAILY_NUTRIENTS[2],
-            )}
-            plugins={[carbsPlugin]}
-          />
-        </div>
+            <div className="bar-chart">
+              <h3>
+                Węglowodany
+                <span>
+                  średnia: {carbsStats.avg} g, wypełniono: {carbsStats.ok}/30
+                </span>
+              </h3>
+              <Bar
+                data={carbsData}
+                options={createOptions(
+                  carbsData.datasets[0].data,
+                  DAILY_NUTRIENTS[2],
+                )}
+                plugins={[carbsPlugin]}
+              />
+            </div>
 
-        <div className="bar-chart">
-          <h3>
-            Białka (30dni){" "}
-            <span>
-              średnia: {proteinStats.avg} g, wypełniono: {proteinStats.ok}/30
-            </span>
-          </h3>
-          <Bar
-            data={proteinData}
-            options={createOptions(
-              proteinData.datasets[0].data,
-              DAILY_NUTRIENTS[3],
-            )}
-            plugins={[proteinPlugin]}
-          />
+            <div className="bar-chart">
+              <h3>
+                Białka
+                <span>
+                  średnia: {proteinStats.avg} g, wypełniono: {proteinStats.ok}
+                  /30
+                </span>
+              </h3>
+              <Bar
+                data={proteinData}
+                options={createOptions(
+                  proteinData.datasets[0].data,
+                  DAILY_NUTRIENTS[3],
+                )}
+                plugins={[proteinPlugin]}
+              />
+            </div>
+
+            <div className="bar-chart">
+              <h3>
+                Owoce i Warzywa
+                <span>
+                  średnia: {vegStats.avg} kcal, wypełniono: {vegStats.ok}/30
+                </span>
+              </h3>
+              <Bar
+                data={vegData}
+                options={createOptions(
+                  vegData.datasets[0].data,
+                  DAILY_NUTRIENTS[4],
+                )}
+                plugins={[vegPlugin]}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

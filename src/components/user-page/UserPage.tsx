@@ -359,8 +359,11 @@ export default function UserPage({
         <div className="page-title-background"></div>
 
         <h1 className="page-title-h1">
-          <div className="page-title-h1-indicator">{macros.kcal}</div>
-          <span className="h1-text">Moje Posiłki</span>
+          <div className="page-title-h1-indicator">
+            {Math.round(macros.kcal)}
+            <span>kcal</span>
+          </div>
+          <span className="h1-text">Mój Dzień</span>
         </h1>
       </div>
 
@@ -529,20 +532,26 @@ export default function UserPage({
         </div>
 
         <button
-          className="save-btn"
+          className="save-btn rm"
           onClick={() => {
             clearDay();
           }}
         >
-          Wyczyść dzień
+          Wyczyść składniki
+          <span className="btn-icon">
+            <UtilsIcon name="delete" color="#fff" />
+          </span>
         </button>
         <button
-          className="save-btn"
+          className="save-btn sv"
           onClick={() => {
             handleSaveDay();
           }}
         >
           Zapisz dzień
+          <span className="btn-icon">
+            <UtilsIcon name="save" color="#fff" />
+          </span>
         </button>
       </div>
 
@@ -598,12 +607,6 @@ export default function UserPage({
                 </select>
               </label>
 
-              {/* <input
-                className="modal-search"
-                placeholder="Szukaj składnika..."
-                onChange={(e) => setSearch(e.target.value)}
-              /> */}
-
               <label className="modal-search-label">
                 <UtilsIcon name="search" color="#999999" />
                 <input
@@ -647,7 +650,10 @@ export default function UserPage({
             <div className="modal-buttons">
               <button
                 className={`modal-close ${!selectedIng ? "disabled" : ""}`}
-                onClick={() => addIngredientToDay()}
+                onClick={() => {
+                  addIngredientToDay();
+                  setSelectedIng(null);
+                }}
               >
                 Dodaj do{" "}
                 {selectedMealType === "breakfast"
