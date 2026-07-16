@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   DayIngredientPair,
   DayIngredients,
@@ -40,13 +40,18 @@ export default function UserPage({
   loadDayRecords,
   setHistory,
 }: UserPageProps) {
-  const [gramsInput, setGramsInput] = useState(0);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const gramsInputRef = useRef<HTMLInputElement>(null);
+
+  const [gramsInput, setGramsInput] = useState<number>(0);
   const [selectedUnit, setSelectedUnit] = useState<UnitType>("g");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMealType, setSelectedMealType] = useState<DayMealType>();
-  const [selectedDate, setSelectedDate] = useState(
-    new Date().toISOString().split("T")[0],
-  );
+  const [selectedDate, setSelectedDate] = useState(() => {
+    const date = new Date();
+    date.setDate(date.getDate() - 1);
+    return date.toISOString().split("T")[0];
+  });
   const [search, setSearch] = useState("");
   const [showSavedInfo, setShowSavedInfo] = useState<string>("");
   const [saveDialog, setSaveDialog] = useState<{
@@ -336,6 +341,25 @@ export default function UserPage({
     );
   };
 
+  useEffect(() => {
+    if (isModalOpen) {
+      setSearch("");
+      searchInputRef.current?.focus();
+    }
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (selectedIng) {
+      setGramsInput(0);
+      setSelectedUnit("g");
+      gramsInputRef.current?.focus();
+    }
+  }, [selectedIng]);
+
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+  }, [isModalOpen]);
+
   const filteredIngredients = useMemo(() => {
     return allIngredients
       .filter((ing) => ing.name.toLowerCase().includes(search.toLowerCase()))
@@ -522,7 +546,6 @@ export default function UserPage({
 
         <div className="save-day">
           <label>
-            Data:
             <input
               type="date"
               value={selectedDate}
@@ -561,21 +584,24 @@ export default function UserPage({
             <h2 className="modal-title">
               Dodaj składnik
               {selectedIng && ": "}
-              {selectedIng && (
-                <span style={{ color: selectedIng.color }}>
-                  {selectedIng.name}{" "}
-                </span>
-              )}
-              {selectedIng && <span>{kcal.toFixed(0)} kcal</span>}
+              <span>
+                {selectedIng && (
+                  <span style={{ color: selectedIng.color }}>
+                    {selectedIng.name}{" "}
+                  </span>
+                )}
+                {selectedIng && <span>{kcal.toFixed(0)} kcal</span>}
+              </span>
             </h2>
 
             <div className="modal-inputs">
               <label className="modal-input">
                 <span>Gramatura:</span>
                 <input
+                  ref={gramsInputRef}
                   type="number"
                   min={1}
-                  value={gramsInput}
+                  value={gramsInput === 0 ? "" : gramsInput}
                   onChange={(e) => {
                     if (e.target.value[0] === "0")
                       e.target.value = e.target.value.slice(1);
@@ -610,6 +636,7 @@ export default function UserPage({
               <label className="modal-search-label">
                 <UtilsIcon name="search" color="#999999" />
                 <input
+                  ref={searchInputRef}
                   type="text"
                   placeholder="Szukaj składnika..."
                   value={search}
@@ -649,7 +676,7 @@ export default function UserPage({
 
             <div className="modal-buttons">
               <button
-                className={`modal-close ${!selectedIng ? "disabled" : ""}`}
+                className={`modal-close ${!selectedIng || gramsInput === 0 ? "disabled" : ""}`}
                 onClick={() => {
                   addIngredientToDay();
                   setSelectedIng(null);

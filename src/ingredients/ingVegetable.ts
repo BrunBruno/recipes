@@ -69,6 +69,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.1, 17, 2],
+    price: 3.6,
   },
 
   onion: {

@@ -116,7 +116,6 @@ nav:hover > .nav-bg {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 600;
-  cursor: pointer;
   text-shadow: 2px 2px #333333;
   padding-left: 8rem;
   overflow: hidden;
@@ -158,9 +157,13 @@ nav:hover > .nav-bg {
   .nav-item > span {
     display: none;
   }
+
+  .h1-text {
+    display: none;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   main {
     padding: 0;
     padding-bottom: 3rem;
@@ -193,7 +196,8 @@ nav:hover > .nav-bg {
     padding: 0 1rem;
   }
 
-  .page-title-background {
-    display: none;
+  .page-title-background::after {
+    width: 15rem;
+    height: 15rem;
   }
 }

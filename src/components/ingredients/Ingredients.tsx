@@ -143,6 +143,17 @@ function Ingredients({}: IngredientsProps) {
     return count;
   }, [search, ingredientUsage]);
 
+  useEffect(() => {
+    document.body.style.overflow = selectedIngredient ? "hidden" : "auto";
+  }, [selectedIngredient]);
+
+  useEffect(() => {
+    if (showSearch) {
+      setSearch("");
+      searchInputRef.current?.focus();
+    }
+  }, [showSearch]);
+
   return (
     <div className="all-ingredients">
       <div className="page-title">

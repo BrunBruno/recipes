@@ -81,8 +81,11 @@
   margin: 1rem 0;
   width: fit-content;
 }
-.description-grid > span,
-strong {
+.description-grid > strong {
+  border-bottom: solid 1px #333;
+  padding-right: 0.5rem;
+}
+.description-grid > span {
   border-bottom: solid 1px #333;
   padding-right: 0.5rem;
 }
@@ -145,7 +148,6 @@ strong {
 
 .cooking-methods-text strong {
   color: #20c997;
-  border: none;
   padding: 0;
 }
 

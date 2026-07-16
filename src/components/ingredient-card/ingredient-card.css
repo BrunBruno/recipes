@@ -69,6 +69,10 @@
 .ingredient-card-title h2 {
   margin: 0;
   font-size: 1.4rem;
+  text-wrap: nowrap;
+  max-width: 20rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .ingredient-card-title span {
@@ -259,9 +263,7 @@
   column-gap: 2rem;
   border: solid 1px #222222;
   grid-template-columns: 1fr 1fr;
-
 }
-
 
 .ingredient-units h3 {
   grid-column: 1/-1;
@@ -285,4 +287,24 @@
 
 .units-row svg {
   height: 1rem;
+}
+
+@media (max-width: 960px) {
+  .macro-chart {
+    width: 100px;
+    height: 100px;
+  }
+
+  .macro-chart div {
+    height: 70px;
+    width: 70px;
+  }
+
+  .ingredient-units {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredient-card-title h2 {
+    max-width: 12rem;
+  }
 }

@@ -2,7 +2,12 @@ import "./recipes-grid.css";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import type { Recipe } from "../../types";
-import { calculateRecipeKcal, MealTypesData } from "../../utils";
+import {
+  calculateRecipeKcal,
+  calculateRecipePrice,
+  isPriceComplete,
+  MealTypesData,
+} from "../../utils";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -62,6 +67,12 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                      url(${recipe.images[0] === "" ? "./thumbnail/default.jpg" : "./thumbnail/" + recipe.images[0]})`,
               }}
             ></div>
+
+            {isPriceComplete(recipe) && (
+              <div className="card-price">
+                {calculateRecipePrice(recipe).toFixed(2)} zł
+              </div>
+            )}
 
             <div
               className="card-mark"

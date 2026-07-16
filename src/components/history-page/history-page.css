@@ -240,7 +240,7 @@
   color: #aeaeae;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .history-page {
     padding-top: 5rem;
     display: flex;

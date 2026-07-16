@@ -228,6 +228,7 @@
 }
 
 .save-day input[type="date"] {
+  position: relative;
   width: 100%;
   padding: 0.7rem 1.4em;
   background-color: #222;
@@ -239,7 +240,13 @@
   box-sizing: border-box;
 }
 .save-day input[type="date"]::-webkit-calendar-picker-indicator {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23303030" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.6rem;
+  width: 1.6rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23303030" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
 
 .save-day input[type="date"]:focus {
@@ -293,8 +300,6 @@
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 8px;
-  box-shadow: inset 0 0 0 2px #666;
-  background-color: #222;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,7 +593,7 @@ select {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .user-page {
     display: flex;
     flex-direction: column-reverse;
@@ -649,6 +654,8 @@ select {
 
   .modal-title {
     font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-input {
