@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -10,7 +10,11 @@ import type { Recipe } from "../../types";
 const gotowyBurger: Recipe = {
   name: "Burger Gotowiec",
   type: "snack",
-  cookingMethods: [["fried", 8], ["microwaved", 3], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["microwaved", 3],
+    ["toasted", 2],
+  ],
   images: ["burger-gotowiec.jpg"],
   time: 30,
   portions: 2,
@@ -21,7 +25,7 @@ const gotowyBurger: Recipe = {
       title: "Podstawowe",
       isMain: true,
       items: [
-        { ing: iGRN.hamburger_buns, amount: 4, unit: "szt" },
+        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.burger_patties, amount: 4, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },

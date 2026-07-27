@@ -1,3 +1,4 @@
+import { iBAK } from "./ingredients/ingBakery";
 import { iDIR } from "./ingredients/ingDairy";
 import { iFAT } from "./ingredients/ingFat";
 import { iFSH } from "./ingredients/ingFish";
@@ -33,6 +34,7 @@ export const ingredientCollections = [
   iFRT,
   iNUT,
   iGRN,
+  iBAK,
   iMET,
   iFSH,
   iHRB,
@@ -85,6 +87,7 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   frt: { label: "Owoce", color: "#6F42C1" },
   nut: { label: "Owoce", color: "#8D6E63" },
   grn: { label: "Zboża", color: "#C77D1A" },
+  bak: { label: "Pieczywo", color: "#6d3200" },
   hrb: { label: "Zioła", color: "#0CA678" },
   spc: { label: "Przyprawy", color: "#E8590C" },
   sau: { label: "Sosy", color: "#D9480F" },
@@ -661,6 +664,7 @@ export const countIngredientTypes = () => {
     dir: 0,
     fat: 0,
     grn: 0,
+    bak: 0,
     veg: 0,
     frt: 0,
     nut: 0,
@@ -953,6 +957,8 @@ export const isPriceComplete = (recipe: Recipe): boolean => {
 export const ingredientLookup: Record<string, IngredientItem> = {};
 ingredientCollections.forEach((collection) => {
   Object.values(collection).forEach((ing) => {
+    // const key = ing.name + ing.type + ing.subType;
+    if (ingredientLookup[ing.name]) console.error(`Duplicate ${ing.name}`);
     ingredientLookup[ing.name] = ing;
   });
 });

@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -11,7 +11,10 @@ const portions = 4;
 const wrapWieprzowinaZPieczarkami: Recipe = {
   name: "Wrap Wieprzowina z Pieczarkami",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["toasted", 2],
+  ],
   images: [""],
   time: 25,
   portions: portions,
@@ -21,7 +24,7 @@ const wrapWieprzowinaZPieczarkami: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.tortilla, amount: portions, unit: "szt" },
+        { ing: iBAK.tortilla, amount: portions, unit: "szt" },
         { ing: iMET.burger_patties, amount: portions, unit: "szt" },
         { ing: iVEG.mushrooms, amount: 100 },
         { ing: iVEG.potato, amount: 150 },

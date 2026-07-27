@@ -1,5 +1,5 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
@@ -17,7 +17,7 @@ const zawinieteTosty: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.toast_bread, amount: 8, unit: "krom" },
+        { ing: iBAK.toast_bread, amount: 8, unit: "krom" },
         { ing: iDIR.yellow_cheese, amount: 8, unit: "plas" },
         { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "lzi" },

@@ -1,4 +1,4 @@
-import { iGRN } from "../../ingredients/ingGrain";
+import { iBAK } from "../../ingredients/ingBakery";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -21,8 +21,8 @@ const hotHog: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.hotdog_buns, amount: 4, unit: "szt" },
-            { ing: iGRN.chicken_buns, amount: 4, unit: "szt" },
+            { ing: iBAK.hotdog_buns, amount: 4, unit: "szt" },
+            { ing: iBAK.chicken_buns, amount: 4, unit: "szt" },
           ],
           selected: 0,
         },

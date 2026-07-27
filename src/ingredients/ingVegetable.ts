@@ -187,7 +187,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   },
 
   sweet_pepper: {
-    name: "Papryka słodka",
+    name: "Słodka Papryka",
     type: "veg",
     isVeg: true,
     subType: "pep",

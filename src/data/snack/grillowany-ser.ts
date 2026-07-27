@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
 
 const grillowanySer: Recipe = {
@@ -16,7 +16,7 @@ const grillowanySer: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.toast_bread, amount: 4, unit: "krom" },
+        { ing: iBAK.toast_bread, amount: 4, unit: "krom" },
         { ing: iDIR.cheddar_cheese, amount: 2, unit: "plas" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
       ],

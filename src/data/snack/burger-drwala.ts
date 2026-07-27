@@ -1,3 +1,4 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
@@ -42,7 +43,7 @@ const burgerDrwala: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ing: iGRN.hamburger_buns, amount: 4, unit: "szt" },
+        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },

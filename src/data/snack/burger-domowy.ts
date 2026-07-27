@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -13,7 +13,10 @@ const portions = 4;
 const burgerDomowy: Recipe = {
   name: "Burger Domowy",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["toasted", 2],
+  ],
   images: ["burger-domowy.jpg", "burger-domowy-2.jpg"],
   time: 35,
   portions: portions,
@@ -32,7 +35,7 @@ const burgerDomowy: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ing: iGRN.multigrain_kaiser_roll, amount: 4, unit: "szt" },
+        { ing: iBAK.multigrain_kaiser_roll, amount: 4, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },

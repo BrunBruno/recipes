@@ -1,4 +1,5 @@
 import { dinnerSides } from "../../dinnerSides";
+import { iBAK } from "../../ingredients/ingBakery";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iLIQ } from "../../ingredients/ingLiquid";
@@ -23,7 +24,7 @@ const kotletyMielone: Recipe = {
       title: "",
       items: [
         { ing: iMET.ground_pork, amount: 1, unit: "opak" },
-        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iBAK.kaiser_roll, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iMET.egg, amount: 1, unit: "szt" },

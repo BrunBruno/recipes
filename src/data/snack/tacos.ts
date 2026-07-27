@@ -1,7 +1,7 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
@@ -12,7 +12,10 @@ import type { Recipe } from "../../types";
 const tacos: Recipe = {
   name: "Tacos",
   type: "snack",
-  cookingMethods: [["fried", 8], ["microwaved", 3]],
+  cookingMethods: [
+    ["fried", 8],
+    ["microwaved", 3],
+  ],
   images: [""],
   time: 35,
   portions: 4,
@@ -39,8 +42,8 @@ const tacos: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.tortilla_mini, amount: 12, unit: "szt" },
-            { ing: iGRN.taco_shell_corn, amount: 12, unit: "szt" },
+            { ing: iBAK.tortilla_mini, amount: 12, unit: "szt" },
+            { ing: iBAK.taco_shell_corn, amount: 12, unit: "szt" },
           ],
           selected: 0,
         },

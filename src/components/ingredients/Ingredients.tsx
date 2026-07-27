@@ -26,6 +26,7 @@ import { iLIQ } from "../../ingredients/ingLiquid";
 import { iNUT } from "../../ingredients/ingNut";
 import IngredientCard from "../ingredient-card/IngredientCard";
 import UnitIcon from "../../assets/unitIcon";
+import { iBAK } from "../../ingredients/ingBakery";
 
 type IngredientsProps = {};
 
@@ -34,6 +35,7 @@ const allGroups = [
   { label: "Mięso", data: iMET },
   { label: "Ryby", data: iFSH },
   { label: "Zboża", data: iGRN },
+  { label: "Pieczywo", data: iBAK },
   { label: "Nabiał", data: iDIR },
   { label: "Tłuszcze", data: iFAT },
   { label: "Warzywa", data: iVEG },

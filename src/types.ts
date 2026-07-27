@@ -18,7 +18,8 @@ export type IngredientType =
   | "veg" // vegetables / greens / mushrooms
   | "frt" // fruits
   | "nut" // nuts
-  | "grn" // grains / bakery
+  | "grn" // grains
+  | "bak" // bakery
   | "sau" // sauces
   | "jar" // preserves
   | "liq" // liquids
@@ -68,7 +69,6 @@ export type KeyWord =
   | "boczek"
   | "parówka"
   | "szynka"
-
   //
   | "ciasto"
   | "deser"

@@ -209,7 +209,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   },
 
   fresh_basil: {
-    name: "Bazylia",
+    name: "Świeża bazylia",
     type: "hrb",
     subType: "fhr",
     color: "#43A047",

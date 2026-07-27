@@ -1,5 +1,5 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -9,7 +9,10 @@ import type { Recipe } from "../../types";
 const chicker: Recipe = {
   name: "Chickery",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["toasted", 2],
+  ],
   images: ["chickery.jpg", "chickery-2.jpg"],
   time: 25,
   portions: 2,
@@ -20,7 +23,7 @@ const chicker: Recipe = {
       title: "Kanapki",
       items: [
         { ing: iMET.spicy_tenderloins, amount: 400 },
-        { ing: iGRN.chicken_buns, amount: 4, unit: "szt" },
+        { ing: iBAK.chicken_buns, amount: 4, unit: "szt" },
         { ing: iVEG.lettuce, amount: 4, unit: "szt" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
       ],

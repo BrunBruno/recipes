@@ -74,11 +74,14 @@ export const iSNK: Record<IngId, IngredientItem> = {
     type: "snk",
     subType: "cho",
     color: "#FFFDE7",
-    kcalPer100g: 540,
+    kcalPer100g: 564,
     unitWeights: {
-      opak: 100,
+      kst: 5,
+      opak: 80,
     },
-    nutrientsPer100g: [30, 59, 7],
+    nutrientsPer100g: [35, 56, 6.1],
+    price: 100,
+    verified: true,
   },
 
   chocolate_dark: {
@@ -88,10 +91,11 @@ export const iSNK: Record<IngId, IngredientItem> = {
     color: "#3E2723",
     kcalPer100g: 555,
     unitWeights: {
-      kst: 10,
-      opak: 100,
+      kst: 5,
+      opak: 80,
     },
-    nutrientsPer100g: [45, 18, 11],
+    nutrientsPer100g: [45, 21, 11],
+    price: 100,
     verified: true,
   },
 
@@ -122,7 +126,6 @@ export const iSNK: Record<IngId, IngredientItem> = {
   },
 
   //// BISCUITS ////
-
   pryncypalki: {
     name: "Pryncypałki",
     type: "snk",
@@ -194,7 +197,6 @@ export const iSNK: Record<IngId, IngredientItem> = {
   },
 
   //// ICE-CREAM ////
-
   cone_strawberry: {
     name: "Rożek truskawkowy",
     type: "snk",
@@ -220,7 +222,6 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [9, 20, 2.5],
   },
-
   raspberry_sorbet: {
     name: "Sorbet malinowy",
     type: "snk",

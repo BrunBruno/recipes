@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
@@ -12,7 +12,10 @@ import type { Recipe } from "../../types";
 const wrapTwister: Recipe = {
   name: "Wrap Twister",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["toasted", 2],
+  ],
   images: ["wrap-twister.jpg", "wrap-twister-2.jpg"],
   time: 20,
   portions: 4,
@@ -23,7 +26,7 @@ const wrapTwister: Recipe = {
       title: "Wrap",
       items: [
         { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
-        { ing: iGRN.tortilla, amount: 4, unit: "szt" },
+        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: 8, unit: "szt" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },

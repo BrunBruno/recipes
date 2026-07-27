@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -12,7 +12,10 @@ const portions = 4;
 const kebabGyros: Recipe = {
   name: "Kebab Gyros",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
+  cookingMethods: [
+    ["fried", 8],
+    ["toasted", 2],
+  ],
   images: ["kebab-gyros.jpg", "kebab-gyros-2.jpg"],
   time: 30,
   portions: portions,
@@ -24,7 +27,7 @@ const kebabGyros: Recipe = {
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
-        { ing: iGRN.tortilla, amount: 4, unit: "szt" },
+        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iSPC.gyros_spice, amount: 2, unit: "lz" },
       ],
     },

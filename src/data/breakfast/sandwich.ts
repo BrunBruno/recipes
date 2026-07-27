@@ -1,5 +1,5 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -24,7 +24,7 @@ const sandwich: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.toast_bread, amount: 4, unit: "krom" },
+        { ing: iBAK.toast_bread, amount: 4, unit: "krom" },
         {
           type: "choice",
           options: [

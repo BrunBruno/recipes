@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
@@ -26,7 +26,7 @@ const skladaki: Recipe = {
     {
       title: "Składaki",
       items: [
-        { ing: iGRN.tortilla, amount: 4, unit: "szt" },
+        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iMET.salami, amount: 12, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },

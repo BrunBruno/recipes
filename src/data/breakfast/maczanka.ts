@@ -1,5 +1,5 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import type { Recipe } from "../../types";
 
@@ -19,7 +19,7 @@ const maczanka: Recipe = {
         { ing: iMET.sausage, amount: 1, unit: "peto" },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ing: iGRN.kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iBAK.kaiser_roll, amount: 1, unit: "szt" },
       ],
     },
   ],

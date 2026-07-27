@@ -1,10 +1,10 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iMET } from "../../ingredients/ingMeat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iFAT } from "../../ingredients/ingFat";
 import { iVEG } from "../../ingredients/ingVegetable";
-import type { Recipe } from "../../types";
 import { iSAU } from "../../ingredients/ingSauce";
+import { iBAK } from "../../ingredients/ingBakery";
+import type { Recipe } from "../../types";
 
 const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
@@ -22,9 +22,9 @@ const kajzerkiZJajkiem: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
           ],
           selected: 0,
         },

@@ -1,5 +1,5 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
 import type { Recipe } from "../../types";
@@ -24,9 +24,9 @@ const serdelki: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
           ],
           selected: 0,
         },

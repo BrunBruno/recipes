@@ -1,4 +1,4 @@
-import { iGRN } from "../../ingredients/ingGrain";
+import { iBAK } from "../../ingredients/ingBakery";
 import { iMET } from "../../ingredients/ingMeat";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -18,7 +18,7 @@ const frenchHotDog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 2, unit: "szt" },
-        { ing: iGRN.french_hotdog_buns, amount: 2, unit: "szt" },
+        { ing: iBAK.french_hotdog_buns, amount: 2, unit: "szt" },
         {
           type: "choice",
           options: [

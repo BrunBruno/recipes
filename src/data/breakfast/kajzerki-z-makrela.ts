@@ -1,6 +1,6 @@
+import { iBAK } from "../../ingredients/ingBakery";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFSH } from "../../ingredients/ingFish";
-import { iGRN } from "../../ingredients/ingGrain";
 import type { Recipe } from "../../types";
 
 const kajzerkiZMakrela: Recipe = {
@@ -19,9 +19,9 @@ const kajzerkiZMakrela: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iGRN.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iGRN.morning_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
+            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
           ],
           selected: 0,
         },
