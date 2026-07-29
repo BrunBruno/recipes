@@ -34,7 +34,7 @@ const babeczkiGotowe: Recipe = {
       steps: [
         "Na blaszce do pieczenia ustaw foremki.",
         "Piekarnik nagrzej do temperatury 175°C (bez termoobiegu).",
-        "Mieszankę do wypieku babeczek wsyp d miski, dodaj jaja, wodę i olej.",
+        "Mieszankę do wypieku babeczek wsyp do miski, dodaj jaja, wodę i olej.",
         "Całość energicznie wymieszaj łyżką lub mikserem do dokładnego połączenia składników.",
         "Odsyp jedną łyżeczkę płatków czekoladowych.",
         "Pozostałe płatki wsyp do ciasta i delikatnie wymieszaj.",

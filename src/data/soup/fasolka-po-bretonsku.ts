@@ -9,7 +9,10 @@ import type { Recipe } from "../../types";
 const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka po Bretońsku",
   type: "soup",
-  cookingMethods: [["boiled", 120], ["fried", 8]],
+  cookingMethods: [
+    ["boiled", 120],
+    ["fried", 8],
+  ],
   images: ["fasolka-po-bretonsku.jpg"],
   time: 120,
   portions: 5,
@@ -25,7 +28,7 @@ const fasolkaPoBretonsku: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iMET.pork_rib, amount: 200, exclude: true },
+            { ing: iMET.pork_ribs, amount: 200, exclude: true },
             { ing: iMET.chicken_soup_portion, amount: 200, exclude: true },
           ],
           selected: 0,

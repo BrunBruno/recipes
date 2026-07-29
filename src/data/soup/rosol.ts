@@ -21,7 +21,7 @@ const rosol: Recipe = {
         { ing: iMET.turkey_wing, amount: 500, exclude: true },
         { ing: iMET.turkey_neck, amount: 200, exclude: true },
         { ing: iMET.chicken_soup_portion, amount: 400, exclude: true },
-        { ing: iMET.pork_rib, amount: 200, exclude: true },
+        { ing: iMET.pork_ribs, amount: 200, exclude: true },
         { ing: iLIQ.water, amount: 3000, unit: "ml", exclude: true },
         { ing: iLIQ.rosol, amount: 3000, invisible: true },
         { ing: iVEG.carrot, amount: 2, unit: "szt", exclude: true },

@@ -21,6 +21,8 @@ type IngId =
   | "penne_pasta"
   | "macaroni_pasta"
   | "lasagne_pasta"
+  | "fettuccine_pasta"
+  | "rice_noodles"
 
   //// PROCESSED ////
   | "cupcake_mix"
@@ -31,8 +33,6 @@ type IngId =
   | "kopytka"
   | "silesian_dumplings"
   | "steamed_dumplings"
-
-  
 
   //// SEEDS ////
   | "cocoa"
@@ -257,6 +257,28 @@ export const iGRN: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  fettuccine_pasta: {
+    name: "Makaron Fettuccine",
+    type: "grn",
+    color: "#F2D39B",
+    kcalPer100g: 350,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [2, 72, 12],
+  },
+
+  rice_noodles: {
+    name: "Makaron ryżowy",
+    type: "grn",
+    color: "#F8F1E5",
+    kcalPer100g: 350,
+    unitWeights: {
+      opak: 200,
+    },
+    nutrientsPer100g: [1, 78, 7],
+  },
+
   //// PROCESSED ////
 
   oat_flakes: {
@@ -334,8 +356,6 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [2, 42, 6],
   },
-
-  
 
   //// SEEDS ////
 

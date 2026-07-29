@@ -18,7 +18,10 @@ type IngId =
   | "carp"
   | "cod"
   | "salmon"
-  | "squid_frozen_ready";
+
+  //// SEA FOOD ////
+  | "squid_frozen_ready"
+  | "shrimp";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -220,5 +223,17 @@ export const iFSH: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1, 1, 18],
+  },
+
+  shrimp: {
+    name: "Krewetki",
+    type: "fsh",
+    subType: "sea",
+    color: "#F6A58A",
+    kcalPer100g: 85,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [1, 0, 20],
   },
 };

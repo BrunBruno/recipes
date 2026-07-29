@@ -15,6 +15,7 @@ type IngId =
   | "nutmeg"
   | "allspice"
   | "black_sesame"
+  | "sesame"
   | "cumin"
   | "garam_masala"
   | "clove"
@@ -43,14 +44,23 @@ type IngId =
   | "knorr_pork_ala_stroganoff_fix"
   | "knorr_four_cheese_spaghetti_fix"
   | "knorr_chicken_pasta_fix"
+  | "knorr_chili_con_carne_fix"
+  | "knorr_chicken_with_tomatoes_fix"
+  | "knorr_alfredo_chicken_pasta_fix"
+  | "knorr_ratatouille_fix"
   //
   | "winiary_tomato_sauce_fix"
   | "winiary_pork_neck_fix"
   | "winiary_chicken_fix"
   | "winiary_dark_roast_sauce_fix"
   | "winiary_peasant_stew_fix"
+  | "winiary_juicy_ribs"
   //
-  | "kamis_penne_fix";
+  | "kamis_penne_fix"
+  //
+  | "kania_curry_fix"
+  | "kania_sechuan_fix"
+  | "kania_pad_thai_fix";
 
 export const iSPC: Record<IngId, IngredientItem> = {
   //// SPICES ////
@@ -198,6 +208,18 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [50, 23, 18],
+  },
+
+  sesame: {
+    name: "Sezam",
+    type: "spc",
+    color: "#E8D5A3",
+    kcalPer100g: 570,
+    unitWeights: {
+      lzi: 3,
+      lz: 10,
+    },
+    nutrientsPer100g: [50, 23, 17],
   },
 
   cumin: {
@@ -519,6 +541,62 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  knorr_chili_con_carne_fix: {
+    name: "Fix Chili con Carne",
+    type: "spc",
+    subType: "sah",
+    color: "#B23A2A",
+    kcalPer100g: 295,
+    unitWeights: {
+      opak: 37,
+    },
+    nutrientsPer100g: [4.7, 50, 9.2],
+    price: 135,
+    verified: true,
+  },
+
+  knorr_chicken_with_tomatoes_fix: {
+    name: "Fix Kurczak z Pomidorami",
+    type: "spc",
+    subType: "sah",
+    color: "#E57373",
+    kcalPer100g: 307,
+    unitWeights: {
+      opak: 48,
+    },
+    nutrientsPer100g: [3.9, 55, 11],
+    price: 104,
+    verified: true,
+  },
+
+  knorr_alfredo_chicken_pasta_fix: {
+    name: "Fix Chicken Alfredo",
+    type: "spc",
+    subType: "sah",
+    color: "#F5E6C8",
+    kcalPer100g: 428,
+    unitWeights: {
+      opak: 42,
+    },
+    nutrientsPer100g: [18, 49, 14],
+    price: 119,
+    verified: true,
+  },
+
+  knorr_ratatouille_fix: {
+    name: "Fix Ratatouille",
+    type: "spc",
+    subType: "sah",
+    color: "#D97745",
+    kcalPer100g: 308,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [2.8, 57, 10],
+    price: 125,
+    verified: true,
+  },
+
   winiary_tomato_sauce_fix: {
     name: "Fix Sos Pomidorowy",
     type: "spc",
@@ -584,8 +662,22 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  winiary_juicy_ribs: {
+    name: "Soczyste Żeberka",
+    type: "spc",
+    subType: "sah",
+    color: "#8D3A2E",
+    kcalPer100g: 238,
+    unitWeights: {
+      opak: 28,
+    },
+    nutrientsPer100g: [17.6, 1.8, 17.8],
+    price: 125,
+    verified: true,
+  },
+
   kamis_penne_fix: {
-    name: "Fix Makaron Penne",
+    name: "Fix Makaron Penne z Pomidorami",
     type: "spc",
     subType: "sah",
     color: "#FFCC80",
@@ -595,6 +687,48 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5.2, 60, 7.6],
     price: 85.5,
+    verified: true,
+  },
+
+  kania_curry_fix: {
+    name: "Fix Curry",
+    type: "spc",
+    subType: "sah",
+    color: "#F4B942",
+    kcalPer100g: 335,
+    unitWeights: {
+      opak: 49,
+    },
+    nutrientsPer100g: [6.7, 55.8, 7.9],
+    price: 62,
+    verified: true,
+  },
+
+  kania_sechuan_fix: {
+    name: "Fix Seczuański",
+    type: "spc",
+    subType: "sah",
+    color: "#C43A31",
+    kcalPer100g: 296,
+    unitWeights: {
+      opak: 43,
+    },
+    nutrientsPer100g: [1.8, 57.4, 7.1],
+    price: 70,
+    verified: true,
+  },
+
+  kania_pad_thai_fix: {
+    name: "Fix Pad Thai",
+    type: "spc",
+    subType: "sah",
+    color: "#D89B4A",
+    kcalPer100g: 297,
+    unitWeights: {
+      opak: 41,
+    },
+    nutrientsPer100g: [1, 61.6, 6.2],
+    price: 73,
     verified: true,
   },
 };

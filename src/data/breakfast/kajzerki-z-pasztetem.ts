@@ -25,7 +25,14 @@ const kajzerkiZPasztetem: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iMET.meat_spread, amount: 80 },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.meat_spread, amount: 80 },
+            { ing: iMET.liver_sausage, amount: 80 },
+          ],
+          selected: 0,
+        },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
     },

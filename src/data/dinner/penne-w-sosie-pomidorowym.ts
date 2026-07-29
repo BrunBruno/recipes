@@ -11,7 +11,7 @@ const penneWSosiePomidorowym: Recipe = {
     ["boiled", 20],
     ["stewed", 20],
   ],
-  images: ["penne-w-sosie-pomidorowym.jpg"],
+  images: ["penne-w-sosie-pomidorowym.jpg", "penne-w-sosie-pomidorowym-2.jpg"],
   time: 20,
   portions: 3,
   taste: 4,

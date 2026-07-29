@@ -27,7 +27,7 @@ type IngId =
   | "ground_pork"
   | "stew_pork"
   | "pork_tenderloin"
-  | "pork_rib"
+  | "pork_ribs"
   | "pork_shoulder"
   | "stew_beef"
   | "ground_beef"
@@ -55,6 +55,7 @@ type IngId =
   | "sausages_berlinki"
   | "serdelki"
   | "meat_spread"
+  | "liver_sausage"
   | "pork_knuckle_ready"
   | "spicy_tenderloins"
   | "spicy_wings"
@@ -72,7 +73,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.5, 0, 23.1],
-    price: 25,
+    price: 26,
   },
 
   chicken_tenderloin: {
@@ -328,8 +329,8 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [4, 0, 26],
   },
 
-  pork_rib: {
-    name: "Żeberko wieprzowe",
+  pork_ribs: {
+    name: "Żeberka wieprzowe",
     type: "met",
     color: "#B85C5C",
     kcalPer100g: 291,
@@ -429,9 +430,10 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#A05A4A",
     kcalPer100g: 280,
     unitWeights: {
-      szt: 800,
+      szt: 500,
     },
     nutrientsPer100g: [24, 0, 20],
+    price: 28,
   },
 
   //// PROCESSED ////
@@ -599,10 +601,11 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#C06C5B",
     kcalPer100g: 227,
     unitWeights: {
-      peto: 100,
+      peto: 250,
+      opak: 500,
     },
     nutrientsPer100g: [18.4, 2, 13.1],
-    price: 24,
+    price: 23.8,
     verified: true,
   },
 
@@ -667,6 +670,20 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 131,
     },
     nutrientsPer100g: [14, 6.7, 1.4],
+    verified: true,
+  },
+
+  liver_sausage: {
+    name: "Pasztetowa",
+    type: "met",
+    subType: "can",
+    color: "#e9cebd",
+    kcalPer100g: 237,
+    nutrientsPer100g: [20, 3.5, 10],
+    unitWeights: {
+      opak: 300,
+    },
+    price: 9.3,
     verified: true,
   },
 

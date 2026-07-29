@@ -53,7 +53,9 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.2, 2.4, 0.4],
+    price: 5,
   },
+  // Jonagold 5
 
   pear: {
     name: "Gruszka",

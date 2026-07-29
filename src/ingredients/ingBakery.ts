@@ -9,6 +9,7 @@ type IngId =
   | "sunflower_bread"
   | "morning_roll"
   | "wheat_bread"
+  | "nan_bread"
   | "tortilla"
   | "tortilla_mini"
   | "taco_shell_corn"
@@ -111,6 +112,17 @@ export const iBAK: Record<IngId, IngredientItem> = {
       szt: 500,
     },
     nutrientsPer100g: [3, 49, 8],
+  },
+
+  nan_bread: {
+    name: "Chlebek Naan",
+    type: "bak",
+    color: "#EBCB93",
+    kcalPer100g: 310,
+    unitWeights: {
+      szt: 90,
+    },
+    nutrientsPer100g: [5, 55, 9],
   },
 
   tortilla: {

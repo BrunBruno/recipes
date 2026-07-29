@@ -7,7 +7,7 @@ const golonkaGotowa: Recipe = {
   name: "Golonka Gotowa",
   type: "dinner",
   cookingMethods: [["roasted", 60]],
-  images: ["golonka-gotowa.jpg"],
+  images: ["golonka-gotowa.jpg", "golonka-gotowa-2.jpg"],
   time: 60,
   portions: portions,
   taste: 3,

@@ -204,6 +204,7 @@ export default function UserPage({
         protein: d.protein + saveDialog.newRecord!.protein,
         carbs: d.carbs + saveDialog.newRecord!.carbs,
         fat: d.fat + saveDialog.newRecord!.fat,
+        veg: d.veg + saveDialog.newRecord!.veg,
       };
     });
 

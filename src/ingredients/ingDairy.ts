@@ -56,8 +56,10 @@ export const iDIR: Record<IngId, IngredientItem> = {
       lzi: 5,
       lz: 15,
       szk: 250,
+      opak: 1000,
     },
     nutrientsPer100g: [3.2, 4.7, 3.2],
+    price: 2.5,
     verified: true,
   },
 
@@ -68,6 +70,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 48,
     unitWeights: {
       szk: 250,
+      opak: 1000,
     },
     nutrientsPer100g: [1.5, 5, 3.5],
   },
@@ -228,13 +231,14 @@ export const iDIR: Record<IngId, IngredientItem> = {
     name: "Śmietana 18%",
     type: "dir",
     color: "#FFFDE7",
-    kcalPer100g: 191,
+    kcalPer100g: 188,
     unitWeights: {
       ml: 1,
       lz: 15,
     },
-    nutrientsPer100g: [18, 4.8, 2.5],
+    nutrientsPer100g: [18, 3.8, 2.6],
     price: 11.5,
+    verified: true,
   },
 
   cream_30: {

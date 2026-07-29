@@ -9,6 +9,8 @@ type IngId =
   | "roma_tomato"
   | "sun_dried_tomatoes"
   | "cucumber"
+  | "zucchini"
+  | "eggplant"
   | "bell_pepper"
   | "sweet_pepper"
   | "chili_pepper"
@@ -83,6 +85,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 120,
     },
     nutrientsPer100g: [0.1, 9, 1.1],
+    price: 3.5,
   },
 
   red_onion: {
@@ -151,11 +154,14 @@ export const iVEG: Record<IngId, IngredientItem> = {
     isVeg: true,
     subType: "tom",
     color: "#B71C1C",
-    kcalPer100g: 258,
+    kcalPer100g: 178,
     unitWeights: {
       szt: 5,
+      opak: 150,
     },
-    nutrientsPer100g: [3, 56, 14],
+    nutrientsPer100g: [11, 12, 4],
+    price: 50,
+    verified: true,
   },
 
   cucumber: {
@@ -170,6 +176,32 @@ export const iVEG: Record<IngId, IngredientItem> = {
       plas: 10,
     },
     nutrientsPer100g: [0.1, 3.6, 0.7],
+  },
+
+  zucchini: {
+    name: "Cukinia",
+    type: "veg",
+    isVeg: true,
+    subType: "cuc",
+    color: "#9ACD6A",
+    kcalPer100g: 17,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0, 3, 1],
+  },
+
+  eggplant: {
+    name: "Bakłażan",
+    type: "veg",
+    isVeg: true,
+    subType: "egp",
+    color: "#7B4B7A",
+    kcalPer100g: 25,
+    unitWeights: {
+      szt: 350,
+    },
+    nutrientsPer100g: [0, 6, 1],
   },
 
   bell_pepper: {

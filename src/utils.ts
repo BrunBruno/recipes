@@ -616,6 +616,7 @@ export const countIngredientUsage = (recipes: Recipe[]) => {
     items.forEach((item) => {
       if ((item as IngredientChoice).type === "choice") {
         (item as IngredientChoice).options.forEach((opt) => {
+          console.log(opt.ing);
           usage[opt.ing.name] = (usage[opt.ing.name] ?? 0) + 1;
         });
         return;

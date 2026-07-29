@@ -75,6 +75,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
       szk: 220,
     },
     nutrientsPer100g: [99, 0, 0],
+    price: 46,
   },
 
   olive_oil_extra_virgin: {

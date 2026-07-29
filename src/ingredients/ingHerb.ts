@@ -219,6 +219,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       peto: 30,
     },
     nutrientsPer100g: [0.6, 2.7, 3.2],
+    price: 200,
   },
 
   lemongrass: {
