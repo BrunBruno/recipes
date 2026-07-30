@@ -80,6 +80,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 20,
     },
     nutrientsPer100g: [0, 0, 0],
+    price: 66.5,
     verified: true,
   },
 
@@ -105,6 +106,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
+    price: 13.9,
   },
 
   yeast: {

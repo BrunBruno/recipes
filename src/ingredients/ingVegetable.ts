@@ -112,6 +112,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       zbk: 5,
     },
     nutrientsPer100g: [0.5, 33, 6.4],
+    price: 32,
   },
 
   tomato: {
@@ -157,10 +158,10 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 178,
     unitWeights: {
       szt: 5,
-      opak: 150,
+      opak: 100,
     },
-    nutrientsPer100g: [11, 12, 4],
-    price: 50,
+    nutrientsPer100g: [1.2, 15, 5.8],
+    price: 90,
     verified: true,
   },
 
@@ -176,6 +177,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       plas: 10,
     },
     nutrientsPer100g: [0.1, 3.6, 0.7],
+    price: 9,
   },
 
   zucchini: {

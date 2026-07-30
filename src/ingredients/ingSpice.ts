@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// SPICES ////
   | "salt"
+  | "sea_salt"
   | "black_pepper"
   | "cayenne_pepper"
   | "granulated_garlic"
@@ -74,6 +75,18 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 0, 0],
     price: 2,
+    verified: true,
+  },
+
+  sea_salt: {
+    name: "Sól morska",
+    type: "spc",
+    color: "#F5F5F5",
+    kcalPer100g: 0,
+    unitWeights: {
+      lzi: 5,
+    },
+    nutrientsPer100g: [0, 0, 0],
     verified: true,
   },
 

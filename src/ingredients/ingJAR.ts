@@ -12,6 +12,7 @@ type IngId =
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
+  | "sun_dried_tomatoes_in_oil"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
   | "jam_strawberry"
@@ -175,6 +176,22 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 5.5, 1.2],
   },
 
+  sun_dried_tomatoes_in_oil: {
+    name: "Suszone pomidory w zalewie",
+    type: "veg",
+    isVeg: true,
+    subType: "tom",
+    color: "#B71C1C",
+    kcalPer100g: 178,
+    unitWeights: {
+      szt: 5,
+      opak: 150,
+    },
+    nutrientsPer100g: [11, 12, 4],
+    price: 50,
+    verified: true,
+  },
+
   sweet_sour_sauce: {
     name: "Sos słodko-kwaśny",
     type: "jar",
@@ -255,11 +272,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     isVeg: true,
     color: "#66BB6A",
-    kcalPer100g: 81,
+    kcalPer100g: 120,
     unitWeights: {
-      opak: 250,
+      opak: 240,
     },
-    nutrientsPer100g: [0.4, 14, 5],
+    nutrientsPer100g: [0.3, 19, 6.1],
+    price: 10.6,
+    verified: true,
   },
 
   canned_red_beans: {
@@ -294,9 +313,10 @@ export const iJAR: Record<IngId, IngredientItem> = {
     kcalPer100g: 63,
     unitWeights: {
       plas: 30,
-      opak: 565,
+      opak: 340,
     },
     nutrientsPer100g: [0, 15, 0.4],
+    price: 22.9,
     verified: true,
   },
 

@@ -14,6 +14,7 @@ type IngId =
   | "tortilla_mini"
   | "taco_shell_corn"
   | "toast_bread"
+  | "toast_multigrain_bread"
   | "hamburger_buns"
   | "chicken_buns"
   | "hotdog_buns"
@@ -22,7 +23,8 @@ type IngId =
   //// SNACKS ////
   | "snail_pastry_custard"
   | "frusta_prosciutto"
-  | "berlinki_hot_dog";
+  | "berlinki_hot_dog"
+  | "garlic_baguette";
 
 export const iBAK: Record<IngId, IngredientItem> = {
   //// BAKERY ////
@@ -80,12 +82,14 @@ export const iBAK: Record<IngId, IngredientItem> = {
     type: "bak",
     subType: "brd",
     color: "#7A5A3A",
-    kcalPer100g: 230,
+    kcalPer100g: 275,
     unitWeights: {
       krom: 35,
-      szt: 500,
+      szt: 600,
     },
-    nutrientsPer100g: [2.5, 43, 6],
+    nutrientsPer100g: [5.8, 45, 7.5],
+    price: 8.8,
+    verified: true,
   },
 
   sunflower_bread: {
@@ -173,6 +177,22 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [3.2, 50, 8.6],
     price: 8,
+    verified: true,
+  },
+
+  toast_multigrain_bread: {
+    name: "Tosty wieloziarniste",
+    type: "bak",
+    subType: "brd",
+    color: "#8C5E3C",
+    kcalPer100g: 252,
+    unitWeights: {
+      opak: 500,
+      szt: 22,
+      krom: 22,
+    },
+    nutrientsPer100g: [2.1, 45, 9.5],
+    price: 6,
     verified: true,
   },
 
@@ -267,5 +287,17 @@ export const iBAK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [23.8, 24.2, 9.6],
     price: 34,
     verified: true,
+  },
+
+  garlic_baguette: {
+    name: "Bagietka z masłem czosnkowym",
+    type: "grn",
+    subType: "bak",
+    color: "#E6C28B",
+    kcalPer100g: 340,
+    unitWeights: {
+      szt: 175,
+    },
+    nutrientsPer100g: [12, 42, 8],
   },
 };

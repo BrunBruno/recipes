@@ -102,6 +102,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
       lz: 14,
     },
     nutrientsPer100g: [82, 0.7, 0.7],
+    price: 25,
     verified: true,
   },
 

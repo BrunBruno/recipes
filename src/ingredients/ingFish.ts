@@ -233,7 +233,10 @@ export const iFSH: Record<IngId, IngredientItem> = {
     kcalPer100g: 85,
     unitWeights: {
       szt: 15,
+      opak: 250,
     },
-    nutrientsPer100g: [1, 0, 20],
+    nutrientsPer100g: [1.1, 0, 21],
+    price: 110,
+    verified: true,
   },
 };

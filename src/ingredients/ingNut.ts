@@ -23,6 +23,7 @@ export const iNUT: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [65, 13, 15],
+    price: 66.6,
   },
 
   coconut_flakes: {
@@ -34,6 +35,7 @@ export const iNUT: Record<IngId, IngredientItem> = {
       lz: 7,
     },
     nutrientsPer100g: [64, 24, 6],
+    price: 25,
   },
 
   almonds: {

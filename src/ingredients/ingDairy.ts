@@ -14,6 +14,9 @@ type IngId =
   | "vanilla_skyr"
   | "strawberry_skyr"
   | "drinkable_skyr_strawberry_and_kiwi"
+  | "drinkable_skyr_blueberry"
+  | "drinkable_skyr_vanilla"
+  | "drinkable_skyr_mango"
   | "kefir"
   | "cream_12"
   | "cream_18"
@@ -195,7 +198,46 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 350,
     },
-    nutrientsPer100g: [1.1, 10, 6.5],
+    nutrientsPer100g: [1.1, 9, 6.5],
+    price: 17,
+    verified: true,
+  },
+
+  drinkable_skyr_blueberry: {
+    name: "Skyr pitny borówkowy",
+    type: "dir",
+    color: "#9FA8DA",
+    kcalPer100g: 73,
+    unitWeights: {
+      opak: 350,
+    },
+    nutrientsPer100g: [1.5, 8.4, 6.5],
+    price: 17,
+    verified: true,
+  },
+
+  drinkable_skyr_vanilla: {
+    name: "Skyr pitny waniliowy",
+    type: "dir",
+    color: "#FFF8DC",
+    kcalPer100g: 78,
+    unitWeights: {
+      opak: 350,
+    },
+    nutrientsPer100g: [1.5, 9.5, 6.5],
+    price: 17,
+    verified: true,
+  },
+
+  drinkable_skyr_mango: {
+    name: "Skyr pitny mango",
+    type: "dir",
+    color: "#FFD54F",
+    kcalPer100g: 77,
+    unitWeights: {
+      opak: 350,
+    },
+    nutrientsPer100g: [1.5, 9, 6.5],
     price: 17,
     verified: true,
   },
@@ -334,11 +376,13 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#F5F5F0",
-    kcalPer100g: 225,
+    kcalPer100g: 240,
     unitWeights: {
       opak: 150,
     },
-    nutrientsPer100g: [9, 3, 7],
+    nutrientsPer100g: [22, 3.2, 7.2],
+    price: 26.6,
+    verified: true,
   },
 
   cream_cheese_horseradish: {

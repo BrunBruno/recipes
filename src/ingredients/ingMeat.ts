@@ -29,6 +29,7 @@ type IngId =
   | "pork_tenderloin"
   | "pork_ribs"
   | "pork_shoulder"
+  | "ground_pork_with_beef"
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
@@ -347,6 +348,19 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 250,
     unitWeights: {},
     nutrientsPer100g: [20, 0, 17],
+  },
+
+  ground_pork_with_beef: {
+    name: "Mięso mielone wieprzowo-wołowe",
+    type: "met",
+    color: "#C38A8A",
+    kcalPer100g: 191,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [13, 0.5, 18],
+    price: 24,
+    verified: true,
   },
 
   //////////////////////////////
