@@ -291,8 +291,8 @@ export const iBAK: Record<IngId, IngredientItem> = {
 
   garlic_baguette: {
     name: "Bagietka z masłem czosnkowym",
-    type: "grn",
-    subType: "bak",
+    type: "bak",
+    subType: "snk",
     color: "#E6C28B",
     kcalPer100g: 340,
     unitWeights: {
