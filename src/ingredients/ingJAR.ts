@@ -36,9 +36,11 @@ type IngId =
   | "frozen_vegetable_mix"
   | "frozen_stir_fry"
   | "frozen_stir_fry_oriental"
+  | "frozen_stir_fry_potatoes"
   | "frozen_green_beans"
   | "strawberry_frozen"
   | "frozen_broccoli"
+  | "frozen_potato_dumpling"
 
   //// SALADS ////
   | "coleslaw"
@@ -405,6 +407,17 @@ export const iJAR: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  frozen_stir_fry_potatoes: {
+    name: "Warzywa na patelnię orientalne",
+    type: "jar",
+    isVeg: true,
+    subType: "fro",
+    color: "#66BB6A",
+    kcalPer100g: 50,
+    nutrientsPer100g: [1, 7.1, 1.9],
+    verified: true,
+  },
+
   frozen_green_beans: {
     name: "Mrożona fasolka szparagowa",
     type: "jar",
@@ -458,6 +471,19 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.4, 3.2, 2.9],
+  },
+
+  frozen_potato_dumpling: {
+    name: "Mrożone brokuły",
+    type: "jar",
+    isVeg: true,
+    subType: "fro",
+    color: "#2E7D32",
+    kcalPer100g: 159,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [3.5, 26, 4.8],
   },
 
   //// SALADS ////

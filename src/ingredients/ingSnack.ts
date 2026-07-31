@@ -9,6 +9,7 @@ type IngId =
   //// CHOCOLATE ////
   | "chocolate_white"
   | "chocolate_dark"
+  | "chocolate_dark_80"
   | "chocolate_cream"
   | "nutella"
 
@@ -95,6 +96,21 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 80,
     },
     nutrientsPer100g: [45, 21, 11],
+    price: 100,
+    verified: true,
+  },
+
+  chocolate_dark_80: {
+    name: "Gorzka czekolada 80%",
+    type: "snk",
+    subType: "cho",
+    color: "#3E2723",
+    kcalPer100g: 555,
+    unitWeights: {
+      kst: 5,
+      opak: 80,
+    },
+    nutrientsPer100g: [45, 21, 10],
     price: 100,
     verified: true,
   },
@@ -234,4 +250,6 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 25, 0.4],
   },
+
+  ////
 };
