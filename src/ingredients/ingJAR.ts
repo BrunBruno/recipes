@@ -181,9 +181,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
 
   sun_dried_tomatoes_in_oil: {
     name: "Suszone pomidory w zalewie",
-    type: "veg",
+    type: "jar",
     isVeg: true,
-    subType: "tom",
     color: "#B71C1C",
     kcalPer100g: 178,
     unitWeights: {
