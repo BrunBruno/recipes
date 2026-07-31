@@ -129,12 +129,15 @@ export const iSAU: Record<IngId, IngredientItem> = {
     name: "Musztarda Dijon",
     type: "sau",
     color: "#E2CA73",
-    kcalPer100g: 123,
+    kcalPer100g: 174,
     unitWeights: {
       lz: 15,
       lzi: 5,
+      opak: 165,
     },
-    nutrientsPer100g: [6.5, 7.5, 6],
+    nutrientsPer100g: [11, 8.4, 7.7],
+    price: 17,
+    verified: true,
   },
 
   mayonnaise: {

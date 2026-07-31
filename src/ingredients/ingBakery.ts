@@ -84,7 +84,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     color: "#7A5A3A",
     kcalPer100g: 275,
     unitWeights: {
-      krom: 35,
+      krom: 50,
       szt: 600,
     },
     nutrientsPer100g: [5.8, 45, 7.5],

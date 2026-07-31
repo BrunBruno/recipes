@@ -157,6 +157,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [18, 55, 12],
+    price: 330,
   },
 
   //// FRESH ////
@@ -219,7 +220,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       peto: 30,
     },
     nutrientsPer100g: [0.6, 2.7, 3.2],
-    price: 200,
+    price: 260,
   },
 
   lemongrass: {
@@ -245,5 +246,6 @@ export const iHRB: Record<IngId, IngredientItem> = {
       peto: 30,
     },
     nutrientsPer100g: [0.5, 3.7, 2.1],
+    price: 260,
   },
 };

@@ -18,11 +18,14 @@ type IngId =
   //// JUICES ////
   | "lemon_juice"
   | "lime_juice"
-  | "multivitamin_juice_green"
+  | "juice_multivitamin_green"
+  | "juice_cactus"
+  | "juice_mango"
 
   //// DECOCTION ////
   | "rosol"
-  | "meat_stock";
+  | "meat_stock"
+  | "beef_broth";
 
 export const iLIQ: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -203,7 +206,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 8, 0.4],
   },
 
-  multivitamin_juice_green: {
+  juice_multivitamin_green: {
     name: "Sok multiwitamina (zielony)",
     type: "liq",
     color: "#66BB6A",
@@ -215,6 +218,32 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.3, 10, 0.6],
     price: 4.3,
+  },
+
+  juice_cactus: {
+    name: "Sok kaktus",
+    type: "liq",
+    color: "#587217",
+    kcalPer100g: 21,
+    nutrientsPer100g: [0.5, 5, 0.5],
+    unitWeights: {
+      szk: 250,
+    },
+    price: 4,
+    verified: true,
+  },
+
+  juice_mango: {
+    name: "Sok mango",
+    type: "liq",
+    color: "#F3B900",
+    kcalPer100g: 21,
+    nutrientsPer100g: [0.5, 5, 0.5],
+    unitWeights: {
+      szk: 250,
+    },
+    price: 4,
+    verified: true,
   },
 
   //// DECOCTION ////
@@ -234,11 +263,28 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     name: "Wywar mięsny",
     type: "liq",
     color: "#BCAAA4",
-    kcalPer100g: 45,
+    kcalPer100g: 5,
     unitWeights: {
       ml: 1,
       szk: 250,
     },
-    nutrientsPer100g: [1.2, 0.6, 0.2],
+    nutrientsPer100g: [0.2, 0.6, 0.2],
+    price: 2.2,
+    verified: true,
+  },
+
+  beef_broth: {
+    name: "Bulion wołowy",
+    type: "liq",
+    color: "#C47C3B",
+    kcalPer100g: 116,
+    nutrientsPer100g: [4.6, 14, 4.6],
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 160,
+    },
+    price: 48,
+    verified: true,
   },
 };

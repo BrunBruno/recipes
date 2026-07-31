@@ -15,8 +15,11 @@ type IngId =
   | "sun_dried_tomatoes_in_oil"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
+
+  //// JAMS ////
   | "jam_strawberry"
   | "jam_cranberry"
+  | "jam_currant"
 
   //// CANNED ////
   | "canned_tomatoes"
@@ -214,6 +217,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 18, 1],
   },
 
+  //// JAMS ////
+
   jam_strawberry: {
     name: "Dżem truskawkowy",
     type: "jar",
@@ -237,6 +242,21 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szk: 300,
     },
     nutrientsPer100g: [0.2, 65, 0.5],
+    price: 17.8,
+  },
+
+  jam_currant: {
+    name: "Dżem porzeczkowy",
+    type: "jar",
+    color: "#F31112",
+    kcalPer100g: 138,
+    unitWeights: {
+      lz: 20,
+      szk: 300,
+    },
+    nutrientsPer100g: [0.5, 32, 0.5],
+    price: 17.8,
+    verified: true,
   },
 
   //// CANNED ////

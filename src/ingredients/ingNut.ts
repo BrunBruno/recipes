@@ -18,24 +18,28 @@ export const iNUT: Record<IngId, IngredientItem> = {
     name: "Orzechy włoskie",
     type: "nut",
     color: "#8D6E63",
-    kcalPer100g: 654,
+    kcalPer100g: 665,
     unitWeights: {
       lz: 10,
+      opak: 300,
     },
-    nutrientsPer100g: [65, 13, 15],
+    nutrientsPer100g: [60, 12, 16],
     price: 66.6,
+    verified: true,
   },
 
   coconut_flakes: {
     name: "Wiórki kokosowe",
     type: "nut",
     color: "#F5F5F5",
-    kcalPer100g: 660,
+    kcalPer100g: 651,
     unitWeights: {
       lz: 7,
+      opak: 200,
     },
-    nutrientsPer100g: [64, 24, 6],
+    nutrientsPer100g: [61.4, 5.9, 5.6],
     price: 25,
+    verified: true,
   },
 
   almonds: {

@@ -14,6 +14,7 @@ type IngId =
   | "instant_yeast"
   | "gelatin"
   | "vanilla_pudding"
+  | "powdered_borscht"
   | "strawberry_kissel"
   | "lemon_kissel"
   | "raspberry_kissel"
@@ -107,6 +108,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 0, 0],
     price: 13.9,
+    verified: true,
   },
 
   yeast: {
@@ -143,6 +145,19 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 0, 85],
     verified: true,
+  },
+
+  powdered_borscht: {
+    name: "Barszcz w proszku",
+    type: "oth",
+    color: "#a00e16",
+    kcalPer100g: 264,
+    nutrientsPer100g: [1.2, 61.2, 2.4],
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 60,
+    },
   },
 
   vanilla_pudding: {

@@ -17,6 +17,7 @@ const jajecznica: Recipe = {
     "jajecznica-4.jpg",
     "jajecznica-5.jpg",
     "jajecznica-6.jpg",
+    "jajecznica-7.jpg",
   ],
   time: 15,
   portions: 1,
