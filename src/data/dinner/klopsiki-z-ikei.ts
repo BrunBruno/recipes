@@ -19,7 +19,7 @@ const klopsikiZIkei: Recipe = {
     ["fried", 15],
     ["stewed", 10],
   ],
-  images: ["klopsiki-z-ikei.jpg"],
+  images: ["klopsiki-z-ikei.jpg", "klopsiki-z-ikei-2.jpg"],
   time: 150,
   portions: portions,
   taste: null,

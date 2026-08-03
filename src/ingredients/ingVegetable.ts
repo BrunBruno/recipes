@@ -136,7 +136,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "tom",
     color: "#E53935",
     kcalPer100g: 18,
-    nutrientsPer100g: [0.9, 0.2, 3.9],
+    nutrientsPer100g: [0.2, 3.9, 0.9],
   },
 
   roma_tomato: {
@@ -146,7 +146,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "tom",
     color: "#EF5350",
     kcalPer100g: 19,
-    nutrientsPer100g: [0.9, 0.2, 4.1],
+    nutrientsPer100g: [0.2, 4.1, 0.9],
   },
 
   sun_dried_tomatoes: {
@@ -269,7 +269,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "pep",
     color: "#D32F2F",
     kcalPer100g: 31,
-    nutrientsPer100g: [1.0, 0.3, 6.0],
+    nutrientsPer100g: [0.3, 6, 1],
     unitWeights: {
       szt: 150,
     },
@@ -283,7 +283,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "pep",
     color: "#FBC02D",
     kcalPer100g: 27,
-    nutrientsPer100g: [1.0, 0.2, 6.3],
+    nutrientsPer100g: [0.2, 6.3, 1],
   },
 
   green_bell_pepper: {
@@ -293,7 +293,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "pep",
     color: "#43A047",
     kcalPer100g: 20,
-    nutrientsPer100g: [0.9, 0.2, 4.6],
+    nutrientsPer100g: [0.2, 4.6, 0.9],
   },
 
   carrot: {
@@ -317,7 +317,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "car",
     color: "#FB8C00",
     kcalPer100g: 35,
-    nutrientsPer100g: [0.8, 0.2, 8.2],
+    nutrientsPer100g: [0.2, 8.2, 0.8],
   },
 
   parsley_root: {
@@ -455,6 +455,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 5,
     },
     nutrientsPer100g: [0.2, 2.9, 1.4],
+    price: 27.5,
   },
 
   lettuce_romaine: {
@@ -496,7 +497,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 10,
       opak: 300,
     },
-    nutrientsPer100g: [1.4, 0.2, 2.9],
+    nutrientsPer100g: [0.2, 2.9, 1.4],
+    price: 27.5,
   },
 
   cabbage: {

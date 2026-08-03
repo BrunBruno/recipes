@@ -19,6 +19,8 @@ type IngId =
   | "wafers_cream"
   | "delicje"
   | "milka_choco_cookies"
+  | "snickers"
+  | "twix"
 
   //// ICE-CREAM ////
   | "cone_strawberry"
@@ -209,6 +211,30 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [25, 62, 6.3],
     price: 52,
+    verified: true,
+  },
+
+  snickers: {
+    name: "Snickers",
+    type: "snk",
+    color: "#6B3E26",
+    kcalPer100g: 489,
+    unitWeights: {
+      opak: 75,
+    },
+    nutrientsPer100g: [23, 60, 8.6],
+    verified: true,
+  },
+
+  twix: {
+    name: "Twix",
+    type: "snk",
+    color: "#C68642",
+    kcalPer100g: 493,
+    unitWeights: {
+      opak: 75,
+    },
+    nutrientsPer100g: [24, 65, 4.5],
     verified: true,
   },
 

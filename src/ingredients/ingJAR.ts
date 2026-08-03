@@ -474,16 +474,16 @@ export const iJAR: Record<IngId, IngredientItem> = {
   },
 
   frozen_potato_dumpling: {
-    name: "Mrożone brokuły",
+    name: "Pyzy mięsne",
     type: "jar",
-    isVeg: true,
     subType: "fro",
-    color: "#2E7D32",
-    kcalPer100g: 159,
+    color: "#D8C2A5",
+    kcalPer100g: 185,
     unitWeights: {
-      opak: 500,
+      szt: 60,
     },
-    nutrientsPer100g: [3.5, 26, 4.8],
+    nutrientsPer100g: [5.5, 28, 6],
+    price: 7.5,
   },
 
   //// SALADS ////
@@ -533,6 +533,6 @@ export const iJAR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
     },
-    nutrientsPer100g: [1.4, 4.8, 8.9],
+    nutrientsPer100g: [1.4, 4.8, 1.2],
   },
 };

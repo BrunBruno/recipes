@@ -27,6 +27,7 @@ type IngId =
   | "potato_seasoning"
   | "meat_seasoning"
   | "gyros_spice"
+  | "marinade_prymat"
   //
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
@@ -325,6 +326,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [8, 45, 8],
+  },
+
+  marinade_prymat: {
+    name: "Marynata Prymat",
+    type: "spc",
+    color: "#D96B3B",
+    kcalPer100g: 260,
+    unitWeights: {
+      opak: 20,
+    },
+    nutrientsPer100g: [5, 55, 8],
   },
 
   knorr_bouillon_cube: {

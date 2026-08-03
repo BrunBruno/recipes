@@ -6,6 +6,7 @@ type IngId =
   | "potato_starch"
   | "breadcrumbs"
   | "rice"
+  | "rice_long_grain"
   | "couscous"
   | "semolina"
   | "bulgur"
@@ -90,6 +91,23 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.1, 75, 8.9],
+    price: 5,
+    verified: true,
+  },
+
+  rice_long_grain: {
+    name: "Ryż długoziarnisty",
+    type: "grn",
+    color: "#F5F0E6",
+    kcalPer100g: 349,
+    unitWeights: {
+      szk: 185,
+      lz: 15,
+      szt: 100,
+      opak: 400,
+    },
+    nutrientsPer100g: [0.7, 78.5, 7.2],
+    price: 5,
     verified: true,
   },
 
@@ -291,6 +309,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 120,
       opak: 500,
     },
+    price: 5.5,
     verified: true,
   },
 

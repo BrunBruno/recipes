@@ -53,6 +53,8 @@ type IngId =
   | "sausage"
   | "white_sausage"
   | "sausages"
+  | "sausages_pork"
+  | "sausages_chicken"
   | "sausages_berlinki"
   | "serdelki"
   | "meat_spread"
@@ -72,6 +74,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 164,
     unitWeights: {
       opak: 400,
+      szt: 200,
     },
     nutrientsPer100g: [1.5, 0, 23.1],
     price: 26,
@@ -159,7 +162,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [17, 0, 8],
+    nutrientsPer100g: [8, 0, 17],
   },
 
   poultry_liver: {
@@ -403,7 +406,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     color: "#8D6E63",
     kcalPer100g: 154,
-    nutrientsPer100g: [21.0, 7.0, 0],
+    nutrientsPer100g: [7.0, 0, 21.0],
   },
 
   beef_shoulder: {
@@ -646,6 +649,33 @@ export const iMET: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  sausages_pork: {
+    name: "Parówki wieprzowe",
+    type: "met",
+    color: "#B65A4A",
+    kcalPer100g: 260,
+    unitWeights: {
+      szt: 50,
+      opak: 700,
+    },
+    nutrientsPer100g: [22, 3.1, 12],
+    price: 16.4,
+    verified: true,
+  },
+
+  sausages_chicken: {
+    name: "Parówki drobiowe",
+    type: "met",
+    color: "#D9A06C",
+    kcalPer100g: 220,
+    unitWeights: {
+      szt: 50,
+      opak: 700,
+    },
+    nutrientsPer100g: [17, 3.5, 14],
+    price: 14.3,
+  },
+
   sausages_berlinki: {
     name: "Parówki Berlinki",
     type: "met",
@@ -670,7 +700,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 75,
     },
-    nutrientsPer100g: [14, 2, 25],
+    nutrientsPer100g: [25, 2, 14],
     verified: true,
   },
 
@@ -683,8 +713,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 131,
     },
-    nutrientsPer100g: [14, 6.7, 1.4],
-    verified: true,
+    nutrientsPer100g: [14, 6.7, 12.4],
   },
 
   liver_sausage: {

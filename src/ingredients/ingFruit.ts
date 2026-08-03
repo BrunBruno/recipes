@@ -10,6 +10,7 @@ type IngId =
   | "passion_fruit"
   | "peach"
   | "nectarine"
+  | "cookie_peach"
   | "plum"
   | "dried_plum"
   | "apricot"
@@ -52,7 +53,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 150,
     },
-    nutrientsPer100g: [0.2, 2.4, 0.4],
+    nutrientsPer100g: [0.2, 14, 0.4],
     price: 5,
   },
   // Jonagold 5
@@ -147,6 +148,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 11, 1.1],
+    price: 15,
+  },
+
+  cookie_peach: {
+    name: "Brzoskwinia ciasteczkowa",
+    type: "frt",
+    color: "#F7B27A",
+    kcalPer100g: 39,
+    unitWeights: {
+      szt: 100,
+    },
+    nutrientsPer100g: [0.3, 9.5, 0.9],
     price: 15,
   },
 

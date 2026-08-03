@@ -238,11 +238,14 @@ export const iBAK: Record<IngId, IngredientItem> = {
     name: "Bułki do hot dogów francuskich",
     type: "bak",
     color: "#D18F4F",
-    kcalPer100g: 316,
+    kcalPer100g: 265,
     unitWeights: {
       szt: 85,
+      opak: 340,
     },
-    nutrientsPer100g: [8.3, 51, 7.7],
+    nutrientsPer100g: [1.8, 50.8, 9.4],
+    price: 21.6,
+    verified: true,
   },
 
   //// SNACKS ////

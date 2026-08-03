@@ -10,7 +10,7 @@ const krewetki: Recipe = {
   name: "Krewetki",
   type: "snack",
   cookingMethods: [["fried", 5]],
-  images: [""],
+  images: ["krewetki.jpg"],
   time: 10,
   portions: 2,
   taste: null,
@@ -20,7 +20,7 @@ const krewetki: Recipe = {
       title: "",
       items: [
         { ing: iFSH.shrimp, amount: 500 },
-        { ing: iBAK.garlic_baguette, amount: 1, unit: "szt" },
+        { ing: iBAK.garlic_baguette, amount: 2, unit: "szt" },
         { ing: iFAT.butter, amount: 30 },
         { ing: iVEG.garlic, amount: 3, unit: "zbk" },
         { ing: iHRB.parsley },

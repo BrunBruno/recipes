@@ -486,6 +486,8 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [25, 2, 22],
   },
 
+ 
+
   yellow_cheese: {
     name: "Ser żółty",
     type: "dir",
