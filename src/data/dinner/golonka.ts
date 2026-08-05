@@ -4,7 +4,7 @@ import { dinnerSides } from "../../dinnerSides";
 
 const portions = 2;
 const golonkaGotowa: Recipe = {
-  name: "Golonka Gotowa",
+  name: "Golonka z Piekarnika",
   type: "dinner",
   cookingMethods: [["roasted", 60]],
   images: ["golonka-gotowa.jpg", "golonka-gotowa-2.jpg"],

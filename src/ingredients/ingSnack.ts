@@ -21,6 +21,7 @@ type IngId =
   | "milka_choco_cookies"
   | "snickers"
   | "twix"
+  | "mini_croissant"
 
   //// ICE-CREAM ////
   | "cone_strawberry"
@@ -217,6 +218,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
   snickers: {
     name: "Snickers",
     type: "snk",
+    subType: "bis",
     color: "#6B3E26",
     kcalPer100g: 489,
     unitWeights: {
@@ -229,12 +231,27 @@ export const iSNK: Record<IngId, IngredientItem> = {
   twix: {
     name: "Twix",
     type: "snk",
+    subType: "bis",
     color: "#C68642",
     kcalPer100g: 493,
     unitWeights: {
       opak: 75,
     },
     nutrientsPer100g: [24, 65, 4.5],
+    verified: true,
+  },
+
+  mini_croissant: {
+    name: "Rogalik",
+    type: "snk",
+    subType: "bis",
+    color: "#D4A373",
+    kcalPer100g: 230,
+    unitWeights: {
+      szt: 48,
+      opak: 240,
+    },
+    nutrientsPer100g: [28.5, 46.9, 7.2],
     verified: true,
   },
 
