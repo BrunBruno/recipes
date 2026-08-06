@@ -252,6 +252,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 240,
     },
     nutrientsPer100g: [28.5, 46.9, 7.2],
+    price: 29.2,
     verified: true,
   },
 

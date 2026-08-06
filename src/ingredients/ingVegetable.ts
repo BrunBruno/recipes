@@ -147,6 +147,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#EF5350",
     kcalPer100g: 19,
     nutrientsPer100g: [0.2, 4.1, 0.9],
+    price: 9,
   },
 
   sun_dried_tomatoes: {

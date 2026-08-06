@@ -284,7 +284,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 285,
     },
     nutrientsPer100g: [0.6, 11, 3.2],
-    price: 14,
+    price: 15.75,
     verified: true,
   },
 
@@ -312,6 +312,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [0.5, 20, 7],
+    price: 12,
   },
 
   canned_peach: {

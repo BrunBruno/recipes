@@ -38,6 +38,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 100, 0],
+    price: 2,
     verified: true,
   },
 
@@ -53,6 +54,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 160,
     },
     nutrientsPer100g: [0, 100, 0],
+    price: 4.8,
+    verified: true,
   },
 
   vanilla_sugar: {

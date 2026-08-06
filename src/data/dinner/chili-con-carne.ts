@@ -26,7 +26,7 @@ const chiliConCarne: Recipe = {
       items: [
         { ing: iMET.ground_pork, amount: 300 },
         { ing: iJAR.canned_red_beans, amount: 120 },
-        { ing: iVEG.corn, amount: 340 },
+        { ing: iJAR.canned_corn, amount: 340 },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.rapeseed_oil, amount: 45, unit: "ml" },
         { ing: iLIQ.water, amount: 300, unit: "ml" },

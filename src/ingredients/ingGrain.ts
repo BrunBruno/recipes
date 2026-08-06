@@ -53,6 +53,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.2, 71, 11],
+    price: 1.7,
     verified: true,
   },
 
@@ -78,6 +79,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [2, 76, 10],
+    price: 7.3,
     verified: true,
   },
 

@@ -76,6 +76,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 1000,
     },
     nutrientsPer100g: [1.5, 5, 3.5],
+    price: 4.7,
   },
 
   condensed_milk: {
@@ -295,6 +296,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [30, 3.4, 2.3],
+    price: 24,
     verified: true,
   },
 
@@ -485,8 +487,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [25, 2, 22],
   },
-
- 
 
   yellow_cheese: {
     name: "Ser żółty",

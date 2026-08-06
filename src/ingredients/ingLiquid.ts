@@ -22,6 +22,9 @@ type IngId =
   | "juice_cactus"
   | "juice_mango"
 
+  //// SODAS ////
+  | "freeway_cola"
+
   //// DECOCTION ////
   | "rosol"
   | "meat_stock"
@@ -244,6 +247,16 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     },
     price: 4,
     verified: true,
+  },
+
+  //// ////
+
+  freeway_cola: {
+    name: "Freeway Cola",
+    type: "liq",
+    color: "#360103",
+    kcalPer100g: 43,
+    nutrientsPer100g: [0, 10, 0],
   },
 
   //// DECOCTION ////
