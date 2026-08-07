@@ -15,7 +15,7 @@ const chiliConCarne: Recipe = {
     ["fried", 8],
     ["stewed", 4],
   ],
-  images: [""],
+  images: ["chili-con-carne.jpg", "chili-con-carne-2.jpg"],
   time: 25,
   portions: 4,
   taste: null,
