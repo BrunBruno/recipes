@@ -12,16 +12,16 @@ const szaszlyki: Recipe = {
   cookingMethods: [["grilled", 30]],
   images: ["szaszlyki.jpg"],
   time: 30,
-  portions: 4,
+  portions: 6,
   taste: null,
   difficulty: null,
   ingredients: [
     {
       title: "Szaszłyki",
       items: [
-        { ing: iMET.chicken_breast, amount: 200, unit: "g" },
-        { ing: iMET.pork_neck, amount: 200, unit: "g" },
-        { ing: iDIR.halloumi, amount: 100, unit: "g" },
+        { ing: iMET.chicken_breast, amount: 500, unit: "g" },
+        { ing: iMET.pork_neck, amount: 500, unit: "g" },
+        { ing: iDIR.halloumi, amount: 200, unit: "g" },
         { ing: iVEG.mushrooms, amount: 100, unit: "g" },
         { ing: iVEG.zucchini, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },

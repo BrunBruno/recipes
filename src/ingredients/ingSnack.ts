@@ -8,6 +8,8 @@ type IngId =
 
   //// CHOCOLATE ////
   | "chocolate_white"
+  | "chocolate_white_28"
+  | "chocolate_milk"
   | "chocolate_dark"
   | "chocolate_dark_80"
   | "chocolate_cream"
@@ -19,8 +21,10 @@ type IngId =
   | "wafers_cream"
   | "delicje"
   | "milka_choco_cookies"
+  | "gingerbread_with_icing"
   | "snickers"
   | "twix"
+  | "vanilla_halva"
   | "mini_croissant"
 
   //// ICE-CREAM ////
@@ -86,6 +90,30 @@ export const iSNK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [35, 56, 6.1],
     price: 100,
     verified: true,
+  },
+
+  chocolate_white_28: {
+    name: "Czekolada biała 28%",
+    type: "snk",
+    subType: "cho",
+    color: "#FFF8E7",
+    kcalPer100g: 540,
+    unitWeights: {
+      kst: 100,
+    },
+    nutrientsPer100g: [32, 58, 6],
+  },
+
+  chocolate_milk: {
+    name: "Czekolada mleczna",
+    type: "snk",
+    subType: "cho",
+    color: "#8D6E63",
+    kcalPer100g: 535,
+    unitWeights: {
+      kst: 100,
+    },
+    nutrientsPer100g: [30, 58, 7],
   },
 
   chocolate_dark: {
@@ -215,6 +243,18 @@ export const iSNK: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  gingerbread_with_icing: {
+    name: "Pierniczki z lukrem",
+    type: "snk",
+    subType: "bis",
+    color: "#A1887F",
+    kcalPer100g: 390,
+    unitWeights: {
+      opak: 100,
+    },
+    nutrientsPer100g: [8, 72, 6],
+  },
+
   snickers: {
     name: "Snickers",
     type: "snk",
@@ -239,6 +279,18 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [24, 65, 4.5],
     verified: true,
+  },
+
+  vanilla_halva: {
+    name: "Chałwa waniliowa",
+    type: "snk",
+    subType: "bis",
+    color: "#F5E6C8",
+    kcalPer100g: 520,
+    unitWeights: {
+      kst: 100,
+    },
+    nutrientsPer100g: [32, 52, 12],
   },
 
   mini_croissant: {

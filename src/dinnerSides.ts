@@ -111,7 +111,7 @@ export const dinnerSides = (
       };
     case "oven-potatoes-boats":
       return {
-        title: "Ziemniaczki z piekarnika",
+        title: "Łódeczki ziemniaczane",
         sideName: name,
         items: [
           { ing: iJAR.frozen_potatoes_boats, amount: portions * 200 },

@@ -422,7 +422,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   },
 
   frozen_stir_fry_potatoes: {
-    name: "Warzywa na patelnię orientalne",
+    name: "Warzywa na patelnię z ziemniakami",
     type: "jar",
     isVeg: true,
     subType: "fro",

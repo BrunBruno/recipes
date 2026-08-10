@@ -5,6 +5,7 @@ type IngId =
   | "sugar"
   | "powdered_sugar"
   | "vanilla_sugar"
+  | "refined_sugar"
 
   //// OTHER ////
   | "citric_acid"
@@ -13,6 +14,7 @@ type IngId =
   | "yeast"
   | "instant_yeast"
   | "gelatin"
+  | "gelatin_bloom_220"
   | "vanilla_pudding"
   | "powdered_borscht"
   | "strawberry_kissel"
@@ -71,6 +73,18 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 99, 0],
     verified: true,
+  },
+
+  refined_sugar: {
+    name: "Rafinada",
+    type: "oth",
+    subType: "sug",
+    color: "#FFFFFF",
+    kcalPer100g: 400,
+    unitWeights: {
+      lz: 12,
+    },
+    nutrientsPer100g: [0, 100, 0],
   },
 
   //// OTHER ////
@@ -148,6 +162,17 @@ export const iOTH: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 0, 85],
     verified: true,
+  },
+
+  gelatin_bloom_220: {
+    name: "Żelatyna Bloom 220",
+    type: "oth",
+    color: "#F5F5F5",
+    kcalPer100g: 340,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [0, 0, 85],
   },
 
   powdered_borscht: {

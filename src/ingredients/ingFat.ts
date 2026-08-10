@@ -14,7 +14,8 @@ type IngId =
   | "margarine"
   | "butter_salted"
   | "garlic_butter"
-  | "peanut_butter";
+  | "peanut_butter"
+  | "hazelnut_paste";
 
 export const iFAT: Record<IngId, IngredientItem> = {
   oil: {
@@ -203,5 +204,17 @@ export const iFAT: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [48, 13, 26],
     verified: true,
+  },
+
+  hazelnut_paste: {
+    name: "Pasta z orzechów laskowych",
+    type: "fat",
+    subType: "but",
+    color: "#8D6E63",
+    kcalPer100g: 630,
+    unitWeights: {
+      lz: 15,
+    },
+    nutrientsPer100g: [55, 17, 15],
   },
 };

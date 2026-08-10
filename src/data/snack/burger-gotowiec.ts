@@ -23,7 +23,6 @@ const gotowyBurger: Recipe = {
   ingredients: [
     {
       title: "Podstawowe",
-      isMain: true,
       items: [
         { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.burger_patties, amount: 4, unit: "szt" },

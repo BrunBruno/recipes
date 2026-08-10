@@ -26,6 +26,7 @@ type IngId =
   | "vegetable_seasoning"
   | "potato_seasoning"
   | "meat_seasoning"
+  | "gingerbread_seasoning"
   | "gyros_spice"
   | "marinade_prymat"
   //
@@ -314,6 +315,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [5, 30, 10],
+  },
+
+  gingerbread_seasoning: {
+    name: "Przyprawa do piernika",
+    type: "spc",
+    color: "#8D6E63",
+    kcalPer100g: 350,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [3, 70, 6],
   },
 
   gyros_spice: {

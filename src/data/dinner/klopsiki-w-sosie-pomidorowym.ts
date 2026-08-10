@@ -51,8 +51,8 @@ const klopsikiWSosiePomidorowym: Recipe = {
   },
   extrasVeg: {
     options: [
-      dinnerSides("peas-and-beets", portions),
       dinnerSides("canned-peas", portions),
+      dinnerSides("peas-and-beets", portions),
       dinnerSides("beets-whole-vinegar", portions),
     ],
     selected: 0,

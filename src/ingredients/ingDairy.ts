@@ -17,6 +17,7 @@ type IngId =
   | "drinkable_skyr_blueberry"
   | "drinkable_skyr_vanilla"
   | "drinkable_skyr_mango"
+  | "drinkable_skyr_cherry"
   | "kefir"
   | "cream_12"
   | "cream_18"
@@ -239,6 +240,19 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 350,
     },
     nutrientsPer100g: [1.5, 9, 6.5],
+    price: 17,
+    verified: true,
+  },
+
+  drinkable_skyr_cherry: {
+    name: "Skyr pitny wiśniowy",
+    type: "dir",
+    color: "#F8BBD0",
+    kcalPer100g: 80,
+    unitWeights: {
+      opak: 350,
+    },
+    nutrientsPer100g: [1.1, 10, 6.5],
     price: 17,
     verified: true,
   },

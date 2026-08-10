@@ -293,115 +293,115 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   };
 
   // generate content
-  const generateExtras = () => {
-    return (
-      <>
-        {recipeState.extrasMain &&
-          (() => {
-            const extraMain =
-              recipeState.extrasMain.options[recipeState.extrasMain.selected];
+  // const generateExtras = () => {
+  //   return (
+  //     <>
+  //       {recipeState.extrasMain &&
+  //         (() => {
+  //           const extraMain =
+  //             recipeState.extrasMain.options[recipeState.extrasMain.selected];
 
-            return (
-              <div className="recipe-ingredient-group">
-                <div className="ingredients-list-container">
-                  <h4 className="ingredient-group-title">
-                    {extraMain.title}
-                    {recipeState.extrasMain.options.length > 1 && (
-                      <button
-                        className="group-alt"
-                        onClick={() => {
-                          setRecipeState((prev) => {
-                            const copy = structuredClone(prev);
+  //           return (
+  //             <div className="recipe-ingredient-group">
+  //               <div className="ingredients-list-container">
+  //                 <h4 className="ingredient-group-title">
+  //                   {extraMain.title}
+  //                   {recipeState.extrasMain.options.length > 1 && (
+  //                     <button
+  //                       className="group-alt"
+  //                       onClick={() => {
+  //                         setRecipeState((prev) => {
+  //                           const copy = structuredClone(prev);
 
-                            copy.extrasMain!.selected =
-                              (copy.extrasMain!.selected + 1) %
-                              copy.extrasMain!.options.length;
+  //                           copy.extrasMain!.selected =
+  //                             (copy.extrasMain!.selected + 1) %
+  //                             copy.extrasMain!.options.length;
 
-                            return copy;
-                          });
-                        }}
-                      >
-                        <UtilsIcon name="swap" color="#ffffff" />
-                      </button>
-                    )}
-                  </h4>
+  //                           return copy;
+  //                         });
+  //                       }}
+  //                     >
+  //                       <UtilsIcon name="swap" color="#ffffff" />
+  //                     </button>
+  //                   )}
+  //                 </h4>
 
-                  <ul className="ingredients-list">
-                    {extraMain.items.map((item, index) => (
-                      <li key={index} className="ingredient-item">
-                        <div className="ingredient-indicator">
-                          <IngredientIcon
-                            ingType={item.ing.type}
-                            subType={item.ing.subType}
-                            color={item.ing.color}
-                          />
-                        </div>
+  //                 <ul className="ingredients-list">
+  //                   {extraMain.items.map((item, index) => (
+  //                     <li key={index} className="ingredient-item">
+  //                       <div className="ingredient-indicator">
+  //                         <IngredientIcon
+  //                           ingType={item.ing.type}
+  //                           subType={item.ing.subType}
+  //                           color={item.ing.color}
+  //                         />
+  //                       </div>
 
-                        <span className="ingredient-name">{item.ing.name}</span>
+  //                       <span className="ingredient-name">{item.ing.name}</span>
 
-                        {renderUnitAndPrice(item)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })()}
+  //                       {renderUnitAndPrice(item)}
+  //                     </li>
+  //                   ))}
+  //                 </ul>
+  //               </div>
+  //             </div>
+  //           );
+  //         })()}
 
-        {recipeState.extrasVeg &&
-          (() => {
-            const extraVeg =
-              recipeState.extrasVeg.options[recipeState.extrasVeg.selected];
+  //       {recipeState.extrasVeg &&
+  //         (() => {
+  //           const extraVeg =
+  //             recipeState.extrasVeg.options[recipeState.extrasVeg.selected];
 
-            return (
-              <div className="recipe-ingredient-group">
-                <div className="ingredients-list-container">
-                  <h4 className="ingredient-group-title">
-                    {extraVeg.title}
-                    {recipeState.extrasVeg.options.length > 1 && (
-                      <button
-                        className="group-alt"
-                        onClick={() => {
-                          setRecipeState((prev) => {
-                            const copy = structuredClone(prev);
+  //           return (
+  //             <div className="recipe-ingredient-group">
+  //               <div className="ingredients-list-container">
+  //                 <h4 className="ingredient-group-title">
+  //                   {extraVeg.title}
+  //                   {recipeState.extrasVeg.options.length > 1 && (
+  //                     <button
+  //                       className="group-alt"
+  //                       onClick={() => {
+  //                         setRecipeState((prev) => {
+  //                           const copy = structuredClone(prev);
 
-                            copy.extrasVeg!.selected =
-                              (copy.extrasVeg!.selected + 1) %
-                              copy.extrasVeg!.options.length;
+  //                           copy.extrasVeg!.selected =
+  //                             (copy.extrasVeg!.selected + 1) %
+  //                             copy.extrasVeg!.options.length;
 
-                            return copy;
-                          });
-                        }}
-                      >
-                        <UtilsIcon name="swap" color="#ffffff" />
-                      </button>
-                    )}
-                  </h4>
+  //                           return copy;
+  //                         });
+  //                       }}
+  //                     >
+  //                       <UtilsIcon name="swap" color="#ffffff" />
+  //                     </button>
+  //                   )}
+  //                 </h4>
 
-                  <ul className="ingredients-list">
-                    {extraVeg.items.map((item, index) => (
-                      <li key={index} className="ingredient-item">
-                        <div className="ingredient-indicator">
-                          <IngredientIcon
-                            ingType={item.ing.type}
-                            subType={item.ing.subType}
-                            color={item.ing.color}
-                          />
-                        </div>
+  //                 <ul className="ingredients-list">
+  //                   {extraVeg.items.map((item, index) => (
+  //                     <li key={index} className="ingredient-item">
+  //                       <div className="ingredient-indicator">
+  //                         <IngredientIcon
+  //                           ingType={item.ing.type}
+  //                           subType={item.ing.subType}
+  //                           color={item.ing.color}
+  //                         />
+  //                       </div>
 
-                        <span className="ingredient-name">{item.ing.name}</span>
+  //                       <span className="ingredient-name">{item.ing.name}</span>
 
-                        {renderUnitAndPrice(item)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })()}
-      </>
-    );
-  };
+  //                       {renderUnitAndPrice(item)}
+  //                     </li>
+  //                   ))}
+  //                 </ul>
+  //               </div>
+  //             </div>
+  //           );
+  //         })()}
+  //     </>
+  //   );
+  // };
   const recipeDailyCharts = (
     kcal: number,
     nutrients: [string, string, string],
@@ -506,8 +506,8 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     } else if (unitFormat === "g") {
       return (
         <span className="ingredient-amount">
-          {weight}
-          <span className="ingredient-unit">g</span>
+          {weight === 0 ? "---" : weight}
+          {weight !== 0 && <span className="ingredient-unit">g</span>}
         </span>
       );
     }
@@ -537,6 +537,59 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     if (value >= 2 && value <= 4) return "minuty";
     return "minut";
   };
+
+  const allIngredientGroups = [
+    ...recipeState.ingredients.map((group, groupIndex) => ({
+      group,
+      groupIndex,
+    })),
+
+    ...(selectedRecipe.extrasMain
+      ? [
+          {
+            group:
+              selectedRecipe.extrasMain.options[
+                selectedRecipe.extrasMain.selected
+              ],
+            groupIndex: -1,
+          },
+        ]
+      : []),
+
+    ...(selectedRecipe.extrasVeg
+      ? [
+          {
+            group:
+              selectedRecipe.extrasVeg.options[
+                selectedRecipe.extrasVeg.selected
+              ],
+            groupIndex: -1,
+          },
+        ]
+      : []),
+  ];
+
+  const ingredientColumns = [[], []] as {
+    group: (typeof recipeState.ingredients)[number];
+    groupIndex: number;
+  }[][];
+
+  const columnHeights = [0, 0];
+
+  allIngredientGroups.forEach(({ group, groupIndex }) => {
+    const height = group.items.filter(
+      (item) => !("invisible" in item && item.invisible),
+    ).length;
+
+    const columnIndex = columnHeights[0] <= columnHeights[1] ? 0 : 1;
+
+    ingredientColumns[columnIndex].push({
+      group,
+      groupIndex,
+    });
+
+    columnHeights[columnIndex] += height;
+  });
 
   return (
     <div
@@ -790,86 +843,95 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
           </section>
 
           <section className="ingredients-section">
-            <div className={`${"ingredients-container"}`}>
-              {recipeState.ingredients.map((group, groupIndex) => (
+            <div className="ingredients-container">
+              {ingredientColumns.map((column, columnIndex) => (
                 <div
-                  key={groupIndex}
-                  className={`recipe-ingredient-group ${group.isMain || recipeState.ingredients.length === 1 ? "main-group" : ""}`}
+                  className={`ingredients-column ${recipeState.ingredients.length === 1 && !(recipeState.extrasMain || recipeState.extrasVeg) ? "main-column" : ""}`}
+                  key={columnIndex}
                 >
-                  <div className="ingredients-list-container">
-                    <h4 className="ingredient-group-title">
-                      {group.title
-                        ? `Składniki: ${group.title}`
-                        : "Lista składników"}
-                    </h4>
-                    <ul className="ingredients-list">
-                      {group.items.map((item, index) => {
-                        if ("type" in item && item.type === "choice") {
-                          const active = item.options[item.selected];
+                  {column.map(({ group, groupIndex }) => (
+                    <div key={groupIndex} className={`recipe-ingredient-group`}>
+                      <div className="ingredients-list-container">
+                        <h4 className="ingredient-group-title">
+                          {group.title
+                            ? `Składniki: ${group.title}`
+                            : "Lista składników"}
+                        </h4>
 
-                          return (
-                            <li key={index} className="ingredient-item">
-                              <div className="ingredient-indicator">
-                                <IngredientIcon
-                                  ingType={active.ing.type}
-                                  subType={active.ing.subType}
-                                  color={active.ing.color}
-                                />
-                              </div>
+                        <ul className="ingredients-list">
+                          {group.items.map((item, index) => {
+                            if ("type" in item && item.type === "choice") {
+                              const active = item.options[item.selected];
 
-                              <span className="ingredient-name">
-                                {active.ing.name}
-                              </span>
+                              return (
+                                <li key={index} className="ingredient-item">
+                                  <div className="ingredient-indicator">
+                                    <IngredientIcon
+                                      ingType={active.ing.type}
+                                      subType={active.ing.subType}
+                                      color={active.ing.color}
+                                    />
+                                  </div>
 
-                              {renderUnitAndPrice(active)}
+                                  <span className="ingredient-name">
+                                    {active.ing.name}
+                                  </span>
 
-                              <button
-                                className="ingredient-alt"
-                                onClick={() => {
-                                  setRecipeState((prev) => {
-                                    const copy = structuredClone(prev);
-                                    const it = copy.ingredients[groupIndex]
-                                      .items[index] as any;
-                                    it.selected =
-                                      (it.selected + 1) % it.options.length;
-                                    return copy;
-                                  });
-                                }}
-                              >
-                                <UtilsIcon name="swap" color="#fff" />
-                              </button>
-                            </li>
-                          );
-                        }
+                                  {renderUnitAndPrice(active)}
 
-                        item = item as Ingredient;
-                        const ing = item.ing;
-                        if (item.invisible)
-                          return <Fragment key={index}></Fragment>;
+                                  <button
+                                    className="ingredient-alt"
+                                    onClick={() => {
+                                      setRecipeState((prev) => {
+                                        const copy = structuredClone(prev);
 
-                        return (
-                          <li key={index} className="ingredient-item">
-                            <div className="ingredient-indicator">
-                              <IngredientIcon
-                                ingType={ing.type}
-                                subType={ing.subType}
-                                color={ing.color}
-                              />
-                            </div>
+                                        const it = copy.ingredients[groupIndex]
+                                          .items[index] as any;
 
-                            <span className="ingredient-name">{ing.name}</span>
+                                        it.selected =
+                                          (it.selected + 1) % it.options.length;
 
-                            {renderUnitAndPrice(item)}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
+                                        return copy;
+                                      });
+                                    }}
+                                  >
+                                    <UtilsIcon name="swap" color="#fff" />
+                                  </button>
+                                </li>
+                              );
+                            }
+
+                            const ingredientItem = item as Ingredient;
+                            const ing = ingredientItem.ing;
+
+                            if (ingredientItem.invisible) {
+                              return <Fragment key={index}></Fragment>;
+                            }
+
+                            return (
+                              <li key={index} className="ingredient-item">
+                                <div className="ingredient-indicator">
+                                  <IngredientIcon
+                                    ingType={ing.type}
+                                    subType={ing.subType}
+                                    color={ing.color}
+                                  />
+                                </div>
+
+                                <span className="ingredient-name">
+                                  {ing.name}
+                                </span>
+
+                                {renderUnitAndPrice(ingredientItem)}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ))}
-
-              {(selectedRecipe.extrasMain || selectedRecipe.extrasVeg) &&
-                generateExtras()}
             </div>
           </section>
 
@@ -1053,14 +1115,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                   >
                     <span>{calculateRecipeKcal(recipeState, portions)}</span>
                   </div>
-                  {/* <div
-                    className={`recipe-param 
-                                ${getFontSizeClass(calculateRecipeKcalPer100g(selectedRecipe))} 
-                                ${getStatusClass("kcal100", calculateRecipeKcalPer100g(selectedRecipe))}
-                              `}
-                  >
-                    <span>{calculateRecipeKcalPer100g(selectedRecipe)}</span>
-                  </div> */}
                   <div
                     className={`recipe-param 
                                 ${getFontSizeClass(calculateRecipeNutrients(recipeState, portions)[0])}

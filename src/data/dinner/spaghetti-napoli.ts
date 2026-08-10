@@ -11,7 +11,10 @@ const portions = 2;
 const spaghettiNapoli: Recipe = {
   name: "Spaghetti Napoli",
   type: "dinner",
-  cookingMethods: [["boiled", 20], ["stewed", 20]],
+  cookingMethods: [
+    ["boiled", 20],
+    ["stewed", 20],
+  ],
   images: ["spaghetti-napoli.jpg"],
   time: 20,
   portions: portions,
@@ -22,7 +25,7 @@ const spaghettiNapoli: Recipe = {
       title: "",
       items: [
         { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ing: iDIR.edam_cheese, amount: portions * 40 },
+        { ing: iDIR.yellow_cheese, amount: portions * 40 },
         ...fryingFat(iFAT.oil, 1, "lz", 0.55),
         { ing: iJAR.tomato_paste, amount: 2, unit: "lzi" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },

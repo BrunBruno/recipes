@@ -119,10 +119,8 @@ export type IngredientChoice = {
 
 export type RecipeIngredientGroup = {
   title: string;
-  isMain?: boolean;
   isAdd?: boolean;
   items: (IngredientChoice | Ingredient)[];
-  // items: Ingredient[];
 };
 
 export type ExtrasIngredientGroup = {
