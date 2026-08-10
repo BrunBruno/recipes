@@ -31,6 +31,7 @@ type IngId =
 
   //// FROZEN ////
   | "frozen_fries"
+  | "frozen_potatoes_boats"
   | "frozen_thin_fries"
   | "frozen_spinach"
   | "frozen_vegetable_mix"
@@ -355,6 +356,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5.5, 25, 2.5],
     price: 9.3,
+    verified: true,
+  },
+
+  frozen_potatoes_boats: {
+    name: "Łódeczki ziemniaczane",
+    type: "jar",
+    subType: "fro",
+    color: "#FBC02D",
+    kcalPer100g: 104,
+    unitWeights: { opak: 1000 },
+    nutrientsPer100g: [2.9, 15.7, 2.4],
+    price: 8.7,
     verified: true,
   },
 

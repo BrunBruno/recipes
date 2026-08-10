@@ -15,6 +15,7 @@ export type DinnerSidesNames =
   | "boiled-potatoes-dry"
   | "mashed-potatoes"
   | "oven-fries"
+  | "oven-potatoes-boats"
   | "rice"
   | "buckwheat"
   | "bulgur"
@@ -105,6 +106,15 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iJAR.frozen_fries, amount: portions * 200 },
+          { ing: iSPC.potato_seasoning },
+        ],
+      };
+    case "oven-potatoes-boats":
+      return {
+        title: "Ziemniaczki z piekarnika",
+        sideName: name,
+        items: [
+          { ing: iJAR.frozen_potatoes_boats, amount: portions * 200 },
           { ing: iSPC.potato_seasoning },
         ],
       };
@@ -407,6 +417,13 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Piecz frytki w piekarniku przez około 20 minut.",
         "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
       ];
+    case "oven-potatoes-boats":
+      return [
+        "Rozgrzej piekarnik zgodnie z instrukcją na opakowaniu.",
+        "Rozłóż mrożone ziemniaczki na blasze wyłożonej papierem do pieczenia.",
+        "Piecz około 20 minut, aż będą złote i chrupiące.",
+        "Po upieczeniu posyp przyprawą do ziemniaków.",
+      ];
     case "rice":
       return ["Ugotuj ryż w osolonej wodzie"];
     case "buckwheat":
@@ -540,6 +557,8 @@ export const dinnerSidesCookingMethods = (
     case "mashed-potatoes":
       return [["boiled", 30]];
     case "oven-fries":
+      return [["baked", 20]];
+    case "oven-potatoes-boats":
       return [["baked", 20]];
     case "rice":
       return [["boiled", 25]];

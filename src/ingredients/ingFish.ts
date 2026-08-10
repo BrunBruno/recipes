@@ -95,11 +95,14 @@ export const iFSH: Record<IngId, IngredientItem> = {
     name: "Łosoś",
     type: "fsh",
     color: "#FF7043",
-    kcalPer100g: 208,
+    kcalPer100g: 242,
     unitWeights: {
       szt: 200,
+      opak: 500,
     },
-    nutrientsPer100g: [13, 13, 20],
+    nutrientsPer100g: [18, 0, 20],
+    price: 80,
+    verified: true,
   },
 
   //// PROCESSED FISH ////

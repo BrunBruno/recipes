@@ -307,6 +307,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       plas: 10,
     },
     nutrientsPer100g: [0.3, 9, 1.1],
+    price: 11,
   },
 
   orange: {
