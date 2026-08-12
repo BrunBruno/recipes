@@ -24,6 +24,7 @@ type IngId =
 
   //// SODAS ////
   | "freeway_cola"
+  | "freeway_orango"
 
   //// DECOCTION ////
   | "rosol"
@@ -177,6 +178,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 304,
     unitWeights: {
       lzi: 7,
+      lz: 25,
     },
     nutrientsPer100g: [0, 82, 0.3],
   },
@@ -257,6 +259,20 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     color: "#360103",
     kcalPer100g: 43,
     nutrientsPer100g: [0, 10, 0],
+    unitWeights: {
+      ml: 1,
+    },
+  },
+
+  freeway_orango: {
+    name: "Fanta",
+    type: "liq",
+    color: "#FF9800",
+    kcalPer100g: 25,
+    nutrientsPer100g: [0, 6, 0],
+    unitWeights: {
+      ml: 1,
+    },
   },
 
   //// DECOCTION ////

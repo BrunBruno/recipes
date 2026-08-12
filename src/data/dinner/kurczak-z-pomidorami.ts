@@ -15,11 +15,11 @@ const kurczakZPomidorami: Recipe = {
     ["boiled", 10],
     ["baked", 30, 200],
   ],
-  images: [""],
+  images: ["kurczak-z-pomidorami.jpg"],
   time: 45,
   portions: 4,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

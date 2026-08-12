@@ -347,6 +347,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 260,
     unitWeights: {
       opak: 20,
+      lzi: 3,
     },
     nutrientsPer100g: [5, 55, 8],
   },

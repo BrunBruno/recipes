@@ -41,7 +41,10 @@ type IngId =
   | "frozen_green_beans"
   | "strawberry_frozen"
   | "frozen_broccoli"
+
+  //// DELICATESSEN ////
   | "frozen_potato_dumpling"
+  | "pierogi_meat"
 
   //// SALADS ////
   | "coleslaw"
@@ -487,6 +490,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.4, 3.2, 2.9],
   },
 
+  //// DELICATESSEN ////
+
   frozen_potato_dumpling: {
     name: "Pyzy mięsne",
     type: "jar",
@@ -498,6 +503,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5.5, 28, 6],
     price: 7.5,
+  },
+
+  pierogi_meat: {
+    name: "Pierogi z mięsem",
+    type: "jar",
+    subType: "fro",
+    color: "#E8D0B8",
+    kcalPer100g: 220,
+    unitWeights: {
+      szt: 25,
+    },
+    nutrientsPer100g: [7, 30, 9],
   },
 
   //// SALADS ////

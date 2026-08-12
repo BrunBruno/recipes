@@ -302,5 +302,6 @@ export const iBAK: Record<IngId, IngredientItem> = {
       szt: 175,
     },
     nutrientsPer100g: [12, 42, 8],
+    price: 18.2,
   },
 };

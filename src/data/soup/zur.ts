@@ -4,7 +4,7 @@ const zur: Recipe = {
   name: "Żur",
   type: "soup",
   cookingMethods: [["boiled", 30]],
-  images: ["zur.jpg"],
+  images: ["zur.jpg", "zur-2.jpg"],
   time: 0,
   portions: 0,
   taste: null,

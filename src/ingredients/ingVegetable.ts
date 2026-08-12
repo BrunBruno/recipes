@@ -6,6 +6,7 @@ type IngId =
   | "onion"
   | "tomato"
   | "cherry_tomato"
+  | "strawberry_tomatoes"
   | "roma_tomato"
   | "sun_dried_tomatoes"
   | "cucumber"
@@ -137,6 +138,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#E53935",
     kcalPer100g: 18,
     nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 29.9,
+  },
+
+  strawberry_tomatoes: {
+    name: "Pomidorki truskawkowe",
+    type: "veg",
+    color: "#E53935",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 24,
   },
 
   roma_tomato: {

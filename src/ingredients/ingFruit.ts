@@ -135,6 +135,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     nutrientsPer100g: [0.3, 10, 0.9],
+    price: 12,
   },
 
   nectarine: {
