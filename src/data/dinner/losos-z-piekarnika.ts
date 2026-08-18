@@ -13,8 +13,8 @@ const lososZPiekarnika: Recipe = {
   images: ["losos-z-piekarnika.jpg"],
   time: 30,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 5,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

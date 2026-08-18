@@ -29,6 +29,8 @@ type IngId =
   | "cupcake_mix"
   | "oat_flakes"
   | "cornflakes"
+  | "cheerios"
+  | "cini_mini"
 
   //// READY ////
   | "kopytka"
@@ -67,6 +69,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lz: 12,
     },
     nutrientsPer100g: [0.3, 86.0, 0.1],
+    price: 5.5,
   },
 
   breadcrumbs: {
@@ -326,6 +329,36 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [1.4, 82.9, 7.4],
     verified: true,
+  },
+
+  cheerios: {
+    name: "Płatki Cheerios",
+    type: "grn",
+    subType: "bag",
+    color: "#D9A441",
+    kcalPer100g: 370,
+    unitWeights: {
+      lzi: 10,
+      szk: 30,
+      opak: 250,
+    },
+    nutrientsPer100g: [6, 75, 8],
+    price: 26.7,
+  },
+
+  cini_mini: {
+    name: "Płatki Cini Minis",
+    type: "grn",
+    subType: "bag",
+    color: "#B86B3C",
+    kcalPer100g: 400,
+    unitWeights: {
+      lzi: 10,
+      szk: 30,
+      opak: 250,
+    },
+    nutrientsPer100g: [9, 75, 6],
+    price: 26.7,
   },
 
   cupcake_mix: {

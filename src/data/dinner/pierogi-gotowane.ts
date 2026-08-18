@@ -11,7 +11,7 @@ const pierogiGotowane: Recipe = {
   images: ["pierogi-gotowane.jpg"],
   time: 10,
   portions: portions,
-  taste: 4,
+  taste: 5,
   difficulty: 1,
   ingredients: [
     {

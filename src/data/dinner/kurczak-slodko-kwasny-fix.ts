@@ -1,6 +1,7 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
@@ -15,11 +16,11 @@ const kurczakSlodkoKwasny: Recipe = {
     ["fried", 12],
     ["stewed", 3],
   ],
-  images: [""],
+  images: ["kurczak-slodko-kwasny-fix.jpg", "kurczak-slodko-kwasny-fix-2.jpg"],
   time: 25,
   portions: 3,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
@@ -32,6 +33,7 @@ const kurczakSlodkoKwasny: Recipe = {
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_sweet_sour_chicken_fix, amount: 1, unit: "opak" },
+        { ing: iHRB.chives },
       ],
     },
   ],
@@ -49,7 +51,6 @@ const kurczakSlodkoKwasny: Recipe = {
         "Dodaj warzywa oraz ananasa i smaż na dużym ogniu przez około 3 minuty, aż warzywa zmiękną.",
         "Fix wymieszaj z 250 ml wody i dodaj do pozostałych składników.",
         "Całość gotuj jeszcze około 3 minuty, dokładnie mieszając.",
-        "Podawaj z ryżem.",
       ],
     },
   ],

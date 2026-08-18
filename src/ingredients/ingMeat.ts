@@ -495,6 +495,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 140,
     },
     nutrientsPer100g: [2, 4, 18],
+    price: 40,
   },
 
   polendwica: {

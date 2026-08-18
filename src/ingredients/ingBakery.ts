@@ -7,8 +7,9 @@ type IngId =
   | "graham_roll"
   | "rye_bread"
   | "sunflower_bread"
-  | "morning_roll"
   | "wheat_bread"
+  | "wheat_malt_bread"
+  | "morning_roll"
   | "nan_bread"
   | "tortilla"
   | "tortilla_mini"
@@ -28,7 +29,6 @@ type IngId =
 
 export const iBAK: Record<IngId, IngredientItem> = {
   //// BAKERY ////
-
   kaiser_roll: {
     name: "Kajzerka",
     type: "bak",
@@ -110,6 +110,19 @@ export const iBAK: Record<IngId, IngredientItem> = {
     type: "bak",
     subType: "brd",
     color: "#D6A15F",
+    kcalPer100g: 255,
+    unitWeights: {
+      krom: 35,
+      szt: 500,
+    },
+    nutrientsPer100g: [3, 49, 8],
+  },
+
+  wheat_malt_bread: {
+    name: "Chleb pszenny słodowy",
+    type: "bak",
+    subType: "brd",
+    color: "#C88F52",
     kcalPer100g: 255,
     unitWeights: {
       krom: 35,
@@ -249,7 +262,6 @@ export const iBAK: Record<IngId, IngredientItem> = {
   },
 
   //// SNACKS ////
-
   snail_pastry_custard: {
     name: "Ślimaczek z budyniem",
     type: "bak",

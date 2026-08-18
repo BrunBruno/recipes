@@ -42,6 +42,7 @@ type IngId =
   | "yellow_cheese"
   | "gouda_cheese"
   | "edam_cheese"
+  | "tylzycki_cheese"
   | "lilliputian_cheese"
   | "parmigiano_reggiano"
   | "parmesan"
@@ -397,7 +398,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 150,
     },
     nutrientsPer100g: [22, 3.2, 7.2],
-    price: 26.6,
+    price: 27.4,
     verified: true,
   },
 
@@ -546,6 +547,20 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [25, 1.5, 24],
+  },
+
+  tylzycki_cheese: {
+    name: "Ser tylżycki",
+    type: "dir",
+    subType: "che",
+    color: "#FFE8A3",
+    kcalPer100g: 350,
+    unitWeights: {
+      plas: 20,
+      opak: 150,
+    },
+    nutrientsPer100g: [28, 1, 25],
+    price: 33.3,
   },
 
   lilliputian_cheese: {

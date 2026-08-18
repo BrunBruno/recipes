@@ -18,8 +18,8 @@ const chiliConCarne: Recipe = {
   images: ["chili-con-carne.jpg", "chili-con-carne-2.jpg"],
   time: 25,
   portions: 4,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

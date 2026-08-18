@@ -13,8 +13,8 @@ const krewetki: Recipe = {
   images: ["krewetki.jpg"],
   time: 10,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 4,
   ingredients: [
     {
       title: "",
