@@ -342,6 +342,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 80,
     },
     nutrientsPer100g: [24, 0, 17],
+    price: 24,
   },
 
   pork_shoulder: {

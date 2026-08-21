@@ -5,6 +5,9 @@ type IngId =
   | "snack_day_paprika"
   | "snack_day_cream"
   | "cheese_snacks"
+  | "lays_sweet_pepper"
+  | "lays_green_onion"
+  | "ready_popcorn"
 
   //// CHOCOLATE ////
   | "chocolate_white"
@@ -60,6 +63,42 @@ export const iSNK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [35, 55, 3.6],
     price: 40,
     verified: true,
+  },
+
+  lays_sweet_pepper: {
+    name: "Lay's Słodka Papryka",
+    type: "snk",
+    subType: "bag",
+    color: "#E67E22",
+    kcalPer100g: 530,
+    unitWeights: {
+      opak: 130,
+    },
+    nutrientsPer100g: [33, 52, 6],
+  },
+
+  lays_green_onion: {
+    name: "Lay's Cebulka Zielona",
+    type: "snk",
+    subType: "bag",
+    color: "#8BC34A",
+    kcalPer100g: 530,
+    unitWeights: {
+      opak: 130,
+    },
+    nutrientsPer100g: [33, 52, 6],
+  },
+
+  ready_popcorn: {
+    name: "Popcorn",
+    type: "snk",
+    subType: "bag",
+    color: "#FFF176",
+    kcalPer100g: 480,
+    unitWeights: {
+      opak: 100,
+    },
+    nutrientsPer100g: [24, 55, 7],
   },
 
   cheese_snacks: {

@@ -183,6 +183,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.1, 5.5, 1.2],
+    price: 10,
   },
 
   sun_dried_tomatoes_in_oil: {

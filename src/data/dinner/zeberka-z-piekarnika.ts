@@ -1,16 +1,18 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
+const portions = 4;
 const zeberkaZPiekarnika: Recipe = {
   name: "Żeberka z Piekarnika",
   type: "dinner",
   cookingMethods: [["baked", 70, 200]],
-  images: [""],
+  images: ["zeberka-z-piekarnika.jpg", "zeberka-z-piekarnika-2.jpg"],
   time: 75,
-  portions: 4,
-  taste: null,
-  difficulty: null,
+  portions: portions,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
@@ -20,6 +22,20 @@ const zeberkaZPiekarnika: Recipe = {
       ],
     },
   ],
+  extrasMain: {
+    options: [
+      dinnerSides("boiled-potatoes-dry", portions),
+      dinnerSides("oven-fries", portions),
+    ],
+    selected: 0,
+  },
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("pickled-cucumber", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "",

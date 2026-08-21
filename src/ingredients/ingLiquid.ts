@@ -21,10 +21,13 @@ type IngId =
   | "juice_multivitamin_green"
   | "juice_cactus"
   | "juice_mango"
+  | "tymbark_apple_mint"
+  | "tymbark_apple_peach"
 
   //// SODAS ////
   | "freeway_cola"
   | "freeway_orango"
+  | "lemo"
 
   //// DECOCTION ////
   | "rosol"
@@ -251,6 +254,33 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+
+  tymbark_apple_mint: {
+    name: "Tymbark Jabłko-Mięta",
+    type: "liq",
+    color: "#A5D66A",
+    kcalPer100g: 42,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+      opak: 1000,
+    },
+    nutrientsPer100g: [0, 10, 0],
+  },
+
+  tymbark_apple_peach: {
+    name: "Tymbark Jabłko-Brzoskwinia",
+    type: "liq",
+    color: "#FFB74D",
+    kcalPer100g: 42,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+      opak: 1000,
+    },
+    nutrientsPer100g: [0, 10, 0],
+  },
+
   //// ////
 
   freeway_cola: {
@@ -273,6 +303,18 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     unitWeights: {
       ml: 1,
     },
+  },
+
+  lemo: {
+    name: "Lemo",
+    type: "liq",
+    color: "#FFF176",
+    kcalPer100g: 40,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+    },
+    nutrientsPer100g: [0, 10, 0],
   },
 
   //// DECOCTION ////

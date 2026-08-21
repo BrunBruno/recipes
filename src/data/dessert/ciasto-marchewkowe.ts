@@ -13,7 +13,7 @@ const ciastoMarchewkowe: Recipe = {
   name: "Ciasto Marchewkowe",
   type: "dessert",
   cookingMethods: [["baked", 60, 150]],
-  images: [""],
+  images: ["ciasto-marchewkowe.jpg"],
   time: 95,
   portions: 10,
   taste: null,
