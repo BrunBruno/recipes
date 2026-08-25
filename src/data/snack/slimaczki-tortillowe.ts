@@ -4,11 +4,11 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const zawinieteTortille: Recipe = {
-  name: "Zawinięte Tortille",
+const slimaczkiTortillowe: Recipe = {
+  name: "Ślimaczki Tortillowe",
   type: "snack",
   cookingMethods: [],
-  images: [""],
+  images: ["slimaczki-tortillowe.jpg"],
   time: 0,
   portions: 0,
   taste: null,
@@ -28,4 +28,4 @@ const zawinieteTortille: Recipe = {
   steps: [],
 };
 
-export default zawinieteTortille;
+export default slimaczkiTortillowe;

@@ -23,6 +23,7 @@ type IngId =
   | "macaroni_pasta"
   | "lasagne_pasta"
   | "fettuccine_pasta"
+  | "bow_tie_pasta"
   | "rice_noodles"
 
   //// PROCESSED ////
@@ -40,7 +41,8 @@ type IngId =
   //// SEEDS ////
   | "cocoa"
   | "coffee"
-  | "grain_coffee";
+  | "grain_coffee"
+  | "sunflower_seeds";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   //// GRAINS ////
@@ -291,6 +293,18 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [2, 72, 12],
   },
 
+  bow_tie_pasta: {
+    name: "Makaron Kokardki",
+    type: "grn",
+    color: "#FFF8E1",
+    kcalPer100g: 350,
+    unitWeights: {
+      lz: 15,
+      szk: 100,
+    },
+    nutrientsPer100g: [1.5, 72, 12],
+  },
+
   rice_noodles: {
     name: "Makaron ryżowy",
     type: "grn",
@@ -449,5 +463,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0, 86, 0],
+  },
+
+  sunflower_seeds: {
+    name: "Nasiona Słonecznika",
+    type: "grn",
+    color: "#D7CCC8",
+    kcalPer100g: 584,
+    unitWeights: {
+      lz: 10,
+      lzi: 3,
+    },
+    nutrientsPer100g: [51.5, 20, 20.8],
   },
 };

@@ -10,6 +10,7 @@ type IngId = //// SAUCES ////
   | "mustard_bbq"
   | "mustard_sun"
   | "mustard_dijon"
+  | "kremser_mustard"
   | "mayonnaise"
   | "garlic_sauce"
   | "sriracha"
@@ -138,6 +139,18 @@ export const iSAU: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 8.4, 7.7],
     price: 17,
     verified: true,
+  },
+
+  kremser_mustard: {
+    name: "Musztarda Kremser",
+    type: "sau",
+    color: "#F9A825",
+    kcalPer100g: 150,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [9, 6, 7],
   },
 
   mayonnaise: {

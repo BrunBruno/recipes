@@ -8,7 +8,12 @@ const zeberkaZPiekarnika: Recipe = {
   name: "Żeberka z Piekarnika",
   type: "dinner",
   cookingMethods: [["baked", 70, 200]],
-  images: ["zeberka-z-piekarnika.jpg", "zeberka-z-piekarnika-2.jpg"],
+  images: [
+    "zeberka-z-piekarnika.jpg",
+    "zeberka-z-piekarnika-2.jpg",
+    "zeberka-z-piekarnika-3.jpg",
+    "zeberka-z-piekarnika-4.jpg",
+  ],
   time: 75,
   portions: portions,
   taste: 4,

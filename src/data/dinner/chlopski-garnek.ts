@@ -13,7 +13,7 @@ const chlopskiGarnek: Recipe = {
     ["fried", 10],
     ["stewed", 25],
   ],
-  images: [""],
+  images: ["chlopski-garnek.jpg"],
   time: 35,
   portions: 4,
   taste: null,

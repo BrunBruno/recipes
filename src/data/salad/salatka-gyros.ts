@@ -9,7 +9,7 @@ const salatkaGyros: Recipe = {
   name: "Sałatka Gyros",
   type: "salad",
   cookingMethods: [],
-  images: [""],
+  images: ["salatka-gyros.jpg"],
   time: 0,
   portions: 0,
   taste: null,

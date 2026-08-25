@@ -7,6 +7,7 @@ type IngId =
   | "sunflower_oil"
   | "olive"
   | "olive_oil_extra_virgin"
+  | "sun_dried_tomato_oil"
   | "butter"
   | "clarified_butter"
   | "lard"
@@ -87,6 +88,18 @@ export const iFAT: Record<IngId, IngredientItem> = {
     unitWeights: {
       lz: 10,
       szk: 220,
+    },
+    nutrientsPer100g: [100, 0, 0],
+  },
+
+  sun_dried_tomato_oil: {
+    name: "Olej z Suszonych Pomidorów",
+    type: "fat",
+    color: "#FFB300",
+    kcalPer100g: 884,
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
     },
     nutrientsPer100g: [100, 0, 0],
   },
