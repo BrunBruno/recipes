@@ -1,8 +1,10 @@
 import type { IngredientItem } from "../types";
 
-type IngId = //// SAUCES ////
+type IngId =
+  //// SAUCES ////
   | "ketchup"
-  | "spicy_ketchup"
+  | "ketchup_spicy"
+  | "ketchup_pudliszki"
   | "mustard"
   | "mustard_sarepska"
   | "mustard_dessert"
@@ -24,7 +26,6 @@ type IngId = //// SAUCES ////
 
 export const iSAU: Record<IngId, IngredientItem> = {
   //// SAUCES ////
-
   ketchup: {
     name: "Ketchup",
     type: "sau",
@@ -39,7 +40,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  spicy_ketchup: {
+  ketchup_spicy: {
     name: "Pikantny ketchup",
     type: "sau",
     color: "#C62828",
@@ -49,6 +50,19 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 25, 1.8],
+  },
+
+  ketchup_pudliszki: {
+    name: "Ketchup Pudliszki",
+    type: "sau",
+    color: "#D32F2F",
+    kcalPer100g: 109,
+    nutrientsPer100g: [0.1, 24, 1.3],
+    unitWeights: {
+      lz: 15,
+      lzi: 5,
+    },
+    price: 13,
   },
 
   mustard: {

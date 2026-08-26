@@ -6,6 +6,7 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 import { fryingFat } from "../../utils";
 
+const portions = 3;
 const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
   type: "dinner",
@@ -15,9 +16,9 @@ const chlopskiGarnek: Recipe = {
   ],
   images: ["chlopski-garnek.jpg"],
   time: 35,
-  portions: 4,
-  taste: null,
-  difficulty: null,
+  portions: portions,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
@@ -48,7 +49,7 @@ const chlopskiGarnek: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["mięso"],
 };
 
 export default chlopskiGarnek;

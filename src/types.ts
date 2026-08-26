@@ -159,6 +159,7 @@ export type Recipe = {
   extrasVeg?: ExtrasIngredientOptions;
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
+  link?: string;
 };
 
 export type DayIngredientPair = [string, number];

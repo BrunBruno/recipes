@@ -968,6 +968,10 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 </ol>
               </div>
             )}
+
+            {recipeState.link && (
+              <a href={recipeState.link}>{recipeState.link}</a>
+            )}
           </section>
 
           <section className="add-to-day-section">

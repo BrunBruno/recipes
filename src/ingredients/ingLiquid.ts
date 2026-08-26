@@ -32,7 +32,8 @@ type IngId =
   //// DECOCTION ////
   | "rosol"
   | "meat_stock"
-  | "beef_broth";
+  | "beef_broth"
+  | "vegetable_broth";
 
 export const iLIQ: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -254,7 +255,6 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-
   tymbark_apple_mint: {
     name: "Tymbark Jabłko-Mięta",
     type: "liq",
@@ -266,6 +266,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       opak: 1000,
     },
     nutrientsPer100g: [0, 10, 0],
+    price: 2.4,
   },
 
   tymbark_apple_peach: {
@@ -279,6 +280,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       opak: 1000,
     },
     nutrientsPer100g: [0, 10, 0],
+    price: 2.4,
   },
 
   //// ////
@@ -315,6 +317,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 10, 0],
+    price: 1.9,
   },
 
   //// DECOCTION ////
@@ -357,5 +360,18 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     },
     price: 48,
     verified: true,
+  },
+
+  vegetable_broth: {
+    name: "Bulion warzywny",
+    type: "liq",
+    color: "#D8B15A",
+    kcalPer100g: 12,
+    nutrientsPer100g: [0.3, 1.5, 0.5],
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 160,
+    },
   },
 };

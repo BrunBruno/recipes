@@ -6,7 +6,7 @@ import { iBAK } from "../../ingredients/ingBakery";
 const kajzerkiZDzemem: Recipe = {
   name: "Kajzerki z Dżemem",
   type: "breakfast",
-  cookingMethods: [["raw", 0]],
+  cookingMethods: [],
   images: ["kajzerki-z-dzemem.jpg"],
   time: 5,
   portions: 1,

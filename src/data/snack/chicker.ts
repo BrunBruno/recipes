@@ -36,7 +36,7 @@ const chicker: Recipe = {
           type: "choice",
           options: [
             { ing: iSAU.sriracha, amount: 2, unit: "lzi" },
-            { ing: iSAU.spicy_ketchup, amount: 2, unit: "lzi" },
+            { ing: iSAU.ketchup_spicy, amount: 2, unit: "lzi" },
           ],
           selected: 0,
         },

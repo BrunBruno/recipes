@@ -10,6 +10,7 @@ type IngId =
   | "roma_tomato"
   | "sun_dried_tomatoes"
   | "cucumber"
+  | "ground_cucumber"
   | "zucchini"
   | "eggplant"
   | "bell_pepper"
@@ -23,6 +24,7 @@ type IngId =
   | "baby_carrot"
   | "parsley_root"
   | "leek"
+  | "vegetable_soup_vegetables"
   | "garlic"
   | "celery_root"
   | "ginger"
@@ -144,6 +146,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
   strawberry_tomatoes: {
     name: "Pomidorki truskawkowe",
     type: "veg",
+    isVeg: true,
+    subType: "tom",
     color: "#E53935",
     kcalPer100g: 18,
     unitWeights: {
@@ -192,6 +196,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
       plas: 10,
     },
     nutrientsPer100g: [0.1, 3.6, 0.7],
+    price: 7,
+  },
+
+  ground_cucumber: {
+    name: "Ogórek gruntowy",
+    type: "veg",
+    isVeg: true,
+    subType: "cuc",
+    color: "#7CB342",
+    kcalPer100g: 14,
+    nutrientsPer100g: [0.1, 2.4, 0.7],
+    unitWeights: {
+      szt: 100,
+    },
     price: 9,
   },
 
@@ -361,6 +379,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.3, 14.2, 1.5],
   },
 
+  vegetable_soup_vegetables: {
+    name: "Włoszczyzna",
+    type: "veg",
+    isVeg: true,
+    subType: "lek",
+    color: "#8BC34A",
+    kcalPer100g: 35,
+    nutrientsPer100g: [0.2, 7, 1.2],
+    unitWeights: {
+      szt: 500,
+    },
+    price: 8,
+  },
+
   ginger: {
     name: "Imbir",
     type: "veg",
@@ -499,6 +531,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.1, 3, 1],
+    price: 17,
   },
 
   lettuce_butter: {
@@ -527,6 +560,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 1000,
     },
     nutrientsPer100g: [0.1, 5.8, 1.3],
+    price: 3,
   },
 
   chinese_cabbage: {

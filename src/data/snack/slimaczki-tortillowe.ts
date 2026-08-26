@@ -9,23 +9,36 @@ const slimaczkiTortillowe: Recipe = {
   type: "snack",
   cookingMethods: [],
   images: ["slimaczki-tortillowe.jpg"],
-  time: 0,
-  portions: 0,
-  taste: null,
-  difficulty: null,
+  time: 10,
+  portions: 2,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iBAK.tortilla },
-        { ing: iMET.ham_slices },
-        { ing: iDIR.cream_cheese },
-        { ing: iVEG.lettuce },
-        { ing: iVEG.garlic },
+        { ing: iBAK.tortilla, amount: 2, unit: "szt" },
+        { ing: iMET.ham_slices, amount: 100 },
+        { ing: iDIR.cream_cheese, amount: 100 },
+        { ing: iVEG.lettuce, amount: 50 },
+        { ing: iVEG.garlic, amount: 1, unit: "zbk" },
       ],
     },
   ],
-  steps: [],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Czosnek przeciśnij przez praskę i wymieszaj z serkiem śmietankowym.",
+        "Każdą tortillę posmaruj przygotowanym serkiem.",
+        "Na tortilli ułóż liście sałaty oraz plastry szynki.",
+        "Zwiń tortillę ciasno w rulon.",
+        "Pokrój rulony na mniejsze kawałki, tworząc ślimaczki.",
+        "Podawaj od razu lub schłodź przed podaniem.",
+      ],
+    },
+  ],
+  keyWords: ["tortilla", "szynka"],
 };
 
 export default slimaczkiTortillowe;

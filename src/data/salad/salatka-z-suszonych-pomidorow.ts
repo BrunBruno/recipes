@@ -11,12 +11,15 @@ import type { Recipe } from "../../types";
 const salatkaZSuszonychPomidorow: Recipe = {
   name: "Sałatka z Suszonych Pomidorów",
   type: "salad",
-  cookingMethods: [],
+  cookingMethods: [
+    ["boiled", 10],
+    ["fried", 10],
+  ],
   images: ["salatka-z-suszonych-pomidorow.jpg"],
-  time: 0,
-  portions: 0,
-  taste: null,
-  difficulty: null,
+  time: 30,
+  portions: 4,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",
@@ -41,7 +44,22 @@ const salatkaZSuszonychPomidorow: Recipe = {
       ],
     },
   ],
-  steps: [],
+  steps: [
+    {
+      title: "",
+      steps: [
+        "Makaron ugotuj w osolonej wodzie z łyżeczką oleju. Przelej zimną wodą, odcedź i wystudź.",
+        "Filety umyj, osusz, pokrój w drobną kostkę i posyp przyprawą do kurczaka.",
+        "Na patelni rozgrzej olej, wrzuć kurczaka i smaż, co jakiś czas mieszając.",
+        "Usmażone mięso przełóż do naczynia wyłożonego ręcznikiem papierowym, aby pozbyć się nadmiaru tłuszczu.",
+        "Słonecznik podpraż na suchej patelni do lekkiego zbrązowienia.",
+        "Składniki na sos dokładnie wymieszaj.",
+        "W misce połącz makaron, wystudzonego kurczaka, odsączoną kukurydzę, suszone pomidory pokrojone w paski, posiekaną natkę pietruszki i słonecznik.",
+        "Polej sałatkę przygotowanym sosem i w razie potrzeby dopraw solą.",
+      ],
+    },
+  ],
+  keyWords: ["sałatka", "kurczak", "makaron"],
 };
 
 export default salatkaZSuszonychPomidorow;

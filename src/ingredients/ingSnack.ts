@@ -75,6 +75,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 130,
     },
     nutrientsPer100g: [33, 52, 6],
+    price: 66,
   },
 
   lays_green_onion: {
@@ -87,6 +88,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 130,
     },
     nutrientsPer100g: [33, 52, 6],
+    price: 66,
   },
 
   ready_popcorn: {
@@ -99,6 +101,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
       opak: 100,
     },
     nutrientsPer100g: [24, 55, 7],
+    price: 21.5,
   },
 
   cheese_snacks: {

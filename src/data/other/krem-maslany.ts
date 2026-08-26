@@ -6,7 +6,7 @@ import type { Recipe } from "../../types";
 const kremMaslany: Recipe = {
   name: "Krem Maślany",
   type: "other",
-  cookingMethods: [["raw", 0]],
+  cookingMethods: [],
   images: [""],
   time: 30,
   portions: 1,
@@ -35,6 +35,7 @@ const kremMaslany: Recipe = {
     },
   ],
   keyWords: ["krem"],
+  link: "https://wszystkiegoslodkiego.pl/porady/krem-maslany-z-mlekiem-skondensowanym-przepis-i-porady",
 };
 
 export default kremMaslany;

@@ -19,6 +19,7 @@ type IngId =
   | "turkey_breast"
   | "turkey_wing"
   | "turkey_neck"
+  | "turkey_soup_portion"
 
   //// MEAT ////
   | "pork_loin"
@@ -216,6 +217,19 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 0, 18],
   },
 
+  turkey_soup_portion: {
+    name: "Porcja rosołowa z indyka",
+    type: "met",
+    subType: "pou",
+    color: "#E0A080",
+    kcalPer100g: 145,
+    nutrientsPer100g: [9, 0, 16],
+    unitWeights: {
+      szt: 500,
+    },
+    price: 13,
+  },
+
   //////////////////////////////
 
   spicy_tenderloins: {
@@ -307,7 +321,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [23, 0, 17],
-    price: 22,
+    price: 24,
   },
 
   stew_pork: {
@@ -654,6 +668,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages_pork: {
     name: "Parówki wieprzowe",
     type: "met",
+    subType: "ham",
     color: "#B65A4A",
     kcalPer100g: 260,
     unitWeights: {
@@ -668,6 +683,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages_chicken: {
     name: "Parówki drobiowe",
     type: "met",
+    subType: "ham",
     color: "#D9A06C",
     kcalPer100g: 220,
     unitWeights: {

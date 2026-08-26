@@ -6,6 +6,7 @@ type IngId =
   | "potato_starch"
   | "breadcrumbs"
   | "rice"
+  | "rice_basmati"
   | "rice_long_grain"
   | "couscous"
   | "semolina"
@@ -100,6 +101,18 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.1, 75, 8.9],
     price: 5,
     verified: true,
+  },
+
+  rice_basmati: {
+    name: "Ryż basmati",
+    type: "grn",
+    color: "#FFF8E1",
+    kcalPer100g: 350,
+    nutrientsPer100g: [0.7, 77, 8.9],
+    unitWeights: {
+      lz: 15,
+      szk: 180,
+    },
   },
 
   rice_long_grain: {

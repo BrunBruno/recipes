@@ -155,6 +155,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
   cookie_peach: {
     name: "Brzoskwinia ciasteczkowa",
     type: "frt",
+    isVeg: true,
+    subType: "pea",
     color: "#F7B27A",
     kcalPer100g: 39,
     unitWeights: {

@@ -190,6 +190,10 @@
   border-bottom: dashed 0.3rem #333333;
 }
 
+.steps-section a {
+  color: #20c997;
+}
+
 .recipe-details-daily {
   padding: 1rem 0;
   margin: auto;

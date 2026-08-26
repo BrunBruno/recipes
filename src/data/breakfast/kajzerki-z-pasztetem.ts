@@ -6,7 +6,7 @@ import type { Recipe } from "../../types";
 const kajzerkiZPasztetem: Recipe = {
   name: "Kajzerki z Pasztetem",
   type: "breakfast",
-  cookingMethods: [["raw", 0]],
+  cookingMethods: [],
   images: ["kajzerki-z-pasztetem.jpg"],
   time: 5,
   portions: 1,
