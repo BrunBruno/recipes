@@ -47,6 +47,7 @@ type IngId =
   | "smoked_ham"
   | "ham_canned"
   | "salami"
+  | "mini_salami"
   | "bacon_slices"
   | "bacon_block"
   | "smoked_bacon"
@@ -582,6 +583,19 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [36, 1.5, 20],
     price: 52.5,
     verified: true,
+  },
+
+  mini_salami: {
+    name: "Salami mini",
+    type: "met",
+    subType: "ham",
+    color: "#A63D40",
+    kcalPer100g: 413,
+    unitWeights: {
+      plas: 5,
+      opak: 80,
+    },
+    nutrientsPer100g: [36, 1.5, 20],
   },
 
   bacon_slices: {

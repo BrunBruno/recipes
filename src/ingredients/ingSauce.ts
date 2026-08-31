@@ -125,6 +125,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [1.8, 24.5, 1.8],
+    price: 32,
     verified: true,
   },
 
@@ -191,6 +192,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [35, 11, 1.9],
+    price: 32,
     verified: true,
   },
 

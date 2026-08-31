@@ -22,6 +22,7 @@ type IngId =
   | "french_hotdog_buns"
 
   //// SNACKS ////
+  | "casserole_base"
   | "snail_pastry_custard"
   | "frusta_prosciutto"
   | "berlinki_hot_dog"
@@ -262,6 +263,20 @@ export const iBAK: Record<IngId, IngredientItem> = {
   },
 
   //// SNACKS ////
+  casserole_base: {
+    name: "Podstawa do zapiekanki",
+    type: "bak",
+    subType: "snk",
+    color: "#D6A15E",
+    kcalPer100g: 219,
+    unitWeights: {
+      szt: 235,
+    },
+    nutrientsPer100g: [6.2, 29.1, 10.9],
+    price: 23.3,
+    verified: true,
+  },
+
   snail_pastry_custard: {
     name: "Ślimaczek z budyniem",
     type: "bak",
