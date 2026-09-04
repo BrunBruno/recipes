@@ -9,7 +9,7 @@ const sosDoGolabkow: Recipe = {
   name: "Sos do Gołąbków",
   type: "other",
   cookingMethods: [["stewed", 15]],
-  images: [""],
+  images: ["sos-golabki.jpg"],
   time: 15,
   portions: 2,
   taste: 5,

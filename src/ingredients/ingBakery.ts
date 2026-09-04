@@ -36,7 +36,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     color: "#E0A96D",
     kcalPer100g: 275,
     unitWeights: {
-      szt: 70,
+      szt: 55,
     },
     nutrientsPer100g: [3, 54, 8.5],
     price: 6.2,
@@ -48,7 +48,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     color: "#C8925B",
     kcalPer100g: 265,
     unitWeights: {
-      szt: 75,
+      szt: 60,
     },
     nutrientsPer100g: [4.5, 46, 10],
     price: 6.9,
@@ -245,6 +245,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
       szt: 70,
     },
     nutrientsPer100g: [8.3, 51, 7.7],
+    price: 20.8,
     verified: true,
   },
 

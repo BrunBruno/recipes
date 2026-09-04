@@ -34,6 +34,7 @@ type IngId =
   | "stew_beef"
   | "ground_beef"
   | "beef_steak"
+  | "sirloin_steak"
   | "beef_round"
   | "beef_shoulder"
   | "mutton"
@@ -412,9 +413,22 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#7B2D2D",
     kcalPer100g: 250,
     unitWeights: {
-      szt: 200,
+      szt: 300,
     },
     nutrientsPer100g: [20, 0, 18],
+    price: 70,
+  },
+
+  sirloin_steak: {
+    name: "Stek rostbef",
+    type: "met",
+    color: "#9E3F32",
+    kcalPer100g: 220,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [27, 0, 12],
+    price: 69.9,
   },
 
   beef_round: {
@@ -592,7 +606,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#A63D40",
     kcalPer100g: 413,
     unitWeights: {
-      plas: 5,
+      plas: 2.5,
       opak: 80,
     },
     nutrientsPer100g: [36, 1.5, 20],
@@ -676,6 +690,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 50,
     },
     nutrientsPer100g: [21, 2.7, 13],
+    price: 16.4,
     verified: true,
   },
 

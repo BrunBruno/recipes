@@ -102,6 +102,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 120,
     },
     nutrientsPer100g: [0.1, 9, 1.1],
+    price: 8,
   },
 
   garlic: {
@@ -224,6 +225,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [0, 3, 1],
+    price: 5,
   },
 
   eggplant: {
@@ -237,6 +239,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 350,
     },
     nutrientsPer100g: [0, 6, 1],
+    price: 9,
   },
 
   bell_pepper: {
@@ -377,6 +380,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 200,
     },
     nutrientsPer100g: [0.3, 14.2, 1.5],
+    price: 22.5,
   },
 
   vegetable_soup_vegetables: {
@@ -405,7 +409,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       plas: 5,
     },
     nutrientsPer100g: [0.8, 17.8, 1.8],
-    price: 19,
+    price: 25,
   },
 
   celery_root: {

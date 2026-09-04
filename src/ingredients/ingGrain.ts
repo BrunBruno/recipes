@@ -322,11 +322,13 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Makaron ryżowy",
     type: "grn",
     color: "#F8F1E5",
-    kcalPer100g: 350,
+    kcalPer100g: 352,
     unitWeights: {
       opak: 200,
     },
-    nutrientsPer100g: [1, 78, 7],
+    nutrientsPer100g: [0.5, 85, 2.1],
+    price: 6.3,
+    verified: true,
   },
 
   //// PROCESSED ////

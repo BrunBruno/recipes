@@ -33,6 +33,7 @@ type IngId =
   | "frozen_fries"
   | "frozen_potatoes_boats"
   | "frozen_thin_fries"
+  | "twisted_fries"
   | "frozen_spinach"
   | "frozen_vegetable_mix"
   | "frozen_stir_fry"
@@ -45,6 +46,7 @@ type IngId =
   //// DELICATESSEN ////
   | "frozen_potato_dumpling"
   | "pierogi_meat"
+  | "meat_croquettes"
 
   //// SALADS ////
   | "coleslaw"
@@ -128,11 +130,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     isVeg: true,
     color: "#E6D690",
-    kcalPer100g: 19,
+    kcalPer100g: 13,
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [0.1, 4.3, 0.9],
+    nutrientsPer100g: [0, 1, 0.7],
+    price: 8.2,
+    verified: true,
   },
 
   fried_onion: {
@@ -389,6 +393,17 @@ export const iJAR: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  twisted_fries: {
+    name: "Zakręcone frytki",
+    type: "jar",
+    subType: "fro",
+    color: "#E8B84A",
+    kcalPer100g: 300,
+    unitWeights: {},
+    nutrientsPer100g: [14, 40, 4],
+    price: 14.6,
+  },
+
   frozen_vegetable_mix: {
     name: "Mrożona mieszanka warzyw",
     type: "jar",
@@ -516,6 +531,20 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szt: 25,
     },
     nutrientsPer100g: [7, 30, 9],
+  },
+
+  meat_croquettes: {
+    name: "Krokiety z mięsem",
+    type: "jar",
+    subType: "fro",
+    color: "#C47A3C",
+    kcalPer100g: 233,
+    unitWeights: {
+      szt: 100,
+    },
+    nutrientsPer100g: [12, 19, 10],
+    price: 18.2,
+    verified: true,
   },
 
   //// SALADS ////

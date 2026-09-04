@@ -206,6 +206,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0.5, 19, 1.6],
+    price: 24,
     verified: true,
   },
 
@@ -281,6 +282,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [1, 6, 50],
+    price: 32,
   },
 
   horseradish_sauce: {

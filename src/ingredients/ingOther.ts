@@ -6,6 +6,7 @@ type IngId =
   | "powdered_sugar"
   | "vanilla_sugar"
   | "refined_sugar"
+  | "brown_sugar"
 
   //// OTHER ////
   | "citric_acid"
@@ -85,6 +86,20 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lz: 12,
     },
     nutrientsPer100g: [0, 100, 0],
+  },
+
+  brown_sugar: {
+    name: "Cukier trzcinowy",
+    type: "oth",
+    subType: "sug",
+    color: "#B77B45",
+    kcalPer100g: 380,
+    unitWeights: {
+      lzi: 4,
+      lz: 12,
+      szk: 250,
+    },
+    nutrientsPer100g: [0, 98, 0],
   },
 
   //// OTHER ////

@@ -3,6 +3,7 @@ import { iBAK } from "../../ingredients/ingBakery";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 import { iSPC } from "../../ingredients/ingSpice";
+import { iFAT } from "../../ingredients/ingFat";
 
 const jajkoNaMiekko: Recipe = {
   name: "Jajko na Miękko",
@@ -20,6 +21,7 @@ const jajkoNaMiekko: Recipe = {
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iBAK.multigrain_kaiser_roll, amount: 1, unit: "szt" },
         { ing: iVEG.cucumber, amount: 100 },
+        { ing: iFAT.butter, amount: 10 },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

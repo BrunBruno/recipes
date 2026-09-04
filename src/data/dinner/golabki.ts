@@ -4,7 +4,7 @@ const golabki: Recipe = {
   name: "Gołąbki",
   type: "dinner",
   cookingMethods: [["fried", 10], ["stewed", 50]],
-  images: [""],
+  images: ["golabki.jpg"],
   time: 0,
   portions: 0,
   taste: null,

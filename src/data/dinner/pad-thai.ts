@@ -6,6 +6,7 @@ import { iFSH } from "../../ingredients/ingFish";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
+import { iOTH } from "../../ingredients/ingOther";
 
 const padThai: Recipe = {
   name: "Pad Thai",
@@ -15,7 +16,7 @@ const padThai: Recipe = {
     ["fried", 8],
     ["stewed", 5],
   ],
-  images: [""],
+  images: ["pad-thai.jpg"],
   time: 20,
   portions: 2,
   taste: null,
@@ -35,10 +36,12 @@ const padThai: Recipe = {
         },
         { ing: iVEG.leek, amount: 100 },
         { ing: iVEG.sweet_pepper, amount: 150 },
-        { ing: iVEG.ginger, amount: 15 },
+        { ing: iVEG.ginger, amount: 5 },
         { ing: iFAT.oil, amount: 15, unit: "ml" },
         { ing: iLIQ.water, amount: 350, unit: "ml" },
         { ing: iSPC.kania_pad_thai_fix, amount: 1, unit: "opak" },
+        { ing: iLIQ.lime_juice },
+        { ing: iOTH.brown_sugar },
       ],
     },
   ],
@@ -46,7 +49,8 @@ const padThai: Recipe = {
     {
       title: "",
       steps: [
-        "Makaron ryżowy ugotuj zgodnie z instrukcją na opakowaniu i odcedź.",
+        "Wrzuć makaron do wrzącej wody i gotuj prez 4-6 minut.",
+        "Odcedź makaron na sitku i przelej zimną wodą. Po przelaniu odczekaj, aż makaron dobrze odcieknie.",
         "Pierś z kurczaka pokrój w cienkie paski. Jeśli używasz krewetek, oczyść je w razie potrzeby.",
         "Por pokrój w półplasterki, słodką paprykę w cienkie paski, a imbir zetrzyj na tarce.",
         "Na rozgrzanym oleju usmaż kurczaka lub krewetki.",
@@ -55,6 +59,7 @@ const padThai: Recipe = {
         "Doprowadź sos do wrzenia.",
         "Dodaj ugotowany makaron ryżowy i dokładnie wymieszaj.",
         "Podgrzewaj jeszcze przez 2-3 minuty, aż makaron wchłonie większość sosu.",
+        "Dla jeszcze lepszego efektu danie skrop odrobiną sku z limonki i posyp szczyptą cukru trzcinowego.",
       ],
     },
   ],
