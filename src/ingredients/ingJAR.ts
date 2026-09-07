@@ -5,6 +5,7 @@ type IngId =
   | "tomato_puree"
   | "tomato_paste"
   | "tomato_passata"
+  | "tomato_sauce"
   | "pickled_cucumber"
   | "pickled_cucumber_vinegar"
   | "sauerkraut"
@@ -97,6 +98,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.3, 4.9, 1.7],
     price: 9,
     verified: true,
+  },
+
+  tomato_sauce: {
+    name: "Sos pomidorowy",
+    type: "jar",
+    color: "#D32F2F",
+    kcalPer100g: 50,
+    unitWeights: {
+      opak: 200,
+      ml: 1,
+    },
+    nutrientsPer100g: [0.5, 8, 1.5],
   },
 
   pickled_cucumber: {
@@ -398,10 +411,11 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#E8B84A",
-    kcalPer100g: 300,
+    kcalPer100g: 169,
     unitWeights: {},
-    nutrientsPer100g: [14, 40, 4],
+    nutrientsPer100g: [5.3, 26, 2.8],
     price: 14.6,
+    verified: true,
   },
 
   frozen_vegetable_mix: {
@@ -540,7 +554,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     color: "#C47A3C",
     kcalPer100g: 233,
     unitWeights: {
-      szt: 100,
+      szt: 80,
     },
     nutrientsPer100g: [12, 19, 10],
     price: 18.2,

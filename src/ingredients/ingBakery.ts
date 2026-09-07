@@ -20,6 +20,7 @@ type IngId =
   | "chicken_buns"
   | "hotdog_buns"
   | "french_hotdog_buns"
+  | "pinsa"
 
   //// SNACKS ////
   | "casserole_base"
@@ -261,6 +262,15 @@ export const iBAK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.8, 50.8, 9.4],
     price: 21.6,
     verified: true,
+  },
+
+  pinsa: {
+    name: "Pinsa",
+    type: "bak",
+    color: "#E0A96D",
+    kcalPer100g: 250,
+    unitWeights: { szt: 230 },
+    nutrientsPer100g: [6, 50, 8],
   },
 
   //// SNACKS ////

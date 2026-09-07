@@ -16,8 +16,9 @@ type IngId =
   | "halibut"
   | "panga"
   | "carp"
-  | "cod"
-  | "salmon"
+  | "cod_fillet"
+  | "salmon_fillet"
+  | "rainbow_trout_fillet"
 
   //// SEA FOOD ////
   | "squid_frozen_ready"
@@ -80,8 +81,8 @@ export const iFSH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5, 3, 20],
   },
 
-  cod: {
-    name: "Dorsz",
+  cod_fillet: {
+    name: "Filet z dorsza",
     type: "fsh",
     color: "#F5F5F5",
     kcalPer100g: 82,
@@ -89,10 +90,11 @@ export const iFSH: Record<IngId, IngredientItem> = {
       szt: 200,
     },
     nutrientsPer100g: [0.5, 0.2, 18],
+    price: 80,
   },
 
-  salmon: {
-    name: "Łosoś",
+  salmon_fillet: {
+    name: "Filet z łososia",
     type: "fsh",
     color: "#FF7043",
     kcalPer100g: 242,
@@ -103,6 +105,19 @@ export const iFSH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [18, 0, 20],
     price: 80,
     verified: true,
+  },
+
+  rainbow_trout_fillet: {
+    name: "Filet z pstrąga tęczowego",
+    type: "fsh",
+    color: "#FF8A65",
+    kcalPer100g: 148,
+    unitWeights: {
+      szt: 350,
+      opak: 700,
+    },
+    nutrientsPer100g: [7, 0, 20],
+    price: 60,
   },
 
   //// PROCESSED FISH ////

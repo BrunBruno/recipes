@@ -16,6 +16,7 @@ export type DinnerSidesNames =
   | "mashed-potatoes"
   | "oven-fries"
   | "oven-potatoes-boats"
+  | "oven-twisted-fries"
   | "rice"
   | "buckwheat"
   | "bulgur"
@@ -115,6 +116,15 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iJAR.frozen_potatoes_boats, amount: portions * 200 },
+          { ing: iSPC.potato_seasoning },
+        ],
+      };
+    case "oven-twisted-fries":
+      return {
+        title: "Zakręcone frytki z piekarnika",
+        sideName: name,
+        items: [
+          { ing: iJAR.twisted_fries, amount: portions * 200 },
           { ing: iSPC.potato_seasoning },
         ],
       };
@@ -424,6 +434,13 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Piecz około 20 minut, aż będą złote i chrupiące.",
         "Po upieczeniu posyp przyprawą do ziemniaków.",
       ];
+    case "oven-twisted-fries":
+      return [
+        "Rozgrzej piekarnik do 180°C.",
+        "Rozłóż zakręcone frytki na blasze wyłożonej papierem do pieczenia.",
+        "Piecz w piekarniku przez około 20 minut, aż będą złote i chrupiące.",
+        "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
+      ];
     case "rice":
       return ["Ugotuj ryż w osolonej wodzie"];
     case "buckwheat":
@@ -559,6 +576,8 @@ export const dinnerSidesCookingMethods = (
     case "oven-fries":
       return [["baked", 20]];
     case "oven-potatoes-boats":
+      return [["baked", 20]];
+    case "oven-twisted-fries":
       return [["baked", 20]];
     case "rice":
       return [["boiled", 25]];

@@ -11,7 +11,7 @@ const surowkaZKiszonejKapusty: Recipe = {
   name: "Surówka z Kiszonej Kapusty",
   type: "salad",
   cookingMethods: [],
-  images: [""],
+  images: ["surowka-z-kiszonej-kapusty.jpg"],
   time: 10,
   portions: portions,
   taste: null,

@@ -14,8 +14,8 @@ const ratatouille: Recipe = {
   images: ["ratatouille.jpg", "ratatouille-2.jpg"],
   time: 45,
   portions: 4,
-  taste: null,
-  difficulty: null,
+  taste: 1,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

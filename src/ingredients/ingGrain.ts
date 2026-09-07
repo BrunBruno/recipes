@@ -25,6 +25,7 @@ type IngId =
   | "lasagne_pasta"
   | "fettuccine_pasta"
   | "bow_tie_pasta"
+  | "tagliatelle_pasta"
   | "rice_noodles"
 
   //// PROCESSED ////
@@ -307,7 +308,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
   },
 
   bow_tie_pasta: {
-    name: "Makaron Kokardki",
+    name: "Makaron kokardki",
     type: "grn",
     color: "#FFF8E1",
     kcalPer100g: 350,
@@ -316,6 +317,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 100,
     },
     nutrientsPer100g: [1.5, 72, 12],
+  },
+
+  tagliatelle_pasta: {
+    name: "Makaron tagliatelle",
+    type: "grn",
+    color: "#F2D27A",
+    kcalPer100g: 350,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [1.5, 71.2, 12.4],
+    price: 14,
+    verified: true,
   },
 
   rice_noodles: {

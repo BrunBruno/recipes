@@ -199,6 +199,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 0.4, 0.1],
+    price: 20,
     verified: true,
   },
 

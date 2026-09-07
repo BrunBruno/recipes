@@ -35,6 +35,7 @@ type IngId =
   | "mascarpone"
   | "mozzarella"
   | "mozzarella_mini"
+  | "yellow_mozzarella"
   | "burrata"
   | "feta"
   | "camembert"
@@ -47,6 +48,7 @@ type IngId =
   | "parmigiano_reggiano"
   | "parmesan"
   | "cheddar_cheese"
+  | "hard_cheese"
   | "oscypek"
   | "tofu";
 
@@ -453,6 +455,18 @@ export const iDIR: Record<IngId, IngredientItem> = {
     price: 34.5,
   },
 
+  yellow_mozzarella: {
+    name: "Mozzarella żółta",
+    type: "dir",
+    subType: "che",
+    color: "#F4D03F",
+    kcalPer100g: 280,
+    unitWeights: {
+      plas: 20,
+    },
+    nutrientsPer100g: [18, 2, 22],
+  },
+
   burrata: {
     name: "Burrata",
     type: "dir",
@@ -611,6 +625,19 @@ export const iDIR: Record<IngId, IngredientItem> = {
       plas: 20,
     },
     nutrientsPer100g: [33, 1.3, 25],
+  },
+
+  hard_cheese: {
+    name: "Ser twardy",
+    type: "dir",
+    color: "#F5D77A",
+    kcalPer100g: 380,
+    unitWeights: {
+      opak: 200,
+    },
+    nutrientsPer100g: [29, 0, 32],
+    price: 53,
+    verified: true,
   },
 
   oscypek: {

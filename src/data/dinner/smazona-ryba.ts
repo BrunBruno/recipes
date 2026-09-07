@@ -26,7 +26,7 @@ const smazonaRyba: Recipe = {
           type: "choice",
           options: [
             { ing: iFSH.pollock, amount: 1, unit: "szt" },
-            { ing: iFSH.cod, amount: 1, unit: "szt" },
+            { ing: iFSH.cod_fillet, amount: 1, unit: "szt" },
             { ing: iFSH.hake, amount: 1, unit: "szt" },
             { ing: iFSH.halibut, amount: 1, unit: "szt" },
           ],

@@ -9,7 +9,7 @@ const portions = 2;
 const lososZPiekarnika: Recipe = {
   name: "Łosoś z Piekarnika",
   type: "dinner",
-  cookingMethods: [["roasted", 20]],
+  cookingMethods: [["roasted", 20, 200]],
   images: ["losos-z-piekarnika.jpg"],
   time: 30,
   portions: portions,
@@ -19,7 +19,7 @@ const lososZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.salmon, amount: 500 },
+        { ing: iFSH.salmon_fillet, amount: 500 },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
         { ing: iLIQ.lemon_juice, amount: 20, unit: "ml" },
         { ing: iSPC.black_pepper },

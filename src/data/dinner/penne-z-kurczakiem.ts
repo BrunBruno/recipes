@@ -18,8 +18,8 @@ const penneZKurczakiem: Recipe = {
   images: ["penne-z-kurczakiem.jpg"],
   time: 20,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

@@ -42,6 +42,7 @@ type IngId =
   | "lettuce_romaine"
   | "lettuce_iceberg"
   | "lettuce_butter"
+  | "arugula"
   | "cabbage"
   | "chinese_cabbage"
   | "red_cabbage"
@@ -449,9 +450,10 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#8E244D",
     kcalPer100g: 43,
     unitWeights: {
-      szt: 150,
+      szt: 300,
     },
     nutrientsPer100g: [0.2, 10, 1.6],
+    price: 3,
   },
 
   boiled_beets: {
@@ -551,6 +553,14 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.2, 2.9, 1.4],
     price: 27.5,
+  },
+
+  arugula: {
+    name: "Rukola",
+    type: "veg",
+    color: "#4CAF50",
+    kcalPer100g: 25,
+    nutrientsPer100g: [0.7, 3.7, 2.6],
   },
 
   cabbage: {

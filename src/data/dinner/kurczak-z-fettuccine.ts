@@ -6,19 +6,19 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
-const chickenAlfredoPasta: Recipe = {
-  name: "Chicken Alfredo Pasta",
+const kurczakZFettuccine: Recipe = {
+  name: "Kurczak z Fettuccine",
   type: "dinner",
   cookingMethods: [
     ["boiled", 10],
     ["fried", 8],
     ["stewed", 2],
   ],
-  images: [""],
+  images: ["kurczak-z-fettuccine.jpg"],
   time: 20,
   portions: 3,
-  taste: null,
-  difficulty: null,
+  taste: 2,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
@@ -38,6 +38,7 @@ const chickenAlfredoPasta: Recipe = {
         { ing: iLIQ.water, amount: 200, unit: "ml" },
         { ing: iDIR.parmesan, amount: 30 },
         { ing: iSPC.knorr_alfredo_chicken_pasta_fix, amount: 1, unit: "opak" },
+        { ing: iSPC.black_pepper },
       ],
     },
   ],
@@ -54,11 +55,11 @@ const chickenAlfredoPasta: Recipe = {
         "Doprowadź sos do wrzenia i gotuj przez około 1 minutę.",
         "Dodaj ugotowany makaron oraz usmażonego kurczaka i dokładnie wymieszaj.",
         "Gotuj jeszcze przez około 1 minutę, aż składniki połączą się z sosem.",
-        "Podawaj na gorąco, posypując startym parmezanem.",
+        "Podawaj na gorąco, posypując startym parmezanem oraz świeżo zmielonym pieprzem.",
       ],
     },
   ],
   keyWords: ["makaron", "kurczak"],
 };
 
-export default chickenAlfredoPasta;
+export default kurczakZFettuccine;
