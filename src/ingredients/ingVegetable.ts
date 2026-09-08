@@ -129,6 +129,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 18,
     unitWeights: {
       szt: 170,
+      plas: 15,
     },
     nutrientsPer100g: [0.2, 3.9, 0.9],
     price: 8,
@@ -141,6 +142,9 @@ export const iVEG: Record<IngId, IngredientItem> = {
     subType: "tom",
     color: "#E53935",
     kcalPer100g: 18,
+    unitWeights: {
+      szt: 15,
+    },
     nutrientsPer100g: [0.2, 3.9, 0.9],
     price: 29.9,
   },

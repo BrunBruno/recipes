@@ -40,7 +40,7 @@ export const DUMMY_RECORDS: Record<DayMealType, DayIngredientPair[]> = {
   ],
 
   dinner: [
-    ["Łosoś", 140],
+    ["Filet z łososia", 140],
     ["Ziemniaki", 250],
     ["Ogórek zielony", 100],
     ["Sałata", 60],

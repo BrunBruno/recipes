@@ -643,6 +643,9 @@ export const iMET: Record<IngId, IngredientItem> = {
     subType: "ham",
     color: "#D98C6B",
     kcalPer100g: 450,
+    unitWeights: {
+      plas: 15,
+    },
     nutrientsPer100g: [45, 0, 12],
   },
 
@@ -652,6 +655,9 @@ export const iMET: Record<IngId, IngredientItem> = {
     subType: "ham",
     color: "#E7A07A",
     kcalPer100g: 400,
+    unitWeights: {
+      plas: 15,
+    },
     nutrientsPer100g: [38, 0, 14],
   },
 

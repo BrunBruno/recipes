@@ -10,7 +10,7 @@ const kajzerkiZJajkiem: Recipe = {
   name: "Kajzerki z Jajkiem",
   type: "breakfast",
   cookingMethods: [["boiled", 10]],
-  images: ["kajzerki-z-jajkiem.jpg"],
+  images: ["kajzerki-z-jajkiem.jpg", "kajzerki-z-jajkiem-2.jpg"],
   time: 20,
   portions: 1,
   taste: 5,

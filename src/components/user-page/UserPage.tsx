@@ -284,19 +284,22 @@ export default function UserPage({
   };
 
   const renderDummyRecords = (meal: DayMealType) => {
-    return DUMMY_RECORDS[meal].map((item, index) => (
-      <div key={`dummy-${index}`} className="meal-ing dummy-record">
-        <div className="meal-ing-grid">
-          <IngredientIcon
-            ingType={ingredientLookup[item[0]].type}
-            subType={ingredientLookup[item[0]].subType}
-            color={ingredientLookup[item[0]].color}
-          />
-          <span className="dummy-grams">{item[1]}g</span>
-          <span className="dummy-name">{item[0]}</span>
+    return DUMMY_RECORDS[meal].map((item, index) => {
+      if (!ingredientLookup[item[0]]) return <></>;
+      return (
+        <div key={`dummy-${index}`} className="meal-ing dummy-record">
+          <div className="meal-ing-grid">
+            <IngredientIcon
+              ingType={ingredientLookup[item[0]].type}
+              subType={ingredientLookup[item[0]].subType}
+              color={ingredientLookup[item[0]].color}
+            />
+            <span className="dummy-grams">{item[1]}g</span>
+            <span className="dummy-name">{item[0]}</span>
+          </div>
         </div>
-      </div>
-    ));
+      );
+    });
   };
 
   const renderIngGroup = (group: DayIngredientPair[], meal: DayMealType) => {

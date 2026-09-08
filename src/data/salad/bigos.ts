@@ -11,8 +11,11 @@ import type { Recipe } from "../../types";
 const bigos: Recipe = {
   name: "Bigos",
   type: "salad",
-  cookingMethods: [["fried", 8], ["boiled", 480]],
-  images: [""],
+  cookingMethods: [
+    ["fried", 8],
+    ["boiled", 480],
+  ],
+  images: ["bigos.jpg"],
   time: 480,
   portions: 15,
   taste: null,

@@ -14,7 +14,11 @@ const kurczakZFettuccine: Recipe = {
     ["fried", 8],
     ["stewed", 2],
   ],
-  images: ["kurczak-z-fettuccine.jpg"],
+  images: [
+    "kurczak-z-fettuccine.jpg",
+    "kurczak-z-fettuccine-2.jpg",
+    "kurczak-z-fettuccine-3.jpg",
+  ],
   time: 20,
   portions: 3,
   taste: 2,
