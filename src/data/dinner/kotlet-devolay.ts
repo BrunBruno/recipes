@@ -21,7 +21,7 @@ const kotletDevolay: Recipe = {
   time: 60,
   portions: portions,
   taste: 4,
-  difficulty: null,
+  difficulty: 5,
   ingredients: [
     {
       title: "Mięso",

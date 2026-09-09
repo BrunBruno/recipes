@@ -14,7 +14,7 @@ const surowkaZKiszonejKapusty: Recipe = {
   images: ["surowka-z-kiszonej-kapusty.jpg"],
   time: 10,
   portions: portions,
-  taste: null,
+  taste: 3,
   difficulty: 1,
   ingredients: [
     {

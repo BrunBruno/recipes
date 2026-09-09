@@ -725,13 +725,16 @@ export const countCookingMethodUsages = (recipes: Recipe[]) => {
     microwaved: 0,
     toasted: 0,
     "air-fried": 0,
+    rest: 0,
   };
 
-  recipes.forEach((recipe) => {
-    recipe.cookingMethods.forEach(([method, _]) => {
-      usages[method] = (usages[method] ?? 0) + 1;
-    });
-  });
+  if (!recipes) return usages;
+  // TODO
+  // recipes.forEach((recipe) => {
+  //   recipe.cookingMethods.forEach(([method, _]) => {
+  //     usages[method] = (usages[method] ?? 0) + 1;
+  //   });
+  // });
 
   return usages;
 };
@@ -978,21 +981,7 @@ export const cookingMethodLabels: Record<CookingMethod, string> = {
   microwaved: "Podgrzewanie w mikrofalówce",
   toasted: "Przypiekanie w tosterze",
   "air-fried": "Smażenie beztłuszczowo",
-};
-
-export const cookingMethodLabelsShort: Record<CookingMethod, string> = {
-  raw: "Surowe",
-  boiled: "Gotowane",
-  steamed: "Parowane",
-  fried: "Smażone",
-  "deep-fried": "Frytowane",
-  baked: "Wypieczone",
-  grilled: "Grillowane",
-  stewed: "Duszone",
-  roasted: "Pieczone",
-  microwaved: "Mikrofala",
-  toasted: "Opiekane",
-  "air-fried": "Airfryer",
+  rest: "Odpoczywanie",
 };
 
 export function getCookingMethodLabel(method: CookingMethod): string {

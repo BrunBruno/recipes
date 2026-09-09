@@ -109,23 +109,17 @@
   height: 1.5rem;
 }
 
-.cooking-methods {
-  display: flex;
-  max-width: 100vw;
-  gap: 2rem;
-  margin-bottom: 1.6rem;
-  flex-wrap: wrap;
-}
-
 .cooking-methods-element {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .cooking-methods-icon {
-  width: 3rem;
-  height: 3rem;
-  border: solid 2px #aaa;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -133,26 +127,20 @@
 }
 .cooking-methods-text {
   display: flex;
-  flex-direction: column;
-  height: 3rem;
+  gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.cooking-methods-text span:first-child {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-.cooking-methods-text span:last-child {
-  font-size: 1.2rem;
+.cooking-methods-text:last-child {
   color: #ccc;
 }
 
 .cooking-methods-text strong {
   color: #20c997;
-  padding: 0;
 }
 
 .cooking-methods-icon svg {
-  height: 1.8rem;
+  height: 1.2rem;
 }
 
 .format-ingredients {
@@ -359,7 +347,7 @@
   height: 0.8rem;
   border-radius: 50%;
   background-color: #111111;
-  box-shadow: 0 0 1rem #000;
+  box-shadow: 0 0 0.5rem #999;
   cursor: pointer;
 }
 

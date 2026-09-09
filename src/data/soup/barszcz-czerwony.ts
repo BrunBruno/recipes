@@ -7,7 +7,6 @@ import type { Recipe } from "../../types";
 const barszczCzerwony: Recipe = {
   name: "Barszcz Czerwony",
   type: "soup",
-  cookingMethods: [["boiled", 45]],
   images: [
     "barszcz-czerwony.jpg",
     "barszcz-czerwony-2.jpg",
@@ -15,7 +14,7 @@ const barszczCzerwony: Recipe = {
   ],
   time: 45,
   portions: 2,
-  taste: null,
+  taste: 4,
   difficulty: 2,
   ingredients: [
     {
@@ -37,10 +36,12 @@ const barszczCzerwony: Recipe = {
       steps: [
         "Obierz buraki, opłucz i pokrój w plastry lub kawałki.",
         "Włóż do miski lub garnka i zalej wrzątkiem.",
-        "Dodaj kwasek cytrynowy - mniej więcej tyle jakbyś solił wodę. Sprawdź czy woda jest lekko kwaśna.",
+        "Dodaj kwasek cytrynowy - mniej więcej tyle ile soli się wodę. Sprawdź czy woda jest lekko kwaśna.",
         "Odstaw na stole na całą noc.",
+        ["rest", 480],
         "Rano przecedź płyn z buraków i sprawdź czy ma ładny czerwony kolor.",
         "Dodaj trochę rosołu, ale nie za dużo.",
+        "Podgrzej zupe na gazie, uważając aby nie zaczęła się gotować.",
         "Dopraw do smaku solą, pieprzem i odrobiną maggi.",
         "Jeśli buraki są jeszcze czerwone, możesz ponownie zalać je wrzątkiem i wieczorem dolać powstały wywar do barszczu.",
         "Barszcz najlepiej przygotować wieczorem, żeby był gotowy na następny dzień.",

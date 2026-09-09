@@ -19,7 +19,7 @@ const kotletyMieloneFix: Recipe = {
   ],
   time: 35,
   portions: 4,
-  taste: null,
+  taste: 4,
   difficulty: 1,
   ingredients: [
     {

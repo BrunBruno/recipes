@@ -13,8 +13,8 @@ const szaszlyki: Recipe = {
   images: ["szaszlyki.jpg"],
   time: 30,
   portions: 6,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "Szaszłyki",

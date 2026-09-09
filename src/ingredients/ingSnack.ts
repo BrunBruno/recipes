@@ -30,6 +30,7 @@ type IngId =
   | "prince_polo"
   | "vanilla_halva"
   | "mini_croissant"
+  | "stroopwafel"
 
   //// ICE-CREAM ////
   | "cone_strawberry"
@@ -364,6 +365,20 @@ export const iSNK: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  stroopwafel: {
+    name: "Stroopwafel",
+    type: "snk",
+    subType: "bis",
+    color: "#C59A6F",
+    kcalPer100g: 458,
+    unitWeights: {
+      szt: 39,
+      opak: 390,
+    },
+    nutrientsPer100g: [21.0, 63.0, 3.5],
+    verified: true,
+  },
+
   //// ICE-CREAM ////
   cone_strawberry: {
     name: "Rożek truskawkowy",
@@ -402,6 +417,4 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 25, 0.4],
   },
-
-  ////
 };

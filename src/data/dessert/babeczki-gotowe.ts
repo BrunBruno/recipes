@@ -5,9 +5,8 @@ import { iMET } from "../../ingredients/ingMeat";
 import type { Recipe } from "../../types";
 
 const babeczkiGotowe: Recipe = {
-  name: "Babeczki Gotowe",
+  name: "Babeczki",
   type: "dessert",
-  cookingMethods: [["baked", 20, 175]],
   images: [
     "babeczki-gotowe.jpg",
     "babeczki-gotowe-2.jpg",
@@ -40,6 +39,7 @@ const babeczkiGotowe: Recipe = {
         "Pozostałe płatki wsyp do ciasta i delikatnie wymieszaj.",
         "Ciasto równomiernie rozłóż na foremkach, a następnie posyp odsypanymi wcześniej płatkami.",
         "Natychmiast wstaw do nagrznago piekarnika i piecz na środkowym poziomie przez 17-20 minut.",
+        ["baked", "17-20", 175],
       ],
     },
   ],

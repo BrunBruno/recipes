@@ -18,8 +18,8 @@ const kurczakCurry: Recipe = {
   images: ["kurczak-curry.jpg"],
   time: 20,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

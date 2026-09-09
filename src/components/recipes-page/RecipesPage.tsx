@@ -2,22 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
-import type {
-  Recipe,
-  MealType,
-  KeyWord,
-  DayIngredients,
-  CookingMethod,
-} from "../../types";
-import {
-  cookingMethodLabelsShort,
-  keywordAliases,
-  MealTypesData,
-} from "../../utils";
+import type { Recipe, MealType, KeyWord, DayIngredients } from "../../types";
+import { keywordAliases, MealTypesData } from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
-import PreparationIcon from "../../assets/preparationIcon";
 
 type RecipePageProps = {
   setDayIngredients: React.Dispatch<React.SetStateAction<DayIngredients>>;
@@ -28,24 +17,23 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<MealType[]>([]);
-  const [activeMethodTypes, setActiveMethodTypes] = useState<CookingMethod[]>(
-    [],
-  );
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filterUnused, setFilterUnused] = useState<boolean>(true);
+  const [activeTastes, setActiveTastes] = useState<number[]>([]);
 
   const toggleType = (type: MealType) => {
     setActiveTypes((prev) =>
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
   };
-  const toggleMethodType = (type: CookingMethod) => {
-    setActiveMethodTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
+  const toggleTaste = (taste: number) => {
+    setActiveTastes((prev) =>
+      prev.includes(taste) ? prev.filter((t) => t !== taste) : [...prev, taste],
     );
   };
+
   const normalize = (text: string) => text.toLowerCase().trim();
   const matchesKeyword = (query: string, recipeKeywords: KeyWord[]) => {
     const q = normalize(query);
@@ -59,11 +47,6 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
     .filter((r) => {
       const typeMatch =
         activeTypes.length === 0 || activeTypes.includes(r.type);
-      const methodMatch =
-        activeMethodTypes.length === 0 ||
-        r.cookingMethods.some(([method, _]) =>
-          activeMethodTypes.includes(method),
-        );
 
       const query = normalize(searchQuery);
 
@@ -74,13 +57,16 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
       const hasImages = r.images.some((img) => img !== "");
       const onlyEmptyImages = r.images.every((img) => img === "");
+      const tasteMatch =
+        activeTastes.length === 0 ||
+        (r.taste !== null && activeTastes.includes(r.taste));
 
       const specialMatch =
         query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
 
       return (
         typeMatch &&
-        methodMatch &&
+        tasteMatch &&
         specialMatch &&
         (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
       );
@@ -231,7 +217,40 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                 </button>
               ))}
             </div>
-            <div className={`filter-buttons sm-no`}>
+            <div className="filter-buttons sm-no">
+              {[1, 2, 3, 4, 5].map((taste) => (
+                <button
+                  key={taste}
+                  className="filter-btn filter-grade"
+                  style={{
+                    borderColor: activeTastes.includes(taste)
+                      ? "#0ca678"
+                      : "#666",
+                  }}
+                  onClick={() => toggleTaste(taste)}
+                >
+                  {Array.from({
+                    length: taste,
+                  }).map((_, i) => (
+                    <UtilsIcon
+                      key={`fs${i}`}
+                      name="star-full"
+                      color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
+                    />
+                  ))}
+                  {Array.from({
+                    length: 5 - taste,
+                  }).map((_, i) => (
+                    <UtilsIcon
+                      key={`es${i}`}
+                      name="star-empty"
+                      color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
+                    />
+                  ))}
+                </button>
+              ))}
+            </div>
+            {/* <div className={`filter-buttons sm-no`}>
               {Object.entries(cookingMethodLabelsShort).map(([key, label]) => (
                 <button
                   key={key}
@@ -258,7 +277,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                   <span className="filter-text">{label}</span>
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

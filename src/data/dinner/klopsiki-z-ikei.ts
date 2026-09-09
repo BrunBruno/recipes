@@ -22,8 +22,8 @@ const klopsikiZIkei: Recipe = {
   images: ["klopsiki-z-ikei.jpg", "klopsiki-z-ikei-2.jpg"],
   time: 150,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 4,
   ingredients: [
     {
       title: "Klopsiki",

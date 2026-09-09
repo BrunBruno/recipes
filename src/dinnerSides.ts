@@ -7,7 +7,7 @@ import { iLIQ } from "./ingredients/ingLiquid";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
-import type { CookingMethod, ExtrasIngredientGroup } from "./types";
+import type { CookingAction, ExtrasIngredientGroup } from "./types";
 
 export type DinnerSidesNames =
   | "oven-potatoes"
@@ -394,7 +394,9 @@ export const dinnerSides = (
   }
 };
 
-export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
+export const dinnerSidesSteps = (
+  name: DinnerSidesNames,
+): (string | CookingAction)[] => {
   switch (name) {
     case "oven-potatoes":
       return [
@@ -403,58 +405,87 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Dokładnie obtocz ziemniaki w marynacie.",
         "Ułóż ziemniaki na blasze wyłożonej papierem do pieczenia i dodaj gałązki świeżego tymianku.",
         "Piecz w piekarniku nagrzanym do 180-200°C przez około 30 minut, 1-2 razy przewracając ziemniaki w trakcie pieczenia.",
+        ["baked", 30],
         "Podawaj gorące, bezpośrednio po upieczeniu.",
       ];
+
     case "boiled-potatoes":
       return [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        ["boiled", 30],
         "Odcedź i posyp świeżym koperkiem.",
       ];
+
     case "boiled-potatoes-dry":
       return [
         "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
+        ["boiled", 30],
         "Polej ziemniaki sosem z przygotowanego dania.",
       ];
+
     case "mashed-potatoes":
       return [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
+        ["boiled", 30],
         "Odcedź i ubij z masłem oraz ciepłym mlekiem na gładkie puree.",
         "Dopraw solą i pieprzem do smaku.",
       ];
+
     case "oven-fries":
       return [
         "Rozgrzej piekarnik do 180°C.",
         "Piecz frytki w piekarniku przez około 20 minut.",
+        ["baked", 20],
         "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
       ];
+
     case "oven-potatoes-boats":
       return [
         "Rozgrzej piekarnik zgodnie z instrukcją na opakowaniu.",
         "Rozłóż mrożone ziemniaczki na blasze wyłożonej papierem do pieczenia.",
         "Piecz około 20 minut, aż będą złote i chrupiące.",
+        ["baked", 20],
         "Po upieczeniu posyp przyprawą do ziemniaków.",
       ];
+
     case "oven-twisted-fries":
       return [
         "Rozgrzej piekarnik do 180°C.",
         "Rozłóż zakręcone frytki na blasze wyłożonej papierem do pieczenia.",
         "Piecz w piekarniku przez około 20 minut, aż będą złote i chrupiące.",
+        ["baked", 20],
         "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
       ];
+
     case "rice":
-      return ["Ugotuj ryż w osolonej wodzie"];
+      return ["Ugotuj ryż w osolonej wodzie.", ["boiled", 25]];
+
     case "buckwheat":
-      return ["Ugotuj kaszę gryczaną w osolonej wodzie do miękkości."];
+      return [
+        "Ugotuj kaszę gryczaną w osolonej wodzie do miękkości.",
+        ["boiled", 25],
+      ];
+
     case "bulgur":
-      return ["Ugotuj kaszę bulgur w osolonej wodzie."];
+      return ["Ugotuj kaszę bulgur w osolonej wodzie.", ["boiled", 25]];
+
     case "penne-pasta":
-      return ["Makaron penne ugotuj al dente w osolonej wodzie."];
+      return [
+        "Makaron penne ugotuj al dente w osolonej wodzie.",
+        ["boiled", 30],
+      ];
+
     case "spaghetti-pasta":
-      return ["Makaron spaghetti ugotuj al dente w osolonej wodzie."];
+      return [
+        "Makaron spaghetti ugotuj al dente w osolonej wodzie.",
+        ["boiled", 30],
+      ];
+
     case "kopytka-ready":
       return [
         "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
         "Wrzuć kopytka i gotuj przez około 10 minut.",
+        ["boiled", 10],
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
 
@@ -462,9 +493,10 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
       return [
         "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
         "Wrzuć kluski śląskie i gotuj przez około 10 minut.",
+        ["boiled", 10],
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
-    ////
+
     case "tomato-and-cucumber":
       return [
         "Pokrój pomidory i ogórki w kostkę.",
@@ -474,170 +506,115 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
         "Dopraw solą i pieprzem.",
         "Całość delikatnie wymieszaj i podawaj od razu.",
       ];
+
     case "peas-with-cranberries":
       return [
         "Groszek odsącz z zalewy.",
         "Dodaj dżem żurawinowy.",
         "Podawaj razem jako dodatek do obiadu.",
       ];
+
     case "carrot-and-peas":
       return [
         "Marchewkę obierz, umyj i pokrój w kostkę.",
-        "Następnie wrzuć marchewkę do garnka i zalej wodą tylko tyle by zakrywała marchewkę.",
+        "Następnie wrzuć marchewkę do garnka i zalej wodą tylko tyle, by zakrywała marchewkę.",
         "Dodaj odrobinę soli i gotuj do miękkości pod przykryciem.",
-        "Kiedy marchew już zmięknie dodaj odsączony z zalewy groszek.",
-        "Na patelni rozpuść masło, dodajemy mąkę i mieszając smaż aż się spieni.",
+        ["boiled", 15],
+        "Kiedy marchew już zmięknie, dodaj odsączony z zalewy groszek.",
+        "Na patelni rozpuść masło, dodaj mąkę i mieszając smaż, aż się spieni.",
+        ["fried", 3],
         "Zasmażką zapraw marchewkę z groszkiem.",
-        "Gotuj aż powstanie kremowy gęsty sos otaczający marchewkę.",
-        "Dopraw cukrem i solom.",
+        "Gotuj, aż powstanie kremowy, gęsty sos otaczający marchewkę.",
+        "Dopraw cukrem i solą.",
       ];
+
     case "steamed-vegetables":
       return [
         "Ugotuj warzywa na parze przez około 15-20 minut, aż będą miękkie.",
+        ["steamed", 18],
         "Po ugotowaniu przypraw odrobiną soli i oliwy.",
       ];
+
     case "stir-fry-vegetables":
       return [
         "Rozgrzej patelnię z łyżką oleju.",
         "Wrzuć mrożone warzywa bez rozmrażania.",
         "Smaż na średnim ogniu przez 8-12 minut, często mieszając.",
-        "Smaż do momentu aż warzywa będą miękkie, ale lekko chrupiące.",
+        ["fried", 10],
+        "Smaż do momentu, aż warzywa będą miękkie, ale lekko chrupiące.",
       ];
+
     case "green-beans-boiled":
       return [
         "Zagotuj osoloną wodę w garnku.",
         "Wrzuć fasolkę szparagową (świeżą lub mrożoną) do wrzątku.",
         "Gotuj 6-10 minut, aż będzie miękka, ale nadal lekko jędrna.",
+        ["boiled", 8],
         "Odcedź fasolkę i opcjonalnie dodaj odrobinę masła lub oliwy.",
         "Dopraw solą do smaku.",
       ];
+
     case "sauteed-cabbage":
       return [
         "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
+        ["fried", 10],
         "Dopraw solą i pieprzem i smaż, aż będzie miękka i lekko zrumieniona.",
       ];
+
     case "sauerkraut-salad":
       return [
         "Zetrzyj marchewkę na tarce.",
         "Wymieszaj z kapustą kiszoną.",
         "Dodaj olej, sok z cytryny, sól i pieprz.",
       ];
+
     case "cream-cucumber-salad":
       return [
         "Pokrój ogórka w cienkie plasterki i dodaj posiekaną zieloną cebulkę.",
         "Dodaj śmietanę, sól i pieprz, a następnie wymieszaj.",
       ];
+
     case "peas-and-beets":
       return ["Podaj buraki z octu wraz z groszkiem jako dodatek."];
+
     case "beets-shredded-ready":
       return ["Dodaj buraczki w wiórkach jako dodatek warzywny."];
+
     case "beets-fried-ready":
       return [
         "Podgrzej buraczki zasmażane na patelni lub w garnku.",
         "W razie potrzeby dopraw odrobiną soli lub cukru.",
       ];
+
     case "beets-whole-vinegar":
       return ["Podaj buraki z octu jako dodatek."];
+
     case "sauerkraut":
       return ["Podaj lub lekko podgrzej kapustę kiszoną."];
+
     case "pickled-cucumber":
       return [
         "Podaj ogórki kiszone, opcjonalnie pokrojone w plasterki lub ćwiartki.",
       ];
+
     case "pickled-cucumber-vinegar":
       return [
         "Pokrój ogórka konserwowego w plasterki lub ćwiartki i podaj jako dodatek.",
       ];
+
     case "canned-peas":
       return ["Podgrzej groszek konserwowy i odcedź z zalewy."];
+
     case "coleslaw-ready":
       return ["Podaj surówkę colesław jako dodatek."];
+
     case "corn-salad-ready":
       return ["Podaj surówkę z kukurydzą jako dodatek."];
+
     case "cucumber-salad-ready":
       return ["Podaj surówkę z ogórka jako dodatek."];
+
     case "red-cabbage-ready":
       return ["Podaj modrą kapustę jako dodatek."];
-  }
-};
-
-export const dinnerSidesCookingMethods = (
-  name: DinnerSidesNames,
-): [CookingMethod, number][] => {
-  switch (name) {
-    case "oven-potatoes":
-      return [["baked", 30]];
-    case "boiled-potatoes":
-      return [["boiled", 30]];
-    case "boiled-potatoes-dry":
-      return [["boiled", 30]];
-    case "mashed-potatoes":
-      return [["boiled", 30]];
-    case "oven-fries":
-      return [["baked", 20]];
-    case "oven-potatoes-boats":
-      return [["baked", 20]];
-    case "oven-twisted-fries":
-      return [["baked", 20]];
-    case "rice":
-      return [["boiled", 25]];
-    case "buckwheat":
-      return [["boiled", 25]];
-    case "bulgur":
-      return [["boiled", 25]];
-    case "penne-pasta":
-      return [["boiled", 30]];
-    case "spaghetti-pasta":
-      return [["boiled", 30]];
-    case "kopytka-ready":
-      return [["boiled", 25]];
-    case "silesian-dumplings-ready":
-      return [["boiled", 25]];
-    ////
-    case "tomato-and-cucumber":
-      return [["raw", 0]];
-    case "peas-with-cranberries":
-      return [["raw", 0]];
-    case "carrot-and-peas":
-      return [
-        ["boiled", 15],
-        ["fried", 3],
-      ];
-    case "steamed-vegetables":
-      return [["steamed", 18]];
-    case "stir-fry-vegetables":
-      return [["fried", 10]];
-    case "green-beans-boiled":
-      return [["boiled", 8]];
-    case "sauteed-cabbage":
-      return [["fried", 10]];
-    case "sauerkraut-salad":
-      return [["raw", 0]];
-    case "cream-cucumber-salad":
-      return [["raw", 0]];
-    case "peas-and-beets":
-      return [["raw", 0]];
-    case "beets-shredded-ready":
-      return [["raw", 0]];
-    case "beets-fried-ready":
-      return [["raw", 0]];
-    case "beets-whole-vinegar":
-      return [["raw", 0]];
-    case "sauerkraut":
-      return [["raw", 0]];
-    case "pickled-cucumber":
-      return [["raw", 0]];
-    case "pickled-cucumber-vinegar":
-      return [["raw", 0]];
-    case "canned-peas":
-      return [["raw", 0]];
-    case "coleslaw-ready":
-      return [["raw", 0]];
-    case "corn-salad-ready":
-      return [["raw", 0]];
-    case "cucumber-salad-ready":
-      return [["raw", 0]];
-    case "red-cabbage-ready":
-      return [["raw", 0]];
   }
 };

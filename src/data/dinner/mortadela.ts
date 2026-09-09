@@ -14,7 +14,7 @@ const mortadela: Recipe = {
   images: ["mortadela.jpg", "mortadela-2.jpg", "mortadela-3.jpg"],
   time: 25,
   portions: portions,
-  taste: null,
+  taste: 2,
   difficulty: 2,
   ingredients: [
     {

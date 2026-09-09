@@ -19,8 +19,8 @@ const padThai: Recipe = {
   images: ["pad-thai.jpg"],
   time: 20,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 2,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

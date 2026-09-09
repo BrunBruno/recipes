@@ -9,12 +9,15 @@ import type { Recipe } from "../../types";
 const penneBolognesePikantne: Recipe = {
   name: "Penne Bolognese Pikantne",
   type: "dinner",
-  cookingMethods: [["fried", 8], ["stewed", 25]],
+  cookingMethods: [
+    ["fried", 8],
+    ["stewed", 25],
+  ],
   images: ["penne-bolognese-pikantne.jpg", "penne-bolognese-pikantne-2.jpg"],
   time: 25,
   portions: 3,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

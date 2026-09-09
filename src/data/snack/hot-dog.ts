@@ -11,7 +11,7 @@ const hotHog: Recipe = {
   images: ["hot-dog.jpg", "hot-dog-2.jpg"],
   time: 10,
   portions: 2,
-  taste: 5,
+  taste: 4,
   difficulty: 1,
   ingredients: [
     {

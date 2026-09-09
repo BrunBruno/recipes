@@ -12,10 +12,10 @@ import {
   DAILY_NUTRIENTS,
   formatDuration,
   formatUnit,
-  // getCookingMethodLabel,
   isPriceComplete,
 } from "../../utils";
 import type {
+  CookingAction,
   DayIngredientPair,
   DayIngredients,
   DayMealType,
@@ -34,12 +34,9 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import {
-  // dinnerSidesCookingMethods,
-  dinnerSidesSteps,
-} from "../../dinnerSides";
+import { dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
-// import PreparationIcon from "../../assets/preparationIcon";
+import PreparationIcon from "../../assets/preparationIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -295,116 +292,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     }));
   };
 
-  // generate content
-  // const generateExtras = () => {
-  //   return (
-  //     <>
-  //       {recipeState.extrasMain &&
-  //         (() => {
-  //           const extraMain =
-  //             recipeState.extrasMain.options[recipeState.extrasMain.selected];
-
-  //           return (
-  //             <div className="recipe-ingredient-group">
-  //               <div className="ingredients-list-container">
-  //                 <h4 className="ingredient-group-title">
-  //                   {extraMain.title}
-  //                   {recipeState.extrasMain.options.length > 1 && (
-  //                     <button
-  //                       className="group-alt"
-  //                       onClick={() => {
-  //                         setRecipeState((prev) => {
-  //                           const copy = structuredClone(prev);
-
-  //                           copy.extrasMain!.selected =
-  //                             (copy.extrasMain!.selected + 1) %
-  //                             copy.extrasMain!.options.length;
-
-  //                           return copy;
-  //                         });
-  //                       }}
-  //                     >
-  //                       <UtilsIcon name="swap" color="#ffffff" />
-  //                     </button>
-  //                   )}
-  //                 </h4>
-
-  //                 <ul className="ingredients-list">
-  //                   {extraMain.items.map((item, index) => (
-  //                     <li key={index} className="ingredient-item">
-  //                       <div className="ingredient-indicator">
-  //                         <IngredientIcon
-  //                           ingType={item.ing.type}
-  //                           subType={item.ing.subType}
-  //                           color={item.ing.color}
-  //                         />
-  //                       </div>
-
-  //                       <span className="ingredient-name">{item.ing.name}</span>
-
-  //                       {renderUnitAndPrice(item)}
-  //                     </li>
-  //                   ))}
-  //                 </ul>
-  //               </div>
-  //             </div>
-  //           );
-  //         })()}
-
-  //       {recipeState.extrasVeg &&
-  //         (() => {
-  //           const extraVeg =
-  //             recipeState.extrasVeg.options[recipeState.extrasVeg.selected];
-
-  //           return (
-  //             <div className="recipe-ingredient-group">
-  //               <div className="ingredients-list-container">
-  //                 <h4 className="ingredient-group-title">
-  //                   {extraVeg.title}
-  //                   {recipeState.extrasVeg.options.length > 1 && (
-  //                     <button
-  //                       className="group-alt"
-  //                       onClick={() => {
-  //                         setRecipeState((prev) => {
-  //                           const copy = structuredClone(prev);
-
-  //                           copy.extrasVeg!.selected =
-  //                             (copy.extrasVeg!.selected + 1) %
-  //                             copy.extrasVeg!.options.length;
-
-  //                           return copy;
-  //                         });
-  //                       }}
-  //                     >
-  //                       <UtilsIcon name="swap" color="#ffffff" />
-  //                     </button>
-  //                   )}
-  //                 </h4>
-
-  //                 <ul className="ingredients-list">
-  //                   {extraVeg.items.map((item, index) => (
-  //                     <li key={index} className="ingredient-item">
-  //                       <div className="ingredient-indicator">
-  //                         <IngredientIcon
-  //                           ingType={item.ing.type}
-  //                           subType={item.ing.subType}
-  //                           color={item.ing.color}
-  //                         />
-  //                       </div>
-
-  //                       <span className="ingredient-name">{item.ing.name}</span>
-
-  //                       {renderUnitAndPrice(item)}
-  //                     </li>
-  //                   ))}
-  //                 </ul>
-  //               </div>
-  //             </div>
-  //           );
-  //         })()}
-  //     </>
-  //   );
-  // };
   const recipeDailyCharts = (
     kcal: number,
     nutrients: [string, string, string],
@@ -516,30 +403,35 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     }
   };
 
-  // const getPreparationMethods = () => {
-  //   const sideMain = recipeState.extrasMain
-  //     ? dinnerSidesCookingMethods(
-  //         recipeState.extrasMain?.options[recipeState.extrasMain.selected]
-  //           .sideName,
-  //       )
-  //     : [];
-  //   const sideVeg = recipeState.extrasVeg
-  //     ? dinnerSidesCookingMethods(
-  //         recipeState.extrasVeg?.options[recipeState.extrasVeg.selected]
-  //           .sideName,
-  //       )
-  //     : [];
+  const getMinuteLabel = (time: number | string) => {
+    const value = typeof time === "number" ? time : Number(time.split("-")[1]);
 
-  //   return [...selectedRecipe.cookingMethods, ...sideMain, ...sideVeg];
-  // };
+    if (value === 1) return "minuta";
+    if (value >= 2 && value <= 4) return "minuty";
+    return "minut";
+  };
 
-  // const getMinuteLabel = (time: number | string) => {
-  //   const value = typeof time === "number" ? time : Number(time.split("-")[1]);
+  const renderRecipeStep = (
+    s: string | CookingAction,
+    key: string | number,
+  ) => {
+    if (typeof s === "string") {
+      return <li key={key}>{s}</li>;
+    }
 
-  //   if (value === 1) return "minuta";
-  //   if (value >= 2 && value <= 4) return "minuty";
-  //   return "minut";
-  // };
+    return (
+      <div key={key} className="cooking-methods-element">
+        <div className="cooking-methods-icon">
+          <PreparationIcon type={s[0]} color={"#eaeaea"} />
+        </div>
+
+        <div className="cooking-methods-text">
+          <strong>{s[1]}</strong> {getMinuteLabel(s[1])}
+          {s[2] && ` (${s[2]}°C)`}
+        </div>
+      </div>
+    );
+  };
 
   const allIngredientGroups = [
     ...recipeState.ingredients.map((group, groupIndex) => ({
@@ -578,7 +470,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   }[][];
 
   const columnHeights = [0, 0];
-
   allIngredientGroups.forEach(({ group, groupIndex }) => {
     const height = group.items.filter(
       (item) => !("invisible" in item && item.invisible),
@@ -689,29 +580,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
       ) : (
         <div className="recipe-details-content">
           <section className="description-section">
-            {/* {getPreparationMethods().length > 0 && (
-              <div className="cooking-methods">
-                {getPreparationMethods().map((m) => {
-                  if (m[0] === "raw") return null;
-
-                  return (
-                    <div key={m[0]} className="cooking-methods-element">
-                      <div className="cooking-methods-icon">
-                        <PreparationIcon type={m[0]} color={"#eaeaea"} />{" "}
-                      </div>
-                      <div className="cooking-methods-text">
-                        <span>
-                          {getCookingMethodLabel(m[0])} {m[2] && `(${m[2]}°C)`}
-                        </span>
-                        <span>
-                          <strong>{m[1]}</strong> {getMinuteLabel(m[1])}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )} */}
             {selectedRecipe.difficulty && (
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>
@@ -804,17 +672,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
               </strong>
 
               <span>Łączny czas przygotowania</span>
-              <strong
-                style={{
-                  color: selectedRecipe.cookingMethods.some(
-                    ([_, t]) => t > selectedRecipe.time,
-                  )
-                    ? "#fa5252"
-                    : "#20c997",
-                }}
-              >
-                {formatDuration(selectedRecipe.time)}
-              </strong>
+              <strong>{formatDuration(selectedRecipe.time)}</strong>
 
               <span>Gęstość kaloryczna</span>
               <strong>
@@ -940,34 +798,38 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
 
           <section className="steps-section">
             <h3>Sposób przygotowania</h3>
+
             {Array.isArray(selectedRecipe.steps) &&
               selectedRecipe.steps.map((step, index) => (
                 <div key={index} className="steps">
                   {step.title !== "" && <h4>{step.title}</h4>}
+
                   <ol className="steps-list">
-                    {step.steps.map((s, i) => (
-                      <li key={i}>{s}</li>
-                    ))}
+                    {step.steps.map((s, i) =>
+                      renderRecipeStep(s, `recipe-${index}-${i}`),
+                    )}
                   </ol>
                 </div>
               ))}
+
             {(recipeState.extrasMain || recipeState.extrasVeg) && (
               <div className="steps">
                 <h4>Przykładowe podanie</h4>
+
                 <ol className="steps-list">
                   {recipeState.extrasMain &&
                     dinnerSidesSteps(
                       recipeState.extrasMain.options[
                         recipeState.extrasMain.selected
                       ].sideName,
-                    ).map((s, i) => <li key={`main-${i}`}>{s}</li>)}
+                    ).map((s, i) => renderRecipeStep(s, `main-${i}`))}
 
                   {recipeState.extrasVeg &&
                     dinnerSidesSteps(
                       recipeState.extrasVeg.options[
                         recipeState.extrasVeg.selected
                       ].sideName,
-                    ).map((s, i) => <li key={`veg-${i}`}>{s}</li>)}
+                    ).map((s, i) => renderRecipeStep(s, `veg-${i}`))}
                 </ol>
               </div>
             )}

@@ -56,7 +56,8 @@ export type CookingMethod =
   | "roasted" // pieczenie mięsa/warzyw
   | "microwaved" // mikrofalówka
   | "toasted"
-  | "air-fried";
+  | "air-fried"
+  | "rest";
 
 export type KeyWord =
   // MEAT
@@ -134,21 +135,22 @@ export type ExtrasIngredientOptions = {
   selected: number;
 };
 
+type CookingMethodEntry =
+  | [CookingMethod, number | string]
+  | [CookingMethod, number | string, number | string];
+
+export type CookingAction = [CookingMethod, number | string, (number | string)?];
 export type RecipeStepGroup = {
   title: string;
-  steps: string[];
+  steps: (string | CookingAction)[];
 };
-
-type CookingMethodEntry =
-  | [CookingMethod, number]
-  | [CookingMethod, number, number];
 
 export type NonEmptyArray<T> = [T, ...T[]];
 export type Recipe = {
   name: string;
   fileName?: string;
   type: MealType;
-  cookingMethods: CookingMethodEntry[];
+  cookingMethods?: CookingMethodEntry[]; //to remove
   images: NonEmptyArray<string>;
   portions: number;
   time: number;

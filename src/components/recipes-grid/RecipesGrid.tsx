@@ -42,6 +42,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
         {filteredRecipes
           // .filter((r) => r.ingredients.length > 1)
           // .filter((r) => r.extrasMain)
+          // .filter((r) => !r.taste || !r.difficulty)
           .map((recipe) => (
             <motion.div
               key={`${recipe.fileName}`}
@@ -102,7 +103,13 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                   </span>
                 </div>
                 <div className="card-svg">
-                  <RecipeTypeIcon type={recipe.type} color="#000" />
+                  <span className="card-grade">
+                    <span style={{ marginTop: "3.5px" }}>{recipe.taste}</span>
+                    <UtilsIcon name="star-empty" color="#000" />
+                  </span>
+                  <span className="card-type">
+                    <RecipeTypeIcon type={recipe.type} color="#000" />
+                  </span>
                 </div>
               </div>
 

@@ -162,6 +162,11 @@
   grid-template-columns: 24px auto;
 }
 
+.filter-grade {
+  display: flex;
+  gap: 0.3rem;
+}
+
 .filter-svg {
   width: 24px;
   height: 24px;
