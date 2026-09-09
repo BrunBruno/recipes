@@ -27,6 +27,7 @@ type IngId =
   | "gingerbread_with_icing"
   | "snickers"
   | "twix"
+  | "prince_polo"
   | "vanilla_halva"
   | "mini_croissant"
 
@@ -321,6 +322,19 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [24, 65, 4.5],
     verified: true,
+  },
+
+  prince_polo: {
+    name: "Prince Polo",
+    type: "snk",
+    subType: "bis",
+    color: "#7B4A2F",
+    kcalPer100g: 560,
+    unitWeights: {
+      szt: 35,
+    },
+    nutrientsPer100g: [36.0, 53.0, 8.0],
+    price: 59.8,
   },
 
   vanilla_halva: {

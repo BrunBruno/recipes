@@ -60,6 +60,7 @@ type IngId =
   | "sausages_chicken"
   | "sausages_berlinki"
   | "serdelki"
+  | "frankfurters"
   | "meat_spread"
   | "liver_sausage"
   | "pork_knuckle_ready"
@@ -630,11 +631,13 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "ham",
     color: "#8D4A43",
-    kcalPer100g: 518,
+    kcalPer100g: 301,
     unitWeights: {
       opak: 250,
     },
-    nutrientsPer100g: [53, 1, 37],
+    nutrientsPer100g: [27, 0.5, 14],
+    price: 28.9,
+    verified: true,
   },
 
   smoked_bacon: {
@@ -754,6 +757,19 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 75,
     },
     nutrientsPer100g: [25, 2, 14],
+    verified: true,
+  },
+
+  frankfurters: {
+    name: "Frankfurterki",
+    type: "met",
+    color: "#D98B62",
+    kcalPer100g: 247,
+    unitWeights: {
+      szt: 50,
+    },
+    nutrientsPer100g: [19, 0.4, 18.5],
+    price: 31.1,
     verified: true,
   },
 

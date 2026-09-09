@@ -12,7 +12,7 @@ import {
   DAILY_NUTRIENTS,
   formatDuration,
   formatUnit,
-  getCookingMethodLabel,
+  // getCookingMethodLabel,
   isPriceComplete,
 } from "../../utils";
 import type {
@@ -34,9 +34,12 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { dinnerSidesCookingMethods, dinnerSidesSteps } from "../../dinnerSides";
+import {
+  // dinnerSidesCookingMethods,
+  dinnerSidesSteps,
+} from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
-import PreparationIcon from "../../assets/preparationIcon";
+// import PreparationIcon from "../../assets/preparationIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -513,30 +516,30 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     }
   };
 
-  const getPreparationMethods = () => {
-    const sideMain = recipeState.extrasMain
-      ? dinnerSidesCookingMethods(
-          recipeState.extrasMain?.options[recipeState.extrasMain.selected]
-            .sideName,
-        )
-      : [];
-    const sideVeg = recipeState.extrasVeg
-      ? dinnerSidesCookingMethods(
-          recipeState.extrasVeg?.options[recipeState.extrasVeg.selected]
-            .sideName,
-        )
-      : [];
+  // const getPreparationMethods = () => {
+  //   const sideMain = recipeState.extrasMain
+  //     ? dinnerSidesCookingMethods(
+  //         recipeState.extrasMain?.options[recipeState.extrasMain.selected]
+  //           .sideName,
+  //       )
+  //     : [];
+  //   const sideVeg = recipeState.extrasVeg
+  //     ? dinnerSidesCookingMethods(
+  //         recipeState.extrasVeg?.options[recipeState.extrasVeg.selected]
+  //           .sideName,
+  //       )
+  //     : [];
 
-    return [...selectedRecipe.cookingMethods, ...sideMain, ...sideVeg];
-  };
+  //   return [...selectedRecipe.cookingMethods, ...sideMain, ...sideVeg];
+  // };
 
-  const getMinuteLabel = (time: number | string) => {
-    const value = typeof time === "number" ? time : Number(time.split("-")[1]);
+  // const getMinuteLabel = (time: number | string) => {
+  //   const value = typeof time === "number" ? time : Number(time.split("-")[1]);
 
-    if (value === 1) return "minuta";
-    if (value >= 2 && value <= 4) return "minuty";
-    return "minut";
-  };
+  //   if (value === 1) return "minuta";
+  //   if (value >= 2 && value <= 4) return "minuty";
+  //   return "minut";
+  // };
 
   const allIngredientGroups = [
     ...recipeState.ingredients.map((group, groupIndex) => ({
@@ -686,7 +689,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
       ) : (
         <div className="recipe-details-content">
           <section className="description-section">
-            {getPreparationMethods().length > 0 && (
+            {/* {getPreparationMethods().length > 0 && (
               <div className="cooking-methods">
                 {getPreparationMethods().map((m) => {
                   if (m[0] === "raw") return null;
@@ -708,7 +711,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                   );
                 })}
               </div>
-            )}
+            )} */}
             {selectedRecipe.difficulty && (
               <div className="diff-rating">
                 <span>Uciążliwość wykonania:</span>

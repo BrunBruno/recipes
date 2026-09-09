@@ -32,7 +32,7 @@ const jajkoNaMiekko: Recipe = {
       title: "",
       steps: [
         "Włóż jajka do garnka, zalej zimną wodą i zagotuj.",
-        "Od momentu zagotowania gotuj jajka przez około 4–5 minut.",
+        "Od momentu zagotowania gotuj jajka przez około 4-5 minut.",
         "Wyjmij jajka z wody i podawaj od razu na ciepło.",
         "Bułkę przekrój na pół, a ogórka zielonego pokrój w plastry.",
         "Podawaj jajka z bułką i świeżym ogórkiem.",

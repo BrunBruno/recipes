@@ -13,6 +13,7 @@ type IngId =
   | "fried_beets"
   | "beets_shredded"
   | "beets_whole_vinegar"
+  | "cooked_beets"
   | "sun_dried_tomatoes_in_oil"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
@@ -48,6 +49,9 @@ type IngId =
   | "frozen_potato_dumpling"
   | "pierogi_meat"
   | "meat_croquettes"
+  | "tortellini_meat"
+  | "frozen_uszka"
+  | "frozen_won_ton"
 
   //// SALADS ////
   | "coleslaw"
@@ -190,7 +194,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   },
 
   beets_whole_vinegar: {
-    name: "Buraczki całe z octu",
+    name: "Buraczki z zalewy",
     type: "jar",
     isVeg: true,
     color: "#7B1E3A",
@@ -201,6 +205,15 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 5.5, 1.2],
     price: 10,
+  },
+
+  cooked_beets: {
+    name: "Buraki gotowane",
+    type: "jar",
+    isVeg: true,
+    color: "#9C2542",
+    kcalPer100g: 44,
+    nutrientsPer100g: [0.2, 10.0, 1.7],
   },
 
   sun_dried_tomatoes_in_oil: {
@@ -559,6 +572,42 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [12, 19, 10],
     price: 18.2,
     verified: true,
+  },
+
+  tortellini_meat: {
+    name: "Tortellini z mięsem",
+    type: "jar",
+    subType: "fro",
+    color: "#D9A15B",
+    kcalPer100g: 213,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [5.6, 31.3, 8.1],
+    price: 20,
+    verified: true,
+  },
+
+  frozen_uszka: {
+    name: "Mrożone uszka",
+    type: "grn",
+    color: "#D6B27A",
+    kcalPer100g: 230,
+    nutrientsPer100g: [7.0, 35.0, 8.0],
+    unitWeights: {
+      opak: 450,
+    },
+  },
+
+  frozen_won_ton: {
+    name: "Mrożone pierożki Won Ton",
+    type: "grn",
+    color: "#D9B77A",
+    kcalPer100g: 220,
+    nutrientsPer100g: [6.0, 31.0, 8.0],
+    unitWeights: {
+      opak: 250,
+    },
   },
 
   //// SALADS ////

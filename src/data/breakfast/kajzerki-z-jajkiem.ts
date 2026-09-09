@@ -31,7 +31,7 @@ const kajzerkiZJajkiem: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
-        { ing: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },
         { ing: iFAT.butter, amount: 10 },
       ],

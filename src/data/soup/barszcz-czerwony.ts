@@ -8,7 +8,11 @@ const barszczCzerwony: Recipe = {
   name: "Barszcz Czerwony",
   type: "soup",
   cookingMethods: [["boiled", 45]],
-  images: ["barszcz-czerwony.jpg", "barszcz-czerwony-2.jpg"],
+  images: [
+    "barszcz-czerwony.jpg",
+    "barszcz-czerwony-2.jpg",
+    "barszcz-czerwony-3.jpg",
+  ],
   time: 45,
   portions: 2,
   taste: null,

@@ -38,7 +38,7 @@ const kebabGyros: Recipe = {
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.radish, amount: 1, unit: "opak" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
-        { ing: iVEG.lettuce, amount: portions * 2.5, unit: "szt" },
+        { ing: iVEG.lettuce, amount: portions * 2.5, unit: "lst" },
       ],
     },
     {

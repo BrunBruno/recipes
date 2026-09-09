@@ -24,7 +24,7 @@ const kanapkaZBekonem: Recipe = {
         { ing: iSAU.mayonnaise, amount: 2.5, unit: "lz" },
         { ing: iMET.brewed_bacon, amount: 3, unit: "plas" },
         { ing: iMET.egg, amount: 0.5, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 1, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 1, unit: "lst" },
         { ing: iVEG.tomato, amount: 2, unit: "plas" },
       ],
     },

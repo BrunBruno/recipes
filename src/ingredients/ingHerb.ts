@@ -13,6 +13,8 @@ type IngId =
   | "oregano"
   | "basil"
   | "coriander"
+  | "rosemary"
+  | "lovage"
 
   //// FRESH ////
   | "chives"
@@ -48,6 +50,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [7.4, 63, 9],
+    price: 311.3,
   },
 
   marjoram: {
@@ -60,6 +63,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [7, 61, 13],
+    price: 161.3,
   },
 
   herbes_de_provence: {
@@ -97,6 +101,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       szt: 1,
     },
     nutrientsPer100g: [8.4, 75, 8],
+    price: 258,
   },
 
   caraway: {
@@ -109,6 +114,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [14.6, 50, 20],
+    price: 166,
   },
 
   savory: {
@@ -133,6 +139,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [10, 64, 11],
+    price: 143.3,
   },
 
   basil: {
@@ -145,6 +152,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [4, 61, 23],
+    price: 129,
   },
 
   coriander: {
@@ -158,6 +166,28 @@ export const iHRB: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [18, 55, 12],
     price: 330,
+  },
+
+  rosemary: {
+    name: "Rozmaryn",
+    type: "hrb",
+    color: "#baa067",
+    kcalPer100g: 131,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [3.3, 21, 5.9],
+  },
+
+  lovage: {
+    name: "Lubczyk",
+    type: "hrb",
+    color: "#4F7D32",
+    kcalPer100g: 20,
+    nutrientsPer100g: [0.4, 4.1, 3.0],
+    unitWeights: {
+      lzi: 1,
+    },
   },
 
   //// FRESH ////
@@ -187,6 +217,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [0.8, 6.3, 3],
+    price: 311.3,
   },
 
   spring_onion: {

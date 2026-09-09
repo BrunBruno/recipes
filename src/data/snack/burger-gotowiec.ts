@@ -35,7 +35,7 @@ const gotowyBurger: Recipe = {
       title: "Burger warzywny",
       items: [
         { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],

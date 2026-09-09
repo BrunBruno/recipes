@@ -46,7 +46,7 @@ const burgerDrwala: Recipe = {
         { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.fried_onion },

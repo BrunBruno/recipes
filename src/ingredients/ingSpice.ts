@@ -5,6 +5,8 @@ type IngId =
   | "salt"
   | "sea_salt"
   | "black_pepper"
+  | "ground_pepper"
+  | "pepper_grains"
   | "cayenne_pepper"
   | "granulated_garlic"
   | "sweet_paprika"
@@ -21,6 +23,7 @@ type IngId =
   | "garam_masala"
   | "clove"
   | "juniper_berries"
+  | "turmeric"
 
   //// SEASONINGS ////
   | "vegetable_seasoning"
@@ -102,6 +105,33 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.2,
     },
     nutrientsPer100g: [3.3, 64, 10],
+    price: 50,
+  },
+
+  ground_pepper: {
+    name: "Pieprz mielony",
+    type: "spc",
+    color: "#333333",
+    kcalPer100g: 251,
+    unitWeights: {
+      lz: 7,
+      lzi: 3,
+    },
+    nutrientsPer100g: [3.3, 64.8, 10.4],
+    price: 50,
+  },
+
+  pepper_grains: {
+    name: "Pieprz ziarnisty",
+    type: "spc",
+    color: "#333333",
+    kcalPer100g: 251,
+    unitWeights: {
+      lz: 6,
+      lzi: 2,
+    },
+    nutrientsPer100g: [3.3, 64.8, 10.4],
+    price: 62.4,
   },
 
   cayenne_pepper: {
@@ -124,6 +154,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [0.7, 73, 17],
+    price: 43,
   },
 
   sweet_paprika: {
@@ -135,6 +166,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
+    price: 43,
   },
 
   hot_paprika: {
@@ -157,6 +189,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
+    price: 64.5,
   },
 
   chilli: {
@@ -179,6 +212,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [14, 58, 12],
+    price: 64.5,
   },
 
   cinnamon: {
@@ -201,6 +235,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.2,
     },
     nutrientsPer100g: [36, 49, 6],
+    price: 276.7,
   },
 
   allspice: {
@@ -212,6 +247,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.2,
     },
     nutrientsPer100g: [8.7, 72, 6],
+    price: 107.5,
   },
 
   black_sesame: {
@@ -279,6 +315,18 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.2,
     },
     nutrientsPer100g: [15, 34, 6],
+  },
+
+  turmeric: {
+    name: "Kurkuma",
+    type: "spc",
+    color: "#D99A00",
+    kcalPer100g: 312,
+    nutrientsPer100g: [3.3, 67.1, 9.7],
+    unitWeights: {
+      lz: 7,
+      lzi: 3,
+    },
   },
 
   //// SEASONINGS ////

@@ -37,7 +37,7 @@ const burgerDomowy: Recipe = {
       items: [
         { ing: iBAK.multigrain_kaiser_roll, amount: 4, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
-        { ing: iVEG.lettuce, amount: 4, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },

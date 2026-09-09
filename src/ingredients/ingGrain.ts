@@ -26,6 +26,7 @@ type IngId =
   | "fettuccine_pasta"
   | "bow_tie_pasta"
   | "tagliatelle_pasta"
+  | "tortellini_pasta"
   | "rice_noodles"
 
   //// PROCESSED ////
@@ -229,6 +230,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.9, 72, 12],
+    price: 5,
     verified: true,
   },
 
@@ -330,6 +332,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.5, 71.2, 12.4],
     price: 14,
     verified: true,
+  },
+
+  tortellini_pasta: {
+    name: "Makaron Tortellini",
+    type: "grn",
+    color: "#E8C27A",
+    kcalPer100g: 290,
+    nutrientsPer100g: [8.0, 48.0, 11.0],
+    unitWeights: {
+      opak: 250,
+    },
   },
 
   rice_noodles: {

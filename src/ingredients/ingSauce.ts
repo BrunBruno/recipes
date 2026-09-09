@@ -22,7 +22,9 @@ type IngId =
   | "thousand_island"
   | "mexican_sauce"
   | "remoulade"
-  | "horseradish_sauce";
+  | "horseradish_sauce"
+  | "cream_sauce"
+  | "sweet_sour_sauce";
 
 export const iSAU: Record<IngId, IngredientItem> = {
   //// SAUCES ////
@@ -296,5 +298,21 @@ export const iSAU: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [9.4, 11, 2.7],
     verified: true,
+  },
+
+  cream_sauce: {
+    name: "Sos śmietanowy",
+    type: "sau",
+    color: "#F2E4C8",
+    kcalPer100g: 280,
+    nutrientsPer100g: [27.0, 5.0, 2.0],
+  },
+
+  sweet_sour_sauce: {
+    name: "Słodko-kwaśny",
+    type: "sau",
+    color: "#E85D2A",
+    kcalPer100g: 160,
+    nutrientsPer100g: [0.2, 38.0, 0.5],
   },
 };

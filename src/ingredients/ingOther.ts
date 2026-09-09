@@ -300,7 +300,6 @@ export const iOTH: Record<IngId, IngredientItem> = {
     price: 0,
     verified: true,
     unitWeights: {
-      g: 0,
       krom: 0,
       kst: 0,
       lst: 0,

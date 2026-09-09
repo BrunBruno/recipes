@@ -873,7 +873,7 @@ export const formatUnit = (ingredient: Ingredient): string => {
     case "zbk":
       return ` ${pluralize(count, "ząbek", "ząbki", "ząbków", "ząbka")}`;
     case "lst":
-      return ` ${pluralize(count, "listek", "listki", "listków", "listka")}`;
+      return ` ${pluralize(count, "liść", "liście", "liści", "liścia")}`;
     case "ziar":
       return ` ${pluralize(count, "ziarno", "ziarna", "ziaren", "ziarna")}`;
     case "peto":

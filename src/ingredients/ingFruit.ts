@@ -13,6 +13,7 @@ type IngId =
   | "cookie_peach"
   | "plum"
   | "dried_plum"
+  | "mirabele_plums"
   | "apricot"
   | "mango"
   | "papaya"
@@ -40,6 +41,8 @@ type IngId =
   | "gooseberry"
   | "olives"
   | "avocado"
+  | "monstera_fruit"
+  | "dragon_fruit"
   | "raisins";
 
 export const iFRT: Record<IngId, IngredientItem> = {
@@ -96,6 +99,19 @@ export const iFRT: Record<IngId, IngredientItem> = {
       plas: 80,
     },
     nutrientsPer100g: [0.1, 13, 0.5],
+  },
+
+  dragon_fruit: {
+    name: "Smoczy owoc",
+    type: "frt",
+    isVeg: true,
+    subType: "ana",
+    color: "#E94F8A",
+    kcalPer100g: 57,
+    unitWeights: {
+      szt: 350,
+    },
+    nutrientsPer100g: [0.1, 13.0, 1.1],
   },
 
   kiwi: {
@@ -191,6 +207,19 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [0.4, 64, 2.2],
+  },
+
+  mirabele_plums: {
+    name: "Mirabelki",
+    type: "frt",
+    isVeg: true,
+    subType: "plu",
+    color: "#F4D35E",
+    kcalPer100g: 46,
+    unitWeights: {
+      szt: 12,
+    },
+    nutrientsPer100g: [0.3, 11.0, 0.7],
   },
 
   apricot: {
@@ -324,6 +353,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 180,
     },
     nutrientsPer100g: [0.1, 12, 0.9],
+    price: 6,
   },
 
   mandarin: {
@@ -337,6 +367,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 80,
     },
     nutrientsPer100g: [0.3, 13, 0.8],
+    price: 9,
   },
 
   grapefruit: {
@@ -527,6 +558,19 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 250,
     },
     nutrientsPer100g: [15, 9, 2],
+  },
+
+  monstera_fruit: {
+    name: "Owoc monstery",
+    type: "frt",
+    isVeg: true,
+    subType: "mon",
+    color: "#E8D89B",
+    kcalPer100g: 75,
+    unitWeights: {
+      szt: 500,
+    },
+    nutrientsPer100g: [0.5, 18.0, 1.5],
   },
 
   //// DRIED ////

@@ -30,12 +30,10 @@ type IngId =
   | "ginger"
   | "red_onion"
   | "radish"
+  | "radish_peeled"
   | "beetroot"
   | "kohlrabi"
   | "corn"
-
-  //// PROCESSED ////
-  | "boiled_beets"
 
   //// GREENS ////
   | "lettuce"
@@ -446,6 +444,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 16,
   },
 
+  radish_peeled: {
+    name: "Rzodkiew obrana",
+    type: "veg",
+    isVeg: true,
+    subType: "bet",
+    color: "#F48FB1",
+    kcalPer100g: 16,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [0.1, 3.4, 0.7],
+    price: 16,
+  },
+
   beetroot: {
     name: "Burak czerwony",
     type: "veg",
@@ -458,19 +470,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.2, 10, 1.6],
     price: 3,
-  },
-
-  boiled_beets: {
-    name: "Buraki gotowane",
-    type: "veg",
-    isVeg: true,
-    subType: "bet",
-    color: "#8B0000",
-    kcalPer100g: 44,
-    unitWeights: {
-      szt: 150,
-    },
-    nutrientsPer100g: [0.2, 10, 1.6],
   },
 
   kohlrabi: {
@@ -509,7 +508,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 15,
     unitWeights: {
       opak: 150,
-      szt: 5,
+      lst: 5,
     },
     nutrientsPer100g: [0.2, 2.9, 1.4],
     price: 27.5,
@@ -523,7 +522,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#7CB342",
     kcalPer100g: 17,
     unitWeights: {
-      szt: 5,
+      lst: 5,
       opak: 300,
     },
     nutrientsPer100g: [0.3, 3.3, 1.2],
@@ -537,7 +536,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#C5E1A5",
     kcalPer100g: 14,
     unitWeights: {
-      szt: 5,
+      lst: 5,
       opak: 500,
     },
     nutrientsPer100g: [0.1, 3, 1],
@@ -552,7 +551,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#AED581",
     kcalPer100g: 14,
     unitWeights: {
-      szt: 10,
+      lst: 10,
       opak: 300,
     },
     nutrientsPer100g: [0.2, 2.9, 1.4],

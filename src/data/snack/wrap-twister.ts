@@ -28,7 +28,7 @@ const wrapTwister: Recipe = {
         { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
         { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 8, unit: "szt" },
+        { ing: iVEG.lettuce, amount: 8, unit: "lst" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
       ],
     },

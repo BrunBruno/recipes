@@ -323,7 +323,7 @@ export const dinnerSides = (
       };
     case "beets-whole-vinegar":
       return {
-        title: "Buraczki z octu",
+        title: "Buraczki z zalewy",
         sideName: name,
         items: [
           { ing: iJAR.beets_whole_vinegar, amount: portions * 200 },

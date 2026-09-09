@@ -31,7 +31,7 @@ const wrapWieprzowyJajecznica: Recipe = {
         { ing: iMET.egg, amount: portions, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
-        { ing: iVEG.lettuce, amount: portions, unit: "szt" },
+        { ing: iVEG.lettuce, amount: portions, unit: "lst" },
         { ing: iSAU.mustard_dessert, amount: 30 },
         { ing: iSAU.mayonnaise, amount: 30 },
         { ing: iSAU.horseradish_sauce, amount: 10 },
