@@ -8,7 +8,6 @@ const portions = 4;
 const kurczakZPiekarnika: Recipe = {
   name: "Kurczak z Piekarnika",
   type: "dinner",
-  cookingMethods: [["roasted", 60]],
   images: ["kurczak-z-piekarnika.jpg", "kurczak-z-piekarnika-2.jpg"],
   time: 60,
   portions: portions,

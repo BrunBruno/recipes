@@ -8,7 +8,6 @@ import type { Recipe } from "../../types";
 const kajzerkiZPomidorem: Recipe = {
   name: "Kajzerki z Pomidorem",
   type: "breakfast",
-  cookingMethods: [],
   images: ["kajzerki-z-pomidorem.jpg"],
   time: 5,
   portions: 1,

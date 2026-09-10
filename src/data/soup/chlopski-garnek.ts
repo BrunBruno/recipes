@@ -10,10 +10,6 @@ const portions = 3;
 const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
   type: "soup",
-  cookingMethods: [
-    ["fried", 10],
-    ["stewed", 25],
-  ],
   images: ["chlopski-garnek.jpg", "chlopski-garnek-2.jpg"],
   time: 35,
   portions: portions,
@@ -49,7 +45,7 @@ const chlopskiGarnek: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso"],
+  keyWords: ["mięso", "fix"],
 };
 
 export default chlopskiGarnek;

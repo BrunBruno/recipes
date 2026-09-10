@@ -7,10 +7,6 @@ import type { Recipe } from "../../types";
 const penneWSosiePomidorowym: Recipe = {
   name: "Penne w Sosie Pomidorowym",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 20],
-    ["stewed", 20],
-  ],
   images: ["penne-w-sosie-pomidorowym.jpg", "penne-w-sosie-pomidorowym-2.jpg"],
   time: 20,
   portions: 3,
@@ -48,7 +44,7 @@ const penneWSosiePomidorowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: ["makaron", "fix"],
 };
 
 export default penneWSosiePomidorowym;

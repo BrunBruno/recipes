@@ -44,21 +44,6 @@ export type UnitType =
   | "ziar" // ziarno
   | "peto"; // pęto
 
-export type CookingMethod =
-  | "raw" // bez obróbki
-  | "boiled" // gotowanie
-  | "steamed" // gotowanie na parze
-  | "fried" // smażenie
-  | "deep-fried" // smażenie w głębokim tłuszczu
-  | "baked" // pieczenie
-  | "grilled" // grillowanie
-  | "stewed" // duszenie
-  | "roasted" // pieczenie mięsa/warzyw
-  | "microwaved" // mikrofalówka
-  | "toasted"
-  | "air-fried"
-  | "rest";
-
 export type KeyWord =
   // MEAT
   | "mięso"
@@ -89,7 +74,8 @@ export type KeyWord =
   | "sałatka"
   | "pieczywo"
   | "ryba"
-  | "zupa";
+  | "zupa"
+  | "fix";
 
 export type IngredientItem = {
   name: string;
@@ -135,14 +121,9 @@ export type ExtrasIngredientOptions = {
   selected: number;
 };
 
-type CookingMethodEntry =
-  | [CookingMethod, number | string]
-  | [CookingMethod, number | string, number | string];
-
-export type CookingAction = [CookingMethod, number | string, (number | string)?];
 export type RecipeStepGroup = {
   title: string;
-  steps: (string | CookingAction)[];
+  steps: string[];
 };
 
 export type NonEmptyArray<T> = [T, ...T[]];
@@ -150,7 +131,6 @@ export type Recipe = {
   name: string;
   fileName?: string;
   type: MealType;
-  cookingMethods?: CookingMethodEntry[]; //to remove
   images: NonEmptyArray<string>;
   portions: number;
   time: number;

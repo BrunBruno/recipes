@@ -8,7 +8,6 @@ const portions = 2;
 const pyzyMiesne: Recipe = {
   name: "Pyzy z Mięsem",
   type: "dinner",
-  cookingMethods: [["boiled", 10]],
   images: ["pyzy-miesne.jpg"],
   time: 10,
   portions: portions,

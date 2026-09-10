@@ -11,10 +11,6 @@ const portions = 3;
 const kurczakPoChinsku: Recipe = {
   name: "Kurczak po Chińsku",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 10],
-    ["stewed", 10],
-  ],
   images: [
     "kurczak-po-chinsku.jpg",
     "kurczak-po-chinsku-2.jpg",
@@ -52,7 +48,7 @@ const kurczakPoChinsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "sos", "warzywa"],
+  keyWords: ["mięso", "kurczak", "ryż", "sos", "warzywa", "fix"],
 };
 
 export default kurczakPoChinsku;

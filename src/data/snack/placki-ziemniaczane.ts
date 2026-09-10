@@ -10,7 +10,6 @@ import type { Recipe } from "../../types";
 const plackiZiemniaczane: Recipe = {
   name: "Placki Ziemniaczane",
   type: "snack",
-  cookingMethods: [["fried", 8]],
   images: ["placki-ziemniaczane.jpg"],
   time: 30,
   portions: 2,

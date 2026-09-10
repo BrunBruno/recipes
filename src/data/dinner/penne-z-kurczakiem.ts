@@ -11,10 +11,6 @@ import type { Recipe } from "../../types";
 const penneZKurczakiem: Recipe = {
   name: "Penne z Kurczakiem",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 8],
-    ["stewed", 20],
-  ],
   images: ["penne-z-kurczakiem.jpg"],
   time: 20,
   portions: 2,
@@ -49,7 +45,7 @@ const penneZKurczakiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "makaron", "kurczak"],
+  keyWords: ["mięso", "makaron", "kurczak", "fix"],
 };
 
 export default penneZKurczakiem;

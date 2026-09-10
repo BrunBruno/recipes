@@ -8,7 +8,6 @@ const portions = 2;
 const karkowkaZPiekarnika: Recipe = {
   name: "Karkowka z Piekarnika",
   type: "dinner",
-  cookingMethods: [["roasted", 60]],
   images: ["karkowka-z-piekarnika.jpg", "karkowka-z-piekarnika-2.jpg"],
   time: 70,
   portions: portions,
@@ -42,7 +41,7 @@ const karkowkaZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "ziemniak", "wieprzowina"],
+  keyWords: ["mięso", "ziemniak", "wieprzowina", "fix"],
 };
 
 export default karkowkaZPiekarnika;

@@ -11,7 +11,6 @@ const portions = 5;
 const kotletySchaboweWPlatkach: Recipe = {
   name: "Kotlety w Płatkach",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: [
     "kotlet-schabowy-w-platkach.jpg",
     "kotlet-schabowy-w-platkach-2.jpg",

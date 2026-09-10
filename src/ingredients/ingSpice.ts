@@ -60,7 +60,7 @@ type IngId =
   | "winiary_chicken_fix"
   | "winiary_dark_roast_sauce_fix"
   | "winiary_peasant_stew_fix"
-  | "winiary_juicy_ribs"
+  | "winiary_juicy_ribs_fix"
   //
   | "kamis_penne_fix"
   //
@@ -748,7 +748,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  winiary_juicy_ribs: {
+  winiary_juicy_ribs_fix: {
     name: "Soczyste Żeberka",
     type: "spc",
     subType: "sah",

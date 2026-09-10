@@ -39,7 +39,6 @@ const babeczkiGotowe: Recipe = {
         "Pozostałe płatki wsyp do ciasta i delikatnie wymieszaj.",
         "Ciasto równomiernie rozłóż na foremkach, a następnie posyp odsypanymi wcześniej płatkami.",
         "Natychmiast wstaw do nagrznago piekarnika i piecz na środkowym poziomie przez 17-20 minut.",
-        ["baked", "17-20", 175],
       ],
     },
   ],

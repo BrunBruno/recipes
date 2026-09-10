@@ -8,7 +8,6 @@ const portions = 1;
 const paluszkiRybne: Recipe = {
   name: "Paluszki Rybne",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: ["paluszki-rybne.jpg", "paluszki-rybne-2.jpg"],
   time: 20,
   portions: portions,
@@ -29,8 +28,8 @@ const paluszkiRybne: Recipe = {
   },
   extrasVeg: {
     options: [
-      dinnerSides("beets-fried-ready", portions),
       dinnerSides("stir-fry-vegetables", portions),
+      dinnerSides("beets-fried-ready", portions),
     ],
     selected: 0,
   },

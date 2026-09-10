@@ -9,10 +9,6 @@ import type { Recipe } from "../../types";
 const chicker: Recipe = {
   name: "Chickery",
   type: "snack",
-  cookingMethods: [
-    ["fried", 8],
-    ["toasted", 2],
-  ],
   images: ["chickery.jpg", "chickery-2.jpg"],
   time: 25,
   portions: 2,

@@ -109,40 +109,6 @@
   height: 1.5rem;
 }
 
-.cooking-methods-element {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-
-.cooking-methods-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cooking-methods-text {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.cooking-methods-text:last-child {
-  color: #ccc;
-}
-
-.cooking-methods-text strong {
-  color: #20c997;
-}
-
-.cooking-methods-icon svg {
-  height: 1.2rem;
-}
-
 .format-ingredients {
   display: flex;
   gap: 1rem;

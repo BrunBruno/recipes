@@ -1,6 +1,6 @@
 import "./statistics.css";
 import { useEffect, useRef } from "react";
-import type { CookingMethod, IngredientType, MealType } from "../../types";
+import type { IngredientType, MealType } from "../../types";
 import {
   interpolateKcalColor,
   kcalTopColors,
@@ -17,8 +17,6 @@ import {
   countRecipeWeightPerPortion,
   countRecipePreparationTime,
   allIngredients,
-  countCookingMethodUsages,
-  getCookingMethodLabel,
   countRecipePricePerPortion,
   kcalLowColors,
   othTopColors,
@@ -60,7 +58,6 @@ const recipeKcalPer100g = countRecipeKcalPer100g(okRecipes);
 const usedIngredients = countUsedIngredients(ingredientUsage);
 const recipeWeightsPerPortion = countRecipeWeightPerPortion(okRecipes);
 const recipesPrepTimes = countRecipePreparationTime(okRecipes);
-const cookingMethodUsages = countCookingMethodUsages(okRecipes);
 const recipePrices = countRecipePricePerPortion(okRecipes);
 
 function Statistics({}: StatisticsProps) {
@@ -95,7 +92,6 @@ function Statistics({}: StatisticsProps) {
     bRecipePrice: useRef<HTMLCanvasElement | null>(null),
 
     unitChartRef: useRef<HTMLCanvasElement | null>(null),
-    cookingMethods: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
     recipeTypes: useRef<Chart | null>(null),
@@ -128,7 +124,6 @@ function Statistics({}: StatisticsProps) {
     bRecipePrice: useRef<Chart | null>(null),
 
     unitChartRef: useRef<Chart | null>(null),
-    cookingMethods: useRef<Chart | null>(null),
   };
 
   const createChart = (
@@ -593,27 +588,6 @@ function Statistics({}: StatisticsProps) {
       colors,
       "składników",
     );
-
-    //// CHART COOKING METHODS ////
-    const cookingMethodsData = Object.entries(cookingMethodUsages);
-    data = cookingMethodsData.map(([k, v]) => [
-      getCookingMethodLabel(k as CookingMethod),
-      v,
-    ]);
-    min = Math.min(...data.map(([, v]) => v));
-    max = Math.max(...data.map(([, v]) => v));
-    colors = data.map(([_, v]) =>
-      interpolateKcalColor(v, min, max, "#666666", "#ffffff"),
-    );
-
-    createChart(
-      canvasRefs.cookingMethods.current,
-      chartRefs.cookingMethods,
-      data.map(([k]) => k),
-      data.map(([, v]) => v),
-      colors,
-      "razy",
-    );
   };
 
   useEffect(() => {
@@ -675,13 +649,6 @@ function Statistics({}: StatisticsProps) {
         <h2>Składniki w przedziałach kalorii</h2>
         <div className="chart-wrapper">
           <canvas ref={canvasRefs.kcalDistributionRef} />
-        </div>
-      </div>
-
-      <div className="statistics-element">
-        <h2>Metody przygotowania posiłków</h2>
-        <div className="chart-wrapper">
-          <canvas ref={canvasRefs.cookingMethods}></canvas>
         </div>
       </div>
 

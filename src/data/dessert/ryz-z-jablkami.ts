@@ -8,10 +8,6 @@ import type { Recipe } from "../../types";
 const ryzZJablkami: Recipe = {
   name: "Ryż z Jabłkami",
   type: "dessert",
-  cookingMethods: [
-    ["fried", 20],
-    ["boiled", 25],
-  ],
   images: ["ryz-z-jablkami.jpg"],
   time: 30,
   portions: 1,

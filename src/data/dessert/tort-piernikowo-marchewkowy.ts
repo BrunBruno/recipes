@@ -12,7 +12,6 @@ import type { Recipe } from "../../types";
 const tortPiernikowoMarchewkowy: Recipe = {
   name: "Tort Piernikowo Marchewkowy",
   type: "dessert",
-  cookingMethods: [["baked", 45, 200]],
   images: [""],
   time: 180,
   portions: 12,

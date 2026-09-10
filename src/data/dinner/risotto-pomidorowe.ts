@@ -13,10 +13,6 @@ const portions = 4;
 const risottoPomidorowe: Recipe = {
   name: "Risotto Pomidorowe",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 10],
-    ["boiled", 25],
-  ],
   images: ["risotto-pomidorowe.jpg"],
   time: 60,
   portions: portions,

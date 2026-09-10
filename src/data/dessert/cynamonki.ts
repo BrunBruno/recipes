@@ -11,7 +11,6 @@ import type { Recipe } from "../../types";
 const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
-  cookingMethods: [["baked", 16, 180]],
   images: ["cynamonki.jpg"],
   time: 150,
   portions: 12,

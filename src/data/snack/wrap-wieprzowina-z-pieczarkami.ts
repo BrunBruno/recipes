@@ -11,10 +11,6 @@ const portions = 4;
 const wrapWieprzowinaZPieczarkami: Recipe = {
   name: "Wrap Wieprzowina z Pieczarkami",
   type: "snack",
-  cookingMethods: [
-    ["fried", 8],
-    ["toasted", 2],
-  ],
   images: [""],
   time: 25,
   portions: portions,

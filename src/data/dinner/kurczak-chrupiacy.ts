@@ -11,7 +11,6 @@ const portions = 2;
 const kurczakChrupiacy: Recipe = {
   name: "Kurczak Chrupiący",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: ["kurczak-chrupiacy.jpg"],
   time: 30,
   portions: portions,
@@ -57,7 +56,7 @@ const kurczakChrupiacy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "fix"],
 };
 
 export default kurczakChrupiacy;

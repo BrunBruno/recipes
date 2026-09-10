@@ -21,6 +21,7 @@ type IngId =
   | "juice_multivitamin_green"
   | "juice_cactus"
   | "juice_mango"
+  | "juice_lime"
   | "tymbark_apple_mint"
   | "tymbark_apple_peach"
 
@@ -253,6 +254,18 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     price: 4,
+    verified: true,
+  },
+
+  juice_lime: {
+    name: "Sok limonkowy",
+    type: "liq",
+    color: "#8AAE38",
+    kcalPer100g: 15,
+    nutrientsPer100g: [0, 4.5, 0],
+    unitWeights: {
+      szk: 250,
+    },
     verified: true,
   },
 

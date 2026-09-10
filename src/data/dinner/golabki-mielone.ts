@@ -14,10 +14,6 @@ const portions = 4;
 const golabki: Recipe = {
   name: "Gołąbki",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 15],
-    ["stewed", 30],
-  ],
   images: [""],
   time: 60,
   portions: portions,

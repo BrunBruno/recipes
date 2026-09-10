@@ -15,7 +15,6 @@ import { iSNK } from "./ingredients/ingSnack";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
 import type {
-  CookingMethod,
   Ingredient,
   IngredientChoice,
   IngredientItem,
@@ -483,131 +482,45 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
 
 export const keywordAliases: Record<KeyWord, string[]> = {
   // MEAT
-  mięso: ["mięso", "mięsa", "mięsem", "mięsie", "mięs", "miesa"],
-  wołowina: [
-    "wołowina",
-    "wołowiny",
-    "wołowiną",
-    "wołowinie",
-    "wołowinę",
-    "wolowina",
-    "wolowiny",
-  ],
-  wieprzowina: [
-    "wieprzowina",
-    "wieprzowiny",
-    "wieprzowiną",
-    "wieprzowinie",
-    "wieprzowinę",
-  ],
-  kurczak: ["kurczak", "kurczaka", "kurczaki", "kurczakiem", "kurczaku"],
-  indyk: ["indyk", "indyka", "indykiem", "indyki", "indyku"],
-  kiełbasa: [
-    "kiełbasa",
-    "kiełbasy",
-    "kiełbasę",
-    "kiełbasą",
-    "kiełbasie",
-    "kiełbas",
-    "kielbasa",
-    "kielbasy",
-  ],
-  boczek: ["boczek", "boczku", "boczkiem", "boczki", "boczka"],
-  parówka: [
-    "parówka",
-    "parówki",
-    "parówkę",
-    "parówką",
-    "parówce",
-    "parówek",
-    "parowka",
-    "parowki",
-  ],
-  szynka: ["szynka", "szynki", "szynkę", "szynką", "szynce", "szynek"],
-  ryba: ["ryba", "ryby", "rybę", "rybą", "rybie", "rybami", "rybne", "rybi"],
-  jajko: ["jajko", "jajka", "jajek", "jajkiem", "jajku", "jajkami"],
+  mięso: ["mięso", "mięsny", "mięsne"],
+  wołowina: ["wołowina", "wołowy"],
+  wieprzowina: ["wieprzowina", "schab"],
+  kurczak: ["kurczak", "drobiowy"],
+  indyk: ["indyk"],
+  kiełbasa: ["kiełbasa", "kiełbasy"],
+  boczek: ["boczek", "bekon"],
+  parówka: ["parówka", "parówki", "parówkowy"],
+  szynka: ["szynka", "wędlina"],
+  ryba: ["ryba"],
+  jajko: ["jajko", "jajka", "jajo"],
 
   // CAKES
-  ciasto: [
-    "ciasto",
-    "ciasta",
-    "cieście",
-    "ciastem",
-    "ciast",
-    "ciastami",
-    "ciastach",
-  ],
-  deser: ["deser", "desery", "deseru", "deserem", "deserach", "deserami"],
-  biszkopt: [
-    "biszkopt",
-    "biszkopty",
-    "biszkoptu",
-    "biszkoptem",
-    "biszkoptowy",
-    "biszkoptowa",
-    "biszkoptowe",
-  ],
-  krem: ["krem", "kremu", "kremem", "kremy", "kremami", "kremach"],
+  ciasto: ["ciasto"],
+  deser: ["deser"],
+  biszkopt: ["biszkopt"],
+  krem: ["krem"],
 
   // MAIN
-  makaron: [
-    "makaron",
-    "makarony",
-    "makaronu",
-    "makaronem",
-    "makaronach",
-    "makaronami",
-  ],
-  ryż: ["ryż", "ryżu", "ryżem", "ryże", "ryz"],
-  kasza: ["kasza", "kasze", "kaszy", "kaszą"],
-  ziemniak: [
-    "ziemniak",
-    "ziemniaki",
-    "ziemniaka",
-    "ziemniakiem",
-    "ziemniaków",
-    "ziemniakom",
-  ],
+  makaron: ["makaron"],
+  ryż: ["ryż", "ryz", "ryżem"],
+  kasza: ["kasza"],
+  ziemniak: ["ziemniak", "ziemniaki", "ziemniaczane"],
 
   // BAKERY
-  pieczywo: ["pieczywo", "pieczywa", "pieczywem", "pieczywie"],
-  naleśnik: [
-    "naleśnik",
-    "naleśniki",
-    "naleśnika",
-    "naleśnikiem",
-    "naleśnikach",
-    "nalesnik",
-    "nalesniki",
-  ],
-  tortilla: ["tortilla", "tortille", "tortilli", "tortillę", "tortillami"],
+  pieczywo: ["pieczywo"],
+  naleśnik: ["naleśnik"],
+  tortilla: ["tortilla", "tortilli"],
 
   // VEG
-  owoce: ["owoc", "owoce", "owocu", "owocem", "owocami", "owocach"],
-  warzywa: ["warzywo", "warzywa", "warzywem", "warzywami", "warzywach"],
-  sałatka: [
-    "sałatka",
-    "sałatki",
-    "sałatkę",
-    "sałatką",
-    "sałatkach",
-    "salatka",
-    "salatki",
-  ],
+  owoce: ["owoc", "owoce", "owocowy"],
+  warzywa: ["warzywo", "warzywa"],
+  sałatka: ["sałatka"],
 
   // OTHER
-  ser: [
-    "ser",
-    "sery",
-    "sera",
-    "serem",
-    "serów",
-    "serami",
-    "serowy",
-    "serowych",
-  ],
-  sos: ["sos", "sosy", "sosu", "sosem", "sosami", "sosach"],
-  zupa: ["zupa", "zupy", "zupę", "zupą", "zupie", "zupami"],
+  ser: ["ser", "serowy"],
+  sos: ["sos", "sosem"],
+  zupa: ["zupa", "zupy", "zupę"],
+  fix: ["fix"],
 };
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
@@ -709,34 +622,6 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
   });
 
   return usage;
-};
-
-export const countCookingMethodUsages = (recipes: Recipe[]) => {
-  const usages: Record<CookingMethod, number> = {
-    raw: 0,
-    boiled: 0,
-    steamed: 0,
-    fried: 0,
-    "deep-fried": 0,
-    baked: 0,
-    grilled: 0,
-    stewed: 0,
-    roasted: 0,
-    microwaved: 0,
-    toasted: 0,
-    "air-fried": 0,
-    rest: 0,
-  };
-
-  if (!recipes) return usages;
-  // TODO
-  // recipes.forEach((recipe) => {
-  //   recipe.cookingMethods.forEach(([method, _]) => {
-  //     usages[method] = (usages[method] ?? 0) + 1;
-  //   });
-  // });
-
-  return usages;
 };
 
 export const countUsedIngredients = (usages: Record<string, number>) => {
@@ -967,26 +852,6 @@ ingredientCollections.forEach((collection) => {
   });
 });
 export const allIngredients = Object.values(ingredientLookup);
-
-export const cookingMethodLabels: Record<CookingMethod, string> = {
-  raw: "Surowe",
-  boiled: "Gotowanie",
-  steamed: "Gotowanie na parze",
-  fried: "Smażenie",
-  "deep-fried": "Smażenie w głębokim tłuszczu",
-  baked: "Pieczenie",
-  grilled: "Grillowanie",
-  stewed: "Duszenie",
-  roasted: "Pieczenie",
-  microwaved: "Podgrzewanie w mikrofalówce",
-  toasted: "Przypiekanie w tosterze",
-  "air-fried": "Smażenie beztłuszczowo",
-  rest: "Odpoczywanie",
-};
-
-export function getCookingMethodLabel(method: CookingMethod): string {
-  return cookingMethodLabels[method];
-}
 
 export function formatDuration(minutes: number): string {
   if (minutes < 60) {

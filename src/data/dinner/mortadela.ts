@@ -10,7 +10,6 @@ const portions = 3;
 const mortadela: Recipe = {
   name: "Mortadela",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: ["mortadela.jpg", "mortadela-2.jpg", "mortadela-3.jpg"],
   time: 25,
   portions: portions,
@@ -39,6 +38,7 @@ const mortadela: Recipe = {
   },
   extrasVeg: {
     options: [
+      dinnerSides("peas-and-beets", portions),
       dinnerSides("beets-whole-vinegar", portions),
       dinnerSides("beets-fried-ready", portions),
     ],

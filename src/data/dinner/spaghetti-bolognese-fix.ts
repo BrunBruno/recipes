@@ -10,7 +10,6 @@ const portions = 3;
 const spaghettiBologneseFix: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
-  cookingMethods: [["fried", 8], ["stewed", 30]],
   images: ["spaghetti-bolognese-fix.jpg"],
   time: 30,
   portions: portions,
@@ -41,7 +40,7 @@ const spaghettiBologneseFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "makaron", "wołowina", "sos"],
+  keyWords: ["mięso", "makaron", "wołowina", "sos", "fix"],
 };
 
 export default spaghettiBologneseFix;

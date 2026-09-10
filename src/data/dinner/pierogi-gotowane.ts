@@ -7,7 +7,6 @@ const portions = 2;
 const pierogiGotowane: Recipe = {
   name: "Pierogi Gotowane",
   type: "dinner",
-  cookingMethods: [["boiled", 8]],
   images: ["pierogi-gotowane.jpg"],
   time: 10,
   portions: portions,

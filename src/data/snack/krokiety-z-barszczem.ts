@@ -7,10 +7,6 @@ const portions = 2;
 const krokietyZBarszczem: Recipe = {
   name: "Krokiety z Barszczem",
   type: "soup",
-  cookingMethods: [
-    ["microwaved", 3],
-    ["roasted", 10, 180],
-  ],
   images: ["krokiety-z-barszczem.jpg"],
   time: 10,
   portions: portions,

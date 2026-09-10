@@ -8,7 +8,6 @@ import type { Recipe } from "../../types";
 const babeczki: Recipe = {
   name: "Babeczki",
   type: "dessert",
-  cookingMethods: [["baked", 20, 180]],
   images: [""],
   time: 30,
   portions: 12,

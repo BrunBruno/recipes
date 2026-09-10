@@ -8,7 +8,6 @@ import type { Recipe } from "../../types";
 const sandwich: Recipe = {
   name: "Sandwiche",
   type: "breakfast",
-  cookingMethods: [["toasted", 3]],
   images: [
     "sandwiche.jpg",
     "sandwiche-2.jpg",

@@ -7,10 +7,6 @@ import type { Recipe } from "../../types";
 const ratatouille: Recipe = {
   name: "Ratatouille",
   type: "salad",
-  cookingMethods: [
-    ["fried", 6],
-    ["baked", 40, 200],
-  ],
   images: ["ratatouille.jpg", "ratatouille-2.jpg"],
   time: 45,
   portions: 4,
@@ -44,7 +40,7 @@ const ratatouille: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa"],
+  keyWords: ["warzywa", "fix"],
 };
 
 export default ratatouille;

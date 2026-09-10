@@ -9,7 +9,6 @@ const portions = 3;
 const krazkiKalmaroweGotowe: Recipe = {
   name: "Krążki Kalmarowe",
   type: "snack",
-  cookingMethods: [["fried", 8]],
   images: ["krazki-kalmarowe-gotowe.jpg", "krazki-kalmarowe-gotowe-2.jpg"],
   time: 30,
   portions: portions,

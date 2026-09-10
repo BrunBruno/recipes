@@ -3,7 +3,6 @@ import type { Recipe } from "../../types";
 const kremZDyni: Recipe = {
   name: "Krem z Dyni",
   type: "soup",
-  cookingMethods: [],
   images: [""],
   time: 0,
   portions: 0,

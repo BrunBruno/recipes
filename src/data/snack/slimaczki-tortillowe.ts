@@ -7,7 +7,6 @@ import type { Recipe } from "../../types";
 const slimaczkiTortillowe: Recipe = {
   name: "Ślimaczki Tortillowe",
   type: "snack",
-  cookingMethods: [],
   images: ["slimaczki-tortillowe.jpg"],
   time: 10,
   portions: 2,

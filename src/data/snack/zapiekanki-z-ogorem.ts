@@ -8,7 +8,6 @@ import { iDIR } from "../../ingredients/ingDairy";
 const zapiekankiZOgorem: Recipe = {
   name: "Zapiekanki z Ogórem",
   type: "snack",
-  cookingMethods: [["baked", 10, 200]],
   images: ["zapiekanki-z-ogorem.jpg"],
   time: 15,
   portions: 2,

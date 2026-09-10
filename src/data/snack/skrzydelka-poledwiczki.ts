@@ -8,10 +8,6 @@ const portions = 2;
 const gotoweSkrzydelkaPoledwiczki: Recipe = {
   name: "Skrzydełka / Polędwiczki",
   type: "snack",
-  cookingMethods: [
-    ["fried", 8],
-    ["roasted", 25],
-  ],
   images: [
     "gotowe-skrzydelka-poledwiczki.jpg",
     "gotowe-skrzydelka-poledwiczki-2.jpg",

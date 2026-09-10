@@ -13,10 +13,6 @@ const portions = 3;
 const gotowanyKurczak: Recipe = {
   name: "Kurczak Duszony",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 8],
-    ["stewed", 45],
-  ],
   images: ["kurczak-duszony.jpg"],
   time: 45,
   portions: portions,

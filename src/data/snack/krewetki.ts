@@ -9,7 +9,6 @@ import type { Recipe } from "../../types";
 const krewetki: Recipe = {
   name: "Krewetki",
   type: "snack",
-  cookingMethods: [["fried", 5]],
   images: ["krewetki.jpg"],
   time: 10,
   portions: 2,

@@ -12,7 +12,6 @@ const portions = 3;
 const kurczakZeSzpinakiem: Recipe = {
   name: "Kurczak ze Szpinakiem",
   type: "dinner",
-  cookingMethods: [["fried", 8], ["roasted", 40]],
   images: ["kurczak-ze-szpinakiem.jpg", "kurczak-ze-szpinakiem-2.jpg"],
   time: 40,
   portions: portions,

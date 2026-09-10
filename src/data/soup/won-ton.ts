@@ -3,7 +3,6 @@ import type { Recipe } from "../../types";
 const wonTon: Recipe = {
   name: "Won Ton",
   type: "dinner",
-  cookingMethods: [],
   images: [""],
   time: 0,
   portions: 0,

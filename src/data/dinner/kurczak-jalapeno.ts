@@ -9,7 +9,6 @@ const portions = 2;
 const kurczakJalapeno: Recipe = {
   name: "Kurczak Jalapeno",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: [
     "kurczak-jalapeno.jpg",
     "kurczak-jalapeno-2.jpg",
@@ -60,7 +59,7 @@ const kurczakJalapeno: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "fix"],
 };
 
 export default kurczakJalapeno;

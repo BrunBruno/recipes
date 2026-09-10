@@ -9,11 +9,6 @@ import type { Recipe } from "../../types";
 const kurczakZFettuccine: Recipe = {
   name: "Kurczak z Fettuccine",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 10],
-    ["fried", 8],
-    ["stewed", 2],
-  ],
   images: [
     "kurczak-z-fettuccine.jpg",
     "kurczak-z-fettuccine-2.jpg",
@@ -63,7 +58,7 @@ const kurczakZFettuccine: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak"],
+  keyWords: ["makaron", "kurczak", "fix"],
 };
 
 export default kurczakZFettuccine;

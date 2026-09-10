@@ -12,7 +12,6 @@ const portions = 2;
 const smazonaRyba: Recipe = {
   name: "Smażona Ryba",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: [""],
   time: 30,
   portions: portions,

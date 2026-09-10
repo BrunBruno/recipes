@@ -11,11 +11,6 @@ import { iOTH } from "../../ingredients/ingOther";
 const padThai: Recipe = {
   name: "Pad Thai",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 8],
-    ["fried", 8],
-    ["stewed", 5],
-  ],
   images: ["pad-thai.jpg"],
   time: 20,
   portions: 2,
@@ -63,7 +58,7 @@ const padThai: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak", "warzywa"],
+  keyWords: ["makaron", "kurczak", "warzywa", "fix"],
 };
 
 export default padThai;

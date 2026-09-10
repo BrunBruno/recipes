@@ -7,7 +7,7 @@ import { iLIQ } from "./ingredients/ingLiquid";
 import { iOTH } from "./ingredients/ingOther";
 import { iSPC } from "./ingredients/ingSpice";
 import { iVEG } from "./ingredients/ingVegetable";
-import type { CookingAction, ExtrasIngredientGroup } from "./types";
+import type { ExtrasIngredientGroup } from "./types";
 
 export type DinnerSidesNames =
   | "oven-potatoes"
@@ -17,6 +17,8 @@ export type DinnerSidesNames =
   | "oven-fries"
   | "oven-potatoes-boats"
   | "oven-twisted-fries"
+  | "potato-slices"
+  | "pan-fried-potatoes"
   | "rice"
   | "buckwheat"
   | "bulgur"
@@ -126,6 +128,29 @@ export const dinnerSides = (
         items: [
           { ing: iJAR.twisted_fries, amount: portions * 200 },
           { ing: iSPC.potato_seasoning },
+        ],
+      };
+    case "potato-slices":
+      return {
+        title: "Talarki ziemniaczane",
+        sideName: name,
+        items: [
+          { ing: iVEG.potato, amount: portions * 200 },
+          { ing: iFAT.oil, amount: portions * 1, unit: "lz" },
+          { ing: iSPC.potato_seasoning },
+          { ing: iSPC.black_pepper },
+          { ing: iSPC.salt },
+        ],
+      };
+    case "pan-fried-potatoes":
+      return {
+        title: "Ziemniaki z patelni",
+        sideName: name,
+        items: [
+          { ing: iVEG.potato, amount: portions * 250 },
+          { ing: iFAT.butter, amount: portions * 1, unit: "lzi" },
+          { ing: iSPC.black_pepper },
+          { ing: iSPC.salt },
         ],
       };
     case "rice":
@@ -394,9 +419,7 @@ export const dinnerSides = (
   }
 };
 
-export const dinnerSidesSteps = (
-  name: DinnerSidesNames,
-): (string | CookingAction)[] => {
+export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
   switch (name) {
     case "oven-potatoes":
       return [
@@ -405,28 +428,24 @@ export const dinnerSidesSteps = (
         "Dokładnie obtocz ziemniaki w marynacie.",
         "Ułóż ziemniaki na blasze wyłożonej papierem do pieczenia i dodaj gałązki świeżego tymianku.",
         "Piecz w piekarniku nagrzanym do 180-200°C przez około 30 minut, 1-2 razy przewracając ziemniaki w trakcie pieczenia.",
-        ["baked", 30],
         "Podawaj gorące, bezpośrednio po upieczeniu.",
       ];
 
     case "boiled-potatoes":
       return [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        ["boiled", 30],
         "Odcedź i posyp świeżym koperkiem.",
       ];
 
     case "boiled-potatoes-dry":
       return [
         "Ugotuj ziemniaki w osolonej wodzie do miękkości.",
-        ["boiled", 30],
         "Polej ziemniaki sosem z przygotowanego dania.",
       ];
 
     case "mashed-potatoes":
       return [
         "Obierz ziemniaki i ugotuj je w osolonej wodzie do miękkości.",
-        ["boiled", 30],
         "Odcedź i ubij z masłem oraz ciepłym mlekiem na gładkie puree.",
         "Dopraw solą i pieprzem do smaku.",
       ];
@@ -435,7 +454,6 @@ export const dinnerSidesSteps = (
       return [
         "Rozgrzej piekarnik do 180°C.",
         "Piecz frytki w piekarniku przez około 20 minut.",
-        ["baked", 20],
         "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
       ];
 
@@ -444,7 +462,6 @@ export const dinnerSidesSteps = (
         "Rozgrzej piekarnik zgodnie z instrukcją na opakowaniu.",
         "Rozłóż mrożone ziemniaczki na blasze wyłożonej papierem do pieczenia.",
         "Piecz około 20 minut, aż będą złote i chrupiące.",
-        ["baked", 20],
         "Po upieczeniu posyp przyprawą do ziemniaków.",
       ];
 
@@ -453,39 +470,48 @@ export const dinnerSidesSteps = (
         "Rozgrzej piekarnik do 180°C.",
         "Rozłóż zakręcone frytki na blasze wyłożonej papierem do pieczenia.",
         "Piecz w piekarniku przez około 20 minut, aż będą złote i chrupiące.",
-        ["baked", 20],
         "Opcjonalnie dopraw przyprawą do ziemniaków lub solą.",
       ];
 
+    case "potato-slices":
+      return [
+        "Ziemniaki ugotuj w całości w osolonej wodzie do miękkości, ale tak, aby się nie rozpadały.",
+        "Ostudź ziemniaki, a następnie pokrój je w plastry o grubości około 0,5-1 cm.",
+        "Rozgrzej patelnię z olejem i ułóż na niej talarki ziemniaczane.",
+        "Smaż na średnim ogniu z obu stron, aż będą złociste i chrupiące.",
+        "Pod koniec dopraw przyprawą do ziemniaków, solą i pieprzem.",
+      ];
+
+    case "pan-fried-potatoes":
+      return [
+        "Ziemniaki obierz i ugotuj w osolonej wodzie do miękkości.",
+        "Odcedź ziemniaki i dokładnie je ubij, aby powstała jednolita masa.",
+        "Na patelni rozgrzej masło.",
+        "Wyłóż ubite ziemniaki na patelnię i rozprowadź je równą warstwą.",
+        "Smaż na średnim ogniu, aż spód będzie złocisty i chrupiący.",
+        "Przewróć ziemniaki lub podziel je na mniejsze kawałki i smaż dalej, aż będą dobrze zrumienione.",
+        "Dopraw solą i pieprzem.",
+      ];
+
     case "rice":
-      return ["Ugotuj ryż w osolonej wodzie.", ["boiled", 25]];
+      return ["Ugotuj ryż w osolonej wodzie."];
 
     case "buckwheat":
-      return [
-        "Ugotuj kaszę gryczaną w osolonej wodzie do miękkości.",
-        ["boiled", 25],
-      ];
+      return ["Ugotuj kaszę gryczaną w osolonej wodzie do miękkości."];
 
     case "bulgur":
-      return ["Ugotuj kaszę bulgur w osolonej wodzie.", ["boiled", 25]];
+      return ["Ugotuj kaszę bulgur w osolonej wodzie."];
 
     case "penne-pasta":
-      return [
-        "Makaron penne ugotuj al dente w osolonej wodzie.",
-        ["boiled", 30],
-      ];
+      return ["Makaron penne ugotuj al dente w osolonej wodzie."];
 
     case "spaghetti-pasta":
-      return [
-        "Makaron spaghetti ugotuj al dente w osolonej wodzie.",
-        ["boiled", 30],
-      ];
+      return ["Makaron spaghetti ugotuj al dente w osolonej wodzie."];
 
     case "kopytka-ready":
       return [
         "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
         "Wrzuć kopytka i gotuj przez około 10 minut.",
-        ["boiled", 10],
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
 
@@ -493,7 +519,6 @@ export const dinnerSidesSteps = (
       return [
         "Zagotuj osoloną wodę i dodaj łyżkę oleju.",
         "Wrzuć kluski śląskie i gotuj przez około 10 minut.",
-        ["boiled", 10],
         "Po wypłynięciu i ugotowaniu odcedź.",
       ];
 
@@ -519,10 +544,8 @@ export const dinnerSidesSteps = (
         "Marchewkę obierz, umyj i pokrój w kostkę.",
         "Następnie wrzuć marchewkę do garnka i zalej wodą tylko tyle, by zakrywała marchewkę.",
         "Dodaj odrobinę soli i gotuj do miękkości pod przykryciem.",
-        ["boiled", 15],
         "Kiedy marchew już zmięknie, dodaj odsączony z zalewy groszek.",
         "Na patelni rozpuść masło, dodaj mąkę i mieszając smaż, aż się spieni.",
-        ["fried", 3],
         "Zasmażką zapraw marchewkę z groszkiem.",
         "Gotuj, aż powstanie kremowy, gęsty sos otaczający marchewkę.",
         "Dopraw cukrem i solą.",
@@ -531,7 +554,6 @@ export const dinnerSidesSteps = (
     case "steamed-vegetables":
       return [
         "Ugotuj warzywa na parze przez około 15-20 minut, aż będą miękkie.",
-        ["steamed", 18],
         "Po ugotowaniu przypraw odrobiną soli i oliwy.",
       ];
 
@@ -540,7 +562,6 @@ export const dinnerSidesSteps = (
         "Rozgrzej patelnię z łyżką oleju.",
         "Wrzuć mrożone warzywa bez rozmrażania.",
         "Smaż na średnim ogniu przez 8-12 minut, często mieszając.",
-        ["fried", 10],
         "Smaż do momentu, aż warzywa będą miękkie, ale lekko chrupiące.",
       ];
 
@@ -549,7 +570,6 @@ export const dinnerSidesSteps = (
         "Zagotuj osoloną wodę w garnku.",
         "Wrzuć fasolkę szparagową (świeżą lub mrożoną) do wrzątku.",
         "Gotuj 6-10 minut, aż będzie miękka, ale nadal lekko jędrna.",
-        ["boiled", 8],
         "Odcedź fasolkę i opcjonalnie dodaj odrobinę masła lub oliwy.",
         "Dopraw solą do smaku.",
       ];
@@ -557,7 +577,6 @@ export const dinnerSidesSteps = (
     case "sauteed-cabbage":
       return [
         "Na patelni rozpuść masło i podsmaż kapustę kiszoną.",
-        ["fried", 10],
         "Dopraw solą i pieprzem i smaż, aż będzie miękka i lekko zrumieniona.",
       ];
 

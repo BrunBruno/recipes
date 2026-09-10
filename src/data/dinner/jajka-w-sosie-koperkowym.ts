@@ -12,10 +12,6 @@ const portions = 1;
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 10],
-    ["stewed", 20],
-  ],
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: portions,

@@ -9,7 +9,6 @@ const portions = 3;
 const surowkaZPomidoraIOgorka: Recipe = {
   name: "Surówka z Pomidora i Ogórka",
   type: "salad",
-  cookingMethods: [],
   images: [""],
   time: 10,
   portions,

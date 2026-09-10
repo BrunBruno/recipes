@@ -10,11 +10,6 @@ import type { Recipe } from "../../types";
 const kurczakZPomidorami: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 8],
-    ["boiled", 10],
-    ["baked", 30, 200],
-  ],
   images: ["kurczak-z-pomidorami.jpg"],
   time: 45,
   portions: 4,
@@ -51,7 +46,7 @@ const kurczakZPomidorami: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak"],
+  keyWords: ["makaron", "kurczak", "fix"],
 };
 
 export default kurczakZPomidorami;

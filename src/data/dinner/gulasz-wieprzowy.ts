@@ -13,10 +13,6 @@ const portions = 3;
 const gulaszWieprzowy: Recipe = {
   name: "Gulasz Wieprzowy",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 30],
-    ["stewed", 60],
-  ],
   images: ["gulasz-wieprzowy.jpg"],
   time: 80,
   portions: portions,

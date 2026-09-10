@@ -8,8 +8,7 @@ const portions = 5;
 const spaghettiCarbonara: Recipe = {
   name: "Spaghetti Carbonara",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
-  images: ["spaghetti-carbonara.jpg"],
+  images: ["spaghetti-carbonara.jpg", "spaghetti-carbonara-2.jpg"],
   time: 30,
   portions: portions,
   taste: 4,

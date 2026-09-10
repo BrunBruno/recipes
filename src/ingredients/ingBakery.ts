@@ -24,6 +24,7 @@ type IngId =
 
   //// SNACKS ////
   | "casserole_base"
+  | "pizza_donatello_chicken"
   | "snail_pastry_custard"
   | "frusta_prosciutto"
   | "berlinki_hot_dog"
@@ -285,6 +286,17 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [6.2, 29.1, 10.9],
     price: 23.3,
+    verified: true,
+  },
+
+  pizza_donatello_chicken: {
+    name: "Pizza Donatello z kurczakiem",
+    type: "bak",
+    subType: "snk",
+    color: "#D99A45",
+    kcalPer100g: 223,
+    nutrientsPer100g: [7.2, 25.2, 13.7],
+    unitWeights: { szt: 400 },
     verified: true,
   },
 

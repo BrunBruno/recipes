@@ -9,7 +9,6 @@ import type { Recipe } from "../../types";
 const salatkaGyros: Recipe = {
   name: "Sałatka Gyros",
   type: "salad",
-  cookingMethods: [["fried", 10]],
   images: ["salatka-gyros.jpg"],
   time: 20,
   portions: 4,

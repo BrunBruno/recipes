@@ -7,10 +7,6 @@ import type { Recipe } from "../../types";
 const kanapkaZBekonem: Recipe = {
   name: "Kanapka z Bekonem",
   type: "snack",
-  cookingMethods: [
-    ["boiled", 10],
-    ["fried", 5],
-  ],
   images: [""],
   time: 15,
   portions: 1,

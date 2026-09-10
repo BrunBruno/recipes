@@ -9,7 +9,6 @@ const portions = 2;
 const macAndCheeseFix: Recipe = {
   name: "Mac'n Cheese",
   type: "dinner",
-  cookingMethods: [["boiled", 25], ["stewed", 25]],
   images: ["macncheese.jpg"],
   time: 25,
   portions: portions,
@@ -57,7 +56,7 @@ const macAndCheeseFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "ser", "szynka"],
+  keyWords: ["makaron", "ser", "szynka", "fix"],
 };
 
 export default macAndCheeseFix;

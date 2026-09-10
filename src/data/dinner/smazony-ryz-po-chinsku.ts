@@ -9,7 +9,6 @@ import type { Recipe } from "../../types";
 const smazonyRyzPoChinsku: Recipe = {
   name: "Smażony Ryż po Chińsku",
   type: "dinner",
-  cookingMethods: [["fried", 8]],
   images: [""],
   time: 30,
   portions: 3,
@@ -45,7 +44,7 @@ const smazonyRyzPoChinsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "warzywa"],
+  keyWords: ["mięso", "kurczak", "ryż", "warzywa", "fix"],
 };
 
 export default smazonyRyzPoChinsku;

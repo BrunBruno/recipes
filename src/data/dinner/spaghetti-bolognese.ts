@@ -11,7 +11,6 @@ const portions = 3;
 const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
-  cookingMethods: [["fried", 8], ["stewed", 60]],
   images: [
     "spaghetti-bolognese.jpg",
     "spaghetti-bolognese-2.jpg",
@@ -77,7 +76,7 @@ const spaghettiBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "mięso", "makaron", "wołowina", "wieprzowina", "sos"],
+  keyWords: ["mięso", "makaron", "wołowina", "wieprzowina", "sos", "fix"],
 };
 
 export default spaghettiBolognese;

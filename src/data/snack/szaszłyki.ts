@@ -9,7 +9,6 @@ import type { Recipe } from "../../types";
 const szaszlyki: Recipe = {
   name: "Szaszłyki",
   type: "snack",
-  cookingMethods: [["grilled", 30]],
   images: ["szaszlyki.jpg"],
   time: 30,
   portions: 6,

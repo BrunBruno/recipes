@@ -10,11 +10,6 @@ import type { Recipe } from "../../types";
 const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 15],
-    ["fried", 8],
-    ["stewed", 5],
-  ],
   images: [""],
   time: 20,
   portions: 2,
@@ -49,7 +44,7 @@ const kurczakPoSeczuansku: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "ryż"],
+  keyWords: ["kurczak", "ryż", "fix"],
 };
 
 export default kurczakPoSeczuansku;

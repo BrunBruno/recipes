@@ -11,7 +11,6 @@ const portions = 3;
 const kotletyMieloneFix: Recipe = {
   name: "Kotlety Mielone",
   type: "dinner",
-  cookingMethods: [["fried", 10]],
   images: [
     "kotlety-mielone-fix.jpg",
     "kotlety-mielone-fix-2.jpg",
@@ -65,7 +64,7 @@ const kotletyMieloneFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "fix"],
 };
 
 export default kotletyMieloneFix;

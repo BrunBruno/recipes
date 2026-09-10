@@ -12,10 +12,6 @@ import type { Recipe } from "../../types";
 const wrapTwister: Recipe = {
   name: "Wrap Twister",
   type: "snack",
-  cookingMethods: [
-    ["fried", 8],
-    ["toasted", 2],
-  ],
   images: ["wrap-twister.jpg", "wrap-twister-2.jpg"],
   time: 20,
   portions: 4,

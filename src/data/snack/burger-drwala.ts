@@ -14,7 +14,6 @@ const portions = 4;
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
-  cookingMethods: [["fried", 8], ["toasted", 2]],
   images: ["burger-drwala.jpg"],
   time: 50,
   portions: portions,

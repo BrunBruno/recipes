@@ -7,7 +7,6 @@ const portions = 4;
 const zeberkaZPiekarnika: Recipe = {
   name: "Żeberka z Piekarnika",
   type: "dinner",
-  cookingMethods: [["baked", 70, 200]],
   images: [
     "zeberka-z-piekarnika.jpg",
     "zeberka-z-piekarnika-2.jpg",
@@ -23,7 +22,7 @@ const zeberkaZPiekarnika: Recipe = {
       title: "",
       items: [
         { ing: iMET.pork_ribs, amount: 1000 },
-        { ing: iSPC.winiary_juicy_ribs, amount: 1, unit: "opak" },
+        { ing: iSPC.winiary_juicy_ribs_fix, amount: 1, unit: "opak" },
       ],
     },
   ],
@@ -54,7 +53,7 @@ const zeberkaZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso"],
+  keyWords: ["mięso", "fix"],
 };
 
 export default zeberkaZPiekarnika;

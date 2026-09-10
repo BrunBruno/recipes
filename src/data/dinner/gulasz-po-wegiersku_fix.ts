@@ -10,10 +10,6 @@ const portions = 3;
 const gulaszPoWegierskuFix: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
-  cookingMethods: [
-    ["fried", 15],
-    ["stewed", 80],
-  ],
   images: ["gulasz-po-wegiersku-fix.jpg"],
   time: 90,
   portions: portions,
@@ -58,7 +54,7 @@ const gulaszPoWegierskuFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "sos"],
+  keyWords: ["mięso", "wołowina", "sos", "fix"],
 };
 
 export default gulaszPoWegierskuFix;

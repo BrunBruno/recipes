@@ -250,34 +250,6 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                 </button>
               ))}
             </div>
-            {/* <div className={`filter-buttons sm-no`}>
-              {Object.entries(cookingMethodLabelsShort).map(([key, label]) => (
-                <button
-                  key={key}
-                  className="filter-btn"
-                  style={{
-                    borderColor: activeMethodTypes.includes(
-                      key as CookingMethod,
-                    )
-                      ? "#fff"
-                      : "#666",
-                  }}
-                  onClick={() => toggleMethodType(key as CookingMethod)}
-                >
-                  <div className="filter-svg">
-                    <PreparationIcon
-                      type={key as CookingMethod}
-                      color={
-                        activeMethodTypes.includes(key as CookingMethod)
-                          ? "#fff"
-                          : "#666"
-                      }
-                    />
-                  </div>
-                  <span className="filter-text">{label}</span>
-                </button>
-              ))}
-            </div> */}
           </div>
         </div>
       </div>

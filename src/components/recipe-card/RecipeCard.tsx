@@ -15,7 +15,6 @@ import {
   isPriceComplete,
 } from "../../utils";
 import type {
-  CookingAction,
   DayIngredientPair,
   DayIngredients,
   DayMealType,
@@ -36,7 +35,6 @@ import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
-import PreparationIcon from "../../assets/preparationIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -401,36 +399,6 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
         </span>
       );
     }
-  };
-
-  const getMinuteLabel = (time: number | string) => {
-    const value = typeof time === "number" ? time : Number(time.split("-")[1]);
-
-    if (value === 1) return "minuta";
-    if (value >= 2 && value <= 4) return "minuty";
-    return "minut";
-  };
-
-  const renderRecipeStep = (
-    s: string | CookingAction,
-    key: string | number,
-  ) => {
-    if (typeof s === "string") {
-      return <li key={key}>{s}</li>;
-    }
-
-    return (
-      <div key={key} className="cooking-methods-element">
-        <div className="cooking-methods-icon">
-          <PreparationIcon type={s[0]} color={"#eaeaea"} />
-        </div>
-
-        <div className="cooking-methods-text">
-          <strong>{s[1]}</strong> {getMinuteLabel(s[1])}
-          {s[2] && ` (${s[2]}°C)`}
-        </div>
-      </div>
-    );
   };
 
   const allIngredientGroups = [
@@ -805,9 +773,9 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                   {step.title !== "" && <h4>{step.title}</h4>}
 
                   <ol className="steps-list">
-                    {step.steps.map((s, i) =>
-                      renderRecipeStep(s, `recipe-${index}-${i}`),
-                    )}
+                    {step.steps.map((s, i) => (
+                      <li key={i}>{s}</li>
+                    ))}
                   </ol>
                 </div>
               ))}
@@ -822,14 +790,14 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       recipeState.extrasMain.options[
                         recipeState.extrasMain.selected
                       ].sideName,
-                    ).map((s, i) => renderRecipeStep(s, `main-${i}`))}
+                    ).map((s, i) => <li key={i}>{s}</li>)}
 
                   {recipeState.extrasVeg &&
                     dinnerSidesSteps(
                       recipeState.extrasVeg.options[
                         recipeState.extrasVeg.selected
                       ].sideName,
-                    ).map((s, i) => renderRecipeStep(s, `veg-${i}`))}
+                    ).map((s, i) => <li key={i}>{s}</li>)}
                 </ol>
               </div>
             )}

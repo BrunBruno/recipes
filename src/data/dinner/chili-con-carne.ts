@@ -10,11 +10,6 @@ import type { Recipe } from "../../types";
 const chiliConCarne: Recipe = {
   name: "Chili con Carne",
   type: "dinner",
-  cookingMethods: [
-    ["boiled", 15],
-    ["fried", 8],
-    ["stewed", 4],
-  ],
   images: ["chili-con-carne.jpg", "chili-con-carne-2.jpg"],
   time: 25,
   portions: 4,
@@ -50,7 +45,7 @@ const chiliConCarne: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "ryż"],
+  keyWords: ["mięso", "ryż", "fix"],
 };
 
 export default chiliConCarne;
