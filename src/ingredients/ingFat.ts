@@ -3,9 +3,10 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// FATS ////
   | "oil"
+  | "vegetable_oil"
   | "rapeseed_oil"
   | "sunflower_oil"
-  | "olive"
+  | "olive_oil"
   | "olive_oil_extra_virgin"
   | "sun_dried_tomato_oil"
   | "butter"
@@ -21,6 +22,22 @@ type IngId =
 export const iFAT: Record<IngId, IngredientItem> = {
   oil: {
     name: "Olej",
+    type: "fat",
+    color: "#E6C65B",
+    kcalPer100g: 884,
+    unitWeights: {
+      lz: 10,
+      lzi: 4,
+      ml: 0.9,
+      szk: 220,
+    },
+    nutrientsPer100g: [100, 0, 0],
+    price: 6,
+    verified: true,
+  },
+
+  vegetable_oil: {
+    name: "Olej roślinny",
     type: "fat",
     color: "#E6C65B",
     kcalPer100g: 884,
@@ -65,7 +82,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [100, 0, 0],
   },
 
-  olive: {
+  olive_oil: {
     name: "Oliwa",
     type: "fat",
     color: "#556B2F",
@@ -207,7 +224,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   peanut_butter: {
     name: "Masło orzechowe",
     type: "fat",
-    subType: "but",
+    subType: "jar",
     color: "#C68642",
     kcalPer100g: 603,
     unitWeights: {
@@ -222,7 +239,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   hazelnut_paste: {
     name: "Pasta z orzechów laskowych",
     type: "fat",
-    subType: "but",
+    subType: "jar",
     color: "#8D6E63",
     kcalPer100g: 630,
     unitWeights: {

@@ -46,12 +46,12 @@ const spaghettiBolognese: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iFAT.olive, amount: 1, unit: "lz", exclude: true },
+            { ing: iFAT.olive_oil, amount: 1, unit: "lz", exclude: true },
             { ing: iFAT.oil, amount: 1, unit: "lz", exclude: true },
           ],
           selected: 0,
         },
-        { ing: iFAT.olive, amount: 1 * 0.45, unit: "lz", invisible: true },
+        { ing: iFAT.olive_oil, amount: 1 * 0.45, unit: "lz", invisible: true },
         { ing: iHRB.basil },
         { ing: iHRB.oregano },
         { ing: iSPC.knorr_bolognese_fix },

@@ -2,6 +2,7 @@ import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
+import { iSNK } from "../../ingredients/ingSnack";
 import type { Recipe } from "../../types";
 
 const babeczkiGotowe: Recipe = {
@@ -13,7 +14,7 @@ const babeczkiGotowe: Recipe = {
     "babeczki-gotowe-3.jpg",
   ],
   time: 30,
-  portions: 12,
+  portions: 6,
   taste: 4,
   difficulty: 1,
   ingredients: [
@@ -24,6 +25,7 @@ const babeczkiGotowe: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: 100, unit: "ml" },
         { ing: iLIQ.water, amount: 100, unit: "ml" },
+        { ing: iSNK.chocolate_shavings },
       ],
     },
   ],

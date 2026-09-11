@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 
@@ -22,7 +23,7 @@ const biszkoptCzekoladowy: Recipe = {
         { ing: iFAT.oil, amount: 30 },
         { ing: iDIR.milk, amount: 40 },
         { ing: iOTH.sugar, amount: 90 },
-        { ing: iGRN.cocoa, amount: 15 },
+        { ing: iNUT.cocoa, amount: 15 },
       ],
     },
   ],

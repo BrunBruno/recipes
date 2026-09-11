@@ -258,7 +258,7 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iJAR.frozen_vegetable_mix, amount: 150 * portions },
-          { ing: iFAT.olive, amount: portions, unit: "lzi" },
+          { ing: iFAT.olive_oil, amount: portions, unit: "lzi" },
           { ing: iSPC.salt },
         ],
       };

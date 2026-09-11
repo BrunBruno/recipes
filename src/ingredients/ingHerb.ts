@@ -23,7 +23,10 @@ type IngId =
   | "cress"
   | "fresh_basil"
   | "lemongrass"
-  | "fresh_coriander";
+  | "fresh_coriander"
+
+  //// SPROUTS ////
+  | "radish_sprouts";
 
 export const iHRB: Record<IngId, IngredientItem> = {
   //// HERBS ////
@@ -195,6 +198,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   chives: {
     name: "Szczypiorek",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#4CAF50",
     kcalPer100g: 30,
@@ -208,6 +212,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   parsley: {
     name: "Natka Pietruszki",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#2E7D32",
     kcalPer100g: 36,
@@ -223,6 +228,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   spring_onion: {
     name: "Cebulka zielona",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#81C784",
     kcalPer100g: 32,
@@ -235,6 +241,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   cress: {
     name: "Rzeżucha",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#66BB6A",
     kcalPer100g: 32,
@@ -244,6 +251,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   fresh_basil: {
     name: "Świeża bazylia",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#43A047",
     kcalPer100g: 23,
@@ -258,6 +266,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   lemongrass: {
     name: "Trawa cytrynowa",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#8BC34A",
     kcalPer100g: 99,
@@ -270,6 +279,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
   fresh_coriander: {
     name: "Świeża kolendra",
     type: "hrb",
+    isVeg: true,
     subType: "fhr",
     color: "#4CAF50",
     kcalPer100g: 23,
@@ -279,5 +289,16 @@ export const iHRB: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.5, 3.7, 2.1],
     price: 260,
+  },
+
+  //// SPROUTS ////
+
+  radish_sprouts: {
+    name: "Kiełki rzodkiewki",
+    type: "hrb",
+    subType: "spr",
+    color: "#D8B7B7",
+    kcalPer100g: 43,
+    nutrientsPer100g: [0.7, 4.1, 3.8],
   },
 };

@@ -1,9 +1,15 @@
 import IngredientIcon from "../../assets/ingredientsIcon";
+import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UnitIcon from "../../assets/unitIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { iOTH } from "../../ingredients/ingOther";
+import { recipes } from "../../recipes";
 import type { IngredientItem, UnitType } from "../../types";
-import { formatUnit, IngredientTypeData } from "../../utils";
+import {
+  formatUnit,
+  getIngredientRecipeNames,
+  IngredientTypeData,
+} from "../../utils";
 import "./ingredient-card.css";
 
 type IngredientCardProps = {
@@ -18,15 +24,19 @@ export default function IngredientCard({
   const [fat, carb, prot] = ingredient.nutrientsPer100g;
 
   const macroGradient = `
-  conic-gradient(
-    #ffa94d 0% ${fat}%,
-    #99e9f2 ${fat}% ${fat + carb}%,
-    #ff8787 ${fat + carb}% ${fat + carb + prot}%,
-    #444 ${fat + carb + prot}% 100%
-  )
-`;
+    conic-gradient(
+      #ffa94d 0% ${fat}%,
+      #99e9f2 ${fat}% ${fat + carb}%,
+      #ff8787 ${fat + carb}% ${fat + carb + prot}%,
+      #444 ${fat + carb + prot}% 100%
+    )
+  `;
 
   const unitWeights = ingredient.unitWeights;
+  const recipeNames = getIngredientRecipeNames(
+    ingredient.name,
+    recipes.filter((r) => r.steps.length > 0 && r.ingredients.length > 0),
+  );
 
   return (
     <div className="ingredient-card-backdrop" onClick={onClose}>
@@ -120,6 +130,19 @@ export default function IngredientCard({
                     })}
                   </span>
                   <strong>{weight}g</strong>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {recipeNames.length > 0 && (
+            <div className="ingredient-recipes">
+              <h3>Użyty w przepisach</h3>
+
+              {recipeNames.map((record) => (
+                <div key={record.name} className="ingredient-recipe">
+                  <RecipeTypeIcon type={record.type} />
+                  {record.name}
                 </div>
               ))}
             </div>

@@ -17,6 +17,7 @@ type IngId =
   | "chocolate_dark_80"
   | "chocolate_cream"
   | "nutella"
+  | "chocolate_shavings"
 
   //// COOKIES ////
   | "pryncypalki"
@@ -214,6 +215,19 @@ export const iSNK: Record<IngId, IngredientItem> = {
       szk: 300,
     },
     nutrientsPer100g: [31, 57, 6],
+  },
+
+  chocolate_shavings: {
+    name: "Wiórki czekoladowe",
+    type: "snk",
+    subType: "cho",
+    color: "#5A3825",
+    kcalPer100g: 550,
+    unitWeights: {
+      lzi: 1,
+      lz: 8,
+    },
+    nutrientsPer100g: [35, 50, 5],
   },
 
   //// BISCUITS ////

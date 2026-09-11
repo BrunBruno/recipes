@@ -1,6 +1,7 @@
 import { iDIR } from "../../ingredients/ingDairy";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSNK } from "../../ingredients/ingSnack";
 import type { Recipe } from "../../types";
@@ -21,7 +22,7 @@ const tiramisu: Recipe = {
         { ing: iDIR.mascarpone, amount: 500 },
         { ing: iSNK.ladyfingers, amount: 2, unit: "opak" },
         { ing: iOTH.sugar, amount: 150 },
-        { ing: iGRN.cocoa, amount: 2, unit: "lz" },
+        { ing: iNUT.cocoa, amount: 2, unit: "lz" },
         { ing: iGRN.grain_coffee, amount: 1, unit: "lz" },
       ],
     },

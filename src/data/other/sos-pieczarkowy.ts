@@ -12,8 +12,8 @@ const sosPieczarkowy: Recipe = {
   images: [""],
   time: 15,
   portions: 2,
-  taste: 4,
-  difficulty: 2,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",
@@ -44,7 +44,7 @@ const sosPieczarkowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["sos"],
+  keyWords: ["sos", "grzyb"],
 };
 
 export default sosPieczarkowy;

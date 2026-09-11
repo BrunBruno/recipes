@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// FRUITS ////
   | "apple"
+  | "green_apple"
   | "pear"
   | "fig"
   | "pineapple"
@@ -60,6 +61,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     price: 5,
   },
   // Jonagold 5
+
+  green_apple: {
+    name: "Zielone jabłko",
+    type: "frt",
+    subType: "app",
+    color: "#A8C95B",
+    kcalPer100g: 52,
+    unitWeights: {
+      szt: 180,
+    },
+    nutrientsPer100g: [0.2, 13.8, 0.3],
+  },
 
   pear: {
     name: "Gruszka",

@@ -18,7 +18,7 @@ const ciastoNaPizze: Recipe = {
       title: "",
       items: [
         { ing: iGRN.flour, amount: 250 },
-        { ing: iFAT.olive, amount: 2, unit: "lz" },
+        { ing: iFAT.olive_oil, amount: 2, unit: "lz" },
         { ing: iLIQ.water, amount: 150, unit: "ml" },
         { ing: iOTH.instant_yeast, amount: 6 },
         { ing: iSPC.salt },

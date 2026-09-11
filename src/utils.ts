@@ -515,6 +515,7 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   owoce: ["owoc", "owoce", "owocowy"],
   warzywa: ["warzywo", "warzywa"],
   sałatka: ["sałatka"],
+  grzyb: ["grzyb", "grzyby", "grzybowa", "pieczarki"],
 
   // OTHER
   ser: ["ser", "serowy"],
@@ -719,6 +720,44 @@ export const countRecipePricePerPortion = (recipes: Recipe[]) => {
   return usage;
 };
 
+export type NutrientIndex = 0 | 1 | 2;
+
+export function countRecipeNutrient(
+  recipes: Recipe[],
+  nutrientIndex: NutrientIndex,
+): Record<string, number> {
+  const result: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    let total = 0;
+
+    recipe.ingredients.forEach((group) => {
+      group.items.forEach((item) => {
+        if ("type" in item) return;
+
+        const ingredient = item.ing;
+
+        if (item.amount == null) return;
+
+        let grams = item.amount;
+
+        if (item.unit && item.unit !== "g") {
+          const weight = ingredient.unitWeights?.[item.unit];
+          if (weight == null) return;
+
+          grams = item.amount * weight;
+        }
+
+        total += (grams / 100) * ingredient.nutrientsPer100g[nutrientIndex];
+      });
+    });
+
+    result[recipe.name] = total / recipe.portions;
+  });
+
+  return result;
+}
+
 export const formatUnit = (ingredient: Ingredient): string => {
   if (!ingredient.unit) return " g";
 
@@ -869,3 +908,73 @@ export function formatDuration(minutes: number): string {
 
   return `${hoursText} ${mins} min.`;
 }
+
+export function countRecipeIngredients(
+  recipes: Recipe[],
+): Record<string, number> {
+  const result: Record<string, number> = {};
+
+  recipes.forEach((recipe) => {
+    const ingredients = getAllIngredientItems(recipe);
+
+    result[recipe.name] = ingredients.filter(
+      (ingredient) => ingredient.amount != null,
+    ).length;
+  });
+
+  return result;
+}
+
+export function countIngredientUsageByType(
+  recipes: Recipe[],
+): Record<IngredientType, number> {
+  const result: Record<IngredientType, number> = {
+    met: 0,
+    fsh: 0,
+    dir: 0,
+    fat: 0,
+    grn: 0,
+    bak: 0,
+    veg: 0,
+    frt: 0,
+    nut: 0,
+    sau: 0,
+    jar: 0,
+    liq: 0,
+    hrb: 0,
+    spc: 0,
+    snk: 0,
+    oth: 0,
+  };
+
+  recipes.forEach((recipe) => {
+    const ingredients = getAllIngredientItems(recipe);
+
+    ingredients.forEach((ingredient) => {
+      const type = ingredient.ing.type;
+      result[type]++;
+    });
+  });
+
+  return result;
+}
+
+export const getIngredientRecipeNames = (
+  ingredientName: string,
+  recipes: Recipe[],
+): { type: MealType; name: string }[] => {
+  const result: { type: MealType; name: string }[] = [];
+
+  recipes.forEach((recipe) => {
+    const ingredients = getAllIngredientItems(recipe);
+
+    if (ingredients.some((item) => item.ing.name === ingredientName)) {
+      result.push({
+        type: recipe.type,
+        name: recipe.name,
+      });
+    }
+  });
+
+  return result;
+};

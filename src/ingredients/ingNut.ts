@@ -9,7 +9,13 @@ type IngId =
   | "cashews"
   | "peanuts"
   | "pistachios"
-  | "coconut";
+  | "coconut"
+
+  //// SEEDS ////
+  | "cocoa"
+  | "coffee"
+  | "sunflower_seeds"
+  | "pumpkin_seeds";
 
 export const iNUT: Record<IngId, IngredientItem> = {
   //// NUTS ////
@@ -111,5 +117,57 @@ export const iNUT: Record<IngId, IngredientItem> = {
       szt: 500,
     },
     nutrientsPer100g: [33, 15, 3],
+  },
+
+  //// SEEDS ////
+
+  cocoa: {
+    name: "Kakao",
+    type: "nut",
+    subType: "ben",
+    color: "#5D4037",
+    kcalPer100g: 228,
+    unitWeights: {
+      lz: 7.5,
+      lzi: 2.5,
+    },
+    nutrientsPer100g: [13, 20, 20],
+  },
+
+  coffee: {
+    name: "Kawa",
+    type: "nut",
+    subType: "ben",
+    color: "#3E2723",
+    kcalPer100g: 2,
+    unitWeights: {
+      lz: 5,
+    },
+    nutrientsPer100g: [0, 0.5, 0.1],
+  },
+
+  sunflower_seeds: {
+    name: "Nasiona Słonecznika",
+    type: "nut",
+    subType: "see",
+    color: "#D7CCC8",
+    kcalPer100g: 584,
+    unitWeights: {
+      lz: 10,
+      lzi: 3,
+    },
+    nutrientsPer100g: [51.5, 20, 20.8],
+  },
+
+  pumpkin_seeds: {
+    name: "Pestki dyni",
+    type: "nut",
+    subType: "see",
+    color: "#87905A",
+    kcalPer100g: 559,
+    unitWeights: {
+      szk: 150,
+    },
+    nutrientsPer100g: [49, 11, 30],
   },
 };

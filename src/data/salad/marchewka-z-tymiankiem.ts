@@ -17,7 +17,7 @@ const marchewkaZTymiankiem: Recipe = {
       title: "",
       items: [
         { ing: iVEG.carrot, amount: 4, unit: "szt" },
-        { ing: iFAT.olive, amount: 1, unit: "lz" },
+        { ing: iFAT.olive_oil, amount: 1, unit: "lz" },
         { ing: iHRB.thyme, amount: 0.5, unit: "lzi" },
         { ing: iHRB.herbes_de_provence, amount: 1, unit: "lzi" },
         { ing: iSPC.curry, amount: 0.5, unit: "lzi" },

@@ -13,7 +13,7 @@ const gotowyBurger: Recipe = {
   images: ["burger-gotowiec.jpg"],
   time: 30,
   portions: 2,
-  taste: 4,
+  taste: 3,
   difficulty: 2,
   ingredients: [
     {
@@ -22,6 +22,8 @@ const gotowyBurger: Recipe = {
         { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.burger_patties, amount: 4, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
+        { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iSAU.mayonnaise, amount: 4, unit: "lzi" },
         { ing: iSAU.ketchup, amount: 4, unit: "lzi" },
       ],
@@ -30,7 +32,6 @@ const gotowyBurger: Recipe = {
       title: "Burger warzywny",
       items: [
         { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
@@ -41,7 +42,6 @@ const gotowyBurger: Recipe = {
         { ing: iMET.bacon_slices, amount: 4, unit: "plas" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
-        { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
       ],
     },
   ],

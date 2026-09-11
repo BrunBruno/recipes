@@ -21,7 +21,7 @@ export type IngredientType =
   | "grn" // grains
   | "bak" // bakery
   | "sau" // sauces
-  | "jar" // preserves
+  | "jar" // preserves / frozen
   | "liq" // liquids
   | "snk" // snacks
   | "hrb" // herbs
@@ -63,6 +63,7 @@ export type KeyWord =
   | "ryż"
   | "kasza"
   | "ziemniak"
+  | "grzyb"
   | "jajko"
   | "naleśnik"
   | "tortilla"

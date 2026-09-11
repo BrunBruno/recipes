@@ -10,8 +10,8 @@ const kanapkaZBekonem: Recipe = {
   images: [""],
   time: 15,
   portions: 1,
-  taste: 4,
-  difficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

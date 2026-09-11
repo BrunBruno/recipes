@@ -489,7 +489,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   mortadella: {
     name: "Mortadela",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#F4A6A6",
     kcalPer100g: 280,
     unitWeights: {
@@ -503,7 +503,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   ham_slices: {
     name: "Szynka",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#F28B82",
     kcalPer100g: 102,
     unitWeights: {
@@ -518,7 +518,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   ham_cooked: {
     name: "Szynka gotowana",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#F6A6A1",
     kcalPer100g: 108,
     unitWeights: {
@@ -532,7 +532,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   polendwica: {
     name: "Polędwica",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#E9967A",
     kcalPer100g: 99,
     unitWeights: {
@@ -547,7 +547,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   chicken_ham: {
     name: "Szynka z kurczaka",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#F4B6A6",
     kcalPer100g: 95,
     unitWeights: {
@@ -560,7 +560,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   smoked_ham: {
     name: "Szynka zawędzana",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#D97B66",
     kcalPer100g: 121,
     unitWeights: {
@@ -575,7 +575,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   ham_canned: {
     name: "Szynka konserwowa",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#E07A73",
     kcalPer100g: 145,
     unitWeights: {
@@ -588,7 +588,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   salami: {
     name: "Salami",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#A63D40",
     kcalPer100g: 413,
     unitWeights: {
@@ -603,7 +603,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   mini_salami: {
     name: "Salami mini",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#A63D40",
     kcalPer100g: 413,
     unitWeights: {
@@ -616,7 +616,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   bacon_slices: {
     name: "Boczek w plastrach",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#B56576",
     kcalPer100g: 518,
     unitWeights: {
@@ -629,7 +629,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   bacon_block: {
     name: "Boczek w kostce",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#8D4A43",
     kcalPer100g: 301,
     unitWeights: {
@@ -643,7 +643,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   smoked_bacon: {
     name: "Boczek wędzony",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#D98C6B",
     kcalPer100g: 450,
     unitWeights: {
@@ -655,7 +655,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   brewed_bacon: {
     name: "Boczek parzony",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#E7A07A",
     kcalPer100g: 400,
     unitWeights: {
@@ -667,7 +667,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausage: {
     name: "Kiełbasa",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#C06C5B",
     kcalPer100g: 227,
     unitWeights: {
@@ -682,7 +682,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   white_sausage: {
     name: "Biała kiełbasa",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#BFAE9A",
     kcalPer100g: 270,
     nutrientsPer100g: [23, 2, 14],
@@ -692,7 +692,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages: {
     name: "Parówki",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#B85C4C",
     kcalPer100g: 252,
     unitWeights: {
@@ -706,7 +706,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages_pork: {
     name: "Parówki wieprzowe",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#B65A4A",
     kcalPer100g: 260,
     unitWeights: {
@@ -721,7 +721,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages_chicken: {
     name: "Parówki drobiowe",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#D9A06C",
     kcalPer100g: 220,
     unitWeights: {
@@ -735,7 +735,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   sausages_berlinki: {
     name: "Parówki Berlinki",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#D68E56 ",
     kcalPer100g: 207,
     unitWeights: {
@@ -750,7 +750,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   serdelki: {
     name: "Serdelki",
     type: "met",
-    subType: "ham",
+    subType: "crd",
     color: "#A85A4A",
     kcalPer100g: 280,
     unitWeights: {
@@ -763,6 +763,7 @@ export const iMET: Record<IngId, IngredientItem> = {
   frankfurters: {
     name: "Frankfurterki",
     type: "met",
+    subType: "crd",
     color: "#D98B62",
     kcalPer100g: 247,
     unitWeights: {

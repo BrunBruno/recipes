@@ -46,7 +46,7 @@ const kebab: Recipe = {
       title: "Pity",
       items: [
         { ing: iGRN.flour, amount: 500 },
-        { ing: iFAT.olive, amount: 30, unit: "ml" },
+        { ing: iFAT.olive_oil, amount: 30, unit: "ml" },
         { ing: iLIQ.water, amount: 260, unit: "ml" },
         { ing: iOTH.yeast, amount: 5 },
         { ing: iSPC.salt, amount: 10 },

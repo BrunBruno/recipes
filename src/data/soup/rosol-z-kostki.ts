@@ -9,8 +9,8 @@ const rosolZKostki: Recipe = {
   images: [""],
   time: 15,
   portions: 4,
-  taste: 3,
-  difficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

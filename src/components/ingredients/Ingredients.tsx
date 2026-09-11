@@ -30,7 +30,6 @@ import { iBAK } from "../../ingredients/ingBakery";
 
 type IngredientsProps = {};
 
-const displayUnused = true;
 const allGroups = [
   { label: "Mięso", data: iMET },
   { label: "Ryby", data: iFSH },
@@ -58,6 +57,7 @@ const initialOpenTypes = Object.fromEntries(
 
 function Ingredients({}: IngredientsProps) {
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const [displayUnused, setDisplayUnused] = useState<boolean>(true);
 
   const getColumnCount = () => {
     const width = window.innerWidth;
@@ -143,7 +143,7 @@ function Ingredients({}: IngredientsProps) {
     });
 
     return count;
-  }, [search, ingredientUsage]);
+  }, [search, ingredientUsage, displayUnused]);
 
   useEffect(() => {
     document.body.style.overflow = selectedIngredient ? "hidden" : "auto";
@@ -187,18 +187,39 @@ function Ingredients({}: IngredientsProps) {
           }}
         ></div>
 
-        <div className={`recipe-search ${showSearch ? "show" : ""}`}>
-          <label className="recipe-search-label">
-            <UtilsIcon name="search" color="#999999" />
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder="Szukaj składnika..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="recipe-search-input"
-            />
-          </label>
+        <div className="page-title-options">
+          <div className={`recipe-search ${showSearch ? "show" : ""}`}>
+            <label className="recipe-search-label">
+              <UtilsIcon name="search" color="#999999" />
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Szukaj składnika..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="recipe-search-input"
+              />
+            </label>
+          </div>
+
+          <div className="filter-togglers">
+            <button
+              className="toggler-btn"
+              style={{
+                borderColor: !displayUnused ? "#fff" : "#666",
+              }}
+              onClick={() => {
+                setDisplayUnused((prev) => !prev);
+              }}
+            >
+              <div className="filter-svg">
+                <UtilsIcon
+                  name="filter"
+                  color={!displayUnused ? "#fff" : "#666"}
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 

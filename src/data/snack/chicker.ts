@@ -20,7 +20,7 @@ const chicker: Recipe = {
       items: [
         { ing: iMET.spicy_tenderloins, amount: 400 },
         { ing: iBAK.chicken_buns, amount: 4, unit: "szt" },
-        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
+        { ing: iVEG.lettuce_iceberg, amount: 4, unit: "lst" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
       ],
     },

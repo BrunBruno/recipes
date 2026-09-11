@@ -43,6 +43,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
           // .filter((r) => r.ingredients.length > 1)
           // .filter((r) => r.extrasMain)
           // .filter((r) => !r.taste || !r.difficulty)
+          // .filter((r) => (r.taste || r.difficulty) && r.images[0] === "")
           .map((recipe) => (
             <motion.div
               key={`${recipe.fileName}`}

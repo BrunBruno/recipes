@@ -15,8 +15,8 @@ const plackiZSosemKurkowym: Recipe = {
   images: [""],
   time: 35,
   portions: portions,
-  taste: 5,
-  difficulty: 3,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "Placki ziemniaczane",
@@ -38,8 +38,8 @@ const plackiZSosemKurkowym: Recipe = {
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 125, unit: "ml" },
         { ing: iHRB.parsley, amount: 1, unit: "lzi" },
-        { ing: iSPC.salt },
         { ing: iSPC.black_pepper },
+        { ing: iSPC.salt },
       ],
     },
   ],
@@ -72,7 +72,7 @@ const plackiZSosemKurkowym: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["ziemniak", "grzyb"],
 };
 
 export default plackiZSosemKurkowym;

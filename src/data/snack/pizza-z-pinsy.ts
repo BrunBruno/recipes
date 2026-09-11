@@ -12,7 +12,7 @@ const pizzaZPinsy: Recipe = {
   time: 15,
   portions: 1,
   taste: null,
-  difficulty: 1,
+  difficulty: null,
   ingredients: [
     {
       title: "",

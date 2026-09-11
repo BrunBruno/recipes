@@ -8,6 +8,7 @@ type IngId =
   | "tomato_sauce"
   | "pickled_cucumber"
   | "pickled_cucumber_vinegar"
+  | "lightly_pickled_cucumber"
   | "sauerkraut"
   | "fried_onion"
   | "fried_beets"
@@ -42,7 +43,8 @@ type IngId =
   | "frozen_stir_fry_oriental"
   | "frozen_stir_fry_potatoes"
   | "frozen_green_beans"
-  | "strawberry_frozen"
+  | "frozen_strawberries"
+  | "frozen_raspberries"
   | "frozen_broccoli"
 
   //// DELICATESSEN ////
@@ -140,6 +142,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.2, 3, 0.5],
+  },
+
+  lightly_pickled_cucumber: {
+    name: "Ogórki małosolne",
+    type: "jar",
+    subType: "pic",
+    color: "#7FAE62",
+    kcalPer100g: 11,
+    unitWeights: {
+      szt: 80,
+    },
+    nutrientsPer100g: [0.2, 1.5, 0.5],
   },
 
   sauerkraut: {
@@ -506,8 +520,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  strawberry_frozen: {
-    name: "Truskawki mrożone",
+  frozen_strawberries: {
+    name: "Mrożone truskawki",
     type: "jar",
     isVeg: true,
     subType: "fro",
@@ -518,6 +532,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 7, 0.4],
     verified: true,
+  },
+
+  frozen_raspberries: {
+    name: "Maliny mrożone",
+    type: "jar",
+    subType: "fro",
+    color: "#E5395F",
+    kcalPer100g: 52,
+    unitWeights: {
+      szk: 150,
+    },
+    nutrientsPer100g: [0.7, 12, 1.2],
   },
 
   frozen_broccoli: {
@@ -590,7 +616,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
 
   frozen_uszka: {
     name: "Mrożone uszka",
-    type: "grn",
+    type: "jar",
+    subType: "fro",
     color: "#D6B27A",
     kcalPer100g: 230,
     nutrientsPer100g: [7.0, 35.0, 8.0],
@@ -601,7 +628,8 @@ export const iJAR: Record<IngId, IngredientItem> = {
 
   frozen_won_ton: {
     name: "Mrożone pierożki Won Ton",
-    type: "grn",
+    type: "jar",
+    subType: "fro",
     color: "#D9B77A",
     kcalPer100g: 220,
     nutrientsPer100g: [6.0, 31.0, 8.0],

@@ -7,6 +7,7 @@ type IngId =
   | "vanilla_sugar"
   | "refined_sugar"
   | "brown_sugar"
+  | "xylitol"
 
   //// OTHER ////
   | "citric_acid"
@@ -16,6 +17,7 @@ type IngId =
   | "instant_yeast"
   | "gelatin"
   | "gelatin_bloom_220"
+  | "vanilla_flavor"
   | "vanilla_pudding"
   | "powdered_borscht"
   | "strawberry_kissel"
@@ -100,6 +102,20 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 98, 0],
+  },
+
+  xylitol: {
+    name: "Ksylitol",
+    type: "oth",
+    subType: "sug",
+    color: "#FAFAFA",
+    kcalPer100g: 240,
+    unitWeights: {
+      lzi: 4,
+      lz: 12,
+      szk: 250,
+    },
+    nutrientsPer100g: [0, 60, 0],
   },
 
   //// OTHER ////
@@ -188,6 +204,19 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [0, 0, 85],
+  },
+
+  vanilla_flavor: {
+    name: "Aromat waniliowy",
+    type: "oth",
+    color: "#F3E5AB",
+    kcalPer100g: 0,
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      ml: 1,
+    },
+    nutrientsPer100g: [0, 0, 0],
   },
 
   powdered_borscht: {

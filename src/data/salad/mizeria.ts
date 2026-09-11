@@ -12,8 +12,8 @@ const mizeria: Recipe = {
   images: [""],
   time: 10,
   portions: portions,
-  taste: 5,
-  difficulty: 1,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

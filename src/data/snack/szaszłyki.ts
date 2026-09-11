@@ -30,7 +30,7 @@ const szaszlyki: Recipe = {
     {
       title: "Marynata",
       items: [
-        { ing: iFAT.olive, amount: 4, unit: "lz" },
+        { ing: iFAT.olive_oil, amount: 4, unit: "lz" },
         { ing: iDIR.yogurt_natural, amount: 2, unit: "lz" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.oregano, amount: 0.5, unit: "lzi" },

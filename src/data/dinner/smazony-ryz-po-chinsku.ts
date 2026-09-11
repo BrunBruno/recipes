@@ -19,7 +19,7 @@ const smazonyRyzPoChinsku: Recipe = {
       title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iGRN.rice, amount: 100 },
+        { ing: iGRN.rice, amount: 200 },
         { ing: iVEG.carrot, amount: 2, unit: "szt" },
         { ing: iVEG.leek, amount: 50 },
         { ing: iLIQ.water, amount: 50, unit: "ml" },

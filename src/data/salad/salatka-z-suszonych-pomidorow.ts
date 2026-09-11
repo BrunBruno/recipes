@@ -4,6 +4,7 @@ import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iSAU } from "../../ingredients/ingSauce";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -24,7 +25,7 @@ const salatkaZSuszonychPomidorow: Recipe = {
         { ing: iGRN.bow_tie_pasta, amount: 250 },
         { ing: iJAR.canned_corn, amount: 0.75, unit: "opak" },
         { ing: iJAR.sun_dried_tomatoes_in_oil, amount: 10, unit: "szt" },
-        { ing: iGRN.sunflower_seeds, amount: 6, unit: "lz" },
+        { ing: iNUT.sunflower_seeds, amount: 6, unit: "lz" },
         { ing: iHRB.parsley, amount: 3, unit: "lzi" },
         { ing: iFAT.rapeseed_oil, amount: 2, unit: "lz" },
       ],

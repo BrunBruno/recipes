@@ -289,6 +289,38 @@
   height: 1rem;
 }
 
+.ingredient-recipes {
+  background: #101010;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1.2rem;
+  display: grid;
+  border: solid 1px #222222;
+  max-height: 10rem;
+  overflow-y: scroll;
+}
+
+.ingredient-recipes::-webkit-scrollbar {
+  display: none;
+}
+
+.ingredient-recipes h3 {
+  grid-column: 1/-1;
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.ingredient-recipe {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ingredient-recipe svg {
+  height: 1rem;
+}
+
 @media (max-width: 960px) {
   .macro-chart {
     width: 100px;

@@ -13,7 +13,7 @@ const surowkaZPomidoraIOgorka: Recipe = {
   time: 10,
   portions,
   taste: null,
-  difficulty: 1,
+  difficulty: null,
   ingredients: [
     {
       title: "",

@@ -28,7 +28,7 @@ const kurczakZPomidorem: Recipe = {
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "lz" },
-        ...fryingFat(iFAT.olive, 2, "lz", 0.35),
+        ...fryingFat(iFAT.olive_oil, 2, "lz", 0.35),
         { ing: iHRB.herbes_de_provence },
         { ing: iHRB.wild_garlic },
         { ing: iSPC.sweet_paprika },

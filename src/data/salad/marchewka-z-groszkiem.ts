@@ -14,8 +14,8 @@ const marchewkaZGroszkiem: Recipe = {
   images: [""],
   time: 25,
   portions: portions,
-  taste: 3,
-  difficulty: 2,
+  taste: null,
+  difficulty: null,
   ingredients: [
     {
       title: "",

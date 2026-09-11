@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// VEGETABLES ////
   | "potato"
+  | "young_potatoes"
   | "onion"
   | "tomato"
   | "cherry_tomato"
@@ -27,8 +28,10 @@ type IngId =
   | "vegetable_soup_vegetables"
   | "garlic"
   | "celery_root"
+  | "celery_stalk"
   | "ginger"
   | "red_onion"
+  | "shallot"
   | "radish"
   | "radish_peeled"
   | "beetroot"
@@ -42,6 +45,7 @@ type IngId =
   | "lettuce_butter"
   | "arugula"
   | "cabbage"
+  | "young_cabbage"
   | "chinese_cabbage"
   | "red_cabbage"
   | "savoy_cabbage"
@@ -76,6 +80,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 3.6,
   },
 
+  young_potatoes: {
+    name: "Młode ziemniaki",
+    type: "veg",
+    subType: "pot",
+    color: "#E8D8B0",
+    kcalPer100g: 69,
+    unitWeights: {
+      szt: 80,
+    },
+    nutrientsPer100g: [0.1, 15.7, 1.8],
+  },
+
   onion: {
     name: "Cebula",
     type: "veg",
@@ -102,6 +118,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 9, 1.1],
     price: 8,
+  },
+
+  shallot: {
+    name: "Szalotka",
+    type: "veg",
+    subType: "oni",
+    color: "#C9A0A0",
+    kcalPer100g: 72,
+    unitWeights: {
+      szt: 30,
+    },
+    nutrientsPer100g: [0.1, 16.8, 2.5],
   },
 
   garlic: {
@@ -429,6 +457,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 4.8,
   },
 
+  celery_stalk: {
+    name: "Seler naciowy",
+    type: "veg",
+    subType: "lek",
+    color: "#8FBF72",
+    kcalPer100g: 14,
+    unitWeights: {
+      szt: 40,
+    },
+    nutrientsPer100g: [0.2, 3.0, 0.7],
+  },
+
   radish: {
     name: "Rzodkiewka",
     type: "veg",
@@ -561,6 +601,8 @@ export const iVEG: Record<IngId, IngredientItem> = {
   arugula: {
     name: "Rukola",
     type: "veg",
+    isVeg: true,
+    subType: "gee",
     color: "#4CAF50",
     kcalPer100g: 25,
     nutrientsPer100g: [0.7, 3.7, 2.6],
@@ -578,6 +620,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 5.8, 1.3],
     price: 3,
+  },
+
+  young_cabbage: {
+    name: "Młoda kapusta",
+    type: "veg",
+    isVeg: true,
+    subType: "gee",
+    color: "#A8C98A",
+    kcalPer100g: 27,
+    unitWeights: {
+      szt: 700,
+    },
+    nutrientsPer100g: [0.1, 6.0, 1.3],
   },
 
   chinese_cabbage: {

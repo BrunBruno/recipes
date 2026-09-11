@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// GRAINS ////
   | "flour"
+  | "wheat_flour"
   | "potato_starch"
   | "breadcrumbs"
   | "rice"
@@ -35,22 +36,32 @@ type IngId =
   | "cornflakes"
   | "cheerios"
   | "cini_mini"
+  | "grain_coffee"
 
   //// READY ////
   | "kopytka"
   | "silesian_dumplings"
-  | "steamed_dumplings"
-
-  //// SEEDS ////
-  | "cocoa"
-  | "coffee"
-  | "grain_coffee"
-  | "sunflower_seeds";
+  | "steamed_dumplings";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   //// GRAINS ////
   flour: {
     name: "Mąka",
+    type: "grn",
+    color: "#F5F5F0",
+    kcalPer100g: 345,
+    unitWeights: {
+      lz: 12,
+      szk: 160,
+      opak: 500,
+    },
+    nutrientsPer100g: [1.2, 71, 11],
+    price: 1.7,
+    verified: true,
+  },
+
+  wheat_flour: {
+    name: "Mąka pszenna",
     type: "grn",
     color: "#F5F5F0",
     kcalPer100g: 345,
@@ -429,6 +440,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
     price: 19.1,
   },
 
+  grain_coffee: {
+    name: "Kawa zbożowa",
+    type: "grn",
+    subType: "ben",
+    color: "#6D4C41",
+    kcalPer100g: 360,
+    unitWeights: {
+      lz: 6,
+      lzi: 2,
+    },
+    nutrientsPer100g: [0, 86, 0],
+  },
+
   kopytka: {
     name: "Kopytka",
     type: "grn",
@@ -465,57 +489,5 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [2, 42, 6],
-  },
-
-  //// SEEDS ////
-
-  cocoa: {
-    name: "Kakao",
-    type: "grn",
-    subType: "ben",
-    color: "#5D4037",
-    kcalPer100g: 228,
-    unitWeights: {
-      lz: 7.5,
-      lzi: 2.5,
-    },
-    nutrientsPer100g: [13, 20, 20],
-  },
-
-  coffee: {
-    name: "Kawa",
-    type: "grn",
-    subType: "ben",
-    color: "#3E2723",
-    kcalPer100g: 2,
-    unitWeights: {
-      lz: 5,
-    },
-    nutrientsPer100g: [0, 0.5, 0.1],
-  },
-
-  grain_coffee: {
-    name: "Kawa zbożowa",
-    type: "grn",
-    subType: "ben",
-    color: "#6D4C41",
-    kcalPer100g: 360,
-    unitWeights: {
-      lz: 6,
-      lzi: 2,
-    },
-    nutrientsPer100g: [0, 86, 0],
-  },
-
-  sunflower_seeds: {
-    name: "Nasiona Słonecznika",
-    type: "grn",
-    color: "#D7CCC8",
-    kcalPer100g: 584,
-    unitWeights: {
-      lz: 10,
-      lzi: 3,
-    },
-    nutrientsPer100g: [51.5, 20, 20.8],
   },
 };

@@ -14,6 +14,7 @@ type IngId =
   | "honey"
   | "maggi"
   | "soy_sauce"
+  | "pickled_cucumber_brine"
 
   //// JUICES ////
   | "lemon_juice"
@@ -32,6 +33,7 @@ type IngId =
 
   //// DECOCTION ////
   | "rosol"
+  | "beet_broth"
   | "meat_stock"
   | "beef_broth"
   | "vegetable_broth";
@@ -174,6 +176,19 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [0.6, 4.9, 8],
+  },
+
+  pickled_cucumber_brine: {
+    name: "Woda z kiszonych ogórków",
+    type: "liq",
+    color: "#D9D9A5",
+    kcalPer100g: 5,
+    unitWeights: {
+      ml: 1,
+      lz: 15,
+      szk: 250,
+    },
+    nutrientsPer100g: [0, 1, 0.2],
   },
 
   honey: {
@@ -347,6 +362,18 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5, 1.5, 1],
   },
 
+  beet_broth: {
+    name: "Wywar z buraków",
+    type: "liq",
+    color: "#8B1A2B",
+    kcalPer100g: 8,
+    unitWeights: {
+      szk: 250,
+      ml: 1,
+    },
+    nutrientsPer100g: [0, 1.5, 0.3],
+  },
+
   meat_stock: {
     name: "Wywar mięsny",
     type: "liq",
@@ -368,6 +395,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 116,
     nutrientsPer100g: [4.6, 14, 4.6],
     unitWeights: {
+      ml: 1,
       lzi: 5,
       lz: 15,
       opak: 160,

@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 
@@ -22,7 +23,7 @@ const ciastoMurzyn: Recipe = {
         { ing: iFAT.butter, amount: 1, unit: "kst" },
         { ing: iDIR.milk, amount: 0.5, unit: "szk" },
         { ing: iOTH.sugar, amount: 1, unit: "szk" },
-        { ing: iGRN.cocoa, amount: 3, unit: "lz" },
+        { ing: iNUT.cocoa, amount: 3, unit: "lz" },
         { ing: iOTH.baking_powder, amount: 1, unit: "lzi" },
       ],
     },

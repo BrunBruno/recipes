@@ -50,6 +50,8 @@ type IngId =
   | "cheddar_cheese"
   | "hard_cheese"
   | "oscypek"
+
+  //// PLANT BASED ////
   | "tofu";
 
 export const iDIR: Record<IngId, IngredientItem> = {
@@ -169,7 +171,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [2, 14, 3],
   },
 
-  vanilla_skyr: {
+  strawberry_skyr: {
     name: "Skyr truskawkowy",
     type: "dir",
     color: "#F8BBD0",
@@ -182,13 +184,14 @@ export const iDIR: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  strawberry_skyr: {
+  vanilla_skyr: {
     name: "Skyr waniliowy",
     type: "dir",
     color: "#F0F4C3",
     kcalPer100g: 82,
     unitWeights: {
       opak: 150,
+      szt: 150,
     },
     nutrientsPer100g: [0, 10, 9.6],
     price: 24.6,
@@ -630,6 +633,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
   hard_cheese: {
     name: "Ser twardy",
     type: "dir",
+    subType: "che",
     color: "#F5D77A",
     kcalPer100g: 380,
     unitWeights: {

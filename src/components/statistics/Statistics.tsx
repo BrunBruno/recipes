@@ -21,6 +21,9 @@ import {
   kcalLowColors,
   othTopColors,
   othLowColors,
+  countRecipeNutrient,
+  countRecipeIngredients,
+  countIngredientUsageByType,
 } from "../../utils";
 import {
   ArcElement,
@@ -59,6 +62,11 @@ const usedIngredients = countUsedIngredients(ingredientUsage);
 const recipeWeightsPerPortion = countRecipeWeightPerPortion(okRecipes);
 const recipesPrepTimes = countRecipePreparationTime(okRecipes);
 const recipePrices = countRecipePricePerPortion(okRecipes);
+const recipeFat = countRecipeNutrient(okRecipes, 0);
+const recipeCarbs = countRecipeNutrient(okRecipes, 1);
+const recipeProtein = countRecipeNutrient(okRecipes, 2);
+const recipeIngredientsCount = countRecipeIngredients(okRecipes);
+const ingredientUsageByType = countIngredientUsageByType(okRecipes);
 
 function Statistics({}: StatisticsProps) {
   const canvasRefs = {
@@ -70,6 +78,8 @@ function Statistics({}: StatisticsProps) {
     usedIngredients: useRef<HTMLCanvasElement | null>(null),
     ingredientPrice: useRef<HTMLCanvasElement | null>(null),
     kcalDistributionRef: useRef<HTMLCanvasElement | null>(null),
+    tasteDistributionRef: useRef<HTMLCanvasElement | null>(null),
+    difficultyDistributionRef: useRef<HTMLCanvasElement | null>(null),
 
     calories: useRef<HTMLCanvasElement | null>(null),
     tCalories: useRef<HTMLCanvasElement | null>(null),
@@ -92,6 +102,12 @@ function Statistics({}: StatisticsProps) {
     bRecipePrice: useRef<HTMLCanvasElement | null>(null),
 
     unitChartRef: useRef<HTMLCanvasElement | null>(null),
+    recipeIngredients: useRef<HTMLCanvasElement | null>(null),
+    ingredientUsageByType: useRef<HTMLCanvasElement | null>(null),
+
+    fat: useRef<HTMLCanvasElement | null>(null),
+    carbs: useRef<HTMLCanvasElement | null>(null),
+    protein: useRef<HTMLCanvasElement | null>(null),
   };
   const chartRefs = {
     recipeTypes: useRef<Chart | null>(null),
@@ -102,6 +118,8 @@ function Statistics({}: StatisticsProps) {
     usedIngredients: useRef<Chart | null>(null),
     ingredientPrice: useRef<Chart | null>(null),
     kcalDistributionRef: useRef<Chart | null>(null),
+    tasteDistributionRef: useRef<Chart | null>(null),
+    difficultyDistributionRef: useRef<Chart | null>(null),
 
     calories: useRef<Chart | null>(null),
     tCalories: useRef<Chart | null>(null),
@@ -124,6 +142,12 @@ function Statistics({}: StatisticsProps) {
     bRecipePrice: useRef<Chart | null>(null),
 
     unitChartRef: useRef<Chart | null>(null),
+    recipeIngredients: useRef<Chart | null>(null),
+    ingredientUsageByType: useRef<Chart | null>(null),
+
+    fat: useRef<Chart | null>(null),
+    carbs: useRef<Chart | null>(null),
+    protein: useRef<Chart | null>(null),
   };
 
   const createChart = (
@@ -563,6 +587,75 @@ function Statistics({}: StatisticsProps) {
       "składników",
     );
 
+    //// CHART TASTE GRADE DISTRIBUTION ////
+
+    const grades: Record<number, number> = {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    };
+    recipes.forEach((recipe) => {
+      if (recipe.taste !== null) grades[recipe.taste] += 1;
+    });
+
+    const tasteLabels: Record<number, string> = {
+      1: "B. słabe",
+      2: "Słabe",
+      3: "Średnie",
+      4: "Dobre",
+      5: "B. dobre",
+    };
+
+    data = Object.entries(grades);
+    colors = data.map((_, i) =>
+      interpolateKcalColor(i, 0, 5, "#f03e3e", "#0ca678"),
+    );
+
+    createChart(
+      canvasRefs.tasteDistributionRef.current,
+      chartRefs.tasteDistributionRef,
+      data.map(([k]) => tasteLabels[Number(k)]),
+      data.map(([, v]) => v),
+      colors,
+      "przepisów",
+    );
+    //// CHART DIFFICULTY ////
+
+    const difficulty: Record<number, number> = {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    };
+    recipes.forEach((recipe) => {
+      if (recipe.difficulty !== null) difficulty[recipe.difficulty] += 1;
+    });
+
+    const difficultyLabels: Record<number, string> = {
+      1: "B. łatwe",
+      2: "Łatwe",
+      3: "Średnie",
+      4: "Trudne",
+      5: "B. trudne",
+    };
+
+    data = Object.entries(difficulty);
+    colors = data.map((_, i) =>
+      interpolateKcalColor(i, 0, 5, "#0ca678", "#f03e3e"),
+    );
+
+    createChart(
+      canvasRefs.difficultyDistributionRef.current,
+      chartRefs.difficultyDistributionRef,
+      data.map(([k]) => difficultyLabels[Number(k)]),
+      data.map(([, v]) => v),
+      colors,
+      "przepisów",
+    );
+
     //// CHART UNIT USAGE ////
     const unitUsage: Record<string, number> = {};
     Object.values(allIngredients).forEach((ing) => {
@@ -588,6 +681,92 @@ function Statistics({}: StatisticsProps) {
       colors,
       "składników",
     );
+
+    //// CHART MACROS ////
+
+    data = topN(recipeFat, 10);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([_, v]) =>
+      interpolateKcalColor(v, min, max, "#fff3bf", "#f59f00"),
+    );
+
+    createChart(
+      canvasRefs.fat.current,
+      chartRefs.fat,
+      data.map(([k]) => k),
+      data.map(([, v]) => Number(v.toFixed(1))),
+      colors,
+      "g / porc.",
+    );
+
+    data = topN(recipeCarbs, 10);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([_, v]) =>
+      interpolateKcalColor(v, min, max, "#c5f6fa", "#1098ad"),
+    );
+
+    createChart(
+      canvasRefs.carbs.current,
+      chartRefs.carbs,
+      data.map(([k]) => k),
+      data.map(([, v]) => Number(v.toFixed(1))),
+      colors,
+      "g / porc.",
+    );
+
+    data = topN(recipeProtein, 10);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([_, v]) =>
+      interpolateKcalColor(v, min, max, "#ffe3e3", "#f03e3e"),
+    );
+
+    createChart(
+      canvasRefs.protein.current,
+      chartRefs.protein,
+      data.map(([k]) => k),
+      data.map(([, v]) => Number(v.toFixed(1))),
+      colors,
+      "g / porc.",
+    );
+
+    //
+    data = topN(recipeIngredientsCount, 10);
+    min = Math.min(...data.map(([, v]) => v));
+    max = Math.max(...data.map(([, v]) => v));
+    colors = data.map(([_, v]) =>
+      interpolateKcalColor(v, min, max, "#666666", "#ffffff"),
+    );
+
+    createChart(
+      canvasRefs.recipeIngredients.current,
+      chartRefs.recipeIngredients,
+      data.map(([name]) => name),
+      data.map(([, count]) => count),
+      colors,
+      "składników",
+    );
+
+    //
+
+    const ingredientTypes = Object.entries(ingredientUsageByType).sort(
+      (a, b) => b[1] - a[1],
+    );
+
+    createChart(
+      canvasRefs.ingredientUsageByType.current,
+      chartRefs.ingredientUsageByType,
+      ingredientTypes.map(
+        ([type]) => IngredientTypeData[type as IngredientType].label,
+      ),
+      ingredientTypes.map(([, count]) => count),
+      ingredientTypes.map(
+        ([type]) => IngredientTypeData[type as IngredientType].color,
+      ),
+      "użyć",
+    );
   };
 
   useEffect(() => {
@@ -603,11 +782,23 @@ function Statistics({}: StatisticsProps) {
 
         <h1 className="page-title-h1">
           <div className="page-title-h1-indicator">
-            {8 * 3}
+            {10 * 3}
             <span>Wykresów</span>
           </div>
           <span className="h1-text">Statystki</span>
         </h1>
+      </div>
+
+      {/* R1 */}
+
+      <div className="statistics-element">
+        <h2>
+          Wykonane przepisy{" "}
+          {((100 * doneRecipeCount.yes) / recipes.length).toFixed(1)}%
+        </h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.doneRecipes}></canvas>
+        </div>
       </div>
 
       <div className="statistics-element">
@@ -616,6 +807,15 @@ function Statistics({}: StatisticsProps) {
           <canvas ref={canvasRefs.recipeTypes}></canvas>
         </div>
       </div>
+
+      <div className="statistics-element">
+        <h2>Statystyki składników</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.usedIngredients}></canvas>
+        </div>
+      </div>
+
+      {/* R2 */}
 
       <div className="statistics-element">
         <h2>Rodzaje składników</h2>
@@ -632,11 +832,13 @@ function Statistics({}: StatisticsProps) {
       </div>
 
       <div className="statistics-element">
-        <h2>Statystyki składników</h2>
+        <h2>Użycie składników w zależności od typu</h2>
         <div className="chart-wrapper">
-          <canvas ref={canvasRefs.usedIngredients}></canvas>
+          <canvas ref={canvasRefs.ingredientUsageByType}></canvas>
         </div>
       </div>
+
+      {/* R3 */}
 
       <div className="statistics-element">
         <h2>Składniki w przedziałach cenowych</h2>
@@ -653,19 +855,32 @@ function Statistics({}: StatisticsProps) {
       </div>
 
       <div className="statistics-element">
-        <h2>Użycia jednostek</h2>
+        <h2>Liczba składników w przepisie</h2>
         <div className="chart-wrapper">
-          <canvas ref={canvasRefs.unitChartRef} />
+          <canvas ref={canvasRefs.recipeIngredients}></canvas>
+        </div>
+      </div>
+
+      {/* R4 */}
+
+      <div className="statistics-element">
+        <h2>Oceny smaku przepisów</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.tasteDistributionRef} />
         </div>
       </div>
 
       <div className="statistics-element">
-        <h2>
-          Wykonane przepisy{" "}
-          {((100 * doneRecipeCount.yes) / recipes.length).toFixed(1)}%
-        </h2>
+        <h2>Uciążliwość wykonania przepisów</h2>
         <div className="chart-wrapper">
-          <canvas ref={canvasRefs.doneRecipes}></canvas>
+          <canvas ref={canvasRefs.difficultyDistributionRef} />
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Użycia jednostek</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.unitChartRef} />
         </div>
       </div>
 
@@ -763,6 +978,27 @@ function Statistics({}: StatisticsProps) {
         <h2>Najlżejsze posiłki</h2>
         <div className="chart-wrapper">
           <canvas ref={canvasRefs.bWeightsPerPortion}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Najbardziej tłuste posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.fat}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Najwięcej węglowodanów</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.carbs}></canvas>
+        </div>
+      </div>
+
+      <div className="statistics-element">
+        <h2>Najbardziej białkowe posiłki</h2>
+        <div className="chart-wrapper">
+          <canvas ref={canvasRefs.protein}></canvas>
         </div>
       </div>
     </div>

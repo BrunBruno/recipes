@@ -2,6 +2,7 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -23,7 +24,7 @@ const biszkoptCiemny: Recipe = {
         { ing: iGRN.flour, amount: 25 },
         { ing: iDIR.milk, amount: 30 },
         { ing: iFAT.oil, amount: 5 },
-        { ing: iGRN.cocoa, amount: 5 },
+        { ing: iNUT.cocoa, amount: 5 },
         { ing: iSPC.salt },
       ],
     },
