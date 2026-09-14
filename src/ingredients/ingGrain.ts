@@ -5,10 +5,12 @@ type IngId =
   | "flour"
   | "wheat_flour"
   | "potato_starch"
+  | "corn_flour"
   | "breadcrumbs"
   | "rice"
   | "rice_basmati"
   | "rice_long_grain"
+  | "sushi_rice"
   | "couscous"
   | "semolina"
   | "bulgur"
@@ -41,7 +43,8 @@ type IngId =
   //// READY ////
   | "kopytka"
   | "silesian_dumplings"
-  | "steamed_dumplings";
+  | "steamed_dumplings"
+  | "wonton_dough";
 
 export const iGRN: Record<IngId, IngredientItem> = {
   //// GRAINS ////
@@ -86,6 +89,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.3, 86.0, 0.1],
     price: 5.5,
+  },
+
+  corn_flour: {
+    name: "Mąka kukurydziana",
+    type: "grn",
+    color: "#E5C65B",
+    kcalPer100g: 360,
+    nutrientsPer100g: [3.9, 76, 7],
   },
 
   breadcrumbs: {
@@ -142,6 +153,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.7, 78.5, 7.2],
     price: 5,
     verified: true,
+  },
+
+  sushi_rice: {
+    name: "Ryż do sushi",
+    type: "grn",
+    color: "#E8D9B5",
+    kcalPer100g: 350,
+    nutrientsPer100g: [0.6, 78, 6],
   },
 
   couscous: {
@@ -489,5 +508,17 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [2, 42, 6],
+  },
+
+  wonton_dough: {
+    name: "Ciasto na wontony",
+    type: "grn",
+    subType: "bun",
+    color: "#E8D9B5",
+    unitWeights: {
+      szt: 10,
+    },
+    kcalPer100g: 290,
+    nutrientsPer100g: [1, 58, 9],
   },
 };

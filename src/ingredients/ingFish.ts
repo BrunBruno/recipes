@@ -11,6 +11,7 @@ type IngId =
   | "herring_in_tomato_sauce"
   | "herring_in_vinegar"
   | "mackerel_in_tomato_sauce"
+  | "anchovies"
   | "pollock"
   | "hake"
   | "halibut"
@@ -22,7 +23,8 @@ type IngId =
 
   //// SEA FOOD ////
   | "squid_frozen_ready"
-  | "shrimp";
+  | "shrimp"
+  | "crab_sticks";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -229,6 +231,18 @@ export const iFSH: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  anchovies: {
+    name: "Anchovies",
+    type: "fsh",
+    subType: "can",
+    color: "#8C6F55",
+    kcalPer100g: 210,
+    unitWeights: {
+      szt: 3,
+    },
+    nutrientsPer100g: [10, 0, 29],
+  },
+
   //// SEAFOOD ////
 
   squid_frozen_ready: {
@@ -256,5 +270,15 @@ export const iFSH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.1, 0, 21],
     price: 110,
     verified: true,
+  },
+
+  crab_sticks: {
+    name: "Paluszki krabowe",
+    type: "fsh",
+    subType: "sea",
+    color: "#E58B72",
+    kcalPer100g: 95,
+    unitWeights: { szt: 20 },
+    nutrientsPer100g: [0.5, 15, 7],
   },
 };

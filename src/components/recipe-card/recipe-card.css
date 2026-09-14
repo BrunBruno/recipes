@@ -434,7 +434,7 @@
 
 .ingredients-list {
   list-style: none;
-  padding: 1rem 1.2rem;
+  padding: 1rem 0;
   margin: 0;
   border: solid #333333 0.2rem;
 }
@@ -446,11 +446,17 @@
   padding: 0 0.5rem;
   font-size: 0.95rem;
   border-top: 1px solid #333333;
+  padding: 0 1.2rem;
 }
 
 .ingredient-item:first-child {
   border: none;
 }
+
+/* .ingredient-item:hover {
+  cursor: pointer;
+  background-color: #333333;
+} */
 
 .ingredient-amount {
   display: flex;

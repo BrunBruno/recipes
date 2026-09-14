@@ -245,7 +245,7 @@ export const dinnerSides = (
         sideName: name,
         items: [
           { ing: iVEG.carrot, amount: portions, unit: "szt" },
-          { ing: iJAR.canned_peas, amount: portions * 100, unit: "g" },
+          { ing: iJAR.canned_peas, amount: portions * 100 },
           { ing: iFAT.butter, amount: portions * 0.25, unit: "lzi" },
           { ing: iGRN.flour, amount: portions * 0.25, unit: "lz" },
           { ing: iOTH.sugar },
@@ -350,10 +350,7 @@ export const dinnerSides = (
       return {
         title: "Buraczki z zalewy",
         sideName: name,
-        items: [
-          { ing: iJAR.beets_whole_vinegar, amount: portions * 200 },
-          { ing: iSPC.salt },
-        ],
+        items: [{ ing: iJAR.beets_whole_vinegar, amount: portions * 200 }],
       };
     case "sauerkraut":
       return {
@@ -606,7 +603,7 @@ export const dinnerSidesSteps = (name: DinnerSidesNames): string[] => {
       ];
 
     case "beets-whole-vinegar":
-      return ["Podaj buraki z octu jako dodatek."];
+      return ["Podaj buraki jako dodatek."];
 
     case "sauerkraut":
       return ["Podaj lub lekko podgrzej kapustę kiszoną."];

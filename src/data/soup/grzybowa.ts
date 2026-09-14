@@ -26,7 +26,7 @@ const grzybowa: Recipe = {
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 100, unit: "ml" },
-        { ing: iLIQ.water, amount: 1500, unit: "ml" },
+        { ing: iLIQ.water, amount: 1.5, unit: "l" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
       ],

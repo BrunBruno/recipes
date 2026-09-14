@@ -4,7 +4,11 @@ type IngId =
   //// LIQUIDS ////
   | "water"
   | "warm_water"
+  | "sparkling_water"
   | "vinegar"
+  | "rice_vinegar"
+  | "wine_vinegar"
+  | "balsamic_vinegar"
   | "spirit"
   | "vodka"
   | "dry_red_wine"
@@ -36,7 +40,8 @@ type IngId =
   | "beet_broth"
   | "meat_stock"
   | "beef_broth"
-  | "vegetable_broth";
+  | "vegetable_broth"
+  | "white_borscht_sourdough";
 
 export const iLIQ: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -47,6 +52,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 0,
     unitWeights: {
       ml: 1,
+      l: 1000,
       szk: 250,
       lz: 15,
       lzi: 5,
@@ -72,12 +78,47 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  sparkling_water: {
+    name: "Woda gazowana",
+    type: "liq",
+    color: "#A8D8E8",
+    kcalPer100g: 0,
+    unitWeights: {
+      ml: 1,
+    },
+    nutrientsPer100g: [0, 0, 0],
+  },
+
   vinegar: {
     name: "Ocet",
     type: "liq",
     color: "#BBDEFB",
     kcalPer100g: 20,
     nutrientsPer100g: [0, 0.5, 0],
+  },
+
+  rice_vinegar: {
+    name: "Ocet ryżowy",
+    type: "liq",
+    color: "#E7D7B5",
+    kcalPer100g: 18,
+    nutrientsPer100g: [0, 0.5, 0],
+  },
+
+  wine_vinegar: {
+    name: "Ocet winny",
+    type: "liq",
+    color: "#B86B54",
+    kcalPer100g: 19,
+    nutrientsPer100g: [0, 0.3, 0],
+  },
+
+  balsamic_vinegar: {
+    name: "Ocet balsamiczny",
+    type: "liq",
+    color: "#4C3028",
+    kcalPer100g: 88,
+    nutrientsPer100g: [0, 17, 0.5],
   },
 
   spirit: {
@@ -358,6 +399,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     kcalPer100g: 35,
     unitWeights: {
       ml: 1,
+      l: 1000,
     },
     nutrientsPer100g: [5, 1.5, 1],
   },
@@ -415,5 +457,17 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
       opak: 160,
     },
+  },
+
+  white_borscht_sourdough: {
+    name: "Zakwas na barszcz biały",
+    type: "liq",
+    color: "#E8DCC8",
+    kcalPer100g: 45,
+    unitWeights: {
+      opak: 500,
+      ml: 1,
+    },
+    nutrientsPer100g: [0.2, 9, 1.5],
   },
 };

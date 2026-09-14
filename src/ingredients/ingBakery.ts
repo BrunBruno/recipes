@@ -5,6 +5,7 @@ type IngId =
   | "kaiser_roll"
   | "multigrain_kaiser_roll"
   | "graham_roll"
+  | "baguette"
   | "rye_bread"
   | "sunflower_bread"
   | "wheat_bread"
@@ -66,6 +67,17 @@ export const iBAK: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [3, 48, 9],
+  },
+
+  baguette: {
+    name: "Bagietka",
+    type: "bak",
+    color: "#E8C98A",
+    unitWeights: {
+      szt: 250,
+    },
+    kcalPer100g: 270,
+    nutrientsPer100g: [2, 55, 9],
   },
 
   morning_roll: {

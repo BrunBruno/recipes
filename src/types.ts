@@ -29,8 +29,10 @@ export type IngredientType =
   | "oth"; // other / sugars
 
 export type UnitType =
-  | "g" // gram
-  | "ml" // mililitr
+  | "g"
+  | "kg"
+  | "ml"
+  | "l"
   | "szt" // sztuka
   | "lz" // łyżka
   | "lzi" // łyżeczka

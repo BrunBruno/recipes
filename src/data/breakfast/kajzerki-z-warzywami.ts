@@ -27,7 +27,7 @@ const kajzerkiZWarzywami: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iFAT.butter, amount: 20, unit: "g" },
+        { ing: iFAT.butter, amount: 20 },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         {

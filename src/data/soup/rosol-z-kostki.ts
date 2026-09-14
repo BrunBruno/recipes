@@ -15,7 +15,7 @@ const rosolZKostki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iLIQ.water, amount: 1500, unit: "ml" },
+        { ing: iLIQ.water, amount: 1.5, unit: "l" },
         { ing: iSPC.knorr_bouillon_cube, amount: 2, unit: "szt" },
         { ing: iGRN.thin_pasta, amount: 150 },
       ],

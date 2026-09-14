@@ -27,6 +27,8 @@ type IngId =
   | "orange"
   | "mandarin"
   | "grapefruit"
+  | "durian"
+  | "lychee"
   | "grapes_red"
   | "grapes_white"
   | "cherries_sour"
@@ -65,6 +67,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   green_apple: {
     name: "Zielone jabłko",
     type: "frt",
+    isVeg: true,
     subType: "app",
     color: "#A8C95B",
     kcalPer100g: 52,
@@ -394,6 +397,28 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [0.1, 11, 0.8],
+  },
+
+  durian: {
+    name: "Durian",
+    type: "frt",
+    isVeg: true,
+    subType: "dur",
+    color: "#C6B85A",
+    kcalPer100g: 147,
+    unitWeights: { szt: 1500 },
+    nutrientsPer100g: [5.3, 27, 1.5],
+  },
+
+  lychee: {
+    name: "Liczi",
+    type: "frt",
+    isVeg: true,
+    subType: "lyh",
+    color: "#D96B6B",
+    unitWeights: { szt: 15 },
+    kcalPer100g: 66,
+    nutrientsPer100g: [0.4, 17, 0.8],
   },
 
   grapes_red: {

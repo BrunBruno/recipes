@@ -27,7 +27,7 @@ const kajzerkiZPomidorem: Recipe = {
           selected: 0,
         },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
-        { ing: iVEG.tomato, amount: 1, unit: "szt" },
+        { ing: iVEG.tomato_raspberry, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iFAT.butter, amount: 10 },
         { ing: iSPC.black_pepper },

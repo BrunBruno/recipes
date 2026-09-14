@@ -37,6 +37,7 @@ type IngId =
   | "sirloin_steak"
   | "beef_round"
   | "beef_shoulder"
+  | "beef_shank"
   | "mutton"
 
   //// PROCESSED ////
@@ -445,6 +446,17 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     color: "#8D4E3D",
     kcalPer100g: 180,
+    nutrientsPer100g: [12, 0, 20],
+  },
+
+  beef_shank: {
+    name: "Pręga wołowa",
+    type: "met",
+    color: "#A85C4B",
+    unitWeights: {
+      szt: 500,
+    },
+    kcalPer100g: 190,
     nutrientsPer100g: [12, 0, 20],
   },
 

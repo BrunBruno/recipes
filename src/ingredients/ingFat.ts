@@ -6,9 +6,11 @@ type IngId =
   | "vegetable_oil"
   | "rapeseed_oil"
   | "sunflower_oil"
+  | "sesame_oil"
   | "olive_oil"
   | "olive_oil_extra_virgin"
   | "sun_dried_tomato_oil"
+  | "liquid_butter"
   | "butter"
   | "clarified_butter"
   | "lard"
@@ -82,6 +84,16 @@ export const iFAT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [100, 0, 0],
   },
 
+  sesame_oil: {
+    name: "Olej sezamowy",
+    type: "fat",
+    subType: "oil",
+    color: "#C99A32",
+    unitWeights: { lz: 15, lzi: 5 },
+    kcalPer100g: 884,
+    nutrientsPer100g: [100, 0, 0],
+  },
+
   olive_oil: {
     name: "Oliwa",
     type: "fat",
@@ -110,7 +122,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   },
 
   sun_dried_tomato_oil: {
-    name: "Olej z Suszonych Pomidorów",
+    name: "Olej z suszonych pomidorów",
     type: "fat",
     color: "#FFB300",
     kcalPer100g: 884,
@@ -119,6 +131,20 @@ export const iFAT: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [100, 0, 0],
+  },
+
+  liquid_butter: {
+    name: "Roztopione masło",
+    type: "fat",
+    color: "#F6E27A",
+    kcalPer100g: 744,
+    unitWeights: {
+      lzi: 5,
+      lz: 14,
+    },
+    nutrientsPer100g: [82, 0.7, 0.7],
+    price: 25,
+    verified: true,
   },
 
   butter: {

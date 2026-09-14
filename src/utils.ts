@@ -48,7 +48,9 @@ export const ingredientCollections = [
 
 export const unitList: UnitType[] = [
   "g",
+  "kg",
   "ml",
+  "l",
   "szt",
   "lz",
   "lzi",

@@ -16,7 +16,7 @@ const ziemniakiZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.potato, amount: 1000 },
+        { ing: iVEG.potato, amount: 1, unit: "kg" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.caraway, amount: 0.5, unit: "lzi" },

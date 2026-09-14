@@ -15,7 +15,9 @@ type IngId =
   | "cocoa"
   | "coffee"
   | "sunflower_seeds"
-  | "pumpkin_seeds";
+  | "pumpkin_seeds"
+  | "black_sesame"
+  | "sesame";
 
 export const iNUT: Record<IngId, IngredientItem> = {
   //// NUTS ////
@@ -169,5 +171,31 @@ export const iNUT: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [49, 11, 30],
+  },
+
+  black_sesame: {
+    name: "Czarny sezam",
+    type: "nut",
+    subType: "see",
+    color: "#4F4F4F",
+    kcalPer100g: 573,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [50, 23, 18],
+  },
+
+  sesame: {
+    name: "Sezam",
+    type: "nut",
+    subType: "see",
+    color: "#E8D5A3",
+    kcalPer100g: 570,
+    unitWeights: {
+      lzi: 3,
+      lz: 10,
+    },
+    nutrientsPer100g: [50, 23, 17],
+    price: 21,
   },
 };

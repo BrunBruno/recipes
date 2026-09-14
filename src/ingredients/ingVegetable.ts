@@ -4,11 +4,13 @@ type IngId =
   //// VEGETABLES ////
   | "potato"
   | "young_potatoes"
+  | "sweet_potato"
   | "onion"
   | "tomato"
   | "cherry_tomato"
   | "strawberry_tomatoes"
-  | "roma_tomato"
+  | "tomato_roma"
+  | "tomato_raspberry"
   | "sun_dried_tomatoes"
   | "cucumber"
   | "ground_cucumber"
@@ -34,8 +36,12 @@ type IngId =
   | "shallot"
   | "radish"
   | "radish_peeled"
+  | "daikon_oshinko"
   | "beetroot"
   | "kohlrabi"
+  | "turnip"
+  | "pumpkin"
+  | "bottle_gourd"
   | "corn"
 
   //// GREENS ////
@@ -50,8 +56,11 @@ type IngId =
   | "red_cabbage"
   | "savoy_cabbage"
   | "brussels_sprouts"
+  | "pak_choy"
   | "cauliflower"
   | "broccoli"
+  | "asparagus"
+  | "nori"
 
   //// BEANS ////
   | "white_beans"
@@ -75,6 +84,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 77,
     unitWeights: {
       szt: 150,
+      kg: 1000,
     },
     nutrientsPer100g: [0.1, 17, 2],
     price: 3.6,
@@ -92,6 +102,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 15.7, 1.8],
   },
 
+  sweet_potato: {
+    name: "Bataty",
+    type: "veg",
+    subType: "pot",
+    color: "#E58A45",
+    kcalPer100g: 86,
+    unitWeights: { szt: 250 },
+    nutrientsPer100g: [0.1, 20, 1.6],
+  },
+
   onion: {
     name: "Cebula",
     type: "veg",
@@ -103,7 +123,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 120,
     },
     nutrientsPer100g: [0.1, 9, 1.1],
-    price: 3.5,
+    price: 5,
   },
 
   red_onion: {
@@ -123,6 +143,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   shallot: {
     name: "Szalotka",
     type: "veg",
+    isVeg: true,
     subType: "oni",
     color: "#C9A0A0",
     kcalPer100g: 72,
@@ -161,43 +182,30 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 8,
   },
 
-  cherry_tomato: {
-    name: "Pomidorki koktajlowe",
-    type: "veg",
-    isVeg: true,
-    subType: "tom",
-    color: "#E53935",
-    kcalPer100g: 18,
-    unitWeights: {
-      szt: 15,
-    },
-    nutrientsPer100g: [0.2, 3.9, 0.9],
-    price: 29.9,
-  },
-
-  strawberry_tomatoes: {
-    name: "Pomidorki truskawkowe",
-    type: "veg",
-    isVeg: true,
-    subType: "tom",
-    color: "#E53935",
-    kcalPer100g: 18,
-    unitWeights: {
-      szt: 15,
-    },
-    nutrientsPer100g: [0.2, 3.9, 0.9],
-    price: 24,
-  },
-
-  roma_tomato: {
+  tomato_raspberry: {
     name: "Pomidor malinowy",
     type: "veg",
     isVeg: true,
     subType: "tom",
-    color: "#EF5350",
-    kcalPer100g: 19,
-    nutrientsPer100g: [0.2, 4.1, 0.9],
-    price: 9,
+    color: "#E85C5C",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 180,
+    },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
+  },
+
+  tomato_roma: {
+    name: "Pomidor rzymski",
+    type: "veg",
+    isVeg: true,
+    subType: "tom",
+    color: "#D94B45",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 100,
+    },
+    nutrientsPer100g: [0.2, 3.5, 0.9],
   },
 
   sun_dried_tomatoes: {
@@ -214,6 +222,34 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.2, 15, 5.8],
     price: 90,
     verified: true,
+  },
+
+  cherry_tomato: {
+    name: "Pomidorki koktajlowe",
+    type: "veg",
+    isVeg: true,
+    subType: "crt",
+    color: "#E53935",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 29.9,
+  },
+
+  strawberry_tomatoes: {
+    name: "Pomidorki truskawkowe",
+    type: "veg",
+    isVeg: true,
+    subType: "crt",
+    color: "#E53935",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 15,
+    },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 24,
   },
 
   cucumber: {
@@ -301,34 +337,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 20,
   },
 
-  chili_pepper: {
-    name: "Papryczka chili",
-    type: "veg",
-    isVeg: true,
-    subType: "pep",
-    color: "#C62828",
-    kcalPer100g: 40,
-    unitWeights: {
-      szt: 22,
-    },
-    nutrientsPer100g: [0.4, 9, 2],
-    price: 59,
-  },
-
-  peperoni_pepper: {
-    name: "Papryka peperoni",
-    type: "veg",
-    isVeg: true,
-    subType: "pep",
-    color: "#AA4400",
-    kcalPer100g: 31,
-    unitWeights: {
-      szt: 25,
-    },
-    price: 40,
-    nutrientsPer100g: [0.3, 6, 1],
-  },
-
   red_bell_pepper: {
     name: "Papryka czerwona",
     type: "veg",
@@ -361,6 +369,35 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#43A047",
     kcalPer100g: 20,
     nutrientsPer100g: [0.2, 4.6, 0.9],
+    price: 20,
+  },
+
+  chili_pepper: {
+    name: "Papryczka chili",
+    type: "veg",
+    isVeg: true,
+    subType: "chl",
+    color: "#C62828",
+    kcalPer100g: 40,
+    unitWeights: {
+      szt: 22,
+    },
+    nutrientsPer100g: [0.4, 9, 2],
+    price: 59,
+  },
+
+  peperoni_pepper: {
+    name: "Papryka peperoni",
+    type: "veg",
+    isVeg: true,
+    subType: "chl",
+    color: "#AA4400",
+    kcalPer100g: 31,
+    unitWeights: {
+      szt: 25,
+    },
+    price: 40,
+    nutrientsPer100g: [0.3, 6, 1],
   },
 
   carrot: {
@@ -428,6 +465,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 8,
   },
 
+  celery_stalk: {
+    name: "Seler naciowy",
+    type: "veg",
+    isVeg: true,
+    subType: "lek",
+    color: "#8FBF72",
+    kcalPer100g: 14,
+    unitWeights: {
+      szt: 40,
+    },
+    nutrientsPer100g: [0.2, 3.0, 0.7],
+  },
+
   ginger: {
     name: "Imbir",
     type: "veg",
@@ -455,18 +505,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.3, 9.2, 1.5],
     price: 4.8,
-  },
-
-  celery_stalk: {
-    name: "Seler naciowy",
-    type: "veg",
-    subType: "lek",
-    color: "#8FBF72",
-    kcalPer100g: 14,
-    unitWeights: {
-      szt: 40,
-    },
-    nutrientsPer100g: [0.2, 3.0, 0.7],
   },
 
   radish: {
@@ -498,6 +536,16 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 16,
   },
 
+  daikon_oshinko: {
+    name: "Rzodkiew Oshinko",
+    type: "veg",
+    isVeg: true,
+    subType: "bet",
+    color: "#E5D8B8",
+    kcalPer100g: 30,
+    nutrientsPer100g: [0.2, 6, 0.8],
+  },
+
   beetroot: {
     name: "Burak czerwony",
     type: "veg",
@@ -523,6 +571,39 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [0.1, 6.2, 1.7],
+  },
+
+  turnip: {
+    name: "Rzepa",
+    type: "veg",
+    isVeg: true,
+    subType: "bet",
+    color: "#D9C4B0",
+    kcalPer100g: 28,
+    unitWeights: { szt: 150 },
+    nutrientsPer100g: [0.1, 6, 0.9],
+  },
+
+  pumpkin: {
+    name: "Dynia",
+    type: "veg",
+    isVeg: true,
+    subType: "pup",
+    color: "#E58A3A",
+    kcalPer100g: 26,
+    unitWeights: { szt: 1500 },
+    nutrientsPer100g: [0.1, 6.5, 1],
+  },
+
+  bottle_gourd: {
+    name: "Tykwa",
+    type: "veg",
+    isVeg: true,
+    subType: "pup",
+    color: "#A8B879",
+    kcalPer100g: 14,
+    unitWeights: { szt: 1000 },
+    nutrientsPer100g: [0.02, 3.4, 0.6],
   },
 
   corn: {
@@ -687,6 +768,17 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.3, 9, 3.4],
   },
 
+  pak_choy: {
+    name: "Pak Choy",
+    type: "veg",
+    isVeg: true,
+    subType: "gee",
+    color: "#72A85A",
+    unitWeights: { szt: 250 },
+    kcalPer100g: 13,
+    nutrientsPer100g: [0.2, 2.2, 1.5],
+  },
+
   cauliflower: {
     name: "Kalafior",
     type: "veg",
@@ -710,6 +802,29 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.4, 7, 2.8],
     price: 12,
+  },
+
+  asparagus: {
+    name: "Szparagi",
+    type: "veg",
+    isVeg: true,
+    subType: "asp",
+    color: "#75A85B",
+    unitWeights: { szt: 20 },
+    kcalPer100g: 20,
+    nutrientsPer100g: [0.1, 3.9, 2.2],
+  },
+
+  nori: {
+    name: "Nori",
+    type: "veg",
+    subType: "sea",
+    color: "#364A3B",
+    kcalPer100g: 350,
+    unitWeights: {
+      szt: 3,
+    },
+    nutrientsPer100g: [3, 40, 40],
   },
 
   //// BEANS ////
@@ -808,6 +923,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [0.5, 6, 1.5],
+    price: 75,
   },
 
   dried_mushrooms: {

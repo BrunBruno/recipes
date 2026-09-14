@@ -274,6 +274,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       szt: 20,
     },
     nutrientsPer100g: [0.5, 25.3, 1.8],
+    price: 106.5,
   },
 
   fresh_coriander: {

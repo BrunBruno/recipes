@@ -7,21 +7,20 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
-const portions = 4;
-
+const portions = 3;
 const plackiZSosemKurkowym: Recipe = {
   name: "Placki z Sosem Kurkowym",
   type: "snack",
-  images: [""],
+  images: ["placki-z-sosem-kurkowym.jpg", "placki-z-sosem-kurkowym-2.jpg"],
   time: 35,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 3,
   ingredients: [
     {
       title: "Placki ziemniaczane",
       items: [
-        { ing: iVEG.potato, amount: 500 },
+        { ing: iVEG.potato, amount: 700 },
         { ing: iGRN.flour, amount: 0.5, unit: "lz" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iMET.egg, amount: 1, unit: "szt" },
@@ -32,8 +31,8 @@ const plackiZSosemKurkowym: Recipe = {
     {
       title: "Sos kurkowy",
       items: [
-        { ing: iVEG.chanterelle, amount: 300 },
-        { ing: iVEG.onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.chanterelle, amount: 200 },
+        { ing: iVEG.onion, amount: 0.25, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 125, unit: "ml" },

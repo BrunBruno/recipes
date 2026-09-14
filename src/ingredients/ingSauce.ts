@@ -24,7 +24,9 @@ type IngId =
   | "remoulade"
   | "horseradish_sauce"
   | "cream_sauce"
-  | "sweet_sour_sauce";
+  | "sweet_sour_sauce"
+  | "wasabi"
+  | "trinidad_scorpion_sauce";
 
 export const iSAU: Record<IngId, IngredientItem> = {
   //// SAUCES ////
@@ -314,5 +316,25 @@ export const iSAU: Record<IngId, IngredientItem> = {
     color: "#E85D2A",
     kcalPer100g: 160,
     nutrientsPer100g: [0.2, 38.0, 0.5],
+  },
+
+  wasabi: {
+    name: "Wasabi",
+    type: "sau",
+    color: "#8BAE45",
+    kcalPer100g: 110,
+    unitWeights: {
+      lzi: 5,
+    },
+    nutrientsPer100g: [0, 24, 4],
+  },
+
+  trinidad_scorpion_sauce: {
+    name: "Sos Trinidad Scorpion",
+    type: "sau",
+    subType: "hot",
+    color: "#C94A32",
+    kcalPer100g: 40,
+    nutrientsPer100g: [0.5, 8, 1],
   },
 };

@@ -17,8 +17,6 @@ type IngId =
   | "cinnamon"
   | "nutmeg"
   | "allspice"
-  | "black_sesame"
-  | "sesame"
   | "cumin"
   | "garam_masala"
   | "clove"
@@ -32,6 +30,7 @@ type IngId =
   | "gingerbread_seasoning"
   | "gyros_spice"
   | "marinade_prymat"
+  | "goulash_seasoning"
   //
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
@@ -54,6 +53,9 @@ type IngId =
   | "knorr_chicken_with_tomatoes_fix"
   | "knorr_alfredo_chicken_pasta_fix"
   | "knorr_ratatouille_fix"
+  | "knorr_creamy_salmon_fix"
+  | "knorr_creamy_salmon_fix"
+  | "knorr_tagliatelle_chicken_fix"
   //
   | "winiary_tomato_sauce_fix"
   | "winiary_pork_neck_fix"
@@ -61,6 +63,8 @@ type IngId =
   | "winiary_dark_roast_sauce_fix"
   | "winiary_peasant_stew_fix"
   | "winiary_juicy_ribs_fix"
+  | "winiary_hunters_sauce_fix"
+  | "winiary_hearty_pot_fix"
   //
   | "kamis_penne_fix"
   //
@@ -250,29 +254,6 @@ export const iSPC: Record<IngId, IngredientItem> = {
     price: 107.5,
   },
 
-  black_sesame: {
-    name: "Czarny sezam",
-    type: "spc",
-    color: "#4F4F4F",
-    kcalPer100g: 573,
-    unitWeights: {
-      lzi: 3,
-    },
-    nutrientsPer100g: [50, 23, 18],
-  },
-
-  sesame: {
-    name: "Sezam",
-    type: "spc",
-    color: "#E8D5A3",
-    kcalPer100g: 570,
-    unitWeights: {
-      lzi: 3,
-      lz: 10,
-    },
-    nutrientsPer100g: [50, 23, 17],
-  },
-
   cumin: {
     name: "Kumin rzymski",
     type: "spc",
@@ -398,6 +379,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [5, 55, 8],
+  },
+
+  goulash_seasoning: {
+    name: "Przyprawa do gulaszu Knorr",
+    type: "spc",
+    color: "#A65F3F",
+    kcalPer100g: 250,
+    unitWeights: {
+      opak: 30,
+    },
+    nutrientsPer100g: [3, 45, 8],
   },
 
   knorr_bouillon_cube: {
@@ -683,6 +675,30 @@ export const iSPC: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  knorr_creamy_salmon_fix: {
+    name: "Fix Kremowy Łosoś",
+    type: "spc",
+    subType: "sah",
+    color: "#D97745",
+    kcalPer100g: 476,
+    unitWeights: {
+      opak: 40,
+    },
+    nutrientsPer100g: [27, 47, 9.6],
+  },
+
+  knorr_tagliatelle_chicken_fix: {
+    name: "Fix Tagliatelle z Kurczakiem",
+    type: "spc",
+    subType: "sah",
+    color: "#D97745",
+    kcalPer100g: 330,
+    unitWeights: {
+      opak: 48,
+    },
+    nutrientsPer100g: [5, 58, 10],
+  },
+
   winiary_tomato_sauce_fix: {
     name: "Fix Sos Pomidorowy",
     type: "spc",
@@ -760,6 +776,30 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [17.6, 1.8, 17.8],
     price: 125,
     verified: true,
+  },
+
+  winiary_hunters_sauce_fix: {
+    name: "Fix Sos Myśliwski",
+    type: "spc",
+    subType: "sah",
+    color: "#D97745",
+    kcalPer100g: 300,
+    unitWeights: {
+      opak: 30,
+    },
+    nutrientsPer100g: [3, 58, 8],
+  },
+
+  winiary_hearty_pot_fix: {
+    name: "Fix Sycący Garnek",
+    type: "spc",
+    subType: "sah",
+    color: "#D97745",
+    kcalPer100g: 300,
+    unitWeights: {
+      opak: 39,
+    },
+    nutrientsPer100g: [4, 55, 10],
   },
 
   kamis_penne_fix: {

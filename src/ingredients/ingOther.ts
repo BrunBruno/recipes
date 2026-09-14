@@ -217,6 +217,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       ml: 1,
     },
     nutrientsPer100g: [0, 0, 0],
+    price: 233,
   },
 
   powdered_borscht: {

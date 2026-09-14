@@ -4,6 +4,7 @@ import { iFSH } from "../../ingredients/ingFish";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -27,8 +28,8 @@ const roladaSzpinakowa: Recipe = {
         { ing: iDIR.cream_cheese_horseradish, amount: 200 },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
         { ing: iFAT.olive_oil, amount: 2, unit: "lz" },
+        { ing: iNUT.black_sesame },
         { ing: iSPC.nutmeg },
-        { ing: iSPC.black_sesame },
         { ing: iSPC.salt },
         { ing: iSPC.black_pepper },
       ],

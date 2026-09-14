@@ -3,6 +3,7 @@ import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
+import { iNUT } from "../../ingredients/ingNut";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
@@ -10,7 +11,7 @@ import type { Recipe } from "../../types";
 const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
   type: "dinner",
-  images: [""],
+  images: ["kurczak-po-seczuansku-fix.jpg", "kurczak-po-seczuansku-fix-2.jpg"],
   time: 20,
   portions: 2,
   taste: null,
@@ -26,7 +27,7 @@ const kurczakPoSeczuansku: Recipe = {
         { ing: iFAT.oil, amount: 15, unit: "ml" },
         { ing: iLIQ.water, amount: 300, unit: "ml" },
         { ing: iSPC.kania_sechuan_fix, amount: 1, unit: "opak" },
-        { ing: iSPC.sesame, amount: 10 },
+        { ing: iNUT.sesame, amount: 10 },
       ],
     },
   ],

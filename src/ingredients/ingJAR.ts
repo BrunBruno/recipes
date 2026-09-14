@@ -9,6 +9,7 @@ type IngId =
   | "pickled_cucumber"
   | "pickled_cucumber_vinegar"
   | "lightly_pickled_cucumber"
+  | "pickles"
   | "sauerkraut"
   | "fried_onion"
   | "fried_beets"
@@ -18,6 +19,8 @@ type IngId =
   | "sun_dried_tomatoes_in_oil"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
+  | "pickled_ginger"
+  | "kanpyo"
 
   //// JAMS ////
   | "jam_strawberry"
@@ -54,6 +57,7 @@ type IngId =
   | "tortellini_meat"
   | "frozen_uszka"
   | "frozen_won_ton"
+  | "onion_rings"
 
   //// SALADS ////
   | "coleslaw"
@@ -147,13 +151,25 @@ export const iJAR: Record<IngId, IngredientItem> = {
   lightly_pickled_cucumber: {
     name: "Ogórki małosolne",
     type: "jar",
-    subType: "pic",
+    isVeg: true,
     color: "#7FAE62",
     kcalPer100g: 11,
     unitWeights: {
       szt: 80,
     },
     nutrientsPer100g: [0.2, 1.5, 0.5],
+  },
+
+  pickles: {
+    name: "Pikle",
+    type: "jar",
+    isVeg: true,
+    color: "#7E9F45",
+    kcalPer100g: 25,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [0.2, 5, 1],
   },
 
   sauerkraut: {
@@ -265,6 +281,22 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [0, 18, 1],
+  },
+
+  pickled_ginger: {
+    name: "Marynowany imbir",
+    type: "jar",
+    color: "#E8B9A4",
+    kcalPer100g: 50,
+    nutrientsPer100g: [0.1, 12, 0.5],
+  },
+
+  kanpyo: {
+    name: "Kanpyō",
+    type: "jar",
+    color: "#D8C79E",
+    kcalPer100g: 260,
+    nutrientsPer100g: [0.5, 60, 7],
   },
 
   //// JAMS ////
@@ -537,6 +569,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   frozen_raspberries: {
     name: "Maliny mrożone",
     type: "jar",
+    isVeg: true,
     subType: "fro",
     color: "#E5395F",
     kcalPer100g: 52,
@@ -544,6 +577,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [0.7, 12, 1.2],
+    price: 34,
   },
 
   frozen_broccoli: {
@@ -636,6 +670,16 @@ export const iJAR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 250,
     },
+  },
+
+  onion_rings: {
+    name: "Krążki cebulowe",
+    type: "jar",
+    subType: "fro",
+    color: "#D9A24A",
+    kcalPer100g: 320,
+    unitWeights: { szt: 15 },
+    nutrientsPer100g: [16, 38, 5],
   },
 
   //// SALADS ////

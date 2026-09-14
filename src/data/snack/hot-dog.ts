@@ -7,7 +7,7 @@ import type { Recipe } from "../../types";
 const hotHog: Recipe = {
   name: "Hot Dog",
   type: "snack",
-  images: ["hot-dog.jpg", "hot-dog-2.jpg"],
+  images: ["hot-dog.jpg", "hot-dog-2.jpg", "hot-dog-3.jpg"],
   time: 10,
   portions: 2,
   taste: 4,

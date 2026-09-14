@@ -8,12 +8,13 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 3;
 const penneZKurczakiem: Recipe = {
   name: "Penne z Kurczakiem",
   type: "dinner",
   images: ["penne-z-kurczakiem.jpg"],
   time: 20,
-  portions: 2,
+  portions: portions,
   taste: 3,
   difficulty: 1,
   ingredients: [
