@@ -46,6 +46,7 @@ type IngId =
   | "ham_cooked"
   | "polendwica"
   | "chicken_ham"
+  | "turkey_ham"
   | "smoked_ham"
   | "ham_canned"
   | "salami"
@@ -411,6 +412,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   beef_steak: {
     name: "Stek wołowy",
+    group: "steak",
     type: "met",
     color: "#7B2D2D",
     kcalPer100g: 250,
@@ -423,6 +425,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   sirloin_steak: {
     name: "Stek rostbef",
+    group: "steak",
     type: "met",
     color: "#9E3F32",
     kcalPer100g: 220,
@@ -561,12 +564,28 @@ export const iMET: Record<IngId, IngredientItem> = {
     type: "met",
     subType: "crd",
     color: "#F4B6A6",
-    kcalPer100g: 95,
+    kcalPer100g: 110,
     unitWeights: {
       plas: 15,
-      opak: 120,
+      opak: 250,
     },
-    nutrientsPer100g: [2, 2, 17],
+    nutrientsPer100g: [4, 2, 16],
+    price: 40,
+    verified: true,
+  },
+
+  turkey_ham: {
+    name: "Szynka z indyka",
+    type: "met",
+    subType: "crd",
+    color: "#F6C1B4",
+    kcalPer100g: 126,
+    unitWeights: {
+      plas: 15,
+      opak: 250,
+    },
+    nutrientsPer100g: [5, 2, 18],
+    price: 40,
   },
 
   smoked_ham: {
@@ -788,6 +807,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   meat_spread: {
     name: "Pasztet",
+    group: "meat_spread",
     type: "met",
     subType: "can",
     color: "#A1887F",
@@ -800,6 +820,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   liver_sausage: {
     name: "Pasztetowa",
+    group: "meat_spread",
     type: "met",
     subType: "can",
     color: "#e9cebd",

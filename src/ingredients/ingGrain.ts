@@ -96,6 +96,9 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     color: "#E5C65B",
     kcalPer100g: 360,
+    unitWeights: {
+      lz: 10,
+    },
     nutrientsPer100g: [3.9, 76, 7],
   },
 
@@ -329,7 +332,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
   },
 
   fettuccine_pasta: {
-    name: "Makaron Fettuccine",
+    name: "Makaron fettuccine",
     type: "grn",
     color: "#F2D39B",
     kcalPer100g: 350,

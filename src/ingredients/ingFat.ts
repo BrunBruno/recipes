@@ -3,7 +3,6 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// FATS ////
   | "oil"
-  | "vegetable_oil"
   | "rapeseed_oil"
   | "sunflower_oil"
   | "sesame_oil"
@@ -23,23 +22,8 @@ type IngId =
 
 export const iFAT: Record<IngId, IngredientItem> = {
   oil: {
-    name: "Olej",
-    type: "fat",
-    color: "#E6C65B",
-    kcalPer100g: 884,
-    unitWeights: {
-      lz: 10,
-      lzi: 4,
-      ml: 0.9,
-      szk: 220,
-    },
-    nutrientsPer100g: [100, 0, 0],
-    price: 6,
-    verified: true,
-  },
-
-  vegetable_oil: {
     name: "Olej roślinny",
+    group: "oil",
     type: "fat",
     color: "#E6C65B",
     kcalPer100g: 884,
@@ -56,6 +40,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
 
   rapeseed_oil: {
     name: "Olej rzepakowy",
+    group: "oil",
     type: "fat",
     color: "#F2D16B",
     kcalPer100g: 884,
@@ -72,6 +57,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
 
   sunflower_oil: {
     name: "Olej słonecznikowy",
+    group: "oil",
     type: "fat",
     color: "#F5C542",
     kcalPer100g: 884,
@@ -95,7 +81,7 @@ export const iFAT: Record<IngId, IngredientItem> = {
   },
 
   olive_oil: {
-    name: "Oliwa",
+    name: "Oliwa z oliwek",
     type: "fat",
     color: "#556B2F",
     kcalPer100g: 884,

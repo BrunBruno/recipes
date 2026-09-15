@@ -2,7 +2,6 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import { iFRT } from "../../ingredients/ingFruit";
 import { iGRN } from "../../ingredients/ingGrain";
-import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iNUT } from "../../ingredients/ingNut";
 import { iOTH } from "../../ingredients/ingOther";
@@ -26,14 +25,7 @@ const ciastoMarchewkowe: Recipe = {
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: 150, unit: "ml" },
         { ing: iVEG.carrot, amount: 200 },
-        {
-          type: "choice",
-          options: [
-            { ing: iJAR.canned_pineapple, amount: 75 },
-            { ing: iFRT.pineapple, amount: 75 },
-          ],
-          selected: 0,
-        },
+        { ing: iFRT.pineapple, amount: 75, replaceable: true },
         { ing: iNUT.walnuts, amount: 50 },
         { ing: iNUT.coconut_flakes, amount: 50 },
         { ing: iOTH.sugar, amount: 200 },

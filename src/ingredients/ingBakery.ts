@@ -43,6 +43,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [3, 54, 8.5],
     price: 6.2,
+    group: "roll",
   },
 
   multigrain_kaiser_roll: {
@@ -55,6 +56,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [4.5, 46, 10],
     price: 6.9,
+    group: "roll",
   },
 
   graham_roll: {
@@ -67,17 +69,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [3, 48, 9],
-  },
-
-  baguette: {
-    name: "Bagietka",
-    type: "bak",
-    color: "#E8C98A",
-    unitWeights: {
-      szt: 250,
-    },
-    kcalPer100g: 270,
-    nutrientsPer100g: [2, 55, 9],
+    group: "roll",
   },
 
   morning_roll: {
@@ -90,6 +82,18 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [3.5, 52, 8],
     price: 12.8,
+    group: "roll",
+  },
+
+  baguette: {
+    name: "Bagietka",
+    type: "bak",
+    color: "#E8C98A",
+    unitWeights: {
+      szt: 250,
+    },
+    kcalPer100g: 270,
+    nutrientsPer100g: [2, 55, 9],
   },
 
   rye_bread: {
@@ -282,8 +286,11 @@ export const iBAK: Record<IngId, IngredientItem> = {
     type: "bak",
     color: "#E0A96D",
     kcalPer100g: 250,
-    unitWeights: { szt: 230 },
+    unitWeights: {
+      szt: 230,
+    },
     nutrientsPer100g: [6, 50, 8],
+    price: 45.6,
   },
 
   //// SNACKS ////

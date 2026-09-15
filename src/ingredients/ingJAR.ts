@@ -114,12 +114,14 @@ export const iJAR: Record<IngId, IngredientItem> = {
     name: "Sos pomidorowy",
     type: "jar",
     color: "#D32F2F",
-    kcalPer100g: 50,
+    kcalPer100g: 60,
     unitWeights: {
-      opak: 200,
+      opak: 400,
       ml: 1,
     },
-    nutrientsPer100g: [0.5, 8, 1.5],
+    nutrientsPer100g: [3.1, 5.5, 1.4],
+    price: 23.7,
+    verified: true,
   },
 
   pickled_cucumber: {
@@ -410,6 +412,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
 
   canned_pineapple: {
     name: "Ananas w puszce",
+    group: "pineapple",
     type: "jar",
     isVeg: true,
     color: "#FFD54F",
@@ -582,6 +585,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
 
   frozen_broccoli: {
     name: "Mrożone brokuły",
+    group: "broccoli",
     type: "jar",
     isVeg: true,
     subType: "fro",

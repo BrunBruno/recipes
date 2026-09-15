@@ -980,3 +980,15 @@ export const getIngredientRecipeNames = (
 
   return result;
 };
+
+export const getRecipeKeywords = (recipe: Recipe): string[] => {
+  const ingredientKeywords = recipe.ingredients.flatMap((group) =>
+    group.items.map((item) =>
+      "ing" in item ? item.ing.name.toLowerCase() : "",
+    ),
+  );
+
+  return [...(recipe.keyWords ?? []), ...ingredientKeywords];
+};
+
+

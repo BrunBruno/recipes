@@ -682,9 +682,10 @@ export const iSPC: Record<IngId, IngredientItem> = {
     color: "#D97745",
     kcalPer100g: 476,
     unitWeights: {
-      opak: 40,
+      opak: 35,
     },
     nutrientsPer100g: [27, 47, 9.6],
+    verified: true,
   },
 
   knorr_tagliatelle_chicken_fix: {
@@ -692,11 +693,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#D97745",
-    kcalPer100g: 330,
+    kcalPer100g: 513,
     unitWeights: {
-      opak: 48,
+      opak: 36,
     },
-    nutrientsPer100g: [5, 58, 10],
+    nutrientsPer100g: [34, 44, 7.2],
+    verified: true,
   },
 
   winiary_tomato_sauce_fix: {
@@ -783,11 +785,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#D97745",
-    kcalPer100g: 300,
+    kcalPer100g: 411,
     unitWeights: {
       opak: 30,
     },
-    nutrientsPer100g: [3, 58, 8],
+    nutrientsPer100g: [12.2, 65.6, 3.3],
+    verified: true,
   },
 
   winiary_hearty_pot_fix: {
@@ -795,7 +798,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#D97745",
-    kcalPer100g: 300,
+    kcalPer100g: 97,
     unitWeights: {
       opak: 39,
     },

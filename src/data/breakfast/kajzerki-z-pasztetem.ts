@@ -15,23 +15,8 @@ const kajzerkiZPasztetem: Recipe = {
     {
       title: "",
       items: [
-        {
-          type: "choice",
-          options: [
-            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
-          ],
-          selected: 0,
-        },
-        {
-          type: "choice",
-          options: [
-            { ing: iMET.meat_spread, amount: 80 },
-            { ing: iMET.liver_sausage, amount: 80 },
-          ],
-          selected: 0,
-        },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
+        { ing: iMET.meat_spread, amount: 80, replaceable: true },
         { ing: iJAR.pickled_cucumber, amount: 1, unit: "szt" },
       ],
     },
@@ -47,7 +32,7 @@ const kajzerkiZPasztetem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "mięso"],
 };
 
 export default kajzerkiZPasztetem;

@@ -35,6 +35,7 @@ import { Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
+import { getIngredientGroup } from "../../ingredientGroups";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -67,6 +68,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   const [grams, setGrams] = useState<number>(100);
   const [mealType, setMealType] = useState<DayMealType>("breakfast");
   const [unitFormat, setUniFormat] = useState<"u" | "g" | "p">("u");
+  const [swapGroup, setSwapGroup] = useState<IngredientChoice | null>(null);
+  const [swapGroupIndex, setSwapGroupIndex] = useState<[number, number] | null>(
+    null,
+  );
+  const [swapTop, setSwapTop] = useState<number>(0);
 
   useEffect(() => {
     if (selectedRecipe.type === "breakfast") {
@@ -394,11 +400,27 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     } else if (unitFormat === "g") {
       return (
         <span className="ingredient-amount">
-          {weight === 0 ? "---" : weight}
+          {weight === 0 ? "---" : weight.toFixed(1)}
           {weight !== 0 && <span className="ingredient-unit">g</span>}
         </span>
       );
     }
+  };
+
+  const handleSelect = (
+    element: HTMLElement,
+    item: IngredientChoice,
+    groupIndex: [number, number],
+  ) => {
+    const rect = element.getBoundingClientRect();
+    const parentRect =
+      element.parentElement?.parentElement?.getBoundingClientRect();
+
+    if (!parentRect) return;
+
+    setSwapGroup(item);
+    setSwapGroupIndex(groupIndex);
+    setSwapTop(rect.top - parentRect.top);
   };
 
   const allIngredientGroups = [
@@ -680,14 +702,16 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 >
                   {column.map(({ group, groupIndex }) => (
                     <div key={groupIndex} className={`recipe-ingredient-group`}>
-                      <div className="ingredients-list-container">
+                      <div
+                        className={`ingredients-list-container ${swapGroup ? "inactive" : ""}`}
+                      >
                         <h4 className="ingredient-group-title">
                           {group.title
                             ? `Składniki: ${group.title}`
                             : "Lista składników"}
                         </h4>
 
-                        <ul className="ingredients-list">
+                        <ul className={"ingredients-list"}>
                           {group.items.map((item, index) => {
                             if ("type" in item && item.type === "choice") {
                               const active = item.options[item.selected];
@@ -708,24 +732,17 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
 
                                   {renderUnitAndPrice(active)}
 
-                                  <button
-                                    className="ingredient-alt"
-                                    onClick={() => {
-                                      setRecipeState((prev) => {
-                                        const copy = structuredClone(prev);
-
-                                        const it = copy.ingredients[groupIndex]
-                                          .items[index] as any;
-
-                                        it.selected =
-                                          (it.selected + 1) % it.options.length;
-
-                                        return copy;
-                                      });
+                                  <div
+                                    className="swap-item"
+                                    onClick={(e) => {
+                                      handleSelect(e.currentTarget, item, [
+                                        index,
+                                        groupIndex,
+                                      ]);
                                     }}
                                   >
                                     <UtilsIcon name="swap" color="#fff" />
-                                  </button>
+                                  </div>
                                 </li>
                               );
                             }
@@ -752,6 +769,32 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                                 </span>
 
                                 {renderUnitAndPrice(ingredientItem)}
+
+                                {ingredientItem.replaceable && ing.group && (
+                                  <div
+                                    className="swap-item"
+                                    onClick={(e) => {
+                                      if (ing.group) {
+                                        const unit =
+                                          ingredientItem.unit ?? null;
+                                        const amount =
+                                          ingredientItem.amount ?? 0;
+                                        const weight = unit
+                                          ? amount *
+                                            (ing.unitWeights?.[unit] ?? 0)
+                                          : amount;
+
+                                        handleSelect(
+                                          e.currentTarget,
+                                          getIngredientGroup(ing.group, weight),
+                                          [index, groupIndex],
+                                        );
+                                      }
+                                    }}
+                                  >
+                                    <UtilsIcon name="swap" color="#fff" />
+                                  </div>
+                                )}
                               </li>
                             );
                           })}
@@ -761,6 +804,60 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                   ))}
                 </div>
               ))}
+
+              {swapGroup && (
+                <div
+                  className="ingredients-list-container selection-container"
+                  style={{ top: `${swapTop}px` }}
+                >
+                  <h4 className="ingredient-group-title">Wybierz z listy</h4>
+                  <ul className="ingredients-list">
+                    {swapGroup.options.map((option, index) => (
+                      <li
+                        key={index}
+                        className="ingredient-item selection-item"
+                        onClick={() => {
+                          if (swapGroupIndex !== null) {
+                            setRecipeState((prev) => {
+                              const copy = structuredClone(prev);
+
+                              let it = copy.ingredients[swapGroupIndex[1]]
+                                .items[swapGroupIndex[0]] as any;
+
+                              if ("type" in it) {
+                                it.selected = index;
+                              } else {
+                                copy.ingredients[swapGroupIndex[1]].items[
+                                  swapGroupIndex[0]
+                                ] = option;
+                              }
+
+                              return copy;
+                            });
+
+                            setSwapGroup(null);
+                            setSwapGroupIndex(null);
+                          }
+                        }}
+                      >
+                        <div className="ingredient-indicator">
+                          <IngredientIcon
+                            ingType={option.ing.type}
+                            subType={option.ing.subType}
+                            color={option.ing.color}
+                          />
+                        </div>
+
+                        <span className="ingredient-name">
+                          {option.ing.name}
+                        </span>
+
+                        {renderUnitAndPrice(option)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </section>
 

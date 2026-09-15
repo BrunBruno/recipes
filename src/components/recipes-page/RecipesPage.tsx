@@ -3,7 +3,7 @@ import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
 import type { Recipe, MealType, KeyWord, DayIngredients } from "../../types";
-import { keywordAliases, MealTypesData } from "../../utils";
+import { getRecipeKeywords, keywordAliases, MealTypesData } from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
@@ -35,12 +35,20 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
   };
 
   const normalize = (text: string) => text.toLowerCase().trim();
-  const matchesKeyword = (query: string, recipeKeywords: KeyWord[]) => {
-    const q = normalize(query);
+  const matchesKeyword = (query: string, recipe: Recipe) => {
+    const normalizedQuery = query.trim().toLowerCase();
 
-    return recipeKeywords.some((kw) =>
-      keywordAliases[kw].some((alias) => alias.includes(q)),
-    );
+    if (!normalizedQuery) return true;
+
+    const keywords = getRecipeKeywords(recipe);
+
+    return keywords.some((keyword) => {
+      const aliases = keywordAliases[keyword as KeyWord] ?? [keyword];
+
+      return aliases.some((alias) =>
+        alias.toLowerCase().includes(normalizedQuery),
+      );
+    });
   };
 
   const filteredRecipes = recipes
@@ -51,9 +59,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
       const query = normalize(searchQuery);
 
       const nameMatch = r.name.toLowerCase().includes(query);
-      const keywordsMatch = r.keyWords
-        ? matchesKeyword(query, r.keyWords)
-        : false;
+      const keywordsMatch = r.keyWords ? matchesKeyword(query, r) : false;
 
       const hasImages = r.images.some((img) => img !== "");
       const onlyEmptyImages = r.images.every((img) => img === "");

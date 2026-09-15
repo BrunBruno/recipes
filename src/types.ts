@@ -1,4 +1,5 @@
 import type { DinnerSidesNames } from "./dinnerSides";
+import type { IngGroups } from "./ingredientGroups";
 
 export type DayMealType = "breakfast" | "lunch" | "dinner";
 export type MealType =
@@ -91,14 +92,16 @@ export type IngredientItem = {
   isVeg?: true; // is frt or veg
   price?: number; // zl/kg
   verified?: boolean;
+  group?: IngGroups;
 };
 
 export type Ingredient = {
   ing: IngredientItem;
   amount?: number;
   unit?: UnitType;
-  exclude?: boolean;
-  invisible?: boolean;
+  exclude?: true;
+  invisible?: true;
+  replaceable?: true;
 };
 
 export type IngredientChoice = {

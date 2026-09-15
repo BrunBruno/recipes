@@ -18,15 +18,7 @@ const kajzerkiZJajkiem: Recipe = {
     {
       title: "",
       items: [
-        {
-          type: "choice",
-          options: [
-            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
-          ],
-          selected: 0,
-        },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },

@@ -27,6 +27,7 @@ const kurczakZFettuccine: Recipe = {
           type: "choice",
           options: [
             { ing: iGRN.fettuccine_pasta, amount: 200 },
+            { ing: iGRN.tagliatelle_pasta, amount: 200 },
             { ing: iGRN.penne_pasta, amount: 200 },
           ],
           selected: 0,

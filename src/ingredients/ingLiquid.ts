@@ -467,6 +467,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 500,
       ml: 1,
+      l: 1000,
     },
     nutrientsPer100g: [0.2, 9, 1.5],
   },

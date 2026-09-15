@@ -17,18 +17,15 @@ const kajzerkiZPomidorem: Recipe = {
     {
       title: "",
       items: [
-        {
-          type: "choice",
-          options: [
-            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
-          ],
-          selected: 0,
-        },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
-        { ing: iVEG.tomato_raspberry, amount: 1, unit: "szt" },
-        { ing: iVEG.onion, amount: 0.5, unit: "szt" },
+        {
+          ing: iVEG.tomato_raspberry,
+          amount: 1,
+          unit: "szt",
+          replaceable: true,
+        },
+        { ing: iVEG.onion, amount: 0.5, unit: "szt", replaceable: true },
         { ing: iFAT.butter, amount: 10 },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

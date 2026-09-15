@@ -1,5 +1,6 @@
 import { iBAK } from "../../ingredients/ingBakery";
 import { iDIR } from "../../ingredients/ingDairy";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iJAR } from "../../ingredients/ingJar";
 import { iMET } from "../../ingredients/ingMeat";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -8,21 +9,23 @@ import type { Recipe } from "../../types";
 const pizzaZPinsy: Recipe = {
   name: "Pizza z Pinsy",
   type: "snack",
-  images: [""],
+  images: ["pizza-z-pinsy.jpg", "pizza-z-pinsy-2.jpg"],
   time: 15,
   portions: 1,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
         { ing: iBAK.pinsa, amount: 1, unit: "szt" },
         { ing: iJAR.tomato_sauce, amount: 0.5, unit: "opak" },
-        { ing: iDIR.yellow_mozzarella, amount: 2, unit: "plas" },
+        { ing: iDIR.yellow_mozzarella, amount: 60 },
         { ing: iMET.chicken_ham, amount: 2, unit: "plas" },
-        { ing: iVEG.arugula, amount: 50 },
+        { ing: iVEG.arugula, amount: 30 },
         { ing: iVEG.cherry_tomato, amount: 8, unit: "szt" },
+        { ing: iDIR.hard_cheese, amount: 10 },
+        { ing: iHRB.fresh_basil, amount: 5, unit: "lst" },
       ],
     },
   ],

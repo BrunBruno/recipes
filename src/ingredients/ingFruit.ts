@@ -106,6 +106,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
 
   pineapple: {
     name: "Ananas",
+    group: "pineapple",
     type: "frt",
     isVeg: true,
     subType: "ana",

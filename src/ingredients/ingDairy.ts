@@ -463,11 +463,13 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#F4D03F",
-    kcalPer100g: 280,
+    kcalPer100g: 297,
     unitWeights: {
-      plas: 20,
+      opak: 300,
     },
-    nutrientsPer100g: [18, 2, 22],
+    nutrientsPer100g: [22, 0, 24],
+    price: 28,
+    verified: true,
   },
 
   burrata: {
@@ -522,6 +524,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   yellow_cheese: {
     name: "Ser żółty",
+    group: "yellow_cheese",
     type: "dir",
     subType: "che",
     color: "#FFCA28",
@@ -538,6 +541,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   gouda_cheese: {
     name: "Ser gouda",
+    group: "yellow_cheese",
     type: "dir",
     subType: "che",
     color: "#FFB300",
@@ -554,6 +558,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   edam_cheese: {
     name: "Ser Edam",
+    group: "yellow_cheese",
     type: "dir",
     subType: "che",
     color: "#FFD54F",
@@ -568,6 +573,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
 
   tylzycki_cheese: {
     name: "Ser tylżycki",
+    group: "yellow_cheese",
     type: "dir",
     subType: "che",
     color: "#FFE8A3",
@@ -593,31 +599,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [27, 0, 25],
   },
 
-  parmigiano_reggiano: {
-    name: "Ser Parmigiano Reggiano",
-    type: "dir",
-    subType: "che",
-    color: "#F9A825",
-    kcalPer100g: 402,
-    unitWeights: {
-      plas: 10,
-    },
-    nutrientsPer100g: [30, 0, 32],
-  },
-
-  parmesan: {
-    name: "Parmezan",
-    type: "dir",
-    subType: "che",
-    color: "#F9E79F",
-    kcalPer100g: 431,
-    unitWeights: {
-      lz: 10,
-    },
-    nutrientsPer100g: [29, 4, 36],
-    price: 53,
-  },
-
   cheddar_cheese: {
     name: "Ser cheddar",
     type: "dir",
@@ -630,8 +611,36 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [33, 1.3, 25],
   },
 
+  parmigiano_reggiano: {
+    name: "Ser Parmigiano Reggiano",
+    group: "hard_cheese",
+    type: "dir",
+    subType: "che",
+    color: "#F9A825",
+    kcalPer100g: 402,
+    unitWeights: {
+      plas: 10,
+    },
+    nutrientsPer100g: [30, 0, 32],
+  },
+
+  parmesan: {
+    name: "Parmezan",
+    group: "hard_cheese",
+    type: "dir",
+    subType: "che",
+    color: "#F9E79F",
+    kcalPer100g: 431,
+    unitWeights: {
+      lz: 10,
+    },
+    nutrientsPer100g: [29, 4, 36],
+    price: 53,
+  },
+
   hard_cheese: {
     name: "Ser twardy",
+    group: "hard_cheese",
     type: "dir",
     subType: "che",
     color: "#F5D77A",

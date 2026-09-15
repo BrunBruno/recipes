@@ -28,14 +28,7 @@ const chicker: Recipe = {
       title: "Sosy",
       items: [
         { ing: iSAU.ketchup, amount: 1.5, unit: "lzi" },
-        {
-          type: "choice",
-          options: [
-            { ing: iSAU.sriracha, amount: 2, unit: "lzi" },
-            { ing: iSAU.ketchup_spicy, amount: 2, unit: "lzi" },
-          ],
-          selected: 0,
-        },
+        { ing: iSAU.sriracha, amount: 2, unit: "lzi" },
         { ing: iSAU.mustard_dessert, amount: 2, unit: "lzi" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "lzi" },
         { ing: iLIQ.honey, amount: 0.5, unit: "lzi" },

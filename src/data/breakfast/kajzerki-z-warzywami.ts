@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const kajzerkiZWarzywami: Recipe = {
   name: "Kajzerki z Warzywami",
   type: "breakfast",
-  images: ["kajzerki-z-warzywami.jpg"],
+  images: ["kajzerki-z-warzywami.jpg", "kajzerki-z-warzywami-2.jpg"],
   time: 10,
   portions: 1,
   taste: 4,
@@ -18,18 +18,16 @@ const kajzerkiZWarzywami: Recipe = {
     {
       title: "Podstawa",
       items: [
-        {
-          type: "choice",
-          options: [
-            { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.multigrain_kaiser_roll, amount: 2, unit: "szt" },
-            { ing: iBAK.morning_roll, amount: 2, unit: "szt" },
-          ],
-          selected: 0,
-        },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
         { ing: iFAT.butter, amount: 20 },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
-        { ing: iVEG.lettuce, amount: 4, unit: "lst" },
+        { ing: iVEG.lettuce, amount: 4, unit: "lst", replaceable: true },
+        { ing: iSPC.salt },
+      ],
+    },
+    {
+      title: "Proponowane warzywa",
+      items: [
         {
           type: "choice",
           selected: 0,
@@ -42,12 +40,6 @@ const kajzerkiZWarzywami: Recipe = {
             { ing: iHRB.chives, amount: 10 },
           ],
         },
-        { ing: iSPC.salt },
-      ],
-    },
-    {
-      title: "Proponowane warzywa",
-      items: [
         { ing: iVEG.cucumber, exclude: true },
         { ing: iVEG.tomato, exclude: true },
         { ing: iVEG.bell_pepper, exclude: true },

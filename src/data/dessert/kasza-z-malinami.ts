@@ -19,13 +19,20 @@ const kaszaZMalinami: Recipe = {
       title: "",
       items: [
         { ing: iGRN.semolina, amount: 50 },
-        { ing: iDIR.milk, amount: 250, unit: "ml" },
         { ing: iJAR.frozen_raspberries, amount: 100 },
         { ing: iFRT.raspberries, amount: 20 },
+        { ing: iDIR.milk, amount: 250, unit: "ml" },
         { ing: iDIR.vanilla_skyr, amount: 0.5, unit: "szt" },
         { ing: iSNK.chocolate_dark, amount: 1, unit: "kst" },
         { ing: iOTH.vanilla_flavor, amount: 1, unit: "ml" },
-        { ing: iOTH.xylitol, amount: 10 },
+        {
+          type: "choice",
+          options: [
+            { ing: iOTH.xylitol, amount: 10 },
+            { ing: iOTH.sugar, amount: 10 },
+          ],
+          selected: 0,
+        },
       ],
     },
   ],

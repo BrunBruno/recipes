@@ -256,6 +256,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
     color: "#43A047",
     kcalPer100g: 23,
     unitWeights: {
+      lst: 0.5,
       lz: 2,
       peto: 30,
     },

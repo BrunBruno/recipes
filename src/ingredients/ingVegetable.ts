@@ -114,6 +114,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   onion: {
     name: "Cebula",
+    group: "onion",
     type: "veg",
     isVeg: true,
     subType: "oni",
@@ -128,6 +129,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   red_onion: {
     name: "Czerwona cebula",
+    group: "onion",
     type: "veg",
     isVeg: true,
     subType: "oni",
@@ -142,6 +144,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   shallot: {
     name: "Szalotka",
+    group: "onion",
     type: "veg",
     isVeg: true,
     subType: "oni",
@@ -169,6 +172,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   tomato: {
     name: "Pomidor",
+    group: "tomato",
     type: "veg",
     isVeg: true,
     subType: "tom",
@@ -184,6 +188,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   tomato_raspberry: {
     name: "Pomidor malinowy",
+    group: "tomato",
     type: "veg",
     isVeg: true,
     subType: "tom",
@@ -197,6 +202,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   tomato_roma: {
     name: "Pomidor rzymski",
+    group: "tomato",
     type: "veg",
     isVeg: true,
     subType: "tom",
@@ -235,7 +241,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 15,
     },
     nutrientsPer100g: [0.2, 3.9, 0.9],
-    price: 29.9,
+    price: 40,
   },
 
   strawberry_tomatoes: {
@@ -687,6 +693,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#4CAF50",
     kcalPer100g: 25,
     nutrientsPer100g: [0.7, 3.7, 2.6],
+    price: 47.9,
   },
 
   cabbage: {
@@ -793,6 +800,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
 
   broccoli: {
     name: "Brokuł",
+    group: "broccoli",
     type: "veg",
     isVeg: true,
     color: "#2E7D32",

@@ -359,6 +359,7 @@
 }
 
 .ingredients-container {
+  position: relative;
   padding: 2rem 0;
   margin: 0;
 
@@ -399,6 +400,9 @@
   position: relative;
   cursor: default;
   background-color: rgba(8, 127, 91, 0.5);
+  z-index: 1;
+
+  transition: filter 0.2s;
 }
 
 .ingredient-group-title::before {
@@ -432,11 +436,42 @@
   z-index: -1;
 }
 
+.ingredients-list-container.selection-container {
+  position: absolute;
+  width: 50%;
+  right: -100%;
+  z-index: 2;
+  animation: selection-container-ani 0.3s forwards;
+}
+.ingredients-list-container.selection-container::after {
+  display: none;
+}
+
+@keyframes selection-container-ani {
+  to {
+    right: 0;
+  }
+}
+
+.ingredients-list-container.inactive {
+  pointer-events: none;
+}
+
+.ingredients-list-container.inactive > .ingredient-group-title {
+  filter: brightness(50%);
+}
+.ingredients-list-container.inactive > .ingredients-list {
+  filter: brightness(50%);
+}
+
 .ingredients-list {
   list-style: none;
-  padding: 1rem 0;
   margin: 0;
+  padding: 0;
   border: solid #333333 0.2rem;
+  z-index: 1;
+
+  transition: filter 0.2s;
 }
 
 .ingredient-item {
@@ -446,17 +481,25 @@
   padding: 0 0.5rem;
   font-size: 0.95rem;
   border-top: 1px solid #333333;
+  background-color: #222222;
   padding: 0 1.2rem;
+}
+.ingredient-item:nth-child(even) {
+  background-color: #262626;
 }
 
 .ingredient-item:first-child {
   border: none;
+  padding-top: 1rem;
+}
+.ingredient-item:last-child {
+  padding-bottom: 1rem;
 }
 
-/* .ingredient-item:hover {
+.selection-item.selection-item:hover {
   cursor: pointer;
   background-color: #333333;
-} */
+}
 
 .ingredient-amount {
   display: flex;
@@ -486,6 +529,51 @@
   margin: 0 1rem;
   padding: 0.5rem 0;
   max-width: 80%;
+}
+
+.swap-item {
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  transition: width 0.15s;
+}
+
+.swap-item::after {
+  content: "";
+  position: absolute;
+  right: -0.6rem;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  rotate: 45deg;
+  border-radius: 0.2rem;
+  background-color: #087f5b;
+}
+
+.swap-item:hover {
+  cursor: pointer;
+  width: 3rem;
+}
+
+.swap-item svg {
+  height: 1rem;
+  width: 0;
+  transition: width 0.15s;
+}
+
+.swap-item:hover svg {
+  width: 1rem;
 }
 
 .ingredient-indicator {
