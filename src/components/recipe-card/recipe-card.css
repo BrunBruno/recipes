@@ -365,12 +365,15 @@
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
 }
 
 .ingredients-column {
   display: flex;
   flex-direction: column;
   grid-column: span 2;
+
+  transition: height 0.15s;
 }
 
 .ingredients-column.main-column {
@@ -381,6 +384,24 @@
   padding: 0;
   margin: 0;
   grid-column: span 2;
+
+  scale: 0;
+  transform-origin: 50% 0;
+
+  transition: all 0.3s ease;
+  animation: open-group 0.3s forwards;
+}
+
+@keyframes open-group {
+  to {
+    scale: 1;
+  }
+}
+
+.recipe-ingredient-group.removing {
+  transform: translate(100%, -150%);
+  rotate: 30deg;
+  opacity: 0;
 }
 
 .recipe-details-content h3 {
@@ -403,6 +424,9 @@
   z-index: 1;
 
   transition: filter 0.2s;
+
+  height: 1.5rem !important;
+  padding: 1rem !important;
 }
 
 .ingredient-group-title::before {
@@ -483,6 +507,7 @@
   border-top: 1px solid #333333;
   background-color: #222222;
   padding: 0 1.2rem;
+  height: 2.8rem;
 }
 .ingredient-item:nth-child(even) {
   background-color: #262626;
@@ -494,6 +519,23 @@
 }
 .ingredient-item:last-child {
   padding-bottom: 1rem;
+}
+
+.ingredient-item.option {
+  background-color: #181818;
+}
+
+.ingredient-item.option:nth-child(even) {
+  background-color: #141414;
+}
+
+.ingredient-item-text {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #333333;
+  margin: 0;
+  padding: 1rem;
 }
 
 .selection-item.selection-item:hover {
@@ -526,7 +568,7 @@
 
 .ingredient-name {
   color: #eaeaea;
-  margin: 0 1rem;
+  margin: auto 1rem;
   padding: 0.5rem 0;
   max-width: 80%;
 }

@@ -20,6 +20,7 @@ import type {
   DayMealType,
   Ingredient,
   IngredientChoice,
+  IngredientPlaceholder,
   Recipe,
 } from "../../types";
 import {
@@ -73,6 +74,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     null,
   );
   const [swapTop, setSwapTop] = useState<number>(0);
+
+  const [removedGroupIndex, setRemovedGroupIndex] = useState<number | null>(
+    null,
+  );
+  const [columnHeight, setColumnHeight] = useState<number | null>(null);
 
   useEffect(() => {
     if (selectedRecipe.type === "breakfast") {
@@ -376,6 +382,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     const weight = unit ? amount * (item.ing.unitWeights?.[unit] ?? 0) : amount;
     const price = item.ing.price ?? 0;
 
+    const unBugAmount = (a: number) =>
+      a?.toString().split(".")[1] && a.toString().split(".")[1].length > 2
+        ? a?.toFixed(2)
+        : a;
+
     if (unitFormat === "p") {
       return (
         <span
@@ -391,7 +402,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     } else if (unitFormat === "u") {
       return (
         <span className="ingredient-amount">
-          {item.amount}
+          {amount !== 0 && unBugAmount(amount)}
           <span className="ingredient-unit">
             {item.amount ? formatUnit(item) : ""}
           </span>
@@ -427,28 +438,33 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     ...recipeState.ingredients.map((group, groupIndex) => ({
       group,
       groupIndex,
+      extraType: null as "main" | "veg" | null,
     })),
 
-    ...(selectedRecipe.extrasMain
+    ...(recipeState.extrasMain
       ? [
           {
             group:
-              selectedRecipe.extrasMain.options[
-                selectedRecipe.extrasMain.selected
-              ],
+              recipeState.extrasMain.options[recipeState.extrasMain.selected],
             groupIndex: -1,
+            extraType:
+              recipeState.extrasMain.options.length > 1
+                ? ("main" as const)
+                : null,
           },
         ]
       : []),
 
-    ...(selectedRecipe.extrasVeg
+    ...(recipeState.extrasVeg
       ? [
           {
             group:
-              selectedRecipe.extrasVeg.options[
-                selectedRecipe.extrasVeg.selected
-              ],
-            groupIndex: -1,
+              recipeState.extrasVeg.options[recipeState.extrasVeg.selected],
+            groupIndex: -2,
+            extraType:
+              recipeState.extrasVeg.options.length > 1
+                ? ("veg" as const)
+                : null,
           },
         ]
       : []),
@@ -457,10 +473,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
   const ingredientColumns = [[], []] as {
     group: (typeof recipeState.ingredients)[number];
     groupIndex: number;
+    extraType: "main" | "veg" | null;
   }[][];
 
   const columnHeights = [0, 0];
-  allIngredientGroups.forEach(({ group, groupIndex }) => {
+  allIngredientGroups.forEach(({ group, groupIndex, extraType }) => {
     const height = group.items.filter(
       (item) => !("invisible" in item && item.invisible),
     ).length;
@@ -470,6 +487,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     ingredientColumns[columnIndex].push({
       group,
       groupIndex,
+      extraType,
     });
 
     columnHeights[columnIndex] += height;
@@ -698,17 +716,86 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
               {ingredientColumns.map((column, columnIndex) => (
                 <div
                   className={`ingredients-column ${recipeState.ingredients.length === 1 && !(recipeState.extrasMain || recipeState.extrasVeg) ? "main-column" : ""}`}
-                  key={columnIndex}
+                  key={`col-${columnIndex}`}
                 >
-                  {column.map(({ group, groupIndex }) => (
-                    <div key={groupIndex} className={`recipe-ingredient-group`}>
+                  {column.map(({ group, groupIndex, extraType }) => (
+                    <div
+                      key={`group-${groupIndex}${group.title}`}
+                      className={`recipe-ingredient-group ${removedGroupIndex === groupIndex ? "removing" : ""}`}
+                      style={
+                        removedGroupIndex === groupIndex && columnHeight
+                          ? {
+                              height: `calc(7.9rem + ${columnHeight} * 2.8rem)`,
+                            }
+                          : {
+                              height: `calc(7.9rem + ${group.items.length} * 2.8rem)`,
+                            }
+                      }
+                    >
                       <div
                         className={`ingredients-list-container ${swapGroup ? "inactive" : ""}`}
                       >
                         <h4 className="ingredient-group-title">
-                          {group.title
-                            ? `Składniki: ${group.title}`
-                            : "Lista składników"}
+                          {group.title ? `${group.title}` : "Lista składników"}
+                          {extraType && (
+                            <button
+                              className="group-alt"
+                              onClick={() => {
+                                if (
+                                  extraType === "main" &&
+                                  recipeState.extrasMain
+                                ) {
+                                  const newList =
+                                    recipeState.extrasMain.options[
+                                      (recipeState.extrasMain.selected + 1) %
+                                        recipeState.extrasMain.options.length
+                                    ];
+                                  setColumnHeight(newList.items.length);
+                                }
+                                if (
+                                  extraType === "veg" &&
+                                  recipeState.extrasVeg
+                                ) {
+                                  const newList =
+                                    recipeState.extrasVeg.options[
+                                      (recipeState.extrasVeg.selected + 1) %
+                                        recipeState.extrasVeg.options.length
+                                    ];
+                                  setColumnHeight(newList.items.length);
+                                }
+
+                                // xxxxxx
+
+                                setRemovedGroupIndex(groupIndex);
+                                setTimeout(() => {
+                                  setRecipeState((prev) => {
+                                    const copy = structuredClone(prev);
+
+                                    if (
+                                      extraType === "main" &&
+                                      copy.extrasMain
+                                    ) {
+                                      copy.extrasMain.selected =
+                                        (copy.extrasMain.selected + 1) %
+                                        copy.extrasMain.options.length;
+                                    }
+
+                                    if (extraType === "veg" && copy.extrasVeg) {
+                                      copy.extrasVeg.selected =
+                                        (copy.extrasVeg.selected + 1) %
+                                        copy.extrasVeg.options.length;
+                                    }
+
+                                    return copy;
+                                  });
+
+                                  setRemovedGroupIndex(null);
+                                }, 300);
+                              }}
+                            >
+                              <UtilsIcon name="swap" color="#ffffff" />
+                            </button>
+                          )}
                         </h4>
 
                         <ul className={"ingredients-list"}>
@@ -717,7 +804,21 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                               const active = item.options[item.selected];
 
                               return (
-                                <li key={index} className="ingredient-item">
+                                <li
+                                  key={`choice-${index}`}
+                                  className={`ingredient-item`}
+                                  style={
+                                    group.items[index - 1] &&
+                                    "type" in group.items[index - 1] &&
+                                    (
+                                      group.items[
+                                        index - 1
+                                      ] as IngredientPlaceholder
+                                    ).type === "placeholder"
+                                      ? { borderTop: "none" }
+                                      : {}
+                                  }
+                                >
                                   <div className="ingredient-indicator">
                                     <IngredientIcon
                                       ingType={active.ing.type}
@@ -745,17 +846,74 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                                   </div>
                                 </li>
                               );
+                            } else if (
+                              "type" in item &&
+                              item.type === "placeholder"
+                            ) {
+                              return (
+                                <>
+                                  <p className="ingredient-item-text">
+                                    {item.text
+                                      ? item.text
+                                      : "Wybierz z dostępnych opcji:"}
+                                  </p>
+                                  <li
+                                    className="ingredient-item option"
+                                    style={{ border: "none" }}
+                                  />
+                                  {item.options &&
+                                    item.options.map((o, i) => (
+                                      <li
+                                        key={`option-${i}`}
+                                        className="ingredient-item option"
+                                        style={
+                                          i === 0 ? { borderTop: "none" } : {}
+                                        }
+                                      >
+                                        <div className="ingredient-indicator">
+                                          <IngredientIcon
+                                            ingType={o.ing.type}
+                                            subType={o.ing.subType}
+                                            color={o.ing.color}
+                                          />
+                                        </div>
+
+                                        <span className="ingredient-name">
+                                          {o.ing.name}
+                                        </span>
+
+                                        {renderUnitAndPrice(o)}
+                                      </li>
+                                    ))}
+                                </>
+                              );
                             }
 
                             const ingredientItem = item as Ingredient;
                             const ing = ingredientItem.ing;
 
                             if (ingredientItem.invisible) {
-                              return <Fragment key={index}></Fragment>;
+                              return (
+                                <Fragment key={`frag-${index}`}></Fragment>
+                              );
                             }
 
                             return (
-                              <li key={index} className="ingredient-item">
+                              <li
+                                key={`ing-${index}`}
+                                className="ingredient-item"
+                                style={
+                                  group.items[index - 1] &&
+                                  "type" in group.items[index - 1] &&
+                                  (
+                                    group.items[
+                                      index - 1
+                                    ] as IngredientPlaceholder
+                                  ).type === "placeholder"
+                                    ? { borderTop: "none" }
+                                    : {}
+                                }
+                              >
                                 <div className="ingredient-indicator">
                                   <IngredientIcon
                                     ingType={ing.type}

@@ -34,6 +34,13 @@ const pancakes: Recipe = {
         { ing: iOTH.baking_powder, amount: 1, unit: "lzi" },
         { ing: iOTH.baking_soda, amount: 1, unit: "lzi" },
         { ing: iFAT.oil, amount: 0.25, unit: "szk" },
+        { ing: iSPC.salt },
+      ],
+    },
+    {
+      title: "Proponowane dodatki",
+      isAdd: true,
+      items: [
         {
           type: "choice",
           options: [
@@ -64,19 +71,35 @@ const pancakes: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iSPC.salt },
-      ],
-    },
-    {
-      title: "Proponowane dodatki",
-      isAdd: true,
-      items: [
-        { ing: iSNK.chocolate_cream, exclude: true },
-        { ing: iSNK.nutella, exclude: true },
-        { ing: iLIQ.maple_syrup, exclude: true },
-        { ing: iDIR.whipped_cream, exclude: true },
-        { ing: iJAR.jam_strawberry, exclude: true },
-        { ing: iFAT.peanut_butter, exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            {
+              ing: iSNK.chocolate_cream,
+              amount: portions * 30,
+            },
+            {
+              ing: iSNK.nutella,
+              amount: portions * 30,
+            },
+            {
+              ing: iLIQ.maple_syrup,
+              amount: portions * 20,
+            },
+            {
+              ing: iDIR.whipped_cream,
+              amount: portions * 35,
+            },
+            {
+              ing: iJAR.jam_strawberry,
+              amount: portions * 25,
+            },
+            {
+              ing: iFAT.peanut_butter,
+              amount: portions * 25,
+            },
+          ],
+        },
       ],
     },
   ],

@@ -25,7 +25,7 @@ const burgerDrwala: Recipe = {
       items: [
         { ing: iMET.ground_beef, amount: 400 },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
-        { ing: iSPC.black_pepper },
+        { ing: iSPC.pepper_grains },
         { ing: iSPC.salt },
       ],
     },
@@ -40,7 +40,7 @@ const burgerDrwala: Recipe = {
       ],
     },
     {
-      title: "Dodatki",
+      title: "Pozostałe",
       items: [
         { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
@@ -81,6 +81,7 @@ const burgerDrwala: Recipe = {
         "Można usmażyć ser na samym tłuszczu z boczku, jeśli wytopiło się go odpowiednio dużo.",
         "Na tej samej patelni usmaż kotlety wołowe.",
         "Przed smażeniem mięsa kotlety można rozpłaszyć, jeśli są zbyt zbite lub małe.",
+        "Podczas smażenia dopraw mięso solą oraz świeżo mielonym pieprzem.",
         "Umyj i pokrój pozostałe warzywa.",
         "Złóż burgera z przygotowanych składników.",
       ],

@@ -19,6 +19,7 @@ import type {
   IngredientChoice,
   IngredientItem,
   IngredientType,
+  IngVariants,
   KeyWord,
   MealType,
   Recipe,
@@ -207,9 +208,7 @@ export const interpolateColor = (
   return rgbToHex(rgb);
 };
 
-export const getActiveIngredient = (
-  item: Ingredient | IngredientChoice,
-): Ingredient => {
+export const getActiveIngredient = (item: IngVariants): Ingredient => {
   if ("type" in item && item.type === "choice") {
     return item.options[item.selected];
   }
@@ -222,6 +221,8 @@ const getAllIngredientItems = (recipe: Recipe) => {
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
+      if ("type" in item && item.type === "placeholder") continue;
+
       const active = getActiveIngredient(item);
 
       if (!active || active.exclude) continue;
@@ -486,15 +487,15 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   // MEAT
   mięso: ["mięso", "mięsny", "mięsne"],
   wołowina: ["wołowina", "wołowy"],
-  wieprzowina: ["wieprzowina", "schab"],
-  kurczak: ["kurczak", "drobiowy"],
+  wieprzowina: ["wieprzowina", "wieprzowy"],
+  kurczak: ["kurczak", "drobiowy", "drób"],
   indyk: ["indyk"],
   kiełbasa: ["kiełbasa", "kiełbasy"],
   boczek: ["boczek", "bekon"],
   parówka: ["parówka", "parówki", "parówkowy"],
   szynka: ["szynka", "wędlina"],
-  ryba: ["ryba"],
-  jajko: ["jajko", "jajka", "jajo"],
+  ryba: ["ryba", "ryby"],
+  jajko: ["jajko", "jajka", "jajo", "jaja"],
 
   // CAKES
   ciasto: ["ciasto"],
@@ -517,7 +518,7 @@ export const keywordAliases: Record<KeyWord, string[]> = {
   owoce: ["owoc", "owoce", "owocowy"],
   warzywa: ["warzywo", "warzywa"],
   sałatka: ["sałatka"],
-  grzyb: ["grzyb", "grzyby", "grzybowa", "pieczarki"],
+  grzyb: ["grzyb", "grzyby", "grzybowa"],
 
   // OTHER
   ser: ["ser", "serowy"],
@@ -528,8 +529,10 @@ export const keywordAliases: Record<KeyWord, string[]> = {
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
-  const addItems = (items: (Ingredient | IngredientChoice)[]) => {
+  const addItems = (items: IngVariants[]) => {
     items.forEach((item) => {
+      if ("type" in item && item.type === "placeholder") return;
+
       if ((item as IngredientChoice).type === "choice") {
         (item as IngredientChoice).options.forEach((opt) => {
           usage[opt.ing.name] = (usage[opt.ing.name] ?? 0) + 1;
@@ -987,8 +990,21 @@ export const getRecipeKeywords = (recipe: Recipe): string[] => {
       "ing" in item ? item.ing.name.toLowerCase() : "",
     ),
   );
+  const extrasMainKeywords = recipe.extrasMain
+    ? (recipe.extrasMain.options[0]?.items
+        .filter((item) => "ing" in item)
+        .map((item) => item.ing.name.toLowerCase()) ?? [])
+    : [];
+  const extrasVegKeywords = recipe.extrasVeg
+    ? (recipe.extrasVeg.options[0]?.items
+        .filter((item) => "ing" in item)
+        .map((item) => item.ing.name.toLowerCase()) ?? [])
+    : [];
 
-  return [...(recipe.keyWords ?? []), ...ingredientKeywords];
+  return [
+    ...(recipe.keyWords ?? []),
+    ...ingredientKeywords,
+    ...extrasMainKeywords,
+    ...extrasVegKeywords,
+  ];
 };
-
-

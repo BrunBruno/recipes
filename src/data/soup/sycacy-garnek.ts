@@ -6,7 +6,7 @@ import type { Recipe } from "../../types";
 const sycacyGarnek: Recipe = {
   name: "Sycący Garnek",
   type: "soup",
-  images: ["sycacy-garnek.jpg"],
+  images: ["sycacy-garnek.jpg", "sycacy-garnek-2.jpg"],
   time: 0,
   portions: 3,
   taste: 4,

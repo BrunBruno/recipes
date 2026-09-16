@@ -18,7 +18,7 @@ const zapiekankiZOgorem: Recipe = {
       title: "",
       items: [
         { ing: iBAK.casserole_base, amount: 2, unit: "szt" },
-        { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
+        { ing: iDIR.yellow_mozzarella, amount: 80 },
         { ing: iMET.mini_salami, amount: 20, unit: "plas" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iSAU.garlic_sauce, amount: 40 },

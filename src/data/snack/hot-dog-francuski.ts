@@ -19,6 +19,10 @@ const frenchHotDog: Recipe = {
         { ing: iMET.sausages, amount: 2, unit: "szt" },
         { ing: iBAK.french_hotdog_buns, amount: 2, unit: "szt" },
         {
+          type: "placeholder",
+          text: "Wariant pierwszy",
+        },
+        {
           type: "choice",
           options: [
             { ing: iSAU.ketchup, amount: 10 },
@@ -55,6 +59,10 @@ const frenchHotDog: Recipe = {
             { ing: iOTH.none },
           ],
           selected: 1,
+        },
+        {
+          type: "placeholder",
+          text: "Wariant drugi",
         },
         {
           type: "choice",
@@ -100,14 +108,19 @@ const frenchHotDog: Recipe = {
       title: "Inne proponowane sosy",
       isAdd: true,
       items: [
-        { ing: iSAU.american_sauce, exclude: true },
-        { ing: iSAU.thousand_island, exclude: true },
-        { ing: iSAU.ketchup_spicy, exclude: true },
-        { ing: iSAU.mustard_dessert, exclude: true },
-        { ing: iSAU.mustard_sun, exclude: true },
-        { ing: iSAU.mexican_sauce, exclude: true },
-        { ing: iSAU.remoulade, exclude: true },
-        { ing: iSAU.curry_sauce, exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            { ing: iSAU.american_sauce, exclude: true },
+            { ing: iSAU.thousand_island, exclude: true },
+            { ing: iSAU.ketchup_spicy, exclude: true },
+            { ing: iSAU.mustard_dessert, exclude: true },
+            { ing: iSAU.mustard_sun, exclude: true },
+            { ing: iSAU.mexican_sauce, exclude: true },
+            { ing: iSAU.remoulade, exclude: true },
+            { ing: iSAU.curry_sauce, exclude: true },
+          ],
+        },
       ],
     },
   ],

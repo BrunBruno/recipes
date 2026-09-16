@@ -33,9 +33,10 @@ const pizzaZPinsy: Recipe = {
     {
       title: "",
       steps: [
-        "Pinsę posmaruj sosem pomidorowym oraz posyp startym serem..",
+        "Pinsę posmaruj sosem pomidorowym oraz posyp startym serem mozarella.",
         "Wstaw pinsę do piekarnika i piecz przez około 10 minut.",
-        "Na upieczonym spodzie ułóż plastry szynki z kurczaka, rukolę oraz pomidorki koktajlowe.",
+        "Na upieczonym spodzie ułóż plastry szynki z kurczaka, rukolę oraz pokrojone pomidorki koktajlowe.",
+        "Dodatkowo z wierzchu posyp startym parmezanem oraz świeżą bazylią.",
         "Podawaj od razu po przygotowaniu.",
       ],
     },

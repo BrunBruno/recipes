@@ -17,7 +17,7 @@ const gotowyBurger: Recipe = {
   difficulty: 2,
   ingredients: [
     {
-      title: "Podstawowe",
+      title: "",
       items: [
         { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
         { ing: iMET.burger_patties, amount: 4, unit: "szt" },
@@ -29,7 +29,7 @@ const gotowyBurger: Recipe = {
       ],
     },
     {
-      title: "Burger warzywny",
+      title: "Dodatki - burger warzywny",
       items: [
         { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
@@ -37,7 +37,7 @@ const gotowyBurger: Recipe = {
       ],
     },
     {
-      title: "Burger mięsny",
+      title: "Dodatki - burger mięsny",
       items: [
         { ing: iMET.bacon_slices, amount: 4, unit: "plas" },
         { ing: iMET.egg, amount: 2, unit: "szt" },

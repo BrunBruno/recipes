@@ -26,7 +26,6 @@ const barszczCzerwony: Recipe = {
         { ing: iLIQ.beet_broth, amount: 700, unit: "ml", invisible: true },
         { ing: iLIQ.rosol, amount: 300, unit: "ml" },
         { ing: iOTH.citric_acid, amount: 0.5, unit: "lzi" },
-
         { ing: iLIQ.maggi },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
@@ -45,10 +44,14 @@ const barszczCzerwony: Recipe = {
           ],
           selected: 0,
         },
-
-        { ing: iJAR.frozen_uszka, exclude: true },
-        { ing: iJAR.tortellini_meat, exclude: true },
-        { ing: iJAR.cooked_beets, exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            { ing: iJAR.frozen_uszka, amount: 400 },
+            { ing: iJAR.tortellini_meat, amount: 400 },
+            { ing: iJAR.cooked_beets, amount: 200 },
+          ],
+        },
       ],
     },
   ],

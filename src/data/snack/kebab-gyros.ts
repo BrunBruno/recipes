@@ -19,17 +19,17 @@ const kebabGyros: Recipe = {
   difficulty: 3,
   ingredients: [
     {
-      title: "Podstawowe",
+      title: "Mięso",
       items: [
         { ing: iMET.chicken_breast, amount: 400 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
-        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iSPC.gyros_spice, amount: 2, unit: "lz" },
       ],
     },
     {
-      title: "Dodatki",
+      title: "Pozostałe",
       items: [
+        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.radish, amount: 1, unit: "opak" },

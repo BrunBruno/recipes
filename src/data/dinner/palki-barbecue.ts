@@ -27,7 +27,10 @@ const palkiBarbecue: Recipe = {
     },
   ],
   extrasMain: {
-    options: [dinnerSides("oven-fries", portions)],
+    options: [
+      dinnerSides("oven-fries", portions),
+      dinnerSides("boiled-potatoes-dry", portions),
+    ],
     selected: 0,
   },
   extrasVeg: {

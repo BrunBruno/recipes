@@ -99,9 +99,9 @@ export type Ingredient = {
   ing: IngredientItem;
   amount?: number;
   unit?: UnitType;
-  exclude?: true;
-  invisible?: true;
-  replaceable?: true;
+  exclude?: true; // not count macro - only for display
+  invisible?: true; // for counting macro - no display
+  replaceable?: true; // default variants
 };
 
 export type IngredientChoice = {
@@ -110,10 +110,18 @@ export type IngredientChoice = {
   selected: number;
 };
 
+export type IngredientPlaceholder = {
+  type: "placeholder";
+  options?: Ingredient[];
+  text?: string;
+};
+
+export type IngVariants = IngredientChoice | Ingredient | IngredientPlaceholder;
+
 export type RecipeIngredientGroup = {
   title: string;
   isAdd?: boolean;
-  items: (IngredientChoice | Ingredient)[];
+  items: IngVariants[];
 };
 
 export type ExtrasIngredientGroup = {
@@ -148,6 +156,7 @@ export type Recipe = {
   steps: RecipeStepGroup[];
   keyWords?: KeyWord[];
   link?: string;
+  verified?: true;
 };
 
 export type DayIngredientPair = [string, number];

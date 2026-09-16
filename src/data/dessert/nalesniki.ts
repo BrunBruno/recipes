@@ -33,6 +33,13 @@ const nalesniki: Recipe = {
         { ing: iLIQ.water, amount: 100, unit: "ml" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iOTH.sugar, amount: 1, unit: "lz" },
+        { ing: iSPC.salt },
+      ],
+    },
+    {
+      title: "Proponowane dodatki",
+      isAdd: true,
+      items: [
         {
           type: "choice",
           options: [
@@ -63,19 +70,35 @@ const nalesniki: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iSPC.salt },
-      ],
-    },
-    {
-      title: "Proponowane dodatki",
-      isAdd: true,
-      items: [
-        { ing: iSNK.chocolate_cream, exclude: true },
-        { ing: iSNK.nutella, exclude: true },
-        { ing: iLIQ.maple_syrup, exclude: true },
-        { ing: iDIR.whipped_cream, exclude: true },
-        { ing: iJAR.jam_strawberry, exclude: true },
-        { ing: iFAT.peanut_butter, exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            {
+              ing: iSNK.chocolate_cream,
+              amount: portions * 30,
+            },
+            {
+              ing: iSNK.nutella,
+              amount: portions * 30,
+            },
+            {
+              ing: iLIQ.maple_syrup,
+              amount: portions * 20,
+            },
+            {
+              ing: iDIR.whipped_cream,
+              amount: portions * 35,
+            },
+            {
+              ing: iJAR.jam_strawberry,
+              amount: portions * 25,
+            },
+            {
+              ing: iFAT.peanut_butter,
+              amount: portions * 25,
+            },
+          ],
+        },
       ],
     },
   ],

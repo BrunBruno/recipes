@@ -17,19 +17,12 @@ const hotHog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 4, unit: "szt" },
-        {
-          type: "choice",
-          options: [
-            { ing: iBAK.hotdog_buns, amount: 4, unit: "szt" },
-            { ing: iBAK.chicken_buns, amount: 4, unit: "szt" },
-          ],
-          selected: 0,
-        },
+        { ing: iBAK.hotdog_buns, amount: 4, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.sauerkraut, amount: 160 },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
         { ing: iSAU.ketchup, amount: 20 },
-        { ing: iSAU.mustard_dessert, amount: 20 },
+        { ing: iSAU.mustard, amount: 20 },
         { ing: iSAU.garlic_sauce, amount: 20 },
       ],
     },

@@ -6,12 +6,11 @@ import type { Recipe } from "../../types";
 
 const portions = 2;
 const gotoweSkrzydelkaPoledwiczki: Recipe = {
-  name: "Skrzydełka / Polędwiczki",
+  name: "Polędwiczki z Kurczaka",
   type: "snack",
   images: [
     "gotowe-skrzydelka-poledwiczki.jpg",
     "gotowe-skrzydelka-poledwiczki-2.jpg",
-    "gotowe-skrzydelka-poledwiczki-3.jpg",
   ],
   time: 25,
   portions: portions,
@@ -21,18 +20,11 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
     {
       title: "",
       items: [
-        {
-          type: "choice",
-          options: [
-            { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
-            { ing: iMET.spicy_wings, amount: 1, unit: "opak" },
-          ],
-          selected: 0,
-        },
+        { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
         { ing: iJAR.frozen_fries, amount: 150 * portions },
         { ing: iSAU.mayonnaise, amount: 2, unit: "lzi" },
         { ing: iSAU.sriracha, amount: 1, unit: "lzi" },
-        { ing: iSPC.salt },
+        { ing: iSPC.potato_seasoning },
       ],
     },
   ],

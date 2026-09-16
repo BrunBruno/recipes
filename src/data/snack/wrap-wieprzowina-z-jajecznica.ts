@@ -28,10 +28,15 @@ const wrapWieprzowyJajecznica: Recipe = {
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: portions, unit: "lst" },
+        { ing: iFAT.butter, amount: 5 },
+      ],
+    },
+    {
+      title: "Sosy",
+      items: [
         { ing: iSAU.mustard_dessert, amount: 30 },
         { ing: iSAU.mayonnaise, amount: 30 },
         { ing: iSAU.horseradish_sauce, amount: 10 },
-        { ing: iFAT.butter, amount: 5 },
       ],
     },
   ],
@@ -39,10 +44,10 @@ const wrapWieprzowyJajecznica: Recipe = {
     {
       title: "",
       steps: [
-        "Upiecz gotowe kotlety wieprzowe w piekarniku.",
+        "Upiecz gotowe kotlety wieprzowe w piekarniku lub podgrzej je w mikrofali.",
         "Na maśle przygotuj delikatną jajecznicę z dwóch jajek.",
         "Podgrzej tortillę na suchej patelni, aby była elastyczna.",
-        "Wymieszaj musztardę z sosem chrzanowym w proprcji 1-1.",
+        "Wymieszaj musztardę z majonezem oraz sosem chrzanowym w proprcji 3-3-1.",
         "Posmaruj środek tortilli sosem musztardowo-chrzanowym.",
         "Dodaj jajecznicę, wieprzowinę, plasterki pomidora, sałatę i ser cheddar.",
         "Zawiń wrapa ciasno i podawaj od razu.",

@@ -28,6 +28,11 @@ const jajecznica: Recipe = {
       items: [
         { ing: iMET.egg, amount: 5, unit: "szt" },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lz" },
+        { ing: iSPC.salt },
+        {
+          type: "placeholder",
+          text: "Dodatki",
+        },
         {
           type: "choice",
           options: [
@@ -47,23 +52,27 @@ const jajecznica: Recipe = {
             { ing: iMET.bacon_block, amount: 100, exclude: true },
             { ing: iVEG.onion, amount: 1, unit: "szt" },
             { ing: iVEG.tomato, amount: 1, unit: "szt" },
-            { ing: iHRB.chives },
+            { ing: iHRB.chives, amount: 10 },
             { ing: iOTH.none },
           ],
           selected: 2,
         },
-        { ing: iSPC.salt },
       ],
     },
     {
       title: "Proponowane dodatki",
       isAdd: true,
       items: [
-        { ing: iMET.sausage, exclude: true },
-        { ing: iMET.bacon_block, exclude: true },
-        { ing: iVEG.onion, exclude: true },
-        { ing: iVEG.tomato, exclude: true },
-        { ing: iHRB.chives, exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            { ing: iMET.sausage, amount: 0.5, unit: "peto" },
+            { ing: iMET.bacon_block, amount: 100, exclude: true },
+            { ing: iVEG.onion, amount: 1, unit: "szt" },
+            { ing: iVEG.tomato, amount: 1, unit: "szt" },
+            { ing: iHRB.chives, amount: 10 },
+          ],
+        },
       ],
     },
   ],
