@@ -10,6 +10,7 @@ const portions = 3;
 const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
   type: "dinner",
+  country: "CHN",
   images: ["kurczak-po-seczuansku.jpg"],
   time: 30,
   portions: portions,

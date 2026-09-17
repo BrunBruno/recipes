@@ -56,7 +56,7 @@ const jajkaWSosieKoperkowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "sos"],
+  keyWords: ["jajko", "sos", "gotowane"],
 };
 
 export default jajkaWSosieKoperkowym;

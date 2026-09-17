@@ -12,6 +12,7 @@ const portions = 5;
 const kotletPoZbojnicku: Recipe = {
   name: "Kotlety po Zbójnicku",
   type: "dinner",
+  country: "POL",
   images: ["kotlet-po-zbojnicku.jpg", "kotlet-po-zbojnicku-2.jpg"],
   time: 90,
   portions: portions,

@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const meksykanska: Recipe = {
   name: "Meksykańska",
   type: "soup",
+  country: "MEX",
   images: [""],
   time: 60,
   portions: 6,

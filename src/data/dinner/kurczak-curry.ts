@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const kurczakCurry: Recipe = {
   name: "Kurczak Curry",
   type: "dinner",
+  country: "IND",
   images: ["kurczak-curry.jpg"],
   time: 20,
   portions: 2,

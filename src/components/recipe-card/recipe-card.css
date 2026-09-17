@@ -59,7 +59,9 @@
   top: 0.5rem;
   right: 0.5rem;
 }
-
+.recipe-details.collapsed .country-flag {
+  opacity: 0;
+}
 .recipe-details.collapsed .images-arrow {
   display: none;
 }
@@ -245,6 +247,17 @@
   transition:
     height 0.3s ease,
     padding 0.3s ease;
+}
+
+.country-flag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.1s;
 }
 
 .details-images {
@@ -507,7 +520,7 @@
   border-top: 1px solid #333333;
   background-color: #222222;
   padding: 0 1.2rem;
-  height: 2.8rem;
+  min-height: 2.8rem;
 }
 .ingredient-item:nth-child(even) {
   background-color: #262626;
@@ -535,6 +548,7 @@
   font-weight: bold;
   background-color: #333333;
   margin: 0;
+  height: 1.8rem;
   padding: 1rem;
 }
 

@@ -6,6 +6,7 @@ import type { Recipe } from "../../types";
 const grillowanySer: Recipe = {
   name: "Grillowany Ser",
   type: "snack",
+  country: "USA",
   images: ["grillowany-ser.jpg"],
   time: 10,
   portions: 1,

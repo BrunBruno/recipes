@@ -11,6 +11,7 @@ const portions = 3;
 const gulaszWegrerski: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
+  country: "HUN",
   images: ["gulasz-po-wegiersku.jpg", "gulasz-po-wegiersku-2.jpg"],
   time: 95,
   portions: portions,
@@ -57,7 +58,7 @@ const gulaszWegrerski: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "sos", "fix"],
+  keyWords: ["mięso", "wołowina", "fix", "sos", "duszone"],
 };
 
 export default gulaszWegrerski;

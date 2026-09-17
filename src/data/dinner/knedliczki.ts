@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const knedleCzeskieZGulaszem: Recipe = {
   name: "Knedliczki z Gulaszem",
   type: "dinner",
+  country: "CZE",
   images: [""],
   time: 50,
   portions: 4,

@@ -12,6 +12,7 @@ import type { Recipe } from "../../types";
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak Słodko-Kwaśny",
   type: "dinner",
+  country: "CHN",
   images: ["kurczak-slodko-kwasny-fix.jpg", "kurczak-slodko-kwasny-fix-2.jpg"],
   time: 25,
   portions: 3,

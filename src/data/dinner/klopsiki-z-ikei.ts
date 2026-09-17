@@ -15,6 +15,7 @@ const portions = 5;
 const klopsikiZIkei: Recipe = {
   name: "Klopsiki z IKEI",
   type: "dinner",
+  country: "SWE",
   images: ["klopsiki-z-ikei.jpg", "klopsiki-z-ikei-2.jpg"],
   time: 150,
   portions: portions,
@@ -89,7 +90,8 @@ const klopsikiZIkei: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["wołowina", "wieprzowina", "sos"],
+  link: "https://kuchniaagaty.pl/przepisy/szwedzkie-klopsiki-z-ikea",
 };
 
 export default klopsikiZIkei;

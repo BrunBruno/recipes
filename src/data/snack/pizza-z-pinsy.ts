@@ -9,6 +9,7 @@ import type { Recipe } from "../../types";
 const pizzaZPinsy: Recipe = {
   name: "Pizza z Pinsy",
   type: "snack",
+  country: "ITA",
   images: ["pizza-z-pinsy.jpg", "pizza-z-pinsy-2.jpg"],
   time: 15,
   portions: 1,

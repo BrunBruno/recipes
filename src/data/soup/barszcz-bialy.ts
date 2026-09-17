@@ -10,12 +10,12 @@ import type { Recipe } from "../../types";
 const barszczBialy: Recipe = {
   name: "Barszcz Biały",
   type: "soup",
+  country: "POL",
   images: [""],
   time: 50,
   portions: 4,
   taste: null,
   difficulty: null,
-
   ingredients: [
     {
       title: "Barszcz",

@@ -11,6 +11,7 @@ const portions = 2;
 const spaghettiNapoli: Recipe = {
   name: "Spaghetti Napoli",
   type: "dinner",
+  country: "ITA",
   images: ["spaghetti-napoli.jpg"],
   time: 20,
   portions: portions,

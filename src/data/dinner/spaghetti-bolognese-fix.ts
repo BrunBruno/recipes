@@ -10,6 +10,7 @@ const portions = 3;
 const spaghettiBologneseFix: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
+  country: "ITA",
   images: ["spaghetti-bolognese-fix.jpg"],
   time: 30,
   portions: portions,

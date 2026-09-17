@@ -14,6 +14,7 @@ const portions = 4;
 const burgerDrwala: Recipe = {
   name: "Burger Drwala",
   type: "snack",
+  country: "POL",
   images: ["burger-drwala.jpg"],
   time: 50,
   portions: portions,

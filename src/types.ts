@@ -47,39 +47,30 @@ export type UnitType =
   | "ziar" // ziarno
   | "peto"; // pęto
 
-export type KeyWord =
-  // MEAT
-  | "mięso"
-  | "wołowina"
-  | "wieprzowina"
-  | "kurczak"
-  | "indyk"
-  | "kiełbasa"
-  | "boczek"
-  | "parówka"
-  | "szynka"
-  //
-  | "ciasto"
-  | "deser"
-  | "biszkopt"
-  | "makaron"
-  | "ryż"
-  | "kasza"
-  | "ziemniak"
-  | "grzyb"
-  | "jajko"
-  | "naleśnik"
-  | "tortilla"
-  | "owoce"
-  | "warzywa"
-  | "sos"
-  | "krem"
-  | "ser"
-  | "sałatka"
-  | "pieczywo"
-  | "ryba"
-  | "zupa"
-  | "fix";
+export type CountryCode =
+  | "CHN" // Chiny
+  | "DEU" // Germany
+  | "CZE" // Czechy
+  | "ESP" // Spain
+  | "FRA" // Francja
+  | "GBR" // United Kingdom
+  | "GRC" // Grecja
+  | "HUN" // Hungary
+  | "IND" // Indie
+  | "IDN" // Indonezja
+  | "ITA" // Włochy
+  | "JPN" // Japonia
+  | "KOR" // South Korea
+  | "LKA" // Sri Lanka
+  | "MEX" // Meksyk
+  | "POL" // Polska
+  | "RUS" // Rosja
+  | "SWE" // Szwecja
+  | "THA" // Tajlandia
+  | "TUR" // Turcja
+  | "UKR" // Ukraine
+  | "USA" // USA
+  | "VNM"; // Vietnam
 
 export type IngredientItem = {
   name: string;
@@ -154,8 +145,9 @@ export type Recipe = {
   extrasMain?: ExtrasIngredientOptions;
   extrasVeg?: ExtrasIngredientOptions;
   steps: RecipeStepGroup[];
-  keyWords?: KeyWord[];
+  keyWords?: string[];
   link?: string;
+  country?: CountryCode;
   verified?: true;
 };
 

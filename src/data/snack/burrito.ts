@@ -12,6 +12,7 @@ const portions = 2;
 const burrito: Recipe = {
   name: "Burrito",
   type: "snack",
+  country: "MEX",
   images: [""],
   time: 40,
   portions: portions,

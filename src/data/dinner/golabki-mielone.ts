@@ -67,7 +67,7 @@ const golabki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "ryż"],
+  keyWords: ["mięso", "wieprzowina", "ryż", "kapusta", "sos"],
 };
 
 export default golabki;

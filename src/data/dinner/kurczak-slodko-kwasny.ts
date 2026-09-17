@@ -10,6 +10,7 @@ const portions = 3;
 const kurczakSlodkoKwasny: Recipe = {
   name: "Kurczak Słodko-Kwaśny",
   type: "dinner",
+  country: "CHN",
   images: [
     "kurczak-slodko-kwasny.jpg",
     "kurczak-slodko-kwasny-2.jpg",

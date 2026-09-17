@@ -22,6 +22,7 @@ import type {
   IngredientChoice,
   IngredientPlaceholder,
   Recipe,
+  RecipeIngredientGroup,
 } from "../../types";
 import {
   Chart as ChartJS,
@@ -37,6 +38,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { dinnerSidesSteps } from "../../dinnerSides";
 import ServingTimeIcon from "../../assets/servingTimeIcon";
 import { getIngredientGroup } from "../../ingredientGroups";
+import CountryIcons from "../../assets/countryIcon";
 
 ChartJS.register(ChartDataLabels);
 ChartJS.register(
@@ -418,6 +420,39 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
     }
   };
 
+  const getGroupCount = (group: RecipeIngredientGroup) => {
+    let size = 0;
+    group.items.forEach((i) => {
+      if ("type" in i && i.type === "placeholder" && i.options) {
+        size += i.options?.length;
+      } else {
+        if (
+          ("type" in i && i.type === "choice") ||
+          (!("type" in i) && !i.invisible)
+        )
+          size += 1;
+      }
+    });
+
+    return size;
+  };
+  const getGroupHeight = (group: RecipeIngredientGroup) => {
+    let size = 0;
+    group.items.forEach((i) => {
+      if ("type" in i && i.type === "placeholder" && i.options) {
+        size += i.options?.length * 2.85 + 3.8;
+      } else {
+        if (
+          ("type" in i && i.type === "choice") ||
+          (!("type" in i) && !i.invisible)
+        )
+          size += 2.85;
+      }
+    });
+
+    return Math.round((7.9 + size) * 16);
+  };
+
   const handleSelect = (
     element: HTMLElement,
     item: IngredientChoice,
@@ -508,6 +543,12 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
         >
           <UtilsIcon name="close" color="#fff" />
         </button>
+
+        {selectedRecipe.country && (
+          <div className="country-flag">
+            <CountryIcons code={selectedRecipe.country} />{" "}
+          </div>
+        )}
 
         <div
           className="details-images"
@@ -725,10 +766,13 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       style={
                         removedGroupIndex === groupIndex && columnHeight
                           ? {
-                              height: `calc(7.9rem + ${columnHeight} * 2.8rem)`,
+                              height:
+                                columnHeight === getGroupCount(group)
+                                  ? `${getGroupHeight(group)}px`
+                                  : `calc(7.9rem + ${columnHeight} * 2.85rem)`,
                             }
                           : {
-                              height: `calc(7.9rem + ${group.items.length} * 2.8rem)`,
+                              height: `${getGroupHeight(group)}px`,
                             }
                       }
                     >
@@ -750,7 +794,7 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                                       (recipeState.extrasMain.selected + 1) %
                                         recipeState.extrasMain.options.length
                                     ];
-                                  setColumnHeight(newList.items.length);
+                                  setColumnHeight(getGroupCount(newList));
                                 }
                                 if (
                                   extraType === "veg" &&
@@ -761,10 +805,8 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                                       (recipeState.extrasVeg.selected + 1) %
                                         recipeState.extrasVeg.options.length
                                     ];
-                                  setColumnHeight(newList.items.length);
+                                  setColumnHeight(getGroupCount(newList));
                                 }
-
-                                // xxxxxx
 
                                 setRemovedGroupIndex(groupIndex);
                                 setTimeout(() => {
@@ -859,7 +901,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                                   </p>
                                   <li
                                     className="ingredient-item option"
-                                    style={{ border: "none" }}
+                                    style={{
+                                      border: "none",
+                                      height: 0,
+                                      minHeight: 0,
+                                    }}
                                   />
                                   {item.options &&
                                     item.options.map((o, i) => (

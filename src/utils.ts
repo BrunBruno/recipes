@@ -20,7 +20,6 @@ import type {
   IngredientItem,
   IngredientType,
   IngVariants,
-  KeyWord,
   MealType,
   Recipe,
   UnitType,
@@ -216,14 +215,19 @@ export const getActiveIngredient = (item: IngVariants): Ingredient => {
   return item as Ingredient;
 };
 
-const getAllIngredientItems = (recipe: Recipe) => {
+const getAllIngredientItems = (recipe: Recipe, countChoices?: true) => {
   const items: Ingredient[] = [];
 
   for (const group of recipe.ingredients) {
     for (const item of group.items) {
       if ("type" in item && item.type === "placeholder") continue;
 
-      const active = getActiveIngredient(item);
+      let active = null;
+      if (countChoices && "type" in item && item.type === "choice") {
+        item.options.forEach((o) => items.push(o));
+      } else {
+        active = getActiveIngredient(item);
+      }
 
       if (!active || active.exclude) continue;
 
@@ -483,49 +487,50 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
   return Math.round(totalGrams);
 };
 
-export const keywordAliases: Record<KeyWord, string[]> = {
-  // MEAT
-  mięso: ["mięso", "mięsny", "mięsne"],
-  wołowina: ["wołowina", "wołowy"],
-  wieprzowina: ["wieprzowina", "wieprzowy"],
-  kurczak: ["kurczak", "drobiowy", "drób"],
-  indyk: ["indyk"],
-  kiełbasa: ["kiełbasa", "kiełbasy"],
-  boczek: ["boczek", "bekon"],
-  parówka: ["parówka", "parówki", "parówkowy"],
-  szynka: ["szynka", "wędlina"],
-  ryba: ["ryba", "ryby"],
-  jajko: ["jajko", "jajka", "jajo", "jaja"],
+// export const keywordAliases: Record<KeyWord, string[]> = {
+//   // MEAT
+//   mięso: ["mięso", "mięsny", "mięsne"],
+//   wołowina: ["wołowina", "wołowy"],
+//   wieprzowina: ["wieprzowina", "wieprzowy"],
+//   kurczak: ["kurczak", "drobiowy", "drób"],
+//   indyk: ["indyk"],
+//   kiełbasa: ["kiełbasa", "kiełbasy"],
+//   boczek: ["boczek", "bekon"],
+//   parówka: ["parówka", "parówki", "parówkowy"],
+//   szynka: ["szynka", "wędlina"],
+//   ryba: ["ryba", "ryby"],
+//   jajko: ["jajko", "jajka", "jajo", "jaja"],
 
-  // CAKES
-  ciasto: ["ciasto"],
-  deser: ["deser"],
-  biszkopt: ["biszkopt"],
-  krem: ["krem"],
+//   // CAKES
+//   ciasto: ["ciasto"],
+//   deser: ["deser"],
+//   biszkopt: ["biszkopt"],
+//   krem: ["krem"],
 
-  // MAIN
-  makaron: ["makaron"],
-  ryż: ["ryż", "ryz", "ryżem"],
-  kasza: ["kasza"],
-  ziemniak: ["ziemniak", "ziemniaki", "ziemniaczane"],
+//   // MAIN
+//   makaron: ["makaron"],
+//   ryż: ["ryż", "ryz", "ryżem"],
+//   kasza: ["kasza"],
+//   ziemniak: ["ziemniak", "ziemniaki", "ziemniaczane"],
 
-  // BAKERY
-  pieczywo: ["pieczywo"],
-  naleśnik: ["naleśnik"],
-  tortilla: ["tortilla", "tortilli"],
+//   // BAKERY
+//   pieczywo: ["pieczywo"],
+//   naleśnik: ["naleśnik"],
+//   tortilla: ["tortilla", "tortilli"],
 
-  // VEG
-  owoce: ["owoc", "owoce", "owocowy"],
-  warzywa: ["warzywo", "warzywa"],
-  sałatka: ["sałatka"],
-  grzyb: ["grzyb", "grzyby", "grzybowa"],
+//   // VEG
+//   owoce: ["owoc", "owoce", "owocowy"],
+//   warzywa: ["warzywo", "warzywa"],
+//   sałatka: ["sałatka"],
+//   grzyb: ["grzyb", "grzyby", "grzybowa"],
 
-  // OTHER
-  ser: ["ser", "serowy"],
-  sos: ["sos", "sosem"],
-  zupa: ["zupa", "zupy", "zupę"],
-  fix: ["fix"],
-};
+//   // OTHER
+//   ser: ["ser", "serowy"],
+//   sos: ["sos", "sosem"],
+//   zupa: ["zupa", "zupy", "zupę"],
+//   fix: ["fix"],
+// };
+
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
@@ -622,9 +627,7 @@ export const countDoneRecipes = (recipes: Recipe[]) => {
   };
 
   recipes.forEach((recipe) => {
-    if (recipe.keyWords) {
-      usage[recipe.images[0] !== "" ? "yes" : "no"]++;
-    }
+    usage[recipe.images[0] !== "" ? "yes" : "no"]++;
   });
 
   return usage;
@@ -971,7 +974,7 @@ export const getIngredientRecipeNames = (
   const result: { type: MealType; name: string }[] = [];
 
   recipes.forEach((recipe) => {
-    const ingredients = getAllIngredientItems(recipe);
+    const ingredients = getAllIngredientItems(recipe, true);
 
     if (ingredients.some((item) => item.ing.name === ingredientName)) {
       result.push({
@@ -990,11 +993,13 @@ export const getRecipeKeywords = (recipe: Recipe): string[] => {
       "ing" in item ? item.ing.name.toLowerCase() : "",
     ),
   );
+
   const extrasMainKeywords = recipe.extrasMain
     ? (recipe.extrasMain.options[0]?.items
         .filter((item) => "ing" in item)
         .map((item) => item.ing.name.toLowerCase()) ?? [])
     : [];
+
   const extrasVegKeywords = recipe.extrasVeg
     ? (recipe.extrasVeg.options[0]?.items
         .filter((item) => "ing" in item)

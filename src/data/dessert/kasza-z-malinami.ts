@@ -55,6 +55,7 @@ const kaszaZMalinami: Recipe = {
   ],
 
   keyWords: ["kasza", "owoce"],
+  link: "https://dietetykpowszechny.pl/przepis/kasza-manna-z-malinami/",
 };
 
 export default kaszaZMalinami;

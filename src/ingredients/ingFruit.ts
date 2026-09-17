@@ -5,6 +5,7 @@ type IngId =
   | "apple"
   | "green_apple"
   | "pear"
+  | "rocha_pear"
   | "fig"
   | "pineapple"
   | "kiwi"
@@ -89,6 +90,20 @@ export const iFRT: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.1, 15, 0.4],
     price: 8,
+  },
+
+  rocha_pear: {
+    name: "Gruszka Rocha",
+    type: "frt",
+    isVeg: true,
+    subType: "per",
+    color: "#C2C57B",
+    kcalPer100g: 58,
+    unitWeights: {
+      szt: 150,
+    },
+    nutrientsPer100g: [0.1, 15.1, 0.4],
+    price: 12,
   },
 
   fig: {

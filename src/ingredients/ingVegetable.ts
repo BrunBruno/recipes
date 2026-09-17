@@ -60,6 +60,7 @@ type IngId =
   | "cauliflower"
   | "broccoli"
   | "asparagus"
+  | "spinach"
   | "nori"
 
   //// BEANS ////
@@ -821,6 +822,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: { szt: 20 },
     kcalPer100g: 20,
     nutrientsPer100g: [0.1, 3.9, 2.2],
+  },
+
+  spinach: {
+    name: "Szpinak",
+    type: "veg",
+    isVeg: true,
+    subType: "spi",
+    color: "#4F7942",
+    unitWeights: {
+      opak: 200,
+    },
+    kcalPer100g: 23,
+    nutrientsPer100g: [0.4, 3.6, 2.9],
   },
 
   nori: {

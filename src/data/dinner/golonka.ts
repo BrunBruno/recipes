@@ -43,7 +43,7 @@ const golonkaGotowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "pieczone"],
 };
 
 export default golonkaGotowa;

@@ -9,6 +9,7 @@ const portions = 1;
 const pyzyMiesne: Recipe = {
   name: "Pyzy z Mięsem",
   type: "dinner",
+  country: "POL",
   images: ["pyzy-miesne.jpg", "pyzy-miesne-2.jpg"],
   time: 25,
   portions: portions,

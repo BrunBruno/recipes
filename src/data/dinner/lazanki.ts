@@ -11,6 +11,7 @@ import { fryingFat } from "../../utils";
 const lazanki: Recipe = {
   name: "Łazanki",
   type: "dinner",
+  country: "POL",
   images: ["lazanki.jpg"],
   time: 50,
   portions: 5,

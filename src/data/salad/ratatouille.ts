@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 const ratatouille: Recipe = {
   name: "Ratatouille",
   type: "salad",
+  country: "FRA",
   images: ["ratatouille.jpg", "ratatouille-2.jpg"],
   time: 45,
   portions: 4,

@@ -12,6 +12,7 @@ const portions = 4;
 const kotletDevolay: Recipe = {
   name: "Kotlet Devolay",
   type: "dinner",
+  country: "RUS",
   images: [
     "kotlet-devolay.jpg",
     "kotlet-devolay-2.jpg",

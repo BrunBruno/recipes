@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const zupaCzosnkowa: Recipe = {
   name: "Zupa Czosnkowa",
   type: "soup",
+  country: "CZE",
   images: [""],
   time: 80,
   portions: 4,

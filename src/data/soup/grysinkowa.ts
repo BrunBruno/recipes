@@ -6,6 +6,7 @@ import type { Recipe } from "../../types";
 const grysikowa: Recipe = {
   name: "Grysikowa",
   type: "soup",
+  country: "POL",
   images: ["grysikowa.jpg", "grysikowa-2.jpg"],
   time: 10,
   portions: 2,

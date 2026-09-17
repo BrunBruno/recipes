@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const qurrito: Recipe = {
   name: "Qurrito",
   type: "snack",
+  country: "MEX",
   images: [""],
   time: 30,
   portions: 1,

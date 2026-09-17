@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const chiliConCarne: Recipe = {
   name: "Chili con Carne",
   type: "dinner",
+  country: "MEX",
   images: ["chili-con-carne.jpg", "chili-con-carne-2.jpg"],
   time: 25,
   portions: 4,

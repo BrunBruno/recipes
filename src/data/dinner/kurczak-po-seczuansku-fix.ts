@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
   type: "dinner",
+  country: "CHN",
   images: ["kurczak-po-seczuansku-fix.jpg", "kurczak-po-seczuansku-fix-2.jpg"],
   time: 20,
   portions: 2,

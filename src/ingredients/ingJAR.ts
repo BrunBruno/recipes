@@ -169,6 +169,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     color: "#7E9F45",
     kcalPer100g: 25,
     unitWeights: {
+      szt: 80,
       opak: 500,
     },
     nutrientsPer100g: [0.2, 5, 1],

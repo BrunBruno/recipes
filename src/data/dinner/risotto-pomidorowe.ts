@@ -13,6 +13,7 @@ const portions = 4;
 const risottoPomidorowe: Recipe = {
   name: "Risotto Pomidorowe",
   type: "dinner",
+  country: "ITA",
   images: ["risotto-pomidorowe.jpg"],
   time: 60,
   portions: portions,

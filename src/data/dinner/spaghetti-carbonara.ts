@@ -8,6 +8,7 @@ const portions = 5;
 const spaghettiCarbonara: Recipe = {
   name: "Spaghetti Carbonara",
   type: "dinner",
+  country: "ITA",
   images: [
     "spaghetti-carbonara.jpg",
     "spaghetti-carbonara-2.jpg",

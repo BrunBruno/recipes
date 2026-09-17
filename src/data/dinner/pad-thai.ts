@@ -11,6 +11,7 @@ import { iOTH } from "../../ingredients/ingOther";
 const padThai: Recipe = {
   name: "Pad Thai",
   type: "dinner",
+  country: "THA",
   images: ["pad-thai.jpg"],
   time: 20,
   portions: 2,

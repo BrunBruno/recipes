@@ -2,8 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
-import type { Recipe, MealType, KeyWord, DayIngredients } from "../../types";
-import { getRecipeKeywords, keywordAliases, MealTypesData } from "../../utils";
+import type { Recipe, MealType, DayIngredients } from "../../types";
+import { getRecipeKeywords, MealTypesData } from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
@@ -42,13 +42,9 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
     const keywords = getRecipeKeywords(recipe);
 
-    return keywords.some((keyword) => {
-      const aliases = keywordAliases[keyword as KeyWord] ?? [keyword];
-
-      return aliases.some((alias) =>
-        alias.toLowerCase().includes(normalizedQuery),
-      );
-    });
+    return keywords.some((keyword) =>
+      keyword.toLowerCase().includes(normalizedQuery),
+    );
   };
 
   const filteredRecipes = recipes

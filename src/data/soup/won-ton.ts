@@ -12,6 +12,7 @@ const portions = 6;
 const zupaWonton: Recipe = {
   name: "Won Ton",
   type: "soup",
+  country: "CHN",
   images: [""],
   time: 195,
   portions: portions,

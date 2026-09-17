@@ -121,6 +121,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [12, 0, 18],
+    price: 13,
   },
 
   chicken_thigh: {
@@ -133,6 +134,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [15, 0, 17],
+    price: 14,
   },
 
   chicken_whole: {

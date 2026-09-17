@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const zapiekankiDomowe: Recipe = {
   name: "Zapiekanki Domowe",
   type: "snack",
+  country: "POL",
   images: [""],
   time: 30,
   portions: 2,

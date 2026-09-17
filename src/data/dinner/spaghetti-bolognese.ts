@@ -11,6 +11,7 @@ const portions = 3;
 const spaghettiBolognese: Recipe = {
   name: "Spaghetti Bolognese",
   type: "dinner",
+  country: "ITA",
   images: [
     "spaghetti-bolognese.jpg",
     "spaghetti-bolognese-2.jpg",

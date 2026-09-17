@@ -9,6 +9,7 @@ import type { Recipe } from "../../types";
 const spaghettiCzterySery: Recipe = {
   name: "Spaghetti Cztery Sery",
   type: "dinner",
+  country: "ITA",
   images: [
     "spaghetti-cztery-sery.jpg",
     "spaghetti-cztery-sery-2.jpg",
