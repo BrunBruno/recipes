@@ -50,7 +50,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
           //   ),
           // )
           // .filter((r) => !r.country)
-          .filter((r) => !r.keyWords)
+          //.filter((r) => !r.keyWords)
           .map((recipe) => (
             <motion.div
               key={`${recipe.fileName}`}
