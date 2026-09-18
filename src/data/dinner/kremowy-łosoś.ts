@@ -41,6 +41,7 @@ const kremowyLosos: Recipe = {
       ],
     },
   ],
+  keyWords: ["ryba", "pieczone"],
 };
 
 export default kremowyLosos;

@@ -63,7 +63,7 @@ const kotletSchabowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "smażone"],
 };
 
 export default kotletSchabowy;

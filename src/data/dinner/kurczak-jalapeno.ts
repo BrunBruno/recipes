@@ -59,7 +59,7 @@ const kurczakJalapeno: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "fix"],
+  keyWords: ["mięso", "kurczak", "fix", "smażone"],
 };
 
 export default kurczakJalapeno;

@@ -81,6 +81,7 @@ const kajzerkaZFryera: Recipe = {
       ],
     },
   ],
+  keyWords: ["pieczywo", "air fryer", "mięso", "bułki"],
 };
 
 export default kajzerkaZFryera;

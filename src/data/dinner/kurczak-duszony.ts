@@ -62,7 +62,7 @@ const gotowanyKurczak: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "sos"],
+  keyWords: ["mięso", "kurczak", "sos", "duszone"],
 };
 
 export default gotowanyKurczak;

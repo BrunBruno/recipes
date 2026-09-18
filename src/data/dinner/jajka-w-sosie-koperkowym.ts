@@ -12,6 +12,7 @@ const portions = 1;
 const jajkaWSosieKoperkowym: Recipe = {
   name: "Jajka w Sosie Koperkowym",
   type: "dinner",
+  country: "POL",
   images: ["jajka-w-sosie-koperkowym.jpg"],
   time: 30,
   portions: portions,

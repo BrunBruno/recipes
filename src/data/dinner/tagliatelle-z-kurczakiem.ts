@@ -41,6 +41,7 @@ const tagliatelleZKurczakiem: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "kurczak", "makaron", "fix"],
 };
 
 export default tagliatelleZKurczakiem;

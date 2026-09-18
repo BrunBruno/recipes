@@ -87,7 +87,7 @@ const kotletDevolay: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default kotletDevolay;

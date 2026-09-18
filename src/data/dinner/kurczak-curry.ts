@@ -50,7 +50,7 @@ const kurczakCurry: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "ryż", "fix"],
+  keyWords: ["mięso", "kurczak", "ryż", "fix"],
 };
 
 export default kurczakCurry;

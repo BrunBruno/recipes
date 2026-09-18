@@ -46,7 +46,7 @@ const chiliConCarne: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "ryż", "fix"],
+  keyWords: ["mięso", "wieprzowina", "ryż", "fix"],
 };
 
 export default chiliConCarne;

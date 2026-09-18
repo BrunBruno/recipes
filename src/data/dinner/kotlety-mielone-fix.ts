@@ -64,7 +64,7 @@ const kotletyMieloneFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "fix"],
+  keyWords: ["mięso", "wieprzowina", "fix", "smażone"],
 };
 
 export default kotletyMieloneFix;

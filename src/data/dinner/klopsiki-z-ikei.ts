@@ -90,7 +90,7 @@ const klopsikiZIkei: Recipe = {
       ],
     },
   ],
-  keyWords: ["wołowina", "wieprzowina", "sos"],
+  keyWords: ["mięso", "wołowina", "wieprzowina", "sos"],
   link: "https://kuchniaagaty.pl/przepisy/szwedzkie-klopsiki-z-ikea",
 };
 

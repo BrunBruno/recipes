@@ -35,5 +35,6 @@ const krokietyZBarszczem: Recipe = {
       ],
     },
   ],
+  keyWords: ["zupa", "mięso"],
 };
 export default krokietyZBarszczem;

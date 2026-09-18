@@ -13,6 +13,7 @@ const portions = 3;
 const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
+  country: "USA",
   images: [
     "pancakes.jpg",
     "pancakes-2.jpg",

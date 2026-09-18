@@ -11,6 +11,7 @@ import type { Recipe } from "../../types";
 const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
+  country: "SWE",
   images: ["cynamonki.jpg"],
   time: 150,
   portions: 12,

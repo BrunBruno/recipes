@@ -8,7 +8,11 @@ const portions = 3;
 const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
   type: "dinner",
-  images: ["palki-barbecue.jpg"],
+  images: [
+    "palki-barbecue.jpg",
+    "palki-barbecue-2.jpg",
+    "palki-barbecue-3.jpg",
+  ],
   time: 60,
   portions: portions,
   taste: 4,
@@ -34,7 +38,11 @@ const palkiBarbecue: Recipe = {
     selected: 0,
   },
   extrasVeg: {
-    options: [dinnerSides("pickled-cucumber", portions)],
+    options: [
+      dinnerSides("pickled-cucumber", portions),
+      dinnerSides("beets-whole-vinegar", portions),
+      dinnerSides("sauerkraut", portions),
+    ],
     selected: 0,
   },
   steps: [

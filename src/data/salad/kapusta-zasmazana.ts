@@ -48,6 +48,7 @@ const kapustaZasmazana: Recipe = {
       ],
     },
   ],
+  keyWords: ["warzywa", "kapusta"],
 };
 
 export default kapustaZasmazana;

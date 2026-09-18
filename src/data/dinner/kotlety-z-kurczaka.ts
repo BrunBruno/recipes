@@ -91,7 +91,7 @@ const kotletyZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default kotletyZKurczaka;

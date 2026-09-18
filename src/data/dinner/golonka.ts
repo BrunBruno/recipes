@@ -6,6 +6,7 @@ const portions = 2;
 const golonkaGotowa: Recipe = {
   name: "Golonka z Piekarnika",
   type: "dinner",
+  country: "DEU",
   images: ["golonka-gotowa.jpg", "golonka-gotowa-2.jpg"],
   time: 60,
   portions: portions,

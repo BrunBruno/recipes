@@ -196,13 +196,13 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
           <div className={`filters ${showFilters ? "show" : ""}`}>
             <div className={`filter-buttons`}>
-              {Object.entries(MealTypesData).map(([key, { label, color }]) => (
+              {Object.entries(MealTypesData).map(([key, record]) => (
                 <button
                   key={key}
                   className="filter-btn"
                   style={{
                     borderColor: activeTypes.includes(key as MealType)
-                      ? color
+                      ? record.color
                       : "#666",
                   }}
                   onClick={() => toggleType(key as MealType)}
@@ -215,7 +215,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                       }
                     />
                   </div>
-                  <span className="filter-text">{label}</span>
+                  {/* <span className="filter-text">{label}</span> */}
                 </button>
               ))}
             </div>
@@ -231,7 +231,13 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                   }}
                   onClick={() => toggleTaste(taste)}
                 >
-                  {Array.from({
+                  <UtilsIcon
+                    // key={`fs${i}`}
+                    name="star-full"
+                    color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
+                  />
+                  <span className="span-numer">{taste}</span>
+                  {/* {Array.from({
                     length: taste,
                   }).map((_, i) => (
                     <UtilsIcon
@@ -248,7 +254,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                       name="star-empty"
                       color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
                     />
-                  ))}
+                  ))} */}
                 </button>
               ))}
             </div>

@@ -39,6 +39,7 @@ const marchewkaZTymiankiem: Recipe = {
       ],
     },
   ],
+  keyWords: ["warzywa"],
 };
 
 export default marchewkaZTymiankiem;

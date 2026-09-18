@@ -63,7 +63,7 @@ const kotletPoZbojnicku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "ser"],
+  keyWords: ["mięso", "wieprzowina", "ser", "pieczarki", "smażone"],
 };
 
 export default kotletPoZbojnicku;

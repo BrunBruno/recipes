@@ -33,8 +33,8 @@ const gulaszWegrerski: Recipe = {
   ],
   extrasMain: {
     options: [
-      dinnerSides("kopytka-ready", portions),
       dinnerSides("buckwheat", portions),
+      dinnerSides("kopytka-ready", portions),
     ],
     selected: 0,
   },

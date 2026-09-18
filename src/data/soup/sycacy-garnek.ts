@@ -37,6 +37,7 @@ const sycacyGarnek: Recipe = {
       ],
     },
   ],
+  keyWords: ["mięso", "wieprzowina", "gotowane", "ziemniaki"],
 };
 
 export default sycacyGarnek;

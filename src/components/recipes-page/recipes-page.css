@@ -120,7 +120,8 @@
   border-radius: 1rem;
   display: flex;
   height: 28.4rem;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
+  border: solid 0.2rem #262626;
 
   opacity: 0;
   transform: translateX(120%);
@@ -154,12 +155,19 @@
 
   gap: 1rem;
   padding: 0 1rem;
-  width: 10.8rem;
+  width: auto;
   height: 3.2rem;
   font-size: 1.2rem;
   color: #fff;
-  display: grid;
-  grid-template-columns: 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
 }
 
 .filter-grade {
@@ -167,10 +175,9 @@
   gap: 0.3rem;
 }
 
-.filter-svg {
-  width: 24px;
-  height: 24px;
-  margin: auto;
+.filter-grade svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .filter-text {
@@ -183,6 +190,11 @@
 
 .filter-btn:hover > span {
   display: inline;
+}
+
+.span-numer {
+  position: absolute;
+  color: #222;
 }
 
 .details-bg {

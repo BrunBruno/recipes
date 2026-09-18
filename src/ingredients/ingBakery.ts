@@ -285,12 +285,13 @@ export const iBAK: Record<IngId, IngredientItem> = {
     name: "Pinsa",
     type: "bak",
     color: "#E0A96D",
-    kcalPer100g: 250,
+    kcalPer100g: 262,
     unitWeights: {
-      szt: 230,
+      szt: 250,
     },
-    nutrientsPer100g: [6, 50, 8],
+    nutrientsPer100g: [6, 42, 8.3],
     price: 45.6,
+    verified: true,
   },
 
   //// SNACKS ////
