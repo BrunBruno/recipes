@@ -218,6 +218,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
   sun_dried_tomatoes: {
     name: "Suszone pomidory",
     type: "veg",
+    group: "dry-tomatoes",
     isVeg: true,
     subType: "tom",
     color: "#B71C1C",

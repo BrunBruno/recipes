@@ -54,6 +54,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   apple: {
     name: "Jabłko",
     type: "frt",
+    group: "apple",
     isVeg: true,
     color: "#D32F2F",
     kcalPer100g: 52,
@@ -68,6 +69,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   green_apple: {
     name: "Zielone jabłko",
     type: "frt",
+    group: "apple",
     isVeg: true,
     subType: "app",
     color: "#A8C95B",
@@ -81,6 +83,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   pear: {
     name: "Gruszka",
     type: "frt",
+    group: "pear",
     isVeg: true,
     subType: "per",
     color: "#A3C853",
@@ -95,6 +98,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   rocha_pear: {
     name: "Gruszka Rocha",
     type: "frt",
+    group: "pear",
     isVeg: true,
     subType: "per",
     color: "#C2C57B",
@@ -175,6 +179,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   peach: {
     name: "Brzoskwinia",
     type: "frt",
+    group: "peach",
     isVeg: true,
     subType: "pea",
     color: "#FFB07C",
@@ -189,6 +194,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   nectarine: {
     name: "Nektarynka",
     type: "frt",
+    group: "peach",
     isVeg: true,
     subType: "pea",
     color: "#FF8C42",
@@ -203,6 +209,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   cookie_peach: {
     name: "Brzoskwinia ciasteczkowa",
     type: "frt",
+    group: "peach",
     isVeg: true,
     subType: "pea",
     color: "#F7B27A",
@@ -440,6 +447,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   grapes_red: {
     name: "Winogrona czerwone",
     type: "frt",
+    group: "grape",
     isVeg: true,
     subType: "grp",
     color: "#8E44AD",
@@ -450,6 +458,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
   grapes_white: {
     name: "Winogrona białe",
     type: "frt",
+    group: "grape",
     isVeg: true,
     subType: "grp",
     color: "#D4E157",

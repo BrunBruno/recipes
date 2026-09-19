@@ -18,7 +18,13 @@ export type IngGroups =
   | "steak"
   | "onion"
   | "tomato"
-  | "lettuce";
+  | "lettuce"
+  | "peach"
+  | "apple"
+  | "pear"
+  | "grape"
+  | "pickle"
+  | "dry-tomatoes";
 
 export const getIngredientGroup = (
   groupName: IngGroups,
@@ -124,6 +130,7 @@ export const getIngredientGroup = (
           { ing: iVEG.tomato, amount: amount, replaceable: true },
           { ing: iVEG.tomato_raspberry, amount: amount, replaceable: true },
           { ing: iVEG.tomato_roma, amount: amount, replaceable: true },
+          { ing: iJAR.canned_tomatoes, amount: amount, replaceable: true },
         ],
         selected: 0,
       };
@@ -136,6 +143,76 @@ export const getIngredientGroup = (
           { ing: iVEG.lettuce_iceberg, amount: amount, replaceable: true },
           { ing: iVEG.lettuce_romaine, amount: amount, replaceable: true },
           { ing: iVEG.arugula, amount: amount, replaceable: true },
+        ],
+        selected: 0,
+      };
+    case "peach":
+      return {
+        type: "choice",
+        options: [
+          { ing: iFRT.peach, amount: amount, replaceable: true },
+          { ing: iFRT.nectarine, amount: amount, replaceable: true },
+          { ing: iFRT.cookie_peach, amount: amount, replaceable: true },
+          { ing: iJAR.canned_peach, amount: amount, replaceable: true },
+        ],
+        selected: 0,
+      };
+    case "apple":
+      return {
+        type: "choice",
+        options: [
+          { ing: iFRT.apple, amount: amount, replaceable: true },
+          { ing: iFRT.green_apple, amount: amount, replaceable: true },
+        ],
+        selected: 0,
+      };
+    case "pear":
+      return {
+        type: "choice",
+        options: [
+          { ing: iFRT.pear, amount: amount, replaceable: true },
+          { ing: iFRT.rocha_pear, amount: amount, replaceable: true },
+        ],
+        selected: 0,
+      };
+    case "grape":
+      return {
+        type: "choice",
+        options: [
+          { ing: iFRT.grapes_red, amount: amount, replaceable: true },
+          { ing: iFRT.grapes_white, amount: amount, replaceable: true },
+        ],
+        selected: 0,
+      };
+    case "pickle":
+      return {
+        type: "choice",
+        options: [
+          { ing: iJAR.pickled_cucumber, amount: amount, replaceable: true },
+          {
+            ing: iJAR.pickled_cucumber_vinegar,
+            amount: amount,
+            replaceable: true,
+          },
+          { ing: iJAR.pickles, amount: amount, replaceable: true },
+          {
+            ing: iJAR.lightly_pickled_cucumber,
+            amount: amount,
+            replaceable: true,
+          },
+        ],
+        selected: 0,
+      };
+    case "dry-tomatoes":
+      return {
+        type: "choice",
+        options: [
+          { ing: iVEG.sun_dried_tomatoes, amount: amount, replaceable: true },
+          {
+            ing: iJAR.sun_dried_tomatoes_in_oil,
+            amount: amount,
+            replaceable: true,
+          },
         ],
         selected: 0,
       };

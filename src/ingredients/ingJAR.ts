@@ -127,6 +127,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   pickled_cucumber: {
     name: "Ogórek kiszony",
     type: "jar",
+    group: "pickle",
     isVeg: true,
     color: "#6FAF3A",
     kcalPer100g: 8,
@@ -140,6 +141,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   pickled_cucumber_vinegar: {
     name: "Ogórek konserwowy",
     type: "jar",
+    group: "pickle",
     isVeg: true,
     color: "#9CCC65",
     kcalPer100g: 15,
@@ -153,6 +155,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   lightly_pickled_cucumber: {
     name: "Ogórki małosolne",
     type: "jar",
+    group: "pickle",
     isVeg: true,
     color: "#7FAE62",
     kcalPer100g: 11,
@@ -165,6 +168,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   pickles: {
     name: "Pikle",
     type: "jar",
+    group: "pickle",
     isVeg: true,
     color: "#7E9F45",
     kcalPer100g: 25,
@@ -252,6 +256,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   sun_dried_tomatoes_in_oil: {
     name: "Suszone pomidory w zalewie",
     type: "jar",
+    group: "dry-tomatoes",
     isVeg: true,
     color: "#B71C1C",
     kcalPer100g: 178,
@@ -349,6 +354,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_tomatoes: {
     name: "Pomidory z puszki",
     type: "jar",
+    group: "tomato",
     isVeg: true,
     color: "#D84315",
     kcalPer100g: 21,
@@ -402,6 +408,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
   canned_peach: {
     name: "Brzoskwinia w puszce",
     type: "jar",
+    group: "peach",
     isVeg: true,
     color: "#FFB74D",
     kcalPer100g: 68,
