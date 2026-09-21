@@ -33,6 +33,7 @@ type IngId =
   | "rice_noodles"
 
   //// PROCESSED ////
+  | "rice_paper"
   | "cupcake_mix"
   | "oat_flakes"
   | "cornflakes"
@@ -163,7 +164,12 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     color: "#E8D9B5",
     kcalPer100g: 350,
-    nutrientsPer100g: [0.6, 78, 6],
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [0.5, 80, 6.3],
+    price: 10,
+    verified: true,
   },
 
   couscous: {
@@ -440,14 +446,29 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     subType: "bag",
     color: "#B86B3C",
-    kcalPer100g: 400,
+    kcalPer100g: 412,
     unitWeights: {
       lzi: 10,
       szk: 30,
       opak: 250,
     },
-    nutrientsPer100g: [9, 75, 6],
+    nutrientsPer100g: [9, 73.4, 6.1],
     price: 26.7,
+    verified: true,
+  },
+
+  rice_paper: {
+    name: "Papier ryżowy",
+    type: "grn",
+    color: "#FBFBFA",
+    kcalPer100g: 340,
+    unitWeights: {
+      szt: 10,
+      opak: 250,
+    },
+    nutrientsPer100g: [0.5, 84, 0.5],
+    price: 32,
+    verified: true,
   },
 
   cupcake_mix: {

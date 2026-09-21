@@ -24,7 +24,7 @@ type IngId =
   //// SEA FOOD ////
   | "squid_frozen_ready"
   | "shrimp"
-  | "crab_sticks";
+  | "surimi";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -128,12 +128,14 @@ export const iFSH: Record<IngId, IngredientItem> = {
     name: "Łosoś wędzony",
     type: "fsh",
     color: "#FF8A65",
-    kcalPer100g: 117,
+    kcalPer100g: 176,
     unitWeights: {
       opak: 100,
       plas: 30,
     },
-    nutrientsPer100g: [4, 0, 18],
+    nutrientsPer100g: [11, 0, 19],
+    price: 120,
+    verified: true,
   },
 
   smoked_mackerel: {
@@ -272,13 +274,18 @@ export const iFSH: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  crab_sticks: {
-    name: "Paluszki krabowe",
+  surimi: {
+    name: "Surimi",
     type: "fsh",
     subType: "sea",
     color: "#E58B72",
-    kcalPer100g: 95,
-    unitWeights: { szt: 20 },
-    nutrientsPer100g: [0.5, 15, 7],
+    kcalPer100g: 136,
+    unitWeights: {
+      szt: 15,
+      opak: 350,
+    },
+    nutrientsPer100g: [4.9, 15.3, 8.3],
+    price: 22.8,
+    verified: true,
   },
 };

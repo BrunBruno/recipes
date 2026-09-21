@@ -843,11 +843,14 @@ export const iVEG: Record<IngId, IngredientItem> = {
     type: "veg",
     subType: "sea",
     color: "#364A3B",
-    kcalPer100g: 350,
+    kcalPer100g: 327,
     unitWeights: {
-      szt: 3,
+      szt: 2.5,
+      opak: 16,
     },
-    nutrientsPer100g: [3, 40, 40],
+    nutrientsPer100g: [7.6, 9.8, 41],
+    price: 380,
+    verified: true,
   },
 
   //// BEANS ////

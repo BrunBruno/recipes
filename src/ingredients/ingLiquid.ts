@@ -101,8 +101,15 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     name: "Ocet ryżowy",
     type: "liq",
     color: "#E7D7B5",
-    kcalPer100g: 18,
-    nutrientsPer100g: [0, 0.5, 0],
+    kcalPer100g: 15,
+    unitWeights: {
+      opak: 250,
+      ml: 1,
+      lz: 15,
+    },
+    nutrientsPer100g: [0, 0, 0],
+    price: 24,
+    verified: true,
   },
 
   wine_vinegar: {
