@@ -18,9 +18,9 @@ const kaszaZMalinami: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.semolina, amount: 50 },
-        { ing: iJAR.frozen_raspberries, amount: 100 },
-        { ing: iFRT.raspberries, amount: 20 },
+        { ing: iGRN.semolina, amount: 50, kw: true },
+        { ing: iJAR.frozen_raspberries, amount: 100, kw: true },
+        { ing: iFRT.raspberries, amount: 20, kw: true },
         { ing: iDIR.milk, amount: 250, unit: "ml" },
         { ing: iDIR.vanilla_skyr, amount: 0.5, unit: "szt" },
         { ing: iSNK.chocolate_dark, amount: 1, unit: "kst" },
@@ -54,7 +54,7 @@ const kaszaZMalinami: Recipe = {
     },
   ],
 
-  keyWords: ["kasza", "owoce"],
+  keyWords: ["kasza", "owoce", "deser"],
   link: "https://dietetykpowszechny.pl/przepis/kasza-manna-z-malinami/",
 };
 

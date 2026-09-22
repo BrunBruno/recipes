@@ -20,7 +20,7 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak" },
+        { ing: iMET.spicy_tenderloins, amount: 1, unit: "opak", kw: true },
         { ing: iJAR.frozen_fries, amount: 150 * portions },
         { ing: iSAU.mayonnaise, amount: 2, unit: "lzi" },
         { ing: iSAU.sriracha, amount: 1, unit: "lzi" },
@@ -40,7 +40,7 @@ const gotoweSkrzydelkaPoledwiczki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default gotoweSkrzydelkaPoledwiczki;

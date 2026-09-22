@@ -18,7 +18,7 @@ const krazkiKalmaroweGotowe: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.squid_frozen_ready, amount: 1, unit: "opak" },
+        { ing: iFSH.squid_frozen_ready, amount: 1, unit: "opak", kw: true },
         { ing: iJAR.frozen_fries, amount: portions * 150 },
         { ing: iFAT.oil, amount: 2, unit: "lzi" },
         { ing: iFRT.lemon, amount: 1, unit: "plas" },
@@ -38,7 +38,7 @@ const krazkiKalmaroweGotowe: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["morskie", "smażone"],
 };
 
 export default krazkiKalmaroweGotowe;

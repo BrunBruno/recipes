@@ -750,6 +750,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [7.6, 11.3, 6.5],
+    price: 166,
   },
 
   winiary_peasant_stew_fix: {

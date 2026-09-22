@@ -19,8 +19,8 @@ const gotowyBurger: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
-        { ing: iMET.burger_patties, amount: 4, unit: "szt" },
+        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iMET.burger_patties, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
@@ -69,7 +69,7 @@ const gotowyBurger: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "pieczywo", "kurczak", "boczek", "jajko", "ser", "sos"],
+  keyWords: ["mięso", "pieczywo", "burger"],
 };
 
 export default gotowyBurger;

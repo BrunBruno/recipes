@@ -59,7 +59,7 @@ const zapiekankaBolognese: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "makaron", "wieprzowina", "warzywa", "ser", "fix"],
+  keyWords: ["mięso", "makaron", "wieprzowina", "ser", "fix", "pieczone"],
 };
 
 export default zapiekankaBolognese;

@@ -15,8 +15,14 @@ const kajzerkiZMakrela: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
-        { ing: iFSH.smoked_mackerel, amount: 0.5, unit: "szt" },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
+        { ing: iFSH.smoked_mackerel, amount: 0.5, unit: "szt", kw: true },
         { ing: iFAT.butter, amount: 10 },
       ],
     },

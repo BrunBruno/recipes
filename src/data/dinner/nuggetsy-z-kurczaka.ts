@@ -18,7 +18,7 @@ const nuggetsyZKurczaka: Recipe = {
     {
       title: "Kurczak",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
         { ing: iGRN.flour, amount: 50 },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 100 },
@@ -45,7 +45,7 @@ const nuggetsyZKurczaka: Recipe = {
     },
   ],
 
-  keyWords: ["kurczak"],
+  keyWords: [],
 };
 
 export default nuggetsyZKurczaka;

@@ -19,7 +19,7 @@ const plackiZiemniaczane: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.potato, amount: 5, unit: "szt" },
+        { ing: iVEG.potato, amount: 5, unit: "szt", kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iMET.egg, amount: 1, unit: "szt" },
@@ -45,7 +45,7 @@ const plackiZiemniaczane: Recipe = {
       ],
     },
   ],
-  keyWords: ["ziemniak"],
+  keyWords: ["ziemniaki", "smażone"],
 };
 
 export default plackiZiemniaczane;

@@ -22,7 +22,7 @@ const burgerDomowy: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_beef, amount: 400 },
+        { ing: iMET.ground_beef, amount: 400, kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
@@ -31,7 +31,7 @@ const burgerDomowy: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.multigrain_kaiser_roll, amount: 4, unit: "szt" },
+        { ing: iBAK.multigrain_kaiser_roll, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
@@ -74,7 +74,7 @@ const burgerDomowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "pieczywo", "ser", "warzywa", "sos"],
+  keyWords: ["mięso", "wołowina", "pieczywo", "sos", "burger"],
 };
 
 export default burgerDomowy;

@@ -20,9 +20,9 @@ const salatkaKuskus: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.couscous, amount: 1, unit: "opak" },
+        { ing: iGRN.couscous, amount: 1, unit: "opak", kw: true },
+        { ing: iFSH.canned_tuna, amount: 2, unit: "opak", kw: true },
         { ing: iMET.egg, amount: 4, unit: "szt" },
-        { ing: iFSH.canned_tuna, amount: 2, unit: "opak" },
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "opak" },
@@ -47,7 +47,7 @@ const salatkaKuskus: Recipe = {
       ],
     },
   ],
-  keyWords: ["sałatka", "kasza", "ryba"],
+  keyWords: ["kasza", "ryba"],
 };
 
 export default salatkaKuskus;

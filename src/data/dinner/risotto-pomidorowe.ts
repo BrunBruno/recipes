@@ -23,9 +23,9 @@ const risottoPomidorowe: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 500 },
-        { ing: iVEG.cabbage, amount: 300 },
-        { ing: iGRN.rice, amount: 300 },
+        { ing: iMET.ground_pork, amount: 500, kw: true },
+        { ing: iVEG.cabbage, amount: 300, kw: true },
+        { ing: iGRN.rice, amount: 300, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.salt },
@@ -62,6 +62,6 @@ const risottoPomidorowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryż", "mięso"],
+  keyWords: ["ryż", "mięso", "wieprzowina"],
 };
 export default risottoPomidorowe;

@@ -41,7 +41,7 @@ const krewetki: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["morskie", "pieczywo", "smażone"],
 };
 
 export default krewetki;

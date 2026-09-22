@@ -14,8 +14,14 @@ const kajzerkiZCzekolada: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
-        { ing: iSNK.chocolate_cream, amount: 40 },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
+        { ing: iSNK.chocolate_cream, amount: 40, kw: true },
       ],
     },
   ],

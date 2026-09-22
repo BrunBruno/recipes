@@ -21,8 +21,8 @@ const salatkaZSuszonychPomidorow: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 500 },
-        { ing: iGRN.bow_tie_pasta, amount: 250 },
+        { ing: iMET.chicken_breast, amount: 500, kw: true },
+        { ing: iGRN.bow_tie_pasta, amount: 250, kw: true },
         { ing: iJAR.canned_corn, amount: 0.75, unit: "opak" },
         { ing: iJAR.sun_dried_tomatoes_in_oil, amount: 10, unit: "szt" },
         { ing: iNUT.sunflower_seeds, amount: 6, unit: "lz" },
@@ -33,7 +33,7 @@ const salatkaZSuszonychPomidorow: Recipe = {
     {
       title: "Sos",
       items: [
-        { ing: iFAT.sun_dried_tomato_oil, amount: 6, unit: "lz" },
+        { ing: iFAT.sun_dried_tomato_oil, amount: 6, unit: "lz", kw: true },
         { ing: iSAU.ketchup, amount: 3, unit: "lz" },
         { ing: iSAU.kremser_mustard, amount: 1, unit: "lzi" },
         { ing: iLIQ.warm_water, amount: 1, unit: "lz" },
@@ -56,7 +56,7 @@ const salatkaZSuszonychPomidorow: Recipe = {
       ],
     },
   ],
-  keyWords: ["sałatka", "kurczak", "makaron"],
+  keyWords: ["mięso", "kurczak", "makaron"],
 };
 
 export default salatkaZSuszonychPomidorow;

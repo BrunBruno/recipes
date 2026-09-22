@@ -24,7 +24,7 @@ const pieczenWieprzowa: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_shoulder, amount: 125 * portions },
+        { ing: iMET.pork_shoulder, amount: 125 * portions, kw: true },
         { ing: iSAU.mustard, amount: 0.5 * portions, unit: "lz" },
         ...fryingFat(iFAT.oil, portions, "lz", 0.45),
         { ing: iHRB.marjoram, amount: 2, unit: "lzi" },
@@ -63,7 +63,7 @@ const pieczenWieprzowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "kasza"],
+  keyWords: ["mięso", "wieprzowina", "kasza", "pieczone"],
 };
 
 export default pieczenWieprzowa;

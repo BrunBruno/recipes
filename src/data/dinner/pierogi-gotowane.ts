@@ -17,7 +17,7 @@ const pierogiGotowane: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.pierogi_meat, amount: 400 },
+        { ing: iJAR.pierogi_meat, amount: 400, kw: true },
         { ing: iFAT.oil, amount: 1, unit: "lzi" },
         { ing: iSPC.salt },
       ],
@@ -35,7 +35,7 @@ const pierogiGotowane: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina"],
+  keyWords: ["mięso", "wieprzowina", "gotowane", "ciasto"],
 };
 
 export default pierogiGotowane;

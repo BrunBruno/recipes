@@ -16,7 +16,7 @@ const nuggetsyGotowe: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_nuggets, amount: 1, unit: "opak" },
+        { ing: iMET.chicken_nuggets, amount: 1, unit: "opak", kw: true },
         { ing: iJAR.frozen_fries, amount: 150 },
         {
           type: "choice",
@@ -44,7 +44,7 @@ const nuggetsyGotowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default nuggetsyGotowe;

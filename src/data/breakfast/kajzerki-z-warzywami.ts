@@ -18,7 +18,13 @@ const kajzerkiZWarzywami: Recipe = {
     {
       title: "Podstawa",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
         { ing: iFAT.butter, amount: 20 },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst", replaceable: true },
@@ -65,7 +71,7 @@ const kajzerkiZWarzywami: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa", "szynka", "pieczywo"],
+  keyWords: ["warzywa", "pieczywo"],
 };
 
 export default kajzerkiZWarzywami;

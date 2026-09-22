@@ -16,8 +16,14 @@ const serdelki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.serdelki, amount: 6, unit: "szt" },
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
+        { ing: iMET.serdelki, amount: 6, unit: "szt", kw: true },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
         { ing: iFAT.butter, amount: 5 },
         { ing: iSAU.mustard, amount: 2, unit: "lzi" },
       ],

@@ -21,7 +21,7 @@ const babeczkiGotowe: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.cupcake_mix, amount: 1, unit: "opak" },
+        { ing: iGRN.cupcake_mix, amount: 1, unit: "opak", kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iFAT.oil, amount: 100, unit: "ml" },
         { ing: iLIQ.water, amount: 100, unit: "ml" },
@@ -44,7 +44,7 @@ const babeczkiGotowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto"],
+  keyWords: ["ciasto", "pieczone"],
 };
 
 export default babeczkiGotowe;

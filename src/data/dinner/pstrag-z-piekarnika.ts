@@ -18,7 +18,7 @@ const pstragZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.rainbow_trout_fillet, amount: 2, unit: "szt" },
+        { ing: iFSH.rainbow_trout_fillet, amount: 2, unit: "szt", kw: true },
         { ing: iFAT.butter, amount: 3, unit: "lzi" },
         { ing: iFRT.lemon, amount: 3, unit: "plas" },
         { ing: iSPC.black_pepper },
@@ -46,7 +46,7 @@ const pstragZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba"],
+  keyWords: ["ryba", "ziemniaki", "pieczone"],
 };
 
 export default pstragZPiekarnika;

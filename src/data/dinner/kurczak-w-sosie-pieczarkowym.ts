@@ -1,7 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
 import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -27,9 +26,8 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 700 },
-        { ing: iGRN.rice, amount: portions * 100 },
-        { ing: iVEG.mushrooms, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 700, kw: true },
+        { ing: iVEG.mushrooms, amount: 400, kw: true },
         { ing: iVEG.onion, amount: 120 },
         ...fryingFat(iFAT.oil, 5, "lz", 0.35),
         { ing: iLIQ.water, amount: 250, unit: "ml" },
@@ -70,7 +68,7 @@ const kurczakWSosiePieczarkowymFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "sos", "fix"],
+  keyWords: ["mięso", "kurczak", "sos", "fix", "grzyby", "makaron", "ryż"],
 };
 
 export default kurczakWSosiePieczarkowymFix;

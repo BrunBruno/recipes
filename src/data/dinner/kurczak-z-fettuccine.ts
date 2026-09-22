@@ -22,13 +22,13 @@ const kurczakZFettuccine: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
         {
           type: "choice",
           options: [
-            { ing: iGRN.fettuccine_pasta, amount: 200 },
-            { ing: iGRN.tagliatelle_pasta, amount: 200 },
-            { ing: iGRN.penne_pasta, amount: 200 },
+            { ing: iGRN.fettuccine_pasta, amount: 200, kw: true },
+            { ing: iGRN.tagliatelle_pasta, amount: 200, kw: true },
+            { ing: iGRN.penne_pasta, amount: 200, kw: true },
           ],
           selected: 0,
         },
@@ -59,7 +59,7 @@ const kurczakZFettuccine: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak", "fix"],
+  keyWords: ["makaron", "mięso", "kurczak", "fix"],
 };
 
 export default kurczakZFettuccine;

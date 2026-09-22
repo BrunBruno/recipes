@@ -18,8 +18,8 @@ const ryzZJablkami: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.rice, amount: 100 },
-        { ing: iFRT.apple, amount: 2, unit: "szt" },
+        { ing: iGRN.rice, amount: 100, kw: true },
+        { ing: iFRT.apple, amount: 2, unit: "szt", kw: true },
         { ing: iOTH.sugar, amount: 2, unit: "lzi" },
         { ing: iFAT.butter, amount: 3 },
         { ing: iSPC.cinnamon },

@@ -22,10 +22,10 @@ const spaghettiCarbonara: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ing: iDIR.parmigiano_reggiano, amount: 100 },
-        { ing: iMET.bacon_block, amount: 300 },
-        { ing: iMET.egg_yolk, amount: 8, unit: "szt" },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
+        { ing: iDIR.parmigiano_reggiano, amount: 100, kw: true },
+        { ing: iMET.bacon_block, amount: 300, kw: true },
+        { ing: iMET.egg_yolk, amount: 8, unit: "szt", kw: true },
         { ing: iSPC.pepper_grains },
         { ing: iSPC.salt },
       ],
@@ -46,7 +46,7 @@ const spaghettiCarbonara: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "boczek", "jajko", "mięso"],
+  keyWords: ["makaron", "boczek", "jajka", "ser", "mięso"],
 };
 
 export default spaghettiCarbonara;

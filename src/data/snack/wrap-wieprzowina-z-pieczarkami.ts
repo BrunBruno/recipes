@@ -21,9 +21,9 @@ const wrapWieprzowinaZPieczarkami: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.tortilla, amount: portions, unit: "szt" },
+        { ing: iBAK.tortilla, amount: portions, unit: "szt", kw: true },
+        { ing: iVEG.mushrooms, amount: 100, kw: true },
         { ing: iMET.burger_patties, amount: portions, unit: "szt" },
-        { ing: iVEG.mushrooms, amount: 100 },
         { ing: iVEG.potato, amount: 150 },
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iSAU.horseradish_sauce, amount: 60 },
@@ -55,7 +55,7 @@ const wrapWieprzowinaZPieczarkami: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "tortilla", "wieprzowina", "sos"],
+  keyWords: [],
 };
 
 export default wrapWieprzowinaZPieczarkami;

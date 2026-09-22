@@ -17,7 +17,7 @@ const kurczakZRozna: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_whole, amount: 1, unit: "szt" },
+        { ing: iMET.chicken_whole, amount: 1, unit: "szt", kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.sweet_paprika, amount: 1, unit: "lzi" },
         { ing: iSPC.hot_paprika, amount: 1, unit: "lzi" },
@@ -54,7 +54,7 @@ const kurczakZRozna: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "ziemniaki"],
 };
 
 export default kurczakZRozna;

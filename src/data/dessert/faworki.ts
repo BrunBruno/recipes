@@ -64,7 +64,7 @@ const faworki: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto"],
+  keyWords: [],
 };
 
 export default faworki;

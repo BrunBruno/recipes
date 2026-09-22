@@ -24,7 +24,7 @@ const burgerDrwala: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_beef, amount: 400 },
+        { ing: iMET.ground_beef, amount: 400, kw: true },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
         { ing: iSPC.pepper_grains },
         { ing: iSPC.salt },
@@ -33,7 +33,7 @@ const burgerDrwala: Recipe = {
     {
       title: "Ser",
       items: [
-        { ing: iDIR.lilliputian_cheese, amount: 350 },
+        { ing: iDIR.lilliputian_cheese, amount: 350, kw: true },
         { ing: iSNK.cheese_snacks, amount: 1, unit: "opak" },
         { ing: iGRN.breadcrumbs, amount: 1, unit: "lz" },
         { ing: iMET.egg, amount: 2, unit: "szt" },
@@ -43,8 +43,8 @@ const burgerDrwala: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt" },
-        { ing: iMET.bacon_slices, amount: 8, unit: "plas" },
+        { ing: iBAK.hamburger_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iMET.bacon_slices, amount: 8, unit: "plas", kw: true },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
@@ -88,7 +88,7 @@ const burgerDrwala: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "ser", "pieczywo", "boczek", "sos"],
+  keyWords: ["mięso", "wołowina", "ser", "pieczywo", "boczek", "sos", "burger"],
 };
 
 export default burgerDrwala;

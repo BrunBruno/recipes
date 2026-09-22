@@ -19,7 +19,7 @@ const kajzerkaZFryera: Recipe = {
     {
       title: "Kajzerki z kurczakiem",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", kw: true },
         { ing: iMET.chicken_breast, amount: 150 },
         { ing: iJAR.canned_corn, amount: 70 },
         { ing: iDIR.yellow_mozzarella, amount: 60 },
@@ -29,7 +29,7 @@ const kajzerkaZFryera: Recipe = {
     {
       title: "Kajzerki z szynką",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt" },
+        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", kw: true },
         { ing: iMET.ham_slices, amount: 80 },
         { ing: iVEG.mushrooms, amount: 120 },
         { ing: iDIR.yellow_mozzarella, amount: 60 },
@@ -81,7 +81,7 @@ const kajzerkaZFryera: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "air fryer", "mięso", "bułki"],
+  keyWords: [],
 };
 
 export default kajzerkaZFryera;

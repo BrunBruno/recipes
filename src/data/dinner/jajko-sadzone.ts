@@ -18,7 +18,7 @@ const jajkoSadzone: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.egg, amount: 3 * portions, unit: "szt" },
+        { ing: iMET.egg, amount: 3 * portions, unit: "szt", kw: true },
         ...fryingFat(iFAT.clarified_butter, 1, "lz", 0.9),
         { ing: iSPC.salt },
       ],
@@ -49,7 +49,7 @@ const jajkoSadzone: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "smażone"],
+  keyWords: ["jajka", "smażone", "ziemniaki"],
 };
 
 export default jajkoSadzone;

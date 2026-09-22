@@ -16,7 +16,7 @@ const ziemniakiZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.potato, amount: 1, unit: "kg" },
+        { ing: iVEG.potato, amount: 1, unit: "kg", kw: true },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.caraway, amount: 0.5, unit: "lzi" },
@@ -53,7 +53,7 @@ const ziemniakiZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["ziemniak"],
+  keyWords: ["ziemniaki", "pieczone"],
 };
 
 export default ziemniakiZPiekarnika;

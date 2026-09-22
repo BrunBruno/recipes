@@ -18,7 +18,7 @@ const kremowyLosos: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.salmon_fillet, amount: 400 },
+        { ing: iFSH.salmon_fillet, amount: 400, kw: true },
         { ing: iDIR.cream_18, amount: 125, unit: "ml" },
         { ing: iLIQ.water, amount: 125, unit: "ml" },
         { ing: iFAT.liquid_butter, amount: 25 },
@@ -41,7 +41,7 @@ const kremowyLosos: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba", "pieczone"],
+  keyWords: [],
 };
 
 export default kremowyLosos;

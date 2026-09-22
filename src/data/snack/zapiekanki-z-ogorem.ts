@@ -38,6 +38,6 @@ const zapiekankiZOgorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo"],
+  keyWords: ["pieczywo", "kiełbasa", "ser"],
 };
 export default zapiekankiZOgorem;

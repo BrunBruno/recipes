@@ -19,16 +19,16 @@ const macAndCheeseFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.macaroni_pasta, amount: portions * 100 },
+        { ing: iGRN.macaroni_pasta, amount: portions * 100, kw: true },
         {
           type: "choice",
           options: [
-            { ing: iDIR.yellow_cheese, amount: portions * 50 },
-            { ing: iDIR.cheddar_cheese, amount: portions * 50 },
+            { ing: iDIR.yellow_cheese, amount: portions * 50, kw: true },
+            { ing: iDIR.cheddar_cheese, amount: portions * 50, kw: true },
           ],
           selected: 0,
         },
-        { ing: iMET.ham_canned, amount: portions * 50 },
+        { ing: iMET.ham_canned, amount: portions * 50, kw: true },
         { ing: iDIR.milk, amount: 200, unit: "ml" },
         {
           type: "choice",
@@ -57,7 +57,7 @@ const macAndCheeseFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "ser", "szynka", "fix"],
+  keyWords: ["mięso", "makaron", "ser", "szynka", "fix"],
 };
 
 export default macAndCheeseFix;

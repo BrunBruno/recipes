@@ -18,8 +18,14 @@ const kajzerkiZJajkiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
-        { ing: iMET.egg, amount: 2, unit: "szt" },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
+        { ing: iMET.egg, amount: 2, unit: "szt", kw: true },
         { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
@@ -40,7 +46,7 @@ const kajzerkiZJajkiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "jajko", "szynka", "ser"],
+  keyWords: ["pieczywo", "jajka"],
 };
 
 export default kajzerkiZJajkiem;

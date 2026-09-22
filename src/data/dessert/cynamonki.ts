@@ -67,7 +67,7 @@ const cynamonki: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto"],
+  keyWords: ["ciasto", "pieczone"],
 };
 
 export default cynamonki;

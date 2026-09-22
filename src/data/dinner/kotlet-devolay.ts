@@ -26,7 +26,7 @@ const kotletDevolay: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_chicken, amount: 600 },
+        { ing: iMET.ground_chicken, amount: 600, kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 6, unit: "lz" },
@@ -87,7 +87,7 @@ const kotletDevolay: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "smażone"],
+  keyWords: ["mięso", "kurczak", "smażone", "ziemniaki"],
 };
 
 export default kotletDevolay;

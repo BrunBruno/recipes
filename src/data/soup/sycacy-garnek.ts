@@ -15,8 +15,8 @@ const sycacyGarnek: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 350 },
-        { ing: iVEG.potato, amount: 300 },
+        { ing: iMET.ground_pork, amount: 350, kw: true },
+        { ing: iVEG.potato, amount: 300, kw: true },
         { ing: iVEG.carrot, amount: 200 },
         { ing: iVEG.mushrooms, amount: 200 },
         { ing: iLIQ.water, amount: 250, unit: "ml" },

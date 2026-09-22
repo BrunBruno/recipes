@@ -21,10 +21,10 @@ const spaghettiNapoli: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ing: iDIR.yellow_cheese, amount: portions * 40 },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
+        { ing: iDIR.yellow_cheese, amount: portions * 40, kw: true },
+        { ing: iJAR.tomato_paste, amount: 2, unit: "lzi", kw: true },
         ...fryingFat(iFAT.oil, 1, "lz", 0.55),
-        { ing: iJAR.tomato_paste, amount: 2, unit: "lzi" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_napoli_fix, amount: 1, unit: "opak" },
         { ing: iSPC.salt },
@@ -45,7 +45,7 @@ const spaghettiNapoli: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos", "fix"],
+  keyWords: ["makaron", "sos", "fix", "ser"],
 };
 
 export default spaghettiNapoli;

@@ -22,7 +22,7 @@ const gotowanyKurczak: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_thigh, amount: 600 },
+        { ing: iMET.chicken_thigh, amount: 600, kw: true },
         ...fryingFat(iFAT.oil, 3, "lz", 0.3),
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
@@ -62,7 +62,7 @@ const gotowanyKurczak: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "sos", "duszone"],
+  keyWords: ["mięso", "kurczak", "sos", "duszone", "ziemniaki"],
 };
 
 export default gotowanyKurczak;

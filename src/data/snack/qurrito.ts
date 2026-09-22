@@ -74,7 +74,7 @@ const qurrito: Recipe = {
     },
   ],
 
-  keyWords: ["kurczak"],
+  keyWords: [],
 };
 
 export default qurrito;

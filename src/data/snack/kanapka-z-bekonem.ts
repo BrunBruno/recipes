@@ -16,12 +16,12 @@ const kanapkaZBekonem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.wheat_malt_bread, amount: 4, unit: "krom" },
-        { ing: iSAU.mayonnaise, amount: 2.5, unit: "lz" },
-        { ing: iMET.brewed_bacon, amount: 3, unit: "plas" },
-        { ing: iMET.egg, amount: 0.5, unit: "szt" },
+        { ing: iBAK.wheat_malt_bread, amount: 4, unit: "krom", kw: true },
+        { ing: iMET.brewed_bacon, amount: 3, unit: "plas", kw: true },
+        { ing: iMET.egg, amount: 0.5, unit: "szt", kw: true },
         { ing: iVEG.lettuce, amount: 1, unit: "lst" },
         { ing: iVEG.tomato, amount: 2, unit: "plas" },
+        { ing: iSAU.mayonnaise, amount: 2.5, unit: "lz" },
       ],
     },
   ],
@@ -40,7 +40,7 @@ const kanapkaZBekonem: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "pieczywo"],
+  keyWords: [],
 };
 
 export default kanapkaZBekonem;

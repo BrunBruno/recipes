@@ -14,6 +14,7 @@ const portions = 4;
 const bitki: Recipe = {
   name: "Bitki",
   type: "dinner",
+  country: "POL",
   images: ["bitki.jpg", "bitki-2.jpg"],
   time: 65,
   portions: portions,
@@ -23,7 +24,7 @@ const bitki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_tenderloin, amount: 600 },
+        { ing: iMET.pork_tenderloin, amount: 600, kw: true },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
@@ -68,7 +69,7 @@ const bitki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "sos", "duszone"],
+  keyWords: ["mięso", "wieprzowina", "duszone", "sos", "ziemniaki"],
 };
 
 export default bitki;

@@ -10,15 +10,15 @@ const slimaczkiTortillowe: Recipe = {
   images: ["slimaczki-tortillowe.jpg"],
   time: 10,
   portions: 2,
-  taste: 4,
+  taste: 3,
   difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iBAK.tortilla, amount: 2, unit: "szt" },
+        { ing: iBAK.tortilla, amount: 2, unit: "szt", kw: true },
+        { ing: iDIR.cream_cheese, amount: 100, kw: true },
         { ing: iMET.ham_slices, amount: 100 },
-        { ing: iDIR.cream_cheese, amount: 100 },
         { ing: iVEG.lettuce, amount: 50 },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
       ],
@@ -37,7 +37,7 @@ const slimaczkiTortillowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["tortilla", "szynka"],
+  keyWords: ["pieczywo", "ser"],
 };
 
 export default slimaczkiTortillowe;

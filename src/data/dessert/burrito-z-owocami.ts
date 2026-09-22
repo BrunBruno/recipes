@@ -77,7 +77,7 @@ const burritoZOwocami: Recipe = {
     },
   ],
 
-  keyWords: ["owoce", "naleśnik"],
+  keyWords: [],
 };
 
 export default burritoZOwocami;

@@ -24,7 +24,7 @@ const kotletyMieloneFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 500 },
+        { ing: iMET.ground_pork, amount: 500, kw: true },
         { ing: iGRN.breadcrumbs, amount: 20 },
         { ing: iLIQ.water, amount: 175, unit: "ml" },
         ...fryingFat(iFAT.oil, 80, "g", 0.5),
@@ -64,7 +64,7 @@ const kotletyMieloneFix: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "fix", "smażone"],
+  keyWords: ["mięso", "wieprzowina", "fix", "smażone", "ziemniaki"],
 };
 
 export default kotletyMieloneFix;

@@ -20,8 +20,8 @@ const kurczakPoSeczuansku: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iGRN.bulgur, amount: portions * 80 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iGRN.bulgur, amount: portions * 80, kw: true },
         { ing: iJAR.sechuan_chili_fusion, amount: 1, unit: "opak" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.4),
         { ing: iSPC.chilli },

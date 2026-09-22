@@ -17,7 +17,7 @@ const paluszkiRybne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.fish_sticks, amount: 5 * portions, unit: "szt" },
+        { ing: iFSH.fish_sticks, amount: 5 * portions, unit: "szt", kw: true },
         ...fryingFat(iFAT.oil, 1, "lzi", 0.65),
       ],
     },
@@ -44,7 +44,7 @@ const paluszkiRybne: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba"],
+  keyWords: ["ryba", "ziemniaki", "smażone"],
 };
 
 export default paluszkiRybne;

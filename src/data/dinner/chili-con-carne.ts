@@ -20,13 +20,13 @@ const chiliConCarne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 300 },
+        { ing: iMET.ground_pork, amount: 300, kw: true },
+        { ing: iGRN.rice, amount: 200, kw: true },
         { ing: iJAR.canned_red_beans, amount: 120 },
         { ing: iJAR.canned_corn, amount: 340 },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.rapeseed_oil, amount: 45, unit: "ml" },
         { ing: iLIQ.water, amount: 300, unit: "ml" },
-        { ing: iGRN.rice, amount: 200 },
         { ing: iSPC.knorr_chili_con_carne_fix, amount: 1, unit: "opak" },
       ],
     },
@@ -46,7 +46,7 @@ const chiliConCarne: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "ryż", "fix"],
+  keyWords: ["mięso", "wieprzowina", "fix", "ryż"],
 };
 
 export default chiliConCarne;

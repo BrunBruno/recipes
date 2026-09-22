@@ -88,7 +88,7 @@ const zupaCzosnkowa: Recipe = {
     },
   ],
 
-  keyWords: ["zupa", "ser"],
+  keyWords: [],
 };
 
 export default zupaCzosnkowa;

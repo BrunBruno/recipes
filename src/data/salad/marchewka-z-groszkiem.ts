@@ -20,7 +20,7 @@ const marchewkaZGroszkiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.carrot, amount: portions, unit: "szt" },
+        { ing: iVEG.carrot, amount: portions, unit: "szt", kw: true },
         { ing: iJAR.canned_peas, amount: portions * 100 },
         { ing: iFAT.butter, amount: portions * 0.25, unit: "lzi" },
         { ing: iGRN.flour, amount: portions * 0.25, unit: "lz" },
@@ -43,7 +43,7 @@ const marchewkaZGroszkiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa"],
+  keyWords: [],
 };
 
 export default marchewkaZGroszkiem;

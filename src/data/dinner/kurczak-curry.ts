@@ -20,12 +20,12 @@ const kurczakCurry: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 300 },
+        { ing: iMET.chicken_breast, amount: 300, kw: true },
         {
           type: "choice",
           options: [
-            { ing: iGRN.rice, amount: 200 },
-            { ing: iBAK.nan_bread, amount: 2, unit: "szt" },
+            { ing: iGRN.rice, amount: 200, kw: true },
+            { ing: iBAK.nan_bread, amount: 2, unit: "szt", kw: true },
           ],
           selected: 0,
         },
@@ -50,7 +50,7 @@ const kurczakCurry: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "fix"],
+  keyWords: ["mięso", "kurczak", "pieczywo", "fix", "ryż"],
 };
 
 export default kurczakCurry;

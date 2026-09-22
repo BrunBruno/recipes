@@ -16,14 +16,14 @@ const penneWSosiePomidorowym: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.penne_pasta, amount: 300 },
-        { ing: iJAR.tomato_passata, amount: 500 },
+        { ing: iGRN.penne_pasta, amount: 300, kw: true },
+        { ing: iJAR.tomato_passata, amount: 500, kw: true },
         { ing: iDIR.cream_30, amount: 200, unit: "ml" },
         {
           type: "choice",
           options: [
-            { ing: iDIR.mozzarella, amount: 125 },
-            { ing: iDIR.mozzarella_mini, amount: 125 },
+            { ing: iDIR.mozzarella, amount: 125, kw: true },
+            { ing: iDIR.mozzarella_mini, amount: 125, kw: true },
           ],
           selected: 0,
         },
@@ -44,7 +44,7 @@ const penneWSosiePomidorowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "fix"],
+  keyWords: ["makaron", "fix", "ser", "sos"],
 };
 
 export default penneWSosiePomidorowym;

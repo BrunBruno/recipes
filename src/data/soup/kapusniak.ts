@@ -11,7 +11,7 @@ const kapusniak: Recipe = {
   difficulty: null,
   ingredients: [],
   steps: [],
-  keyWords: ["zupa"],
+  keyWords: [],
 };
 
 export default kapusniak;

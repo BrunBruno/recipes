@@ -21,12 +21,11 @@ const kotletPoGoralsku: Recipe = {
   ingredients: [
     {
       title: "",
-
       items: [
-        { ing: iMET.pork_loin, amount: 10, unit: "plas" },
-        { ing: iMET.bacon_slices, amount: 10, unit: "plas" },
+        { ing: iMET.pork_loin, amount: 10, unit: "plas", kw: true },
+        { ing: iMET.bacon_slices, amount: 10, unit: "plas", kw: true },
+        { ing: iDIR.yellow_cheese, amount: 10, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
-        { ing: iDIR.yellow_cheese, amount: 10, unit: "plas" },
         { ing: iGRN.breadcrumbs, amount: 150 },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         ...fryingFat(iFAT.oil, 10, "lz", 0.5),
@@ -65,7 +64,7 @@ const kotletPoGoralsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "ser", "boczek", "smażone"],
+  keyWords: ["mięso", "wieprzowina", "ser", "boczek", "smażone", "ziemniaki"],
 };
 
 export default kotletPoGoralsku;

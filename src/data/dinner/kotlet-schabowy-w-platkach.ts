@@ -23,9 +23,9 @@ const kotletySchaboweWPlatkach: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_loin, amount: 10, unit: "plas" },
-        { ing: iMET.egg, amount: 2, unit: "szt" },
+        { ing: iMET.pork_loin, amount: 10, unit: "plas", kw: true },
         { ing: iGRN.cornflakes, amount: 160 },
+        { ing: iMET.egg, amount: 2, unit: "szt" },
         ...fryingFat(iFAT.oil, 10, "lz", 0.55),
         { ing: iHRB.herbes_de_provence },
         { ing: iSPC.granulated_garlic },
@@ -60,7 +60,7 @@ const kotletySchaboweWPlatkach: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "smażone"],
+  keyWords: ["mięso", "wieprzowina", "smażone", "ziemniaki"],
 };
 
 export default kotletySchaboweWPlatkach;

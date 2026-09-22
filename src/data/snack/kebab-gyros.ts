@@ -22,7 +22,7 @@ const kebabGyros: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.gyros_spice, amount: 2, unit: "lz" },
       ],
@@ -30,7 +30,7 @@ const kebabGyros: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
+        { ing: iBAK.tortilla, amount: 4, unit: "szt", kw: true },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.canned_corn, amount: 1, unit: "opak" },
         { ing: iVEG.radish, amount: 1, unit: "opak" },
@@ -63,7 +63,7 @@ const kebabGyros: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "tortilla", "sos", "warzywa"],
+  keyWords: ["mięso", "kurczak", "pieczywo", "sos"],
 };
 
 export default kebabGyros;

@@ -49,7 +49,7 @@ const biszkoptWaniliowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "biszkopt"],
+  keyWords: [],
 };
 
 export default biszkoptWaniliowy;

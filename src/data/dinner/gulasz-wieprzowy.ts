@@ -23,7 +23,7 @@ const gulaszWieprzowy: Recipe = {
       title: "",
 
       items: [
-        { ing: iMET.stew_pork, amount: 500 },
+        { ing: iMET.stew_pork, amount: 500, kw: true },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         {
           type: "choice",
@@ -75,7 +75,7 @@ const gulaszWieprzowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "sos", "duszone"],
+  keyWords: ["mięso", "wieprzowina", "sos", "duszone", "kluski"],
 };
 
 export default gulaszWieprzowy;

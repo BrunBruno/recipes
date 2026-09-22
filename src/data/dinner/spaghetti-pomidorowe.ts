@@ -21,10 +21,10 @@ const spaghettiPomidorowe: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
-        { ing: iJAR.canned_tomatoes, amount: 2, unit: "opak" },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
+        { ing: iDIR.yellow_cheese, amount: portions * 50, kw: true },
+        { ing: iJAR.canned_tomatoes, amount: 2, unit: "opak", kw: true },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
-        { ing: iDIR.yellow_cheese, amount: portions * 50 },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
         { ing: iHRB.basil },
         { ing: iHRB.oregano },
@@ -48,7 +48,7 @@ const spaghettiPomidorowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "sos"],
+  keyWords: ["makaron", "sos", "ser"],
 };
 
 export default spaghettiPomidorowe;

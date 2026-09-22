@@ -20,7 +20,7 @@ const stek: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.beef_steak, amount: portions, unit: "szt" },
+        { ing: iMET.beef_steak, amount: portions, unit: "szt", kw: true },
         { ing: iVEG.garlic, amount: portions, unit: "zbk" },
         ...fryingFat(iFAT.oil, portions, "lzi", 0.55),
         ...fryingFat(iFAT.butter, 1, "lz", 0.5),
@@ -52,7 +52,7 @@ const stek: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina"],
+  keyWords: ["mięso", "wołowina", "ziemniaki"],
 };
 
 export default stek;

@@ -3,11 +3,11 @@ import { iDIR } from "../../ingredients/ingDairy";
 import { iFAT } from "../../ingredients/ingFat";
 import type { Recipe } from "../../types";
 
-const grillowanySer: Recipe = {
-  name: "Grillowany Ser",
+const smazoneTosty: Recipe = {
+  name: "Smażone Tosty",
   type: "snack",
   country: "USA",
-  images: ["grillowany-ser.jpg"],
+  images: ["smazone-tosty.jpg"],
   time: 10,
   portions: 1,
   taste: 3,
@@ -16,8 +16,8 @@ const grillowanySer: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.toast_bread, amount: 4, unit: "krom" },
-        { ing: iDIR.cheddar_cheese, amount: 2, unit: "plas" },
+        { ing: iBAK.toast_bread, amount: 4, unit: "krom", kw: true },
+        { ing: iDIR.cheddar_cheese, amount: 2, unit: "plas", kw: true },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
       ],
     },
@@ -33,7 +33,7 @@ const grillowanySer: Recipe = {
       ],
     },
   ],
-  keyWords: ["ser", "pieczywo"],
+  keyWords: ["ser", "pieczywo", "smażone"],
 };
 
-export default grillowanySer;
+export default smazoneTosty;

@@ -71,7 +71,7 @@ const ciastoMarchewkowe: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "biszkopt"],
+  keyWords: ["ciasto", "biszkopt", "pieczone"],
 };
 
 export default ciastoMarchewkowe;

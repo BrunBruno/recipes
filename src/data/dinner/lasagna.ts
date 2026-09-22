@@ -21,7 +21,7 @@ const lasagna: Recipe = {
     {
       title: "Sos z mięsem",
       items: [
-        { ing: iMET.pork_shoulder, amount: 700 },
+        { ing: iMET.pork_shoulder, amount: 700, kw: true },
         { ing: iVEG.onion, amount: 2, unit: "szt" },
         { ing: iVEG.garlic, amount: 6, unit: "zbk" },
         { ing: iVEG.mushrooms, amount: 200 },
@@ -38,7 +38,7 @@ const lasagna: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iGRN.lasagne_pasta, amount: 215 },
+        { ing: iGRN.lasagne_pasta, amount: 215, kw: true },
         { ing: iDIR.mozzarella, amount: 250 },
         { ing: iDIR.yellow_cheese, amount: 250 },
         { ing: iDIR.cream_30, amount: 100 },
@@ -87,7 +87,7 @@ const lasagna: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron"],
+  keyWords: [],
 };
 
 export default lasagna;

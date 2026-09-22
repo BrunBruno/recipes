@@ -19,7 +19,7 @@ const surowkaZKiszonejKapusty: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.sauerkraut, amount: portions * 100 },
+        { ing: iJAR.sauerkraut, amount: portions * 100, kw: true },
         { ing: iVEG.carrot, amount: portions * 50 },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
         { ing: iLIQ.lemon_juice, amount: portions * 0.25, unit: "lz" },

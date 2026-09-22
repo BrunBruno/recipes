@@ -8,6 +8,7 @@ import type { Recipe } from "../../types";
 const jajecznicaPoWlosku: Recipe = {
   name: "Jajecznica po Włosku",
   type: "breakfast",
+  country: "ITA",
   images: [""],
   time: 0,
   portions: 0,
@@ -17,7 +18,7 @@ const jajecznicaPoWlosku: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.egg, amount: 4, unit: "szt" },
+        { ing: iMET.egg, amount: 4, unit: "szt", kw: true },
         { ing: iVEG.spinach, amount: 50 },
         { ing: iVEG.sun_dried_tomatoes, amount: 20 },
         { ing: iDIR.hard_cheese, amount: 20 },
@@ -28,7 +29,7 @@ const jajecznicaPoWlosku: Recipe = {
     },
   ],
   steps: [],
-  keyWords: ["jajka", "włoskie"],
+  keyWords: [],
 };
 
 export default jajecznicaPoWlosku;

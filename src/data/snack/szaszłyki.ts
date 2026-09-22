@@ -18,10 +18,10 @@ const szaszlyki: Recipe = {
     {
       title: "Szaszłyki",
       items: [
-        { ing: iMET.chicken_breast, amount: 500 },
-        { ing: iMET.pork_neck, amount: 500 },
-        { ing: iDIR.halloumi, amount: 200 },
-        { ing: iVEG.mushrooms, amount: 100 },
+        { ing: iMET.chicken_breast, amount: 500, kw: true },
+        { ing: iMET.pork_neck, amount: 500, kw: true },
+        { ing: iDIR.halloumi, amount: 200, kw: true },
+        { ing: iVEG.mushrooms, amount: 100, kw: true },
         { ing: iVEG.zucchini, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.red_bell_pepper, amount: 1, unit: "szt" },
@@ -54,7 +54,7 @@ const szaszlyki: Recipe = {
       ],
     },
   ],
-  keyWords: ["wieprzowina", "kurczak", "warzywa"],
+  keyWords: ["wieprzowina", "kurczak", "mięso", "grill", "warzywa", "grzyby"],
 };
 
 export default szaszlyki;

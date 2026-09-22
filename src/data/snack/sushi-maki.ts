@@ -14,16 +14,16 @@ const sushiMaki: Recipe = {
   images: ["sushi-maki.jpg", "sushi-maki-2.jpg"],
   time: 60,
   portions: 3,
-  taste: 2,
+  taste: 1,
   difficulty: 5,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iVEG.nori, amount: 1, unit: "opak" },
-        { ing: iFSH.surimi, amount: 9, unit: "szt" },
-        { ing: iFSH.smoked_salmon, amount: 100 },
-        { ing: iGRN.sushi_rice, amount: 300 },
+        { ing: iVEG.nori, amount: 1, unit: "opak", kw: true },
+        { ing: iFSH.surimi, amount: 9, unit: "szt", kw: true },
+        { ing: iFSH.smoked_salmon, amount: 100, kw: true },
+        { ing: iGRN.sushi_rice, amount: 300, kw: true },
         { ing: iLIQ.water, amount: 360, unit: "ml" },
         { ing: iVEG.cucumber, amount: 100 },
         { ing: iVEG.daikon_oshinko, amount: 100 },
@@ -70,7 +70,7 @@ const sushiMaki: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba"],
+  keyWords: ["ryba", "morskie", "ryż"],
   link: "https://www.doradcasmaku.pl/przepis-sushi-maki-363638",
 };
 

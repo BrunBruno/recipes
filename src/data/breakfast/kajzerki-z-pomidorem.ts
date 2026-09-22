@@ -11,20 +11,27 @@ const kajzerkiZPomidorem: Recipe = {
   images: ["kajzerki-z-pomidorem.jpg"],
   time: 5,
   portions: 1,
-  taste: 5,
+  taste: 4,
   difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iBAK.kaiser_roll, amount: 2, unit: "szt", replaceable: true },
-        { ing: iMET.ham_slices, amount: 4, unit: "plas" },
+        {
+          ing: iBAK.kaiser_roll,
+          amount: 2,
+          unit: "szt",
+          replaceable: true,
+          kw: true,
+        },
         {
           ing: iVEG.tomato_raspberry,
           amount: 1,
           unit: "szt",
           replaceable: true,
+          kw: true,
         },
+        { ing: iMET.ham_slices, amount: 4, unit: "plas" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt", replaceable: true },
         { ing: iFAT.butter, amount: 10 },
         { ing: iSPC.black_pepper },
@@ -44,7 +51,7 @@ const kajzerkiZPomidorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["pieczywo", "szynka", "warzywa"],
+  keyWords: ["pieczywo", "warzywa", "mięso"],
 };
 
 export default kajzerkiZPomidorem;

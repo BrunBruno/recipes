@@ -19,7 +19,7 @@ const pyzyMiesne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.frozen_potato_dumpling, amount: 7, unit: "szt" },
+        { ing: iJAR.frozen_potato_dumpling, amount: 7, unit: "szt", kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lzi" },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
@@ -50,7 +50,7 @@ const pyzyMiesne: Recipe = {
     },
   ],
 
-  keyWords: ["mięso"],
+  keyWords: ["mięso", "kluski", "gotowane"],
 };
 
 export default pyzyMiesne;

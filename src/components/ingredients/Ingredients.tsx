@@ -178,16 +178,14 @@ function Ingredients({}: IngredientsProps) {
           >
             <UtilsIcon name="search" color="#999999" />
           </button>
-        </div>
 
-        <div
-          className={`filter-buttons-bg ${showSearch ? "show" : ""}`}
-          onClick={() => {
-            setShowSearch(false);
-          }}
-        ></div>
+          <div
+            className={`filter-buttons-bg ${showSearch ? "show" : ""}`}
+            onClick={() => {
+              setShowSearch(false);
+            }}
+          ></div>
 
-        <div className="page-title-options">
           <div className={`recipe-search ${showSearch ? "show" : ""}`}>
             <label className="recipe-search-label">
               <UtilsIcon name="search" color="#999999" />

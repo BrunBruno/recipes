@@ -18,8 +18,8 @@ const mizeria: Recipe = {
     {
       title: "",
       items: [
+        { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt", kw: true },
         { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
-        { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
         { ing: iHRB.spring_onion },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
@@ -38,7 +38,7 @@ const mizeria: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa"],
+  keyWords: [],
 };
 
 export default mizeria;

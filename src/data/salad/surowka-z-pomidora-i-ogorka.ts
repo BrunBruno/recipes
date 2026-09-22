@@ -18,8 +18,8 @@ const surowkaZPomidoraIOgorka: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.tomato, amount: portions * 120 },
-        { ing: iVEG.cucumber, amount: portions * 100 },
+        { ing: iVEG.tomato, amount: portions * 120, kw: true },
+        { ing: iVEG.cucumber, amount: portions * 100, kw: true },
         { ing: iVEG.onion, amount: portions * 30 },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
         { ing: iLIQ.lemon_juice, amount: portions * 0.5, unit: "lz" },
@@ -41,7 +41,7 @@ const surowkaZPomidoraIOgorka: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa", "sałatka"],
+  keyWords: [],
 };
 
 export default surowkaZPomidoraIOgorka;

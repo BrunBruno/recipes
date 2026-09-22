@@ -15,8 +15,8 @@ const kurczakPoSeczuansku: Recipe = {
   images: ["kurczak-po-seczuansku-fix.jpg", "kurczak-po-seczuansku-fix-2.jpg"],
   time: 20,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
@@ -46,7 +46,7 @@ const kurczakPoSeczuansku: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "ryż", "fix", "ryż"],
+  keyWords: ["mięso", "kurczak", "fix", "ryż"],
 };
 
 export default kurczakPoSeczuansku;

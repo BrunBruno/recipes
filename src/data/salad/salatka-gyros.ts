@@ -19,9 +19,9 @@ const salatkaGyros: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iVEG.chinese_cabbage, amount: 300, kw: true },
         { ing: iJAR.pickled_cucumber_vinegar, amount: 200 },
-        { ing: iVEG.chinese_cabbage, amount: 300 },
         { ing: iJAR.canned_corn, amount: 150 },
         { ing: iDIR.yellow_cheese, amount: 100 },
         { ing: iVEG.onion, amount: 100 },
@@ -45,7 +45,7 @@ const salatkaGyros: Recipe = {
       ],
     },
   ],
-  keyWords: ["sałatka", "kurczak"],
+  keyWords: ["kurczak", "warzywa"],
 };
 
 export default salatkaGyros;

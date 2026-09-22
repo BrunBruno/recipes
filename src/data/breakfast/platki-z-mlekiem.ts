@@ -5,7 +5,7 @@ import type { Recipe } from "../../types";
 const platkiZMlekiem: Recipe = {
   name: "Płatki z Mlekiem",
   type: "breakfast",
-  images: ["platki-z-mlekiem.jpg", "platki-z-mlekiem-2"],
+  images: ["platki-z-mlekiem.jpg", "platki-z-mlekiem-2.jpg"],
   time: 3,
   portions: 1,
   taste: 3,
@@ -14,8 +14,22 @@ const platkiZMlekiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.cornflakes, amount: 60 },
-        { ing: iDIR.milk, amount: 250, unit: "ml" },
+        { ing: iDIR.milk, amount: 250, unit: "ml", kw: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iGRN.cornflakes, amount: 60, kw: true },
+            { ing: iGRN.cini_mini, amount: 60, kw: true },
+          ],
+          selected: 0,
+        },
+        {
+          type: "placeholder",
+          options: [
+            { ing: iGRN.cornflakes, amount: 60, kw: true },
+            { ing: iGRN.cini_mini, amount: 60, kw: true },
+          ],
+        },
       ],
     },
   ],

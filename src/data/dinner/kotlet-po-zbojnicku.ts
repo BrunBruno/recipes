@@ -22,10 +22,10 @@ const kotletPoZbojnicku: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_loin, amount: 2 * portions, unit: "plas" },
-        { ing: iVEG.mushrooms, amount: 150 },
+        { ing: iMET.pork_loin, amount: 2 * portions, unit: "plas", kw: true },
+        { ing: iDIR.yellow_cheese, amount: 150, kw: true },
+        { ing: iVEG.mushrooms, amount: 150, kw: true },
         { ing: iVEG.onion, amount: 100 },
-        { ing: iDIR.yellow_cheese, amount: 150 },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 5, unit: "lz" },
         ...fryingFat(iFAT.oil, portions * 2 + 2, "lz", 0.45),
@@ -63,7 +63,7 @@ const kotletPoZbojnicku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "ser", "pieczarki", "smażone"],
+  keyWords: ["mięso", "wieprzowina", "ser", "grzyby", "smażone", "ziemniaki"],
 };
 
 export default kotletPoZbojnicku;

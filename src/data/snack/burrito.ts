@@ -74,7 +74,7 @@ const burrito: Recipe = {
     },
   ],
 
-  keyWords: ["wołowina", "ryż"],
+  keyWords: [],
 };
 
 export default burrito;

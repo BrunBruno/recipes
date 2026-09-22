@@ -18,8 +18,8 @@ const penneBolognesePikantne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 300 },
-        { ing: iGRN.penne_pasta, amount: 300 },
+        { ing: iMET.ground_pork, amount: 300, kw: true },
+        { ing: iGRN.penne_pasta, amount: 300, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.celery_root, amount: 100 },
         { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },

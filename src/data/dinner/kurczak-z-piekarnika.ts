@@ -17,7 +17,7 @@ const kurczakZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_quarters, amount: 4, unit: "szt" },
+        { ing: iMET.chicken_quarters, amount: 4, unit: "szt", kw: true },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.hot_paprika },
@@ -54,7 +54,7 @@ const kurczakZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "ziemniaki"],
 };
 
 export default kurczakZPiekarnika;

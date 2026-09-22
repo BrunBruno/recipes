@@ -41,7 +41,7 @@ const salatkaJarzynowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa", "sałatka"],
+  keyWords: ["warzywa"],
 };
 
 export default salatkaJarzynowa;

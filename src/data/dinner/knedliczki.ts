@@ -21,8 +21,8 @@ const knedleCzeskieZGulaszem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.steamed_dumplings, amount: 8, unit: "szt" },
-        { ing: iMET.pork_shoulder, amount: 500 },
+        { ing: iGRN.steamed_dumplings, amount: 8, unit: "szt", kw: true },
+        { ing: iMET.pork_shoulder, amount: 500, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.bay_leaf, amount: 2, unit: "szt" },
@@ -35,7 +35,6 @@ const knedleCzeskieZGulaszem: Recipe = {
       ],
     },
   ],
-
   steps: [
     {
       title: "Gulasz",
@@ -67,7 +66,7 @@ const knedleCzeskieZGulaszem: Recipe = {
     },
   ],
 
-  keyWords: ["wieprzowina"],
+  keyWords: [],
 };
 
 export default knedleCzeskieZGulaszem;

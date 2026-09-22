@@ -93,7 +93,7 @@ const barszczBialy: Recipe = {
     },
   ],
 
-  keyWords: ["zupa", "jajko"],
+  keyWords: [],
 };
 
 export default barszczBialy;

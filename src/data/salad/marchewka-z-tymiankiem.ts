@@ -16,7 +16,7 @@ const marchewkaZTymiankiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.carrot, amount: 4, unit: "szt" },
+        { ing: iVEG.carrot, amount: 4, unit: "szt", kw: true },
         { ing: iFAT.olive_oil, amount: 1, unit: "lz" },
         { ing: iHRB.thyme, amount: 0.5, unit: "lzi" },
         { ing: iHRB.herbes_de_provence, amount: 1, unit: "lzi" },
@@ -39,7 +39,7 @@ const marchewkaZTymiankiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa"],
+  keyWords: [],
 };
 
 export default marchewkaZTymiankiem;

@@ -21,10 +21,10 @@ const lazanki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.lazanki_pasta, amount: 240 },
-        { ing: iMET.sausage, amount: 200 },
-        { ing: iMET.bacon_block, amount: 100 },
-        { ing: iJAR.sauerkraut, amount: 400 },
+        { ing: iGRN.lazanki_pasta, amount: 240, kw: true },
+        { ing: iMET.sausage, amount: 200, kw: true },
+        { ing: iMET.bacon_block, amount: 100, kw: true },
+        { ing: iJAR.sauerkraut, amount: 400, kw: true },
         { ing: iVEG.onion, amount: 280 },
         { ing: iVEG.mushrooms, amount: 150 },
         ...fryingFat(iFAT.oil, 10, "lz", 0.7),
@@ -52,7 +52,7 @@ const lazanki: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kiełbasa", "boczek", "mięso"],
+  keyWords: ["makaron", "kiełbasa", "boczek", "mięso", "grzyby"],
 };
 
 export default lazanki;

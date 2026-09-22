@@ -21,7 +21,7 @@ const zeberkaZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_ribs, amount: 1000 },
+        { ing: iMET.pork_ribs, amount: 1000, kw: true },
         { ing: iSPC.winiary_juicy_ribs_fix, amount: 1, unit: "opak" },
       ],
     },
@@ -53,7 +53,7 @@ const zeberkaZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "fix"],
+  keyWords: ["mięso", "fix", "wieprzowina", "pieczone", "ziemniaki"],
 };
 
 export default zeberkaZPiekarnika;

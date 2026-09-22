@@ -23,16 +23,16 @@ const sandwich: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.toast_bread, amount: 4, unit: "krom" },
+        { ing: iBAK.toast_bread, amount: 4, unit: "krom", kw: true },
         {
           type: "choice",
           options: [
-            { ing: iMET.ham_slices, amount: 2, unit: "plas" },
-            { ing: iMET.salami, amount: 2, unit: "plas" },
+            { ing: iMET.ham_slices, amount: 2, unit: "plas", kw: true },
+            { ing: iMET.salami, amount: 2, unit: "plas", kw: true },
           ],
           selected: 0,
         },
-        { ing: iDIR.yellow_cheese, amount: 2, unit: "plas" },
+        { ing: iDIR.yellow_cheese, amount: 2, unit: "plas", kw: true },
         { ing: iJAR.pickled_cucumber, amount: 0.5, unit: "szt" },
         { ing: iSAU.ketchup, amount: 5 },
         { ing: iSAU.garlic_sauce, amount: 5 },

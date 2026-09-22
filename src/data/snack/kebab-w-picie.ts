@@ -23,7 +23,7 @@ const kebab: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_beef, amount: 500 },
+        { ing: iMET.ground_beef, amount: 500, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iDIR.greek_yogurt, amount: 1, unit: "lz" },
@@ -100,7 +100,7 @@ const kebab: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "pieczywo", "sos", "warzywa"],
+  keyWords: ["mięso", "wołowina", "pieczywo", "sos", "pieczone"],
 };
 
 export default kebab;

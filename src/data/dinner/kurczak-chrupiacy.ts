@@ -20,7 +20,7 @@ const kurczakChrupiacy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
         ...fryingFat(iFAT.oil, 80, "ml", 0.55),
         {
           type: "choice",
@@ -56,7 +56,7 @@ const kurczakChrupiacy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "fix", "smażone"],
+  keyWords: ["mięso", "kurczak", "fix", "smażone", "ziemniaki"],
 };
 
 export default kurczakChrupiacy;

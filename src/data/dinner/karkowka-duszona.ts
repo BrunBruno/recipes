@@ -24,7 +24,7 @@ const karkowkaDuszona: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_neck, amount: 2, unit: "opak" },
+        { ing: iMET.pork_neck, amount: 2, unit: "opak", kw: true },
         ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iSAU.mustard_sarepska, amount: 10, unit: "lzi" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
@@ -61,7 +61,7 @@ const karkowkaDuszona: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "duszone"],
+  keyWords: ["mięso", "wieprzowina", "duszone", "ziemniaki"],
 };
 
 export default karkowkaDuszona;

@@ -13,15 +13,15 @@ const pizzaZPinsy: Recipe = {
   images: ["pizza-z-pinsy.jpg", "pizza-z-pinsy-2.jpg"],
   time: 15,
   portions: 1,
-  taste: 4,
+  taste: 3,
   difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iBAK.pinsa, amount: 1, unit: "szt" },
-        { ing: iJAR.tomato_sauce, amount: 0.5, unit: "opak" },
-        { ing: iDIR.yellow_mozzarella, amount: 60 },
+        { ing: iBAK.pinsa, amount: 1, unit: "szt", kw: true },
+        { ing: iJAR.tomato_sauce, amount: 0.5, unit: "opak", kw: true },
+        { ing: iDIR.yellow_mozzarella, amount: 60, kw: true },
         { ing: iMET.chicken_ham, amount: 2, unit: "plas" },
         { ing: iVEG.arugula, amount: 30 },
         { ing: iVEG.cherry_tomato, amount: 8, unit: "szt" },
@@ -42,6 +42,6 @@ const pizzaZPinsy: Recipe = {
       ],
     },
   ],
-  keyWords: [],
+  keyWords: ["pieczywo", "pieczone", "ser", "sos"],
 };
 export default pizzaZPinsy;

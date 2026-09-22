@@ -25,12 +25,12 @@ const kurczakPoChinsku: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iGRN.rice, amount: portions * 100, kw: true },
         { ing: iVEG.carrot, amount: 120 },
         { ing: iVEG.bell_pepper, amount: 100 },
         { ing: iVEG.leek, amount: 120 },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
-        { ing: iGRN.rice, amount: portions * 100 },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iSPC.knorr_chinese_fix, amount: 1, unit: "opak" },
       ],
@@ -49,7 +49,7 @@ const kurczakPoChinsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "sos", "fix"],
+  keyWords: ["mięso", "kurczak", "sos", "fix", "ryż"],
 };
 
 export default kurczakPoChinsku;

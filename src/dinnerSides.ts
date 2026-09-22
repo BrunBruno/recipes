@@ -59,7 +59,7 @@ export const dinnerSides = (
         title: "Ziemniaki z piekarnika",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 250 },
+          { ing: iVEG.potato, amount: portions * 250, kw: true },
           { ing: iFAT.oil, amount: portions * 0.8, unit: "lz" },
           { ing: iVEG.garlic, amount: portions * 0.5, unit: "zbk" },
           { ing: iHRB.caraway, amount: portions * 0.25, unit: "lzi" },
@@ -76,7 +76,7 @@ export const dinnerSides = (
         title: "Ziemniaki gotowane",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 200 },
+          { ing: iVEG.potato, amount: portions * 200, kw: true },
           { ing: iHRB.dill },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
@@ -87,7 +87,7 @@ export const dinnerSides = (
         title: "Ziemniaki gotowane",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 200 },
+          { ing: iVEG.potato, amount: portions * 200, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -96,7 +96,7 @@ export const dinnerSides = (
         title: "Purée ziemniaczane",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 200 },
+          { ing: iVEG.potato, amount: portions * 200, kw: true },
           { ing: iFAT.butter, amount: portions, unit: "lzi" },
           { ing: iDIR.milk, amount: portions * 10, unit: "ml" },
           { ing: iSPC.black_pepper },
@@ -108,7 +108,7 @@ export const dinnerSides = (
         title: "Frytki z piekarnika",
         sideName: name,
         items: [
-          { ing: iJAR.frozen_fries, amount: portions * 200 },
+          { ing: iJAR.frozen_fries, amount: portions * 200, kw: true },
           { ing: iSPC.potato_seasoning },
         ],
       };
@@ -117,7 +117,7 @@ export const dinnerSides = (
         title: "Łódeczki ziemniaczane",
         sideName: name,
         items: [
-          { ing: iJAR.frozen_potatoes_boats, amount: portions * 200 },
+          { ing: iJAR.frozen_potatoes_boats, amount: portions * 200, kw: true },
           { ing: iSPC.potato_seasoning },
         ],
       };
@@ -126,7 +126,7 @@ export const dinnerSides = (
         title: "Zakręcone frytki z piekarnika",
         sideName: name,
         items: [
-          { ing: iJAR.twisted_fries, amount: portions * 200 },
+          { ing: iJAR.twisted_fries, amount: portions * 200, kw: true },
           { ing: iSPC.potato_seasoning },
         ],
       };
@@ -135,7 +135,7 @@ export const dinnerSides = (
         title: "Talarki ziemniaczane",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 200 },
+          { ing: iVEG.potato, amount: portions * 200, kw: true },
           { ing: iFAT.oil, amount: portions * 1, unit: "lz" },
           { ing: iSPC.potato_seasoning },
           { ing: iSPC.black_pepper },
@@ -147,7 +147,7 @@ export const dinnerSides = (
         title: "Ziemniaki z patelni",
         sideName: name,
         items: [
-          { ing: iVEG.potato, amount: portions * 250 },
+          { ing: iVEG.potato, amount: portions * 250, kw: true },
           { ing: iFAT.butter, amount: portions * 1, unit: "lzi" },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
@@ -157,14 +157,17 @@ export const dinnerSides = (
       return {
         title: "Ryż gotowany",
         sideName: name,
-        items: [{ ing: iGRN.rice, amount: portions * 100 }, { ing: iSPC.salt }],
+        items: [
+          { ing: iGRN.rice, amount: portions * 100, kw: true },
+          { ing: iSPC.salt },
+        ],
       };
     case "buckwheat":
       return {
         title: "Kasza gryczana",
         sideName: name,
         items: [
-          { ing: iGRN.buckwheat, amount: portions * 100 },
+          { ing: iGRN.buckwheat, amount: portions * 100, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -173,7 +176,7 @@ export const dinnerSides = (
         title: "Kasza bulgur",
         sideName: name,
         items: [
-          { ing: iGRN.bulgur, amount: portions * 80 },
+          { ing: iGRN.bulgur, amount: portions * 80, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -182,7 +185,7 @@ export const dinnerSides = (
         title: "Makaron penne",
         sideName: name,
         items: [
-          { ing: iGRN.penne_pasta, amount: portions * 100 },
+          { ing: iGRN.penne_pasta, amount: portions * 100, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -191,7 +194,7 @@ export const dinnerSides = (
         title: "Makaron spaghetti",
         sideName: name,
         items: [
-          { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
+          { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -200,7 +203,7 @@ export const dinnerSides = (
         title: "Kopytka",
         sideName: name,
         items: [
-          { ing: iGRN.kopytka, amount: portions * 250 },
+          { ing: iGRN.kopytka, amount: portions * 250, kw: true },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
         ],
@@ -210,7 +213,7 @@ export const dinnerSides = (
         title: "Kluski śląskie",
         sideName: name,
         items: [
-          { ing: iGRN.silesian_dumplings, amount: portions * 250 },
+          { ing: iGRN.silesian_dumplings, amount: portions * 250, kw: true },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
         ],
@@ -221,8 +224,8 @@ export const dinnerSides = (
         title: "Surówka z pomidora i ogórka",
         sideName: name,
         items: [
-          { ing: iVEG.tomato, amount: portions * 120 },
-          { ing: iVEG.cucumber, amount: portions * 100 },
+          { ing: iVEG.tomato, amount: portions * 120, kw: true },
+          { ing: iVEG.cucumber, amount: portions * 100, kw: true },
           { ing: iVEG.onion, amount: portions * 30 },
           { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
           { ing: iLIQ.lemon_juice, amount: portions * 0.5, unit: "lz" },
@@ -235,7 +238,7 @@ export const dinnerSides = (
         title: "Groszek i żurawina",
         sideName: name,
         items: [
-          { ing: iJAR.canned_peas, amount: 100 * portions },
+          { ing: iJAR.canned_peas, amount: 100 * portions, kw: true },
           { ing: iJAR.jam_cranberry, amount: 50 * portions },
         ],
       };
@@ -244,8 +247,8 @@ export const dinnerSides = (
         title: "Marchewka z groszkiem",
         sideName: name,
         items: [
-          { ing: iVEG.carrot, amount: portions, unit: "szt" },
-          { ing: iJAR.canned_peas, amount: portions * 100 },
+          { ing: iVEG.carrot, amount: portions, unit: "szt", kw: true },
+          { ing: iJAR.canned_peas, amount: portions * 100, kw: true },
           { ing: iFAT.butter, amount: portions * 0.25, unit: "lzi" },
           { ing: iGRN.flour, amount: portions * 0.25, unit: "lz" },
           { ing: iOTH.sugar },
@@ -257,7 +260,7 @@ export const dinnerSides = (
         title: "Warzywa na parze",
         sideName: name,
         items: [
-          { ing: iJAR.frozen_vegetable_mix, amount: 150 * portions },
+          { ing: iJAR.frozen_vegetable_mix, amount: 150 * portions, kw: true },
           { ing: iFAT.olive_oil, amount: portions, unit: "lzi" },
           { ing: iSPC.salt },
         ],
@@ -267,7 +270,7 @@ export const dinnerSides = (
         title: "Warzywa na patelnie",
         sideName: name,
         items: [
-          { ing: iJAR.frozen_stir_fry, amount: 150 * portions },
+          { ing: iJAR.frozen_stir_fry, amount: 150 * portions, kw: true },
           { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
         ],
       };
@@ -276,7 +279,7 @@ export const dinnerSides = (
         title: "Fasolka szparagowa",
         sideName: name,
         items: [
-          { ing: iJAR.frozen_green_beans, amount: 150 * portions },
+          { ing: iJAR.frozen_green_beans, amount: 150 * portions, kw: true },
           { ing: iFAT.butter, amount: 0.5, unit: "lzi" },
           { ing: iGRN.breadcrumbs, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
@@ -287,7 +290,7 @@ export const dinnerSides = (
         title: "Kapusta zasmażana",
         sideName: name,
         items: [
-          { ing: iJAR.sauerkraut, amount: portions * 120 },
+          { ing: iJAR.sauerkraut, amount: portions * 120, kw: true },
           { ing: iFAT.clarified_butter, amount: portions * 0.25, unit: "lzi" },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
@@ -298,7 +301,7 @@ export const dinnerSides = (
         title: "Surówka z koszonej kapusty",
         sideName: name,
         items: [
-          { ing: iJAR.sauerkraut, amount: portions * 100 },
+          { ing: iJAR.sauerkraut, amount: portions * 100, kw: true },
           { ing: iVEG.carrot, amount: portions * 50 },
           { ing: iFAT.oil, amount: portions * 0.5, unit: "lzi" },
           { ing: iLIQ.lemon_juice, amount: portions * 0.25, unit: "lz" },
@@ -311,8 +314,8 @@ export const dinnerSides = (
         title: "Mizeria",
         sideName: name,
         items: [
+          { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt", kw: true },
           { ing: iDIR.cream_18, amount: portions * 2, unit: "lz" },
-          { ing: iVEG.cucumber, amount: portions * 0.5, unit: "szt" },
           { ing: iHRB.spring_onion },
           { ing: iSPC.black_pepper },
           { ing: iSPC.salt },
@@ -323,7 +326,7 @@ export const dinnerSides = (
         title: "Buraczki z groszkiem",
         sideName: name,
         items: [
-          { ing: iJAR.beets_whole_vinegar, amount: portions * 120 },
+          { ing: iJAR.beets_whole_vinegar, amount: portions * 120, kw: true },
           { ing: iJAR.canned_peas, amount: portions * 80 },
           { ing: iSPC.salt },
         ],
@@ -333,7 +336,7 @@ export const dinnerSides = (
         title: "Buraczki wiórki",
         sideName: name,
         items: [
-          { ing: iJAR.beets_shredded, amount: portions * 150 },
+          { ing: iJAR.beets_shredded, amount: portions * 150, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -342,7 +345,7 @@ export const dinnerSides = (
         title: "Buraczki zasmażane",
         sideName: name,
         items: [
-          { ing: iJAR.fried_beets, amount: portions * 150 },
+          { ing: iJAR.fried_beets, amount: portions * 150, kw: true },
           { ing: iSPC.salt },
         ],
       };
@@ -350,13 +353,15 @@ export const dinnerSides = (
       return {
         title: "Buraczki z zalewy",
         sideName: name,
-        items: [{ ing: iJAR.beets_whole_vinegar, amount: portions * 200 }],
+        items: [
+          { ing: iJAR.beets_whole_vinegar, amount: portions * 200, kw: true },
+        ],
       };
     case "sauerkraut":
       return {
         title: "Kapusta kiszona",
         sideName: name,
-        items: [{ ing: iJAR.sauerkraut, amount: portions * 150 }],
+        items: [{ ing: iJAR.sauerkraut, amount: portions * 150, kw: true }],
       };
     case "pickled-cucumber":
       return {
@@ -367,6 +372,7 @@ export const dinnerSides = (
             ing: iJAR.pickled_cucumber,
             amount: portions * 2,
             unit: "szt",
+            kw: true,
           },
         ],
       };
@@ -379,6 +385,7 @@ export const dinnerSides = (
             ing: iJAR.pickled_cucumber_vinegar,
             amount: portions * 2,
             unit: "szt",
+            kw: true,
           },
         ],
       };
@@ -386,32 +393,32 @@ export const dinnerSides = (
       return {
         title: "Groszek",
         sideName: name,
-        items: [{ ing: iJAR.canned_peas, amount: 100 * portions }],
+        items: [{ ing: iJAR.canned_peas, amount: 100 * portions, kw: true }],
       };
 
     case "coleslaw-ready":
       return {
         title: "Colesław",
         sideName: name,
-        items: [{ ing: iJAR.coleslaw, amount: portions * 180 }],
+        items: [{ ing: iJAR.coleslaw, amount: portions * 180, kw: true }],
       };
     case "corn-salad-ready":
       return {
         title: "Sałatka z kukurydzą",
         sideName: name,
-        items: [{ ing: iJAR.corn_salad, amount: portions * 180 }],
+        items: [{ ing: iJAR.corn_salad, amount: portions * 180, kw: true }],
       };
     case "cucumber-salad-ready":
       return {
         title: "Sałatka z ogórka",
         sideName: name,
-        items: [{ ing: iJAR.cucumber_salad, amount: portions * 180 }],
+        items: [{ ing: iJAR.cucumber_salad, amount: portions * 180, kw: true }],
       };
     case "red-cabbage-ready":
       return {
         title: "Modra kapusta",
         sideName: name,
-        items: [{ ing: iJAR.red_cabbage, amount: portions * 180 }],
+        items: [{ ing: iJAR.red_cabbage, amount: portions * 180, kw: true }],
       };
   }
 };

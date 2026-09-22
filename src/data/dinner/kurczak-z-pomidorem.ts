@@ -22,8 +22,8 @@ const kurczakZPomidorem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iVEG.tomato, amount: 1, unit: "szt" },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iVEG.tomato, amount: 1, unit: "szt", kw: true },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
@@ -63,7 +63,7 @@ const kurczakZPomidorem: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "ziemniaki"],
 };
 
 export default kurczakZPomidorem;

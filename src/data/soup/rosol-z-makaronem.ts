@@ -18,8 +18,8 @@ const rosolZMakaronem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iLIQ.rosol, amount: 1000 },
-        { ing: iGRN.thin_pasta, amount: 100 },
+        { ing: iLIQ.rosol, amount: 1000, kw: true },
+        { ing: iGRN.thin_pasta, amount: 100, kw: true },
         { ing: iVEG.carrot, amount: 2, unit: "szt" },
         { ing: iMET.chicken_soup_portion, amount: 100 },
         { ing: iLIQ.maggi },

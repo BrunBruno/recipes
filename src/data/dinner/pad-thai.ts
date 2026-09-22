@@ -21,12 +21,12 @@ const padThai: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.rice_noodles, amount: 200 },
+        { ing: iGRN.rice_noodles, amount: 200, kw: true },
         {
           type: "choice",
           options: [
-            { ing: iMET.chicken_breast, amount: 300 },
-            { ing: iFSH.shrimp, amount: 300 },
+            { ing: iMET.chicken_breast, amount: 300, kw: true },
+            { ing: iFSH.shrimp, amount: 300, kw: true },
           ],
           selected: 0,
         },
@@ -59,7 +59,7 @@ const padThai: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak", "warzywa", "fix"],
+  keyWords: ["makaron", "kurczak", "mięso", "fix", "morskie"],
 };
 
 export default padThai;

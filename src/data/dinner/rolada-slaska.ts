@@ -28,8 +28,8 @@ const roladaSlaska: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iMET.beef_round, amount: 800 },
-            { ing: iMET.pork_ham, amount: 800 },
+            { ing: iMET.beef_round, amount: 800, kw: true },
+            { ing: iMET.pork_ham, amount: 800, kw: true },
           ],
           selected: 0,
         },
@@ -74,7 +74,7 @@ const roladaSlaska: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "wieprzowina", "sos"],
+  keyWords: ["mięso", "wołowina", "wieprzowina", "sos", "kluski"],
 };
 
 export default roladaSlaska;

@@ -20,7 +20,7 @@ const kotletSchabowy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_loin, amount: 10, unit: "plas" },
+        { ing: iMET.pork_loin, amount: 10, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 150 },
@@ -63,7 +63,7 @@ const kotletSchabowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "smażone"],
+  keyWords: ["mięso", "wieprzowina", "smażone", "ziemniaki"],
 };
 
 export default kotletSchabowy;

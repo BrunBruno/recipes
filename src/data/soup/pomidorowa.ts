@@ -18,8 +18,8 @@ const pomidorowa: Recipe = {
     {
       title: "",
       items: [
-        { ing: iLIQ.rosol, amount: 700 },
-        { ing: iJAR.tomato_puree, amount: 200 },
+        { ing: iLIQ.rosol, amount: 700, kw: true },
+        { ing: iJAR.tomato_puree, amount: 200, kw: true },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iDIR.cream_30, amount: 80 },
         { ing: iHRB.parsley, amount: 10 },

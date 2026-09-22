@@ -25,8 +25,8 @@ const klopsikiZIkei: Recipe = {
     {
       title: "Klopsiki",
       items: [
-        { ing: iMET.ground_beef, amount: 500 },
-        { ing: iMET.ground_pork, amount: 250 },
+        { ing: iMET.ground_beef, amount: 500, kw: true },
+        { ing: iMET.ground_pork, amount: 250, kw: true },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
@@ -90,7 +90,7 @@ const klopsikiZIkei: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "wieprzowina", "sos"],
+  keyWords: ["mięso", "wołowina", "wieprzowina", "sos", "ziemniaki"],
   link: "https://kuchniaagaty.pl/przepisy/szwedzkie-klopsiki-z-ikea",
 };
 

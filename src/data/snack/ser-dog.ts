@@ -9,21 +9,21 @@ const serDog: Recipe = {
   name: "Ser Dog",
   type: "snack",
   country: "USA",
-  images: [""],
+  images: ["ser-dog.jpg"],
   time: 10,
   portions: 2,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iMET.sausages, amount: 4, unit: "szt" },
-        { ing: iBAK.hotdog_buns, amount: 4, unit: "szt" },
-        { ing: iDIR.yellow_mozzarella, amount: 100 },
-        { ing: iJAR.pickles, amount: 2, unit: "szt" },
+        { ing: iMET.sausages, amount: 4, unit: "szt", kw: true },
+        { ing: iBAK.hotdog_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iDIR.yellow_mozzarella, amount: 100, kw: true },
         { ing: iSAU.ketchup, amount: 20 },
         { ing: iSAU.mustard, amount: 20 },
+        { ing: iJAR.fried_onion, amount: 20 },
       ],
     },
   ],
@@ -31,16 +31,13 @@ const serDog: Recipe = {
     {
       title: "",
       steps: [
-        "Podgrzej bułki oraz parówki w mikrofalówce.",
-        "Pokrój ogórki kiszone.",
-        "Otwórz bułki i ułóż po bokach ogórki kiszone.",
-        "Włóż parówkę do bułki.",
-        "Polej całość ketchupem i musztardą.",
-        "Posyp hot doga startą mozzarellą.",
+        "W bułki hotdogowe wsadź parówki oraz wsyp do środka startą mozzarellę.",
+        "Podgrzej wszystko w mikrofalówce, tak aby ser się rozpuścił.",
+        "Polej całość ketchupem i musztardą oraz posyp cebulką prażoną.",
       ],
     },
   ],
-  keyWords: ["pieczywo", "parówka", "ser", "sos"],
+  keyWords: ["pieczywo", "parówka", "ser"],
 };
 
 export default serDog;

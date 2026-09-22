@@ -21,8 +21,8 @@ const kurczakZeSzpinakiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iJAR.frozen_spinach, amount: 100 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iJAR.frozen_spinach, amount: 100, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
@@ -62,7 +62,7 @@ const kurczakZeSzpinakiem: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "ziemniaki"],
 };
 
 export default kurczakZeSzpinakiem;

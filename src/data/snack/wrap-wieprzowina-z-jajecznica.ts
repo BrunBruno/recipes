@@ -23,9 +23,9 @@ const wrapWieprzowyJajecznica: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.tortilla, amount: portions, unit: "szt" },
+        { ing: iBAK.tortilla, amount: portions, unit: "szt", kw: true },
+        { ing: iMET.egg, amount: portions, unit: "szt", kw: true },
         { ing: iMET.burger_patties, amount: portions, unit: "szt" },
-        { ing: iMET.egg, amount: portions, unit: "szt" },
         { ing: iDIR.cheddar_cheese, amount: portions, unit: "plas" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: portions, unit: "lst" },
@@ -55,7 +55,7 @@ const wrapWieprzowyJajecznica: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "tortilla", "wieprzowina", "jajko", "sos"],
+  keyWords: ["mięso", "pieczywo", "wieprzowina", "jajka", "sos"],
 };
 
 export default wrapWieprzowyJajecznica;

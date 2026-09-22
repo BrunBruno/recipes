@@ -17,8 +17,8 @@ const sosDoGolabkow: Recipe = {
     {
       title: "",
       items: [
+        { ing: iJAR.tomato_puree, amount: 250, unit: "ml", kw: true },
         { ing: iGRN.flour, amount: 2, unit: "lz" },
-        { ing: iJAR.tomato_puree, amount: 250, unit: "ml" },
         { ing: iLIQ.water, amount: 0.5, unit: "szk" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iLIQ.maggi },

@@ -21,8 +21,8 @@ const penneZKurczakiem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 360 },
-        { ing: iGRN.penne_pasta, amount: 200 },
+        { ing: iMET.chicken_breast, amount: 360, kw: true },
+        { ing: iGRN.penne_pasta, amount: 200, kw: true },
         { ing: iFAT.olive_oil, amount: 30, unit: "ml" },
         { ing: iVEG.sun_dried_tomatoes, amount: 40 },
         { ing: iDIR.cream_18, amount: 200 },

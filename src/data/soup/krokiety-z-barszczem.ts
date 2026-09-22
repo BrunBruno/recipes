@@ -17,7 +17,12 @@ const krokietyZBarszczem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.meat_croquettes, amount: portions * 2, unit: "szt" },
+        {
+          ing: iJAR.meat_croquettes,
+          amount: portions * 2,
+          unit: "szt",
+          kw: true,
+        },
         { ing: iOTH.powdered_borscht, amount: portions * 2, unit: "lzi" },
         { ing: iLIQ.water, amount: 350, unit: "ml" },
       ],

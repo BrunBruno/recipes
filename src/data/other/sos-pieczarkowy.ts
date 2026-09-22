@@ -18,7 +18,7 @@ const sosPieczarkowy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.mushrooms, amount: 0.5, unit: "opak" },
+        { ing: iVEG.mushrooms, amount: 0.5, unit: "opak", kw: true },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iDIR.cream_18, amount: 1, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
@@ -44,7 +44,7 @@ const sosPieczarkowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["sos", "grzyb"],
+  keyWords: [],
 };
 
 export default sosPieczarkowy;

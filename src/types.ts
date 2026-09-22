@@ -72,6 +72,48 @@ export type CountryCode =
   | "USA" // USA
   | "VNM"; // Vietnam
 
+type MeatKeyWord =
+  | "mięso"
+  | "kurczak"
+  | "wieprzowina"
+  | "wołowina"
+  | "indyk"
+  | "jajka"
+  | "boczek"
+  | "kiełbasa"
+  | "szynka"
+  | "parówka"
+  | "ryba"
+  | "morskie";
+type MethodKyWord =
+  | "duszone"
+  | "smażone"
+  | "pieczone"
+  | "gotowane"
+  | "fast food"
+  | "grill";
+type OtherKeyWord = "sos" | "fix" | "ser";
+type VegetableKeyWord = "grzyby" | "warzywa" | "owoce";
+type BaseKeyWord =
+  | "ryż"
+  | "makaron"
+  | "ziemniaki"
+  | "kasza"
+  | "pieczywo"
+  | "kluski"
+  | "naleśnik";
+type DoughKeyWord = "ciasto" | "biszkopt" | "krem";
+type MealKeyWord = "burger" | "zupa" | "deser";
+
+export type KeyWord =
+  | MeatKeyWord
+  | BaseKeyWord
+  | MethodKyWord
+  | VegetableKeyWord
+  | DoughKeyWord
+  | OtherKeyWord
+  | MealKeyWord;
+
 export type IngredientItem = {
   name: string;
   type: IngredientType;
@@ -93,6 +135,7 @@ export type Ingredient = {
   exclude?: true; // not count macro - only for display
   invisible?: true; // for counting macro - no display
   replaceable?: true; // default variants
+  kw?: true; // keyword item
 };
 
 export type IngredientChoice = {
@@ -145,7 +188,7 @@ export type Recipe = {
   extrasMain?: ExtrasIngredientOptions;
   extrasVeg?: ExtrasIngredientOptions;
   steps: RecipeStepGroup[];
-  keyWords?: string[];
+  keyWords?: KeyWord[];
   link?: string;
   country?: CountryCode;
   verified?: true;

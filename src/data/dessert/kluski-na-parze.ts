@@ -30,7 +30,7 @@ const kluskiNaParze: Recipe = {
       ],
     },
   ],
-  keyWords: ["deser"],
+  keyWords: ["deser", "kluski"],
 };
 
 export default kluskiNaParze;

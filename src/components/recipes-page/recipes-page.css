@@ -152,30 +152,28 @@
   background-color: #222;
   cursor: pointer;
   transition: 0.2s;
-
+  user-select: none;
   gap: 1rem;
   padding: 0 1rem;
   width: auto;
   height: 3.2rem;
   font-size: 1.2rem;
   color: #fff;
+  display: grid;
+  grid-template-columns: 1.6rem auto;
+}
+
+.filter-svg {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.filter-svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: auto;
-}
-
-.filter-grade {
-  display: flex;
-  gap: 0.3rem;
-}
-
-.filter-grade svg {
+.filter-svg.stars {
   width: 2rem;
   height: 2rem;
 }
@@ -195,6 +193,7 @@
 .span-numer {
   position: absolute;
   color: #222;
+  font-size: 1rem;
 }
 
 .details-bg {

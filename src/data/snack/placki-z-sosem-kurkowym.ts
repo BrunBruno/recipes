@@ -14,13 +14,13 @@ const plackiZSosemKurkowym: Recipe = {
   images: ["placki-z-sosem-kurkowym.jpg", "placki-z-sosem-kurkowym-2.jpg"],
   time: 35,
   portions: portions,
-  taste: 4,
+  taste: 3,
   difficulty: 3,
   ingredients: [
     {
       title: "Placki ziemniaczane",
       items: [
-        { ing: iVEG.potato, amount: 700 },
+        { ing: iVEG.potato, amount: 700, kw: true },
         { ing: iGRN.flour, amount: 0.5, unit: "lz" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },
         { ing: iMET.egg, amount: 1, unit: "szt" },
@@ -31,7 +31,7 @@ const plackiZSosemKurkowym: Recipe = {
     {
       title: "Sos kurkowy",
       items: [
-        { ing: iVEG.chanterelle, amount: 200 },
+        { ing: iVEG.chanterelle, amount: 200, kw: true },
         { ing: iVEG.onion, amount: 0.25, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
@@ -71,7 +71,7 @@ const plackiZSosemKurkowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["ziemniak", "grzyb"],
+  keyWords: ["ziemniaki", "grzyby", "sos", "smażone"],
 };
 
 export default plackiZSosemKurkowym;

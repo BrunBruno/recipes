@@ -12,7 +12,7 @@ import { dinnerSides } from "../../dinnerSides";
 
 const portions = 4;
 const golabki: Recipe = {
-  name: "Gołąbki",
+  name: "Gołąbki Mielone",
   type: "dinner",
   images: [""],
   time: 60,
@@ -23,9 +23,9 @@ const golabki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 500 },
-        { ing: iVEG.cabbage, amount: 300 },
-        { ing: iGRN.rice_basmati, amount: 100 },
+        { ing: iMET.ground_pork, amount: 500, kw: true },
+        { ing: iVEG.cabbage, amount: 300, kw: true },
+        { ing: iGRN.rice_basmati, amount: 100, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iFAT.butter, amount: 20 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
@@ -67,7 +67,7 @@ const golabki: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "ryż", "kapusta", "sos"],
+  keyWords: [],
 };
 
 export default golabki;

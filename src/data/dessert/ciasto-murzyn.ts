@@ -44,7 +44,7 @@ const ciastoMurzyn: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto", "biszkopt"],
+  keyWords: ["ciasto", "biszkopt", "pieczone"],
 };
 
 export default ciastoMurzyn;

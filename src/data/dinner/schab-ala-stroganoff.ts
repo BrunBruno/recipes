@@ -21,8 +21,8 @@ const schabAlaStroganoff: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_ham, amount: 400 },
-        { ing: iVEG.mushrooms, amount: 150 },
+        { ing: iMET.pork_ham, amount: 400, kw: true },
+        { ing: iVEG.mushrooms, amount: 150, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
@@ -58,7 +58,7 @@ const schabAlaStroganoff: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "sos", "fix"],
+  keyWords: ["mięso", "wieprzowina", "sos", "fix", "ryż", "grzyby"],
 };
 
 export default schabAlaStroganoff;

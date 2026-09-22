@@ -63,7 +63,7 @@ const meksykanska: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "zupa", "wołowina"],
+  keyWords: [],
 };
 
 export default meksykanska;

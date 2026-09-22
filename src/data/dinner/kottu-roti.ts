@@ -33,11 +33,11 @@ const kottuRoti: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iMET.chicken_breast, amount: 350 },
-            { ing: iMET.chicken_thigh, amount: 350 },
-            { ing: iMET.ground_beef, amount: 350 },
-            { ing: iMET.mutton, amount: 350 },
-            { ing: iDIR.tofu, amount: 350 },
+            { ing: iMET.chicken_breast, amount: 350, kw: true },
+            { ing: iMET.chicken_thigh, amount: 350, kw: true },
+            { ing: iMET.ground_beef, amount: 350, kw: true },
+            { ing: iMET.mutton, amount: 350, kw: true },
+            { ing: iDIR.tofu, amount: 350, kw: true },
           ],
           selected: 0,
         },
@@ -126,7 +126,7 @@ const kottuRoti: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "warzywa", "pieczywo", "smażone"],
+  keyWords: ["mięso", "kurczak", "pieczywo", "smażone"],
 };
 
 export default kottuRoti;

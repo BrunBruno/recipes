@@ -1,4 +1,4 @@
-import { iJAR } from "../../ingredients/ingJar";
+import { dinnerSides } from "../../dinnerSides";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
@@ -17,14 +17,17 @@ const karkowkaZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.pork_neck, amount: 1, unit: "opak" },
-        { ing: iVEG.potato, amount: 600 },
+        { ing: iMET.pork_neck, amount: 1, unit: "opak", kw: true },
+        { ing: iVEG.potato, amount: 600, kw: true },
         { ing: iVEG.carrot, amount: 200 },
-        { ing: iJAR.beets_whole_vinegar, amount: portions * 200 },
         { ing: iSPC.winiary_pork_neck_fix, amount: 1, unit: "opak" },
       ],
     },
   ],
+  extrasVeg: {
+    options: [dinnerSides("beets-whole-vinegar", portions)],
+    selected: 0,
+  },
   steps: [
     {
       title: "",
@@ -41,7 +44,7 @@ const karkowkaZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "fix", "pieczone"],
+  keyWords: ["mięso", "wieprzowina", "fix", "pieczone", "ziemniaki"],
 };
 
 export default karkowkaZPiekarnika;

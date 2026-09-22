@@ -47,7 +47,7 @@ const zupaZiemniaczana: Recipe = {
     },
   ],
 
-  keyWords: ["zupa", "ziemniak", "kiełbasa", "warzywa"],
+  keyWords: [],
 };
 
 export default zupaZiemniaczana;

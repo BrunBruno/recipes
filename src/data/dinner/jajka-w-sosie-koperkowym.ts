@@ -22,12 +22,12 @@ const jajkaWSosieKoperkowym: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.egg, amount: 3, unit: "szt" },
+        { ing: iMET.egg, amount: 3, unit: "szt", kw: true },
         { ing: iFAT.butter, amount: 1, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         { ing: iLIQ.water, amount: 0.5, unit: "szk" },
         { ing: iDIR.cream_30, amount: 2, unit: "lz" },
-        { ing: iHRB.dill },
+        { ing: iHRB.dill, amount: 1, unit: "lzi" },
         { ing: iSPC.salt },
       ],
     },
@@ -57,7 +57,7 @@ const jajkaWSosieKoperkowym: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "sos", "gotowane"],
+  keyWords: ["jajka", "gotowane", "sos", "ziemniaki"],
 };
 
 export default jajkaWSosieKoperkowym;

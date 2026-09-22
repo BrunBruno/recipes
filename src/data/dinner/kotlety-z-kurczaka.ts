@@ -24,7 +24,7 @@ const kotletyZKurczaka: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 1, unit: "opak" },
+        { ing: iMET.chicken_breast, amount: 1, unit: "opak", kw: true },
         { ing: iMET.egg, amount: 3, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         ...fryingFat(iFAT.oil, 6, "lz", 0.45),
@@ -91,7 +91,7 @@ const kotletyZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "smażone"],
+  keyWords: ["mięso", "kurczak", "smażone", "ziemniaki"],
 };
 
 export default kotletyZKurczaka;

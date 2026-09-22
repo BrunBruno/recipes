@@ -19,8 +19,8 @@ const mortadela: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.mortadella, amount: 12, unit: "plas" },
-        { ing: iDIR.yellow_cheese, amount: 6, unit: "plas" },
+        { ing: iMET.mortadella, amount: 12, unit: "plas", kw: true },
+        { ing: iDIR.yellow_cheese, amount: 6, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 4, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 8, unit: "lz" },
@@ -57,7 +57,7 @@ const mortadela: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "ser", "kiełbasa"],
+  keyWords: ["mięso", "ser", "kiełbasa", "wieprzowina", "ziemniaki"],
 };
 
 export default mortadela;

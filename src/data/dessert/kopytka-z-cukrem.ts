@@ -36,7 +36,7 @@ const kopytkaZCukrem: Recipe = {
       ],
     },
   ],
-  keyWords: ["deser"],
+  keyWords: ["deser", "gotowane", "kluski"],
 };
 
 export default kopytkaZCukrem;

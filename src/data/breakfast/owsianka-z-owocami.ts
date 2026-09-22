@@ -16,7 +16,7 @@ const owsianaZOwocami: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.oat_flakes, amount: 60 },
+        { ing: iGRN.oat_flakes, amount: 60, kw: true },
         {
           type: "choice",
           options: [
@@ -38,18 +38,18 @@ const owsianaZOwocami: Recipe = {
             { ing: iFRT.pear, amount: 0.5, unit: "szt" },
           ],
         },
-      ],
-    },
-    {
-      title: "Opcjonalne owoce",
-      isAdd: true,
-      items: [
-        { ing: iFRT.banana, exclude: true },
-        { ing: iFRT.strawberry, exclude: true },
-        { ing: iFRT.raspberries, exclude: true },
-        { ing: iFRT.blackberry, exclude: true },
-        { ing: iFRT.peach, unit: "szt", exclude: true },
-        { ing: iFRT.pear, unit: "szt", exclude: true },
+        {
+          type: "placeholder",
+          options: [
+            { ing: iFRT.blueberry, amount: 80 },
+            { ing: iFRT.banana, amount: 1, unit: "szt" },
+            { ing: iFRT.strawberry, amount: 100 },
+            { ing: iFRT.raspberries, amount: 80 },
+            { ing: iFRT.blackberry, amount: 80 },
+            { ing: iFRT.peach, amount: 0.5, unit: "szt" },
+            { ing: iFRT.pear, amount: 0.5, unit: "szt" },
+          ],
+        },
       ],
     },
   ],

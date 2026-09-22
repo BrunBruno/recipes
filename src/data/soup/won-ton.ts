@@ -120,7 +120,7 @@ const zupaWonton: Recipe = {
     },
   ],
 
-  keyWords: ["zupa"],
+  keyWords: [],
 };
 
 export default zupaWonton;

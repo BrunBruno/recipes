@@ -21,7 +21,7 @@ const palkiBarbecue: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_drums, amount: 2, unit: "opak" },
+        { ing: iMET.chicken_drums, amount: 2, unit: "opak", kw: true },
         { ing: iSAU.barbecue_sauce, amount: 10 * 0.5, unit: "lzi" },
         { ing: iSPC.sweet_paprika },
         { ing: iSPC.hot_paprika },
@@ -58,7 +58,7 @@ const palkiBarbecue: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "sos"],
+  keyWords: ["mięso", "kurczak", "pieczone", "ziemniaki"],
 };
 
 export default palkiBarbecue;

@@ -24,7 +24,7 @@ const kurczakSlodkoKwasny: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
         { ing: iGRN.rice, amount: portions * 100 },
         { ing: iJAR.sweet_sour_sauce, amount: 1, unit: "opak" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.4),
@@ -44,7 +44,7 @@ const kurczakSlodkoKwasny: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "sos"],
+  keyWords: ["mięso", "kurczak", "sos", "ryż"],
 };
 
 export default kurczakSlodkoKwasny;

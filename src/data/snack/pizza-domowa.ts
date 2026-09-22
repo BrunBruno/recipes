@@ -12,7 +12,7 @@ import type { Recipe } from "../../types";
 
 const pizzaDomowa: Recipe = {
   name: "Pizza Domowa",
-  type: "dinner",
+  type: "snack",
   images: [""],
   time: 60,
   portions: 3,
@@ -103,7 +103,7 @@ const pizzaDomowa: Recipe = {
     },
   ],
 
-  keyWords: ["ciasto", "ser", "szynka"],
+  keyWords: [],
 };
 
 export default pizzaDomowa;

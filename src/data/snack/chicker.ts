@@ -19,8 +19,8 @@ const chicker: Recipe = {
     {
       title: "Kanapki",
       items: [
-        { ing: iMET.spicy_tenderloins, amount: 400 },
-        { ing: iBAK.chicken_buns, amount: 4, unit: "szt" },
+        { ing: iMET.spicy_tenderloins, amount: 400, kw: true },
+        { ing: iBAK.chicken_buns, amount: 4, unit: "szt", kw: true },
         { ing: iVEG.lettuce_iceberg, amount: 4, unit: "lst" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
       ],
@@ -55,7 +55,7 @@ const chicker: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "pieczywo", "kurczak"],
+  keyWords: ["mięso", "pieczywo", "kurczak", "sos", "burger"],
 };
 
 export default chicker;

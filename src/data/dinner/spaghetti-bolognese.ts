@@ -25,12 +25,12 @@ const spaghettiBolognese: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: portions * 100 },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
         {
           type: "choice",
           options: [
-            { ing: iMET.ground_pork, amount: 500 },
-            { ing: iMET.ground_beef, amount: 500 },
+            { ing: iMET.ground_pork, amount: 500, kw: true },
+            { ing: iMET.ground_beef, amount: 500, kw: true },
           ],
           selected: 0,
         },

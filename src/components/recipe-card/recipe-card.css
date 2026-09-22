@@ -244,6 +244,7 @@
   border-bottom: solid 0.3rem #333;
   height: 420px;
   overflow: hidden;
+  user-select: none;
   transition:
     height 0.3s ease,
     padding 0.3s ease;
@@ -475,7 +476,6 @@
 
 .ingredients-list-container.selection-container {
   position: absolute;
-  width: 50%;
   right: -100%;
   z-index: 2;
   animation: selection-container-ani 0.3s forwards;

@@ -50,7 +50,10 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
           //   ),
           // )
           // .filter((r) => !r.country)
-          //.filter((r) => !r.keyWords)
+          // .filter((r) => !r.keyWords)
+          // .filter(
+          //   (r) => r.keyWords && r.keyWords?.length === 0 && r.images[0] !== "",
+          // )
           .map((recipe) => (
             <motion.div
               key={`${recipe.fileName}`}
@@ -68,6 +71,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                 layout: { type: "spring", stiffness: 350, damping: 30 },
               }}
               className={`recipe-card`}
+              style={{ borderRadius: "0" }}
               onClick={() => {
                 setRecipe(recipe);
               }}

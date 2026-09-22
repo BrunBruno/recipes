@@ -102,6 +102,6 @@ const tortPiernikowoMarchewkowy: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto"],
+  keyWords: [],
 };
 export default tortPiernikowoMarchewkowy;

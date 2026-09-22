@@ -33,7 +33,7 @@ const rosolZKostki: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa", "makaron"],
+  keyWords: [],
 };
 
 export default rosolZKostki;

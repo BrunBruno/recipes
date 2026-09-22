@@ -15,7 +15,9 @@ const golonkaGotowa: Recipe = {
   ingredients: [
     {
       title: "",
-      items: [{ ing: iMET.pork_knuckle_ready, amount: 1, unit: "szt" }],
+      items: [
+        { ing: iMET.pork_knuckle_ready, amount: 1, unit: "szt", kw: true },
+      ],
     },
   ],
   extrasMain: {
@@ -44,7 +46,7 @@ const golonkaGotowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wieprzowina", "pieczone"],
+  keyWords: ["mięso", "wieprzowina", "pieczone", "kluski"],
 };
 
 export default golonkaGotowa;

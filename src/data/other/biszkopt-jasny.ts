@@ -42,7 +42,7 @@ const biszkoptJasny: Recipe = {
       ],
     },
   ],
-  keyWords: ["biszkopt", "ciasto"],
+  keyWords: [],
 };
 
 export default biszkoptJasny;

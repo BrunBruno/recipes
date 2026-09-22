@@ -22,10 +22,10 @@ const barszczCzerwony: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.beetroot, amount: 2, unit: "szt", exclude: true },
-        { ing: iLIQ.water, amount: 700, unit: "ml", exclude: true },
+        { ing: iVEG.beetroot, amount: 2, unit: "szt", exclude: true, kw: true },
+        { ing: iLIQ.rosol, amount: 300, unit: "ml", kw: true },
         { ing: iLIQ.beet_broth, amount: 700, unit: "ml", invisible: true },
-        { ing: iLIQ.rosol, amount: 300, unit: "ml" },
+        { ing: iLIQ.water, amount: 700, unit: "ml", exclude: true },
         { ing: iOTH.citric_acid, amount: 0.5, unit: "lzi" },
         { ing: iLIQ.maggi },
         { ing: iSPC.black_pepper },

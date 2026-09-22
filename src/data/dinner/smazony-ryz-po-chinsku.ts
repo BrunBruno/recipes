@@ -1,5 +1,6 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
+import { iHRB } from "../../ingredients/ingHerb";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSPC } from "../../ingredients/ingSpice";
@@ -10,22 +11,23 @@ const smazonyRyzPoChinsku: Recipe = {
   name: "Smażony Ryż po Chińsku",
   type: "dinner",
   country: "CHN",
-  images: [""],
+  images: ["smazony-ryz-po-chinsku.jpg"],
   time: 30,
   portions: 3,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iMET.chicken_breast, amount: 400 },
-        { ing: iGRN.rice, amount: 200 },
+        { ing: iMET.chicken_breast, amount: 400, kw: true },
+        { ing: iGRN.rice, amount: 200, kw: true },
         { ing: iVEG.carrot, amount: 2, unit: "szt" },
         { ing: iVEG.leek, amount: 50 },
         { ing: iLIQ.water, amount: 50, unit: "ml" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iSPC.knorr_chinese_fired_rice_fix, amount: 1, unit: "opak" },
+        { ing: iHRB.fresh_coriander },
       ],
     },
   ],
@@ -42,10 +44,11 @@ const smazonyRyzPoChinsku: Recipe = {
         "Dodaj ugotowany ryż i wymieszaj całość.",
         "Fix wymieszaj z zimną wodą, dodaj do dania i dokładnie połącz składniki.",
         "Gotuj jeszcze około 5 minut, od czasu do czasu mieszając.",
+        "Pod koniec dodaj świeżą kolendrę.",
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak", "ryż", "warzywa", "fix"],
+  keyWords: ["mięso", "kurczak", "ryż", "fix", "smażone"],
 };
 
 export default smazonyRyzPoChinsku;

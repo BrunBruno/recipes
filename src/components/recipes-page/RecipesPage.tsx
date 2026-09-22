@@ -8,6 +8,14 @@ import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
 
+const tasteLabels: Record<number, string> = {
+  1: "Słabe",
+  2: "Przeciętne",
+  3: "Dobre",
+  4: "Bardzo dobre",
+  5: "Wyśmienite",
+};
+
 type RecipePageProps = {
   setDayIngredients: React.Dispatch<React.SetStateAction<DayIngredients>>;
 };
@@ -45,6 +53,9 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
     return keywords.some((keyword) =>
       keyword.toLowerCase().includes(normalizedQuery),
     );
+    // return keywords.every(
+    //   (keyword) => !keyword.toLowerCase().includes(normalizedQuery),
+    // );
   };
 
   const filteredRecipes = recipes
@@ -215,7 +226,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                       }
                     />
                   </div>
-                  {/* <span className="filter-text">{label}</span> */}
+                  <span className="filter-text">{record.label}</span>
                 </button>
               ))}
             </div>
@@ -223,7 +234,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
               {[1, 2, 3, 4, 5].map((taste) => (
                 <button
                   key={taste}
-                  className="filter-btn filter-grade"
+                  className="filter-btn"
                   style={{
                     borderColor: activeTastes.includes(taste)
                       ? "#0ca678"
@@ -231,30 +242,15 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                   }}
                   onClick={() => toggleTaste(taste)}
                 >
-                  <UtilsIcon
-                    // key={`fs${i}`}
-                    name="star-full"
-                    color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
-                  />
-                  <span className="span-numer">{taste}</span>
-                  {/* {Array.from({
-                    length: taste,
-                  }).map((_, i) => (
+                  <div className="filter-svg stars">
                     <UtilsIcon
-                      key={`fs${i}`}
                       name="star-full"
                       color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
                     />
-                  ))}
-                  {Array.from({
-                    length: 5 - taste,
-                  }).map((_, i) => (
-                    <UtilsIcon
-                      key={`es${i}`}
-                      name="star-empty"
-                      color={activeTastes.includes(taste) ? "#0ca678" : "#666"}
-                    />
-                  ))} */}
+                    <span className="span-numer">{taste}</span>
+                  </div>
+
+                  <span className="filter-text">{tasteLabels[taste]}</span>
                 </button>
               ))}
             </div>

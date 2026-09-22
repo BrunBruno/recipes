@@ -990,19 +990,19 @@ export const getIngredientRecipeNames = (
 export const getRecipeKeywords = (recipe: Recipe): string[] => {
   const ingredientKeywords = recipe.ingredients.flatMap((group) =>
     group.items.map((item) =>
-      "ing" in item ? item.ing.name.toLowerCase() : "",
+      "ing" in item && item.kw ? item.ing.name.toLowerCase() : "",
     ),
   );
 
   const extrasMainKeywords = recipe.extrasMain
     ? (recipe.extrasMain.options[0]?.items
-        .filter((item) => "ing" in item)
+        .filter((item) => "ing" in item && item.kw)
         .map((item) => item.ing.name.toLowerCase()) ?? [])
     : [];
 
   const extrasVegKeywords = recipe.extrasVeg
     ? (recipe.extrasVeg.options[0]?.items
-        .filter((item) => "ing" in item)
+        .filter((item) => "ing" in item && item.kw)
         .map((item) => item.ing.name.toLowerCase()) ?? [])
     : [];
 

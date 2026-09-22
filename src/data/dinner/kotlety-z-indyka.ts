@@ -19,7 +19,7 @@ const kotletyZIndyka: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.turkey_breast, amount: 600 },
+        { ing: iMET.turkey_breast, amount: 600, kw: true },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.breadcrumbs, amount: 100 },
         { ing: iGRN.flour, amount: 50 },
@@ -56,7 +56,7 @@ const kotletyZIndyka: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "indyk", "smażone"],
+  keyWords: ["mięso", "indyk", "smażone", "ziemniaki"],
 };
 
 export default kotletyZIndyka;

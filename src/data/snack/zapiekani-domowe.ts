@@ -57,7 +57,7 @@ const zapiekankiDomowe: Recipe = {
     },
   ],
 
-  keyWords: ["szynka", "ser", "pieczywo"],
+  keyWords: [],
 };
 
 export default zapiekankiDomowe;

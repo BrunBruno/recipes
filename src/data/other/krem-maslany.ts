@@ -33,7 +33,7 @@ const kremMaslany: Recipe = {
       ],
     },
   ],
-  keyWords: ["krem"],
+  keyWords: [],
   link: "https://wszystkiegoslodkiego.pl/porady/krem-maslany-z-mlekiem-skondensowanym-przepis-i-porady",
 };
 

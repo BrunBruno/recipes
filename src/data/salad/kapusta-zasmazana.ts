@@ -20,7 +20,7 @@ const kapustaZasmazana: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.sauerkraut, amount: 1000 },
+        { ing: iJAR.sauerkraut, amount: 1000, kw: true },
         { ing: iVEG.onion, amount: 2, unit: "szt" },
         { ing: iVEG.carrot, amount: 1, unit: "szt" },
         { ing: iLIQ.water, amount: 750, unit: "ml" },
@@ -48,7 +48,7 @@ const kapustaZasmazana: Recipe = {
       ],
     },
   ],
-  keyWords: ["warzywa", "kapusta"],
+  keyWords: [],
 };
 
 export default kapustaZasmazana;

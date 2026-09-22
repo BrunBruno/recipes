@@ -45,7 +45,7 @@ const grzybowa: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa"],
+  keyWords: [],
 };
 
 export default grzybowa;

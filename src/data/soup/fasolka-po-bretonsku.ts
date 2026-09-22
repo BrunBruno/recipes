@@ -19,9 +19,9 @@ const fasolkaPoBretonsku: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.white_beans, amount: 300 },
-        { ing: iMET.sausage, amount: 1, unit: "peto" },
-        { ing: iMET.bacon_block, amount: 150 },
+        { ing: iVEG.white_beans, amount: 300, kw: true },
+        { ing: iMET.sausage, amount: 1, unit: "peto", kw: true },
+        { ing: iMET.bacon_block, amount: 150, kw: true },
         {
           type: "choice",
           options: [
@@ -62,7 +62,7 @@ const fasolkaPoBretonsku: Recipe = {
       ],
     },
   ],
-  keyWords: ["zupa", "boczek", "kiełbasa", "mięso"],
+  keyWords: ["zupa", "boczek", "kiełbasa", "mięso", "wieprzowina", "kurczak"],
 };
 
 export default fasolkaPoBretonsku;

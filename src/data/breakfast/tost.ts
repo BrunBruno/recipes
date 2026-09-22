@@ -16,9 +16,9 @@ const tost: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.toast_bread, amount: 4, unit: "krom" },
-        { ing: iMET.ham_slices, amount: 4, unit: "plas" },
-        { ing: iDIR.yellow_cheese, amount: 4, unit: "plas" },
+        { ing: iBAK.toast_bread, amount: 4, unit: "krom", kw: true },
+        { ing: iMET.ham_slices, amount: 4, unit: "plas", kw: true },
+        { ing: iDIR.yellow_cheese, amount: 4, unit: "plas", kw: true },
         { ing: iSAU.ketchup, amount: 20 },
       ],
     },

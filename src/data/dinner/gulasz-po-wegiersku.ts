@@ -21,7 +21,7 @@ const gulaszWegrerski: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_beef, amount: 500 },
+        { ing: iMET.stew_beef, amount: 500, kw: true },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         ...fryingFat(iFAT.oil, 3, "lz", 0.5),
@@ -58,7 +58,7 @@ const gulaszWegrerski: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "wołowina", "fix", "sos", "duszone"],
+  keyWords: ["mięso", "wołowina", "fix", "duszone", "sos", "kasza"],
 };
 
 export default gulaszWegrerski;

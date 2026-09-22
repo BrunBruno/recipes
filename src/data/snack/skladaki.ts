@@ -25,9 +25,9 @@ const skladaki: Recipe = {
     {
       title: "Składaki",
       items: [
-        { ing: iBAK.tortilla, amount: 4, unit: "szt" },
-        { ing: iMET.salami, amount: 12, unit: "plas" },
-        { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst" },
+        { ing: iBAK.tortilla, amount: 4, unit: "szt", kw: true },
+        { ing: iMET.salami, amount: 12, unit: "plas", kw: true },
+        { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst", kw: true },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         {
           type: "choice",
@@ -66,7 +66,7 @@ const skladaki: Recipe = {
       ],
     },
   ],
-  keyWords: ["tortilla", "ser", "sos"],
+  keyWords: ["pieczywo", "ser", "kiełbasa", "sos"],
 };
 
 export default skladaki;

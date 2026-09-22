@@ -17,8 +17,8 @@ const musMalinowyGanache: Recipe = {
     {
       title: "",
       items: [
+        { ing: iFRT.raspberries, amount: 200, kw: true },
         { ing: iDIR.cream_36, amount: 170 },
-        { ing: iFRT.raspberries, amount: 200 },
         { ing: iLIQ.lemon_juice, amount: 5, unit: "ml" },
         { ing: iSNK.chocolate_white, amount: 100 },
         { ing: iOTH.gelatin, amount: 6 },
@@ -44,7 +44,7 @@ const musMalinowyGanache: Recipe = {
       ],
     },
   ],
-  keyWords: ["krem", "owoce"],
+  keyWords: [],
 };
 
 export default musMalinowyGanache;

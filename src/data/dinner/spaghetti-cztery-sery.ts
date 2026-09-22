@@ -23,10 +23,10 @@ const spaghettiCzterySery: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: 300 },
+        { ing: iGRN.spaghetti_pasta, amount: 300, kw: true },
+        { ing: iDIR.parmesan, amount: 50, replaceable: true, kw: true },
+        { ing: iVEG.broccoli, amount: 250, replaceable: true, kw: true },
         { ing: iDIR.cream_18, amount: 50, unit: "ml" },
-        { ing: iVEG.broccoli, amount: 250, replaceable: true },
-        { ing: iDIR.parmesan, amount: 50, replaceable: true },
         { ing: iNUT.peanuts, amount: 20 },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_four_cheese_spaghetti_fix, amount: 1, unit: "opak" },
@@ -48,7 +48,7 @@ const spaghettiCzterySery: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "ser", "sos", "warzywa", "fix"],
+  keyWords: ["makaron", "ser", "sos", "fix"],
 };
 
 export default spaghettiCzterySery;

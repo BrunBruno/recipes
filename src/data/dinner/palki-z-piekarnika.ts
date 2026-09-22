@@ -22,7 +22,7 @@ const palkiZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_drums, amount: 2, unit: "opak" },
+        { ing: iMET.chicken_drums, amount: 2, unit: "opak", kw: true },
         { ing: iSPC.winiary_chicken_fix, amount: 1, unit: "opak" },
       ],
     },
@@ -58,7 +58,7 @@ const palkiZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["kurczak", "mięso", "fix"],
+  keyWords: ["kurczak", "mięso", "fix", "ziemniaki"],
 };
 
 export default palkiZPiekarnika;

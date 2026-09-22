@@ -42,7 +42,7 @@ const ciastoNaPizze: Recipe = {
       ],
     },
   ],
-  keyWords: ["ciasto"],
+  keyWords: [],
 };
 
 export default ciastoNaPizze;

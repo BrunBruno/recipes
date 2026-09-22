@@ -18,7 +18,7 @@ const lososZPiekarnika: Recipe = {
     {
       title: "",
       items: [
-        { ing: iFSH.salmon_fillet, amount: 500 },
+        { ing: iFSH.salmon_fillet, amount: 500, kw: true },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
         { ing: iLIQ.lemon_juice, amount: 20, unit: "ml" },
         { ing: iSPC.black_pepper },
@@ -46,7 +46,7 @@ const lososZPiekarnika: Recipe = {
       ],
     },
   ],
-  keyWords: ["ryba"],
+  keyWords: ["ryba", "ziemniaki"],
 };
 
 export default lososZPiekarnika;

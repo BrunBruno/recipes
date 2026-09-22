@@ -18,8 +18,8 @@ const watrobkaZKurczaka: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.poultry_liver, amount: 400 },
-        { ing: iVEG.onion, amount: 3, unit: "szt" },
+        { ing: iMET.poultry_liver, amount: 400, kw: true },
+        { ing: iVEG.onion, amount: 3, unit: "szt", kw: true },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.6),
         ...fryingFat(iFAT.clarified_butter, 2, "lz", 0.8),
@@ -39,7 +39,7 @@ const watrobkaZKurczaka: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "kurczak"],
+  keyWords: ["mięso", "kurczak", "smażone"],
 };
 
 export default watrobkaZKurczaka;

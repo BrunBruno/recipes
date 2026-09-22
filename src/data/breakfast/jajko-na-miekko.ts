@@ -17,8 +17,8 @@ const jajkoNaMiekko: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.egg, amount: 3, unit: "szt" },
-        { ing: iBAK.multigrain_kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iMET.egg, amount: 3, unit: "szt", kw: true },
+        { ing: iBAK.multigrain_kaiser_roll, amount: 1, unit: "szt", kw: true },
         { ing: iVEG.cucumber, amount: 100 },
         { ing: iFAT.butter, amount: 10 },
         { ing: iSPC.black_pepper },
@@ -38,7 +38,7 @@ const jajkoNaMiekko: Recipe = {
       ],
     },
   ],
-  keyWords: ["jajko", "pieczywo"],
+  keyWords: ["jajka", "pieczywo", "gotowane"],
 };
 
 export default jajkoNaMiekko;

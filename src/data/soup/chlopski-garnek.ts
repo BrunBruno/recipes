@@ -19,9 +19,9 @@ const chlopskiGarnek: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.sausage, amount: 350 },
-        { ing: iVEG.potato, amount: 450 },
-        { ing: iVEG.cabbage, amount: 200 },
+        { ing: iMET.sausage, amount: 350, kw: true },
+        { ing: iVEG.potato, amount: 450, kw: true },
+        { ing: iVEG.cabbage, amount: 200, kw: true },
         { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
         ...fryingFat(iFAT.oil, 3, "lz", 0.7),
         { ing: iLIQ.water, amount: 400, unit: "ml" },
@@ -45,7 +45,7 @@ const chlopskiGarnek: Recipe = {
       ],
     },
   ],
-  keyWords: ["mięso", "fix"],
+  keyWords: ["mięso", "fix", "kiełbasa", "ziemniaki", "gotowane"],
 };
 
 export default chlopskiGarnek;
