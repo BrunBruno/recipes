@@ -573,7 +573,9 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
           {selectedRecipe.images.map((image, i) => (
             <img
               key={`image-${i}-${image}`}
-              src={image === "" ? "./full/default.jpg" : "./full/" + image}
+              src={
+                image === "" ? "./full/default.jpg" : "./full/" + image + ".jpg"
+              }
               alt={selectedRecipe.name}
               className="recipe-details-image"
               style={{ left: `${i * 100 - activeImageIndex * 100}%` }}

@@ -8,7 +8,7 @@ const ratatouille: Recipe = {
   name: "Ratatouille",
   type: "salad",
   country: "FRA",
-  images: ["ratatouille.jpg", "ratatouille-2.jpg"],
+  images: ["ratatouille", "ratatouille-2"],
   time: 45,
   portions: 4,
   taste: 1,

@@ -63,6 +63,7 @@ type IngId =
   | "sausages_berlinki"
   | "serdelki"
   | "frankfurters"
+  | "cooked_kabanos"
   | "meat_spread"
   | "liver_sausage"
   | "pork_knuckle_ready"
@@ -805,6 +806,20 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [19, 0.4, 18.5],
     price: 31.1,
+    verified: true,
+  },
+
+  cooked_kabanos: {
+    name: "Kabanosy parzone",
+    type: "met",
+    subType: "crd",
+    color: "#B76A50",
+    kcalPer100g: 468,
+    unitWeights: {
+      opak: 230,
+      peto: 20,
+    },
+    nutrientsPer100g: [39, 7.4, 21],
     verified: true,
   },
 

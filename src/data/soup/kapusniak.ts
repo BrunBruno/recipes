@@ -4,7 +4,7 @@ const kapusniak: Recipe = {
   name: "Kapuśniak",
   type: "soup",
   country: "POL",
-  images: ["kapusniak.jpg"],
+  images: [""],
   time: 0,
   portions: 0,
   taste: null,

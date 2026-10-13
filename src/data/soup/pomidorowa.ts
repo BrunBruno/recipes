@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const pomidorowa: Recipe = {
   name: "Pomidorowa",
   type: "soup",
-  images: ["pomidorowa.jpg", "pomidorowa-2.jpg"],
+  images: ["pomidorowa", "pomidorowa-2"],
   time: 15,
   portions: 4,
   taste: 4,

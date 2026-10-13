@@ -16,7 +16,7 @@ const roladaSlaska: Recipe = {
   name: "Rolada Śląska",
   type: "dinner",
   country: "POL",
-  images: ["rolada-wieprzowa.jpg"],
+  images: ["rolada-wieprzowa"],
   time: 90,
   portions: portions,
   taste: 5,

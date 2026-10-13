@@ -12,7 +12,7 @@ const kottuRoti: Recipe = {
   name: "Kottu Roti",
   type: "dinner",
   country: "LKA",
-  images: ["kottu-roti.jpg"],
+  images: ["kottu-roti"],
   time: 70,
   portions: 3,
   taste: 4,

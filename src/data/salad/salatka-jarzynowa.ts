@@ -9,7 +9,7 @@ const salatkaJarzynowa: Recipe = {
   name: "Sałatka Jarzynowa",
   type: "salad",
   country: "POL",
-  images: ["salatka-jarzynowa.jpg"],
+  images: ["salatka-jarzynowa"],
   time: 40,
   portions: 8,
   taste: 4,

@@ -8,7 +8,7 @@ const krokietyZBarszczem: Recipe = {
   name: "Krokiety z Barszczem",
   type: "soup",
   country: "POL",
-  images: ["krokiety-z-barszczem.jpg"],
+  images: ["krokiety-z-barszczem"],
   time: 10,
   portions: portions,
   taste: 3,

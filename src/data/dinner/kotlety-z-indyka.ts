@@ -10,7 +10,7 @@ const portions = 3;
 const kotletyZIndyka: Recipe = {
   name: "Kotlety z Indyka",
   type: "dinner",
-  images: ["kotlety-z-indyka.jpg", "kotlety-z-indyka-2.jpg"],
+  images: ["kotlety-z-indyka", "kotlety-z-indyka-2"],
   time: 40,
   portions: portions,
   taste: 4,

@@ -5,7 +5,7 @@ import { iSNK } from "../../ingredients/ingSnack";
 const kajzerkiZCzekolada: Recipe = {
   name: "Kajzerki z Czekoladą",
   type: "breakfast",
-  images: ["kajzerki-z-czekolada.jpg"],
+  images: ["kajzerki-z-czekolada"],
   time: 5,
   portions: 1,
   taste: 3,

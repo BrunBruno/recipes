@@ -11,7 +11,7 @@ const smazonyRyzPoChinsku: Recipe = {
   name: "Smażony Ryż po Chińsku",
   type: "dinner",
   country: "CHN",
-  images: ["smazony-ryz-po-chinsku.jpg", "smazony-ryz-po-chinsku-2.jpg"],
+  images: ["smazony-ryz-po-chinsku", "smazony-ryz-po-chinsku-2"],
   time: 30,
   portions: 3,
   taste: 4,

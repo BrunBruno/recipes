@@ -5,7 +5,7 @@ import type { Recipe } from "../../types";
 const kluskiNaParze: Recipe = {
   name: "Kluski na Parze",
   type: "dessert",
-  images: ["kluski-na-parze.jpg"],
+  images: ["kluski-na-parze"],
   time: 15,
   portions: 2,
   taste: 3,

@@ -42,8 +42,8 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lz: 12,
       szk: 250,
     },
-    nutrientsPer100g: [0, 100, 0],
-    price: 2,
+    nutrientsPer100g: [0, 100, 0], // fat-carb-prot
+    price: 2, 
     verified: true,
   },
 

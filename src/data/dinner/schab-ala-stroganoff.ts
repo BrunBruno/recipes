@@ -12,7 +12,7 @@ const schabAlaStroganoff: Recipe = {
   name: "Schab a'la Stroganoff",
   type: "dinner",
   country: "RUS",
-  images: ["schab-ala-stroganoff.jpg", "schab-ala-stroganoff-2.jpg"],
+  images: ["schab-ala-stroganoff", "schab-ala-stroganoff-2"],
   time: 25,
   portions: portions,
   taste: 2,

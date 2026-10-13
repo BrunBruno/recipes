@@ -7,7 +7,7 @@ import type { Recipe } from "../../types";
 const tost: Recipe = {
   name: "Tosty",
   type: "breakfast",
-  images: ["tosty.jpg"],
+  images: ["tosty"],
   time: 5,
   portions: 1,
   taste: 3,

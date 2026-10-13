@@ -11,7 +11,7 @@ const sushiMaki: Recipe = {
   name: "Sushi Maki",
   type: "snack",
   country: "JPN",
-  images: ["sushi-maki.jpg", "sushi-maki-2.jpg"],
+  images: ["sushi-maki", "sushi-maki-2"],
   time: 60,
   portions: 3,
   taste: 1,

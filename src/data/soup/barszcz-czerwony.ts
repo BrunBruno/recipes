@@ -9,11 +9,7 @@ const barszczCzerwony: Recipe = {
   name: "Barszcz Czerwony",
   type: "soup",
   country: "POL",
-  images: [
-    "barszcz-czerwony.jpg",
-    "barszcz-czerwony-2.jpg",
-    "barszcz-czerwony-3.jpg",
-  ],
+  images: ["barszcz-czerwony", "barszcz-czerwony-2", "barszcz-czerwony-3"],
   time: 45,
   portions: 2,
   taste: 4,

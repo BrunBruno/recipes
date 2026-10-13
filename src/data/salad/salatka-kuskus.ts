@@ -11,7 +11,7 @@ import type { Recipe } from "../../types";
 const salatkaKuskus: Recipe = {
   name: "Sałatka Kuskus",
   type: "salad",
-  images: ["salatka-kuskus.jpg", "salatka-kuskus-2.jpg"],
+  images: ["salatka-kuskus", "salatka-kuskus-2"],
   time: 40,
   portions: 8,
   taste: 4,

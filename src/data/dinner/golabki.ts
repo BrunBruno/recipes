@@ -3,7 +3,7 @@ import type { Recipe } from "../../types";
 const golabki: Recipe = {
   name: "Gołąbki",
   type: "dinner",
-  images: ["golabki.jpg"],
+  images: ["golabki"],
   time: 0,
   portions: 0,
   taste: null,

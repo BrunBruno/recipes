@@ -11,7 +11,7 @@ const kurczakCurry: Recipe = {
   name: "Kurczak Curry",
   type: "dinner",
   country: "IND",
-  images: ["kurczak-curry.jpg"],
+  images: ["kurczak-curry"],
   time: 20,
   portions: 2,
   taste: 3,

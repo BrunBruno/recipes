@@ -192,6 +192,7 @@ export type Recipe = {
   link?: string;
   country?: CountryCode;
   verified?: true;
+  redo?: true;
 };
 
 export type DayIngredientPair = [string, number];

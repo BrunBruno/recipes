@@ -10,7 +10,7 @@ const pizzaZPinsy: Recipe = {
   name: "Pizza z Pinsy",
   type: "snack",
   country: "ITA",
-  images: ["pizza-z-pinsy.jpg", "pizza-z-pinsy-2.jpg"],
+  images: ["pizza-z-pinsy", "pizza-z-pinsy-2"],
   time: 15,
   portions: 1,
   taste: 3,

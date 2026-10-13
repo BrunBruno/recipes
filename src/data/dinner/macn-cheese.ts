@@ -10,7 +10,7 @@ const macAndCheeseFix: Recipe = {
   name: "Mac'n Cheese",
   type: "dinner",
   country: "USA",
-  images: ["macncheese.jpg"],
+  images: ["macncheese"],
   time: 25,
   portions: portions,
   taste: 1,

@@ -8,7 +8,7 @@ const portions = 2;
 const karkowkaZPiekarnika: Recipe = {
   name: "Karkowka z Piekarnika",
   type: "dinner",
-  images: ["karkowka-z-piekarnika.jpg", "karkowka-z-piekarnika-2.jpg"],
+  images: ["karkowka-z-piekarnika", "karkowka-z-piekarnika-2"],
   time: 70,
   portions: portions,
   taste: 5,

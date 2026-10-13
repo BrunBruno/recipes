@@ -16,7 +16,7 @@ const klopsikiZIkei: Recipe = {
   name: "Klopsiki z IKEI",
   type: "dinner",
   country: "SWE",
-  images: ["klopsiki-z-ikei.jpg", "klopsiki-z-ikei-2.jpg"],
+  images: ["klopsiki-z-ikei", "klopsiki-z-ikei-2"],
   time: 150,
   portions: portions,
   taste: 4,

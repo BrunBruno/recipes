@@ -12,9 +12,9 @@ const kotletyMieloneFix: Recipe = {
   name: "Kotlety Mielone",
   type: "dinner",
   images: [
-    "kotlety-mielone-fix.jpg",
-    "kotlety-mielone-fix-2.jpg",
-    "kotlety-mielone-fix-3.jpg",
+    "kotlety-mielone-fix",
+    "kotlety-mielone-fix-2",
+    "kotlety-mielone-fix-3",
   ],
   time: 35,
   portions: 4,

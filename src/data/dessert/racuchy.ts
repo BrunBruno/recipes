@@ -10,7 +10,7 @@ const racuchy: Recipe = {
   name: "Racuchy",
   type: "dessert",
   country: "POL",
-  images: ["racuchy.jpg"],
+  images: ["racuchy"],
   time: 35,
   portions: 2,
   taste: 3,

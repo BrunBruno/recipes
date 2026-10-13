@@ -10,7 +10,7 @@ import type { Recipe } from "../../types";
 const kurczakZPomidorami: Recipe = {
   name: "Kurczak z Pomidorami",
   type: "dinner",
-  images: ["kurczak-z-pomidorami.jpg"],
+  images: ["kurczak-z-pomidorami"],
   time: 45,
   portions: 4,
   taste: 3,

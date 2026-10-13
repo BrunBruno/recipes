@@ -12,7 +12,7 @@ const cynamonki: Recipe = {
   name: "Cynamonki",
   type: "dessert",
   country: "SWE",
-  images: ["cynamonki.jpg"],
+  images: ["cynamonki"],
   time: 150,
   portions: 12,
   taste: 3,

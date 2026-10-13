@@ -13,7 +13,7 @@ const kotletPoZbojnicku: Recipe = {
   name: "Kotlety po Zbójnicku",
   type: "dinner",
   country: "POL",
-  images: ["kotlet-po-zbojnicku.jpg", "kotlet-po-zbojnicku-2.jpg"],
+  images: ["kotlet-po-zbojnicku", "kotlet-po-zbojnicku-2"],
   time: 90,
   portions: portions,
   taste: 4,

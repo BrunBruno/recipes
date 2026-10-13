@@ -10,9 +10,9 @@ const spaghettiCarbonara: Recipe = {
   type: "dinner",
   country: "ITA",
   images: [
-    "spaghetti-carbonara.jpg",
-    "spaghetti-carbonara-2.jpg",
-    "spaghetti-carbonara-3.jpg",
+    "spaghetti-carbonara",
+    "spaghetti-carbonara-2",
+    "spaghetti-carbonara-3",
   ],
   time: 30,
   portions: portions,

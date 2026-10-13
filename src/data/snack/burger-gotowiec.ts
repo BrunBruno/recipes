@@ -10,7 +10,8 @@ import type { Recipe } from "../../types";
 const gotowyBurger: Recipe = {
   name: "Burger Gotowiec",
   type: "snack",
-  images: ["burger-gotowiec.jpg"],
+  // images: ["burger-gotowiec"],
+  images: [""],
   time: 30,
   portions: 2,
   taste: 3,

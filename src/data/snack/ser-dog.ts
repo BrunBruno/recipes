@@ -9,7 +9,7 @@ const serDog: Recipe = {
   name: "Ser Dog",
   type: "snack",
   country: "USA",
-  images: ["ser-dog.jpg"],
+  images: ["ser-dog"],
   time: 10,
   portions: 2,
   taste: 3,

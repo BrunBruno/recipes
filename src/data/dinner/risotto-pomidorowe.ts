@@ -14,7 +14,7 @@ const risottoPomidorowe: Recipe = {
   name: "Risotto Pomidorowe",
   type: "dinner",
   country: "ITA",
-  images: ["risotto-pomidorowe.jpg"],
+  images: ["risotto-pomidorowe"],
   time: 60,
   portions: portions,
   taste: 3,

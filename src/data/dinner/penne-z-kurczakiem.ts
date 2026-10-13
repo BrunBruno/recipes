@@ -12,7 +12,7 @@ const portions = 3;
 const penneZKurczakiem: Recipe = {
   name: "Penne z Kurczakiem",
   type: "dinner",
-  images: ["penne-z-kurczakiem.jpg"],
+  images: ["penne-z-kurczakiem"],
   time: 20,
   portions: portions,
   taste: 3,

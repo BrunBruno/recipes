@@ -9,7 +9,7 @@ const portions = 1;
 const jajkoSadzone: Recipe = {
   name: "Jajka Sadzone",
   type: "dinner",
-  images: ["jajko-sadzone.jpg"],
+  images: ["jajko-sadzone"],
   time: 10,
   portions: portions,
   taste: 3,

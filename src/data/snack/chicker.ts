@@ -10,7 +10,7 @@ const chicker: Recipe = {
   name: "Chickery",
   type: "snack",
   country: "USA",
-  images: ["chickery.jpg", "chickery-2.jpg"],
+  images: ["chickery", "chickery-2"],
   time: 25,
   portions: 2,
   taste: 4,

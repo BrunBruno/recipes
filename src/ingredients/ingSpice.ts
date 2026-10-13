@@ -31,6 +31,8 @@ type IngId =
   | "gyros_spice"
   | "marinade_prymat"
   | "goulash_seasoning"
+  | "fish_seasoning"
+  | "kebab_shoarma_seasoning"
   //
   | "knorr_bouillon_cube"
   | "knorr_goulash_fix"
@@ -56,6 +58,10 @@ type IngId =
   | "knorr_creamy_salmon_fix"
   | "knorr_creamy_salmon_fix"
   | "knorr_tagliatelle_chicken_fix"
+  | "knorr_french_salad_fix"
+  | "knorr_italian_salad_fix"
+  | "knorr_greek_salad_fix"
+  | "knorr_dill_herb_salad_fix"
   //
   | "winiary_tomato_sauce_fix"
   | "winiary_pork_neck_fix"
@@ -392,6 +398,30 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [3, 45, 8],
   },
 
+  fish_seasoning: {
+    name: "Przyprawa do ryb",
+    type: "spc",
+    color: "#D6C7A3",
+    kcalPer100g: 210,
+    unitWeights: {
+      opak: 20,
+    },
+    nutrientsPer100g: [5.1, 26, 9.6],
+    verified: true,
+  },
+
+  kebab_shoarma_seasoning: {
+    name: "Przyprawa kebab shoarma",
+    type: "spc",
+    color: "#B77B45",
+    kcalPer100g: 215,
+    unitWeights: {
+      opak: 20,
+    },
+    nutrientsPer100g: [8.4, 16, 8.5],
+    verified: true,
+  },
+
   knorr_bouillon_cube: {
     name: "Kostka rosołowa Knorr",
     type: "spc",
@@ -699,6 +729,54 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [34, 44, 7.2],
     verified: true,
+  },
+
+  knorr_french_salad_fix: {
+    name: "Sos sałatkowy Knorr francuski",
+    type: "spc",
+    subType: "sah",
+    color: "#D8C78B",
+    kcalPer100g: 280,
+    unitWeights: {
+      opak: 8,
+    },
+    nutrientsPer100g: [10, 42, 5],
+  },
+
+  knorr_italian_salad_fix: {
+    name: "Sos sałatkowy Knorr włoski",
+    type: "spc",
+    subType: "sah",
+    color: "#A7B77B",
+    kcalPer100g: 250,
+    unitWeights: {
+      opak: 8,
+    },
+    nutrientsPer100g: [7, 42, 6],
+  },
+
+  knorr_greek_salad_fix: {
+    name: "Sos sałatkowy Knorr grecki",
+    type: "spc",
+    subType: "sah",
+    color: "#D5C28A",
+    kcalPer100g: 260,
+    unitWeights: {
+      opak: 9,
+    },
+    nutrientsPer100g: [8, 43, 5],
+  },
+
+  knorr_dill_herb_salad_fix: {
+    name: "Sos sałatkowy Knorr koperkowo-ziołowy",
+    type: "spc",
+    subType: "sah",
+    color: "#9EBC7B",
+    kcalPer100g: 240,
+    unitWeights: {
+      opak: 9,
+    },
+    nutrientsPer100g: [6, 40, 6],
   },
 
   winiary_tomato_sauce_fix: {

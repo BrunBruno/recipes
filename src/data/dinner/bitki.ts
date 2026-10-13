@@ -15,7 +15,7 @@ const bitki: Recipe = {
   name: "Bitki",
   type: "dinner",
   country: "POL",
-  images: ["bitki.jpg", "bitki-2.jpg"],
+  images: ["bitki", "bitki-2"],
   time: 65,
   portions: portions,
   taste: 4,

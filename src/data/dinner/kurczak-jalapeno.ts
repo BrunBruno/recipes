@@ -9,11 +9,7 @@ const portions = 2;
 const kurczakJalapeno: Recipe = {
   name: "Kurczak Jalapeno",
   type: "dinner",
-  images: [
-    "kurczak-jalapeno.jpg",
-    "kurczak-jalapeno-2.jpg",
-    "kurczak-jalapeno-3.jpg",
-  ],
+  images: ["kurczak-jalapeno", "kurczak-jalapeno-2", "kurczak-jalapeno-3"],
   time: 25,
   portions: portions,
   taste: 3,

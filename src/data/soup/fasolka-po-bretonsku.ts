@@ -10,7 +10,7 @@ const fasolkaPoBretonsku: Recipe = {
   name: "Fasolka po Bretońsku",
   type: "soup",
   country: "POL",
-  images: ["fasolka-po-bretonsku.jpg"],
+  images: ["fasolka-po-bretonsku"],
   time: 120,
   portions: 5,
   taste: 4,

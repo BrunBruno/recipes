@@ -12,9 +12,9 @@ const kotletyZKurczaka: Recipe = {
   name: "Kotlety z Kurczaka",
   type: "dinner",
   images: [
-    "kotlety-z-kurczaka.jpg",
-    "kotlety-z-kurczaka-2.jpg",
-    "kotlety-z-kurczaka-3.jpg",
+    "kotlety-z-kurczaka",
+    "kotlety-z-kurczaka-2",
+    "kotlety-z-kurczaka-3",
   ],
   time: 30,
   portions: portions,

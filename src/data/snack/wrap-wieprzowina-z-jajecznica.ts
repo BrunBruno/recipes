@@ -11,10 +11,7 @@ const wrapWieprzowyJajecznica: Recipe = {
   name: "Wrap Wieprzowy z Jajecznicą",
   type: "snack",
   country: "USA",
-  images: [
-    "wrap-wieprzowina-z-jajecznica.jpg",
-    "wrap-wieprzowina-z-jajecznica-2.jpg",
-  ],
+  images: ["wrap-wieprzowina-z-jajecznica", "wrap-wieprzowina-z-jajecznica-2"],
   time: 15,
   portions: portions,
   taste: 4,

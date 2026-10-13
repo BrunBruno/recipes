@@ -8,7 +8,7 @@ const portions = 4;
 const kurczakZRozna: Recipe = {
   name: "Kurczak z Rożna",
   type: "dinner",
-  images: ["kurczak-z-rozna.jpg"],
+  images: ["kurczak-z-rozna"],
   time: 90,
   portions: portions,
   taste: 5,

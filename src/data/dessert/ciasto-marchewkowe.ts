@@ -12,7 +12,7 @@ import type { Recipe } from "../../types";
 const ciastoMarchewkowe: Recipe = {
   name: "Ciasto Marchewkowe",
   type: "dessert",
-  images: ["ciasto-marchewkowe.jpg"],
+  images: ["ciasto-marchewkowe"],
   time: 95,
   portions: 10,
   taste: 3,

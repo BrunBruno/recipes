@@ -13,9 +13,9 @@ const kurczakPoChinsku: Recipe = {
   type: "dinner",
   country: "CHN",
   images: [
-    "kurczak-po-chinsku.jpg",
-    "kurczak-po-chinsku-2.jpg",
-    "kurczak-po-chinsku-3.jpg",
+    "kurczak-po-chinsku",
+    "kurczak-po-chinsku-2",
+    "kurczak-po-chinsku-3",
   ],
   time: 30,
   portions: portions,

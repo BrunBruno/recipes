@@ -7,6 +7,7 @@ type IngId =
   | "cheese_snacks"
   | "lays_sweet_pepper"
   | "lays_green_onion"
+  | "crunchips_sticks_ketchup"
   | "ready_popcorn"
 
   //// CHOCOLATE ////
@@ -86,12 +87,26 @@ export const iSNK: Record<IngId, IngredientItem> = {
     type: "snk",
     subType: "bag",
     color: "#8BC34A",
-    kcalPer100g: 530,
+    kcalPer100g: 516,
     unitWeights: {
       opak: 130,
     },
-    nutrientsPer100g: [33, 52, 6],
+    nutrientsPer100g: [30, 52, 6.1],
     price: 66,
+    verified: true,
+  },
+
+  crunchips_sticks_ketchup: {
+    name: "Crunchips Sticks ketchupowe",
+    type: "snk",
+    subType: "bag",
+    color: "#E8A05B",
+    kcalPer100g: 510,
+    unitWeights: {
+      opak: 70,
+    },
+    nutrientsPer100g: [29, 54, 5.9],
+    verified: true,
   },
 
   ready_popcorn: {

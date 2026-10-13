@@ -13,7 +13,7 @@ const portions = 4;
 const burgerDomowy: Recipe = {
   name: "Burger Domowy",
   type: "snack",
-  images: ["burger-domowy.jpg", "burger-domowy-2.jpg"],
+  images: ["burger-domowy", "burger-domowy-2"],
   time: 35,
   portions: portions,
   taste: 5,

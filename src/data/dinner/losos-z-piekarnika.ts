@@ -9,7 +9,7 @@ const portions = 2;
 const lososZPiekarnika: Recipe = {
   name: "Łosoś z Piekarnika",
   type: "dinner",
-  images: ["losos-z-piekarnika.jpg"],
+  images: ["losos-z-piekarnika"],
   time: 30,
   portions: portions,
   taste: 5,

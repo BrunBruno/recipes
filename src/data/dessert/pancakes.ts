@@ -14,12 +14,7 @@ const pancakes: Recipe = {
   name: "Pancakes",
   type: "dessert",
   country: "USA",
-  images: [
-    "pancakes.jpg",
-    "pancakes-2.jpg",
-    "pancakes-3.jpg",
-    "pancakes-4.jpg",
-  ],
+  images: ["pancakes", "pancakes-2", "pancakes-3", "pancakes-4"],
   time: 35,
   portions: portions,
   taste: 4,

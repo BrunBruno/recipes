@@ -8,7 +8,7 @@ import { iFAT } from "../../ingredients/ingFat";
 const jajkoNaMiekko: Recipe = {
   name: "Jajko na Miękko",
   type: "breakfast",
-  images: ["jajko-na-miekko.jpg"],
+  images: ["jajko-na-miekko"],
   time: 5,
   portions: 1,
   taste: 4,

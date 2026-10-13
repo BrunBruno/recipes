@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const tagliatelleZKurczakiem: Recipe = {
   name: "Tagliatelle z Kurczakiem",
   type: "dinner",
-  images: ["tagliatelle-z-kurczakiem.jpg"],
+  images: ["tagliatelle-z-kurczakiem"],
   time: 0,
   portions: 3,
   taste: 4,

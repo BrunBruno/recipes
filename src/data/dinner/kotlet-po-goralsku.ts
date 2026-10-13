@@ -13,7 +13,7 @@ const kotletPoGoralsku: Recipe = {
   name: "Kotlety po Góralsku",
   type: "dinner",
   country: "POL",
-  images: ["kotlet-po-goralsku.jpg", "kotlet-po-goralsku-2.jpg"],
+  images: ["kotlet-po-goralsku", "kotlet-po-goralsku-2"],
   time: 70,
   portions: portions,
   taste: 5,

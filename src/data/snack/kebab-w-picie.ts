@@ -14,7 +14,7 @@ const kebab: Recipe = {
   name: "Kebab w Picie",
   type: "snack",
   country: "TUR",
-  images: ["kebab-w-picie.jpg"],
+  images: ["kebab-w-picie"],
   time: 90,
   portions: 4,
   taste: 3,

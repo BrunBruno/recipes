@@ -9,7 +9,7 @@ const portions = 3;
 const pstragZPiekarnika: Recipe = {
   name: "Pstrąg z Piekarnika",
   type: "dinner",
-  images: ["pstrag-z-piekarnika.jpg"],
+  images: ["pstrag-z-piekarnika"],
   time: 30,
   portions: portions,
   taste: 5,

@@ -8,11 +8,7 @@ const portions = 3;
 const palkiBarbecue: Recipe = {
   name: "Pałki Barbecue",
   type: "dinner",
-  images: [
-    "palki-barbecue.jpg",
-    "palki-barbecue-2.jpg",
-    "palki-barbecue-3.jpg",
-  ],
+  images: ["palki-barbecue", "palki-barbecue-2", "palki-barbecue-3"],
   time: 60,
   portions: portions,
   taste: 4,

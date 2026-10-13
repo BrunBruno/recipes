@@ -13,7 +13,7 @@ const kebabGyros: Recipe = {
   name: "Kebab Gyros",
   type: "snack",
   country: "GRC",
-  images: ["kebab-gyros.jpg", "kebab-gyros-2.jpg"],
+  images: ["kebab-gyros", "kebab-gyros-2"],
   time: 30,
   portions: portions,
   taste: 4,

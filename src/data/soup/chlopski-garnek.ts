@@ -10,7 +10,7 @@ const portions = 3;
 const chlopskiGarnek: Recipe = {
   name: "Chłopski Garnek",
   type: "soup",
-  images: ["chlopski-garnek.jpg", "chlopski-garnek-2.jpg"],
+  images: ["chlopski-garnek", "chlopski-garnek-2"],
   time: 35,
   portions: portions,
   taste: 4,

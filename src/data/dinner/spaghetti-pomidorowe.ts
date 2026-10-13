@@ -12,7 +12,7 @@ const spaghettiPomidorowe: Recipe = {
   name: "Spaghetti Pomidorowe",
   type: "dinner",
   country: "ITA",
-  images: ["spaghetti-pomidorowe.jpg", "spaghetti-pomidorowe-2.jpg"],
+  images: ["spaghetti-pomidorowe", "spaghetti-pomidorowe-2"],
   time: 40,
   portions: portions,
   taste: 5,

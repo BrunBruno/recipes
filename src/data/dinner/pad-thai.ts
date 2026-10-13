@@ -12,7 +12,7 @@ const padThai: Recipe = {
   name: "Pad Thai",
   type: "dinner",
   country: "THA",
-  images: ["pad-thai.jpg"],
+  images: ["pad-thai"],
   time: 20,
   portions: 2,
   taste: 2,

@@ -9,7 +9,7 @@ import { fryingFat } from "../../utils";
 const watrobkaZKurczaka: Recipe = {
   name: "Wątróbka z Kurczaka",
   type: "dinner",
-  images: ["watrobka-z-kurczaka.jpg"],
+  images: ["watrobka-z-kurczaka"],
   time: 20,
   portions: 2,
   taste: 5,

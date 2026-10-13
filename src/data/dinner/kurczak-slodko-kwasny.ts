@@ -12,9 +12,9 @@ const kurczakSlodkoKwasny: Recipe = {
   type: "dinner",
   country: "CHN",
   images: [
-    "kurczak-slodko-kwasny.jpg",
-    "kurczak-slodko-kwasny-2.jpg",
-    "kurczak-slodko-kwasny-3.jpg",
+    "kurczak-slodko-kwasny",
+    "kurczak-slodko-kwasny-2",
+    "kurczak-slodko-kwasny-3",
   ],
   time: 30,
   portions: portions,

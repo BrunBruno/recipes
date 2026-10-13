@@ -11,7 +11,7 @@ const portions = 3;
 const plackiZSosemKurkowym: Recipe = {
   name: "Placki z Sosem Kurkowym",
   type: "snack",
-  images: ["placki-z-sosem-kurkowym.jpg", "placki-z-sosem-kurkowym-2.jpg"],
+  images: ["placki-z-sosem-kurkowym", "placki-z-sosem-kurkowym-2"],
   time: 35,
   portions: portions,
   taste: 3,

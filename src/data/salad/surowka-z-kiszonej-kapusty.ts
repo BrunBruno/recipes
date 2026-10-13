@@ -10,7 +10,7 @@ const portions = 3;
 const surowkaZKiszonejKapusty: Recipe = {
   name: "Surówka z Kiszonej Kapusty",
   type: "salad",
-  images: ["surowka-z-kiszonej-kapusty.jpg"],
+  images: ["surowka-z-kiszonej-kapusty"],
   time: 10,
   portions: portions,
   taste: 3,

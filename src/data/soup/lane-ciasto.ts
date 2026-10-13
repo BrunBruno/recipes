@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const laneCiasto: Recipe = {
   name: "Rosół z Lanym Ciastem",
   type: "soup",
-  images: ["lane-ciasto.jpg"],
+  images: ["lane-ciasto"],
   time: 20,
   portions: 2,
   taste: 4,

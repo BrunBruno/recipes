@@ -8,7 +8,7 @@ const portions = 1;
 const paluszkiRybne: Recipe = {
   name: "Paluszki Rybne",
   type: "dinner",
-  images: ["paluszki-rybne.jpg", "paluszki-rybne-2.jpg"],
+  images: ["paluszki-rybne", "paluszki-rybne-2"],
   time: 20,
   portions: portions,
   taste: 3,

@@ -10,7 +10,7 @@ const ciastoMurzyn: Recipe = {
   name: "Ciasto Murzyn",
   type: "dessert",
   country: "POL",
-  images: ["ciasto-murzyn.jpg"],
+  images: ["ciasto-murzyn"],
   time: 50,
   portions: 10,
   taste: 4,

@@ -13,9 +13,9 @@ const spaghettiBolognese: Recipe = {
   type: "dinner",
   country: "ITA",
   images: [
-    "spaghetti-bolognese.jpg",
-    "spaghetti-bolognese-2.jpg",
-    "spaghetti-bolognese-3.jpg",
+    "spaghetti-bolognese",
+    "spaghetti-bolognese-2",
+    "spaghetti-bolognese-3",
   ],
   time: 60,
   portions: portions,

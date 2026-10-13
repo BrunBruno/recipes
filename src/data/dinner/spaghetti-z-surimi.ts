@@ -19,7 +19,7 @@ const portions = 1;
 const spaghettiZSurimi: Recipe = {
   name: "Spaghetti z Surimi",
   type: "dinner",
-  images: ["spaghetti-z-surimi.jpg"],
+  images: ["spaghetti-z-surimi"],
   time: 25,
   portions: portions,
   taste: 1,

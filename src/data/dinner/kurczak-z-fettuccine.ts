@@ -10,9 +10,9 @@ const kurczakZFettuccine: Recipe = {
   name: "Kurczak z Fettuccine",
   type: "dinner",
   images: [
-    "kurczak-z-fettuccine.jpg",
-    "kurczak-z-fettuccine-2.jpg",
-    "kurczak-z-fettuccine-3.jpg",
+    "kurczak-z-fettuccine",
+    "kurczak-z-fettuccine-2",
+    "kurczak-z-fettuccine-3",
   ],
   time: 20,
   portions: 3,

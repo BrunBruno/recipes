@@ -7,7 +7,7 @@ import type { Recipe } from "../../types";
 const omlet: Recipe = {
   name: "Omlet",
   type: "breakfast",
-  images: ["omlet.jpg"],
+  images: ["omlet"],
   time: 15,
   portions: 1,
   taste: 2,

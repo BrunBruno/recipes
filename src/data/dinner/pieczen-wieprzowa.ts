@@ -11,11 +11,7 @@ const portions = 4;
 const pieczenWieprzowa: Recipe = {
   name: "Pieczeń Wieprzowa",
   type: "dinner",
-  images: [
-    "pieczen-wieprzowa.jpg",
-    "pieczen-wieprzowa-2.jpg",
-    "pieczen-wieprzowa-3.jpg",
-  ],
+  images: ["pieczen-wieprzowa", "pieczen-wieprzowa-2", "pieczen-wieprzowa-3"],
   time: 100,
   portions: portions,
   taste: 4,

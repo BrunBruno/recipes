@@ -12,7 +12,7 @@ const gulaszWegrerski: Recipe = {
   name: "Gulasz po Węgiersku",
   type: "dinner",
   country: "HUN",
-  images: ["gulasz-po-wegiersku.jpg", "gulasz-po-wegiersku-2.jpg"],
+  images: ["gulasz-po-wegiersku", "gulasz-po-wegiersku-2"],
   time: 95,
   portions: portions,
   taste: 4,

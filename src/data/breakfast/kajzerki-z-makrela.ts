@@ -6,7 +6,7 @@ import type { Recipe } from "../../types";
 const kajzerkiZMakrela: Recipe = {
   name: "Kajzerki z Makrelą",
   type: "breakfast",
-  images: ["kajzerki-z-makrela.jpg"],
+  images: ["kajzerki-z-makrela"],
   time: 15,
   portions: 1,
   taste: 3,

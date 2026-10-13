@@ -11,7 +11,7 @@ const chiliConCarne: Recipe = {
   name: "Chili con Carne",
   type: "dinner",
   country: "MEX",
-  images: ["chili-con-carne.jpg", "chili-con-carne-2.jpg"],
+  images: ["chili-con-carne", "chili-con-carne-2"],
   time: 25,
   portions: 4,
   taste: 3,

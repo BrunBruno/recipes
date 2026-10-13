@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const kaszaZMalinami: Recipe = {
   name: "Kasza z Malinami",
   type: "dessert",
-  images: ["kasza-z-malinami.jpg"],
+  images: ["kasza-z-malinami"],
   time: 15,
   portions: 1,
   taste: 4,

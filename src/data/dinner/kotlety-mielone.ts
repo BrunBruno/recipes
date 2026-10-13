@@ -13,7 +13,7 @@ const portions = 3;
 const kotletyMielone: Recipe = {
   name: "Kotlety Mielone",
   type: "dinner",
-  images: ["kotlety-mielone.jpg", "kotlety-mielone-2.jpg"],
+  images: ["kotlety-mielone", "kotlety-mielone-2"],
   time: 30,
   portions: portions,
   taste: 4,

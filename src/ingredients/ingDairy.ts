@@ -45,6 +45,7 @@ type IngId =
   | "edam_cheese"
   | "tylzycki_cheese"
   | "lilliputian_cheese"
+  | "royal_cheese"
   | "parmigiano_reggiano"
   | "parmesan"
   | "cheddar_cheese"
@@ -597,6 +598,20 @@ export const iDIR: Record<IngId, IngredientItem> = {
       plas: 90,
     },
     nutrientsPer100g: [27, 0, 25],
+  },
+
+  royal_cheese: {
+    name: "Ser królewski",
+    type: "dir",
+    subType: "che",
+    color: "#F3D77A",
+    kcalPer100g: 352,
+    unitWeights: {
+      opak: 135,
+      plas: 15,
+    },
+    nutrientsPer100g: [27, 1.2, 26],
+    verified: true,
   },
 
   cheddar_cheese: {

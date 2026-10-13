@@ -12,9 +12,9 @@ const zapiekankaBolognese: Recipe = {
   name: "Zapiekanka Bolognese",
   type: "dinner",
   images: [
-    "zapiekanka-bolognese.jpg",
-    "zapiekanka-bolognese-2.jpg",
-    "zapiekanka-bolognese-3.jpg",
+    "zapiekanka-bolognese",
+    "zapiekanka-bolognese-2",
+    "zapiekanka-bolognese-3",
   ],
   time: 70,
   portions: 4,

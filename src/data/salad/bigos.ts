@@ -12,7 +12,7 @@ const bigos: Recipe = {
   name: "Bigos",
   type: "salad",
   country: "POL",
-  images: ["bigos.jpg"],
+  images: ["bigos"],
   time: 360,
   portions: 15,
   taste: 5,

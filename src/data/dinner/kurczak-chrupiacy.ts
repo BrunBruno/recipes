@@ -11,7 +11,7 @@ const portions = 2;
 const kurczakChrupiacy: Recipe = {
   name: "Kurczak Chrupiący",
   type: "dinner",
-  images: ["kurczak-chrupiacy.jpg"],
+  images: ["kurczak-chrupiacy"],
   time: 30,
   portions: portions,
   taste: 4,

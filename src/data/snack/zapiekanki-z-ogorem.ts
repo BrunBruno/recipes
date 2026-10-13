@@ -9,7 +9,7 @@ const zapiekankiZOgorem: Recipe = {
   name: "Zapiekanki z Ogórem",
   type: "snack",
   country: "POL",
-  images: ["zapiekanki-z-ogorem.jpg"],
+  images: ["zapiekanki-z-ogorem"],
   time: 15,
   portions: 2,
   taste: 4,

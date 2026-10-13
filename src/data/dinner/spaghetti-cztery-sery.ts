@@ -11,9 +11,9 @@ const spaghettiCzterySery: Recipe = {
   type: "dinner",
   country: "ITA",
   images: [
-    "spaghetti-cztery-sery.jpg",
-    "spaghetti-cztery-sery-2.jpg",
-    "spaghetti-cztery-sery-3.jpg",
+    "spaghetti-cztery-sery",
+    "spaghetti-cztery-sery-2",
+    "spaghetti-cztery-sery-3",
   ],
   time: 35,
   portions: 3,

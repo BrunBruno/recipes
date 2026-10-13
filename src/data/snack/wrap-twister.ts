@@ -13,7 +13,7 @@ const wrapTwister: Recipe = {
   name: "Wrap Twister",
   type: "snack",
   country: "USA",
-  images: ["wrap-twister.jpg", "wrap-twister-2.jpg"],
+  images: ["wrap-twister", "wrap-twister-2"],
   time: 20,
   portions: 4,
   taste: 4,

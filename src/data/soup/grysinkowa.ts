@@ -7,7 +7,7 @@ const grysikowa: Recipe = {
   name: "Grysikowa",
   type: "soup",
   country: "POL",
-  images: ["grysikowa.jpg", "grysikowa-2.jpg"],
+  images: ["grysikowa", "grysikowa-2"],
   time: 10,
   portions: 2,
   taste: 3,

@@ -10,7 +10,7 @@ const salatkaGyros: Recipe = {
   name: "Sałatka Gyros",
   type: "salad",
   country: "POL",
-  images: ["salatka-gyros.jpg"],
+  images: ["salatka-gyros"],
   time: 20,
   portions: 4,
   taste: 5,

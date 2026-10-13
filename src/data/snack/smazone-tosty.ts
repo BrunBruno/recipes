@@ -7,7 +7,7 @@ const smazoneTosty: Recipe = {
   name: "Smażone Tosty",
   type: "snack",
   country: "USA",
-  images: ["smazone-tosty.jpg"],
+  images: ["smazone-tosty"],
   time: 10,
   portions: 1,
   taste: 3,

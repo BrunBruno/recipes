@@ -73,15 +73,26 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
       const tasteMatch =
         activeTastes.length === 0 ||
         (r.taste !== null && activeTastes.includes(r.taste));
+      const redo = r.redo ? true : false;
 
       const specialMatch =
-        query === "xxx" ? hasImages : query === "zzz" ? onlyEmptyImages : true;
+        query === "xxx"
+          ? hasImages
+          : query === "zzz"
+            ? onlyEmptyImages
+            : query === "rrr"
+              ? redo
+              : true;
 
       return (
         typeMatch &&
         tasteMatch &&
         specialMatch &&
-        (nameMatch || keywordsMatch || query === "xxx" || query === "zzz")
+        (nameMatch ||
+          keywordsMatch ||
+          query === "xxx" ||
+          query === "zzz" ||
+          query === "rrr")
       );
     })
     .filter((r) =>

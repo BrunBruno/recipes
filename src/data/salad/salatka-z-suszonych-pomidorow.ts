@@ -12,7 +12,7 @@ import type { Recipe } from "../../types";
 const salatkaZSuszonychPomidorow: Recipe = {
   name: "Sałatka z Suszonych Pomidorów",
   type: "salad",
-  images: ["salatka-z-suszonych-pomidorow.jpg"],
+  images: ["salatka-z-suszonych-pomidorow"],
   time: 30,
   portions: 4,
   taste: 3,
