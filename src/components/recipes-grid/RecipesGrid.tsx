@@ -56,7 +56,7 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
               <div
                 className={`recipe-card-bg ${recipe.images[0] !== "" ? "saturate-bg" : ""}`}
                 style={{
-                  backgroundImage: `url(${recipe.images[0] === "" ? "./nbg/default.jpg" : "./nbg/" + recipe.images[0] + "-removebg-preview.png"})`,
+                  backgroundImage: `url(${recipe.images[0] === "" ? "./tmb/default.jpg" : "./tmb/" + recipe.images[0] + ".png"})`,
                   backgroundColor:
                     recipe.images[0] === ""
                       ? ""
