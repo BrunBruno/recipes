@@ -40,6 +40,7 @@ type IngId =
   | "feta"
   | "camembert"
   | "halloumi"
+  | "blue_cheese"
   | "yellow_cheese"
   | "gouda_cheese"
   | "edam_cheese"
@@ -523,6 +524,16 @@ export const iDIR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [25, 2, 22],
   },
 
+  blue_cheese: {
+    name: "Ser pleśniowy",
+    type: "dir",
+    subType: "che",
+    color: "#D9D0B8",
+    kcalPer100g: 350,
+    unitWeights: {},
+    nutrientsPer100g: [29, 2, 21],
+  },
+
   yellow_cheese: {
     name: "Ser żółty",
     group: "yellow_cheese",
@@ -608,7 +619,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
     kcalPer100g: 352,
     unitWeights: {
       opak: 135,
-      plas: 15,
+      plas: 20,
     },
     nutrientsPer100g: [27, 1.2, 26],
     verified: true,

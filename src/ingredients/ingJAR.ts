@@ -135,6 +135,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szt: 60,
     },
     nutrientsPer100g: [0.5, 1, 0.5],
+    price: 17.4,
     verified: true,
   },
 
@@ -215,6 +216,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.6, 12.4, 1.3],
+    price: 7.2,
     verified: true,
   },
 

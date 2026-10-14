@@ -1,3 +1,4 @@
+import { dinnerSides } from "../../dinnerSides";
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
@@ -8,33 +9,41 @@ import { iSPC } from "../../ingredients/ingSpice";
 import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
+const portions = 3;
 const knedleCzeskieZGulaszem: Recipe = {
   name: "Knedliczki z Gulaszem",
   type: "dinner",
   country: "CZE",
-  images: [""],
+  images: ["knedliczki-z-gulaszem"],
   time: 50,
-  portions: 4,
-  taste: null,
-  difficulty: null,
+  portions: portions,
+  taste: 3,
+  difficulty: 2,
   ingredients: [
     {
       title: "",
       items: [
-        { ing: iGRN.steamed_dumplings, amount: 8, unit: "szt", kw: true },
-        { ing: iMET.pork_shoulder, amount: 500, kw: true },
+        { ing: iGRN.steamed_dumplings, amount: 6, unit: "szt", kw: true },
+        { ing: iMET.stew_beef, amount: 500, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.bay_leaf, amount: 2, unit: "szt" },
         { ing: iSPC.allspice, amount: 3, unit: "ziar" },
         { ing: iOTH.sugar, amount: 1, unit: "lzi" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
-        { ing: iLIQ.water, amount: 0.5, unit: "l" },
+        { ing: iLIQ.water, amount: 0.6, unit: "l" },
         { ing: iSPC.goulash_seasoning },
         { ing: iHRB.parsley },
       ],
     },
   ],
+  extrasVeg: {
+    options: [
+      dinnerSides("beets-fried-ready", portions),
+      dinnerSides("beets-shredded-ready", portions),
+    ],
+    selected: 0,
+  },
   steps: [
     {
       title: "Gulasz",
@@ -66,7 +75,7 @@ const knedleCzeskieZGulaszem: Recipe = {
     },
   ],
 
-  keyWords: [],
+  keyWords: ["mięso", "wołowina", "kluski", "sos", "duszone"],
 };
 
 export default knedleCzeskieZGulaszem;

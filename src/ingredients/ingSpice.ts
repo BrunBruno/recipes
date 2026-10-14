@@ -430,6 +430,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 120,
       szt: 10,
+      kst: 10,
     },
     nutrientsPer100g: [2.5, 2.5, 2.5],
     verified: true,
@@ -741,6 +742,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 8,
     },
     nutrientsPer100g: [10, 42, 5],
+    price: 187.5,
   },
 
   knorr_italian_salad_fix: {
@@ -753,6 +755,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 8,
     },
     nutrientsPer100g: [7, 42, 6],
+    price: 187.5,
   },
 
   knorr_greek_salad_fix: {
@@ -765,6 +768,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 9,
     },
     nutrientsPer100g: [8, 43, 5],
+    price: 166.7,
   },
 
   knorr_dill_herb_salad_fix: {
@@ -777,6 +781,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 9,
     },
     nutrientsPer100g: [6, 40, 6],
+    price: 166.7,
   },
 
   winiary_tomato_sauce_fix: {

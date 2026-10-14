@@ -470,7 +470,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 500,
     },
-    price: 8,
+    price: 12,
   },
 
   celery_stalk: {
@@ -579,6 +579,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [0.1, 6.2, 1.7],
+    price: 10,
   },
 
   turnip: {

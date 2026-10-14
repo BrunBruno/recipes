@@ -9,7 +9,7 @@ import type { Recipe } from "../../types";
 const rosolZMakaronem: Recipe = {
   name: "Rosół z Makaronem",
   type: "soup",
-  images: ["rosol-z-makaronem", "rosol-z-makaronem-2"],
+  images: ["rosol-z-makaronem", "rosol-z-makaronem-2", "rosol-z-makaronem-3"],
   time: 25,
   portions: 2,
   taste: 4,

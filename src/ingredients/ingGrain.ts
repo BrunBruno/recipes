@@ -282,6 +282,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [1.2, 73, 11],
+    price: 10,
     verified: true,
   },
 
@@ -358,6 +359,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       szk: 100,
     },
     nutrientsPer100g: [1.5, 72, 12],
+    price: 7,
   },
 
   tagliatelle_pasta: {
@@ -526,12 +528,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     subType: "bun",
     color: "#F5E6C8",
-    kcalPer100g: 220,
+    kcalPer100g: 253,
     unitWeights: {
       szt: 80,
       opak: 400,
     },
-    nutrientsPer100g: [2, 42, 6],
+    nutrientsPer100g: [2.8, 48.9, 7.1],
+    price: 8.7,
+    verified: true,
   },
 
   wonton_dough: {

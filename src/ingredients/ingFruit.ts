@@ -44,6 +44,7 @@ type IngId =
   | "cranberry"
   | "gooseberry"
   | "olives"
+  | "black_olives"
   | "avocado"
   | "monstera_fruit"
   | "dragon_fruit"
@@ -608,6 +609,17 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 5,
     },
     nutrientsPer100g: [11, 6, 0.8],
+  },
+
+  black_olives: {
+    name: "Czarne oliwki",
+    type: "frt",
+    isVeg: true,
+    subType: "oli",
+    color: "#39302D",
+    kcalPer100g: 116,
+    unitWeights: {},
+    nutrientsPer100g: [11, 6, 1],
   },
 
   avocado: {

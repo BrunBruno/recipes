@@ -160,6 +160,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 400,
     },
     nutrientsPer100g: [13, 0, 19],
+    price: 7,
   },
 
   ground_chicken: {
@@ -342,6 +343,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [20, 0, 18],
+    price: 26,
   },
 
   pork_tenderloin: {
@@ -401,6 +403,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [15, 0, 21],
+    price: 54,
   },
 
   ground_beef: {
@@ -817,9 +820,10 @@ export const iMET: Record<IngId, IngredientItem> = {
     kcalPer100g: 468,
     unitWeights: {
       opak: 230,
-      peto: 20,
+      peto: 23,
     },
     nutrientsPer100g: [39, 7.4, 21],
+    price: 58.7,
     verified: true,
   },
 
