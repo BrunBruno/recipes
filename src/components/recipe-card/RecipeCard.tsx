@@ -1123,11 +1123,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        changePortions(1);
+                        changePortions(-1);
                         setActiveInput("p");
                       }}
                     >
-                      +
+                      -
                     </button>
                     <input
                       readOnly
@@ -1141,11 +1141,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        changePortions(-1);
+                        changePortions(1);
                         setActiveInput("p");
                       }}
                     >
-                      -
+                      +
                     </button>
                   </div>
                   <div
@@ -1156,11 +1156,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        changeGrams(1);
+                        changeGrams(-1);
                         setActiveInput("g");
                       }}
                     >
-                      +
+                      -
                     </button>
                     <input
                       readOnly
@@ -1171,11 +1171,11 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        changeGrams(-1);
+                        changeGrams(1);
                         setActiveInput("g");
                       }}
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>
