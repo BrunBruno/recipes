@@ -29,11 +29,13 @@ type IngId =
   | "leek"
   | "vegetable_soup_vegetables"
   | "garlic"
+  | "dried_garlic"
   | "celery_root"
   | "celery_stalk"
   | "ginger"
   | "red_onion"
   | "shallot"
+  | "dried_onion_flakes"
   | "radish"
   | "radish_peeled"
   | "daikon_oshinko"
@@ -73,7 +75,8 @@ type IngId =
   | "mushrooms_mini"
   | "forest_mushrooms"
   | "chanterelle"
-  | "dried_mushrooms";
+  | "dried_mushrooms"
+  | "dried_mun_mushrooms";
 
 export const iVEG: Record<IngId, IngredientItem> = {
   //// VEGETABLES ////
@@ -157,6 +160,21 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 16.8, 2.5],
   },
 
+  dried_onion_flakes: {
+    name: "Suszone płatki cebuli",
+    type: "veg",
+    isVeg: true,
+    subType: "oni",
+    color: "#E2D2B5",
+    kcalPer100g: 341,
+    nutrientsPer100g: [1.0, 75.0, 9.0],
+    unitWeights: {
+      lzi: 2,
+      lz: 6,
+      opak: 100,
+    },
+  },
+
   garlic: {
     name: "Czosnek",
     type: "veg",
@@ -169,6 +187,21 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.5, 33, 6.4],
     price: 32,
+  },
+
+  dried_garlic: {
+    name: "Suszony czosnek",
+    type: "veg",
+    isVeg: true,
+    subType: "oni",
+    color: "#F4F0EA",
+    kcalPer100g: 332,
+    nutrientsPer100g: [0.7, 72.7, 16.5],
+    unitWeights: {
+      lzi: 3,
+      lz: 9,
+      opak: 100,
+    },
   },
 
   tomato: {
@@ -367,6 +400,9 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#FBC02D",
     kcalPer100g: 27,
     nutrientsPer100g: [0.2, 6.3, 1],
+    unitWeights: {
+      szt: 150,
+    },
   },
 
   green_bell_pepper: {
@@ -377,6 +413,9 @@ export const iVEG: Record<IngId, IngredientItem> = {
     color: "#43A047",
     kcalPer100g: 20,
     nutrientsPer100g: [0.2, 4.6, 0.9],
+    unitWeights: {
+      szt: 150,
+    },
     price: 20,
   },
 
@@ -654,6 +693,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: {
       lst: 5,
       opak: 300,
+      szt: 300,
     },
     nutrientsPer100g: [0.3, 3.3, 1.2],
   },
@@ -964,6 +1004,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 50,
     },
     nutrientsPer100g: [9, 60, 3],
-    verified: false,
+  },
+
+  dried_mun_mushrooms: {
+    name: "Suszone grzyby Mun",
+    type: "veg",
+    isVeg: true,
+    color: "#2C2A29",
+    subType: "msh",
+    kcalPer100g: 300,
+    nutrientsPer100g: [0.5, 65.0, 10.0],
+    unitWeights: {
+      opak: 50,
+    },
   },
 };

@@ -39,12 +39,14 @@ type IngId =
   | "raspberries"
   | "blackberry"
   | "blueberry"
+  | "bilberries"
   | "redcurrant"
   | "blackcurrant"
   | "cranberry"
   | "gooseberry"
   | "olives"
   | "black_olives"
+  | "kalamata_olives"
   | "avocado"
   | "monstera_fruit"
   | "dragon_fruit"
@@ -546,6 +548,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     price: 55,
   },
 
+  bilberries: {
+    name: "Jagody",
+    type: "frt",
+    color: "#3F3A5E",
+    kcalPer100g: 57,
+    nutrientsPer100g: [0.3, 14.5, 0.7],
+    unitWeights: {
+      lz: 15,
+      opak: 125,
+    },
+  },
+
   cranberry: {
     name: "Żurawina",
     type: "frt",
@@ -620,6 +634,20 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 116,
     unitWeights: {},
     nutrientsPer100g: [11, 6, 1],
+  },
+
+  kalamata_olives: {
+    name: "Oliwki Kalamata",
+    type: "frt",
+    isVeg: true,
+    subType: "oli",
+    color: "#4A332C",
+    kcalPer100g: 225,
+    nutrientsPer100g: [22.0, 4.0, 1.5],
+    unitWeights: {
+      szt: 4,
+      opak: 300,
+    },
   },
 
   avocado: {

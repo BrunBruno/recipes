@@ -3,6 +3,7 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// GRAINS ////
   | "flour"
+  | "flour_type_450"
   | "wheat_flour"
   | "potato_starch"
   | "corn_flour"
@@ -31,6 +32,8 @@ type IngId =
   | "tagliatelle_pasta"
   | "tortellini_pasta"
   | "rice_noodles"
+  | "thin_rice_noodles"
+  | "egg_noodles"
 
   //// PROCESSED ////
   | "rice_paper"
@@ -62,6 +65,19 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.2, 71, 11],
     price: 1.7,
     verified: true,
+  },
+
+  flour_type_450: {
+    name: "Mąka tortowa typ 450",
+    type: "grn",
+    color: "#F5F5F0",
+    kcalPer100g: 345,
+    unitWeights: {
+      lz: 12,
+      szk: 160,
+      opak: 500,
+    },
+    nutrientsPer100g: [1.2, 71, 11],
   },
 
   wheat_flour: {
@@ -397,6 +413,28 @@ export const iGRN: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.5, 85, 2.1],
     price: 6.3,
     verified: true,
+  },
+
+  thin_rice_noodles: {
+    name: "Cienki makaron ryżowy",
+    type: "grn",
+    color: "#F5F5F0",
+    kcalPer100g: 364,
+    nutrientsPer100g: [0.6, 82.0, 7.0],
+    unitWeights: {
+      opak: 200,
+    },
+  },
+
+  egg_noodles: {
+    name: "Makaron jajeczny",
+    type: "grn",
+    color: "#E5C158",
+    kcalPer100g: 380,
+    nutrientsPer100g: [4.5, 70.0, 13.0],
+    unitWeights: {
+      opak: 250,
+    },
   },
 
   //// PROCESSED ////

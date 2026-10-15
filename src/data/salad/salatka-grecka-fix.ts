@@ -9,6 +9,7 @@ import type { Recipe } from "../../types";
 const salatkaGrecka: Recipe = {
   name: "Sałatka Grecka",
   type: "salad",
+  country: "GRC",
   images: [""],
   time: 15,
   portions: 2,

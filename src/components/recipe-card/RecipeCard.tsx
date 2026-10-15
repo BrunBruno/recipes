@@ -752,6 +752,35 @@ function RecipeCard({ selectedRecipe, setDayIngredients }: RecipeCardProps) {
                 Cena
               </button>
             </div>
+            {/* <div className="format-ingredients">
+              <span>Liczba porcji: </span>
+              <button
+                onClick={() => {
+                  setRecipeState((prev) => {
+                    const copy = structuredClone(prev);
+                    copy.portions =
+                      copy.portions === 1 ? copy.portions : copy.portions - 1;
+
+                    return copy;
+                  });
+                }}
+              >
+                -
+              </button>
+              <span>{recipeState.portions}</span>
+              <button
+                onClick={() => {
+                  setRecipeState((prev) => {
+                    const copy = structuredClone(prev);
+                    copy.portions = copy.portions + 1;
+
+                    return copy;
+                  });
+                }}
+              >
+                +
+              </button>
+            </div> */}
           </section>
 
           <section className="ingredients-section">

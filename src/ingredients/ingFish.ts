@@ -24,7 +24,8 @@ type IngId =
   //// SEA FOOD ////
   | "squid_frozen_ready"
   | "shrimp"
-  | "surimi";
+  | "surimi"
+  | "frozen_squid";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -248,7 +249,7 @@ export const iFSH: Record<IngId, IngredientItem> = {
   //// SEAFOOD ////
 
   squid_frozen_ready: {
-    name: "Kalmary",
+    name: "Krążki kalmarowe",
     type: "fsh",
     subType: "sea",
     color: "#E09A66",
@@ -287,5 +288,17 @@ export const iFSH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [4.9, 15.3, 8.3],
     price: 22.8,
     verified: true,
+  },
+
+  frozen_squid: {
+    name: "Kalmary mrożone",
+    type: "fsh",
+    subType: "sea",
+    color: "#E8D8CC",
+    kcalPer100g: 92,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [1.4, 3.1, 15.6],
   },
 };

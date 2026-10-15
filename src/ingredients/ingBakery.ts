@@ -18,10 +18,13 @@ type IngId =
   | "toast_bread"
   | "toast_multigrain_bread"
   | "hamburger_buns"
+  | "mini_burger_bun"
   | "chicken_buns"
   | "hotdog_buns"
   | "french_hotdog_buns"
   | "pinsa"
+  | "puff_pastry"
+  | "pita"
 
   //// SNACKS ////
   | "casserole_base"
@@ -240,6 +243,18 @@ export const iBAK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [4.3, 48, 10],
   },
 
+  mini_burger_bun: {
+    name: "Mini bułka do burgera",
+    type: "bak",
+    color: "#D49B57",
+    kcalPer100g: 290,
+    nutrientsPer100g: [5.5, 49.0, 9.0],
+    unitWeights: {
+      szt: 30,
+      opak: 300,
+    },
+  },
+
   chicken_buns: {
     name: "Bułki do chickerów",
     type: "bak",
@@ -292,6 +307,30 @@ export const iBAK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [6, 42, 8.3],
     price: 45.6,
     verified: true,
+  },
+
+  puff_pastry: {
+    name: "Ciasto francuskie",
+    type: "bak",
+    color: "#F4E3C1",
+    kcalPer100g: 558,
+    nutrientsPer100g: [39.0, 44.0, 6.2],
+    unitWeights: {
+      opak: 275,
+      szt: 92,
+    },
+  },
+
+  pita: {
+    name: "Pita",
+    type: "bak",
+    color: "#E2C39B",
+    kcalPer100g: 275,
+    nutrientsPer100g: [1.2, 55.0, 9.0],
+    unitWeights: {
+      szt: 60,
+      opak: 300,
+    },
   },
 
   //// SNACKS ////

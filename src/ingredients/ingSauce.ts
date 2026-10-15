@@ -26,7 +26,10 @@ type IngId =
   | "cream_sauce"
   | "sweet_sour_sauce"
   | "wasabi"
-  | "trinidad_scorpion_sauce";
+  | "trinidad_scorpion_sauce"
+  | "fish_sauce"
+  | "oyster_sauce"
+  | "worcestershire_sauce";
 
 export const iSAU: Record<IngId, IngredientItem> = {
   //// SAUCES ////
@@ -336,5 +339,47 @@ export const iSAU: Record<IngId, IngredientItem> = {
     color: "#C94A32",
     kcalPer100g: 40,
     nutrientsPer100g: [0.5, 8, 1],
+  },
+
+  fish_sauce: {
+    name: "Sos rybny",
+    type: "sau",
+    color: "#7A3B1E",
+    kcalPer100g: 50,
+    nutrientsPer100g: [0.0, 3.5, 9.0],
+    unitWeights: {
+      ml: 1.2,
+      lzi: 6,
+      lz: 18,
+      opak: 500,
+    },
+  },
+
+  oyster_sauce: {
+    name: "Sos ostrygowy",
+    type: "sau",
+    color: "#2C1D0C",
+    kcalPer100g: 110,
+    nutrientsPer100g: [0.5, 25.0, 1.5],
+    unitWeights: {
+      ml: 1.2,
+      lzi: 6,
+      lz: 18,
+      opak: 500,
+    },
+  },
+
+  worcestershire_sauce: {
+    name: "Sos Worcestershire",
+    type: "sau",
+    color: "#3A1F04",
+    kcalPer100g: 78,
+    nutrientsPer100g: [0.2, 18.0, 0.7],
+    unitWeights: {
+      ml: 1.15,
+      lzi: 5.7,
+      lz: 17.2,
+      opak: 250,
+    },
   },
 };

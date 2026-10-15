@@ -163,6 +163,26 @@
   grid-template-columns: 1.6rem auto;
 }
 
+.country-filter-btn {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  background-color: #0000;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  gap: 1rem;
+  padding: 0;
+  width: auto;
+  height: 3.2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+}
+
 .filter-svg {
   position: relative;
   width: 1.5rem;
@@ -171,6 +191,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.country-filter-btn > .filter-svg {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .filter-svg.stars {

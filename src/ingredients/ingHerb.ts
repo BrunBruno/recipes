@@ -24,9 +24,11 @@ type IngId =
   | "fresh_basil"
   | "lemongrass"
   | "fresh_coriander"
+  | "fresh_mint"
 
   //// SPROUTS ////
-  | "radish_sprouts";
+  | "radish_sprouts"
+  | "bean_sprouts";
 
 export const iHRB: Record<IngId, IngredientItem> = {
   //// HERBS ////
@@ -293,14 +295,44 @@ export const iHRB: Record<IngId, IngredientItem> = {
     price: 260,
   },
 
+  fresh_mint: {
+    name: "Świeża mięta",
+    type: "hrb",
+    isVeg: true,
+    subType: "fhr",
+    color: "#4A7C32",
+    kcalPer100g: 70,
+    nutrientsPer100g: [0.9, 14.9, 3.8],
+    unitWeights: {
+      peto: 25,
+      lst: 0.5,
+    },
+  },
+
   //// SPROUTS ////
 
   radish_sprouts: {
     name: "Kiełki rzodkiewki",
     type: "hrb",
+    isVeg: true,
     subType: "spr",
     color: "#D8B7B7",
     kcalPer100g: 43,
     nutrientsPer100g: [0.7, 4.1, 3.8],
+  },
+
+  bean_sprouts: {
+    name: "Kiełki fasoli mung",
+    type: "hrb",
+    isVeg: true,
+    subType: "spr",
+    color: "#F4F5EE",
+    kcalPer100g: 30,
+    nutrientsPer100g: [0.2, 5.9, 3.0],
+    unitWeights: {
+      opak: 200,
+    },
+    price: 5,
+    verified: true,
   },
 };

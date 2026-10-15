@@ -226,6 +226,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
     color: "#5A3A2E",
     kcalPer100g: 539,
     unitWeights: {
+      lzi: 5,
       lz: 15,
       szk: 300,
     },

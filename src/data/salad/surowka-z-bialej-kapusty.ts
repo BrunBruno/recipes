@@ -1,8 +1,8 @@
 import type { Recipe } from "../../types";
 
-const smazonyMakaron: Recipe = {
-  name: "Smażony Makaron",
-  type: "dinner",
+const surowkaZBialejKapusty: Recipe = {
+  name: "Surówka z Białej Kapusty",
+  type: "salad",
   images: [""],
   time: 0,
   portions: 0,
@@ -12,4 +12,4 @@ const smazonyMakaron: Recipe = {
   steps: [],
 };
 
-export default smazonyMakaron;
+export default surowkaZBialejKapusty;

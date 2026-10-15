@@ -63,6 +63,7 @@ export type CountryCode =
   | "KOR" // South Korea
   | "LKA" // Sri Lanka
   | "MEX" // Meksyk
+  | "MUS" // Mauritius
   | "POL" // Polska
   | "RUS" // Rosja
   | "SWE" // Szwecja

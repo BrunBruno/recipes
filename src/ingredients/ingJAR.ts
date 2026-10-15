@@ -21,6 +21,7 @@ type IngId =
   | "sechuan_chili_fusion"
   | "pickled_ginger"
   | "kanpyo"
+  | "chipotle_peppers"
 
   //// JAMS ////
   | "jam_strawberry"
@@ -32,6 +33,7 @@ type IngId =
   | "canned_corn"
   | "canned_peas"
   | "canned_red_beans"
+  | "pinto_beans"
   | "canned_peach"
   | "canned_pineapple"
 
@@ -53,6 +55,9 @@ type IngId =
   //// DELICATESSEN ////
   | "frozen_potato_dumpling"
   | "pierogi_meat"
+  | "pierogi_ruskie"
+  | "pierogi_spinach"
+  | "pierogi_cheese"
   | "meat_croquettes"
   | "tortellini_meat"
   | "frozen_uszka"
@@ -309,6 +314,19 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.5, 60, 7],
   },
 
+  chipotle_peppers: {
+    name: "Papryczki chipotle",
+    type: "jar",
+    isVeg: true,
+    color: "#8B3A2B",
+    kcalPer100g: 30,
+    unitWeights: {
+      szt: 15,
+      opak: 200,
+    },
+    nutrientsPer100g: [0.5, 5, 1],
+  },
+
   //// JAMS ////
 
   jam_strawberry: {
@@ -405,6 +423,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0.5, 20, 7],
     price: 12,
+  },
+
+  pinto_beans: {
+    name: "Fasola pinto",
+    type: "jar",
+    isVeg: true,
+    color: "#B58A68",
+    kcalPer100g: 143,
+    unitWeights: {
+      opak: 400,
+    },
+    nutrientsPer100g: [0.7, 26, 9],
   },
 
   canned_peach: {
@@ -632,6 +662,42 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szt: 25,
     },
     nutrientsPer100g: [7, 30, 9],
+  },
+
+  pierogi_ruskie: {
+    name: "Pierogi ruskie",
+    type: "jar",
+    subType: "fro",
+    color: "#E5D2B8",
+    kcalPer100g: 210,
+    nutrientsPer100g: [7.5, 27, 6.5],
+    unitWeights: {
+      szt: 25,
+    },
+  },
+
+  pierogi_spinach: {
+    name: "Pierogi ze szpinakiem",
+    type: "jar",
+    subType: "fro",
+    color: "#C2D4A8",
+    kcalPer100g: 185,
+    nutrientsPer100g: [5.5, 26, 6],
+    unitWeights: {
+      szt: 25,
+    },
+  },
+
+  pierogi_cheese: {
+    name: "Pierogi z serem",
+    type: "jar",
+    subType: "fro",
+    color: "#F2E8D0",
+    kcalPer100g: 230,
+    nutrientsPer100g: [9, 28, 9],
+    unitWeights: {
+      szt: 25,
+    },
   },
 
   meat_croquettes: {

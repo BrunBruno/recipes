@@ -10,6 +10,7 @@ import type { Recipe } from "../../types";
 const salatkaFrancuska: Recipe = {
   name: "Sałatka Francuska",
   type: "salad",
+  country: "FRA",
   images: [""],
   time: 15,
   portions: 2,

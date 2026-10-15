@@ -6,6 +6,7 @@ type IngId =
   | "rapeseed_oil"
   | "sunflower_oil"
   | "sesame_oil"
+  | "avocado_oil"
   | "olive_oil"
   | "olive_oil_extra_virgin"
   | "sun_dried_tomato_oil"
@@ -78,6 +79,20 @@ export const iFAT: Record<IngId, IngredientItem> = {
     unitWeights: { lz: 15, lzi: 5 },
     kcalPer100g: 884,
     nutrientsPer100g: [100, 0, 0],
+  },
+
+  avocado_oil: {
+    name: "Olej z awokado",
+    type: "fat",
+    color: "#5B7533",
+    kcalPer100g: 884,
+    nutrientsPer100g: [100, 0, 0],
+    unitWeights: {
+      ml: 0.92,
+      lzi: 4.6,
+      lz: 13.8,
+      opak: 500,
+    },
   },
 
   olive_oil: {

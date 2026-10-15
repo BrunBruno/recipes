@@ -40,6 +40,7 @@ type IngId =
   | "beet_broth"
   | "meat_stock"
   | "beef_broth"
+  | "chicken_broth"
   | "vegetable_broth"
   | "white_borscht_sourdough";
 
@@ -451,6 +452,20 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     },
     price: 48,
     verified: true,
+  },
+
+  chicken_broth: {
+    name: "Bulion drobiowy",
+    type: "liq",
+    color: "#D4A359",
+    kcalPer100g: 85,
+    nutrientsPer100g: [8.5, 3.1, 5.2],
+    unitWeights: {
+      ml: 1,
+      lzi: 5,
+      lz: 15,
+      opak: 160,
+    },
   },
 
   vegetable_broth: {

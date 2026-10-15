@@ -2,11 +2,17 @@ import { useRef, useState, useEffect } from "react";
 import RecipeTypeIcon from "../../assets/recipeTypeIcon";
 import UtilsIcon from "../../assets/utilsIcon";
 import { recipes } from "../../recipes";
-import type { Recipe, MealType, DayIngredients } from "../../types";
+import type {
+  Recipe,
+  MealType,
+  DayIngredients,
+  CountryCode,
+} from "../../types";
 import { getRecipeKeywords, MealTypesData } from "../../utils";
 import RecipeCard from "../recipe-card/RecipeCard";
 import RecipesGrid from "../recipes-grid/RecipesGrid";
 import "./recipes-page.css";
+import CountryIcons from "../../assets/countryIcon";
 
 const tasteLabels: Record<number, string> = {
   1: "Słabe",
@@ -15,6 +21,34 @@ const tasteLabels: Record<number, string> = {
   4: "Bardzo dobre",
   5: "Wyśmienite",
 };
+
+// Lista wszystkich dostępnych krajów na podstawie CountryCode
+const countryCodes: CountryCode[] = [
+  "CHN",
+  "DEU",
+  "CZE",
+  "ESP",
+  "FRA",
+  "GBR",
+  "GRC",
+  "HUN",
+  "IND",
+  "IDN",
+  "ITA",
+  "JPN",
+  "KOR",
+  "LKA",
+  "MEX",
+  "MUS",
+  "POL",
+  "RUS",
+  "SWE",
+  "THA",
+  "TUR",
+  "UKR",
+  "USA",
+  "VNM",
+];
 
 type RecipePageProps = {
   setDayIngredients: React.Dispatch<React.SetStateAction<DayIngredients>>;
@@ -25,6 +59,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [activeTypes, setActiveTypes] = useState<MealType[]>([]);
+  const [activeCountries, setActiveCountries] = useState<CountryCode[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -36,6 +71,15 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
       prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
     );
   };
+
+  const toggleCountry = (country: CountryCode) => {
+    setActiveCountries((prev) =>
+      prev.includes(country)
+        ? prev.filter((c) => c !== country)
+        : [...prev, country],
+    );
+  };
+
   const toggleTaste = (taste: number) => {
     setActiveTastes((prev) =>
       prev.includes(taste) ? prev.filter((t) => t !== taste) : [...prev, taste],
@@ -53,15 +97,16 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
     return keywords.some((keyword) =>
       keyword.toLowerCase().includes(normalizedQuery),
     );
-    // return keywords.every(
-    //   (keyword) => !keyword.toLowerCase().includes(normalizedQuery),
-    // );
   };
 
   const filteredRecipes = recipes
     .filter((r) => {
       const typeMatch =
         activeTypes.length === 0 || activeTypes.includes(r.type);
+
+      const countryMatch =
+        activeCountries.length === 0 ||
+        (r.country && activeCountries.includes(r.country));
 
       const query = normalize(searchQuery);
 
@@ -86,6 +131,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
 
       return (
         typeMatch &&
+        countryMatch &&
         tasteMatch &&
         specialMatch &&
         (nameMatch ||
@@ -241,6 +287,7 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                 </button>
               ))}
             </div>
+
             <div className="filter-buttons sm-no">
               {[1, 2, 3, 4, 5].map((taste) => (
                 <button
@@ -262,6 +309,25 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
                   </div>
 
                   <span className="filter-text">{tasteLabels[taste]}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className={`filter-buttons`}>
+              {countryCodes.map((code) => (
+                <button
+                  key={code}
+                  className="country-filter-btn"
+                  style={{
+                    filter: activeCountries.includes(code)
+                      ? "grayscale(0) brightness(100%)"
+                      : "grayscale(0.8) brightness(80%)",
+                  }}
+                  onClick={() => toggleCountry(code)}
+                >
+                  <div className="filter-svg">
+                    <CountryIcons code={code} />
+                  </div>
                 </button>
               ))}
             </div>

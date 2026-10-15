@@ -9,6 +9,7 @@ type IngId =
   | "pepper_grains"
   | "cayenne_pepper"
   | "granulated_garlic"
+  | "granulated_onion"
   | "sweet_paprika"
   | "hot_paprika"
   | "smoked_paprika"
@@ -167,6 +168,17 @@ export const iSPC: Record<IngId, IngredientItem> = {
     price: 43,
   },
 
+  granulated_onion: {
+    name: "Cebula granulowana",
+    type: "spc",
+    color: "#E8D5B5",
+    kcalPer100g: 341,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [1, 79, 10],
+  },
+
   sweet_paprika: {
     name: "Papryka słodka",
     type: "spc",
@@ -174,6 +186,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     kcalPer100g: 282,
     unitWeights: {
       lzi: 2,
+      lz: 6,
     },
     nutrientsPer100g: [13, 54, 14],
     price: 43,
