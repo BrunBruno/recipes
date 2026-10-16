@@ -63,6 +63,7 @@ type IngId =
   | "broccoli"
   | "asparagus"
   | "spinach"
+  | "corn_salad"
   | "nori"
 
   //// BEANS ////
@@ -877,6 +878,20 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
     kcalPer100g: 23,
     nutrientsPer100g: [0.4, 3.6, 2.9],
+  },
+
+  corn_salad: {
+    name: "Roszponka",
+    type: "veg",
+    isVeg: true,
+    subType: "spi",
+    color: "#4A7C32",
+    kcalPer100g: 21,
+    nutrientsPer100g: [0.4, 1.8, 2.0],
+    unitWeights: {
+      opak: 100,
+    },
+    price: 31.9,
   },
 
   nori: {

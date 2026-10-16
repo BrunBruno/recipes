@@ -22,6 +22,7 @@ type IngId =
   | "melon"
   | "watermelon"
   | "pomegranate"
+  | "persimmon"
   | "banana"
   | "lime"
   | "lemon"
@@ -32,6 +33,8 @@ type IngId =
   | "lychee"
   | "grapes_red"
   | "grapes_white"
+  | "dark_grapes"
+  | "pink_grapes"
   | "cherries_sour"
   | "cherries_sweet"
   | "strawberry"
@@ -164,6 +167,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 75,
     },
     nutrientsPer100g: [0.5, 15, 1.1],
+    price: 33.3,
   },
 
   passion_fruit: {
@@ -342,6 +346,20 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.2, 19, 1.7],
   },
 
+  persimmon: {
+    name: "Kaki",
+    type: "frt",
+    isVeg: true,
+    subType: "gra",
+    color: "#FF7518",
+    kcalPer100g: 70,
+    nutrientsPer100g: [0.2, 18.6, 0.6],
+    unitWeights: {
+      szt: 180,
+    },
+    price: 22.2,
+  },
+
   banana: {
     name: "Banan",
     type: "frt",
@@ -468,6 +486,40 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 67,
     nutrientsPer100g: [0.2, 17, 0.6],
     price: 17,
+  },
+
+  pink_grapes: {
+    name: "Winogrono różowe",
+    type: "frt",
+    group: "grape",
+    isVeg: true,
+    subType: "grp",
+    color: "#C26D75",
+    kcalPer100g: 67,
+    nutrientsPer100g: [0.2, 17.5, 0.6],
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 500,
+    },
+    price: 16,
+  },
+
+  dark_grapes: {
+    name: "Winogrono ciemne",
+    type: "frt",
+    group: "grape",
+    isVeg: true,
+    subType: "grp",
+    color: "#4B2E53",
+    kcalPer100g: 69,
+    nutrientsPer100g: [0.2, 18.1, 0.7],
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 500,
+    },
+    price: 10,
   },
 
   cherries_sour: {
@@ -642,12 +694,14 @@ export const iFRT: Record<IngId, IngredientItem> = {
     isVeg: true,
     subType: "oli",
     color: "#4A332C",
-    kcalPer100g: 225,
-    nutrientsPer100g: [22.0, 4.0, 1.5],
+    kcalPer100g: 223,
+    nutrientsPer100g: [22.4, 1.6, 1.6],
     unitWeights: {
       szt: 4,
       opak: 300,
     },
+    price: 37.4,
+    verified: true,
   },
 
   avocado: {

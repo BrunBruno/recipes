@@ -222,6 +222,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       peto: 30,
       lst: 1,
       lzi: 3,
+      lz: 9,
     },
     nutrientsPer100g: [0.8, 6.3, 3],
     price: 311.3,
@@ -306,6 +307,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
     unitWeights: {
       peto: 25,
       lst: 0.5,
+      lz: 2,
     },
   },
 

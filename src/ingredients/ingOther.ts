@@ -43,7 +43,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 100, 0], // fat-carb-prot
-    price: 2, 
+    price: 2,
     verified: true,
   },
 
@@ -102,6 +102,7 @@ export const iOTH: Record<IngId, IngredientItem> = {
       szk: 250,
     },
     nutrientsPer100g: [0, 98, 0],
+    price: 6.8,
   },
 
   xylitol: {

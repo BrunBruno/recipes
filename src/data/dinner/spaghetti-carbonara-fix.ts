@@ -6,13 +6,11 @@ import { iMET } from "../../ingredients/ingMeat";
 import { iLIQ } from "../../ingredients/ingLiquid";
 
 const portions = 2;
-
 const spaghettiCarbonaraFix: Recipe = {
   name: "Spaghetti Carbonara",
   type: "dinner",
   country: "ITA",
-  // images: ["spaghetti-carbonara-fix"],
-  images: [""],
+  images: ["spaghetti-carbonara-fix", "spaghetti-carbonara-fix-2"],
   time: 20,
   portions: portions,
   taste: 2,
@@ -21,7 +19,7 @@ const spaghettiCarbonaraFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.spaghetti_pasta, amount: portions * 200, kw: true },
+        { ing: iGRN.spaghetti_pasta, amount: portions * 120, kw: true },
         { ing: iMET.bacon_block, amount: 150, kw: true },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
         { ing: iLIQ.water, amount: 200, unit: "ml" },

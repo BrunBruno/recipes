@@ -1013,3 +1013,9 @@ export const getRecipeKeywords = (recipe: Recipe): string[] => {
     ...extrasVegKeywords,
   ];
 };
+
+export const calculateGrade = (recipe: Recipe) => {
+  if (!recipe.taste || !recipe.difficulty) return null;
+
+  return Math.floor((recipe.taste + (6 - recipe.difficulty)) / 2);
+};

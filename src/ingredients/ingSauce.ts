@@ -14,6 +14,8 @@ type IngId =
   | "mustard_dijon"
   | "kremser_mustard"
   | "mayonnaise"
+  | "winiary_mayonnaise"
+  | "kielecki_mayonnaise"
   | "garlic_sauce"
   | "sriracha"
   | "barbecue_sauce"
@@ -29,7 +31,8 @@ type IngId =
   | "trinidad_scorpion_sauce"
   | "fish_sauce"
   | "oyster_sauce"
-  | "worcestershire_sauce";
+  | "worcestershire_sauce"
+  | "hamburger_sauce";
 
 export const iSAU: Record<IngId, IngredientItem> = {
   //// SAUCES ////
@@ -187,6 +190,36 @@ export const iSAU: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [68, 2.3, 1.9],
     verified: true,
+  },
+
+  winiary_mayonnaise: {
+    name: "Majonez Winiary",
+    type: "sau",
+    color: "#F4E8B1",
+    kcalPer100g: 683,
+    nutrientsPer100g: [75.0, 3.0, 1.3],
+    unitWeights: {
+      ml: 0.95,
+      lzi: 4.8,
+      lz: 14.2,
+      opak: 400,
+    },
+    price: 20,
+  },
+
+  kielecki_mayonnaise: {
+    name: "Majonez Kielecki",
+    type: "sau",
+    color: "#F2E3A0",
+    kcalPer100g: 702,
+    nutrientsPer100g: [78.0, 1.8, 1.1],
+    unitWeights: {
+      ml: 0.95,
+      lzi: 4.8,
+      lz: 14.2,
+      opak: 400,
+    },
+    price: 18,
   },
 
   garlic_sauce: {
@@ -381,5 +414,20 @@ export const iSAU: Record<IngId, IngredientItem> = {
       lz: 17.2,
       opak: 250,
     },
+  },
+
+  hamburger_sauce: {
+    name: "Sos hamburgerowy",
+    type: "sau",
+    color: "#D49B57",
+    kcalPer100g: 310,
+    nutrientsPer100g: [30.0, 10.0, 1.2],
+    unitWeights: {
+      ml: 1.0,
+      lzi: 5,
+      lz: 15,
+      opak: 400,
+    },
+    price: 13.4,
   },
 };

@@ -16,8 +16,9 @@ const grysikowa: Recipe = {
     {
       title: "",
       items: [
-        { ing: iLIQ.rosol, amount: 1, unit: "l", kw: true },
-        { ing: iGRN.semolina, amount: 1.5, unit: "lz", kw: true },
+        { ing: iLIQ.rosol, amount: 0.5, unit: "l", kw: true },
+        { ing: iGRN.semolina, amount: 3, unit: "lz", kw: true },
+        { ing: iLIQ.maggi },
         { ing: iSPC.salt },
       ],
     },

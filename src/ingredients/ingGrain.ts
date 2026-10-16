@@ -369,13 +369,14 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Makaron kokardki",
     type: "grn",
     color: "#FFF8E1",
-    kcalPer100g: 350,
+    kcalPer100g: 363,
     unitWeights: {
       lz: 15,
       szk: 100,
     },
-    nutrientsPer100g: [1.5, 72, 12],
+    nutrientsPer100g: [1.5, 71.1, 14.5],
     price: 7,
+    verified: true,
   },
 
   tagliatelle_pasta: {

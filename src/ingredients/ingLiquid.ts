@@ -11,7 +11,10 @@ type IngId =
   | "balsamic_vinegar"
   | "spirit"
   | "vodka"
+  | "brandy"
+  | "cognac"
   | "dry_red_wine"
+  | "white_wine"
   | "maple_syrup"
   | "food_coloring"
   | "vanilla_extract"
@@ -42,7 +45,8 @@ type IngId =
   | "beef_broth"
   | "chicken_broth"
   | "vegetable_broth"
-  | "white_borscht_sourdough";
+  | "white_borscht_sourdough"
+  | "fish_broth";
 
 export const iLIQ: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -155,6 +159,34 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0, 0, 0],
   },
 
+  brandy: {
+    name: "Brandy",
+    type: "liq",
+    color: "#9E4F18",
+    kcalPer100g: 225,
+    nutrientsPer100g: [0.0, 0.1, 0.0],
+    unitWeights: {
+      ml: 0.95,
+      lzi: 4,
+      lz: 12,
+      opak: 700,
+    },
+  },
+
+  cognac: {
+    name: "Koniak",
+    type: "liq",
+    color: "#8B4513",
+    kcalPer100g: 239,
+    nutrientsPer100g: [0.0, 1.5, 0.0],
+    unitWeights: {
+      ml: 0.95,
+      lzi: 4,
+      lz: 12,
+      opak: 700,
+    },
+  },
+
   dry_red_wine: {
     name: "Czerwone wino wytrawne",
     type: "liq",
@@ -165,6 +197,21 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       szk: 150,
     },
     nutrientsPer100g: [0, 2.5, 0],
+  },
+
+  white_wine: {
+    name: "Białe wino",
+    type: "liq",
+    color: "#E6D68F",
+    kcalPer100g: 82,
+    nutrientsPer100g: [0.0, 2.6, 0.1],
+    unitWeights: {
+      ml: 1.0,
+      lzi: 5,
+      lz: 15,
+      szk: 150,
+      opak: 750,
+    },
   },
 
   vanilla_extract: {
@@ -492,5 +539,19 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       l: 1000,
     },
     nutrientsPer100g: [0.2, 9, 1.5],
+  },
+
+  fish_broth: {
+    name: "Bulion rybny",
+    type: "liq",
+    color: "#D4B07C",
+    kcalPer100g: 35,
+    nutrientsPer100g: [1.2, 1.5, 4.5],
+    unitWeights: {
+      ml: 1.0,
+      lzi: 5,
+      lz: 15,
+      opak: 160,
+    },
   },
 };

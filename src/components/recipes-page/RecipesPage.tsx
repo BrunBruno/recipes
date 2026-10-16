@@ -22,7 +22,6 @@ const tasteLabels: Record<number, string> = {
   5: "Wyśmienite",
 };
 
-// Lista wszystkich dostępnych krajów na podstawie CountryCode
 const countryCodes: CountryCode[] = [
   "CHN",
   "DEU",
@@ -118,6 +117,10 @@ function RecipesPage({ setDayIngredients }: RecipePageProps) {
       const tasteMatch =
         activeTastes.length === 0 ||
         (r.taste !== null && activeTastes.includes(r.taste));
+      // const grade = calculateGrade(r);
+      // const tasteMatch =
+      //   activeTastes.length === 0 ||
+      //   (grade !== null && activeTastes.includes(grade));
       const redo = r.redo ? true : false;
 
       const specialMatch =

@@ -492,6 +492,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 250,
     },
     nutrientsPer100g: [20, 3, 17],
+    price: 9.9,
   },
 
   pork_knuckle_ready: {

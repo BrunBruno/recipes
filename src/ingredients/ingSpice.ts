@@ -72,6 +72,7 @@ type IngId =
   | "winiary_juicy_ribs_fix"
   | "winiary_hunters_sauce_fix"
   | "winiary_hearty_pot_fix"
+  | "winiary_chicken_creamy_herbs_fix"
   //
   | "kamis_penne_fix"
   //
@@ -461,7 +462,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 46,
     },
     nutrientsPer100g: [3.9, 60, 6.9],
-    price: 98,
+    price: 108.7,
     verified: true,
   },
 
@@ -470,11 +471,13 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#FF7043",
-    kcalPer100g: 250,
+    kcalPer100g: 306,
     unitWeights: {
-      opak: 40,
+      opak: 37,
     },
-    nutrientsPer100g: [3, 50, 8],
+    nutrientsPer100g: [2.7, 56, 9.7],
+    price: 135.14,
+    verified: true,
   },
 
   knorr_bolognese_fix: {
@@ -482,11 +485,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#C62828",
-    kcalPer100g: 141,
+    kcalPer100g: 306,
     unitWeights: {
-      opak: 40,
+      opak: 41,
     },
-    nutrientsPer100g: [3.8, 18, 8.1],
+    nutrientsPer100g: [2.7, 57, 9.9],
+    price: 122,
     verified: true,
   },
 
@@ -509,11 +513,12 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#FFFD8D",
-    kcalPer100g: 500,
+    kcalPer100g: 498,
     unitWeights: {
       opak: 38,
     },
     nutrientsPer100g: [32, 35, 17],
+    price: 131.58,
     verified: true,
   },
 
@@ -522,11 +527,13 @@ export const iSPC: Record<IngId, IngredientItem> = {
     type: "spc",
     subType: "sah",
     color: "#E53935",
-    kcalPer100g: 280,
+    kcalPer100g: 315,
     unitWeights: {
-      opak: 40,
+      opak: 45,
     },
-    nutrientsPer100g: [6, 60, 5],
+    nutrientsPer100g: [1.6, 65, 7.5],
+    price: 111.1,
+    verified: true,
   },
 
   knorr_mushroom_sauce_fix: {
@@ -576,6 +583,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 43,
     },
     nutrientsPer100g: [20, 48, 14],
+    price: 116.3,
     verified: true,
   },
 
@@ -900,6 +908,19 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 39,
     },
     nutrientsPer100g: [4, 55, 10],
+  },
+
+  winiary_chicken_creamy_herbs_fix: {
+    name: "Fix Winiary kurczak śmietankowo-ziołowy",
+    type: "oth",
+    subType: "sah",
+    color: "#E2D3B3",
+    kcalPer100g: 370,
+    nutrientsPer100g: [7.5, 62.0, 9.0],
+    unitWeights: {
+      opak: 30,
+    },
+    price: 116.7,
   },
 
   kamis_penne_fix: {

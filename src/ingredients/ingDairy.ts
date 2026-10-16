@@ -165,12 +165,14 @@ export const iDIR: Record<IngId, IngredientItem> = {
     name: "Jogurt truskawkowy",
     type: "dir",
     color: "#F8BBD0",
-    kcalPer100g: 90,
+    kcalPer100g: 88,
     unitWeights: {
       opak: 150,
       szk: 250,
     },
-    nutrientsPer100g: [2, 14, 3],
+    nutrientsPer100g: [2.8, 12.6, 3.1],
+    price: 6.6,
+    verified: true,
   },
 
   strawberry_skyr: {
@@ -574,13 +576,14 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#FFD54F",
-    kcalPer100g: 315,
+    kcalPer100g: 347,
     unitWeights: {
       plas: 20,
       kst: 250,
-      opak: 300,
+      opak: 500,
     },
-    nutrientsPer100g: [25, 1.5, 24],
+    nutrientsPer100g: [27, 0, 26],
+    verified: true,
   },
 
   tylzycki_cheese: {
