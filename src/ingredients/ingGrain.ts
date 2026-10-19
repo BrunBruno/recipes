@@ -285,7 +285,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.9, 72, 12],
-    price: 5,
+    price: 6,
     verified: true,
   },
 

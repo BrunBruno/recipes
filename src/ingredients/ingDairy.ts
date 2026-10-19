@@ -583,6 +583,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [27, 0, 26],
+    price: 32,
     verified: true,
   },
 

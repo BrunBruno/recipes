@@ -10,7 +10,11 @@ const spaghettiCarbonaraFix: Recipe = {
   name: "Spaghetti Carbonara",
   type: "dinner",
   country: "ITA",
-  images: ["spaghetti-carbonara-fix", "spaghetti-carbonara-fix-2"],
+  images: [
+    "spaghetti-carbonara-fix",
+    "spaghetti-carbonara-fix-2",
+    "spaghetti-carbonara-fix-3",
+  ],
   time: 20,
   portions: portions,
   taste: 2,

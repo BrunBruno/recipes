@@ -662,6 +662,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szt: 25,
     },
     nutrientsPer100g: [7, 30, 9],
+    price: 18.7,
   },
 
   pierogi_ruskie: {
@@ -674,6 +675,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     unitWeights: {
       szt: 25,
     },
+    price: 18.7,
   },
 
   pierogi_spinach: {

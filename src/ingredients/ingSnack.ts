@@ -174,6 +174,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
       kst: 100,
     },
     nutrientsPer100g: [30, 58, 7],
+    price: 100,
   },
 
   chocolate_dark: {

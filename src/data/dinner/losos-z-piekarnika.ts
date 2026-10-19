@@ -31,6 +31,7 @@ const lososZPiekarnika: Recipe = {
       dinnerSides("oven-potatoes-boats", portions),
       dinnerSides("oven-potatoes", portions),
       dinnerSides("oven-fries", portions),
+      
     ],
     selected: 0,
   },

@@ -6,10 +6,10 @@ import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
 const portions = 3;
-const pstragZPiekarnika: Recipe = {
-  name: "Pstrąg z Piekarnika",
+const pstragTeczowyZPiekarnika: Recipe = {
+  name: "Pstrąg Tęczowy z Piekarnika",
   type: "dinner",
-  images: ["pstrag-z-piekarnika"],
+  images: ["pstrag-teczowy-z-piekarnika"],
   time: 30,
   portions: portions,
   taste: 5,
@@ -49,4 +49,4 @@ const pstragZPiekarnika: Recipe = {
   keyWords: ["ryba", "ziemniaki", "pieczone"],
 };
 
-export default pstragZPiekarnika;
+export default pstragTeczowyZPiekarnika;

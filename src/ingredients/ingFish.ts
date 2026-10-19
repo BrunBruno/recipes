@@ -17,6 +17,8 @@ type IngId =
   | "halibut"
   | "panga"
   | "carp"
+  | "rainbow_trout"
+  | "dorada"
   | "cod_fillet"
   | "salmon_fillet"
   | "rainbow_trout_fillet"
@@ -82,6 +84,32 @@ export const iFSH: Record<IngId, IngredientItem> = {
       szt: 1000,
     },
     nutrientsPer100g: [5, 3, 20],
+  },
+
+  rainbow_trout: {
+    name: "Pstrąg tęczowy",
+    type: "fsh",
+    color: "#FF8A65",
+    kcalPer100g: 141,
+    unitWeights: {
+      szt: 350,
+      opak: 700,
+    },
+    nutrientsPer100g: [6.5, 0, 19.5],
+    price: 36.9,
+  },
+
+  dorada: {
+    name: "Dorada",
+    type: "fsh",
+    color: "#FFB74D",
+    kcalPer100g: 115,
+    unitWeights: {
+      szt: 400,
+      opak: 800,
+    },
+    nutrientsPer100g: [3.5, 0, 20],
+    price: 54.9,
   },
 
   cod_fillet: {
