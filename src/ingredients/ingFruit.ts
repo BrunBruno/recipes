@@ -24,6 +24,7 @@ type IngId =
   | "pomegranate"
   | "persimmon"
   | "banana"
+  | "baby_banana"
   | "lime"
   | "lemon"
   | "orange"
@@ -374,6 +375,18 @@ export const iFRT: Record<IngId, IngredientItem> = {
     price: 7,
   },
 
+  baby_banana: {
+    name: "Mini banany",
+    type: "frt",
+    color: "#FFEE58",
+    kcalPer100g: 90,
+    unitWeights: {
+      szt: 40,
+      opak: 300,
+    },
+    nutrientsPer100g: [0.3, 23, 1.1],
+  },
+
   lime: {
     name: "Limonka",
     type: "frt",
@@ -474,6 +487,9 @@ export const iFRT: Record<IngId, IngredientItem> = {
     color: "#8E44AD",
     kcalPer100g: 69,
     nutrientsPer100g: [0.2, 18, 0.7],
+    unitWeights: {
+      szt: 500,
+    },
   },
 
   grapes_white: {
@@ -485,6 +501,9 @@ export const iFRT: Record<IngId, IngredientItem> = {
     color: "#D4E157",
     kcalPer100g: 67,
     nutrientsPer100g: [0.2, 17, 0.6],
+    unitWeights: {
+      szt: 500,
+    },
     price: 17,
   },
 
@@ -498,9 +517,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 67,
     nutrientsPer100g: [0.2, 17.5, 0.6],
     unitWeights: {
-      lzi: 5,
-      lz: 15,
-      opak: 500,
+      szt: 500,
     },
     price: 16,
   },
@@ -515,9 +532,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     kcalPer100g: 69,
     nutrientsPer100g: [0.2, 18.1, 0.7],
     unitWeights: {
-      lzi: 5,
-      lz: 15,
-      opak: 500,
+      szt: 500,
     },
     price: 10,
   },

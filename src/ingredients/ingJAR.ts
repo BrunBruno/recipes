@@ -10,6 +10,7 @@ type IngId =
   | "pickled_cucumber_vinegar"
   | "lightly_pickled_cucumber"
   | "pickles"
+  | "gherkins"
   | "sauerkraut"
   | "fried_onion"
   | "fried_beets"
@@ -22,6 +23,10 @@ type IngId =
   | "pickled_ginger"
   | "kanpyo"
   | "chipotle_peppers"
+  | "apple_puree"
+  | "dinner_salad_jar"
+  | "pickled_pepper"
+  | "pickled_mushrooms"
 
   //// JAMS ////
   | "jam_strawberry"
@@ -185,6 +190,20 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 5, 1],
   },
 
+  gherkins: {
+    name: "Korniszony",
+    type: "jar",
+    group: "pickle",
+    isVeg: true,
+    color: "#558B2F",
+    kcalPer100g: 20,
+    unitWeights: {
+      szt: 15,
+      opak: 400,
+    },
+    nutrientsPer100g: [0.3, 3.5, 0.8],
+  },
+
   sauerkraut: {
     name: "Kapusta kiszona",
     type: "jar",
@@ -325,6 +344,54 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [0.5, 5, 1],
+  },
+
+  apple_puree: {
+    name: "Przecier z jabłek",
+    type: "jar",
+    color: "#D4E157",
+    kcalPer100g: 60,
+    unitWeights: {
+      lz: 15,
+      opak: 300,
+    },
+    nutrientsPer100g: [0.2, 14, 0.4],
+  },
+
+  dinner_salad_jar: {
+    name: "Sałatka obiadowa",
+    type: "jar",
+    color: "#81C784",
+    kcalPer100g: 45,
+    unitWeights: {
+      lz: 20,
+      opak: 500,
+    },
+    nutrientsPer100g: [0.5, 9, 1],
+  },
+
+  pickled_pepper: {
+    name: "Papryka konserwowa",
+    type: "jar",
+    color: "#EF6C00",
+    kcalPer100g: 30,
+    unitWeights: {
+      szt: 20,
+      opak: 400,
+    },
+    nutrientsPer100g: [0.3, 6, 0.9],
+  },
+
+  pickled_mushrooms: {
+    name: "Pieczarki marynowane",
+    type: "jar",
+    color: "#A1887F",
+    kcalPer100g: 25,
+    unitWeights: {
+      szt: 10,
+      opak: 300,
+    },
+    nutrientsPer100g: [0.5, 2.5, 2.2],
   },
 
   //// JAMS ////

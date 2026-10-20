@@ -21,25 +21,25 @@ const pierogiSmazone: Recipe = {
           options: [
             {
               ing: iJAR.pierogi_ruskie,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_meat,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_cheese,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_spinach,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
@@ -51,25 +51,25 @@ const pierogiSmazone: Recipe = {
           options: [
             {
               ing: iJAR.pierogi_ruskie,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_meat,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_cheese,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },
             {
               ing: iJAR.pierogi_spinach,
-              amount: 12,
+              amount: 16,
               unit: "szt",
               kw: true,
             },

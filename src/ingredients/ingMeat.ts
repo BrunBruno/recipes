@@ -5,6 +5,10 @@ type IngId =
   | "egg"
   | "egg_yolk"
   | "egg_white"
+  | "quail_eggs"
+  | "duck_eggs"
+  | "guinea_fowl_eggs"
+  | "goose_eggs"
 
   //// POULTRY ////
   | "chicken_breast"
@@ -56,7 +60,11 @@ type IngId =
   | "smoked_bacon"
   | "brewed_bacon"
   | "sausage"
+  | "smoked_sausage"
   | "white_sausage"
+  | "white_sausages"
+  | "pepperoni"
+  | "chorizo"
   | "sausages"
   | "sausages_pork"
   | "sausages_chicken"
@@ -720,6 +728,19 @@ export const iMET: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  smoked_sausage: {
+    name: "Kiełbasa wędzona",
+    type: "met",
+    subType: "crd",
+    color: "#8D6E63",
+    kcalPer100g: 320,
+    unitWeights: {
+      szt: 120,
+      opak: 400,
+    },
+    nutrientsPer100g: [27, 1, 18],
+  },
+
   white_sausage: {
     name: "Biała kiełbasa",
     type: "met",
@@ -727,7 +748,46 @@ export const iMET: Record<IngId, IngredientItem> = {
     color: "#BFAE9A",
     kcalPer100g: 270,
     nutrientsPer100g: [23, 2, 14],
+  },
+
+  white_sausages: {
+    name: "Biała kiełbaski",
+    type: "met",
+    subType: "crd",
+    color: "#D7CCC8",
+    kcalPer100g: 260,
+    unitWeights: {
+      szt: 80,
+      opak: 500,
+    },
+    nutrientsPer100g: [12, 0, 23],
     price: 27,
+  },
+
+  pepperoni: {
+    name: "Pepperoni",
+    type: "met",
+    subType: "crd",
+    color: "#B71C1C",
+    kcalPer100g: 460,
+    unitWeights: {
+      plas: 5,
+      opak: 100,
+    },
+    nutrientsPer100g: [40, 1, 23],
+  },
+
+  chorizo: {
+    name: "Chorizo",
+    type: "met",
+    subType: "crd",
+    color: "#C62828",
+    kcalPer100g: 455,
+    unitWeights: {
+      plas: 6,
+      opak: 100,
+    },
+    nutrientsPer100g: [38, 1, 24],
   },
 
   sausages: {
@@ -895,5 +955,57 @@ export const iMET: Record<IngId, IngredientItem> = {
       szt: 43,
     },
     nutrientsPer100g: [0.2, 0.7, 10.9],
+  },
+
+  quail_eggs: {
+    name: "Jaja przepiórcze",
+    type: "met",
+    subType: "egg",
+    color: "#D7CCC8",
+    kcalPer100g: 158,
+    unitWeights: {
+      szt: 10,
+      opak: 180,
+    },
+    nutrientsPer100g: [11, 0.4, 13],
+  },
+
+  duck_eggs: {
+    name: "Jaja kacze",
+    type: "met",
+    subType: "egg",
+    color: "#EFEBE9",
+    kcalPer100g: 185,
+    unitWeights: {
+      szt: 70,
+      opak: 420,
+    },
+    nutrientsPer100g: [13.8, 0.8, 12.8],
+  },
+
+  guinea_fowl_eggs: {
+    name: "Jaja perlicze",
+    type: "met",
+    subType: "egg",
+    color: "#D7CCC8",
+    kcalPer100g: 160,
+    unitWeights: {
+      szt: 40,
+      opak: 400,
+    },
+    nutrientsPer100g: [12, 0.5, 13],
+  },
+
+  goose_eggs: {
+    name: "Jaja gęsie",
+    type: "met",
+    subType: "egg",
+    color: "#FAFAFA",
+    kcalPer100g: 185,
+    unitWeights: {
+      szt: 140,
+      opak: 700,
+    },
+    nutrientsPer100g: [13.5, 0.7, 13.9],
   },
 };

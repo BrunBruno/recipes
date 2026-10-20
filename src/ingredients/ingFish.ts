@@ -12,6 +12,7 @@ type IngId =
   | "herring_in_vinegar"
   | "mackerel_in_tomato_sauce"
   | "anchovies"
+  | "pickled_herring"
   | "pollock"
   | "hake"
   | "halibut"
@@ -27,7 +28,8 @@ type IngId =
   | "squid_frozen_ready"
   | "shrimp"
   | "surimi"
-  | "frozen_squid";
+  | "frozen_squid"
+  | "frozen_octopus";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -275,6 +277,19 @@ export const iFSH: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [10, 0, 29],
   },
 
+  pickled_herring: {
+    name: "Śledzie w occie",
+    type: "fsh",
+    subType: "can",
+    color: "#90A4AE",
+    kcalPer100g: 170,
+    unitWeights: {
+      szt: 40,
+      opak: 500,
+    },
+    nutrientsPer100g: [11, 2, 15],
+  },
+
   //// SEAFOOD ////
 
   squid_frozen_ready: {
@@ -329,5 +344,18 @@ export const iFSH: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.4, 3.1, 15.6],
+  },
+
+  frozen_octopus: {
+    name: "Ośmiornica mrożona",
+    type: "fsh",
+    subType: "sea",
+    color: "#4A148C",
+    kcalPer100g: 82,
+    unitWeights: {
+      opak: 500,
+      szt: 300,
+    },
+    nutrientsPer100g: [1.4, 2, 15],
   },
 };
