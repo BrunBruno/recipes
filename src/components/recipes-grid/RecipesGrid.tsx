@@ -70,15 +70,17 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                 }}
               ></div>
 
-              {isPriceComplete(recipe) && (
-                <div
-                  className="card-price"
-                  style={{ backgroundColor: MealTypesData[recipe.type].color }}
-                >
-                  <span>{calculateRecipePrice(recipe).toFixed(2)}</span>
-                  <span>zł</span>
-                </div>
-              )}
+              <div
+                className="card-price"
+                style={{ backgroundColor: MealTypesData[recipe.type].color }}
+              >
+                <span>
+                  {isPriceComplete(recipe)
+                    ? calculateRecipePrice(recipe).toFixed(2)
+                    : "---"}
+                </span>
+                {isPriceComplete(recipe) && <span>zł</span>}
+              </div>
 
               <div
                 className="card-mark"

@@ -7,7 +7,7 @@ const pierogiSmazone: Recipe = {
   name: "Pierogi Smażone",
   type: "dinner",
   country: "POL",
-  images: [""],
+  images: ["pierogi-smazone"],
   time: 15,
   portions: portions,
   taste: null,

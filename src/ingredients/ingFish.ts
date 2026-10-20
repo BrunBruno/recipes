@@ -90,13 +90,14 @@ export const iFSH: Record<IngId, IngredientItem> = {
     name: "Pstrąg tęczowy",
     type: "fsh",
     color: "#FF8A65",
-    kcalPer100g: 141,
+    kcalPer100g: 162,
     unitWeights: {
       szt: 350,
       opak: 700,
     },
-    nutrientsPer100g: [6.5, 0, 19.5],
+    nutrientsPer100g: [10, 0, 18.1],
     price: 36.9,
+    verified: true,
   },
 
   dorada: {

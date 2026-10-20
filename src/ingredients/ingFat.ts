@@ -7,6 +7,7 @@ type IngId =
   | "sunflower_oil"
   | "sesame_oil"
   | "avocado_oil"
+  | "pumpkin_seed_oil"
   | "olive_oil"
   | "olive_oil_extra_virgin"
   | "sun_dried_tomato_oil"
@@ -93,6 +94,21 @@ export const iFAT: Record<IngId, IngredientItem> = {
       lz: 13.8,
       opak: 500,
     },
+  },
+
+  pumpkin_seed_oil: {
+    name: "Olej z nasion dyni",
+    type: "fat",
+    color: "#558B2F",
+    kcalPer100g: 884,
+    unitWeights: {
+      lzi: 10,
+      lz: 14,
+      ml: 1,
+      opak: 250,
+    },
+    nutrientsPer100g: [100, 0, 0],
+    price: 80,
   },
 
   olive_oil: {

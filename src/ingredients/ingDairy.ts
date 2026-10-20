@@ -38,6 +38,7 @@ type IngId =
   | "yellow_mozzarella"
   | "burrata"
   | "feta"
+  | "salad_cheese"
   | "camembert"
   | "halloumi"
   | "blue_cheese"
@@ -498,6 +499,20 @@ export const iDIR: Record<IngId, IngredientItem> = {
       kst: 200,
     },
     nutrientsPer100g: [21, 4, 14],
+    price: 54,
+  },
+
+  salad_cheese: {
+    name: "Ser sałatkowy",
+    type: "dir",
+    color: "#FFF9C4",
+    kcalPer100g: 260,
+    unitWeights: {
+      opak: 200,
+      kst: 100,
+    },
+    nutrientsPer100g: [21, 4, 14],
+    price: 32,
   },
 
   camembert: {
@@ -524,6 +539,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       opak: 225,
     },
     nutrientsPer100g: [25, 2, 22],
+    price: 52.4,
   },
 
   blue_cheese: {

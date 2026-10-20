@@ -20,6 +20,7 @@ type IngId =
   | "vanilla_flavor"
   | "vanilla_pudding"
   | "powdered_borscht"
+  | "powdered_zurek"
   | "strawberry_kissel"
   | "lemon_kissel"
   | "raspberry_kissel"
@@ -232,6 +233,20 @@ export const iOTH: Record<IngId, IngredientItem> = {
       lz: 15,
       opak: 60,
     },
+    price: 50,
+  },
+
+  powdered_zurek: {
+    name: "Żurek z proszku",
+    type: "oth",
+    color: "#D4AC0D",
+    kcalPer100g: 320,
+    unitWeights: {
+      opak: 50,
+      lz: 10,
+    },
+    nutrientsPer100g: [2, 62, 10],
+    price: 62.3,
   },
 
   vanilla_pudding: {

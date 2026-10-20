@@ -657,12 +657,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#E8D0B8",
-    kcalPer100g: 220,
+    kcalPer100g: 235,
     unitWeights: {
       szt: 25,
     },
-    nutrientsPer100g: [7, 30, 9],
+    nutrientsPer100g: [9.9, 26.5, 9.3],
     price: 18.7,
+    verified: true,
   },
 
   pierogi_ruskie: {

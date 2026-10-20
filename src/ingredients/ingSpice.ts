@@ -75,6 +75,7 @@ type IngId =
   | "winiary_chicken_creamy_herbs_fix"
   //
   | "kamis_penne_fix"
+  | "kamis_chipotle_fix"
   //
   | "kania_curry_fix"
   | "kania_sechuan_fix"
@@ -935,6 +936,20 @@ export const iSPC: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5.2, 60, 7.6],
     price: 85.5,
     verified: true,
+  },
+
+  kamis_chipotle_fix: {
+    name: "Fix dip chipotle",
+    type: "spc",
+    subType: "sah",
+    color: "#D84315",
+    kcalPer100g: 350,
+    unitWeights: {
+      opak: 30,
+      lz: 10,
+    },
+    nutrientsPer100g: [5, 60, 10],
+    price: 115,
   },
 
   kania_curry_fix: {

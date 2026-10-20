@@ -46,7 +46,8 @@ type IngId =
   | "chicken_broth"
   | "vegetable_broth"
   | "white_borscht_sourdough"
-  | "fish_broth";
+  | "fish_broth"
+  | "sour_rye_soup";
 
 export const iLIQ: Record<IngId, IngredientItem> = {
   //// LIQUIDS ////
@@ -62,7 +63,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
       lzi: 5,
     },
-    nutrientsPer100g: [0, 0, 0],
+    nutrientsPer100g: [0, 0, 0], // fat-carb-prot
     price: 0.01,
     verified: true,
   },
@@ -553,5 +554,20 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
       opak: 160,
     },
+  },
+
+  sour_rye_soup: {
+    name: "Zakwas na żur",
+    type: "liq",
+    color: "#D7CCC8",
+    kcalPer100g: 30,
+    unitWeights: {
+      ml: 1,
+      l: 1000,
+      szk: 250,
+      lz: 15,
+      lzi: 5,
+    },
+    nutrientsPer100g: [0.2, 6.0, 0.8],
   },
 };

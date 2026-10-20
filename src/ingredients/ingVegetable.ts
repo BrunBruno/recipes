@@ -23,6 +23,7 @@ type IngId =
   | "red_bell_pepper"
   | "yellow_bell_pepper"
   | "green_bell_pepper"
+  | "pepper_mix"
   | "carrot"
   | "baby_carrot"
   | "parsley_root"
@@ -144,7 +145,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 120,
     },
     nutrientsPer100g: [0.1, 9, 1.1],
-    price: 8,
+    price: 5,
   },
 
   shallot: {
@@ -418,6 +419,19 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 150,
     },
     price: 20,
+  },
+
+  pepper_mix: {
+    name: "Mix papryk",
+    type: "veg",
+    color: "#FF7043",
+    kcalPer100g: 31,
+    unitWeights: {
+      szt: 150,
+      opak: 500,
+    },
+    nutrientsPer100g: [0.3, 6, 1.3],
+    price: 24,
   },
 
   chili_pepper: {
