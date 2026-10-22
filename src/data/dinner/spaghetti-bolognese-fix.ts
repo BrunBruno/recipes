@@ -21,7 +21,7 @@ const spaghettiBologneseFix: Recipe = {
       title: "",
       items: [
         { ing: iGRN.spaghetti_pasta, amount: portions * 100, kw: true },
-        { ing: iMET.ground_beef, amount: 400, kw: true },
+        { ing: iMET.beef_ground, amount: 400, kw: true },
         { ing: iDIR.yellow_cheese, amount: portions * 50 },
         ...fryingFat(iFAT.oil, 2, "lz", 0.6),
         { ing: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },

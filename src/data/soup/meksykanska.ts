@@ -21,7 +21,7 @@ const meksykanska: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_beef, amount: 500 },
+        { ing: iMET.beef_stew, amount: 500 },
         { ing: iVEG.onion, amount: 220 },
         { ing: iVEG.carrot, amount: 140 },
         { ing: iVEG.parsley_root, amount: 100 },

@@ -169,12 +169,13 @@ export const iSNK: Record<IngId, IngredientItem> = {
     type: "snk",
     subType: "cho",
     color: "#8D6E63",
-    kcalPer100g: 535,
+    kcalPer100g: 534,
     unitWeights: {
       kst: 100,
     },
-    nutrientsPer100g: [30, 58, 7],
+    nutrientsPer100g: [31, 55, 6.3],
     price: 100,
+    verified: true,
   },
 
   chocolate_dark: {

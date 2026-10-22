@@ -22,7 +22,7 @@ const kotletDevolay: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_chicken, amount: 600, kw: true },
+        { ing: iMET.chicken_ground, amount: 600, kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iGRN.flour, amount: 3, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 6, unit: "lz" },

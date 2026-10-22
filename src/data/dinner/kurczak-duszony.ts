@@ -13,8 +13,7 @@ const portions = 3;
 const gotowanyKurczak: Recipe = {
   name: "Kurczak Duszony",
   type: "dinner",
-  // images: ["kurczak-duszony"],
-  images: [""],
+  images: ["kurczak-duszony", "kurczak-duszony-2", "kurczak-duszony-3"],
   time: 45,
   portions: portions,
   taste: 4,
@@ -23,7 +22,15 @@ const gotowanyKurczak: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.chicken_thigh, amount: 600, kw: true },
+        {
+          type: "choice",
+          options: [
+            { ing: iMET.chicken_thigh, amount: 600, kw: true },
+            { ing: iMET.chicken_drums, amount: 600, kw: true },
+            { ing: iMET.chicken_quarters, amount: 600, kw: true },
+          ],
+          selected: 0,
+        },
         ...fryingFat(iFAT.oil, 3, "lz", 0.3),
         { ing: iDIR.cream_18, amount: 2, unit: "lz" },
         { ing: iGRN.flour, amount: 1, unit: "lz" },

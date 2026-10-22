@@ -23,7 +23,7 @@ const golabki: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 500, kw: true },
+        { ing: iMET.pork_ground, amount: 500, kw: true },
         { ing: iVEG.cabbage, amount: 300, kw: true },
         { ing: iGRN.rice_basmati, amount: 100, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },

@@ -24,7 +24,7 @@ const zapiekankaBolognese: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 400 },
+        { ing: iMET.pork_ground, amount: 400 },
         { ing: iGRN.fusilli_pasta, amount: 400 },
         { ing: iDIR.yellow_cheese, amount: 200 },
         { ing: iVEG.mushrooms, amount: 250 },

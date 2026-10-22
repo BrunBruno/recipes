@@ -21,7 +21,7 @@ const gulaszPoWegierskuFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_beef, amount: 500, kw: true },
+        { ing: iMET.beef_stew, amount: 500, kw: true },
         ...fryingFat(iFAT.oil, 5, "lz", 0.3),
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_goulash_fix, amount: 1, unit: "opak" },
@@ -57,7 +57,6 @@ const gulaszPoWegierskuFix: Recipe = {
     },
   ],
   keyWords: ["mięso", "wołowina", "fix", "duszone", "sos", "kluski"],
-
 };
 
 export default gulaszPoWegierskuFix;

@@ -10,7 +10,7 @@ const zur: Recipe = {
   name: "Żur",
   type: "soup",
   country: "POL",
-  images: ["zur", "zur-2"],
+  images: ["zur", "zur-2", "zur-3"],
   time: 120,
   portions: 4,
   taste: 5,

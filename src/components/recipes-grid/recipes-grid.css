@@ -160,11 +160,32 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 2;
 }
 
 .card-price span:last-child {
   font-size: 0.7rem;
   line-height: 0.3rem;
+}
+
+.card-country {
+  position: absolute;
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+  bottom: 1.4rem;
+  right: -0.4rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-country svg {
+  height: 1rem;
+  z-index: 10;
 }
 
 @media (max-width: 960px) {

@@ -20,7 +20,7 @@ const chiliConCarne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 300, kw: true },
+        { ing: iMET.pork_ground, amount: 300, kw: true },
         { ing: iGRN.rice, amount: 200, kw: true },
         { ing: iJAR.canned_red_beans, amount: 120 },
         { ing: iJAR.canned_corn, amount: 340 },

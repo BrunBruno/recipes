@@ -21,7 +21,7 @@ const gulaszWolowy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_beef, amount: 500, kw: true },
+        { ing: iMET.beef_stew, amount: 500, kw: true },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },

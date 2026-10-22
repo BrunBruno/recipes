@@ -211,8 +211,8 @@ export const iSAU: Record<IngId, IngredientItem> = {
     name: "Majonez Kielecki",
     type: "sau",
     color: "#F2E3A0",
-    kcalPer100g: 702,
-    nutrientsPer100g: [78.0, 1.8, 1.1],
+    kcalPer100g: 631,
+    nutrientsPer100g: [68, 2.3, 1.9],
     unitWeights: {
       ml: 0.95,
       lzi: 4.8,
@@ -220,6 +220,7 @@ export const iSAU: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     price: 18,
+    verified: true,
   },
 
   garlic_sauce: {
@@ -393,13 +394,15 @@ export const iSAU: Record<IngId, IngredientItem> = {
     type: "sau",
     color: "#2C1D0C",
     kcalPer100g: 110,
-    nutrientsPer100g: [0.5, 25.0, 1.5],
+    nutrientsPer100g: [0, 24.0, 0],
     unitWeights: {
       ml: 1.2,
       lzi: 6,
       lz: 18,
-      opak: 500,
+      opak: 230,
     },
+    price: 30.4,
+    verified: true,
   },
 
   worcestershire_sauce: {

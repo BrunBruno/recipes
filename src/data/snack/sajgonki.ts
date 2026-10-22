@@ -24,7 +24,7 @@ const sajgonki: Recipe = {
       title: "Sajgonki",
       items: [
         { ing: iGRN.rice_paper, amount: 140, kw: true },
-        { ing: iMET.ground_pork_with_beef, amount: 350, kw: true },
+        { ing: iMET.pork_ground_with_beef, amount: 350, kw: true },
         { ing: iGRN.thin_rice_noodles, amount: 60 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },

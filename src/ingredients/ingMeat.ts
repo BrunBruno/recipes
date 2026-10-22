@@ -5,12 +5,12 @@ type IngId =
   | "egg"
   | "egg_yolk"
   | "egg_white"
-  | "quail_eggs"
-  | "duck_eggs"
-  | "guinea_fowl_eggs"
-  | "goose_eggs"
+  | "eggs_quail"
+  | "eggs_duck"
+  | "eggs_guinea_fowl"
+  | "eggs_goose"
 
-  //// POULTRY ////
+  //// CHICKEN ////
   | "chicken_breast"
   | "chicken_tenderloin"
   | "chicken_quarters"
@@ -18,30 +18,36 @@ type IngId =
   | "chicken_thigh"
   | "chicken_whole"
   | "chicken_soup_portion"
-  | "ground_chicken"
-  | "poultry_liver"
+  | "chicken_ground"
+  | "chicken_liver"
+
+  //// TURKEY ////
   | "turkey_breast"
   | "turkey_wing"
   | "turkey_neck"
   | "turkey_soup_portion"
 
-  //// MEAT ////
+  //// PORK ////
   | "pork_loin"
   | "pork_neck"
   | "pork_ham"
-  | "ground_pork"
-  | "stew_pork"
+  | "pork_ground"
+  | "pork_stew"
   | "pork_tenderloin"
   | "pork_ribs"
   | "pork_shoulder"
-  | "ground_pork_with_beef"
-  | "stew_beef"
-  | "ground_beef"
+  | "pork_ground_with_beef"
+
+  //// BEEF ////
+  | "beef_stew"
+  | "beef_ground"
   | "beef_steak"
-  | "sirloin_steak"
+  | "beef_sirloin_steak"
   | "beef_round"
   | "beef_shoulder"
   | "beef_shank"
+
+  //// MUTTON ////
   | "mutton"
 
   //// PROCESSED ////
@@ -172,7 +178,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     price: 7,
   },
 
-  ground_chicken: {
+  chicken_ground: {
     name: "Mięso mielone z kurczaka",
     type: "met",
     subType: "pou",
@@ -184,7 +190,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [8, 0, 17],
   },
 
-  poultry_liver: {
+  chicken_liver: {
     name: "Wątroba drobiowa",
     type: "met",
     subType: "pou",
@@ -331,7 +337,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [6, 1, 21],
   },
 
-  ground_pork: {
+  pork_ground: {
     name: "Mięso mielone wieprzowe",
     type: "met",
     color: "#E8A0A0",
@@ -343,7 +349,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     price: 24,
   },
 
-  stew_pork: {
+  pork_stew: {
     name: "Mięso wieprzowe na gulasz",
     type: "met",
     color: "#C96F6F",
@@ -388,7 +394,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [20, 0, 17],
   },
 
-  ground_pork_with_beef: {
+  pork_ground_with_beef: {
     name: "Mięso mielone wieprzowo-wołowe",
     type: "met",
     color: "#C38A8A",
@@ -403,7 +409,7 @@ export const iMET: Record<IngId, IngredientItem> = {
 
   //////////////////////////////
 
-  stew_beef: {
+  beef_stew: {
     name: "Mięso wołowe na gulasz",
     type: "met",
     color: "#8B3A3A",
@@ -415,7 +421,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     price: 54,
   },
 
-  ground_beef: {
+  beef_ground: {
     name: "Mięso mielone wołowe",
     type: "met",
     color: "#A94442",
@@ -440,7 +446,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     price: 70,
   },
 
-  sirloin_steak: {
+  beef_sirloin_steak: {
     name: "Stek rostbef",
     group: "steak",
     type: "met",
@@ -957,7 +963,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 0.7, 10.9],
   },
 
-  quail_eggs: {
+  eggs_quail: {
     name: "Jaja przepiórcze",
     type: "met",
     subType: "egg",
@@ -970,7 +976,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 0.4, 13],
   },
 
-  duck_eggs: {
+  eggs_duck: {
     name: "Jaja kacze",
     type: "met",
     subType: "egg",
@@ -983,7 +989,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [13.8, 0.8, 12.8],
   },
 
-  guinea_fowl_eggs: {
+  eggs_guinea_fowl: {
     name: "Jaja perlicze",
     type: "met",
     subType: "egg",
@@ -996,7 +1002,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [12, 0.5, 13],
   },
 
-  goose_eggs: {
+  eggs_goose: {
     name: "Jaja gęsie",
     type: "met",
     subType: "egg",

@@ -15,6 +15,13 @@ type IngId =
   | "coriander"
   | "rosemary"
   | "lovage"
+  | "caucasian_herbs"
+  | "fennel"
+  | "transylvanian_herbs"
+  | "thai_herbs"
+  | "dalmatian_herbs"
+  | "sage"
+  | "tarragon"
 
   //// FRESH ////
   | "chives"
@@ -43,6 +50,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [1.1, 7, 3.5],
+    price: 326,
   },
 
   thyme: {
@@ -82,6 +90,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [6, 50, 10],
+    price: 180,
   },
 
   wild_garlic: {
@@ -94,6 +103,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [0.7, 8, 2.4],
+    price: 296,
   },
 
   bay_leaf: {
@@ -119,7 +129,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [14.6, 50, 20],
-    price: 166,
+    price: 114,
   },
 
   savory: {
@@ -132,6 +142,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [5.9, 69, 6.7],
+    price: 228,
   },
 
   oregano: {
@@ -170,7 +181,7 @@ export const iHRB: Record<IngId, IngredientItem> = {
       lz: 3,
     },
     nutrientsPer100g: [18, 55, 12],
-    price: 330,
+    price: 134,
   },
 
   rosemary: {
@@ -193,6 +204,90 @@ export const iHRB: Record<IngId, IngredientItem> = {
     unitWeights: {
       lzi: 1,
     },
+  },
+
+  caucasian_herbs: {
+    name: "Zioła kaukaskie",
+    type: "hrb",
+    color: "#588157",
+    kcalPer100g: 265,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [8.5, 52.0, 9.5],
+    price: 180,
+  },
+
+  fennel: {
+    name: "Koper włoski",
+    type: "hrb",
+    color: "#8FA363",
+    kcalPer100g: 345,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [15.8, 52.3, 14.9],
+    price: 114,
+  },
+
+  transylvanian_herbs: {
+    name: "Zioła transylwańskie",
+    type: "hrb",
+    color: "#795548",
+    kcalPer100g: 260,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [8.0, 55.0, 10.0],
+    price: 152,
+  },
+
+  thai_herbs: {
+    name: "Zioła tajskie",
+    type: "hrb",
+    color: "#4CAF50",
+    kcalPer100g: 270,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [9.0, 50.0, 10.0],
+    price: 152,
+  },
+
+  sage: {
+    name: "Szałwia",
+    type: "hrb",
+    color: "#7CB342",
+    kcalPer100g: 315,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [10.6, 60.7, 12.8],
+    price: 253,
+  },
+
+  dalmatian_herbs: {
+    name: "Zioła dalmatyńskie",
+    type: "hrb",
+    color: "#689F38",
+    kcalPer100g: 260,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [8.0, 55.0, 10.0],
+    price: 253,
+  },
+
+  tarragon: {
+    name: "Estragon",
+    type: "hrb",
+    color: "#558B2F",
+    kcalPer100g: 295,
+    unitWeights: {
+      lzi: 1,
+    },
+    nutrientsPer100g: [22.8, 50.2, 7.2],
+    price: 289,
   },
 
   //// FRESH ////

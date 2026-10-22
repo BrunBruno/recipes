@@ -494,12 +494,13 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#FFFDFC",
-    kcalPer100g: 264,
+    kcalPer100g: 287,
     unitWeights: {
       kst: 200,
     },
-    nutrientsPer100g: [21, 4, 14],
+    nutrientsPer100g: [24, 0.2, 17.6],
     price: 54,
+    verified: true,
   },
 
   salad_cheese: {

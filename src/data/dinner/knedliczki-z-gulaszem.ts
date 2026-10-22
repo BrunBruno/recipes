@@ -24,7 +24,7 @@ const knedleCzeskieZGulaszem: Recipe = {
       title: "",
       items: [
         { ing: iGRN.steamed_dumplings, amount: 6, unit: "szt", kw: true },
-        { ing: iMET.stew_beef, amount: 500, kw: true },
+        { ing: iMET.beef_stew, amount: 500, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iHRB.bay_leaf, amount: 2, unit: "szt" },

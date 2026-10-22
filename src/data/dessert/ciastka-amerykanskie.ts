@@ -9,7 +9,7 @@ const portions = 18;
 const ciastkaAmerykanskie: Recipe = {
   name: "Ciastka Amerykańskie",
   type: "dessert",
-  images: [""],
+  images: ["ciastka-amerykanskie"],
   time: 40,
   portions: portions,
   taste: null,

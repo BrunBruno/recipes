@@ -25,7 +25,7 @@ const burgerDrwala: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_beef, amount: 400, kw: true },
+        { ing: iMET.beef_ground, amount: 400, kw: true },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
         { ing: iSPC.pepper_grains },
         { ing: iSPC.salt },

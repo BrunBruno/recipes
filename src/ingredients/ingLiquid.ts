@@ -32,6 +32,7 @@ type IngId =
   | "juice_lime"
   | "tymbark_apple_mint"
   | "tymbark_apple_peach"
+  | "juice_hortex_tropical"
 
   //// SODAS ////
   | "freeway_cola"
@@ -260,6 +261,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
     },
     nutrientsPer100g: [0, 3, 1],
+    price: 17.4,
   },
 
   soy_sauce: {
@@ -407,6 +409,20 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 10, 0],
     price: 2.4,
+  },
+
+  juice_hortex_tropical: {
+    name: "Hortex Owoce Tropikalne",
+    type: "liq",
+    color: "#FFCA70",
+    kcalPer100g: 48,
+    unitWeights: {
+      ml: 1,
+      szk: 250,
+      opak: 1000,
+    },
+    nutrientsPer100g: [0, 11, 0],
+    price: 3.5,
   },
 
   //// ////
@@ -560,7 +576,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
     name: "Zakwas na żur",
     type: "liq",
     color: "#D7CCC8",
-    kcalPer100g: 30,
+    kcalPer100g: 99,
     unitWeights: {
       ml: 1,
       l: 1000,
@@ -568,6 +584,8 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
       lzi: 5,
     },
-    nutrientsPer100g: [0.2, 6.0, 0.8],
+    nutrientsPer100g: [0.6, 22.4, 2.4],
+    price: 25.6,
+    verified: true,
   },
 };

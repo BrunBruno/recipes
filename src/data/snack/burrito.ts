@@ -22,7 +22,7 @@ const burrito: Recipe = {
     {
       title: "Farsz",
       items: [
-        { ing: iMET.ground_beef, amount: 250 },
+        { ing: iMET.beef_ground, amount: 250 },
         { ing: iGRN.rice, amount: 100 },
         { ing: iJAR.canned_red_beans, amount: 150 },
         { ing: iJAR.canned_corn, amount: 100 },

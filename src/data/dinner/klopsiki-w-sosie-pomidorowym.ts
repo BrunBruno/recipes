@@ -27,7 +27,7 @@ const klopsikiWSosiePomidorowym: Recipe = {
     {
       title: "Klopsiki",
       items: [
-        { ing: iMET.ground_pork, amount: 500, kw: true },
+        { ing: iMET.pork_ground, amount: 500, kw: true },
         { ing: iGRN.breadcrumbs, amount: 4, unit: "lz" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),
         { ing: iLIQ.water, amount: 300, unit: "ml" },

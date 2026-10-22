@@ -18,7 +18,7 @@ const watrobkaZKurczaka: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.poultry_liver, amount: 400, kw: true },
+        { ing: iMET.chicken_liver, amount: 400, kw: true },
         { ing: iVEG.onion, amount: 3, unit: "szt", kw: true },
         { ing: iGRN.flour, amount: 1, unit: "lz" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.6),

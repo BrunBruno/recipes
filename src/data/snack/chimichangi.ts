@@ -24,7 +24,7 @@ const chimichangi: Recipe = {
     {
       title: "Chimichangi",
       items: [
-        { ing: iMET.ground_beef, amount: 500, kw: true },
+        { ing: iMET.beef_ground, amount: 500, kw: true },
         { ing: iDIR.cheddar_cheese, amount: 250, kw: true },
         { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
         { ing: iJAR.pinto_beans, amount: 400 },

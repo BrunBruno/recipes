@@ -29,8 +29,8 @@ const spaghettiBolognese: Recipe = {
         {
           type: "choice",
           options: [
-            { ing: iMET.ground_pork, amount: 500, kw: true },
-            { ing: iMET.ground_beef, amount: 500, kw: true },
+            { ing: iMET.pork_ground, amount: 500, kw: true },
+            { ing: iMET.beef_ground, amount: 500, kw: true },
           ],
           selected: 0,
         },

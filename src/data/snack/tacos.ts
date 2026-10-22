@@ -22,7 +22,7 @@ const tacos: Recipe = {
     {
       title: "Farsz",
       items: [
-        { ing: iMET.ground_beef, amount: 500 },
+        { ing: iMET.beef_ground, amount: 500 },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
         { ing: iVEG.garlic, amount: 3, unit: "zbk" },
         { ing: iSPC.cinnamon },

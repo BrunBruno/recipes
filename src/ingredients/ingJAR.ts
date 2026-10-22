@@ -227,6 +227,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       lz: 10,
     },
     nutrientsPer100g: [44, 40, 6],
+    price: 68.3,
     verified: true,
   },
 
@@ -738,12 +739,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     type: "jar",
     subType: "fro",
     color: "#E5D2B8",
-    kcalPer100g: 210,
-    nutrientsPer100g: [7.5, 27, 6.5],
+    kcalPer100g: 177,
+    nutrientsPer100g: [5.2, 25.6, 5.9],
     unitWeights: {
       szt: 25,
     },
     price: 18.7,
+    verified: true,
   },
 
   pierogi_spinach: {

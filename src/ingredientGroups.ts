@@ -109,7 +109,7 @@ export const getIngredientGroup = (
         type: "choice",
         options: [
           { ing: iMET.beef_steak, amount: amount, replaceable: true },
-          { ing: iMET.sirloin_steak, amount: amount, replaceable: true },
+          { ing: iMET.beef_sirloin_steak, amount: amount, replaceable: true },
         ],
         selected: 0,
       };

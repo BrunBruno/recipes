@@ -24,7 +24,7 @@ const kotletyMieloneFix: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.ground_pork, amount: 500, kw: true },
+        { ing: iMET.pork_ground, amount: 500, kw: true },
         { ing: iGRN.breadcrumbs, amount: 20 },
         { ing: iLIQ.water, amount: 175, unit: "ml" },
         ...fryingFat(iFAT.oil, 80, "g", 0.5),

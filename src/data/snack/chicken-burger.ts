@@ -21,7 +21,7 @@ const chickenBurger: Recipe = {
     {
       title: "Mięso",
       items: [
-        { ing: iMET.ground_chicken, amount: 400, kw: true },
+        { ing: iMET.chicken_ground, amount: 400, kw: true },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iGRN.wheat_flour, amount: 2, unit: "lz" },
         { ing: iGRN.breadcrumbs, amount: 4, unit: "lz" },

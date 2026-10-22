@@ -23,6 +23,28 @@ type IngId =
   | "clove"
   | "juniper_berries"
   | "turmeric"
+  | "herbal_pepper"
+  | "star_anise"
+  | "saffron_threads"
+  | "sun_dried_tomatoes"
+  | "chili_flakes"
+  | "zaatar"
+  | "colorful_pepper"
+  | "orange_pepper"
+  | "black_seed"
+  | "cardamom"
+  | "ground_ginger"
+  | "fenugreek"
+  | "savory_chubritza"
+  | "ground_cloves"
+  | "harissa"
+  | "red_curry"
+  | "white_mustard_seeds"
+  | "anise_seeds"
+  | "chinese_five_spice"
+  | "minced_meat_seasoning"
+  | "golden_chicken_seasoning"
+  | "sumac"
 
   //// SEASONINGS ////
   | "vegetable_seasoning"
@@ -105,6 +127,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [0, 0, 0],
+    price: 4,
     verified: true,
   },
 
@@ -156,6 +179,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [17, 57, 12],
+    price: 165,
   },
 
   granulated_garlic: {
@@ -179,6 +203,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [1, 79, 10],
+    price: 124,
   },
 
   sweet_paprika: {
@@ -203,6 +228,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [13, 54, 14],
+    price: 104,
   },
 
   smoked_paprika: {
@@ -226,6 +252,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0.4, 9, 2],
+    price: 165,
   },
 
   curry: {
@@ -249,6 +276,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [1.2, 81, 4],
+    price: 207,
   },
 
   nutmeg: {
@@ -284,6 +312,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [22, 44, 18],
+    price: 165,
   },
 
   garam_masala: {
@@ -295,6 +324,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [13, 45, 12],
+    price: 124,
   },
 
   clove: {
@@ -306,6 +336,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.1,
     },
     nutrientsPer100g: [13, 31, 6],
+    price: 190,
   },
 
   juniper_berries: {
@@ -317,6 +348,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       ziar: 0.2,
     },
     nutrientsPer100g: [15, 34, 6],
+    price: 134,
   },
 
   turmeric: {
@@ -329,9 +361,275 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lz: 7,
       lzi: 3,
     },
+    price: 155,
+  },
+
+  herbal_pepper: {
+    name: "Pieprz ziołowy",
+    type: "spc",
+    color: "#795548",
+    kcalPer100g: 250,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [3.3, 45, 10],
+    price: 165,
+  },
+
+  star_anise: {
+    name: "Anyż gwiazdki",
+    type: "spc",
+    color: "#5D4037",
+    kcalPer100g: 337,
+    unitWeights: {
+      ziar: 0.3,
+      opak: 0.9,
+    },
+    nutrientsPer100g: [17.6, 50, 11.2],
+    price: 1735,
+  },
+
+  saffron_threads: {
+    name: "Szafran nitki",
+    type: "spc",
+    color: "#FF8F00",
+    kcalPer100g: 310,
+    unitWeights: {
+      lzi: 0.5,
+    },
+    nutrientsPer100g: [11.4, 65.4, 5.9],
+    price: 7190,
+  },
+
+  sun_dried_tomatoes: {
+    name: "Pomidory suszone",
+    type: "spc",
+    color: "#C62828",
+    kcalPer100g: 258,
+    unitWeights: {
+      lz: 5,
+    },
+    nutrientsPer100g: [14.1, 55.8, 3.0],
+    price: 165,
+  },
+
+  chili_flakes: {
+    name: "Chili w płatkach",
+    type: "spc",
+    color: "#D32F2F",
+    kcalPer100g: 318,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [12.0, 56.0, 17.0],
+    price: 285,
+  },
+
+  zaatar: {
+    name: "Zatar",
+    type: "spc",
+    color: "#8D6E63",
+    kcalPer100g: 330,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [12.0, 42.0, 18.0],
+    price: 207,
+  },
+
+  colorful_pepper: {
+    name: "Pieprz kolorowy",
+    type: "spc",
+    color: "#5C4033",
+    kcalPer100g: 251,
+    unitWeights: {
+      ziar: 0.2,
+    },
+    nutrientsPer100g: [3.3, 64.8, 10.4],
+    price: 142.5,
+  },
+
+  orange_pepper: {
+    name: "Pieprz pomarańczowy",
+    type: "spc",
+    color: "#D87093",
+    kcalPer100g: 251,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [3.3, 64.8, 10.4],
+    price: 120,
+  },
+
+  black_seed: {
+    name: "Czarnuszka",
+    type: "spc",
+    color: "#212121",
+    kcalPer100g: 345,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [16.0, 35.0, 22.0],
+    price: 114,
+  },
+
+  cardamom: {
+    name: "Kardamon",
+    type: "spc",
+    color: "#A3B18A",
+    kcalPer100g: 311,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [10.8, 68.5, 6.7],
+    price: 378,
+  },
+
+  ground_ginger: {
+    name: "Imbir mielony",
+    type: "spc",
+    color: "#D4A373",
+    kcalPer100g: 335,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [8.9, 71.6, 4.2],
+    price: 152,
+  },
+
+  fenugreek: {
+    name: "Kozieradka",
+    type: "spc",
+    color: "#C2A649",
+    kcalPer100g: 323,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [23.0, 58.0, 6.4],
+    price: 152,
+  },
+
+  savory_chubritza: {
+    name: "Czubryca",
+    type: "spc",
+    color: "#B08968",
+    kcalPer100g: 270,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [8.0, 50.0, 8.0],
+    price: 91.2,
+  },
+
+  ground_cloves: {
+    name: "Goździk mielony",
+    type: "spc",
+    color: "#6F4E37",
+    kcalPer100g: 274,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [13.0, 31.0, 6.0],
+    price: 152,
+  },
+
+  harissa: {
+    name: "Harissa",
+    type: "spc",
+    color: "#B71C1C",
+    kcalPer100g: 280,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [10.0, 40.0, 12.0],
+    price: 114,
+  },
+
+  red_curry: {
+    name: "Red curry",
+    type: "spc",
+    color: "#C63F17",
+    kcalPer100g: 320,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [12.0, 50.0, 12.0],
+    price: 99,
+  },
+
+  white_mustard_seeds: {
+    name: "Gorczyca biała cała",
+    type: "spc",
+    color: "#E9D8A6",
+    kcalPer100g: 508,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [26.0, 28.0, 36.0],
+    price: 82.7,
+  },
+
+  anise_seeds: {
+    name: "Anyż nasiona",
+    type: "spc",
+    color: "#7F5539",
+    kcalPer100g: 337,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [17.6, 50.0, 11.2],
+    price: 94,
+  },
+
+  chinese_five_spice: {
+    name: "Przyprawa chińska",
+    type: "spc",
+    color: "#B05D38",
+    kcalPer100g: 290,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [8.0, 55.0, 9.0],
+    price: 124,
+  },
+
+  sumac: {
+    name: "Sumak",
+    type: "spc",
+    color: "#6A040F",
+    kcalPer100g: 300,
+    unitWeights: {
+      lzi: 2,
+    },
+    nutrientsPer100g: [5.0, 60.0, 10.0],
+    price: 228,
   },
 
   //// SEASONINGS ////
+
+  minced_meat_seasoning: {
+    name: "Przyprawa do mielonego",
+    type: "spc",
+    color: "#C94B3F",
+    kcalPer100g: 250,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [5.0, 30.0, 10.0],
+    price: 124,
+  },
+
+  golden_chicken_seasoning: {
+    name: "Przyprawa złocisty kurczak",
+    type: "spc",
+    color: "#F4A261",
+    kcalPer100g: 260,
+    unitWeights: {
+      lzi: 3,
+    },
+    nutrientsPer100g: [10.0, 45.0, 8.0],
+    price: 99.2,
+  },
 
   vegetable_seasoning: {
     name: "Jarzynka",
@@ -342,6 +640,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [1, 40, 5],
+    price: 10,
   },
 
   potato_seasoning: {
@@ -354,6 +653,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 5,
     },
     nutrientsPer100g: [5, 45, 8],
+    price: 99,
   },
 
   meat_seasoning: {
@@ -365,6 +665,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [5, 30, 10],
+    price: 29,
   },
 
   gingerbread_seasoning: {
@@ -388,6 +689,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [8, 45, 8],
+    price: 124,
   },
 
   marinade_prymat: {
@@ -400,10 +702,11 @@ export const iSPC: Record<IngId, IngredientItem> = {
       lzi: 3,
     },
     nutrientsPer100g: [5, 55, 8],
+    price: 124,
   },
 
   goulash_seasoning: {
-    name: "Przyprawa do gulaszu Knorr",
+    name: "Przyprawa do gulaszu",
     type: "spc",
     color: "#A65F3F",
     kcalPer100g: 250,
@@ -411,6 +714,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 30,
     },
     nutrientsPer100g: [3, 45, 8],
+    price: 99.2,
   },
 
   fish_seasoning: {
@@ -422,6 +726,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       opak: 20,
     },
     nutrientsPer100g: [5.1, 26, 9.6],
+    price: 124,
     verified: true,
   },
 
@@ -448,6 +753,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
       kst: 10,
     },
     nutrientsPer100g: [2.5, 2.5, 2.5],
+    price: 41,
     verified: true,
   },
 
@@ -913,7 +1219,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
 
   winiary_chicken_creamy_herbs_fix: {
     name: "Fix Winiary kurczak śmietankowo-ziołowy",
-    type: "oth",
+    type: "spc",
     subType: "sah",
     color: "#E2D3B3",
     kcalPer100g: 370,

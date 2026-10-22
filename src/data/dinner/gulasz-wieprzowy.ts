@@ -23,7 +23,7 @@ const gulaszWieprzowy: Recipe = {
     {
       title: "",
       items: [
-        { ing: iMET.stew_pork, amount: 500, kw: true },
+        { ing: iMET.pork_stew, amount: 500, kw: true },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         {
           type: "choice",

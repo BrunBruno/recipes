@@ -82,6 +82,13 @@ function RecipesGrid({ filteredRecipes, setSelectedRecipe }: RecipesGridProps) {
                 {isPriceComplete(recipe) && <span>zł</span>}
               </div>
 
+              {/* <div
+                className="card-country"
+                style={{ backgroundColor: MealTypesData[recipe.type].color }}
+              >
+                {recipe.country && <CountryIcons code={recipe.country} />}
+              </div> */}
+
               <div
                 className="card-mark"
                 style={{ backgroundColor: MealTypesData[recipe.type].color }}

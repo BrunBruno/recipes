@@ -11,7 +11,7 @@ const salatkaGrecka: Recipe = {
   name: "Sałatka Grecka",
   type: "salad",
   country: "GRC",
-  images: [""],
+  images: ["salatka-grecka", "salatka-grecka-2"],
   time: 15,
   portions: portions,
   taste: null,
@@ -20,10 +20,7 @@ const salatkaGrecka: Recipe = {
     {
       title: "Warzywa i ser",
       items: [
-        { ing: iVEG.tomato, amount: 4, unit: "szt", kw: true },
-        { ing: iVEG.cucumber, amount: 1, unit: "szt", kw: true },
-        { ing: iVEG.red_onion, amount: 1, unit: "szt" },
-        { ing: iVEG.green_bell_pepper, amount: 1, unit: "szt" },
+        { ing: iDIR.feta, amount: 200, kw: true },
         {
           type: "choice",
           options: [
@@ -32,7 +29,10 @@ const salatkaGrecka: Recipe = {
           ],
           selected: 0,
         },
-        { ing: iDIR.feta, amount: 200, kw: true },
+        { ing: iVEG.tomato, amount: 3, unit: "szt" },
+        { ing: iVEG.cucumber, amount: 1, unit: "szt" },
+        { ing: iVEG.red_onion, amount: 1, unit: "szt" },
+        { ing: iVEG.green_bell_pepper, amount: 1, unit: "szt" },
       ],
     },
     {

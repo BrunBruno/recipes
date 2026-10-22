@@ -43,7 +43,7 @@ const zupaWonton: Recipe = {
       title: "Pierożki wonton",
       items: [
         { ing: iGRN.wonton_dough, amount: 30, unit: "szt" },
-        { ing: iMET.ground_pork, amount: 200 },
+        { ing: iMET.pork_ground, amount: 200 },
         { ing: iVEG.carrot, amount: 70 },
         { ing: iMET.egg, amount: 1, unit: "szt" },
         { ing: iVEG.ginger, amount: 0.25, unit: "szt" },
