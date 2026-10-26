@@ -11,10 +11,10 @@ const portions = 2;
 const kurczakChrupiacy: Recipe = {
   name: "Kurczak Chrupiący",
   type: "dinner",
-  images: ["kurczak-chrupiacy"],
+  images: ["kurczak-chrupiacy", "kurczak-chrupiacy-2", "kurczak-chrupiacy-3"],
   time: 30,
   portions: portions,
-  taste: 4,
+  taste: 3,
   difficulty: 2,
   ingredients: [
     {
@@ -36,7 +36,10 @@ const kurczakChrupiacy: Recipe = {
     },
   ],
   extrasMain: {
-    options: [dinnerSides("oven-fries", portions)],
+    options: [
+      dinnerSides("oven-twisted-fries", portions),
+      dinnerSides("oven-fries", portions),
+    ],
     selected: 0,
   },
   extrasVeg: {
