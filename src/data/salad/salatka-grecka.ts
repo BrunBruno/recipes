@@ -31,8 +31,8 @@ const salatkaGrecka: Recipe = {
         },
         { ing: iVEG.tomato, amount: 3, unit: "szt" },
         { ing: iVEG.cucumber, amount: 1, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 1, unit: "szt" },
-        { ing: iVEG.green_bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_bell_green, amount: 1, unit: "szt" },
       ],
     },
     {

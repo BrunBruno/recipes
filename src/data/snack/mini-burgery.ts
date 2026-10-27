@@ -32,7 +32,7 @@ const miniBurgery: Recipe = {
       items: [
         { ing: iBAK.mini_burger_bun, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas", kw: true },
-        { ing: iVEG.red_onion, amount: 0.25, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.25, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
       ],

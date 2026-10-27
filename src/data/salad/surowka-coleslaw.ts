@@ -19,7 +19,7 @@ const coleslaw: Recipe = {
       items: [
         { ing: iVEG.cabbage, amount: 500, unit: "g" },
         { ing: iVEG.carrot, amount: 1, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
       ],
     },
     {

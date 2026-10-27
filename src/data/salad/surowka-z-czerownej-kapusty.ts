@@ -17,9 +17,9 @@ const surowkaZCzerwonejKapusty: Recipe = {
     {
       title: "Surówka",
       items: [
-        { ing: iVEG.red_cabbage, amount: 600 },
+        { ing: iVEG.cabbage_red, amount: 600 },
         { ing: iFRT.apple, amount: 1, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
         { ing: iFAT.oil, amount: portions * 0.5, unit: "lz" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

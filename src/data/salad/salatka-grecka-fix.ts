@@ -20,10 +20,10 @@ const salatkaGrecka: Recipe = {
       title: "",
       items: [
         { ing: iVEG.lettuce, amount: 100 },
-        { ing: iVEG.cherry_tomato, amount: 250 },
+        { ing: iVEG.tomato_cherry, amount: 250 },
         { ing: iVEG.cucumber, amount: 1, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
-        { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
+        { ing: iVEG.pepper_bell, amount: 1, unit: "szt" },
         { ing: iDIR.feta, amount: 100 },
         { ing: iFRT.black_olives, amount: 50 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },

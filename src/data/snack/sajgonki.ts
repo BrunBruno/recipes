@@ -47,7 +47,7 @@ const sajgonki: Recipe = {
       items: [
         { ing: iLIQ.water, amount: 3, unit: "lz" },
         { ing: iOTH.sugar, amount: 3, unit: "lz" },
-        { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_chili, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
         { ing: iLIQ.lime_juice, amount: 3, unit: "lz" },
         { ing: iLIQ.soy_sauce, amount: 2, unit: "lz" },

@@ -26,7 +26,7 @@ type IngId =
   | "herbal_pepper"
   | "star_anise"
   | "saffron_threads"
-  | "sun_dried_tomatoes"
+  | "tomato_sun_dried"
   | "chili_flakes"
   | "zaatar"
   | "colorful_pepper"
@@ -401,7 +401,7 @@ export const iSPC: Record<IngId, IngredientItem> = {
     price: 7190,
   },
 
-  sun_dried_tomatoes: {
+  tomato_sun_dried: {
     name: "Pomidory suszone",
     type: "spc",
     color: "#C62828",

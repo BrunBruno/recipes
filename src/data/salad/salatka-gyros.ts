@@ -20,7 +20,7 @@ const salatkaGyros: Recipe = {
       title: "",
       items: [
         { ing: iMET.chicken_breast, amount: 400, kw: true },
-        { ing: iVEG.chinese_cabbage, amount: 300, kw: true },
+        { ing: iVEG.cabbage_chinese, amount: 300, kw: true },
         { ing: iJAR.pickled_cucumber_vinegar, amount: 200 },
         { ing: iJAR.canned_corn, amount: 150 },
         { ing: iDIR.yellow_cheese, amount: 100 },

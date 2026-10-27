@@ -62,10 +62,10 @@ const zupaWonton: Recipe = {
       title: "Do podania",
       items: [
         { ing: iMET.egg, amount: 3, unit: "szt" },
-        { ing: iVEG.pak_choy, amount: 3, unit: "szt" },
+        { ing: iVEG.cabbage_pak_choy, amount: 3, unit: "szt" },
         { ing: iHRB.chives, amount: 2, unit: "lz" },
         { ing: iHRB.coriander, amount: 2, unit: "lz" },
-        { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_chili, amount: 1, unit: "szt" },
       ],
     },
   ],

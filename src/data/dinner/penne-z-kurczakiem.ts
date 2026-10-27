@@ -24,7 +24,7 @@ const penneZKurczakiem: Recipe = {
         { ing: iMET.chicken_breast, amount: 360, kw: true },
         { ing: iGRN.penne_pasta, amount: 200, kw: true },
         { ing: iFAT.olive_oil, amount: 30, unit: "ml" },
-        { ing: iVEG.sun_dried_tomatoes, amount: 40 },
+        { ing: iVEG.tomato_sun_dried, amount: 40 },
         { ing: iDIR.cream_18, amount: 200 },
         { ing: iLIQ.water, amount: 200, unit: "ml" },
         { ing: iSPC.knorr_chicken_pasta_fix, amount: 1, unit: "opak" },

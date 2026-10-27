@@ -24,7 +24,7 @@ const szaszlyki: Recipe = {
         { ing: iVEG.mushrooms, amount: 100, kw: true },
         { ing: iVEG.zucchini, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.red_bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_bell_red, amount: 1, unit: "szt" },
       ],
     },
     {

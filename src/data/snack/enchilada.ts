@@ -69,12 +69,12 @@ const enchilada: Recipe = {
     {
       title: "Dodatki",
       items: [
-        { ing: iVEG.chili_pepper },
+        { ing: iVEG.pepper_chili },
         { ing: iHRB.fresh_coriander },
-        { ing: iVEG.cherry_tomato },
+        { ing: iVEG.tomato_cherry },
         { ing: iDIR.sour_cream },
         { ing: iFRT.avocado },
-        { ing: iVEG.red_onion },
+        { ing: iVEG.onion_red },
       ],
     },
   ],

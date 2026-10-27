@@ -17,7 +17,7 @@ type IngId =
   | "beets_shredded"
   | "beets_whole_vinegar"
   | "cooked_beets"
-  | "sun_dried_tomatoes_in_oil"
+  | "tomato_sun_dried_in_oil"
   | "sweet_sour_sauce"
   | "sechuan_chili_fusion"
   | "pickled_ginger"
@@ -73,7 +73,7 @@ type IngId =
   | "coleslaw"
   | "cucumber_salad"
   | "corn_salad"
-  | "red_cabbage";
+  | "cabbage_red";
 
 export const iJAR: Record<IngId, IngredientItem> = {
   //// PRESERVES ////
@@ -196,12 +196,14 @@ export const iJAR: Record<IngId, IngredientItem> = {
     group: "pickle",
     isVeg: true,
     color: "#558B2F",
-    kcalPer100g: 20,
+    kcalPer100g: 35,
     unitWeights: {
       szt: 15,
       opak: 400,
     },
-    nutrientsPer100g: [0.3, 3.5, 0.8],
+    nutrientsPer100g: [0.3, 5.5, 1.2],
+    price: 18.4,
+    verified: true,
   },
 
   sauerkraut: {
@@ -280,7 +282,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 10.0, 1.7],
   },
 
-  sun_dried_tomatoes_in_oil: {
+  tomato_sun_dried_in_oil: {
     name: "Suszone pomidory w zalewie",
     type: "jar",
     group: "dry-tomatoes",
@@ -445,11 +447,13 @@ export const iJAR: Record<IngId, IngredientItem> = {
     group: "tomato",
     isVeg: true,
     color: "#D84315",
-    kcalPer100g: 21,
+    kcalPer100g: 26,
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [0.2, 4.8, 1.1],
+    nutrientsPer100g: [0.2, 4, 1.3],
+    price: 7.5,
+    verified: true,
   },
 
   canned_corn: {
@@ -872,7 +876,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [5.1, 9.5, 1],
   },
 
-  red_cabbage: {
+  cabbage_red: {
     name: "Modra Kapusta",
     type: "jar",
     subType: "sal",

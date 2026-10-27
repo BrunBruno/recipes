@@ -53,7 +53,7 @@ const kottuRoti: Recipe = {
       items: [
         { ing: iMET.egg, amount: 2, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
+        { ing: iVEG.pepper_bell, amount: 0.5, unit: "szt" },
         { ing: iVEG.carrot, amount: 1, unit: "szt" },
         { ing: iVEG.cabbage, amount: 0.5, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
@@ -68,7 +68,7 @@ const kottuRoti: Recipe = {
       title: "Przyprawy i sosy",
       items: [
         { ing: iLIQ.soy_sauce, amount: 30, unit: "ml" },
-        { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_chili, amount: 1, unit: "szt" },
         { ing: iSPC.garam_masala, amount: 0.5, unit: "lzi" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

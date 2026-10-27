@@ -22,7 +22,7 @@ const penneBolognesePikantne: Recipe = {
         { ing: iGRN.penne_pasta, amount: 300, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.celery_root, amount: 100 },
-        { ing: iVEG.chili_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_chili, amount: 1, unit: "szt" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         { ing: iSPC.knorr_bolognese_chili_fix, amount: 1, unit: "opak" },

@@ -24,7 +24,7 @@ const pizzaZPinsy: Recipe = {
         { ing: iDIR.yellow_mozzarella, amount: 60, kw: true },
         { ing: iMET.chicken_ham, amount: 2, unit: "plas" },
         { ing: iVEG.arugula, amount: 30 },
-        { ing: iVEG.cherry_tomato, amount: 8, unit: "szt" },
+        { ing: iVEG.tomato_cherry, amount: 8, unit: "szt" },
         { ing: iDIR.hard_cheese, amount: 10 },
         { ing: iHRB.fresh_basil, amount: 5, unit: "lst" },
       ],

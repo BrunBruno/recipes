@@ -5,7 +5,7 @@ type IngId =
   | "snack_day_paprika"
   | "snack_day_cream"
   | "cheese_snacks"
-  | "lays_sweet_pepper"
+  | "lays_pepper_sweet"
   | "lays_green_onion"
   | "crunchips_sticks_ketchup"
   | "ready_popcorn"
@@ -69,7 +69,7 @@ export const iSNK: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  lays_sweet_pepper: {
+  lays_pepper_sweet: {
     name: "Lay's Słodka Papryka",
     type: "snk",
     subType: "bag",

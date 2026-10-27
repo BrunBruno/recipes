@@ -418,7 +418,7 @@ export const dinnerSides = (
       return {
         title: "Modra kapusta",
         sideName: name,
-        items: [{ ing: iJAR.red_cabbage, amount: portions * 180, kw: true }],
+        items: [{ ing: iJAR.cabbage_red, amount: portions * 180, kw: true }],
       };
   }
 };

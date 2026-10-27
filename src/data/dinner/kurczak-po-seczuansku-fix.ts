@@ -23,7 +23,7 @@ const kurczakPoSeczuansku: Recipe = {
       items: [
         { ing: iMET.chicken_breast, amount: 300 },
         { ing: iGRN.rice, amount: 200 },
-        { ing: iVEG.green_bell_pepper, amount: 150 },
+        { ing: iVEG.pepper_bell_green, amount: 150 },
         { ing: iHRB.lemongrass, amount: 10 },
         { ing: iFAT.oil, amount: 15, unit: "ml" },
         { ing: iLIQ.water, amount: 300, unit: "ml" },

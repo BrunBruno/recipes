@@ -3,43 +3,43 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// VEGETABLES ////
   | "potato"
-  | "young_potatoes"
-  | "sweet_potato"
+  | "potato_young"
+  | "potato_sweet"
   | "onion"
+  | "onion_red"
+  | "onion_shallot"
+  | "onion_flakes_dried"
+  | "garlic"
+  | "dried_garlic"
   | "tomato"
-  | "cherry_tomato"
-  | "strawberry_tomatoes"
+  | "tomato_cherry"
+  | "tomato_strawberry"
   | "tomato_roma"
   | "tomato_raspberry"
-  | "sun_dried_tomatoes"
+  | "tomato_sun_dried"
   | "cucumber"
-  | "ground_cucumber"
+  | "cucumber_ground"
   | "zucchini"
   | "eggplant"
-  | "bell_pepper"
-  | "sweet_pepper"
-  | "chili_pepper"
-  | "peperoni_pepper"
-  | "red_bell_pepper"
-  | "yellow_bell_pepper"
-  | "green_bell_pepper"
+  | "pepper_bell"
+  | "pepper_sweet"
+  | "pepper_chili"
+  | "pepper_peperoni"
+  | "pepper_bell_red"
+  | "pepper_bell_yellow"
+  | "pepper_bell_green"
   | "pepper_mix"
   | "carrot"
-  | "baby_carrot"
+  | "carrot_baby"
   | "parsley_root"
   | "leek"
   | "vegetable_soup_vegetables"
-  | "garlic"
-  | "dried_garlic"
   | "celery_root"
   | "celery_stalk"
   | "ginger"
-  | "red_onion"
-  | "shallot"
-  | "dried_onion_flakes"
   | "radish"
   | "radish_peeled"
-  | "daikon_oshinko"
+  | "radish_daikon_oshinko"
   | "beetroot"
   | "kohlrabi"
   | "turnip"
@@ -52,14 +52,15 @@ type IngId =
   | "lettuce_romaine"
   | "lettuce_iceberg"
   | "lettuce_butter"
+  | "lettuce_batavia"
   | "arugula"
   | "cabbage"
-  | "young_cabbage"
-  | "chinese_cabbage"
-  | "red_cabbage"
-  | "savoy_cabbage"
+  | "cabbage_young"
+  | "cabbage_chinese"
+  | "cabbage_red"
+  | "cabbage_savoy"
   | "brussels_sprouts"
-  | "pak_choy"
+  | "cabbage_pak_choy"
   | "cauliflower"
   | "broccoli"
   | "asparagus"
@@ -96,7 +97,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 3.6,
   },
 
-  young_potatoes: {
+  potato_young: {
     name: "Młode ziemniaki",
     type: "veg",
     subType: "pot",
@@ -108,7 +109,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 15.7, 1.8],
   },
 
-  sweet_potato: {
+  potato_sweet: {
     name: "Bataty",
     type: "veg",
     subType: "pot",
@@ -133,7 +134,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 5,
   },
 
-  red_onion: {
+  onion_red: {
     name: "Czerwona cebula",
     group: "onion",
     type: "veg",
@@ -148,7 +149,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 5,
   },
 
-  shallot: {
+  onion_shallot: {
     name: "Szalotka",
     group: "onion",
     type: "veg",
@@ -162,7 +163,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 16.8, 2.5],
   },
 
-  dried_onion_flakes: {
+  onion_flakes_dried: {
     name: "Suszone płatki cebuli",
     type: "veg",
     isVeg: true,
@@ -250,7 +251,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 3.5, 0.9],
   },
 
-  sun_dried_tomatoes: {
+  tomato_sun_dried: {
     name: "Suszone pomidory",
     type: "veg",
     group: "dry-tomatoes",
@@ -267,7 +268,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  cherry_tomato: {
+  tomato_cherry: {
     name: "Pomidorki koktajlowe",
     type: "veg",
     isVeg: true,
@@ -281,7 +282,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 40,
   },
 
-  strawberry_tomatoes: {
+  tomato_strawberry: {
     name: "Pomidorki truskawkowe",
     type: "veg",
     isVeg: true,
@@ -310,7 +311,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 7,
   },
 
-  ground_cucumber: {
+  cucumber_ground: {
     name: "Ogórek gruntowy",
     type: "veg",
     isVeg: true,
@@ -352,7 +353,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 9,
   },
 
-  bell_pepper: {
+  pepper_bell: {
     name: "Papryka",
     type: "veg",
     isVeg: true,
@@ -366,7 +367,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 13,
   },
 
-  sweet_pepper: {
+  pepper_sweet: {
     name: "Słodka Papryka",
     type: "veg",
     isVeg: true,
@@ -380,7 +381,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 20,
   },
 
-  red_bell_pepper: {
+  pepper_bell_red: {
     name: "Papryka czerwona",
     type: "veg",
     isVeg: true,
@@ -394,7 +395,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 13,
   },
 
-  yellow_bell_pepper: {
+  pepper_bell_yellow: {
     name: "Papryka żółta",
     type: "veg",
     isVeg: true,
@@ -407,7 +408,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     },
   },
 
-  green_bell_pepper: {
+  pepper_bell_green: {
     name: "Papryka zielona",
     type: "veg",
     isVeg: true,
@@ -434,7 +435,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 24,
   },
 
-  chili_pepper: {
+  pepper_chili: {
     name: "Papryczka chili",
     type: "veg",
     isVeg: true,
@@ -448,7 +449,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 59,
   },
 
-  peperoni_pepper: {
+  pepper_peperoni: {
     name: "Papryka peperoni",
     type: "veg",
     isVeg: true,
@@ -476,7 +477,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 5,
   },
 
-  baby_carrot: {
+  carrot_baby: {
     name: "Marchew mini",
     type: "veg",
     isVeg: true,
@@ -598,7 +599,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 16,
   },
 
-  daikon_oshinko: {
+  radish_daikon_oshinko: {
     name: "Rzodkiew Oshinko",
     type: "veg",
     isVeg: true,
@@ -743,6 +744,18 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 27.5,
   },
 
+  lettuce_batavia: {
+    name: "Sałata batawska",
+    type: "veg",
+    color: "#70E000",
+    kcalPer100g: 15,
+    nutrientsPer100g: [0.2, 2.9, 1.4],
+    unitWeights: {
+      szt: 250,
+    },
+    price: 24,
+  },
+
   arugula: {
     name: "Rukola",
     type: "veg",
@@ -768,7 +781,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     price: 3,
   },
 
-  young_cabbage: {
+  cabbage_young: {
     name: "Młoda kapusta",
     type: "veg",
     isVeg: true,
@@ -781,7 +794,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.1, 6.0, 1.3],
   },
 
-  chinese_cabbage: {
+  cabbage_chinese: {
     name: "Kapusta pekińska",
     type: "veg",
     isVeg: true,
@@ -794,7 +807,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 3.2, 1.2],
   },
 
-  red_cabbage: {
+  cabbage_red: {
     name: "Kapusta czerwona",
     type: "veg",
     isVeg: true,
@@ -807,7 +820,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 7.4, 1.4],
   },
 
-  savoy_cabbage: {
+  cabbage_savoy: {
     name: "Kapusta włoska",
     type: "veg",
     isVeg: true,
@@ -818,6 +831,17 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 800,
     },
     nutrientsPer100g: [0.1, 6, 2],
+  },
+
+  cabbage_pak_choy: {
+    name: "Pak Choy",
+    type: "veg",
+    isVeg: true,
+    subType: "gee",
+    color: "#72A85A",
+    unitWeights: { szt: 250 },
+    kcalPer100g: 13,
+    nutrientsPer100g: [0.2, 2.2, 1.5],
   },
 
   brussels_sprouts: {
@@ -831,17 +855,6 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.3, 9, 3.4],
-  },
-
-  pak_choy: {
-    name: "Pak Choy",
-    type: "veg",
-    isVeg: true,
-    subType: "gee",
-    color: "#72A85A",
-    unitWeights: { szt: 250 },
-    kcalPer100g: 13,
-    nutrientsPer100g: [0.2, 2.2, 1.5],
   },
 
   cauliflower: {

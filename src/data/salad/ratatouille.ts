@@ -19,8 +19,8 @@ const ratatouille: Recipe = {
       items: [
         { ing: iVEG.eggplant, amount: 1, unit: "szt", kw: true },
         { ing: iVEG.zucchini, amount: 1, unit: "szt", kw: true },
-        { ing: iVEG.red_bell_pepper, amount: 1, unit: "szt", kw: true },
-        { ing: iVEG.red_onion, amount: 1, unit: "szt", kw: true },
+        { ing: iVEG.pepper_bell_red, amount: 1, unit: "szt", kw: true },
+        { ing: iVEG.onion_red, amount: 1, unit: "szt", kw: true },
         { ing: iFAT.rapeseed_oil, amount: 30, unit: "ml" },
         { ing: iLIQ.water, amount: 200, unit: "ml" },
         { ing: iSPC.knorr_ratatouille_fix, amount: 1, unit: "opak" },

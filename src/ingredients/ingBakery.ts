@@ -22,6 +22,8 @@ type IngId =
   | "chicken_buns"
   | "hotdog_buns"
   | "french_hotdog_buns"
+  | "french_hotdog_white_bun"
+  | "french_hotdog_graham_bun"
   | "pinsa"
   | "puff_pastry"
   | "pita"
@@ -97,6 +99,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
     },
     kcalPer100g: 270,
     nutrientsPer100g: [2, 55, 9],
+    price: 6.3,
   },
 
   rye_bread: {
@@ -283,7 +286,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
   },
 
   french_hotdog_buns: {
-    name: "Bułki do hot dogów francuskich",
+    name: "Bułki do hot-dogów francuskich",
     type: "bak",
     color: "#D18F4F",
     kcalPer100g: 265,
@@ -294,6 +297,30 @@ export const iBAK: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [1.8, 50.8, 9.4],
     price: 21.6,
     verified: true,
+  },
+
+  french_hotdog_white_bun: {
+    name: "Bułki pszenne do hot-dogów francuskich",
+    type: "bak",
+    color: "#F4A261",
+    kcalPer100g: 285,
+    nutrientsPer100g: [3.5, 53.0, 9.0],
+    unitWeights: {
+      szt: 60,
+    },
+    price: 21.6,
+  },
+
+  french_hotdog_graham_bun: {
+    name: "Bułki grahamki do hot-dogów francuskich",
+    type: "bak",
+    color: "#A0522D",
+    kcalPer100g: 255,
+    nutrientsPer100g: [2.5, 47.0, 9.5],
+    unitWeights: {
+      szt: 60,
+    },
+    price: 21.6,
   },
 
   pinsa: {

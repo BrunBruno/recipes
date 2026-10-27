@@ -31,11 +31,11 @@ const kebabGemuse: Recipe = {
     {
       title: "Warzywa",
       items: [
-        { ing: iVEG.red_bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_bell_red, amount: 1, unit: "szt" },
         { ing: iVEG.zucchini, amount: 0.5, unit: "szt" },
         { ing: iVEG.carrot, amount: 1, unit: "szt" },
         { ing: iVEG.lettuce, amount: 2, unit: "lst" },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
         { ing: iDIR.feta, amount: 100, kw: true },
         { ing: iLIQ.lemon_juice, amount: 1, unit: "lzi" },
       ],

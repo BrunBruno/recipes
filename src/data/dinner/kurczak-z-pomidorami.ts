@@ -21,7 +21,7 @@ const kurczakZPomidorami: Recipe = {
       items: [
         { ing: iMET.chicken_breast, amount: 250, kw: true },
         { ing: iGRN.penne_pasta, amount: 200, kw: true },
-        { ing: iVEG.cherry_tomato, amount: 100, kw: true },
+        { ing: iVEG.tomato_cherry, amount: 100, kw: true },
         { ing: iDIR.cream_18, amount: 100, unit: "ml" },
         { ing: iLIQ.water, amount: 400, unit: "ml" },
         { ing: iDIR.yellow_cheese, amount: 50 },

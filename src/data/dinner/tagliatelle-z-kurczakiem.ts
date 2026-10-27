@@ -21,7 +21,7 @@ const tagliatelleZKurczakiem: Recipe = {
         { ing: iMET.chicken_breast, amount: 200, kw: true },
         { ing: iGRN.tagliatelle_pasta, amount: 250, kw: true },
         { ing: iVEG.onion, amount: 150 },
-        { ing: iVEG.cherry_tomato, amount: 100 },
+        { ing: iVEG.tomato_cherry, amount: 100 },
         { ing: iDIR.cream_18, amount: 100 },
         { ing: iLIQ.water, amount: 0.5, unit: "l" },
         { ing: iFAT.oil, amount: 2, unit: "lz" },

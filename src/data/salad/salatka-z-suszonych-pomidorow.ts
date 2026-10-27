@@ -24,7 +24,7 @@ const salatkaZSuszonychPomidorow: Recipe = {
         { ing: iMET.chicken_breast, amount: 500, kw: true },
         { ing: iGRN.bow_tie_pasta, amount: 250, kw: true },
         { ing: iJAR.canned_corn, amount: 0.75, unit: "opak" },
-        { ing: iJAR.sun_dried_tomatoes_in_oil, amount: 10, unit: "szt" },
+        { ing: iJAR.tomato_sun_dried_in_oil, amount: 10, unit: "szt" },
         { ing: iNUT.sunflower_seeds, amount: 6, unit: "lz" },
         { ing: iHRB.parsley, amount: 3, unit: "lzi" },
         { ing: iFAT.rapeseed_oil, amount: 2, unit: "lz" },

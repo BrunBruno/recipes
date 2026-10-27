@@ -28,7 +28,7 @@ const rosol: Recipe = {
         { ing: iVEG.celery_root, amount: 120, exclude: true },
         { ing: iVEG.onion, amount: 1, unit: "szt", exclude: true },
         { ing: iVEG.leek, amount: 1, unit: "szt", exclude: true },
-        { ing: iVEG.savoy_cabbage, amount: 80, exclude: true },
+        { ing: iVEG.cabbage_savoy, amount: 80, exclude: true },
         { ing: iHRB.parsley, amount: 10 },
         { ing: iHRB.bay_leaf, amount: 2, unit: "lst" },
         { ing: iSPC.allspice, amount: 3, unit: "ziar" },

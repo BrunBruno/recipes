@@ -42,7 +42,7 @@ const doubleBurger: Recipe = {
         { ing: iVEG.lettuce, amount: 2, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 0.25, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.25, unit: "szt" },
       ],
     },
     {

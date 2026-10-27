@@ -26,7 +26,7 @@ const sushiMaki: Recipe = {
         { ing: iGRN.sushi_rice, amount: 300, kw: true },
         { ing: iLIQ.water, amount: 360, unit: "ml" },
         { ing: iVEG.cucumber, amount: 100 },
-        { ing: iVEG.daikon_oshinko, amount: 100 },
+        { ing: iVEG.radish_daikon_oshinko, amount: 100 },
         { ing: iDIR.cream_cheese, amount: 50 },
         { ing: iLIQ.soy_sauce, amount: 30, unit: "ml" },
         { ing: iLIQ.rice_vinegar, amount: 4, unit: "lz" },

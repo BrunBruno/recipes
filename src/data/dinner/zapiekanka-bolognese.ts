@@ -30,7 +30,7 @@ const zapiekankaBolognese: Recipe = {
         { ing: iVEG.mushrooms, amount: 250 },
         { ing: iVEG.tomato, amount: 2, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
-        { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_bell, amount: 1, unit: "szt" },
         { ing: iJAR.tomato_paste, amount: 2, unit: "lzi" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
         { ing: iSPC.knorr_bolognese_fix, amount: 1, unit: "opak" },

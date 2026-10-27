@@ -40,7 +40,7 @@ const kajzerkiZWarzywami: Recipe = {
           options: [
             { ing: iVEG.cucumber, amount: 0.25, unit: "szt" },
             { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
-            { ing: iVEG.bell_pepper, amount: 0.25, unit: "szt" },
+            { ing: iVEG.pepper_bell, amount: 0.25, unit: "szt" },
             { ing: iVEG.radish, amount: 4, unit: "szt" },
             { ing: iHRB.cress, amount: 10 },
             { ing: iHRB.chives, amount: 10 },
@@ -51,7 +51,7 @@ const kajzerkiZWarzywami: Recipe = {
           options: [
             { ing: iVEG.cucumber, amount: 0.25, unit: "szt" },
             { ing: iVEG.tomato, amount: 0.5, unit: "szt" },
-            { ing: iVEG.bell_pepper, amount: 0.25, unit: "szt" },
+            { ing: iVEG.pepper_bell, amount: 0.25, unit: "szt" },
             { ing: iVEG.radish, amount: 4, unit: "szt" },
             { ing: iHRB.cress, amount: 10 },
             { ing: iHRB.chives, amount: 10 },

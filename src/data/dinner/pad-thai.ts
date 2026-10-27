@@ -31,7 +31,7 @@ const padThai: Recipe = {
           selected: 0,
         },
         { ing: iVEG.leek, amount: 100 },
-        { ing: iVEG.sweet_pepper, amount: 150 },
+        { ing: iVEG.pepper_sweet, amount: 150 },
         { ing: iVEG.ginger, amount: 5 },
         { ing: iFAT.oil, amount: 15, unit: "ml" },
         { ing: iLIQ.water, amount: 350, unit: "ml" },

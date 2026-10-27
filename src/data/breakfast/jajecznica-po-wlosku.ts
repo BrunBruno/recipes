@@ -22,7 +22,7 @@ const jajecznicaPoWlosku: Recipe = {
         { ing: iMET.egg, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.hard_cheese, amount: 20, kw: true },
         { ing: iVEG.spinach, amount: 50 },
-        { ing: iVEG.sun_dried_tomatoes, amount: 20 },
+        { ing: iVEG.tomato_sun_dried, amount: 20 },
         { ing: iFAT.clarified_butter, amount: 1, unit: "lzi" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

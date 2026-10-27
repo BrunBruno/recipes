@@ -118,8 +118,8 @@ export const getIngredientGroup = (
         type: "choice",
         options: [
           { ing: iVEG.onion, amount: amount, replaceable: true },
-          { ing: iVEG.red_onion, amount: amount, replaceable: true },
-          { ing: iVEG.shallot, amount: amount, replaceable: true },
+          { ing: iVEG.onion_red, amount: amount, replaceable: true },
+          { ing: iVEG.onion_shallot, amount: amount, replaceable: true },
         ],
         selected: 0,
       };
@@ -207,9 +207,9 @@ export const getIngredientGroup = (
       return {
         type: "choice",
         options: [
-          { ing: iVEG.sun_dried_tomatoes, amount: amount, replaceable: true },
+          { ing: iVEG.tomato_sun_dried, amount: amount, replaceable: true },
           {
-            ing: iJAR.sun_dried_tomatoes_in_oil,
+            ing: iJAR.tomato_sun_dried_in_oil,
             amount: amount,
             replaceable: true,
           },

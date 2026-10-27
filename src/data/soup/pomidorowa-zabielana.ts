@@ -11,7 +11,7 @@ const portions = 3;
 const pomidorowaZabielana: Recipe = {
   name: "Pomidorowa Zabielana",
   type: "soup",
-  images: ["pomidorowa-zabielana"],
+  images: ["pomidorowa-zabielana", "pomidorowa-zabielana-2"],
   time: 15,
   portions: portions,
   taste: 3,

@@ -23,12 +23,12 @@ const skladaki: Recipe = {
         { ing: iBAK.tortilla, amount: 4, unit: "szt", kw: true },
         { ing: iMET.salami, amount: 12, unit: "plas", kw: true },
         { ing: iDIR.yellow_cheese, amount: 0.5, unit: "kst", kw: true },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
         {
           type: "choice",
           options: [
-            { ing: iVEG.bell_pepper, amount: 0.5, unit: "szt" },
-            { ing: iVEG.sweet_pepper, amount: 0.5, unit: "szt" },
+            { ing: iVEG.pepper_bell, amount: 0.5, unit: "szt" },
+            { ing: iVEG.pepper_sweet, amount: 0.5, unit: "szt" },
           ],
           selected: 0,
         },

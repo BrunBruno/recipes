@@ -28,7 +28,7 @@ const kurczakPoChinsku: Recipe = {
         { ing: iMET.chicken_breast, amount: 400, kw: true },
         { ing: iGRN.rice, amount: portions * 100, kw: true },
         { ing: iVEG.carrot, amount: 120 },
-        { ing: iVEG.bell_pepper, amount: 100 },
+        { ing: iVEG.pepper_bell, amount: 100 },
         { ing: iVEG.leek, amount: 120 },
         { ing: iLIQ.water, amount: 250, unit: "ml" },
         ...fryingFat(iFAT.oil, 2, "lz", 0.3),

@@ -57,8 +57,8 @@ const kebab: Recipe = {
       title: "Dodatki",
       items: [
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
-        { ing: iVEG.chinese_cabbage, amount: 0.25, unit: "szt" },
-        { ing: iVEG.red_cabbage, amount: 0.25, unit: "szt" },
+        { ing: iVEG.cabbage_chinese, amount: 0.25, unit: "szt" },
+        { ing: iVEG.cabbage_red, amount: 0.25, unit: "szt" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
       ],
     },

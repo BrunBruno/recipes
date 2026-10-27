@@ -26,7 +26,7 @@ const chimichangi: Recipe = {
       items: [
         { ing: iMET.beef_ground, amount: 500, kw: true },
         { ing: iDIR.cheddar_cheese, amount: 250, kw: true },
-        { ing: iVEG.red_onion, amount: 0.5, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.5, unit: "szt" },
         { ing: iJAR.pinto_beans, amount: 400 },
         { ing: iBAK.tortilla, amount: 6, unit: "szt", kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lz" },
@@ -44,7 +44,7 @@ const chimichangi: Recipe = {
       items: [
         { ing: iFRT.avocado, amount: 2, unit: "szt" },
         { ing: iFRT.lime, amount: 1, unit: "szt" },
-        { ing: iVEG.red_onion, amount: 0.25, unit: "szt" },
+        { ing: iVEG.onion_red, amount: 0.25, unit: "szt" },
         { ing: iSPC.chilli },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },

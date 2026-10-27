@@ -3,7 +3,9 @@ import type { IngredientItem } from "../types";
 type IngId =
   //// FRUITS ////
   | "apple"
-  | "green_apple"
+  | "apple_green"
+  | "apple_champion"
+  | "apple_jonagold"
   | "pear"
   | "rocha_pear"
   | "fig"
@@ -71,9 +73,8 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 14, 0.4],
     price: 5,
   },
-  // Jonagold 5
 
-  green_apple: {
+  apple_green: {
     name: "Zielone jabłko",
     type: "frt",
     group: "apple",
@@ -85,6 +86,34 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 180,
     },
     nutrientsPer100g: [0.2, 13.8, 0.3],
+  },
+
+  apple_champion: {
+    name: "Jabłko Szampion",
+    type: "frt",
+    group: "apple",
+    isVeg: true,
+    color: "#E63946",
+    kcalPer100g: 52,
+    nutrientsPer100g: [0.2, 13.8, 0.3],
+    unitWeights: {
+      szt: 180,
+    },
+    price: 6,
+  },
+
+  apple_jonagold: {
+    name: "Jabłko Jonagold",
+    type: "frt",
+    group: "apple",
+    isVeg: true,
+    color: "#D62828",
+    kcalPer100g: 52,
+    nutrientsPer100g: [0.2, 13.8, 0.4],
+    unitWeights: {
+      szt: 180,
+    },
+    price: 5,
   },
 
   pear: {

@@ -19,7 +19,7 @@ const salatkaWloska: Recipe = {
     {
       title: "",
       items: [
-        { ing: iVEG.cherry_tomato, amount: 250 },
+        { ing: iVEG.tomato_cherry, amount: 250 },
         { ing: iDIR.mozzarella, amount: 125 },
         { ing: iHRB.fresh_basil, amount: 15 },
         { ing: iFAT.oil, amount: 3, unit: "lz" },

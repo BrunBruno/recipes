@@ -22,7 +22,7 @@ const chlopskiGarnek: Recipe = {
         { ing: iMET.sausage, amount: 350, kw: true },
         { ing: iVEG.potato, amount: 450, kw: true },
         { ing: iVEG.cabbage, amount: 200, kw: true },
-        { ing: iVEG.bell_pepper, amount: 1, unit: "szt" },
+        { ing: iVEG.pepper_bell, amount: 1, unit: "szt" },
         ...fryingFat(iFAT.oil, 3, "lz", 0.7),
         { ing: iLIQ.water, amount: 400, unit: "ml" },
         { ing: iSPC.winiary_peasant_stew_fix, amount: 1, unit: "opak" },
