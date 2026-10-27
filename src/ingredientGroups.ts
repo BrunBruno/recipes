@@ -162,7 +162,7 @@ export const getIngredientGroup = (
         type: "choice",
         options: [
           { ing: iFRT.apple, amount: amount, replaceable: true },
-          { ing: iFRT.green_apple, amount: amount, replaceable: true },
+          { ing: iFRT.apple_green, amount: amount, replaceable: true },
         ],
         selected: 0,
       };
