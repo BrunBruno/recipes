@@ -291,8 +291,8 @@ export const iBAK: Record<IngId, IngredientItem> = {
     color: "#D18F4F",
     kcalPer100g: 265,
     unitWeights: {
-      szt: 85,
-      opak: 340,
+      opak: 240,
+      szt: 60,
     },
     nutrientsPer100g: [1.8, 50.8, 9.4],
     price: 21.6,
@@ -303,24 +303,28 @@ export const iBAK: Record<IngId, IngredientItem> = {
     name: "Bułki pszenne do hot-dogów francuskich",
     type: "bak",
     color: "#F4A261",
-    kcalPer100g: 285,
-    nutrientsPer100g: [3.5, 53.0, 9.0],
+    kcalPer100g: 265,
+    nutrientsPer100g: [1.8, 50.8, 9.4],
     unitWeights: {
+      opak: 240,
       szt: 60,
     },
     price: 21.6,
+    verified: true,
   },
 
   french_hotdog_graham_bun: {
     name: "Bułki grahamki do hot-dogów francuskich",
     type: "bak",
     color: "#A0522D",
-    kcalPer100g: 255,
-    nutrientsPer100g: [2.5, 47.0, 9.5],
+    kcalPer100g: 244,
+    nutrientsPer100g: [2.1, 44.6, 8.9],
     unitWeights: {
+      opak: 240,
       szt: 60,
     },
     price: 21.6,
+    verified: true,
   },
 
   pinsa: {
@@ -429,7 +433,7 @@ export const iBAK: Record<IngId, IngredientItem> = {
   },
 
   garlic_baguette: {
-    name: "Bagietka z masłem czosnkowym",
+    name: "Bagietka czosnkowa",
     type: "bak",
     subType: "snk",
     color: "#E6C28B",

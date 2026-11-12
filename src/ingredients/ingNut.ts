@@ -14,6 +14,7 @@ type IngId =
   //// SEEDS ////
   | "cocoa"
   | "coffee"
+  | "inka_coffee"
   | "sunflower_seeds"
   | "pumpkin_seeds"
   | "black_sesame"
@@ -72,6 +73,7 @@ export const iNUT: Record<IngId, IngredientItem> = {
       opak: 200,
     },
     nutrientsPer100g: [61, 17, 15],
+    price: 14,
   },
 
   cashews: {
@@ -146,6 +148,22 @@ export const iNUT: Record<IngId, IngredientItem> = {
       lz: 5,
     },
     nutrientsPer100g: [0, 0.5, 0.1],
+  },
+
+  inka_coffee: {
+    name: "Kawa Inka",
+    type: "nut",
+    subType: "ben",
+    color: "#A9825A",
+    kcalPer100g: 360,
+    unitWeights: {
+      lzi: 2,
+      lz: 5,
+      szk: 200,
+    },
+    nutrientsPer100g: [0.2, 79, 4.8],
+    price: 49.9,
+    verified: true,
   },
 
   sunflower_seeds: {

@@ -10,11 +10,11 @@ const portions = 4;
 const gofry: Recipe = {
   name: "Gofry",
   type: "dessert",
-  images: [""],
+  images: ["gofry", "gofry-2"],
   time: 25,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

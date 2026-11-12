@@ -27,6 +27,7 @@ type IngId =
   | "dinner_salad_jar"
   | "pickled_pepper"
   | "pickled_mushrooms"
+  | "pickled_pattypan"
 
   //// JAMS ////
   | "jam_strawberry"
@@ -68,6 +69,7 @@ type IngId =
   | "frozen_uszka"
   | "frozen_won_ton"
   | "onion_rings"
+  | "pelmeni_frozen"
 
   //// SALADS ////
   | "coleslaw"
@@ -318,6 +320,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [0, 18, 1],
+    price: 26.2,
   },
 
   pickled_ginger: {
@@ -395,6 +398,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 300,
     },
     nutrientsPer100g: [0.5, 2.5, 2.2],
+  },
+
+  pickled_pattypan: {
+    name: "Patisony konserwowe",
+    type: "jar",
+    color: "#DCE8A5",
+    kcalPer100g: 25,
+    unitWeights: {
+      opak: 500,
+    },
+    nutrientsPer100g: [0.2, 4.5, 1],
+    price: 21,
   },
 
   //// JAMS ////
@@ -836,6 +851,19 @@ export const iJAR: Record<IngId, IngredientItem> = {
     kcalPer100g: 320,
     unitWeights: { szt: 15 },
     nutrientsPer100g: [16, 38, 5],
+  },
+
+  pelmeni_frozen: {
+    name: "Pielmieni",
+    type: "jar",
+    subType: "fro",
+    color: "#E8D5BD",
+    kcalPer100g: 250,
+    unitWeights: {
+      opak: 450,
+    },
+    nutrientsPer100g: [10, 30, 10],
+    price: 23.2,
   },
 
   //// SALADS ////

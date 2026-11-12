@@ -9,6 +9,9 @@ type IngId =
   | "pear"
   | "rocha_pear"
   | "fig"
+  | "white_pomelo"
+  | "japanese_quince"
+  | "quince"
   | "pineapple"
   | "kiwi"
   | "passion_fruit"
@@ -23,6 +26,9 @@ type IngId =
   | "papaya"
   | "melon"
   | "watermelon"
+  | "honeydew_melon"
+  | "green_melon"
+  | "cantaloupe_melon"
   | "pomegranate"
   | "persimmon"
   | "banana"
@@ -32,6 +38,8 @@ type IngId =
   | "orange"
   | "mandarin"
   | "grapefruit"
+  | "green_grapefruit"
+  | "red_grapefruit"
   | "durian"
   | "lychee"
   | "grapes_red"
@@ -157,6 +165,48 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 50,
     },
     nutrientsPer100g: [0.3, 19, 0.8],
+  },
+
+  japanese_quince: {
+    name: "Pigwowiec japoński",
+    type: "frt",
+    isVeg: true,
+    subType: "per",
+    color: "#E7C65A",
+    kcalPer100g: 57,
+    unitWeights: {
+      szt: 100,
+    },
+    nutrientsPer100g: [0.1, 15.3, 0.4],
+    price: 13,
+  },
+
+  white_pomelo: {
+    name: "Pomelo białe",
+    type: "frt",
+    isVeg: true,
+    subType: "per",
+    color: "#F2E8C9",
+    kcalPer100g: 38,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [0, 9.6, 0.8],
+    price: 10,
+  },
+
+  quince: {
+    name: "Pigwa",
+    type: "frt",
+    isVeg: true,
+    subType: "per",
+    color: "#DCC66B",
+    kcalPer100g: 57,
+    unitWeights: {
+      szt: 250,
+    },
+    nutrientsPer100g: [0.1, 15.3, 0.4],
+    price: 20,
   },
 
   pineapple: {
@@ -363,6 +413,48 @@ export const iFRT: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [0.2, 8, 0.6],
   },
 
+  honeydew_melon: {
+    name: "Melon miodowy",
+    type: "frt",
+    isVeg: true,
+    subType: "mel",
+    color: "#E5E6A0",
+    kcalPer100g: 36,
+    unitWeights: {
+      szt: 1500,
+    },
+    nutrientsPer100g: [0.1, 9.1, 0.5],
+    price: 10,
+  },
+
+  green_melon: {
+    name: "Melon zielony",
+    type: "frt",
+    isVeg: true,
+    subType: "mel",
+    color: "#A8C878",
+    kcalPer100g: 34,
+    unitWeights: {
+      szt: 1200,
+    },
+    nutrientsPer100g: [0.2, 8, 0.8],
+    price: 11,
+  },
+
+  cantaloupe_melon: {
+    name: "Melon kantalupa",
+    type: "frt",
+    isVeg: true,
+    subType: "mel",
+    color: "#F3A66B",
+    kcalPer100g: 34,
+    unitWeights: {
+      szt: 1000,
+    },
+    nutrientsPer100g: [0.2, 8.2, 0.8],
+    price: 16,
+  },
+
   pomegranate: {
     name: "Granat",
     type: "frt",
@@ -483,6 +575,33 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [0.1, 11, 0.8],
+  },
+
+  green_grapefruit: {
+    name: "Grejpfrut zielony",
+    type: "frt",
+    isVeg: true,
+    color: "#B8C878",
+    kcalPer100g: 42,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0.1, 10.7, 0.8],
+    price: 11,
+  },
+
+  red_grapefruit: {
+    name: "Grejpfrut czerwony",
+    type: "frt",
+    isVeg: true,
+    subType: "ora",
+    color: "#E98983",
+    kcalPer100g: 42,
+    unitWeights: {
+      szt: 300,
+    },
+    nutrientsPer100g: [0.1, 10.7, 0.8],
+    price: 9,
   },
 
   durian: {
@@ -628,6 +747,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
     color: "#4A235A",
     kcalPer100g: 43,
     nutrientsPer100g: [0.5, 10, 1.4],
+    price: 80,
   },
 
   blueberry: {
@@ -667,6 +787,7 @@ export const iFRT: Record<IngId, IngredientItem> = {
       szk: 100,
     },
     nutrientsPer100g: [0.1, 12, 0.4],
+    price: 48,
   },
 
   blackcurrant: {

@@ -358,6 +358,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       szk: 120,
     },
     nutrientsPer100g: [30, 3, 2],
+    price: 28.6,
   },
 
   //// ChEESE ////

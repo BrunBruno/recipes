@@ -8,7 +8,7 @@ const pierogiGotowane: Recipe = {
   name: "Pierogi Gotowane",
   type: "dinner",
   country: "POL",
-  images: ["pierogi-gotowane"],
+  images: ["pierogi-gotowane", "pierogi-gotowane-2"],
   time: 10,
   portions: portions,
   taste: 5,

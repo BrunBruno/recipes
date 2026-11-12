@@ -12,6 +12,7 @@ type IngId =
   | "mustard_bbq"
   | "mustard_sun"
   | "mustard_dijon"
+  | "table_mustard"
   | "kremser_mustard"
   | "mayonnaise"
   | "winiary_mayonnaise"
@@ -164,6 +165,20 @@ export const iSAU: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [11, 8.4, 7.7],
     price: 17,
     verified: true,
+  },
+
+  table_mustard: {
+    name: "Musztarda stołowa",
+    type: "sau",
+    color: "#D9B84A",
+    kcalPer100g: 140,
+    unitWeights: {
+      lzi: 5,
+      lz: 15,
+      opak: 200,
+    },
+    nutrientsPer100g: [7, 8, 6],
+    price: 14.2,
   },
 
   kremser_mustard: {

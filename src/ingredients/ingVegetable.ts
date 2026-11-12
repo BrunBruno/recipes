@@ -16,6 +16,7 @@ type IngId =
   | "tomato_strawberry"
   | "tomato_roma"
   | "tomato_raspberry"
+  | "tomato_small"
   | "tomato_sun_dried"
   | "cucumber"
   | "cucumber_ground"
@@ -117,6 +118,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     kcalPer100g: 86,
     unitWeights: { szt: 250 },
     nutrientsPer100g: [0.1, 20, 1.6],
+    price: 8,
   },
 
   onion: {
@@ -235,6 +237,21 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 180,
     },
     nutrientsPer100g: [0.2, 3.9, 0.9],
+  },
+
+  tomato_small: {
+    name: "Pomidor drobny",
+    type: "veg",
+    isVeg: true,
+    subType: "tom",
+    color: "#E74C3C",
+    kcalPer100g: 18,
+    unitWeights: {
+      szt: 15,
+      opak: 250,
+    },
+    nutrientsPer100g: [0.2, 3.9, 0.9],
+    price: 8,
   },
 
   tomato_roma: {
@@ -498,6 +515,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       szt: 100,
     },
     nutrientsPer100g: [0.6, 6.3, 3.3],
+    price: 7,
   },
 
   leek: {
@@ -855,6 +873,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [0.3, 9, 3.4],
+    price: 13,
   },
 
   cauliflower: {

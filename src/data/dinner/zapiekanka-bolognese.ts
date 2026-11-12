@@ -15,6 +15,7 @@ const zapiekankaBolognese: Recipe = {
     "zapiekanka-bolognese",
     "zapiekanka-bolognese-2",
     "zapiekanka-bolognese-3",
+    "zapiekanka-bolognese-4",
   ],
   time: 70,
   portions: 4,

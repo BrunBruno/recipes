@@ -8,7 +8,7 @@ const frenchHotDog: Recipe = {
   name: "Hot Dog Francuski",
   type: "snack",
   country: "POL",
-  images: ["hot-dog-francuski", "hot-dog-francuski-2"],
+  images: ["hot-dog-francuski", "hot-dog-francuski-2", "hot-dog-francuski-3"],
   time: 10,
   portions: 1,
   taste: 4,

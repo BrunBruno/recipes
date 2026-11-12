@@ -14,8 +14,8 @@ const salatkaGrecka: Recipe = {
   images: ["salatka-grecka", "salatka-grecka-2"],
   time: 15,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 2,
+  difficulty: 1,
   ingredients: [
     {
       title: "Warzywa i ser",

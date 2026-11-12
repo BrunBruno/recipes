@@ -10,18 +10,18 @@ const surowkaZMarchewki: Recipe = {
   name: "Surówka z Marchewki",
   type: "salad",
   country: "POL",
-  images: [""],
+  images: ["surowka-z-marchewki"],
   time: 15,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "Surówka",
       items: [
         { ing: iVEG.carrot, amount: 4, unit: "szt" },
-        { ing: iFRT.lemon, amount: 0.5, unit: "szt" },
         { ing: iFRT.apple, amount: 1, unit: "szt" },
+        { ing: iFRT.lemon, amount: 0.5, unit: "szt", exclude: true },
         { ing: iOTH.sugar, amount: 1, unit: "lz" },
         { ing: iSPC.black_pepper },
       ],

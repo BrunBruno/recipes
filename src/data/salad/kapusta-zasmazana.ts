@@ -11,11 +11,11 @@ import type { Recipe } from "../../types";
 const kapustaZasmazana: Recipe = {
   name: "Kapusta Zasmażana",
   type: "salad",
-  images: [""],
+  images: ["kapusta-zasmazana"],
   time: 80,
   portions: 10,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

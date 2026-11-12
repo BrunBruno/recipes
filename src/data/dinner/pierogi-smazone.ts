@@ -10,8 +10,8 @@ const pierogiSmazone: Recipe = {
   images: ["pierogi-smazone"],
   time: 15,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

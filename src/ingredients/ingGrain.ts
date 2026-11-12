@@ -220,6 +220,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 400,
     },
     nutrientsPer100g: [1.4, 62, 10],
+    price: 8,
     verified: true,
   },
 
@@ -363,6 +364,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [2, 72, 12],
+    price: 16,
   },
 
   bow_tie_pasta: {
@@ -547,6 +549,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.2, 30, 3],
+    price: 11,
     verified: true,
   },
 
@@ -555,11 +558,13 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     subType: "bun",
     color: "#F0E0B0",
-    kcalPer100g: 160,
+    kcalPer100g: 119,
     unitWeights: {
       szt: 30,
     },
-    nutrientsPer100g: [0.5, 36, 4],
+    nutrientsPer100g: [0.7, 30, 2],
+    price: 9.3,
+    verified: true,
   },
 
   steamed_dumplings: {

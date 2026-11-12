@@ -12,8 +12,8 @@ const ciastkaAmerykanskie: Recipe = {
   images: ["ciastka-amerykanskie"],
   time: 40,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "",

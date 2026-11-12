@@ -37,11 +37,13 @@ export const iFSH: Record<IngId, IngredientItem> = {
     name: "Mintaj",
     type: "fsh",
     color: "#ECEFF1",
-    kcalPer100g: 90,
+    kcalPer100g: 68,
     unitWeights: {
       szt: 250,
     },
-    nutrientsPer100g: [0.5, 1, 19],
+    nutrientsPer100g: [0.8, 0, 15.1],
+    price: 54.9,
+    verified: true,
   },
 
   hake: {
@@ -302,6 +304,7 @@ export const iFSH: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1, 1, 18],
+    price: 32,
   },
 
   shrimp: {

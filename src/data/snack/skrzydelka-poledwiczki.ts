@@ -8,7 +8,11 @@ const portions = 2;
 const gotoweSkrzydelkaPoledwiczki: Recipe = {
   name: "Polędwiczki z Kurczaka",
   type: "snack",
-  images: ["gotowe-skrzydelka-poledwiczki", "gotowe-skrzydelka-poledwiczki-2"],
+  images: [
+    "gotowe-skrzydelka-poledwiczki",
+    "gotowe-skrzydelka-poledwiczki-2",
+    "gotowe-skrzydelka-poledwiczki-3",
+  ],
   time: 25,
   portions: portions,
   taste: 4,

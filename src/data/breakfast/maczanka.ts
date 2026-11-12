@@ -6,7 +6,7 @@ import type { Recipe } from "../../types";
 const maczanka: Recipe = {
   name: "Maczanka",
   type: "breakfast",
-  images: ["maczanka"],
+  images: ["maczanka", "maczanka-2"],
   time: 15,
   portions: 1,
   taste: 4,

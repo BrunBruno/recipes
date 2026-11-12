@@ -11,7 +11,7 @@ const leczo: Recipe = {
   name: "Leczo",
   type: "dinner",
   country: "HUN",
-  images: ["leczo"],
+  images: ["leczo", "leczo-2"],
   time: 45,
   portions: portions,
   taste: 3,

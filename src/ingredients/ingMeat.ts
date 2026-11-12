@@ -84,6 +84,7 @@ type IngId =
   | "spicy_tenderloins"
   | "spicy_wings"
   | "chicken_nuggets"
+  | "rotisserie_chicken"
   | "burger_patties";
 
 export const iMET: Record<IngId, IngredientItem> = {
@@ -295,6 +296,19 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [12, 18, 14],
     price: 32,
+    verified: true,
+  },
+
+  rotisserie_chicken: {
+    name: "Kurczak z rożna",
+    type: "met",
+    subType: "pou",
+    color: "#8F411C",
+    kcalPer100g: 167,
+    unitWeights: {
+      kst: 1000,
+    },
+    nutrientsPer100g: [7.2, 0, 25],
     verified: true,
   },
 
@@ -794,6 +808,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 100,
     },
     nutrientsPer100g: [38, 1, 24],
+    price: 133,
   },
 
   sausages: {

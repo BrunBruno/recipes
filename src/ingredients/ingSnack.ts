@@ -232,7 +232,9 @@ export const iSNK: Record<IngId, IngredientItem> = {
       lz: 15,
       szk: 300,
     },
-    nutrientsPer100g: [31, 57, 6],
+    nutrientsPer100g: [30.9, 57.5, 6.3],
+    price: 36.8,
+    verified: true,
   },
 
   chocolate_shavings: {
