@@ -12,7 +12,7 @@ const gulaszWolowy: Recipe = {
   name: "Gulasz Wołowy",
   type: "dinner",
   country: "HUN",
-  images: ["gulasz-wolowy"],
+  images: ["gulasz-wolowy", "gulasz-wolowy-2"],
   time: 60,
   portions: portions,
   taste: 5,

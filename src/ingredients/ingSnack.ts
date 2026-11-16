@@ -33,6 +33,7 @@ type IngId =
   | "vanilla_halva"
   | "mini_croissant"
   | "stroopwafel"
+  | "tea_biscuits"
 
   //// ICE-CREAM ////
   | "cone_strawberry"
@@ -411,6 +412,19 @@ export const iSNK: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [21.0, 63.0, 3.5],
     verified: true,
+  },
+
+  tea_biscuits: {
+    name: "Herbatniki",
+    type: "snk",
+    subType: "bis",
+    color: "#D7B48A",
+    kcalPer100g: 435,
+    nutrientsPer100g: [11, 75, 7.5],
+    unitWeights: {
+      szt: 5,
+      opak: 100,
+    },
   },
 
   //// ICE-CREAM ////

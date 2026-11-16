@@ -860,6 +860,7 @@ export const iVEG: Record<IngId, IngredientItem> = {
     unitWeights: { szt: 250 },
     kcalPer100g: 13,
     nutrientsPer100g: [0.2, 2.2, 1.5],
+    price: 8,
   },
 
   brussels_sprouts: {

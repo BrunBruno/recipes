@@ -433,11 +433,13 @@ export const iGRN: Record<IngId, IngredientItem> = {
     name: "Makaron jajeczny",
     type: "grn",
     color: "#E5C158",
-    kcalPer100g: 380,
-    nutrientsPer100g: [4.5, 70.0, 13.0],
+    kcalPer100g: 354,
+    nutrientsPer100g: [3, 67, 13],
     unitWeights: {
       opak: 250,
     },
+    price: 24,
+    verified: true,
   },
 
   //// PROCESSED ////

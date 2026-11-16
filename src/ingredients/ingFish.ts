@@ -29,7 +29,8 @@ type IngId =
   | "shrimp"
   | "surimi"
   | "frozen_squid"
-  | "frozen_octopus";
+  | "frozen_octopus"
+  | "frozen_seafood_mix";
 
 export const iFSH: Record<IngId, IngredientItem> = {
   //////////////////////////////
@@ -295,16 +296,17 @@ export const iFSH: Record<IngId, IngredientItem> = {
   //// SEAFOOD ////
 
   squid_frozen_ready: {
-    name: "Krążki kalmarowe",
+    name: "Panierowane krążki kalmarowe",
     type: "fsh",
     subType: "sea",
     color: "#E09A66",
-    kcalPer100g: 92,
+    kcalPer100g: 225,
     unitWeights: {
       opak: 500,
     },
-    nutrientsPer100g: [1, 1, 18],
+    nutrientsPer100g: [9.7, 28, 5.8],
     price: 32,
+    verified: true,
   },
 
   shrimp: {
@@ -342,11 +344,10 @@ export const iFSH: Record<IngId, IngredientItem> = {
     type: "fsh",
     subType: "sea",
     color: "#E8D8CC",
-    kcalPer100g: 92,
-    unitWeights: {
-      opak: 500,
-    },
-    nutrientsPer100g: [1.4, 3.1, 15.6],
+    kcalPer100g: 45,
+    nutrientsPer100g: [0.6, 0.1, 9.9],
+    price: 57.3,
+    verified: true,
   },
 
   frozen_octopus: {
@@ -360,5 +361,16 @@ export const iFSH: Record<IngId, IngredientItem> = {
       szt: 300,
     },
     nutrientsPer100g: [1.4, 2, 15],
+  },
+
+  frozen_seafood_mix: {
+    name: "Mrożone owoce morza",
+    type: "fsh",
+    subType: "sea",
+    color: "#E0C4BC",
+    kcalPer100g: 85,
+    nutrientsPer100g: [1.6, 2, 16],
+    price: 62.5,
+    verified: true,
   },
 };

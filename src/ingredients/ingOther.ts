@@ -19,6 +19,7 @@ type IngId =
   | "gelatin_bloom_220"
   | "vanilla_flavor"
   | "vanilla_pudding"
+  | "chocolate_pudding"
   | "powdered_borscht"
   | "powdered_zurek"
   | "strawberry_kissel"
@@ -258,6 +259,17 @@ export const iOTH: Record<IngId, IngredientItem> = {
       opak: 40,
     },
     nutrientsPer100g: [1, 80, 0],
+  },
+
+  chocolate_pudding: {
+    name: "Budyń czekoladowy",
+    type: "oth",
+    color: "#5D4037",
+    kcalPer100g: 350,
+    nutrientsPer100g: [2.2, 78, 3.8],
+    unitWeights: {
+      opak: 40,
+    },
   },
 
   strawberry_kissel: {

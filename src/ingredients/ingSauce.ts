@@ -394,14 +394,16 @@ export const iSAU: Record<IngId, IngredientItem> = {
     name: "Sos rybny",
     type: "sau",
     color: "#7A3B1E",
-    kcalPer100g: 50,
-    nutrientsPer100g: [0.0, 3.5, 9.0],
+    kcalPer100g: 36,
+    nutrientsPer100g: [0, 2.9, 6],
     unitWeights: {
-      ml: 1.2,
-      lzi: 6,
-      lz: 18,
-      opak: 500,
+      ml: 0.8,
+      lzi: 4,
+      lz: 12,
+      opak: 360,
     },
+    price: 38.6,
+    verified: true,
   },
 
   oyster_sauce: {

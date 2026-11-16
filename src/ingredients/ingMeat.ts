@@ -432,7 +432,7 @@ export const iMET: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [15, 0, 21],
-    price: 54,
+    price: 55,
   },
 
   beef_ground: {
@@ -498,6 +498,7 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
     kcalPer100g: 190,
     nutrientsPer100g: [12, 0, 20],
+    price: 45,
   },
 
   //////////////////////////////

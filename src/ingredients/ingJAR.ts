@@ -19,6 +19,7 @@ type IngId =
   | "cooked_beets"
   | "tomato_sun_dried_in_oil"
   | "sweet_sour_sauce"
+  | "sweet_spicy_sauce"
   | "sechuan_chili_fusion"
   | "pickled_ginger"
   | "kanpyo"
@@ -42,6 +43,7 @@ type IngId =
   | "pinto_beans"
   | "canned_peach"
   | "canned_pineapple"
+  | "bean_sprouts"
 
   //// FROZEN ////
   | "frozen_fries"
@@ -64,6 +66,7 @@ type IngId =
   | "pierogi_ruskie"
   | "pierogi_spinach"
   | "pierogi_cheese"
+  | "pierogi_strawberry"
   | "meat_croquettes"
   | "tortellini_meat"
   | "frozen_uszka"
@@ -311,16 +314,30 @@ export const iJAR: Record<IngId, IngredientItem> = {
     nutrientsPer100g: [2, 24, 1],
   },
 
+  sweet_spicy_sauce: {
+    name: "Sos słodko-pikantny",
+    type: "jar",
+    color: "#E64A19",
+    kcalPer100g: 70,
+    unitWeights: {
+      opak: 250,
+    },
+    nutrientsPer100g: [0.1, 16, 0.9],
+    price: 16.5,
+    verified: true,
+  },
+
   sechuan_chili_fusion: {
     name: "Seczuański chili fusion",
     type: "jar",
     color: "#D32F2F",
-    kcalPer100g: 71,
+    kcalPer100g: 82,
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [0, 18, 1],
-    price: 26.2,
+    nutrientsPer100g: [4.1, 9.7, 0.9],
+    price: 19.5,
+    verified: true,
   },
 
   pickled_ginger: {
@@ -550,6 +567,21 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [0, 15, 0.4],
     price: 22.9,
+    verified: true,
+  },
+
+  bean_sprouts: {
+    name: "Kiełki fasoli mung",
+    type: "hrb",
+    isVeg: true,
+    subType: "spr",
+    color: "#F4F5EE",
+    kcalPer100g: 30,
+    nutrientsPer100g: [0, 3, 1],
+    unitWeights: {
+      opak: 200,
+    },
+    price: 30.7,
     verified: true,
   },
 
@@ -791,6 +823,18 @@ export const iJAR: Record<IngId, IngredientItem> = {
     },
   },
 
+  pierogi_strawberry: {
+    name: "Pierogi z truskawkami",
+    type: "jar",
+    subType: "fro",
+    color: "#E57373",
+    kcalPer100g: 183,
+    nutrientsPer100g: [0.2, 38, 4.5],
+    unitWeights: {
+      szt: 25,
+    },
+    verified: true,
+  },
   meat_croquettes: {
     name: "Krokiety z mięsem",
     type: "jar",

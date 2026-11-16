@@ -1,6 +1,7 @@
 import { iFAT } from "../../ingredients/ingFat";
 import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
+import { iJAR } from "../../ingredients/ingJar";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
 import { iSAU } from "../../ingredients/ingSauce";
@@ -13,36 +14,36 @@ const mineFrite: Recipe = {
   name: "Mine Frite",
   type: "dinner",
   country: "MUS",
-  images: [""],
+  images: ["mine-frite", "mine-frite-2"],
   time: 35,
   portions: portions,
-  taste: null,
-  difficulty: null,
+  taste: 4,
+  difficulty: 2,
   ingredients: [
     {
       title: "Makaron i mięso",
       items: [
-        { ing: iGRN.egg_noodles, amount: 400, kw: true },
-        { ing: iMET.chicken_breast, amount: 400, kw: true },
-        { ing: iMET.egg, amount: 3, unit: "szt" },
+        { ing: iGRN.egg_noodles, amount: 250, kw: true },
+        { ing: iMET.chicken_breast, amount: 200, kw: true },
+        { ing: iMET.egg, amount: 4, unit: "szt" },
         { ing: iFAT.oil, amount: 3, unit: "lz" },
       ],
     },
     {
       title: "Warzywa",
       items: [
-        { ing: iVEG.cabbage, amount: 150 },
-        { ing: iVEG.carrot, amount: 2, unit: "szt" },
+        { ing: iVEG.cabbage, amount: 300 },
+        { ing: iVEG.carrot, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 4, unit: "zbk" },
-        { ing: iHRB.chives, amount: 50 },
-        { ing: iHRB.bean_sprouts, amount: 100 },
+        { ing: iJAR.bean_sprouts, amount: 50 },
+        { ing: iHRB.chives, amount: 20 },
       ],
     },
     {
       title: "Sosy i przyprawy",
       items: [
         { ing: iLIQ.soy_sauce, amount: 3, unit: "lz" },
-        { ing: iSAU.oyster_sauce, amount: 2, unit: "lz" },
+        { ing: iSAU.oyster_sauce, amount: 3, unit: "lz" },
         { ing: iSAU.fish_sauce, amount: 1, unit: "lz" },
         { ing: iSPC.black_pepper },
         { ing: iSPC.salt },
@@ -75,7 +76,7 @@ const mineFrite: Recipe = {
       ],
     },
   ],
-  keyWords: ["makaron", "kurczak", "jajka", "warzywa", "smażone", "sos"],
+  keyWords: ["makaron", "kurczak", "jajka", "smażone", "sos"],
 };
 
 export default mineFrite;
