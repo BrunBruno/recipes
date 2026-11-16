@@ -1,7 +1,7 @@
 import os
 
 # Ścieżka do folderu z miniaturkami
-folder_path = os.path.join("public", "tmb")
+folder_path = os.path.join("../public", "tmb")
 suffix_to_remove = "-removebg-preview"
 
 # Sprawdzenie, czy folder w ogóle istnieje
