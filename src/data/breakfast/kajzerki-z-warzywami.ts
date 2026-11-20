@@ -19,7 +19,7 @@ const kajzerkiZWarzywami: Recipe = {
       title: "Podstawa",
       items: [
         {
-          ing: iBAK.kaiser_roll,
+          ing: iBAK.roll_kaiser,
           amount: 2,
           unit: "szt",
           replaceable: true,

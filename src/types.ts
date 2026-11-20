@@ -21,6 +21,7 @@ export type IngredientType =
   | "nut" // nuts
   | "grn" // grains
   | "bak" // bakery
+  | "dls" // delicatessen
   | "sau" // sauces
   | "jar" // preserves / frozen
   | "liq" // liquids

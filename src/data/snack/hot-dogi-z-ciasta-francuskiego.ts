@@ -18,7 +18,7 @@ const hotdogiZCiastaFrancuskiego: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.puff_pastry, amount: 1, unit: "szt", kw: true },
+        { ing: iBAK.pastry_puff, amount: 1, unit: "szt", kw: true },
         { ing: iMET.sausages, amount: 6, unit: "szt", kw: true },
         { ing: iDIR.yellow_cheese, amount: 6, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 1, unit: "szt" },

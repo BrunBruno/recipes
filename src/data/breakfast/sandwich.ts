@@ -23,7 +23,7 @@ const sandwich: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.toast_bread, amount: 4, unit: "krom", kw: true },
+        { ing: iBAK.bread_toast, amount: 4, unit: "krom", kw: true },
         {
           type: "choice",
           options: [

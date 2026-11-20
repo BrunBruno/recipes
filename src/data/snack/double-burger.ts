@@ -37,7 +37,7 @@ const doubleBurger: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.hamburger_buns, amount: 2, unit: "szt", kw: true },
+        { ing: iBAK.bun_burger, amount: 2, unit: "szt", kw: true },
         { ing: iDIR.cheddar_cheese, amount: 2, unit: "plas", kw: true },
         { ing: iVEG.lettuce, amount: 2, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },

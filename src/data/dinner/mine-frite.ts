@@ -14,7 +14,7 @@ const mineFrite: Recipe = {
   name: "Mine Frite",
   type: "dinner",
   country: "MUS",
-  images: ["mine-frite", "mine-frite-2"],
+  images: ["mine-frite", "mine-frite-2", "mine-frite-3"],
   time: 35,
   portions: portions,
   taste: 4,

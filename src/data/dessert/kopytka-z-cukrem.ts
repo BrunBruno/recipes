@@ -1,5 +1,5 @@
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iOTH } from "../../ingredients/ingOther";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
@@ -17,7 +17,7 @@ const kopytkaZCukrem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.kopytka, amount: 500 },
+        { ing: iDLS.dumplings_kopytka, amount: 500 },
         { ing: iOTH.sugar, amount: 8, unit: "lzi" },
         { ing: iFAT.butter, amount: 2, unit: "lzi" },
         { ing: iSPC.salt },

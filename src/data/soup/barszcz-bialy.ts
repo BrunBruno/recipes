@@ -34,7 +34,7 @@ const barszczBialy: Recipe = {
     {
       title: "Do podania",
       items: [
-        { ing: iBAK.wheat_bread, amount: 4, unit: "krom" },
+        { ing: iBAK.bread_wheat, amount: 4, unit: "krom" },
         { ing: iMET.egg, amount: 4, unit: "szt" },
         { ing: iHRB.parsley },
       ],

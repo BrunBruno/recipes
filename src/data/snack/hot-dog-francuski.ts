@@ -18,7 +18,7 @@ const frenchHotDog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 2, unit: "szt", kw: true },
-        { ing: iBAK.french_hotdog_buns, amount: 2, unit: "szt", kw: true },
+        { ing: iBAK.bun_french_hotdog, amount: 2, unit: "szt", kw: true },
         {
           type: "placeholder",
           text: "Wariant pierwszy",

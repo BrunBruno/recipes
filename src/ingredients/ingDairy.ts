@@ -96,7 +96,9 @@ export const iDIR: Record<IngId, IngredientItem> = {
     unitWeights: {
       opak: 400,
     },
-    nutrientsPer100g: [7.5, 11, 5.5],
+    nutrientsPer100g: [7.5, 9.4, 6.5],
+    price: 11.9,
+    verified: true,
   },
 
   skim_milk: {
@@ -657,6 +659,7 @@ export const iDIR: Record<IngId, IngredientItem> = {
       plas: 20,
     },
     nutrientsPer100g: [33, 1.3, 25],
+    price: 36,
   },
 
   parmigiano_reggiano: {

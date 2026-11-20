@@ -1,3 +1,4 @@
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iJAR } from "../../ingredients/ingJar";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iOTH } from "../../ingredients/ingOther";
@@ -35,8 +36,8 @@ const barszczCzerwony: Recipe = {
           type: "choice",
           options: [
             { ing: iOTH.none },
-            { ing: iJAR.frozen_uszka, amount: 400 },
-            { ing: iJAR.tortellini_meat, amount: 400 },
+            { ing: iDLS.dumplings_uszka, amount: 400 },
+            { ing: iDLS.tortellini_meat, amount: 400 },
             { ing: iJAR.cooked_beets, amount: 200 },
           ],
           selected: 0,
@@ -44,8 +45,8 @@ const barszczCzerwony: Recipe = {
         {
           type: "placeholder",
           options: [
-            { ing: iJAR.frozen_uszka, amount: 400 },
-            { ing: iJAR.tortellini_meat, amount: 400 },
+            { ing: iDLS.dumplings_uszka, amount: 400 },
+            { ing: iDLS.tortellini_meat, amount: 400 },
             { ing: iJAR.cooked_beets, amount: 200 },
           ],
         },

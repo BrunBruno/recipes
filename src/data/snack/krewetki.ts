@@ -19,7 +19,7 @@ const krewetki: Recipe = {
       title: "",
       items: [
         { ing: iFSH.shrimp, amount: 500 },
-        { ing: iBAK.garlic_baguette, amount: 2, unit: "szt" },
+        { ing: iBAK.baguette_garlic, amount: 2, unit: "szt" },
         { ing: iFAT.butter, amount: 30 },
         { ing: iVEG.garlic, amount: 3, unit: "zbk" },
         { ing: iHRB.parsley },

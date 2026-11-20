@@ -11,7 +11,7 @@ const portions = 6;
 const kapustaZGrzybami: Recipe = {
   name: "Kapusta z Grzybami",
   type: "salad",
-  images: [""],
+  images: ["kapusta-z-grzybami", "kapusta-z-grzybami-2"],
   time: 90,
   portions: portions,
   taste: null,

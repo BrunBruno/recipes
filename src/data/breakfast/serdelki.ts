@@ -18,7 +18,7 @@ const serdelki: Recipe = {
       items: [
         { ing: iMET.serdelki, amount: 6, unit: "szt", kw: true },
         {
-          ing: iBAK.kaiser_roll,
+          ing: iBAK.roll_kaiser,
           amount: 2,
           unit: "szt",
           replaceable: true,

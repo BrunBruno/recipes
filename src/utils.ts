@@ -95,6 +95,7 @@ export const IngredientTypeData: Record<IngredientType, DictRecord> = {
   jar: { label: "Przetwory", color: "#A61E4D" },
   liq: { label: "Ciecze", color: "#1098AD" },
   snk: { label: "Przekąski", color: "#FAB005" },
+  dls: { label: "Garmażeria", color: "#E64980" },
   oth: { label: "Inne", color: "#868E96" },
 };
 
@@ -487,50 +488,6 @@ export const calculateRecipeWeight = (recipe: Recipe) => {
   return Math.round(totalGrams);
 };
 
-// export const keywordAliases: Record<KeyWord, string[]> = {
-//   // MEAT
-//   mięso: ["mięso", "mięsny", "mięsne"],
-//   wołowina: ["wołowina", "wołowy"],
-//   wieprzowina: ["wieprzowina", "wieprzowy"],
-//   kurczak: ["kurczak", "drobiowy", "drób"],
-//   indyk: ["indyk"],
-//   kiełbasa: ["kiełbasa", "kiełbasy"],
-//   boczek: ["boczek", "bekon"],
-//   parówka: ["parówka", "parówki", "parówkowy"],
-//   szynka: ["szynka", "wędlina"],
-//   ryba: ["ryba", "ryby"],
-//   jajko: ["jajko", "jajka", "jajo", "jaja"],
-
-//   // CAKES
-//   ciasto: ["ciasto"],
-//   deser: ["deser"],
-//   biszkopt: ["biszkopt"],
-//   krem: ["krem"],
-
-//   // MAIN
-//   makaron: ["makaron"],
-//   ryż: ["ryż", "ryz", "ryżem"],
-//   kasza: ["kasza"],
-//   ziemniak: ["ziemniak", "ziemniaki", "ziemniaczane"],
-
-//   // BAKERY
-//   pieczywo: ["pieczywo"],
-//   naleśnik: ["naleśnik"],
-//   tortilla: ["tortilla", "tortilli"],
-
-//   // VEG
-//   owoce: ["owoc", "owoce", "owocowy"],
-//   warzywa: ["warzywo", "warzywa"],
-//   sałatka: ["sałatka"],
-//   grzyb: ["grzyb", "grzyby", "grzybowa"],
-
-//   // OTHER
-//   ser: ["ser", "serowy"],
-//   sos: ["sos", "sosem"],
-//   zupa: ["zupa", "zupy", "zupę"],
-//   fix: ["fix"],
-// };
-
 export const countIngredientUsage = (recipes: Recipe[]) => {
   const usage: Record<string, number> = {};
 
@@ -598,6 +555,7 @@ export const countIngredientTypes = () => {
     hrb: 0,
     spc: 0,
     snk: 0,
+    dls: 0,
     oth: 0,
   };
 
@@ -952,6 +910,7 @@ export function countIngredientUsageByType(
     hrb: 0,
     spc: 0,
     snk: 0,
+    dls: 0,
     oth: 0,
   };
 

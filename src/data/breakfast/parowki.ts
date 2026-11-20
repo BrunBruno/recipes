@@ -18,7 +18,7 @@ const parowki: Recipe = {
       items: [
         { ing: iMET.sausages, amount: 3, unit: "szt", kw: true },
         {
-          ing: iBAK.kaiser_roll,
+          ing: iBAK.roll_kaiser,
           amount: 2,
           unit: "szt",
           replaceable: true,

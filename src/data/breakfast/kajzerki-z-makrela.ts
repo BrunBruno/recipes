@@ -16,7 +16,7 @@ const kajzerkiZMakrela: Recipe = {
       title: "",
       items: [
         {
-          ing: iBAK.kaiser_roll,
+          ing: iBAK.roll_kaiser,
           amount: 2,
           unit: "szt",
           replaceable: true,

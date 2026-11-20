@@ -31,7 +31,7 @@ const burgerDomowy: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.multigrain_kaiser_roll, amount: 4, unit: "szt", kw: true },
+        { ing: iBAK.roll_kaiser_multigrain, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.cheddar_cheese, amount: 4, unit: "plas" },
         { ing: iVEG.lettuce, amount: 4, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },

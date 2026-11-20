@@ -16,7 +16,7 @@ const zawinieteTosty: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.toast_bread, amount: 8, unit: "krom", kw: true },
+        { ing: iBAK.bread_toast, amount: 8, unit: "krom", kw: true },
         { ing: iMET.bacon_slices, amount: 8, unit: "plas", kw: true },
         { ing: iDIR.yellow_cheese, amount: 8, unit: "plas" },
         { ing: iSAU.mayonnaise, amount: 1, unit: "lzi" },

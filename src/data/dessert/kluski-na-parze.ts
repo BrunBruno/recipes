@@ -1,5 +1,5 @@
 import { iDIR } from "../../ingredients/ingDairy";
-import { iGRN } from "../../ingredients/ingGrain";
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import type { Recipe } from "../../types";
 
 const kluskiNaParze: Recipe = {
@@ -14,7 +14,7 @@ const kluskiNaParze: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.steamed_dumplings, amount: 400 },
+        { ing: iDLS.dumplings_steamed, amount: 400 },
         { ing: iDIR.strawberry_yogurt, amount: 300 },
       ],
     },

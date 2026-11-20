@@ -32,7 +32,7 @@ const zupaCzosnkowa: Recipe = {
     {
       title: "Grzanki",
       items: [
-        { ing: iBAK.wheat_bread, amount: 4, unit: "krom" },
+        { ing: iBAK.bread_wheat, amount: 4, unit: "krom" },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
         { ing: iVEG.garlic, amount: 1, unit: "zbk" },
       ],

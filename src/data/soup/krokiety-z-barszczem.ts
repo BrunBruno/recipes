@@ -1,4 +1,4 @@
-import { iJAR } from "../../ingredients/ingJar";
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
@@ -18,7 +18,7 @@ const krokietyZBarszczem: Recipe = {
       title: "",
       items: [
         {
-          ing: iJAR.meat_croquettes,
+          ing: iDLS.croquettes_meat,
           amount: portions * 2,
           unit: "szt",
           kw: true,

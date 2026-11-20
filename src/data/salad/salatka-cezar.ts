@@ -23,7 +23,7 @@ const salatkaCezar: Recipe = {
       title: "Kurczak i grzanki",
       items: [
         { ing: iMET.chicken_breast, amount: 300, kw: true },
-        { ing: iBAK.wheat_bread, amount: 2, unit: "krom", kw: true },
+        { ing: iBAK.bread_wheat, amount: 2, unit: "krom", kw: true },
         { ing: iFAT.olive_oil, amount: 2, unit: "lz" },
         { ing: iSPC.granulated_garlic, amount: 0.5, unit: "lzi" },
         { ing: iSPC.black_pepper },

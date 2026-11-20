@@ -1,6 +1,6 @@
 import { dinnerSides } from "../../dinnerSides";
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iFAT } from "../../ingredients/ingFat";
-import { iGRN } from "../../ingredients/ingGrain";
 import { iHRB } from "../../ingredients/ingHerb";
 import { iLIQ } from "../../ingredients/ingLiquid";
 import { iMET } from "../../ingredients/ingMeat";
@@ -23,7 +23,7 @@ const knedleCzeskieZGulaszem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iGRN.steamed_dumplings, amount: 6, unit: "szt", kw: true },
+        { ing: iDLS.dumplings_steamed, amount: 6, unit: "szt", kw: true },
         { ing: iMET.beef_stew, amount: 500, kw: true },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },

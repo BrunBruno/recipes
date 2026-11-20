@@ -19,7 +19,7 @@ const serDog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 4, unit: "szt", kw: true },
-        { ing: iBAK.hotdog_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iBAK.bun_hotdog, amount: 4, unit: "szt", kw: true },
         { ing: iDIR.yellow_mozzarella, amount: 100, kw: true },
         { ing: iSAU.ketchup, amount: 20 },
         { ing: iSAU.mustard, amount: 20 },

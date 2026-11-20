@@ -8,10 +8,11 @@ type IngId =
   | "potato_starch"
   | "corn_flour"
   | "breadcrumbs"
+  | "breadcrumbs_corn"
   | "rice"
   | "rice_basmati"
   | "rice_long_grain"
-  | "sushi_rice"
+  | "rice_sushi"
   | "couscous"
   | "semolina"
   | "bulgur"
@@ -43,11 +44,6 @@ type IngId =
   | "cheerios"
   | "cini_mini"
   | "grain_coffee"
-
-  //// READY ////
-  | "kopytka"
-  | "silesian_dumplings"
-  | "steamed_dumplings"
   | "wonton_dough";
 
 export const iGRN: Record<IngId, IngredientItem> = {
@@ -78,6 +74,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.2, 71, 11],
+    price: 1.7,
   },
 
   wheat_flour: {
@@ -133,6 +130,21 @@ export const iGRN: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
+  breadcrumbs_corn: {
+    name: "Panierka kukurydziana",
+    type: "grn",
+    color: "#F4C430",
+    kcalPer100g: 389,
+    unitWeights: {
+      lzi: 3,
+      lz: 10,
+      opak: 200,
+    },
+    nutrientsPer100g: [2, 82, 9.1],
+    price: 15,
+    verified: true,
+  },
+
   rice: {
     name: "Ryż",
     type: "grn",
@@ -152,11 +164,13 @@ export const iGRN: Record<IngId, IngredientItem> = {
     type: "grn",
     color: "#FFF8E1",
     kcalPer100g: 350,
-    nutrientsPer100g: [0.7, 77, 8.9],
+    nutrientsPer100g: [0.8, 77.8, 8.7],
     unitWeights: {
       lz: 15,
       szk: 180,
     },
+    price: 12.5,
+    verified: true,
   },
 
   rice_long_grain: {
@@ -175,7 +189,7 @@ export const iGRN: Record<IngId, IngredientItem> = {
     verified: true,
   },
 
-  sushi_rice: {
+  rice_sushi: {
     name: "Ryż do sushi",
     type: "grn",
     color: "#E8D9B5",
@@ -539,49 +553,6 @@ export const iGRN: Record<IngId, IngredientItem> = {
       lzi: 2,
     },
     nutrientsPer100g: [0, 86, 0],
-  },
-
-  kopytka: {
-    name: "Kopytka",
-    type: "grn",
-    subType: "bun",
-    color: "#EED9B7",
-    kcalPer100g: 148,
-    unitWeights: {
-      opak: 500,
-    },
-    nutrientsPer100g: [1.2, 30, 3],
-    price: 11,
-    verified: true,
-  },
-
-  silesian_dumplings: {
-    name: "Kluski śląskie",
-    type: "grn",
-    subType: "bun",
-    color: "#F0E0B0",
-    kcalPer100g: 119,
-    unitWeights: {
-      szt: 30,
-    },
-    nutrientsPer100g: [0.7, 30, 2],
-    price: 9.3,
-    verified: true,
-  },
-
-  steamed_dumplings: {
-    name: "Kluski na parze",
-    type: "grn",
-    subType: "bun",
-    color: "#F5E6C8",
-    kcalPer100g: 253,
-    unitWeights: {
-      szt: 80,
-      opak: 400,
-    },
-    nutrientsPer100g: [2.8, 48.9, 7.1],
-    price: 8.7,
-    verified: true,
   },
 
   wonton_dough: {

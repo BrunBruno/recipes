@@ -23,7 +23,7 @@ const sushiMaki: Recipe = {
         { ing: iVEG.nori, amount: 1, unit: "opak", kw: true },
         { ing: iFSH.surimi, amount: 9, unit: "szt", kw: true },
         { ing: iFSH.smoked_salmon, amount: 100, kw: true },
-        { ing: iGRN.sushi_rice, amount: 300, kw: true },
+        { ing: iGRN.rice_sushi, amount: 300, kw: true },
         { ing: iLIQ.water, amount: 360, unit: "ml" },
         { ing: iVEG.cucumber, amount: 100 },
         { ing: iVEG.radish_daikon_oshinko, amount: 100 },

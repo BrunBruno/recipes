@@ -34,7 +34,7 @@ const chickenBurger: Recipe = {
     {
       title: "Pozostałe",
       items: [
-        { ing: iBAK.hamburger_buns, amount: 2, unit: "szt", kw: true },
+        { ing: iBAK.bun_burger, amount: 2, unit: "szt", kw: true },
         { ing: iVEG.lettuce, amount: 2, unit: "lst" },
         { ing: iVEG.tomato, amount: 1, unit: "szt" },
         { ing: iSAU.mayonnaise, amount: 2, unit: "lz" },

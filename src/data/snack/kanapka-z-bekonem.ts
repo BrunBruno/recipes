@@ -16,7 +16,7 @@ const kanapkaZBekonem: Recipe = {
     {
       title: "",
       items: [
-        { ing: iBAK.wheat_malt_bread, amount: 4, unit: "krom", kw: true },
+        { ing: iBAK.bread_wheat_malt, amount: 4, unit: "krom", kw: true },
         { ing: iMET.brewed_bacon, amount: 3, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 0.5, unit: "szt", kw: true },
         { ing: iVEG.lettuce, amount: 1, unit: "lst" },

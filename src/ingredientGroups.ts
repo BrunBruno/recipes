@@ -84,14 +84,14 @@ export const getIngredientGroup = (
       return {
         type: "choice",
         options: [
-          { ing: iBAK.kaiser_roll, amount: amount, replaceable: true },
+          { ing: iBAK.roll_kaiser, amount: amount, replaceable: true },
           {
-            ing: iBAK.multigrain_kaiser_roll,
+            ing: iBAK.roll_kaiser_multigrain,
             amount: amount,
             replaceable: true,
           },
-          { ing: iBAK.morning_roll, amount: amount, replaceable: true },
-          { ing: iBAK.graham_roll, amount: amount, replaceable: true },
+          { ing: iBAK.roll_morning, amount: amount, replaceable: true },
+          { ing: iBAK.roll_graham, amount: amount, replaceable: true },
         ],
         selected: 0,
       };

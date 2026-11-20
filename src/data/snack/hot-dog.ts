@@ -18,7 +18,7 @@ const hotHog: Recipe = {
       title: "",
       items: [
         { ing: iMET.sausages, amount: 4, unit: "szt", kw: true },
-        { ing: iBAK.hotdog_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iBAK.bun_hotdog, amount: 4, unit: "szt", kw: true },
         { ing: iJAR.pickled_cucumber, amount: 2, unit: "szt" },
         { ing: iJAR.sauerkraut, amount: 160 },
         { ing: iJAR.fried_onion, amount: 2, unit: "lz" },

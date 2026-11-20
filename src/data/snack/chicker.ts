@@ -20,7 +20,7 @@ const chicker: Recipe = {
       title: "Kanapki",
       items: [
         { ing: iMET.spicy_tenderloins, amount: 400, kw: true },
-        { ing: iBAK.chicken_buns, amount: 4, unit: "szt", kw: true },
+        { ing: iBAK.bun_chicken, amount: 4, unit: "szt", kw: true },
         { ing: iVEG.lettuce_iceberg, amount: 4, unit: "lst" },
         { ing: iFAT.oil, amount: 1, unit: "lz" },
       ],

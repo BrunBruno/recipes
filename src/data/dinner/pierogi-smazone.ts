@@ -1,5 +1,5 @@
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import type { Recipe } from "../../types";
 
 const portions = 1;
@@ -20,25 +20,25 @@ const pierogiSmazone: Recipe = {
           type: "choice",
           options: [
             {
-              ing: iJAR.pierogi_ruskie,
+              ing: iDLS.dumplings_pierogi_ruskie,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_meat,
+              ing: iDLS.dumplings_pierogi_meat,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_cheese,
+              ing: iDLS.dumplings_pierogi_cheese,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_spinach,
+              ing: iDLS.dumplings_pierogi_spinach,
               amount: 16,
               unit: "szt",
               kw: true,
@@ -50,25 +50,25 @@ const pierogiSmazone: Recipe = {
           type: "placeholder",
           options: [
             {
-              ing: iJAR.pierogi_ruskie,
+              ing: iDLS.dumplings_pierogi_ruskie,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_meat,
+              ing: iDLS.dumplings_pierogi_meat,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_cheese,
+              ing: iDLS.dumplings_pierogi_cheese,
               amount: 16,
               unit: "szt",
               kw: true,
             },
             {
-              ing: iJAR.pierogi_spinach,
+              ing: iDLS.dumplings_pierogi_spinach,
               amount: 16,
               unit: "szt",
               kw: true,

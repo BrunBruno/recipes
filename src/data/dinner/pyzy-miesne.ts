@@ -1,9 +1,9 @@
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iSPC } from "../../ingredients/ingSpice";
 import { iOTH } from "../../ingredients/ingOther";
 import type { Recipe } from "../../types";
 import { iVEG } from "../../ingredients/ingVegetable";
+import { iDLS } from "../../ingredients/ingDelicatessen";
 
 const portions = 1;
 const pyzyMiesne: Recipe = {
@@ -19,7 +19,7 @@ const pyzyMiesne: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.frozen_potato_dumpling, amount: 7, unit: "szt", kw: true },
+        { ing: iDLS.dumplings_potato_meat, amount: 7, unit: "szt", kw: true },
         { ing: iFAT.oil, amount: 2, unit: "lzi" },
         { ing: iFAT.butter, amount: 1, unit: "lzi" },
         { ing: iVEG.onion, amount: 0.5, unit: "szt" },

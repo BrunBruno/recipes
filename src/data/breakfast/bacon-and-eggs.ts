@@ -20,7 +20,7 @@ const bekonZJajkiem: Recipe = {
       items: [
         { ing: iMET.bacon_slices, amount: 4, unit: "plas", kw: true },
         { ing: iMET.egg, amount: 2, unit: "szt", kw: true },
-        { ing: iBAK.toast_multigrain_bread, amount: 2, unit: "krom" },
+        { ing: iBAK.bread_toast_multigrain, amount: 2, unit: "krom" },
         { ing: iVEG.tomato_cherry, amount: 6, unit: "szt" },
         { ing: iHRB.chives },
         { ing: iSPC.black_pepper },

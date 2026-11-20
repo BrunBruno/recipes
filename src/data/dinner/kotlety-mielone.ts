@@ -23,7 +23,7 @@ const kotletyMielone: Recipe = {
       title: "",
       items: [
         { ing: iMET.pork_ground, amount: 1, unit: "opak", kw: true },
-        { ing: iBAK.kaiser_roll, amount: 1, unit: "szt" },
+        { ing: iBAK.roll_kaiser, amount: 1, unit: "szt" },
         { ing: iVEG.onion, amount: 1, unit: "szt" },
         { ing: iVEG.garlic, amount: 2, unit: "zbk" },
         { ing: iMET.egg, amount: 1, unit: "szt" },

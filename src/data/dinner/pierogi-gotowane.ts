@@ -1,5 +1,5 @@
+import { iDLS } from "../../ingredients/ingDelicatessen";
 import { iFAT } from "../../ingredients/ingFat";
-import { iJAR } from "../../ingredients/ingJar";
 import { iSPC } from "../../ingredients/ingSpice";
 import type { Recipe } from "../../types";
 
@@ -17,7 +17,7 @@ const pierogiGotowane: Recipe = {
     {
       title: "",
       items: [
-        { ing: iJAR.pierogi_meat, amount: 400, kw: true },
+        { ing: iDLS.dumplings_pierogi_meat, amount: 400, kw: true },
         { ing: iFAT.oil, amount: 1, unit: "lzi" },
         { ing: iSPC.salt },
       ],

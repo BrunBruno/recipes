@@ -1,4 +1,5 @@
 import { iDIR } from "./ingredients/ingDairy";
+import { iDLS } from "./ingredients/ingDelicatessen";
 import { iFAT } from "./ingredients/ingFat";
 import { iGRN } from "./ingredients/ingGrain";
 import { iHRB } from "./ingredients/ingHerb";
@@ -203,7 +204,7 @@ export const dinnerSides = (
         title: "Kopytka",
         sideName: name,
         items: [
-          { ing: iGRN.kopytka, amount: portions * 250, kw: true },
+          { ing: iDLS.dumplings_kopytka, amount: portions * 250, kw: true },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
         ],
@@ -213,7 +214,7 @@ export const dinnerSides = (
         title: "Kluski śląskie",
         sideName: name,
         items: [
-          { ing: iGRN.silesian_dumplings, amount: portions * 250, kw: true },
+          { ing: iDLS.dumplings_silesian, amount: portions * 250, kw: true },
           { ing: iFAT.oil, amount: 1, unit: "lzi" },
           { ing: iSPC.salt },
         ],

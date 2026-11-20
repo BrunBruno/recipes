@@ -98,6 +98,7 @@ type IngId =
   //
   | "kamis_penne_fix"
   | "kamis_chipotle_fix"
+  | "kamis_chinese_fried_rice_fix"
   //
   | "kania_curry_fix"
   | "kania_sechuan_fix"
@@ -1256,6 +1257,20 @@ export const iSPC: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [5, 60, 10],
     price: 115,
+  },
+
+  kamis_chinese_fried_rice_fix: {
+    name: "Fix Smażony Ryż po Chińsku",
+    type: "spc",
+    subType: "sah",
+    color: "#D99B4A",
+    kcalPer100g: 244,
+    unitWeights: {
+      opak: 30,
+    },
+    nutrientsPer100g: [1.6, 45, 7.3],
+    price: 133,
+    verified: true,
   },
 
   kania_curry_fix: {
