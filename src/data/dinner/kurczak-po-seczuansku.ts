@@ -11,8 +11,11 @@ const kurczakPoSeczuansku: Recipe = {
   name: "Kurczak po Seczuańsku",
   type: "dinner",
   country: "CHN",
-  // images: ["kurczak-po-seczuansku"],
-  images: [""],
+  images: [
+    "kurczak-po-seczuansku",
+    "kurczak-po-seczuansku-2",
+    "kurczak-po-seczuansku-3",
+  ],
   time: 30,
   portions: portions,
   taste: 3,

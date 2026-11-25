@@ -654,12 +654,13 @@ export const iDIR: Record<IngId, IngredientItem> = {
     type: "dir",
     subType: "che",
     color: "#FFD35A",
-    kcalPer100g: 402,
+    kcalPer100g: 392,
     unitWeights: {
       plas: 20,
     },
-    nutrientsPer100g: [33, 1.3, 25],
+    nutrientsPer100g: [32, 0, 26],
     price: 36,
+    verified: true,
   },
 
   parmigiano_reggiano: {
@@ -724,5 +725,6 @@ export const iDIR: Record<IngId, IngredientItem> = {
     color: "#E0E0E0",
     kcalPer100g: 144,
     nutrientsPer100g: [8, 2, 15],
+    price: 22.2,
   },
 };

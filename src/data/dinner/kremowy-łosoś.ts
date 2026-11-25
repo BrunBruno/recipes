@@ -9,11 +9,11 @@ import type { Recipe } from "../../types";
 const kremowyLosos: Recipe = {
   name: "Kremowy Łosoś",
   type: "dinner",
-  images: ["kremowy-losos"],
+  images: ["kremowy-losos", "kremowy-losos-2"],
   time: 0,
   portions: 3,
-  taste: null,
-  difficulty: null,
+  taste: 3,
+  difficulty: 1,
   ingredients: [
     {
       title: "",

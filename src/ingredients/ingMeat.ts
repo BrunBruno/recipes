@@ -75,6 +75,7 @@ type IngId =
   | "sausages_pork"
   | "sausages_chicken"
   | "sausages_berlinki"
+  | "sausages_ham"
   | "serdelki"
   | "frankfurters"
   | "cooked_kabanos"
@@ -867,6 +868,17 @@ export const iMET: Record<IngId, IngredientItem> = {
     },
     nutrientsPer100g: [16, 2.8, 13],
     price: 22,
+    verified: true,
+  },
+
+  sausages_ham: {
+    name: "Parówki z szynki",
+    type: "met",
+    subType: "crd",
+    color: "#D98B83",
+    kcalPer100g: 278,
+    unitWeights: {},
+    nutrientsPer100g: [24, 1.5, 14],
     verified: true,
   },
 

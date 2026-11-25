@@ -64,7 +64,8 @@ type IngId =
   | "coleslaw"
   | "cucumber_salad"
   | "corn_salad"
-  | "cabbage_red";
+  | "cabbage_red"
+  | "salad_beets_grated";
 
 export const iJAR: Record<IngId, IngredientItem> = {
   //// PRESERVES ////
@@ -440,7 +441,7 @@ export const iJAR: Record<IngId, IngredientItem> = {
       szk: 300,
     },
     nutrientsPer100g: [0.2, 65, 0.5],
-    price: 17.8,
+    price: 30,
   },
 
   jam_currant: {
@@ -790,5 +791,15 @@ export const iJAR: Record<IngId, IngredientItem> = {
       opak: 500,
     },
     nutrientsPer100g: [1.4, 4.8, 1.2],
+  },
+
+  salad_beets_grated: {
+    name: "Buraczki tarte",
+    type: "jar",
+    subType: "sal",
+    color: "#A52A4A",
+    kcalPer100g: 93,
+    unitWeights: {},
+    nutrientsPer100g: [3.7, 12.8, 1.0],
   },
 };

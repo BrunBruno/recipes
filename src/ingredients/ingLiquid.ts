@@ -543,6 +543,7 @@ export const iLIQ: Record<IngId, IngredientItem> = {
       lz: 15,
       opak: 160,
     },
+    price: 41.4,
   },
 
   white_borscht_sourdough: {

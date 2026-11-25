@@ -9,11 +9,10 @@ import { iVEG } from "../../ingredients/ingVegetable";
 import type { Recipe } from "../../types";
 
 const portions = 4;
-
 const burgerDomowy: Recipe = {
   name: "Burger Domowy",
   type: "snack",
-  images: ["burger-domowy", "burger-domowy-2"],
+  images: ["burger-domowy", "burger-domowy-2", "burger-domowy-3"],
   time: 35,
   portions: portions,
   taste: 5,
