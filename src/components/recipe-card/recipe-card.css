@@ -148,6 +148,10 @@
 
 .steps-section a {
   color: #20c997;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .recipe-details-daily {
